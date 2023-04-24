@@ -8,7 +8,7 @@
     <!-- Hier wird der Wert von der Konstanten APP_NAME aus .env eingetragen, falls vorhanden. 
    Andernfalls wird der Default-String "Laravel" verwendet -->
     <title>{{ config('app.name', 'ChapChat') }}</title>
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/css/app.css', 'resources/js/app.js', 'resources/js/custom.js', 'resources/css/areset.css', 'resources/css/custom.css'])
 
 </head>
 
