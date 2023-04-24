@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/* Route::get('/chat', function () {
+    return view('chat');
+});
+ */
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
