@@ -1,66 +1,116 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![blahblah on chalk](https://www.henning-uhle.eu/wp-content/loadingstructure/2022/01/yada-yada-1430679_1920.jpg)](https://github.com/svenbledt/Palaver-Laravel "Palaver - Blog")
 
-## About Laravel
+</div>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[![Palaver - Blog - Team Palaver](https://img.shields.io/static/v1?label=Palaver+-+Blog&message=Team+Palaver&color=%23ff2d20&style=for-the-badge&logo=laravel)](https://github.com/svenbledt/Palaver-Laravel)
+----
+# Palaver - Blog:<br>A Laravel story...
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Project context
+You have learned and worked with many powerful web technologies. You will now build a website with social media features. Important: Your blog also needs a user administration (Laravel Breeze). You can specialize and work as Frontend, Backend or Fullstack Developer - together in teams of 5-6 developers - here we go!
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Task / Assignment 
+* Create a website with blog feature and use the <b>Laravel</b>-framework with Breeze, all other avaliable Web-Dev-Techniques (Html, Css, Js, Php, Bs5), [Github](https://github.com/svenbledt/Palaver-Laravel), [FIGMA](https://www.figma.com/file/mf3TBislNFLZhHvvs3TifW/Palaver-Blog?node-id=3%3A4&t=OZFy40E2QIRxL6ik-1)
+* Build the website as a team. The site should look good on phones (mobile first) and on a desktop.
+----
+## Performance Criteria:
+<ul>
+<li>Website based on Laravel that functions and looks inviting on mobile and desktop PC</li>
+<li>Quality of Mockup and Site Layout</li>
+<li>Functionality of Backend and Site</li>
+<li>Number, types and quality of ISSUES in GitHub</li>
+<li>Completeness of deliverables</li>
+</ul>
+------------------------------
 
-## Learning Laravel
+### Setup / Installation Docker/Npm
+<ul>
+<li>get github code for cloning</li>
+<li>Open repository in editor of your choice</li>
+<li>Open terminal</li>
+<li>Insert following code:<br>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/var/www/html \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs
+```
+</li>
+<li>Start docker(sail) and dev server:<br>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+sail up -d
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+sail npm run dev
+```
 
-## Laravel Sponsors
+</li>
+<li>In case npm not running:<br>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+npm install
+```
+</li>
 
-### Premium Partners
+</ul>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+---
 
-## Contributing
+## Usage: Palaver Blog
+* open [localhost](http://127.0.0.1/)
+* choose login with your or register top right of screen
+* when already registered fill in credentials  => enter
+* if not, register new account, fill in inputs required => enter
+* back on main blog page (localhost) either chose blog to read by mouse-click or tab-key => enter
+* or create own new blogpost => bottom center button "create"
+* on create-post-page: choose image, choose title, write blog-text =>submit => back on localhost see new post
+* read post by select on mousclick or tab-key
+* use like or dislike buttons for reaction and/or 
+* comment on post: press comments-link (yellow-center)
+* write commentary
+* happy blogging yalls!
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+## Thank you for your time.
+---
+### Any feedback or assisting constructive critique is welcome.<br> Feel free to reach out or text via [Mail@Me](mailto:gaudenzraiber@yahoo.de).
+----
+----
+## License:
+* none, free use
+----
+## Tools Used:
+* [Laravel/Breeze](https://laravel.com/docs/10.x/starter-kits#breeze-and-blade)
+* [Github](https://github.com/svenbledt/Palaver-Laravel) (for file repo/sharing/workflow)
+* [Palaver - the Blog@Trello](https://trello.com/invite/b/IHnXLK2O/ATTIf2f632c84612dc43ae9e0139bbcb6b66EFCE6F34/palaver-the-blog)
+* HTML, CSS, Javascript, PHP PDO, Heidisql, Nginx, Mysql
+* [Font](https://fonts.google.com/specimen/Poppins)
+* [Fontawesome](https://fontawesome.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Bootstrap_5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Internet for research
+* imagination 
+* feeling for details
+* the will to learn, improve share knowledge throughout the whole team-experience
+----
+## Main Content:
+<div style="text-align:center; font-size:20px">
 
-## Security Vulnerabilities
+[Github](https://github.com/svenbledt/Palaver-Laravel)<br>
+[Figma](https://www.figma.com/file/mf3TBislNFLZhHvvs3TifW/Palaver-Blog?node-id=3%3A4&t=OZFy40E2QIRxL6ik-1)<br>
+[Trello](https://trello.com/b/IHnXLK2O/palaver-the-blog)<br>
+[Confluence](https://opportunityp1.atlassian.net/wiki/spaces/WD/overview?atlOrigin=eyJpIjoiMTVmMTEwY2Q4Y2JkNDFjMzgxMmQxNTUwNDA0MGQ2YmIiLCJwIjoiYyJ9)<br>
+[UML-DB-Scheme](https://plantuml.github.io/plantuml-core/raw.html?VO-nQiD038PtFuNgFNc2aA7jq2KGqj0b62Fx5FVgisLEIZCKltklzXqS13f9-d_n_TAJVj9081EsvB0fGksn8oYFwF2RF3mxxahuAG3UpkSZRE3omgDwTevy5THyXDrskuVBWGsvnLixs6tsy8gA3Gfbyh9yufj6KcoNzVzI_kmFI_Ugc0iJiL2cWFNOApiJhYyFD3IXdi9pIcRr0kucvAM2TPXGvCxUr9w4j5RkQPGgUc6FHtGrjYs9PEQSfRnRfOUCYKKJnjcUwbneUHXer4XAdFJ30-kArf6flxX9WC5s7jLoEcR-1G00)
+</div>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+----
+### 20230323 1st rm: 
+A production by [Palavrion Inc.](https://github.com/svenbledt/Palaver-Laravel) 
