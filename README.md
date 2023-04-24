@@ -1,6 +1,6 @@
 <div align="center">
 
-[![blahblah on chalk](https://www.henning-uhle.eu/wp-content/loadingstructure/2022/01/yada-yada-1430679_1920.jpg)](https://github.com/svenbledt/Palaver-Laravel "Palaver - Blog")
+
 
 </div>
 
