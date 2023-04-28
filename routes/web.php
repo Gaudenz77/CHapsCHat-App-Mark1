@@ -29,3 +29,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/playground', [ChatsController::class, 'index']);
+Route::get('/messages', [ChatsController::class, 'fetchMessages']);
+Route::post('/messages', [ChatsController::class, 'sendMessage']);
+Route::post('/messages', [ChatsController::class, 'sendMessage'])->name('messages.store');
