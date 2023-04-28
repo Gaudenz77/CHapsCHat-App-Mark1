@@ -58,6 +58,22 @@ body.dark-mode .messagesList {
     border-bottom: #f3a81c 2px solid;
 }
 
+/*  footer */
+/* .sticky-footer {
+      position: sticky;
+      left: 0;
+      bottom: 0;
+      height:10%;
+      width: 100%;
+  } */
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
 /*.btn-circle {
     width: 5rem;
     height: 5rem;

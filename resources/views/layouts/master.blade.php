@@ -18,7 +18,7 @@
     </style>
 </head>
 
-<body class="d-flex flex-column h-100 bg-gradient">
+<body class="{{-- d-flex flex-column h-100 bg-gradient --}}">
     <header>
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-navbar-gradient">
@@ -37,6 +37,15 @@
                             <a class="nav-link {{ (request()->is('about')) ? 'active' : '' }} text-dark" aria-current="page" href="{{ url('/about') }}">About Us</a>
                         </li>
                     </ul>
+                    <!---------------------------------------------------------------->
+                    <a class="navbar-brand " href="{{ url('/') }}">
+                        {{ config('app.name', 'Laravel') }}
+                    </a>
+                    <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Light/Dark Toggle</button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!---------------------------------------------------------------->
                     <form class="d-flex">
                         @if (Route::has('login'))
                         @auth
@@ -60,12 +69,37 @@
             @yield('content')
         </div>
     </main>
-    <footer class="footer mt-auto py-3 bg-footer-gradient sticky-footer">
+    <footer class="footer mt-5 py-3 bg-footer-gradient sticky-footer">
         <div class="container-fluid text-center">
             <span class=" text-dark"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}">Dare To Meet Me?</a></b></span>
         </div>
     </footer>
 
+    <!-- toggle mode script start -->
+<script>
+
+    // Read the value of the "darkMode" cookie
+    const cookies = document.cookie.split("; ");
+    const darkModeCookie = cookies.find(cookie => cookie.startsWith("darkMode="));
+    const darkModeOn = darkModeCookie ? (darkModeCookie.split("=")[1] === "on") : false;
+    
+    // Set the "dark-mode" class on the body element if necessary
+    if (darkModeOn) {
+      document.body.classList.add("dark-mode");
+    } 
+    
+    function setDarkModePreference(darkModeOn) {
+      const cookieValue = darkModeOn ? "on" : "off";
+      document.cookie = `darkMode=${cookieValue}; path=/; max-age=${60 * 60 * 24 * 365}`;
+    }
+    
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      setDarkModePreference(document.body.classList.contains('dark-mode'));
+    }
+        
+    </script>
+    <!-- toggle mode script end-->
     <!-- Bootstrap JS -->
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> --}}
 </body>
