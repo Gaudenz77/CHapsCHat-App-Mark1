@@ -5,7 +5,7 @@
  <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-3 card1 bg-info">
-          <div class="editorTitle">Chats Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit officiis molestias voluptatem animi illum, aliquam dignissimos maiores dolor magni! Repellat, officiis quis. Quibusdam illo aperiam facilis voluptate, qui sequi voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, a consequuntur. Voluptatibus fugiat molestias et nostrum natus officia accusamus minima nesciunt. Neque itaque minima animi dolor pariatur quibusdam deserunt qui?Corrupti, dolorem sequi minima ab delectus labore corporis eligendi laboriosam voluptates aperiam itaque nesciunt similique id. Odit tenetur, voluptates adipisci quidem impedit eligendi magnam laudantium non iusto, quis corrupti saepe!</div>
+          <div class="editorTitle">Chats</div>
           <div class="chatFormField">
             <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}"></chat-form>
           </div>
