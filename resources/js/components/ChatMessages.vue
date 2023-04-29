@@ -24,7 +24,7 @@ import Echo from 'laravel-echo';
 
 /* window.Pusher = Pusher; */
 
-export default {
+export default{
   data() {
     return {
       messages: []
@@ -44,7 +44,7 @@ export default {
         }
       }
     });
-    window.Echo.private("chat")
+    window.Echo.private("playground")
       .listen("MessageSent", (e) => {
         console.log('Message sent event received!');
         this.messages.push({

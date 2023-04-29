@@ -8,8 +8,12 @@
     <!-- Hier wird der Wert von der Konstanten APP_NAME aus .env eingetragen, falls vorhanden. 
    Andernfalls wird der Default-String "Laravel" verwendet -->
     <title>{{ config('app.name', 'ChapChat') }}</title>
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/areset.css', 'resources/css/custom.css'])
-    {{-- , 'resources/css/app.css' --}}
+    <!---------------------------------------------------------------- Google Fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/custom.js', 'resources/css/areset.css', 'resources/css/custom.css'])
+    {{-- 'resources/css/app.css', --}}
 
     <style>
         /* body {
@@ -19,6 +23,7 @@
 </head>
 
 <body class="{{-- d-flex flex-column h-100 bg-gradient --}}">
+<div id="app">
     <header>
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-navbar-gradient">
@@ -30,11 +35,11 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }} text-dark" aria-current="page" href="{{ url('/') }}">Home</a>
+                            <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }} " aria-current="page" href="{{ url('/') }}">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link {{ (request()->is('about')) ? 'active' : '' }} text-dark" aria-current="page" href="{{ url('/about') }}">About Us</a>
+                            <a class="nav-link {{ (request()->is('about')) ? 'active' : '' }} text-dark" aria-current="page" href="{{ url('/about') }}">About</a>
                         </li>
                     </ul>
                     <!---------------------------------------------------------------->
@@ -65,16 +70,16 @@
 
     <!-- Begin page content -->
     <main>
-        <div id="app">
+        {{-- <div id="app"> --}}
             @yield('content')
-        </div>
+        {{-- </div> --}}
     </main>
     <footer class="footer mt-5 py-3 bg-footer-gradient sticky-footer">
         <div class="container-fluid text-center">
             <span class=" text-dark"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}">Dare To Meet Me?</a></b></span>
         </div>
     </footer>
-
+</div>
     <!-- toggle mode script start -->
 <script>
 

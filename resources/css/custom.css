@@ -1,20 +1,37 @@
+body {
+    margin-top:100px;
+    background-color: #ffc0cb;
+    /* background-color: white !important;  */
+    /* background-color: black; */ 
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body.dark-mode html, body {
+    color: black;
+     }
+
+
+body.dark-mode  .playground  {
+    background-color:black;
+}
 /* TOGGLE ================================================================= */
 
 /* In any other CSS files 
 body.dark-mode .some-element {
 
-    // Styles for elements that need to be updated for dark mode 
+// Styles for elements that need to be updated for dark mode 
 
-  }*/
+}*/
 
-body {
-    margin-top:100px;
-    background-color: pink;
+body.dark-mode body {
+    /* background-color: mediumspringgreen; */
 }
 
-/* body.dark-mode body {
-    
-} */
+body.dark-mode  .nav-link {
+    color: black;
+}
+
 
 body.dark-mode .editorTitle   {
     color: white;
@@ -37,8 +54,8 @@ body.dark-mode .chatbody   {
 } */
 
 body.dark-mode html, body {
- color: black;
-  }
+    color: black;
+}
 
 .card1 {
     background-color:mediumspringgreen;
@@ -57,6 +74,47 @@ body.dark-mode .messagesList {
     list-style-position: inside;
     border-bottom: #f3a81c 2px solid;
 }
+
+/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #f8f8f8;
+  }
+  
+  a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #333;
+    transition: width 0.3s ease;
+  }
+  
+  a:hover::before,
+  a:focus::before {
+    width: 100%;
+  }
+  
+/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION END */
+
+
+
+
 
 /*  footer */
 /* .sticky-footer {
