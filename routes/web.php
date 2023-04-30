@@ -30,6 +30,10 @@ Route::get('/blogoSphere', function () {
     return view('blogoSphere');
 })->middleware(['auth', 'verified'])->name('blogoSphere');
 
+Route::get('/knowledgeSphere', function () {
+    return view('knowledgeSphere');
+})->middleware(['auth', 'verified'])->name('knowledgeSphere');
+
 /* Route::get('/blogoSphere', [ChatsController::class, 'blogoSphere']);
  */
 Route::middleware('auth')->group(function () {

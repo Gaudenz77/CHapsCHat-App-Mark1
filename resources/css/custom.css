@@ -4,7 +4,7 @@ body {
 }
 
 body.dark-mode  {
-    margin-top:100px;
+    margin-top:12vh;
     background-color: #00fa9a;
     font-family: 'Poppins', sans-serif;
 }
@@ -67,6 +67,7 @@ body.dark-mode html, body {
     color: black;
 }
 
+/* -------------------------------------------------------- ROUND DIVS */
 .circle {
     position: relative;
     min-width: 150px;
@@ -92,7 +93,45 @@ body.dark-mode html, body {
     overflow: auto;
     transform: translateY(50%);
   }
+
+.circleBlog {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+
+.textfieldBlog {
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+    padding: 2.5rem;
+    /* color:#ffffff; */
+    
+  }
   
+.circleKnowledgeForm {
+    position: relative;
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+  }
+
+.circleKnowledge {
+    position: relative;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+  }
+
+.textfieldKnowledge {
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+    padding: 2.5rem;
+    color:#ffffff;
+    
+  }
   
 .card1 {
     background-color:mediumspringgreen;
@@ -105,15 +144,19 @@ body.dark-mode .card1{
     background-color: rgb(231, 176, 12);
 }
 
-body.dark-mode .messagesList {
+/* body.dark-mode .messagesList {
     position:relative;
     left:10px;
     list-style-position: inside;
     border-bottom: #f3a81c 2px solid;
-}
+} */
 
-/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
 /* ---------------------------------------------------------------- EDITOR MONACO START */
+
+/* .monaco-list-row .monaco-highlighted-label .monaco-icon-label .monaco-icon-name-container {
+    line-height: 24px; 
+  } */
+  
 
 
 /*         #editor {
@@ -135,12 +178,19 @@ body.dark-mode .messagesList {
 .editorTitle {
     font-weight: bold;
     font-size: 1.2rem;
+    padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.editor .suggest-widget div.tree {
+    white-space: unset;
+    padding-bottom: 0;
 }
 
 #editor, #css-editor, #js-editor {
-    height: 300px;
+    height: 350px;
     width: 100%;
     border: 1px solid #ccc;
+    
 }
 #preview {
     height: 300px;
@@ -153,6 +203,8 @@ body.dark-mode .messagesList {
 }
 
 /* ---------------------------------------------------------------- EDITOR MONACO END */
+
+/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
 
 nav {
     display: flex;

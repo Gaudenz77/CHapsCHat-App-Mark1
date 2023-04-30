@@ -25,10 +25,7 @@
             margin-top:100px;
         } */
      
-.monaco-editor .suggest-widget .monaco-list .monaco-list-row {
-  font-size: 14px;
-  line-height: 2.0;
-}
+
     </style>
 </head>
 

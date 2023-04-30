@@ -9,9 +9,15 @@
         CREATEBLOG
         </div>
         
-        <div class="col-sm-3">LOOP BLOG/BLOGENTRYNO1</div>
-        <div class="col-sm-3">BLOGENTRYNO2</div>
-        <div class="col-sm-3">BLOGENTRYNO3</div>
+        <div class="col-sm-3 bg-danger circleBlog mx-2">
+            <div class="textfieldBlog">LOOP BLOG/BLOGENTRYNO1</div>
+        </div>
+        <div class="col-sm-3 bg-warning circleBlog mx-2">
+            <div class="textfieldBlog">LOOP BLOG/BLOGENTRYNO2</div>
+        </div>
+        <div class="col-sm-3 bg-success circleBlog mx-2">
+            <div class="textfieldBlog">LOOP BLOG/BLOGENTRYNO3</div>
+        </div>
     </div>
 </div>
 </section>

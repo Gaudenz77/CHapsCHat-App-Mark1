@@ -3,9 +3,9 @@
 @section('content')
 
 <section class="codeSpaceChat">
-<div class="container">
+  <div class="container ">
     <div class="row justify-content-center">
-      <div class="col-sm-3 bg-warning circle mt-0 p-4">
+      <div class="col-sm-4 bg-warning circle mt-0 p-4">
         <div class="logiInfo mt-2 p-1">
           {{-- @if (Auth::check())
               <h3 class="p-3">Welcome, {{ Auth::user()->name }}! You are logged in.</h3>
@@ -20,18 +20,31 @@
         <div class="textfield"></div>
         <chat-messages :messages="messages"></chat-messages>
       </div>
-  
-      <div class="col-sm-3 card1" style="padding-left:0rem; padding-right:0rem;">
-        <h2 class="editorTitle">Editor:</h2>
-        <div id="editor"></div>
+
+      <div class="col-sm-4 card1 p-3" style="padding-left:0rem; padding-right:0rem;">
+        <h2 class="editorTitle mx-2 my-2">Editor:</h2>
+      <div id="editor"></div>
       </div>
-  
-      <div class="col-sm-3 card1">
-        <h2 class="mx-0 my-2">Preview:</h2>
+
+      <div class="col-sm-4 card1">
+        <h2 class="editorTitle mx-0 my-2">Preview:</h2>
         <iframe id="preview" style="width:100%"></iframe>
       </div>
-  
-      <div class="col-sm-3 card1">
+
+     {{--  <div class="col-sm-3 card1">
+        <div class="logiInfo mt-2 p-1">
+          @if (Auth::check())
+              <h3>Welcome, {{ Auth::user()->name }}! You are logged in.</h3>
+          @else
+              <p><a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.</p>
+          @endif
+        </div> --}}
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-sm-3 bg-warning circle mt-3 p-4">
+       
         <div class="logiInfo mt-2 p-1">
           @if (Auth::check())
               <h3>Welcome, {{ Auth::user()->name }}! You are logged in.</h3>
@@ -73,30 +86,30 @@
  <script>
   // FUNCTIONAL HTMML ONLY START --------------------------------
   
-    // script Monaco in-site editor/preview --------------------------------
-        require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.27.0/min/vs' }});
-        require(['vs/editor/editor.main'], function() {
-          monaco.editor.defineTheme('dark-theme', {
-            base: 'vs-dark',
-            inherit: true,
-  
-            rules: [
-              { token: 'comment', foreground: '7f7f7f' },
-              { token: 'delimiter', foreground: 'd4d4d4' },
-              { token: 'string', foreground: 'ce9178' },
-              { token: 'keyword', foreground: '569cd6' },
-              { token: 'number', foreground: 'b5cea8' },
-              { token: 'tag', foreground: '569cd6' },
-              { token: 'attribute.name', foreground: '9cdcfe' },
-              { token: 'attribute.value', foreground: 'ce9178' },
-              { token: 'operator', foreground: 'd4d4d4' },
-            ],
-            colors: {
-              'editor.background': '#1e1e1e',
-              'editor.foreground': '#d4d4d4',
-            }
-            
-          });
+// script Monaco in-site editor/preview --------------------------------
+require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.27.0/min/vs' }});
+    require(['vs/editor/editor.main'], function() {
+      monaco.editor.defineTheme('dark-theme', {
+        base: 'vs-dark',
+        inherit: true,
+
+        rules: [
+          { token: 'comment', foreground: '7f7f7f' },
+          { token: 'delimiter', foreground: 'd4d4d4' },
+          { token: 'string', foreground: 'ce9178' },
+          { token: 'keyword', foreground: '569cd6' },
+          { token: 'number', foreground: 'b5cea8' },
+          { token: 'tag', foreground: '569cd6' },
+          { token: 'attribute.name', foreground: '9cdcfe' },
+          { token: 'attribute.value', foreground: 'ce9178' },
+          { token: 'operator', foreground: 'd4d4d4' },
+        ],
+        colors: {
+          'editor.background': '#1e1e1e',
+          'editor.foreground': '#d4d4d4',
+        }
+        
+      });
           
   
     // localstorage insite editor for keep code when reload page,  Monaco in-site editor/preview --------------------------------
