@@ -1,19 +1,22 @@
 body {
-    margin-top:100px;
-    background-color: #ffc0cb;
-    /* background-color: white !important;  */
-    /* background-color: black; */ 
+    margin-top:12vh;
+    font-family: 'Poppins', sans-serif;
+}
 
+body.dark-mode  {
+    margin-top:100px;
+    background-color: #00fa9a;
     font-family: 'Poppins', sans-serif;
 }
 
 body.dark-mode html, body {
     color: black;
+    background-color: #ffc0cb;
      }
 
 
 body.dark-mode  .playground  {
-    background-color:black;
+    /* background-color:black; */
 }
 /* TOGGLE ================================================================= */
 
@@ -27,6 +30,13 @@ body.dark-mode .some-element {
 body.dark-mode body {
     /* background-color: mediumspringgreen; */
 }
+
+.navbar {
+    height:10%;
+}
+
+
+
 
 body.dark-mode  .nav-link {
     color: black;
@@ -57,11 +67,38 @@ body.dark-mode html, body {
     color: black;
 }
 
+.circle {
+    position: relative;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+  }
+
+.chatbody {
+    margin-left:10%;
+    padding:10%;
+}
+  
+.textfield {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    padding: 20px;
+
+    overflow: auto;
+    transform: translateY(50%);
+  }
+  
+  
 .card1 {
     background-color:mediumspringgreen;
     position:relative;
     left:0;
-    /* color: black; */
+    color: black;
 }
 
 body.dark-mode .card1{
@@ -76,6 +113,46 @@ body.dark-mode .messagesList {
 }
 
 /* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
+/* ---------------------------------------------------------------- EDITOR MONACO START */
+
+
+/*         #editor {
+    height: 500px;
+    
+
+}
+#css-editor {
+    height: 500px;
+    
+
+}
+.containerEditor {
+
+} */
+.containerEditor {
+    margin-top: 1rem;
+}
+.editorTitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#editor, #css-editor, #js-editor {
+    height: 300px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+#preview {
+    height: 300px;
+    width: 100%;
+    border: none;
+}
+.body.dark-mode .monaco-editor {
+    background-color: #212529;
+    color: #d4d4d4;
+}
+
+/* ---------------------------------------------------------------- EDITOR MONACO END */
 
 nav {
     display: flex;

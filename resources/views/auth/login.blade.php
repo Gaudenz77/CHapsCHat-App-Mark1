@@ -1,4 +1,5 @@
-<x-guest-layout>
+{{-- @extends('layouts.master') --}}
+<x-guest-layout style="margin-top:-200px;">
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 

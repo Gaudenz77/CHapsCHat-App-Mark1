@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <!-- Hier wird der Wert von der Konstanten APP_NAME aus .env eingetragen, falls vorhanden. 
    Andernfalls wird der Default-String "Laravel" verwendet -->
-    <title>{{ config('app.name', 'ChapChat') }}</title>
+    <title>{{ config('app.name', 'ChapsChat') }}</title>
     <!---------------------------------------------------------------- Google Fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,20 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/custom.js', 'resources/css/areset.css', 'resources/css/custom.css'])
     {{-- 'resources/css/app.css', --}}
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/monaco-editor@0.27.0/min/vs/loader.js"></script>
     <style>
+        body {
+            /* background-color: black; */
+        }
         /* body {
             margin-top:100px;
         } */
+     
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row {
+  font-size: 14px;
+  line-height: 2.0;
+}
     </style>
 </head>
 
@@ -26,10 +36,10 @@
 <div id="app">
     <header>
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-navbar-gradient">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container-fluid">
-                <a class="brand" href="{{  url('/') }}"><x-application-logo class="logo" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="brand" href="{{  url('/') }}"></a>
+                <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -42,27 +52,27 @@
                             <a class="nav-link {{ (request()->is('about')) ? 'active' : '' }} text-dark" aria-current="page" href="{{ url('/about') }}">About</a>
                         </li>
                     </ul>
+                    
+                    <form class="d-flex">
+                        @if (Route::has('login'))
+                        @auth
+                        <a href="{{ url('dashboard') }}" class="">My Account</a>
+                        @else
+                        <a href="{{ route('login') }}" class="">Login</a>
+                        @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="">Register</a>
+                        @endif
+                        @endauth
+                        @endif
+                    </form>
+
                     <!---------------------------------------------------------------->
                     <a class="navbar-brand " href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                     <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Light/Dark Toggle</button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                     <!---------------------------------------------------------------->
-                    <form class="d-flex">
-                        @if (Route::has('login'))
-                        @auth
-                        <a href="{{ url('dashboard') }}" class="btn btn-primary mx-2">My Account</a>
-                        @else
-                        <a href="{{ route('login') }}" class="btn btn-primary mx-2">Login</a>
-                        @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="btn btn-primary mx-2">Register</a>
-                        @endif
-                        @endauth
-                        @endif
-                    </form>
+
                 </div>
             </div>
         </nav>
