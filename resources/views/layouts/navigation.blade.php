@@ -1,36 +1,33 @@
-<nav x-data="{ open: false }" class="bg-info border-b border-gray-100">
+<nav x-data="{ open: false }" class="navbar fixed top-0 w-full bg-light-800 text-dark flex items-center justify-between px-4{{-- bg-info border-b border-gray-100 --}}">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-10">
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                        <h1>LOGO</h1>
-                    </a>
+                    
                 </div>
-                <!-- Navigation Links BOOTSTRAP-->
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }} " aria-current="page" href="{{ url('/') }}">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link {{ (request()->is('about')) ? 'active' : '' }} text-dark" aria-current="page" href="{{ url('/about') }}">About</a>
-                    </li>
-                </ul>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <a href="{{ route('dashboard') }}">
+                        <x-application-logo class="block h-5 w-auto fill-current text-gray-800" />
+                        {{-- <h1>LOGO</h1> --}}
+                    </a>
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                </div>
-                <div class="toggle-btn">
-                    <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Light/Dark Toggle</button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    
+                    <x-nav-link :href="url('/')"
+                        :active="request()->is('/')"
+                        class="{{ request()->is('/') ? 'text-gray-900 font-bold' : 'text-gray-500' }}">
+                    {{ __('Home') }}
+                    </x-nav-link>
+            
+                    <x-nav-link :href="url('/about')"
+                                :active="request()->is('about')"
+                                class="{{ request()->is('about') ? 'text-gray-900 font-bold' : 'text-gray-500' }}">
+                    {{ __('About') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -38,7 +35,7 @@
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="{{-- inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150 --}}btn btn-secondary">
+                        <button class="{{-- inline-flex items-center px-3   2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150 --}}btn btn-secondary">
                             <div>{{ Auth::user()->name }}</div>
 
                             <div class="ml-1">
@@ -79,7 +76,18 @@
             </div>
         </div>
     </div>
+    <div class="{{-- toggle-btn px-3 --}}">
+        <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Light/Dark Toggle</button>
+        {{-- <button class="bg-white text-gray-700 border border-gray-300 rounded-md shadow-sm py-2 px-4 inline-flex items-center" onclick="toggleDarkMode()">
+            <span class="mr-2">Light/Dark Toggle</span>
+          </button> --}}
+          
+        {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+        </button> --}}
+    </div>
 
+    
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">

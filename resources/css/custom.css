@@ -35,8 +35,29 @@ body.dark-mode body {
     height:10%;
 }
 
+/* .navbar-toggler-icon {
+    background-color: #ffffff;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    background-color: #6c757d;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    background-color: #6c757d;
+  } */
 
+.navbar-toggler-icon {
+    
+    
+    font-size:30px;
+}
 
+.navbar {
+    color:red;
+}
 
 body.dark-mode  .nav-link {
     color: black;

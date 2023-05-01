@@ -23,7 +23,7 @@
 
     
     <body class="font-sans antialiased">
-        <div class="min-h-screen">
+        <div class="mt-12vh">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
