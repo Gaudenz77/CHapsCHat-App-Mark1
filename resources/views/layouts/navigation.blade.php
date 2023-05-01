@@ -16,11 +16,17 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    
+
                     <x-nav-link :href="url('/')"
                         :active="request()->is('/')"
                         class="{{ request()->is('/') ? 'text-gray-900 font-bold' : 'text-gray-500' }}">
                     {{ __('Home') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="url('/playground')"
+                        :active="request()->is('/playground')"
+                        class="{{ request()->is('/playground') ? 'text-gray-900 font-bold' : 'text-gray-500' }}">
+                    {{ __('Playground') }}
                     </x-nav-link>
             
                     <x-nav-link :href="url('/about')"

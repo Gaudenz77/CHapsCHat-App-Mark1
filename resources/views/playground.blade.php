@@ -26,8 +26,8 @@
       <div id="editor"></div>
       </div>
 
-      <div class="col-sm-4 card1">
-        <h2 class="editorTitle mx-0 my-2">Preview:</h2>
+      <div class="col-sm-4 card1 p-3">
+        <h2 class="editorTitle mx-2 my-2">Preview:</h2>
         <iframe id="preview" style="width:100%"></iframe>
       </div>
 
@@ -87,7 +87,7 @@
   // FUNCTIONAL HTMML ONLY START --------------------------------
   
 // script Monaco in-site editor/preview --------------------------------
-require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.27.0/min/vs' }});
+require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.37.0/min/vs' }});
     require(['vs/editor/editor.main'], function() {
       monaco.editor.defineTheme('dark-theme', {
         base: 'vs-dark',

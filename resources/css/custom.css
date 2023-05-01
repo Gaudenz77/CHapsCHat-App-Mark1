@@ -193,6 +193,11 @@ body.dark-mode .card1{
 .containerEditor {
 
 } */
+
+/* .monaco-list-quick-input-container {
+    z-index: 9999;
+  } */
+
 .containerEditor {
     margin-top: 1rem;
 }
