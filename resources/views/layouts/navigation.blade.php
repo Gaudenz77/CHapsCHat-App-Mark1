@@ -5,25 +5,30 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        
+                <a class="navbar-brand  text-dark" href="{{ url('/') }}">
+                    {{ config('app.name', 'CHapsCHat') }} </a>
+           
+            
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                
 
                 <li class="nav-item">
-                    <a class="navbar-brand text-dark" href="{{ url('/') }}">
-                        {{ config('app.name', 'CHapsCHat') }}
-                    </a>
+                    {{-- <a class="navbar-brand  text-dark" href="{{ url('/') }}">
+                    {{ config('app.name', 'CHapsCHat') }} </a> --}}
                 </li>
-                
-                @auth
-                    <li class="nav-item">
-                        <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/playground') }}">
-                            Playground
-                        </a>
-                    </li>
-                @endauth
 
-            {{-- <li class="nav-item">
-                <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/') }}">Home</a>
-            </li> --}}
+                <li class="nav-item">
+                <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/playground') }}">Playground</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/knowledgeSphere') }}">KnowledgeSphere </a>
+                </li>
 
                 <li class="nav-item">
                 <a class="nav-link {{ (request()->is('about')) ? 'active' : '' }} text-dark" aria-current="page" href="{{ url('/about') }}">About</a>
@@ -35,7 +40,7 @@
                 {{-- <a href="{{ url('dashboard') }}" class="">My Account</a> --}}
                 <div class="dropdown">
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                       account {{-- {{ Auth::user()->name }} --}}
+                        {{ Auth::user()->name }}
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="nav-item" href="{{ url('profile') }}">Profile</a></li>
