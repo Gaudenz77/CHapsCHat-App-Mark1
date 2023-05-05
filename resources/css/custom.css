@@ -1,3 +1,15 @@
+/* In any other CSS files 
+body.dark-mode .some-element {
+
+// Styles for elements that need to be updated for dark mode 
+
+}*/
+
+body.dark-mode body {
+    /* background-color: mediumspringgreen; */
+}
+
+
 body {
     margin-top:12vh;
     font-family: 'Poppins', sans-serif;
@@ -18,18 +30,17 @@ body.dark-mode html, body {
 body.dark-mode  .playground  {
     /* background-color:black; */
 }
-/* TOGGLE ================================================================= */
 
-/* In any other CSS files 
-body.dark-mode .some-element {
 
-// Styles for elements that need to be updated for dark mode 
+/* TOGGLE Variants Start================================================================= */
 
-}*/
 
-body.dark-mode body {
-    /* background-color: mediumspringgreen; */
-}
+
+
+/* TOGGLE Variants Stop================================================================= */
+
+
+
 
 .navbar {
     height:10%;
