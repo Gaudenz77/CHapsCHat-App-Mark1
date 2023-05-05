@@ -1,3 +1,6 @@
+@extends('layouts.master')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -18,28 +21,30 @@
 
 
         <!-- Scripts -->
-        @vite([ 'resources/css/app.css', 'resources/js/app.js', 'resources/js/custom.js', 'resources/css/areset.css', 'resources/css/custom.css'])
-    </head>
+        @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/custom.js', 'resources/css/areset.css', 'resources/css/custom.css'])
+        {{-- 'resources/css/app.css', --}}</head>
 
     
     <body class="font-sans antialiased">
-        <div class="mt-12vh">
+        <header>
             @include('layouts.navigation')
 
+        </header>
+            
             <!-- Page Heading -->
-            @if (isset($header))
+            {{-- @if (isset($header))
                 <header class="bg-white shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
-            @endif
+            @endif --}}
 
             <!-- Page Content -->
             <main>
                 {{ $slot }}
             </main>
-        </div>
+        
             <!-- toggle mode script start -->
 <script>
 
@@ -66,3 +71,4 @@
     </script>
     </body>
 </html>
+@endsection
