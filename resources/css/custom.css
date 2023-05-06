@@ -32,6 +32,238 @@ body.dark-mode  .playground  {
     /* background-color:black; */
 }
 
+.navbar {
+    height:10%;
+}
+
+.navbar-toggler-icon {   
+    font-size:30px;
+}
+
+.navbar {
+    color:red;
+}
+
+body.dark-mode  .nav-link {
+    color: black;
+}
+
+
+body.dark-mode .editorTitle   {
+    color: white;
+}
+
+body.dark-mode .ul   {
+    color: white;
+}
+
+body.dark-mode .li   {
+    color: white;
+}
+
+body.dark-mode .chatbody   {
+    color: white;
+}
+
+/* -------------------------------------------------------- ROUND DIVS */
+.circle {
+    position: relative;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+  }
+
+.circleProfileCols {
+    position: relative;
+    min-width: 33%;
+    min-height: 33%;
+    border-radius: 50%;
+    padding:8%;
+  }
+
+.chatbody {
+    margin-left:10%;
+    padding:10%;
+}
+  
+.textfield {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    padding: 20px;
+
+    overflow: auto;
+    transform: translateY(50%);
+  }
+
+.circleBlog {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+
+.textfieldBlog {
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+    padding: 2.5rem;
+    /* color:#ffffff; */
+    
+  }
+  
+.circleKnowledgeForm {
+    position: relative;
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+  }
+
+.circleKnowledge {
+    position: relative;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+  }
+
+.textfieldKnowledge {
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+    padding: 2.5rem;
+    color:#ffffff;
+    
+  }
+  
+.card1 {
+    background-color:mediumspringgreen;
+    position:relative;
+    left:0;
+    color: black;
+}
+
+body.dark-mode .card1{
+    background-color: rgb(231, 176, 12);
+}
+
+/* ---------------------------------------------------------------- EDITOR MONACO START */
+
+/* .monaco-list-row .monaco-highlighted-label .monaco-icon-label .monaco-icon-name-container {
+    line-height: 24px; 
+  } */
+  
+
+
+/*         #editor {
+    height: 500px;
+    
+
+}
+#css-editor {
+    height: 500px;
+    
+
+}
+.containerEditor {
+
+} */
+
+.containerEditor {
+    margin-top: 1rem;
+}
+.editorTitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.editor .suggest-widget div.tree {
+    white-space: unset;
+    padding-bottom: 0;
+}
+
+#editor, #css-editor, #js-editor {
+    height: 350px;
+    width: 100%;
+    border: 1px solid #ccc;
+    
+}
+#preview {
+    height: 300px;
+    width: 100%;
+    border: none;
+}
+.body.dark-mode .monaco-editor {
+    background-color: #212529;
+    color: #d4d4d4;
+}
+
+/* ---------------------------------------------------------------- EDITOR MONACO END */
+
+/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #f8f8f8;
+  }
+  
+  a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #333;
+    transition: width 0.3s ease;
+  }
+  
+  a:hover::before,
+  a:focus::before {
+    width: 100%;
+  }
+  
+/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION END */
+
+/*  footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/*.btn-circle {
+    width: 5rem;
+    height: 5rem;
+    font-size: 90%;
+    padding: 8px 8px;
+    border-radius: 50%;
+    color:#087990;
+    text-align: center;
+    margin-bottom: 15px; 
+    box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
+}
+
+body.dark-mode .btn-circle {
+    color: #f3a81c;
+}
 
 /* TOGGLE Variants Start================================================================= */
 /* body {
@@ -172,408 +404,5 @@ body.dark-mode  .playground  {
     font-size: 4.5vw;
   }
 
-
-
 /* TOGGLE Variants Stop================================================================= */
-
-
-
-
-.navbar {
-    height:10%;
-}
-
-/* .navbar-toggler-icon {
-    background-color: #ffffff;
-  }
-  
-  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
-    transform: rotate(45deg);
-    background-color: #6c757d;
-  }
-  
-  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
-    transform: rotate(-45deg);
-    background-color: #6c757d;
-  } */
-
-.navbar-toggler-icon {
-    
-    
-    font-size:30px;
-}
-
-.navbar {
-    color:red;
-}
-
-body.dark-mode  .nav-link {
-    color: black;
-}
-
-
-body.dark-mode .editorTitle   {
-    color: white;
-}
-
-body.dark-mode .ul   {
-    color: white;
-}
-
-body.dark-mode .li   {
-    color: white;
-}
-
-body.dark-mode .chatbody   {
-    color: white;
-}
-
-/* .editorTitle .dark-mode  {
-
-} */
-
-/* body.dark-mode html, body {
-    color: black;
-} */
-
-/* -------------------------------------------------------- ROUND DIVS */
-.circle {
-    position: relative;
-    min-width: 150px;
-    min-height: 150px;
-    border-radius: 50%;
-  }
-
-.circleProfileCols {
-    position: relative;
-    min-width: 33%;
-    min-height: 33%;
-    border-radius: 50%;
-    padding:8%;
-  }
-
-.chatbody {
-    margin-left:10%;
-    padding:10%;
-}
-  
-.textfield {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 70%;
-    height: 70%;
-    padding: 20px;
-
-    overflow: auto;
-    transform: translateY(50%);
-  }
-
-.circleBlog {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-  }
-
-.textfieldBlog {
-    font-size:15px;
-    font-weight:bold;
-    text-align:center;
-    padding: 2.5rem;
-    /* color:#ffffff; */
-    
-  }
-  
-.circleKnowledgeForm {
-    position: relative;
-    width: 25%;
-    height: 25%;
-    border-radius: 50%;
-  }
-
-.circleKnowledge {
-    position: relative;
-    width: 75%;
-    height: 75%;
-    border-radius: 50%;
-  }
-
-.textfieldKnowledge {
-    font-size:15px;
-    font-weight:bold;
-    text-align:center;
-    padding: 2.5rem;
-    color:#ffffff;
-    
-  }
-  
-.card1 {
-    background-color:mediumspringgreen;
-    position:relative;
-    left:0;
-    color: black;
-}
-
-body.dark-mode .card1{
-    background-color: rgb(231, 176, 12);
-}
-
-/* body.dark-mode .messagesList {
-    position:relative;
-    left:10px;
-    list-style-position: inside;
-    border-bottom: #f3a81c 2px solid;
-} */
-
-/* ---------------------------------------------------------------- EDITOR MONACO START */
-
-/* .monaco-list-row .monaco-highlighted-label .monaco-icon-label .monaco-icon-name-container {
-    line-height: 24px; 
-  } */
-  
-
-
-/*         #editor {
-    height: 500px;
-    
-
-}
-#css-editor {
-    height: 500px;
-    
-
-}
-.containerEditor {
-
-} */
-
-/* .monaco-list-quick-input-container {
-    z-index: 9999;
-  } */
-
-.containerEditor {
-    margin-top: 1rem;
-}
-.editorTitle {
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding: 0.5rem 0 0.5rem 1rem;
-}
-
-.editor .suggest-widget div.tree {
-    white-space: unset;
-    padding-bottom: 0;
-}
-
-#editor, #css-editor, #js-editor {
-    height: 350px;
-    width: 100%;
-    border: 1px solid #ccc;
-    
-}
-#preview {
-    height: 300px;
-    width: 100%;
-    border: none;
-}
-.body.dark-mode .monaco-editor {
-    background-color: #212529;
-    color: #d4d4d4;
-}
-
-/* ---------------------------------------------------------------- EDITOR MONACO END */
-
-/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    background-color: #f8f8f8;
-  }
-  
-  a {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 0;
-    color: #333;
-    text-decoration: none;
-    position: relative;
-  }
-  
-  a::before {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: #333;
-    transition: width 0.3s ease;
-  }
-  
-  a:hover::before,
-  a:focus::before {
-    width: 100%;
-  }
-  
-/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION END */
-
-
-
-
-
-/*  footer */
-/* .sticky-footer {
-      position: sticky;
-      left: 0;
-      bottom: 0;
-      height:10%;
-      width: 100%;
-  } */
-
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-
-/*.btn-circle {
-    width: 5rem;
-    height: 5rem;
-    font-size: 90%;
-    padding: 8px 8px;
-    border-radius: 50%;
-    color:#087990;
-    text-align: center;
-    margin-bottom: 15px; 
-    box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
-}
-
-body.dark-mode .btn-circle {
-    color: #f3a81c;
-}
-
-.titlelogo {
-    color:#087990;
-}
-
-body.dark-mode .titlelogo {
-    color: #f3a81c;
-}
-
-.btn {
-    
-}
-
-.btn-circlesmall {
-    width: 3rem;
-    height: 3rem;
-    font-size: 90%;
-    padding: 8px 8px;
-    border-radius: 50%;
-    color:#087990;
-    text-align: center;
-    margin-bottom: 15px; 
-    box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
-}
-
-.btn-circlesmallest {
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 90%;
-    padding: 3px 3px;
-    border-radius: 50%;
-    color:#087990;
-    text-align: center;
-    margin-bottom: 5px; 
-    box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
-}
-
-body.dark-mode .btn-circlesmall {
-    color: #f3a81c;
-}
-
-.transparent-btn-up {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #087990;
-    position:relative;
-    top:-1px;
-}
-
-body.dark-mode .transparent-btn-up {
-    color: #f3a81c;
-}
-
-.transparent-btn-down {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #087990;
-    position:relative;
-    left:0px;
-    top:1px;
-}
-
-body.dark-mode .transparent-btn-down {
-    color: #f3a81c;
-}
- 
-.transparent-btn:hover {
-    color: #087990;
-}
-
-body.dark-mode .transparent-btn:hover {
-    color: #f3a81c;
-}
-
-.form-icons {
-    display: flex;
-    align-items: center;
-}
-
-.form-icons form {
-    margin-right: 5px;
-}
-
-.form-icons p {
-    margin-left: 5px;
-}
-
-body.dark-mode .reply-marker {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    font-size: 1.2em;
-    margin-right: 0.5em;
-    text-align: center;
-    color: #ccc;
-}   
-*/
-/* Dark mode styles for form elements */
-/*body.dark-mode .form-control-dark {
-    background-color: #222;
-    border-color: #666;
-    color: #000;
-  }
-  
-body.dark-mode .form-check-input-dark:checked {
-    background-color: #fff;
-    border-color: #666;
-    color: #000;
-  }
-  
-body.dark-mode .form-check-label-dark {
-    color: #fff;
-  }*/
-
-
-
 

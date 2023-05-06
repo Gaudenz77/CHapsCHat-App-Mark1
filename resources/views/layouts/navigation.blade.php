@@ -61,6 +61,7 @@
                 @endif
                 
             </div>
+            <!-- TOGGLE AMAZING START-->
             <label class="wrapper" id="bg">
                 <input type="checkbox" id="checker" name="check-guy" onchange="toggleDarkMode()" checked="checked"/>
                 <div class="ht-ui-check" for="check-guy">
@@ -86,16 +87,13 @@
                     </div>
                 </div>
             </label>
+            <!-- TOGGLE AMAZING STOP-->
         </div>
         
         
                 
         <!---------------------------------------------------------------->
-        {{-- <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Light/Dark Toggle</button> --}}
-        
-        {{-- <button class="bg-white text-gray-700 border border-gray-300 rounded-md shadow-sm py-2 px-4 inline-flex items-center" onclick="toggleDarkMode()">
-            <span class="mr-2">Light/Dark Toggle</span>
-            </button> --}}   
+        <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Light/Dark Toggle</button>
         <!---------------------------------------------------------------->
     </div>
 </nav>
