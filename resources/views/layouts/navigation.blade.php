@@ -59,13 +59,40 @@
                 @endif
                 @endauth
                 @endif
+                
             </div>
+            <label class="wrapper" id="bg">
+                <input type="checkbox" id="checker" name="check-guy" onchange="toggleDarkMode()" checked="checked"/>
+                <div class="ht-ui-check" for="check-guy">
+                    <div class="track">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="handle">
+                        <div class="faces">
+                            <div class="sad">
+                                <div class="eyes">
+                                    <div>+ </div>
+                                    <div>+</div>
+                                </div>
+                                <div class="mouth">—</div>
+                            </div>
+                            <div class="happy">
+                                <div class="eyes">
+                                    <span class="left-eye">◠</span> <span class="right-eye">◠</span>
+                                </div>
+                                <div class="mouth"><span>◗</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
         </div>
         
         
                 
         <!---------------------------------------------------------------->
-        <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Light/Dark Toggle</button>
+        {{-- <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Light/Dark Toggle</button> --}}
+        
         {{-- <button class="bg-white text-gray-700 border border-gray-300 rounded-md shadow-sm py-2 px-4 inline-flex items-center" onclick="toggleDarkMode()">
             <span class="mr-2">Light/Dark Toggle</span>
             </button> --}}   

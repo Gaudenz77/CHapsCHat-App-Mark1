@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'ChapsChat')
+
 @section('content')
 
 <section class="codeSpaceChat">
@@ -48,6 +50,34 @@
         <div class="logiInfo mt-2 p-1">
           @if (Auth::check())
               <h3>Welcome, {{ Auth::user()->name }}! You are logged in.</h3>
+
+             
+                <label class="wrapper" id="bg">
+                  <input type="checkbox" id="checker" name="check-guy" checked="checked"/>
+                  <div class="ht-ui-check" for="check-guy">
+                    <div class="track">
+                      <div class="inner"></div>
+                    </div>
+                    <div class="handle">
+                      <div class="faces">
+                        <div class="sad">
+                          <div class="eyes"> 
+                            <div>+ </div>
+                            <div>+</div>
+                          </div>
+                          <div class="mouth">—</div>
+                        </div>
+                        <div class="happy">
+                          <div class="eyes">
+                             ◠ ◠       </div>
+                          <div class="mouth"> <span>◗</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </label>
+              
+
           @else
               <p><a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.</p>
           @endif
