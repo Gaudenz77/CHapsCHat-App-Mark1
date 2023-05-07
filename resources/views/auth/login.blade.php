@@ -26,12 +26,20 @@
         </div>
 
         <!-- Remember Me -->
-        <div class="block mt-4">
+        {{-- <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
                 <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
             </label>
+        </div> --}}
+        <!-- Remember Me -->
+        <div class="form-check mt-4">
+            <input id="remember_me" type="checkbox" class="form-check-input" name="remember">
+            <label for="remember_me" class="form-check-label">
+            {{ __('Remember me') }}
+            </label>
         </div>
+  
 
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))

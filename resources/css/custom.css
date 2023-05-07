@@ -267,155 +267,184 @@ body.dark-mode .btn-circle {
 
 /* TOGGLE Variants Start================================================================= */
 /* body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    height: 100vh;
-  }
-  */
- /*  #bg {
-    position:relative;
-    left:-30px;
-    
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+height: 100vh;
+}
+#bg {
+position:relative;
+left:-30px;
 
-  } */
 
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position:relative;
-    left:-20%;
-    
-    
-  } 
-  
-  input[type=checkbox] {
-    position: absolute;
-    left: -200vw;
-    visibility: hidden;
-  }
-  input[type=checkbox]:checked + .ht-ui-check:before {
-    /* background: #f5d8dd; */
-  }
-  input[type=checkbox]:checked + .ht-ui-check .track {
-    /* background: linear-gradient(135deg, #e66465 0%, #9198e5 80%); */
-    background:#0000ff;
-  }
-  input[type=checkbox]:checked + .ht-ui-check .handle {
-    transform: translateX(10.55vw);
-  }
-  input[type=checkbox]:checked + .ht-ui-check .handle .faces {
-    transform: translateX(-16.5vw);
-  }
-  
-  .ht-ui-check {
-    width: 21.5vw;
-    height: 3.75vw;
-    cursor: pointer;
-    border-radius: 10vw;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transform: scale(0.3);
-  }
-  .ht-ui-check:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    /* background: #eee; */
-    transition: 0.3s ease-out all;
-  }
-  .ht-ui-check .handle,
-  .ht-ui-check .track {
-    position: absolute;
-    z-index: 10;
-    transition: ease-out all 0.23s;
-    border-radius: 10vw;
-  }
-  .ht-ui-check .track {
-    display: block;
-    width: 21.5vw;
-    height: 12.5vw;
-    /* background: #5e5f56; */
-    background: #ff0000;
-  }
-  .ht-ui-check .handle {
-    display: block;
-    height: 9.5vw;
-    width: 9.5vw;
-    /* background: white; */
-    background: #ffff00;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.13);
-    transform: translateX(1.5vw);
-    overflow: hidden;
-  }
-  
-  .faces {
-    display: flex;
-    flex-wrap: no-wrap;
-    width: 20vw;
-    font-size: 3.5vw;
-    justify-content: space-between;
-    transition: 0.3s ease-out all 0.1s;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-  .faces .sad {
-    position: relative;
-    top: 3.5vw;
-    left: 1vw;
-    color: #5e5f56;
-    line-height: 1em;
-  }
-  .faces .sad .eyes {
-    display: flex;
-  }
-  .faces .sad .eyes div {
-    transform: rotate(45deg);
-  }
-  .faces .sad .mouth {
-    margin-left: 6px;
-    line-height: 0em;
-    font-weight: 400;
-  }
-  .faces .happy {
-    color: #5e5f56;
-    position: relative;
-    top: 1.5vw;
-    left: 5vw;
-    line-height: 0.85;
-  }
-  .faces .happy:after {
-    content: "";
-    width: 1.5vw;
-    height: 1.5vw;
-    display: block;
-    position: absolute;
-    top: 2.5vw;
-    left: -1vw;
-    border-radius: 50%;
-    background: #f5d8dd;
-  }
-  .faces .happy .eyes {
-    margin-top:15%;
-    font-family: "Roboto Mono", courier;
-  }
-  .faces .happy .mouth {
-    margin-left: 0em;
-    margin-top: 0.25vw;
-    transform: rotate(90deg);
-    font-weight: 300;
-    font-size: 4.5vw;
-  }
+} */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position:relative;
+  left:0;
+  width: 80%;
+} 
+
+.toggle {
+  position:relative;
+  width:230px;
+  margin-left: -4rem;
+}
+/* ORIGINAL START CHECKBOX */   
+/* input[type=checkbox] {
+  position: absolute;
+  left: -200vw;
+  visibility: hidden;
+}
+input[type=checkbox]:checked + .ht-ui-check:before { */
+  /* background: #f5d8dd; */
+/* }
+input[type=checkbox]:checked + .ht-ui-check .track { */
+  /* background: linear-gradient(135deg, #e66465 0%, #9198e5 80%); */
+/*   background:#0000ff;
+}
+input[type=checkbox]:checked + .ht-ui-check .handle {
+  transform: translateX(10.55vw);
+}
+input[type=checkbox]:checked + .ht-ui-check .handle .faces {
+  transform: translateX(-16.5vw);
+} */
+/* ORIGINAL STOP CHECKBOX */   
+
+.custom-checkbox[type=checkbox] {
+  position: relative;
+  left: 0;
+  visibility: hidden;
+}
+
+.custom-checkbox[type=checkbox]:checked + .ht-ui-check:before {
+  /* background: #f5d8dd; */
+}
+
+.custom-checkbox[type=checkbox]:checked + .ht-ui-check .track {
+  /* background: linear-gradient(135deg, #e66465 0%, #9198e5 80%); */
+  background:#0000ff;
+}
+
+.custom-checkbox[type=checkbox]:checked + .ht-ui-check .handle {
+  transform: translateX(10.55vw);
+}
+
+.custom-checkbox[type=checkbox]:checked + .ht-ui-check .handle .faces {
+  transform: translateX(-16.5vw);
+}
+ 
+.ht-ui-check {
+  width: 21.5vw;
+  height: 3.75vw;
+  cursor: pointer;
+  border-radius: 10vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transform: scale(0.3);
+}
+.ht-ui-check:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* background: #eee; */
+  transition: 0.3s ease-out all;
+}
+.ht-ui-check .handle,
+.ht-ui-check .track {
+  position: absolute;
+  z-index: 10;
+  transition: ease-out all 0.23s;
+  border-radius: 10vw;
+
+}
+.ht-ui-check .track {
+  display: block;
+  width: 21.5vw;
+  height: 12.5vw;
+  /* background: #5e5f56; */
+  background: #ff0000;
+}
+.ht-ui-check .handle {
+  display: block;
+  height: 9.5vw;
+  width: 9.5vw;
+  /* background: white; */
+  background: #ffff00;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.13);
+  transform: translateX(1.5vw);
+  overflow: hidden;
+}
+
+.faces {
+  display: flex;
+  flex-wrap: no-wrap;
+  width: 20vw;
+  font-size: 3.5vw;
+  justify-content: space-between;
+  transition: 0.3s ease-out all 0.1s;
+  -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.faces .sad {
+  position: relative;
+  top: 3.5vw;
+  left: 1vw;
+  color: #5e5f56;
+  line-height: 1em;
+}
+.faces .sad .eyes {
+  display: flex;
+}
+.faces .sad .eyes div {
+  transform: rotate(45deg);
+}
+.faces .sad .mouth {
+  margin-left: 6px;
+  line-height: 0em;
+  font-weight: 400;
+}
+.faces .happy {
+  color: #5e5f56;
+  position: relative;
+  top: 1.5vw;
+  left: 5vw;
+  line-height: 0.85;
+}
+.faces .happy:after {
+  content: "";
+  width: 1.5vw;
+  height: 1.5vw;
+  display: block;
+  position: absolute;
+  top: 2.5vw;
+  left: -1vw;
+  border-radius: 50%;
+  background: #f5d8dd;
+}
+.faces .happy .eyes {
+  margin-top:15%;
+  font-family: "Roboto Mono", courier;
+}
+.faces .happy .mouth {
+  margin-left: 0em;
+  margin-top: 0.25vw;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 4.5vw;
+}
 
 /* TOGGLE Variants Stop================================================================= */
 

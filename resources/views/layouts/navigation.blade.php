@@ -19,23 +19,23 @@
                     {{ config('app.name', 'CHapsCHat') }} </a> --}}
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item py-3">
                 <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/playground') }}">Playground</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item py-3">
                     <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item py-3">
                     <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/knowledgeSphere') }}">KnowledgeSphere </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item py-3">
                 <a class="nav-link {{ (request()->is('about')) ? 'active' : '' }} text-dark" aria-current="page" href="{{ url('/about') }}">About</a>
                 </li>
             <!-- TOGGLE AMAZING START-->
-                <li class=" px-2">
+                <li class="toggle  py-3">
                     @include('components.toggle')
                 </li>
             <!-- TOGGLE AMAZING STOP-->
