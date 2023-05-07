@@ -45,7 +45,7 @@
                 {{ $slot }}
             </main>
         
-            <!-- toggle mode script start -->
+<!-- toggle mode script start -->
 <script>
 
     // Read the value of the "darkMode" cookie

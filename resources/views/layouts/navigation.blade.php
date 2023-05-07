@@ -5,11 +5,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
-        
+            <img src="./assets/img/Group 26.svg" alt="logo_image" class="img-fluid mt-3">
                 <a class="navbar-brand  text-dark" href="{{ url('/') }}">
                     {{ config('app.name', 'CHapsCHat') }} </a>
+                    
            
-            
+            @auth
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                 
 
@@ -33,7 +34,13 @@
                 <li class="nav-item">
                 <a class="nav-link {{ (request()->is('about')) ? 'active' : '' }} text-dark" aria-current="page" href="{{ url('/about') }}">About</a>
                 </li>
+            <!-- TOGGLE AMAZING START-->
+                <li class=" px-2">
+                    @include('components.toggle')
+                </li>
+            <!-- TOGGLE AMAZING STOP-->
             </ul>
+            @endauth
             <div class="d-flex">
                 @if (Route::has('login'))
                 @auth
@@ -61,39 +68,9 @@
                 @endif
                 
             </div>
-            <!-- TOGGLE AMAZING START-->
-            <label class="wrapper" id="bg">
-                <input type="checkbox" id="checker" name="check-guy" onchange="toggleDarkMode()" checked="checked"/>
-                <div class="ht-ui-check" for="check-guy">
-                    <div class="track">
-                        <div class="inner"></div>
-                    </div>
-                    <div class="handle">
-                        <div class="faces">
-                            <div class="sad">
-                                <div class="eyes">
-                                    <div>+ </div>
-                                    <div>+</div>
-                                </div>
-                                <div class="mouth">—</div>
-                            </div>
-                            <div class="happy">
-                                <div class="eyes">
-                                    <span class="left-eye">◠</span> <span class="right-eye">◠</span>
-                                </div>
-                                <div class="mouth"><span>◗</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </label>
-            <!-- TOGGLE AMAZING STOP-->
-        </div>
-        
-        
-                
+        </div>  
         <!---------------------------------------------------------------->
-        <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Light/Dark Toggle</button>
+        {{-- <button class="btn btn-outline-secondary" onclick="toggleDarkMode()">Light/Dark Toggle</button> --}}
         <!---------------------------------------------------------------->
     </div>
 </nav>

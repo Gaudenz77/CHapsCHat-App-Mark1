@@ -36,9 +36,9 @@
 
 <body class="{{-- d-flex flex-column h-100 bg-gradient --}}">
 <div id="app">
-    <header>
-        @include('layouts.navigation')
-    </header>
+        <header>
+            @include('layouts.navigation')
+        </header>
 
     <!-- Begin page content -->
     <main>

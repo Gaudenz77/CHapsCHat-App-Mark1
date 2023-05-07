@@ -273,15 +273,24 @@ body.dark-mode .btn-circle {
     overflow: hidden;
     height: 100vh;
   }
-  
+  */
+ /*  #bg {
+    position:relative;
+    left:-30px;
+    
+
+  } */
+
   .wrapper {
-    width: 200px;
-    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-  } */
+    position:relative;
+    left:-20%;
+    
+    
+  } 
   
   input[type=checkbox] {
     position: absolute;
@@ -292,7 +301,8 @@ body.dark-mode .btn-circle {
     /* background: #f5d8dd; */
   }
   input[type=checkbox]:checked + .ht-ui-check .track {
-    background: linear-gradient(135deg, #e66465 0%, #9198e5 80%);
+    /* background: linear-gradient(135deg, #e66465 0%, #9198e5 80%); */
+    background:#0000ff;
   }
   input[type=checkbox]:checked + .ht-ui-check .handle {
     transform: translateX(10.55vw);
@@ -309,6 +319,7 @@ body.dark-mode .btn-circle {
     cursor: pointer;
     display: flex;
     align-items: center;
+    transform: scale(0.3);
   }
   .ht-ui-check:before {
     content: "";
@@ -332,13 +343,15 @@ body.dark-mode .btn-circle {
     display: block;
     width: 21.5vw;
     height: 12.5vw;
-    background: #5e5f56;
+    /* background: #5e5f56; */
+    background: #ff0000;
   }
   .ht-ui-check .handle {
     display: block;
     height: 9.5vw;
     width: 9.5vw;
-    background: white;
+    /* background: white; */
+    background: #ffff00;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.13);
     transform: translateX(1.5vw);
     overflow: hidden;
