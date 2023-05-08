@@ -1,3 +1,9 @@
+body {
+    margin-top:15vh;
+    font-family: 'Poppins', sans-serif;
+    color:#ebebeb
+}
+
 /* In any other CSS files 
 body.dark-mode .some-element {
 
@@ -6,48 +12,223 @@ body.dark-mode .some-element {
 }*/
 
 body.dark-mode body {
-    /* background-color: mediumspringgreen; */
-}
-
-
-body {
-    margin-top:12vh;
-    font-family: 'Poppins', sans-serif;
+  /* background-color: mediumspringgreen; */
 }
 
 body.dark-mode  {
-    margin-top:12vh;
+    margin-top:15vh;
     margin-bottom:100px;
-    background-color: #00fa9a;
+    background-color: #091540;
     font-family: 'Poppins', sans-serif;
 }
 
 body.dark-mode html, body {
-    color: black;
-    background-color: #ffc0cb;
-     }
+    color: #ffffff;
+    background-color: #a4b5f2;
+}
 
 
 body.dark-mode  .playground  {
     /* background-color:black; */
 }
 
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color:#ebebeb;
+  background-color: #181818;
+} 
+
+body.dark-mode nav {
+  color:#181818;
+  background-color: #ebebeb;
+} 
+
 .navbar {
-    height:10%;
+    height:12.5%;
+    padding-left:2%;
+    background-color: #091540
 }
 
 .navbar-toggler-icon {   
     font-size:30px;
 }
 
-.navbar {
-    color:red;
+.myNavbar {
+  background-color: #ebebeb;
 }
 
-body.dark-mode  .nav-link {
-    color: black;
+a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  position: relative;
 }
 
+/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
+
+a.myNavUnderline {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 0;
+  color: #ebebeb;
+  text-decoration: none;
+  position: relative;
+}
+
+body.dark-mode a.myNavUnderline {
+  color: #333;
+}
+
+a.myNavUnderline:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ebebeb;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom right;
+}
+
+body.dark-mode a.myNavUnderline:before {
+  background-color: #333;
+}
+
+a.myNavUnderline:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a.myNavUnderline.active:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a.myNavToggleTitle {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+body.dark-mode a.myNavToggleTitle {
+  color: #ebebeb;
+}
+  
+a.myNavToggleTitle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ebebeb;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom right;
+}
+
+body.dark-mode a.myNavToggleTitle:before {
+  background-color: #ebebeb;
+}
+
+a.myNavToggleTitle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a.myNavToggleTitle.active:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION END */
+
+/* Styles for small devices */
+@media (max-width: 575.98px) {
+  .dropdown-menu {
+    margin-left: 0;
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 60%;
+    background-color: #091540
+  }
+}
+
+@media (max-width: 575.98px) {
+  body.dark-mode .dropdown-menu {
+      background-color: #ebebeb;
+    }
+  }
+
+/* Styles for medium and large devices */
+@media (min-width: 576px) {
+  .dropdown-menu {
+    margin-left: -35px;
+    margin-right: 60px;
+    padding-left: 20px;
+    width: 20%;
+    background-color: #091540;
+  }
+}
+
+@media (min-width: 576px) {
+body.dark-mode .dropdown-menu {
+    background-color: #ebebeb;
+  }
+}
+
+.nav-link {
+    color: #ebebeb;
+}
+
+.offcanvas-header {
+  background-color: #ebebeb;
+}
+
+body.dark-mode .offcanvas-header {
+  background-color: #091540;
+}
+
+.offcanvas-body {
+  background-color: #091540;
+}
+
+body.dark-mode .offcanvas-body {
+  background-color: #ebebeb;
+}
+
+.myNavToggleTitle {
+  color: #333;
+}
+
+body.dark-mode .myNavToggleTitle {
+  color: #ebebeb;
+}
+
+body.dark-mode .nav-link {
+  color: #333;
+}
+
+.nav-link {
+  color: #ebebeb;
+}
 
 body.dark-mode .editorTitle   {
     color: white;
@@ -147,7 +328,7 @@ body.dark-mode .chatbody   {
 }
 
 body.dark-mode .card1{
-    background-color: rgb(231, 176, 12);
+    background-color:#59c3c3;
 }
 
 /* ---------------------------------------------------------------- EDITOR MONACO START */
@@ -203,51 +384,6 @@ body.dark-mode .card1{
 }
 
 /* ---------------------------------------------------------------- EDITOR MONACO END */
-
-/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    background-color: #f8f8f8;
-  }
-  
-  a {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 0;
-    color: #333;
-    text-decoration: none;
-    position: relative;
-  }
-  
-  a::before {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: #333;
-    transition: width 0.3s ease;
-  }
-  
-  a:hover::before,
-  a:focus::before {
-    width: 100%;
-  }
-  
-/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION END */
-
-/*  footer */
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
 
 /*.btn-circle {
     width: 5rem;
@@ -347,7 +483,7 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   cursor: pointer;
   display: flex;
   align-items: center;
-  transform: scale(0.3);
+  transform: scale(0.25);
 }
 .ht-ui-check:before {
   content: "";
@@ -373,7 +509,7 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   width: 21.5vw;
   height: 12.5vw;
   /* background: #5e5f56; */
-  background: #ff0000;
+  background: #091540;
 }
 .ht-ui-check .handle {
   display: block;
@@ -448,3 +584,10 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
 
 /* TOGGLE Variants Stop================================================================= */
 
+/*  footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

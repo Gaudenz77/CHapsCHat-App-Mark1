@@ -48,7 +48,7 @@
     </main>
     <footer class="footer mt-5 py-3 bg-footer-gradient sticky-footer">
         <div class="container-fluid text-center">
-            <span class=" text-dark"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}">Dare To Meet Me?</a></b></span>
+            <span class=" text-dark"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}" class="myNavUnderline">Dare To Meet Me?</a></b></span>
         </div>
     </footer>
 </div>

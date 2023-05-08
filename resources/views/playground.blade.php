@@ -7,7 +7,7 @@
 <section class="codeSpaceChat">
   <div class="container ">
     <div class="row justify-content-center">
-      <div class="col-sm-4 bg-warning circle mt-0 p-4">
+      <div class="col-sm-4 card1 circle mt-0 p-4 text-center">
         <div class="logiInfo mt-2 p-1">
           {{-- @if (Auth::check())
               <h3 class="p-3">Welcome, {{ Auth::user()->name }}! You are logged in.</h3>
@@ -45,11 +45,11 @@
     </div>
 
     <div class="row justify-content-center">
-      <div class="col-sm-3 bg-warning circle mt-3 p-4">
+      <div class="col-sm-3 card1 circle mt-3 p-4">
        
         <div class="logiInfo mt-2 p-1">
           @if (Auth::check())
-              <h3>Welcome, {{ Auth::user()->name }}! You are logged in.</h3>
+              <h3 class="text-center">Welcome, {{ Auth::user()->name }}!<br>You are logged in.</h3>
           {{-- @include('components.toggle') --}}
             
               

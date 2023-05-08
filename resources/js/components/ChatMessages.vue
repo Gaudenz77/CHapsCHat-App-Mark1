@@ -1,19 +1,20 @@
 <template>
-  <ul>
-    <li class="left clearfix" v-for="message in messages" :key="message.id">
+
+    <figure class="left clearfix" v-for="message in messages" :key="message.id">
       <div class="clearfix">
         <div class="header">
-          <strong>
+          <figcaption class="blockquote-footer">
             {{ message.user.name }}
-          </strong>
+          </figcaption>
         </div>
-        <p>
+        <blockquote class="blockquote">
           {{ message.message }}
-        </p>
+        </blockquote>
       </div>
-    </li>
-  </ul>
+
+  </figure>
 </template>
+
 
 <script>
 import Echo from 'laravel-echo';
