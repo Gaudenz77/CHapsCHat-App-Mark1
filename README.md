@@ -1,28 +1,27 @@
-<div align="center">
+<div align="center" style="width:100%; background-size: cover;background-position: center;background-color: #FFFFFF;
+  background-repeat: no-repeat; ">
 
-[![blahblah on chalk](https://www.henning-uhle.eu/wp-content/loadingstructure/2022/01/yada-yada-1430679_1920.jpg)](https://github.com/svenbledt/Palaver-Laravel "Palaver - Blog")
+![ChapsChatLogo](https://github.com/Gaudenz77/CHapsCHat-App-Mark1/assets/42372680/4d5f828f-1bee-416d-a1c9-16aeb4b6a3d1)
+
+</div>
+<div align="center" style="background-color:#FFffff; height:28.2px">
+
+[![Gaudenz77@Krakatoom-Design - CHaps-CHat-App](https://img.shields.io/badge/Gaudenz77%40Krakatoom--Design-CHaps--CHat--App-ffffff?style=for-the-badge&logo=laravel)](https://github.com/Gaudenz77/CHapsCHat-App-Mark1)
 
 </div>
 
-[![Palaver - Blog - Team Palaver](https://img.shields.io/static/v1?label=Palaver+-+Blog&message=Team+Palaver&color=%23ff2d20&style=for-the-badge&logo=laravel)](https://github.com/svenbledt/Palaver-Laravel)
-----
-# Palaver - Blog:<br>A Laravel story...
+---
+# Meet'n'Code - CHapsCHat-App
 
 ### Project context
-You have learned and worked with many powerful web technologies. You will now build a website with social media features. Important: Your blog also needs a user administration (Laravel Breeze). You can specialize and work as Frontend, Backend or Fullstack Developer - together in teams of 5-6 developers - here we go!
+You have learned and worked with many powerful web technologies. You will now build a website with social media features, plus a content that is worth sharing with future employers, customers, networking-relatives and other professionals. 
+The main goal is to show some of your learned technologies in its best light and give a little entertainment to whoever visits the site.
 
-## Task / Assignment 
-* Create a website with blog feature and use the <b>Laravel</b>-framework with Breeze, all other avaliable Web-Dev-Techniques (Html, Css, Js, Php, Bs5), [Github](https://github.com/svenbledt/Palaver-Laravel), [FIGMA](https://www.figma.com/file/mf3TBislNFLZhHvvs3TifW/Palaver-Blog?node-id=3%3A4&t=OZFy40E2QIRxL6ik-1)
-* Build the website as a team. The site should look good on phones (mobile first) and on a desktop.
+<!-- ## Task / Assignment --> 
+<!-- * Create a website with blog feature and use the <b>Laravel</b>-framework with Breeze, all other avaliable Web-Dev-Techniques (Html, Css, Js, Php, Bs5), [Github](https://github.com/svenbledt/Palaver-Laravel), [FIGMA](https://www.figma.com/file/mf3TBislNFLZhHvvs3TifW/Palaver-Blog?node-id=3%3A4&t=OZFy40E2QIRxL6ik-1)
+* Build the website as a team. The site should look good on phones (mobile first) and on a desktop. -->
 ----
-## Performance Criteria:
-<ul>
-<li>Website based on Laravel that functions and looks inviting on mobile and desktop PC</li>
-<li>Quality of Mockup and Site Layout</li>
-<li>Functionality of Backend and Site</li>
-<li>Number, types and quality of ISSUES in GitHub</li>
-<li>Completeness of deliverables</li>
-</ul>
+<!-- sail  -->
 ------------------------------
 
 ### Setup / Installation Docker/Npm
@@ -55,16 +54,19 @@ sail npm run dev
 <li>In case npm not running:<br>
 
 ```
-npm install
+sail npm install --save-dev
 ```
+
+*only if you need it dev-only, otherwise, remove "--save-dev"
 </li>
 
 </ul>
 
 ---
 
-## Usage: Palaver Blog
-* open [localhost](http://127.0.0.1/)
+## Usage: CHaps-CHat-App
+* TBC
+<!-- * open [localhost](http://127.0.0.1/)
 * choose login with your or register top right of screen
 * when already registered fill in credentials  => enter
 * if not, register new account, fill in inputs required => enter
@@ -75,7 +77,7 @@ npm install
 * use like or dislike buttons for reaction and/or 
 * comment on post: press comments-link (yellow-center)
 * write commentary
-* happy blogging yalls!
+* happy blogging yalls! -->
 
 
 ## Thank you for your time.
@@ -89,7 +91,7 @@ npm install
 ## Tools Used:
 * [Laravel/Breeze](https://laravel.com/docs/10.x/starter-kits#breeze-and-blade)
 * [Github](https://github.com/svenbledt/Palaver-Laravel) (for file repo/sharing/workflow)
-* [Palaver - the Blog@Trello](https://trello.com/invite/b/IHnXLK2O/ATTIf2f632c84612dc43ae9e0139bbcb6b66EFCE6F34/palaver-the-blog)
+* [Notion Organizer](//https://www.notion.so/)
 * HTML, CSS, Javascript, PHP PDO, Heidisql, Nginx, Mysql
 * [Font](https://fonts.google.com/specimen/Poppins)
 * [Fontawesome](https://fontawesome.com/)
@@ -104,13 +106,11 @@ npm install
 ## Main Content:
 <div style="text-align:center; font-size:20px">
 
-[Github](https://github.com/svenbledt/Palaver-Laravel)<br>
-[Figma](https://www.figma.com/file/mf3TBislNFLZhHvvs3TifW/Palaver-Blog?node-id=3%3A4&t=OZFy40E2QIRxL6ik-1)<br>
-[Trello](https://trello.com/b/IHnXLK2O/palaver-the-blog)<br>
-[Confluence](https://opportunityp1.atlassian.net/wiki/spaces/WD/overview?atlOrigin=eyJpIjoiMTVmMTEwY2Q4Y2JkNDFjMzgxMmQxNTUwNDA0MGQ2YmIiLCJwIjoiYyJ9)<br>
-[UML-DB-Scheme](https://plantuml.github.io/plantuml-core/raw.html?VO-nQiD038PtFuNgFNc2aA7jq2KGqj0b62Fx5FVgisLEIZCKltklzXqS13f9-d_n_TAJVj9081EsvB0fGksn8oYFwF2RF3mxxahuAG3UpkSZRE3omgDwTevy5THyXDrskuVBWGsvnLixs6tsy8gA3Gfbyh9yufj6KcoNzVzI_kmFI_Ugc0iJiL2cWFNOApiJhYyFD3IXdi9pIcRr0kucvAM2TPXGvCxUr9w4j5RkQPGgUc6FHtGrjYs9PEQSfRnRfOUCYKKJnjcUwbneUHXer4XAdFJ30-kArf6flxX9WC5s7jLoEcR-1G00)
+[Github](https://github.com/Gaudenz77/CHapsCHat-App-Mark1)<br>
+[Figma](https://www.figma.com/file/EQlfkQ1kCVGsY77tNYVzPH/CHapsChat-App-Draft?type=design&node-id=34%3A3&t=Xmty5PKXN2n6I9qL-1)<br>
+<!-- [UML-DB-Scheme](https://plantuml.github.io/plantuml-core/raw.html?VO-nQiD038PtFuNgFNc2aA7jq2KGqj0b62Fx5FVgisLEIZCKltklzXqS13f9-d_n_TAJVj9081EsvB0fGksn8oYFwF2RF3mxxahuAG3UpkSZRE3omgDwTevy5THyXDrskuVBWGsvnLixs6tsy8gA3Gfbyh9yufj6KcoNzVzI_kmFI_Ugc0iJiL2cWFNOApiJhYyFD3IXdi9pIcRr0kucvAM2TPXGvCxUr9w4j5RkQPGgUc6FHtGrjYs9PEQSfRnRfOUCYKKJnjcUwbneUHXer4XAdFJ30-kArf6flxX9WC5s7jLoEcR-1G00) -->
 </div>
 
 ----
-### 20230323 1st rm: 
-A production by [Palavrion Inc.](https://github.com/svenbledt/Palaver-Laravel) 
+### 20230511 1st rm: 
+A production by [Krakatoom-Design Inc.](https://github.com/Gaudenz77) 
