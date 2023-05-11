@@ -30,11 +30,47 @@
             @include('layouts.navigation')
         </header>
 
-        <div class="container bg-white">
-     
-                <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <div class="container mt-3 p-5">
+            <div class="row">
+                <h2 class=" text-center mb-5">
                     {{ __('WELCOME TO CHaps-CHat') }}
                 </h2>
+                {{-- <div class="logoChapsChat">
+                    <img class="img-fluid" src="./assets/img/ChapsChatLogo.svg" alt="logo-placeholder">
+                </div> --}}
+            </div>
+            <div class="row justify-content-center px-2" style="height:400px;">
+                
+                <div class="col-sm-3 animate__animated animate__backInLeft animate__delay-2s" id="colSquare">
+                    <img class="img-fluid" src="./assets/img/square_red.svg" alt="logo-placeholder">
+                    <div class="col">Hallo</div>
+                </div>
+                <div class=" col-sm-3 colCircle animate__animated animate__backInDown animate__delay-3s">
+                    <img class="img-fluid" src="./assets/img/circle_yellow.svg" alt="logo-placeholder">
+                </div>
+                <div class=" col-sm-3 colTriangle position-relative animate__animated animate__backInRight animate__delay-4s">
+                    <img class="img-fluid position-absolute" style="transform: scale(1.13);" src="./assets/img/triangle_blue.svg" alt="logo-placeholder">
+                    
+                </div>
+    
+               {{--  <div class="col-md-4 bg-red" style="background-image: url('../assets/img/square_red.svg'); background-size: contain; height: 30%;"></div>
+                <div class="col-md-4 bg-yellow" style="background-image: url('../assets/img/circle_yellow.svg'); background-size: contain; height: 30%;"></div>
+                <div class="col-md-4 bg-blue" style="background-image: url('../assets/img/triangle_blue.svg'); background-size: contain; height: 300px;"></div>
+              --}}  
+  {{-- <div class="col-md-3" style="background-image: url('../assets/img/square_red.svg'); width:400px;"></div>
+  <div class="col-md-3" style="background-image: url('../assets/img/circle_yellow.svg');width:400px;"></div>
+  <div class="col-md-3" style="background-image: url('../assets/img/triangle_blue.svg'); width:400px; display:flex; justify-content:center; margin-left:-100px; padding-right:20%;"></div>
+ --}}
+    
+                
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col">
+                   <p> ipsum dolor sit, amet consectetur adipisicing elit. Cumque, nulla? Corporis perferendis veritatis mollitia nesciunt magnam necessitatibus itaque hic quia provident unde dolores ad fuga, repellat voluptate enim facere. Voluptates.    </p>
+                    
+                </div>
+            </div>
+               
  
         </div>
         

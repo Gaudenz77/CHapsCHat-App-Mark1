@@ -11,6 +11,9 @@
     <!---------------------------------------------------------------- Fontawesome link -->
     <script src="https://kit.fontawesome.com/d4cbcb96c8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!---------------------------------------------------------------- Animate Css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <!---------------------------------------------------------------- Google Fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +51,7 @@
     </main>
     <footer class="footer mt-5 py-3 bg-footer-gradient sticky-footer">
         <div class="container-fluid text-center">
-            <span class=" text-dark"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}" class="myNavUnderline">Dare To Meet Me?</a></b></span>
+            <span class="span1"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}" class="nav-item myNavToggle">Dare To Meet Me?</a></b></span>
         </div>
     </footer>
 </div>

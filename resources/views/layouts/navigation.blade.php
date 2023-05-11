@@ -13,11 +13,14 @@
                 <h2><a class="brand myNavToggleTitle" href="{{ url('/') }}"> {{ config('app.name', 'CHapsCHat') }} </a></h2>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            
             <div class="offcanvas-body px-3">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="d-inline-flex p-0">@include('components.toggle')</a>
                 
+                <a class="d-inline-flex p-0">@include('components.toggle')</a>
+                @if (Route::has('login'))
+                    @auth
                   {{-- <a class="navbar-brand text-dark" href="{{ url('/') }}">
                   {{ config('app.name', 'CHapsCHat') }} </a> --}}
               </li>
@@ -41,11 +44,12 @@
                 <!-- <li class="toggle  py-3">
                   @include('components.toggle')
                 </li> -->
-                      <!-- TOGGLE AMAZING STOP-->
+                <!-- TOGGLE AMAZING STOP-->
+
                 <li class="nav-item dropdown mx-0 pe-4">
                     <a class="myNavUnderline dropdown-toggle m-3 px-0 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    @if (Route::has('login'))
-                    @auth
+                    {{-- @if (Route::has('login'))
+                    @auth --}}
                     {{-- <a href="{{ url('dashboard') }}" class="">My Account</a> --}}
                     {{ Auth::user()->name }}
                     </a>
