@@ -1,21 +1,353 @@
-/* TOGGLE ================================================================= */
+body {
+    margin-top:15vh;
+    font-family: 'Poppins', sans-serif;
+    color:#ebebeb
+}
 
 /* In any other CSS files 
 body.dark-mode .some-element {
 
-    // Styles for elements that need to be updated for dark mode 
+// Styles for elements that need to be updated for dark mode 
 
-  }*/
-  
-/*
-body {
-    background-color: pink;
 }*/
 
-/* body.dark-mode body {
-    
+body.dark-mode body {
+  /* background-color: mediumspringgreen; */
+}
+
+body.dark-mode  {
+    margin-top:15vh;
+    margin-bottom:100px;
+    background-color: #091540;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.dark-mode  body {
+    color: #ffffff;
+    background-color: #a4b5f2;
+}
+
+
+body.dark-mode .playground  {
+    /* background-color:black; */
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  color:#333;
+ }
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode a {
+  color:#ebebeb;
+ }
+
+.login {
+  color:#ebebeb;
+}
+
+body.dark-mode .login {
+  color:#333;
+}
+
+.cardLogin {
+  background-color:#091540;
+}
+
+body.dark-mode .cardLogin {
+  background-color:#ebebeb;
+}
+
+.form-control
+.form-control:active,
+.form-control:focus,
+.form-control:focus:active {
+
+  color:#091540!important;
+  background-color:#ebebeb!important;
+
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-control:active,
+body.dark-mode .form-control:focus,
+body.dark-mode .form-control:focus:active{
+  color:#ebebeb!important;
+  background-color:#091540!important;
+  
+}
+
+.span1 {
+  color:#333;
+}
+body.dark-mode  .span1 {
+  color:#ebebeb;
+}
+/* 
+ body.dark-mode p {
+  color:#ebebeb;
+ }
+ {
+  color:#333;
+ } */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color:#ebebeb;
+  background-color: #181818;
+} 
+
+body.dark-mode nav {
+  color:#181818;
+  background-color: #ebebeb;
+} 
+
+.navbar {
+    height:12.5%;
+    padding-left:2%;
+    background-color: #091540
+}
+
+.navbar-toggler-icon {   
+    font-size:30px;
+}
+
+.myNavbar {
+  background-color: #ebebeb;
+}
+
+a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+.logoChapsChat {
+  position: relative;
+  display:flex;
+  height:100%;
+  justify-content: center;
+}
+
+/* #colSquare {
+  background-image: url('../assets/img/square_red.svg');
+
+height:100%;
+
 } */
+
 /*
+
+#colSquare {
+  background-image: url('../assets/img/square_red.svg');
+
+}
+
+#colCircle {
+  background-image: url('../assets/img/circle_yellow.svg');
+
+}
+
+#colTriangle {
+  background-image: url('../assets/img/triangle_blue.svg');
+
+} 
+.colCircle {
+  background-image: url('./assets/img/circle_yellow.svg');
+  background-size: cover;
+  height: 400px;
+}
+
+.colTriangle {
+  background-image: url('./assets/img/triangle_blue.svg');
+  background-size: cover;
+  height: 400px;
+} */
+
+/* .content-column {
+  padding: 50px;
+  position: relative;
+}
+
+.content-column h2 {
+  color: #fff;
+  font-size: 36px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content-column p {
+  color: #fff;
+  font-size: 18px;
+} */
+
+
+/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
+
+a.myNavUnderline {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 0;
+  color: #ebebeb;
+  text-decoration: none;
+  position: relative;
+}
+
+body.dark-mode a.myNavUnderline {
+  color: #333;
+}
+
+a.myNavUnderline:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ebebeb;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom right;
+}
+
+body.dark-mode a.myNavUnderline:before {
+  background-color: #333;
+}
+
+a.myNavUnderline:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a.myNavUnderline.active:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a.myNavToggleTitle {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+body.dark-mode a.myNavToggleTitle {
+  color: #ebebeb;
+}
+  
+a.myNavToggleTitle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ebebeb;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom right;
+}
+
+body.dark-mode a.myNavToggleTitle:before {
+  background-color: #ebebeb;
+}
+
+a.myNavToggleTitle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a.myNavToggleTitle.active:before {
+  visibility: visible;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION END */
+
+/* Styles for small devices */
+@media (max-width: 575.98px) {
+  .dropdown-menu {
+    margin-left: 0;
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 60%;
+    background-color: #091540
+  }
+}
+
+@media (max-width: 575.98px) {
+  body.dark-mode .dropdown-menu {
+      background-color: #ebebeb;
+    }
+  }
+
+/* Styles for medium and large devices */
+@media (min-width: 576px) {
+  .dropdown-menu {
+    margin-left: -35px;
+    margin-right: 60px;
+    padding-left: 20px;
+    width: 20%;
+    background-color: #091540;
+  }
+}
+
+@media (min-width: 576px) {
+body.dark-mode .dropdown-menu {
+    background-color: #ebebeb;
+  }
+}
+
+.nav-link {
+    color: #ebebeb;
+}
+
+.offcanvas-header {
+  background-color: #ebebeb;
+}
+
+body.dark-mode .offcanvas-header {
+  background-color: #091540;
+}
+
+.offcanvas-body {
+  background-color: #091540;
+}
+
+body.dark-mode .offcanvas-body {
+  background-color: #ebebeb;
+}
+
+.myNavToggleTitle {
+  color: #333;
+}
+
+body.dark-mode .myNavToggleTitle {
+  color: #ebebeb;
+}
+
+body.dark-mode .nav-link {
+  color: #333;
+}
+
+.nav-link {
+  color: #ebebeb;
+}
+
 body.dark-mode .editorTitle   {
     color: white;
 }
@@ -30,33 +362,146 @@ body.dark-mode .li   {
 
 body.dark-mode .chatbody   {
     color: white;
-}*/
+}
 
-/* .editorTitle .dark-mode  {
-
-} */
-/*
-body.dark-mode html, body {
- color: black;
+/* -------------------------------------------------------- ROUND DIVS */
+.circle {
+    position: relative;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
   }
 
+.circleProfileCols {
+    position: relative;
+    min-width: 33%;
+    min-height: 33%;
+    border-radius: 50%;
+    padding:8%;
+  }
+
+.chatbody {
+    margin-left:10%;
+    padding:10%;
+}
+  
+.textfield {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    padding: 20px;
+
+    overflow: auto;
+    transform: translateY(50%);
+  }
+
+.circleBlog {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+
+.textfieldBlog {
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+    padding: 2.5rem;
+    /* color:#ffffff; */
+    
+  }
+  
+.circleKnowledgeForm {
+    position: relative;
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+  }
+
+.circleKnowledge {
+    position: relative;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+  }
+
+.textfieldKnowledge {
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+    padding: 2.5rem;
+    color:#ffffff;
+    
+  }
+  
 .card1 {
     background-color:mediumspringgreen;
     position:relative;
     left:0;
-    //color: black; 
+    color: black;
 }
 
 body.dark-mode .card1{
-    background-color: rgb(231, 176, 12);
+    background-color:#59c3c3;
+}
+
+/* ---------------------------------------------------------------- EDITOR MONACO START */
+
+/* .monaco-list-row .monaco-highlighted-label .monaco-icon-label .monaco-icon-name-container {
+    line-height: 24px; 
+  } */
+  
+
+
+/*         #editor {
+    height: 500px;
+    
+
+}
+#css-editor {
+    height: 500px;
+    
+
+}
+.containerEditor {
+
 } */
-/*
-body.dark-mode .messagesList {
-    position:relative;
-    left:10px;
-    list-style-position: inside;
-    border-bottom: #f3a81c 2px solid;
-}*/
+
+.containerEditor {
+    margin-top: 1rem;
+}
+.editorTitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.editor .suggest-widget div.tree {
+    white-space: unset;
+    padding-bottom: 0;
+}
+
+#editor, #css-editor, #js-editor {
+    height: 350px;
+    width: 100%;
+    border: 1px solid #ccc;
+    
+}
+#preview {
+    height: 300px;
+    width: 100%;
+    border: none;
+}
+.body.dark-mode .monaco-editor {
+    background-color: #212529;
+    color: #d4d4d4;
+}
+
+/* ---------------------------------------------------------------- EDITOR MONACO END */
 
 /*.btn-circle {
     width: 5rem;
@@ -74,121 +519,200 @@ body.dark-mode .btn-circle {
     color: #f3a81c;
 }
 
-.titlelogo {
-    color:#087990;
+/* TOGGLE Variants Start================================================================= */
+/* body {
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+height: 100vh;
+}
+#bg {
+position:relative;
+left:-30px;
+
+
+} */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position:relative;
+  left:0;
+  width: 80%;
+} 
+
+.toggle {
+  position:relative;
+  width:230px;
+  margin-left: -4rem;
+}
+/* ORIGINAL START CHECKBOX */   
+/* input[type=checkbox] {
+  position: absolute;
+  left: -200vw;
+  visibility: hidden;
+}
+input[type=checkbox]:checked + .ht-ui-check:before { */
+  /* background: #f5d8dd; */
+/* }
+input[type=checkbox]:checked + .ht-ui-check .track { */
+  /* background: linear-gradient(135deg, #e66465 0%, #9198e5 80%); */
+/*   background:#0000ff;
+}
+input[type=checkbox]:checked + .ht-ui-check .handle {
+  transform: translateX(10.55vw);
+}
+input[type=checkbox]:checked + .ht-ui-check .handle .faces {
+  transform: translateX(-16.5vw);
+} */
+/* ORIGINAL STOP CHECKBOX */   
+
+.custom-checkbox[type=checkbox] {
+  position: relative;
+  left: 0;
+  visibility: hidden;
 }
 
-body.dark-mode .titlelogo {
-    color: #f3a81c;
+.custom-checkbox[type=checkbox]:checked + .ht-ui-check:before {
+  /* background: #f5d8dd; */
 }
 
-.btn {
-    
+
+.custom-checkbox[type=checkbox]:checked + .ht-ui-check .track {
+  /* background: linear-gradient(135deg, #e66465 0%, #9198e5 80%); */
+  background:#ff0000;
 }
 
-.btn-circlesmall {
-    width: 3rem;
-    height: 3rem;
-    font-size: 90%;
-    padding: 8px 8px;
-    border-radius: 50%;
-    color:#087990;
-    text-align: center;
-    margin-bottom: 15px; 
-    box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
+.custom-checkbox[type=checkbox]:checked + .ht-ui-check .handle {
+  transform: translateX(10.55vw);
 }
 
-.btn-circlesmallest {
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 90%;
-    padding: 3px 3px;
-    border-radius: 50%;
-    color:#087990;
-    text-align: center;
-    margin-bottom: 5px; 
-    box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
-}
-
-body.dark-mode .btn-circlesmall {
-    color: #f3a81c;
-}
-
-.transparent-btn-up {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #087990;
-    position:relative;
-    top:-1px;
-}
-
-body.dark-mode .transparent-btn-up {
-    color: #f3a81c;
-}
-
-.transparent-btn-down {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #087990;
-    position:relative;
-    left:0px;
-    top:1px;
-}
-
-body.dark-mode .transparent-btn-down {
-    color: #f3a81c;
+.custom-checkbox[type=checkbox]:checked + .ht-ui-check .handle .faces {
+  transform: translateX(-16.5vw);
 }
  
-.transparent-btn:hover {
-    color: #087990;
+.ht-ui-check {
+  width: 21.5vw;
+  height: 3.75vw;
+  cursor: pointer;
+  border-radius: 10vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transform: scale(0.25);
+}
+.ht-ui-check:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* background: #eee; */
+  transition: 0.3s ease-out all;
+}
+.ht-ui-check .handle,
+.ht-ui-check .track {
+  position: absolute;
+  z-index: 10;
+  transition: ease-out all 0.23s;
+  border-radius: 10vw;
+
+}
+.ht-ui-check .track {
+  display: block;
+  width: 21.5vw;
+  height: 12.5vw;
+  /* background: #5e5f56; */
+  background: #1400ff;
 }
 
-body.dark-mode .transparent-btn:hover {
-    color: #f3a81c;
+.ht-ui-check{
+
+  background: #ff0000;
 }
 
-.form-icons {
-    display: flex;
-    align-items: center;
+.ht-ui-check .handle {
+  display: block;
+  height: 9.5vw;
+  width: 9.5vw;
+  /* background: white; */
+  background: #ffff00;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.13);
+  transform: translateX(1.5vw);
+  overflow: hidden;
 }
 
-.form-icons form {
-    margin-right: 5px;
+.faces {
+  display: flex;
+  flex-wrap: no-wrap;
+  width: 20vw;
+  font-size: 3.5vw;
+  justify-content: space-between;
+  transition: 0.3s ease-out all 0.1s;
+  -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.faces .sad {
+  position: relative;
+  top: 3.5vw;
+  left: 1vw;
+  color: #5e5f56;
+  line-height: 1em;
+}
+.faces .sad .eyes {
+  display: flex;
+}
+.faces .sad .eyes div {
+  transform: rotate(45deg);
+}
+.faces .sad .mouth {
+  margin-left: 6px;
+  line-height: 0em;
+  font-weight: 400;
+}
+.faces .happy {
+  color: #5e5f56;
+  position: relative;
+  top: 1.5vw;
+  left: 5vw;
+  line-height: 0.85;
+}
+.faces .happy:after {
+  content: "";
+  width: 1.5vw;
+  height: 1.5vw;
+  display: block;
+  position: absolute;
+  top: 2.5vw;
+  left: -1vw;
+  border-radius: 50%;
+  background: #f5d8dd;
+}
+.faces .happy .eyes {
+  margin-top:15%;
+  font-family: "Roboto Mono", courier;
+}
+.faces .happy .mouth {
+  margin-left: 0em;
+  margin-top: 0.25vw;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 4.5vw;
 }
 
-.form-icons p {
-    margin-left: 5px;
+/* TOGGLE Variants Stop================================================================= */
+
+/*  footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
-
-body.dark-mode .reply-marker {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    font-size: 1.2em;
-    margin-right: 0.5em;
-    text-align: center;
-    color: #ccc;
-}   
-*/
-/* Dark mode styles for form elements */
-/*body.dark-mode .form-control-dark {
-    background-color: #222;
-    border-color: #666;
-    color: #000;
-  }
-  
-body.dark-mode .form-check-input-dark:checked {
-    background-color: #fff;
-    border-color: #666;
-    color: #000;
-  }
-  
-body.dark-mode .form-check-label-dark {
-    color: #fff;
-  }*/
-
-
-
-

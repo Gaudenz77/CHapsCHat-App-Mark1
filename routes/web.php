@@ -1,7 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ChatsController;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,15 +22,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/* Route::get('/chat', function () {
-    return view('chat');
-});
- */
+/* Route::get('/', function () {
+    return view('playground');
+}); */
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/blogoSphere', function () {
+    return view('blogoSphere');
+})->middleware(['auth', 'verified'])->name('blogoSphere');
+
+Route::get('/knowledgeSphere', function () {
+    return view('knowledgeSphere');
+})->middleware(['auth', 'verified'])->name('knowledgeSphere');
+
+/* Route::get('/blogoSphere', [ChatsController::class, 'blogoSphere']);
+ */
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -34,3 +47,11 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+
+Route::get('/playground', [ChatsController::class, 'index']);
+
+Route::get('/messages', [ChatsController::class, 'fetchMessages']);
+Route::post('/messages', [ChatsController::class, 'sendMessage']);
+Route::post('/messages', [ChatsController::class, 'sendMessage'])->name('messages.store');
