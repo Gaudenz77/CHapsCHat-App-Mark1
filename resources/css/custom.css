@@ -133,59 +133,37 @@ a {
   justify-content: center;
 }
 
-/* #colSquare {
-  background-image: url('../assets/img/square_red.svg');
-
-height:100%;
-
-} */
-
-/*
-
-#colSquare {
-  background-image: url('../assets/img/square_red.svg');
-
+.colSquare {
+  background-color: red;
 }
 
-#colCircle {
-  background-image: url('../assets/img/circle_yellow.svg');
-
-}
-
-#colTriangle {
-  background-image: url('../assets/img/triangle_blue.svg');
-
-} 
 .colCircle {
-  background-image: url('./assets/img/circle_yellow.svg');
-  background-size: cover;
-  height: 400px;
+  background-color: yellow;
+  border-radius: 50%;
 }
 
-.colTriangle {
-  background-image: url('./assets/img/triangle_blue.svg');
-  background-size: cover;
-  height: 400px;
-} */
-
-/* .content-column {
-  padding: 50px;
+.square {
   position: relative;
+  width: 300px;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
 }
 
-.content-column h2 {
-  color: #fff;
-  font-size: 36px;
+.triangle {
+  width: 100%;
+  height: 100%;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 300px solid blue;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  margin-left:-10%;
 }
 
-.content-column p {
-  color: #fff;
-  font-size: 18px;
-} */
 
 
 /* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
