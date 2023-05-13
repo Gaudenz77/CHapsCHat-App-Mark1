@@ -18,3 +18,8 @@ toggleSwitch.addEventListener('change', function(e) {
     localStorage.setItem('darkMode', 'false');
   }
 });
+
+
+
+
+

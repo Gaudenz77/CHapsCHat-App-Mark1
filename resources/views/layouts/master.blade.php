@@ -49,6 +49,8 @@
             @yield('content')
         {{-- </div> --}}
     </main>
+
+
     <footer class="footer mt-5 py-3 bg-footer-gradient sticky-footer">
         <div class="container-fluid text-center">
             <span class="span1"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}" class="nav-item myNavToggle">Dare To Meet Me?</a></b></span>
@@ -78,6 +80,11 @@
       setDarkModePreference(document.body.classList.contains('dark-mode'));
     }
         
+
+
+
+
+
     </script>
     <!-- toggle mode script end-->
     <!-- Bootstrap JS -->
