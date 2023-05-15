@@ -34,14 +34,15 @@
   <div>
     <form @submit.prevent="submitForm">
       <div class="input-group mb-3 mt-2">
-  <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-palette" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Select a topic"></i></span>
-  <input type="text" class="form-control" placeholder="Topic" aria-describedby="basic-addon1" name="topic" id="topic" v-model="topic" required>
-</div>
+        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-palette" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Select a topic"></i></span>
+        <input type="text" class="form-control" placeholder="Topic" aria-describedby="basic-addon1" name="topic" id="topic" v-model="topic" required>
+      </div>
 
       <div class="input-group">
-        <span class="input-group-text"><i class="fa-solid fa-file-signature" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Select a color"></i></span>
+        <span class="input-group-text"><i class="fa-solid fa-file-signature" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your content"></i></span>
         <textarea class="form-control" placeholder="Content" name="content" id="content" v-model="content" required></textarea>
       </div>
+
       <input type="hidden" name="_token" :value="csrf_token">
       <button type="submit" class="btn btn-primary mt-2 mb-2 p-1">submit</button>
     </form>
