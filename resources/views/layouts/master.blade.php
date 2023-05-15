@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Hier wird der Wert von der Konstanten APP_NAME aus .env eingetragen, falls vorhanden. 
    Andernfalls wird der Default-String "Laravel" verwendet -->
     <title>{{ config('app.name', 'ChapsChat') }}</title>
@@ -64,7 +65,9 @@
     $(function(){
       $('[data-bs-toggle="tooltip"]').tooltip();
     });
-    </script>
+
+
+</script>
 
 <!-- toggle mode script start -->
     @include('components.darkmodeToggle')

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class MyLibrary extends Model
 {
 use HasFactory;
-protected $table = 'my_libraries';
+/* protected $table = 'my_libraries'; */
 protected $fillable = ['topic', 'content'];
 
 }

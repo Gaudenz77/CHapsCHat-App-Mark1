@@ -1,89 +1,124 @@
 <template>
-    <div>
-      <h2>My Library</h2>
-      <div class="filters">
-        <label for="filter">Filter by:</label>
-        <select v-model="selectedFilter" id="filter">
-          <option value="all">All</option>
-          <option value="date">Date</option>
-          <option value="type">Type</option>
-          <option value="content">Content</option>
-        </select>
-        <div v-if="selectedFilter === 'date'">
-          <label for="date">Date:</label>
-          <input type="date" v-model="selectedDate" id="date">
-        </div>
-        <div v-if="selectedFilter === 'type'">
-          <label for="type">Type:</label>
-          <select v-model="selectedType" id="type">
-            <option value="note">Note</option>
-            <option value="url">URL</option>
-            <option value="snippet">Code Snippet</option>
-          </select>
-        </div>
-        <div v-if="selectedFilter === 'content'">
-          <label for="content">Content:</label>
-          <input type="text" v-model="selectedContent" id="content">
-        </div>
-      </div>
-      <ul>
-        <li v-for="library in filteredLibraries" :key="library.id">
-          <h3>{{ library.topic }}</h3>
-          <p>{{ library.content }}</p>
-          <p>{{ library.created_at }}</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Topic</th>
+        <th scope="col">Content</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="library in libraries" :key="library.id">
+        <td>{{ library.topic }}</td>
+        <td>{{ library.content }}</td>
+        <td>
           <button @click="deleteLibrary(library.id)">Delete</button>
-        </li>
-      </ul>
-    </div>
-  </template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</template>
+
+
   
-  <script>
+<script>
+  import axios from 'axios';
+
   export default {
     data() {
+
       return {
-        libraries: [],
+      libraries: [],
+    }
+     /*  return {
         selectedFilter: 'all',
-        selectedDate: '',
-        selectedType: '',
+        selectedDate: null,
+        selectedType: 'note',
         selectedContent: '',
-      };
+        searchTerm: '',
+        libraries: [],
+      } */
+    },  
+    mounted() {
+      axios.get('/mylibrary')
+      .then(response => {
+        this.libraries = response.data;
+      })
+      .catch(error => {
+        console.log(error);
+      });
+      /* this.fetchLibraries() */
     },
     methods: {
       fetchLibraries() {
-        axios.get('/mylibrary')
+        axios.get('/mylibraries')
           .then(response => {
-            this.libraries = response.data;
+            this.libraries = response.data
           })
           .catch(error => {
-            console.log(error);
-          });
+            console.log(error)
+          })
       },
       deleteLibrary(id) {
         axios.delete(`/mylibrary/${id}`)
           .then(response => {
-            this.fetchLibraries();
+            this.libraries = this.libraries.filter(library => library.id !== id)
           })
           .catch(error => {
-            console.log(error);
-          });
-      },
+            console.log(error)
+          })
+        },
+      filterLibraries() {
+        let filteredLibraries = this.libraries
+
+        if (this.selectedFilter === 'date' && this.selectedDate) {
+          filteredLibraries = filteredLibraries.filter(library => {
+            const libraryDate = new Date(library.created_at)
+            const selectedDate = new Date(this.selectedDate)
+            return libraryDate.toDateString() === selectedDate.toDateString()
+          })
+        }
+
+        if (this.selectedFilter === 'type' && this.selectedType !== 'all') {
+          filteredLibraries = filteredLibraries.filter(library => {
+            return library.type === this.selectedType
+          })
+        }
+
+        if (this.selectedFilter === 'content' && this.selectedContent) {
+          filteredLibraries = filteredLibraries.filter(library => {
+            return library.content.toLowerCase().includes(this.selectedContent.toLowerCase())
+          })
+        }
+
+        if (this.searchTerm) {
+          filteredLibraries = filteredLibraries.filter(library => {
+            return library.content.toLowerCase().includes(this.searchTerm.toLowerCase())
+          })
+        }
+
+        return filteredLibraries
+      }
     },
     computed: {
       filteredLibraries() {
-        if (this.selectedFilter === 'all') {
-          return this.libraries;
-        } else if (this.selectedFilter === 'date') {
-          return this.libraries.filter(library => library.created_at.includes(this.selectedDate));
-        } else if (this.selectedFilter === 'type') {
-          return this.libraries.filter(library => library.type === this.selectedType);
-        } else if (this.selectedFilter === 'content') {
-          return this.libraries.filter(library => library.content.toLowerCase().includes(this.selectedContent.toLowerCase()));
+        let libraries = this.libraries
+
+        if (this.selectedFilter !== 'all') {
+          libraries = this.filterLibraries()
         }
-      },
+
+        if (this.searchTerm) {
+          libraries = libraries.filter(library => {
+            return library.content.toLowerCase().includes(this.searchTerm.toLowerCase())
+          })
+        }
+
+        return libraries
+      }
+
     },
-    mounted() {
-      this.fetchLibraries();
-    },
-  };
+  }
   </script>
+  
   

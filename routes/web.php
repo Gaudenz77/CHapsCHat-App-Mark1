@@ -70,7 +70,9 @@ Route::get('/knowledgeSphere', function () {
 
 
 Route::middleware(['auth', 'verified'])->group(function () {
-Route::get('/mylibrary', [MyLibraryController::class, 'index'])->name('mylibrary.index');
+Route::get('/mylibrary', [MyLibraryController::class, 'index'])->middleware('auth')->name('mylibrary.index');
+Route::post('/mylibrary', [MyLibraryController::class, 'store'])->middleware('auth')->name('mylibrary.store');
+Route::delete('/mylibrary/{id}', [MyLibraryController::class, 'destroy'])->name('mylibrary.destroy');
 Route::post('/mylibrary', [MyLibraryController::class, 'store'])->name('mylibrary.store');
 });
 

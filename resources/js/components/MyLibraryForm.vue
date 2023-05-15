@@ -42,76 +42,47 @@
         <span class="input-group-text"><i class="fa-solid fa-file-signature"></i></span>
         <textarea class="form-control" name="content" id="content" v-model="content" required></textarea>
       </div>
+      <input type="hidden" name="_token" :value="csrf_token">
       <button type="submit" class="btn btn-primary mt-2 mb-2 p-1">submit</button>
     </form>
   </div>
 </template>
 
   <script>
-
-
-export default {
-  data() {
-    return {
-      form: {
-        topic: '',
-        content: '',
-      },
-    };
-  },
-  methods: {
-    submitForm() {
-      axios.post('/mylibrary', {
-        topic: this.topic,
-        content: this.content
-      })
-      .then(response => {
-        // Handle successful response
-        console.log(response.data);
-        this.$emit('library-added');
-      })
-      .catch(error => {
-        // Handle error
-        console.log(error.response.data);
-      });
-    }
-  }
-}
-</script>
-
-
-<!-- <script>
 import axios from 'axios';
-  
+
 export default {
   data() {
     return {
       form: {
         topic: '',
         content: '',
+        csrfToken: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
       },
     };
   },
   methods: {
-    submitForm() {
-      axios.post('/mylibrary', this.form)
+      submitForm() {
+        axios.post('/mylibrary', {
+          topic: this.topic,
+          content: this.content
+        })
         .then(response => {
+          // Handle successful response
           console.log(response.data);
-          // Reset the form
-          this.form.topic = '';
-          this.form.content = '';
-          // Emit an event to the parent component
-          this.$emit('saved');
+          this.$emit('library-added');
+          this.topic = '';
+          this.content = '';
           // Reload the page
           window.location.reload();
         })
         .catch(error => {
-          console.log(error);
+          // Handle error
+          console.log(error.response.data);
         });
-    },
-  },
-};
-</script> -->
-
+      }
+  }
+}
+</script>
 
   
