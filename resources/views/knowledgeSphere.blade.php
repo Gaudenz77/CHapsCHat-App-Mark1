@@ -6,7 +6,8 @@
 <section class="knowledgeMain">
 <div class="container mt-3">
     <div class="row justify-content-center">
-        <div class="col-sm-3 bg-warning {{-- circleKnowledgeForm --}}">
+        <div class="col-sm-3 bg-warning circleKnowledgeForm">
+          <h2 class="mt-3">{{ Auth::user()->name }}'s Library</h2>
           
           
             <my-library-form></my-library-form>
@@ -14,6 +15,7 @@
         </div>
         
         <div class="col-sm-8 bg-danger {{-- circleKnowledge --}} mx-2">
+          
           
           {{-- <my-library-content></my-library-content> --}}
             {{-- <div class="textfieldKnowledge">
@@ -52,18 +54,5 @@
     </div>
 </div>
 </section>
-<script>
-  import MyLibraryForm from './MyLibraryForm.vue';
-  import MyLibraryContent from './MyLibraryContent.vue';
-  
-  export default {
-    components: {
-      MyLibraryForm,
-      MyLibraryContent
-    }
-  }
-  </script>
-
-
 
 @endsection

@@ -7,51 +7,26 @@ use App\Models\MyLibrary;
 
 class MyLibraryController extends Controller
 {
-        /**
-     * Show the form for editing a resource.
-     */
     public function store(Request $request)
     {
-        $myLibrary = MyLibrary::create([
-            'user_id' => auth()->user()->id,
-            'topic' => $request->input('topic'),
-            'content' => $request->input('content'),
+        $validatedData = $request->validate([
+            'topic' => 'required|string|max:255',
+            'content' => 'required|string',
         ]);
-    
-        return redirect()->route('knowledgeSphere');
-    }
-        
-    
-    /**
-     * Delete an item from the mylibrary table
-     */
-    public function destroy($id)
-    {
-        $myLibrary = MyLibrary::findOrFail($id);
-        $myLibrary->delete();
 
-        return redirect()->route('mylibrary.index');
+        $library = new MyLibrary();
+        $library->user_id = auth()->user()->id;
+        $library->topic = $validatedData['topic'];
+        $library->content = $validatedData['content'];
+        $library->save();
+
+        return response()->json($library);
     }
 
-    /**
-     * Show all items in the mylibrary table
-     */
     public function index()
     {
-        $myLibrary = MyLibrary::where('user_id', auth()->user()->id)->get(); // assuming you are using authentication
-        return view('mylibrary.index', ['myLibrary' => $myLibrary]);
-    }
+        $libraries = MyLibrary::where('user_id', auth()->user()->id)->get();
 
-    /**
-     * 
-     */
-    public function search(Request $request)
-    {
-        $search = $request->input('search');
-        $myLibrary = MyLibrary::where('user_id', auth()->user()->id)
-                               ->where('topic', 'LIKE', '%' . $search . '%')
-                               ->orWhere('content', 'LIKE', '%' . $search . '%')
-                               ->get(); // assuming you are using authentication
-        return view('mylibrary.index', ['myLibrary' => $myLibrary]);
+        return view('knowledgeSphere', compact('libraries'));
     }
 }

@@ -57,15 +57,21 @@ Route::get('/messages', [ChatsController::class, 'fetchMessages']);
 Route::post('/messages', [ChatsController::class, 'sendMessage']);
 Route::post('/messages', [ChatsController::class, 'sendMessage'])->name('messages.store');
 
-Route::middleware(['auth', 'verified'])->group(function () {
+/* Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/mylibrary', [MyLibraryController::class, 'index'])->name('mylibrary.index');
     Route::post('/mylibrary', [MyLibraryController::class, 'store'])->name('mylibrary.store');
     Route::delete('/mylibrary/{id}', [MyLibraryController::class, 'destroy'])->name('mylibrary.destroy');
     Route::get('/mylibrary/search', [MyLibraryController::class, 'search'])->name('mylibrary.search');
-});
+});*/
 
 Route::get('/knowledgeSphere', function () {
     return view('knowledgeSphere');
-})->middleware(['auth', 'verified'])->name('knowledgeSphere');
+})->middleware(['auth', 'verified'])->name('knowledgeSphere'); 
+
+
+Route::middleware(['auth', 'verified'])->group(function () {
+Route::get('/mylibrary', [MyLibraryController::class, 'index'])->name('mylibrary.index');
+Route::post('/mylibrary', [MyLibraryController::class, 'store'])->name('mylibrary.store');
+});
 
 

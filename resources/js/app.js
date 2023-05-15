@@ -10,7 +10,7 @@ Alpine.start();
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-import './bootstrap';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { createApp } from 'vue';
 
 /**

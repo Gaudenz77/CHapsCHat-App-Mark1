@@ -1,48 +1,3 @@
-// VARIANT CHANGE ON INTERVAL
-
-/*   // Get the icon element
-  const icon = document.getElementById('icon');
-
-  // Set the initial position of the icon
-  let posX = Math.floor(Math.random() * window.innerWidth);
-  let posY = Math.floor(Math.random() * window.innerHeight);
-  icon.style.position = 'fixed';
-  icon.style.left = `${posX}px`;
-  icon.style.top = `${posY}px`;
-
-  // Define the function to move the icon
-  function moveIcon() {
-  // Generate random X and Y coordinates
-  posX = Math.floor(Math.random() * window.innerWidth);
-  posY = Math.floor(Math.random() * window.innerHeight);
-
-  // Set the new position of the icon
-  icon.style.left = `${posX}px`;
-  icon.style.top = `${posY}px`;
-  }
-
-  // Move the icon every 2 seconds
-  setInterval(moveIcon, 2000);
-
-
-  // Push the icon off the window border
-  window.addEventListener('resize', () => {
-  const rect = icon.getBoundingClientRect();
-  if (rect.top < 0) {
-      icon.style.top = '0';
-  }
-  if (rect.left < 0) {
-      icon.style.left = '0';
-  }
-  if (rect.bottom > window.innerHeight) {
-      icon.style.top = `${window.innerHeight - icon.offsetHeight}px`;
-  }
-  if (rect.right > window.innerWidth) {
-      icon.style.left = `${window.innerWidth - icon.offsetWidth}px`;
-  }
-  }); */
-
-
 // VARIANT BOUNCE OFF EDGES ON INTERVAL
 // Get the icon element
 const icon = document.getElementById('icon');
@@ -94,6 +49,9 @@ moveIcon();
 });
 
 
+
+
+
 // Check local storage for the user's preference
 const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
@@ -116,4 +74,48 @@ toggleSwitch.addEventListener('change', function(e) {
 });
 
 
+
+// VARIANT CHANGE ON INTERVAL
+
+/*   // Get the icon element
+  const icon = document.getElementById('icon');
+
+  // Set the initial position of the icon
+  let posX = Math.floor(Math.random() * window.innerWidth);
+  let posY = Math.floor(Math.random() * window.innerHeight);
+  icon.style.position = 'fixed';
+  icon.style.left = `${posX}px`;
+  icon.style.top = `${posY}px`;
+
+  // Define the function to move the icon
+  function moveIcon() {
+  // Generate random X and Y coordinates
+  posX = Math.floor(Math.random() * window.innerWidth);
+  posY = Math.floor(Math.random() * window.innerHeight);
+
+  // Set the new position of the icon
+  icon.style.left = `${posX}px`;
+  icon.style.top = `${posY}px`;
+  }
+
+  // Move the icon every 2 seconds
+  setInterval(moveIcon, 2000);
+
+
+  // Push the icon off the window border
+  window.addEventListener('resize', () => {
+  const rect = icon.getBoundingClientRect();
+  if (rect.top < 0) {
+      icon.style.top = '0';
+  }
+  if (rect.left < 0) {
+      icon.style.left = '0';
+  }
+  if (rect.bottom > window.innerHeight) {
+      icon.style.top = `${window.innerHeight - icon.offsetHeight}px`;
+  }
+  if (rect.right > window.innerWidth) {
+      icon.style.left = `${window.innerWidth - icon.offsetWidth}px`;
+  }
+  }); */
 

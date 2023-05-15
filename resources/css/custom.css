@@ -358,6 +358,15 @@ body.dark-mode .chatbody   {
     border-radius: 50%;
   }
 
+  .circleAuth {
+    position: relative;
+    min-width: 33.3%;
+    min-height: 33.3%;
+    border-radius: 50%;
+    padding: 12%; /* add padding to create space between content and border */
+    box-sizing: border-box; /* include padding in element's total width and height */
+  }
+  
 .circleProfileCols {
     position: relative;
     min-width: 33%;
@@ -403,9 +412,11 @@ body.dark-mode .chatbody   {
   
 .circleKnowledgeForm {
     position: relative;
-    width: 25%;
-    height: 25%;
+    min-width: 25%;
+    min-height: 25%;
     border-radius: 50%;
+    padding:3rem; /* add padding to create space between content and border */
+    box-sizing: border-box; /* include padding in element's total width and height */
   }
 
 .circleKnowledge {
@@ -718,3 +729,6 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   color:rgb(244, 155, 0);
 }
 
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-danger);
+}

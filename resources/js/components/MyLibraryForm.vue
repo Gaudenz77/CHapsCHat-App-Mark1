@@ -15,7 +15,7 @@
     </form>
   </template> -->
 
-  <template>
+<!-- <template>
   <form @submit.prevent="submitForm">
     @csrf
       <div class="input-group mb-3 mt-2">
@@ -29,10 +29,58 @@
       </div>
       <button type="submit" class="btn btn-primary mt-2 mb-2 p-1">submit</button>
     </form>
-  </template>
-  
+</template> -->
+<template>
+  <div>
+    <form @submit.prevent="submitForm">
+      <div class="input-group mb-3 mt-2">
+  <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-palette" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Select a color"></i></span>
+  <input type="text" class="form-control" placeholder="Topic" aria-describedby="basic-addon1" name="topic" id="topic" v-model="topic" required>
+</div>
 
-<script>
+      <div class="input-group">
+        <span class="input-group-text"><i class="fa-solid fa-file-signature"></i></span>
+        <textarea class="form-control" name="content" id="content" v-model="content" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary mt-2 mb-2 p-1">submit</button>
+    </form>
+  </div>
+</template>
+
+  <script>
+
+
+export default {
+  data() {
+    return {
+      form: {
+        topic: '',
+        content: '',
+      },
+    };
+  },
+  methods: {
+    submitForm() {
+      axios.post('/mylibrary', {
+        topic: this.topic,
+        content: this.content
+      })
+      .then(response => {
+        // Handle successful response
+        console.log(response.data);
+        this.$emit('library-added');
+      })
+      .catch(error => {
+        // Handle error
+        console.log(error.response.data);
+      });
+    }
+  }
+}
+</script>
+
+
+<!-- <script>
 import axios from 'axios';
   
 export default {
@@ -63,7 +111,7 @@ export default {
     },
   },
 };
-</script>
+</script> -->
 
 
   
