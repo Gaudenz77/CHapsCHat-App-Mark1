@@ -12,7 +12,7 @@
         <td>{{ library.topic }}</td>
         <td>{{ library.content }}</td>
         <td>
-          <button @click="deleteLibrary(library.id)">Delete</button>
+          <div class="text-center" type="button" @click="deleteLibrary(library.id)"><i class="fa-regular fa-trash-can"></i> Delete</div> <!-- fa-shake -->
         </td>
       </tr>
     </tbody>
