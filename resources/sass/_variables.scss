@@ -1,6 +1,51 @@
 // Body
 /* $body-bg: #f8fafc; */
 
+
+
+/* original */
+/* $blue: #0d6efd;
+$gray-600: #6c757d;
+$green:#198754;
+$cyan:    #0dcaf0;
+$yellow: #ffc107;
+$red: #dc3545;
+$gray-100: #f8f9fa;
+$gray-900: #212529; */
+
+/* custom */
+
+$blue: #0d6efd;
+$gray-600: #5f86a8;
+$green:#55ff00;
+$cyan:    #2de3be;
+$yellow: #ffc107;
+$red: #f25151;
+$gray-100: #eef4dd;
+$gray-900: #133025;
+
+$primary: $blue;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+/* "bubblegum":  $bubblegum, 
+$bubblegum:#ffc0cb !default;*/
+
+$penn-blue: #091540ff;
+$robin-egg-blue: #59c3c3ff;
+$antiflash-white: #ebebebff;
+$yinmn-blue: #3d518cff;
+$persian-blue: #1b2cc1ff;
+
+$custom: (
+    "antiflash-white":$antiflash-white
+);
+
+
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 /* $font-family-sans-serif: 'Poppins', sans-serif; */

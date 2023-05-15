@@ -30,61 +30,12 @@
         <header>
             @include('layouts.navigation')
         </header>
-        <div id="icon">
-            <i class="fa-solid fa-face-grin-tongue-wink fa-5x {{-- fa-beat --}}"></i>
+        <div id="icon" {{-- class="animate__animated animate__backInLeft infinite" --}}>
+            <i class="iconshooter fa-solid fa-face-grin-tongue-wink fa-5x {{-- fa-beat --}}"></i>
           </div>
           
         <script>
-            
-        // Get the icon element
-        const icon = document.getElementById('icon');
 
-        // Set the initial position of the icon
-        let posX = Math.floor(Math.random() * window.innerWidth);
-        let posY = Math.floor(Math.random() * window.innerHeight);
-        icon.style.position = 'fixed';
-        icon.style.left = `${posX}px`;
-        icon.style.top = `${posY}px`;
-
-        // Define the function to move the icon
-        function moveIcon() {
-        // Generate random X and Y coordinates
-        posX = Math.floor(Math.random() * window.innerWidth);
-        posY = Math.floor(Math.random() * window.innerHeight);
-
-        // Set the new position of the icon
-        icon.style.left = `${posX}px`;
-        icon.style.top = `${posY}px`;
-        }
-
-        // Move the icon every 2 seconds
-        setInterval(moveIcon, 2000);
-
-
-        // Push the icon off the window border
-        window.addEventListener('resize', () => {
-        const rect = icon.getBoundingClientRect();
-        if (rect.top < 0) {
-            icon.style.top = '0';
-        }
-        if (rect.left < 0) {
-            icon.style.left = '0';
-        }
-        if (rect.bottom > window.innerHeight) {
-            icon.style.top = `${window.innerHeight - icon.offsetHeight}px`;
-        }
-        if (rect.right > window.innerWidth) {
-            icon.style.left = `${window.innerWidth - icon.offsetWidth}px`;
-        }
-        });
-        document.addEventListener('DOMContentLoaded', () => {
-        const icon = document.getElementById('icon');
-        icon.addEventListener('click', () => {
-            console.log('Icon clicked');
-            /* window.location.href = '{{ route("login") }}'; */
-            window.location.href='{{ url("/playground") }}';
-        });
-        });
 
         </script>
         <div class="container mt-3 p-5">
@@ -95,7 +46,17 @@
                 {{-- <div class="logoChapsChat">
                     <img class="img-fluid" src="./assets/img/ChapsChatLogo.svg" alt="logo-placeholder">
                 </div> --}}
-            </div>
+                {{-- <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button> --}}
+
+                {{-- <button type="button" class="btn antiflash-white">Dark</button> --}} 
+
             <div class="row justify-content-center">
                 
                 <div class="colSquare col-sm-3 mx-4{{-- animate__animated animate__backInLeft animate__delay-2s --}}"  style="height: 300px;">

@@ -164,6 +164,14 @@ a {
   margin-left:-10%;
 }
 
+.iconshooter {
+  color:#ffa500;
+}
+
+body.dark-mode .iconshooter {
+  color:#fa1c50;;
+}
+
 
 
 /* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
@@ -707,6 +715,6 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   border-radius: 50%;
   cursor: pointer;
   z-index: 1;
-  color:yellow;
+  color:rgb(244, 155, 0);
 }
 

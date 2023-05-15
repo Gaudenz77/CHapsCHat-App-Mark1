@@ -3,16 +3,20 @@
 @section('title', 'ChapsChat')
 
 @section('content')
-
 <section class="knowledgeMain">
 <div class="container mt-3">
     <div class="row justify-content-center">
         <div class="col-sm-3 bg-warning {{-- circleKnowledgeForm --}}">
-            <div class="textfieldKnowledge">CREATEBLOG</div>
+          
+          
+            <my-library-form></my-library-form>
+
         </div>
         
         <div class="col-sm-8 bg-danger {{-- circleKnowledge --}} mx-2">
-            <div class="textfieldKnowledge">
+          
+          {{-- <my-library-content></my-library-content> --}}
+            {{-- <div class="textfieldKnowledge">
                 <table class="table table-borderless">
                     <thead>
                       <tr>
@@ -42,12 +46,23 @@
                       </tr>
                     </tbody>
                   </table>
-            </div>
-        </div>
+            </div> --}}
+        {{-- </div> --}}
 
     </div>
 </div>
 </section>
+<script>
+  import MyLibraryForm from './MyLibraryForm.vue';
+  import MyLibraryContent from './MyLibraryContent.vue';
+  
+  export default {
+    components: {
+      MyLibraryForm,
+      MyLibraryContent
+    }
+  }
+  </script>
 
 
 

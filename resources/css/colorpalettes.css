@@ -34,6 +34,7 @@ $yinmn-blue: rgba(61, 81, 140, 1);
 $persian-blue: rgba(27, 44, 193, 1);
 
 /* SCSS Gradient */
+
 $gradient-top: linear-gradient(0deg, #091540ff, #59c3c3ff, #ebebebff, #3d518cff, #1b2cc1ff);
 $gradient-right: linear-gradient(90deg, #091540ff, #59c3c3ff, #ebebebff, #3d518cff, #1b2cc1ff);
 $gradient-bottom: linear-gradient(180deg, #091540ff, #59c3c3ff, #ebebebff, #3d518cff, #1b2cc1ff);
