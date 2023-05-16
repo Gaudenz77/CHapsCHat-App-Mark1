@@ -1,5 +1,6 @@
 body {
-    margin-top:15vh;
+    margin-top:14vh;
+    margin-bottom:10vh;
     font-family: 'Poppins', sans-serif;
     color:#ebebeb
 }
@@ -352,20 +353,24 @@ body.dark-mode .chatbody   {
 
 /* -------------------------------------------------------- ROUND DIVS */
 .circle {
-    position: relative;
-    min-width: 150px;
-    min-height: 150px;
-    border-radius: 50%;
-  }
+  position: relative;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 50%;
+}
 
-  .circleAuth {
-    position: relative;
-    min-width: 33.3%;
-    min-height: 33.3%;
-    border-radius: 50%;
-    padding: 12%; /* add padding to create space between content and border */
-    box-sizing: border-box; /* include padding in element's total width and height */
-  }
+.circleAuth {
+  position: relative;
+  min-width: 33.3%;
+  min-height: 33.3%;
+  border-radius: 50%;
+  padding: 18% 12% 3% 12%;/* add padding to create space between content and border */
+  box-sizing: border-box; /* include padding in element's total width and height */
+}
+
+/* .mycheck {
+  background-color: #181818;
+} */
   
 .circleProfileCols {
     position: relative;
@@ -380,6 +385,13 @@ body.dark-mode .chatbody   {
     padding:10%;
 }
   
+.scrollableChat {
+  height: 150px; /* Set the desired fixed height */
+  overflow: auto; /* Enable scrolling when content exceeds the height */
+}
+
+
+
 .textfield {
     position: absolute;
     top: 50%;
@@ -415,7 +427,7 @@ body.dark-mode .chatbody   {
     min-width: 25%;
     min-height: 25%;
     border-radius: 50%;
-    padding:3rem; /* add padding to create space between content and border */
+    padding:4rem 3rem 3rem 3rem; /* add padding to create space between content and border */
     box-sizing: border-box; /* include padding in element's total width and height */
   }
 
@@ -500,20 +512,25 @@ body.dark-mode .card1{
 
 /* ---------------------------------------------------------------- EDITOR MONACO END */
 
-/*.btn-circle {
+.btn-circle {
     width: 5rem;
     height: 5rem;
     font-size: 90%;
     padding: 8px 8px;
     border-radius: 50%;
-    color:#087990;
+    color:#ffff00;
+    font-weight: bold ;
+    background-color: #1400ff;
     text-align: center;
     margin-bottom: 15px; 
     box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
 }
 
 body.dark-mode .btn-circle {
-    color: #f3a81c;
+    
+    background-color: #ff0000;
+    color: #ffff00;
+    font-weight: bold;
 }
 
 /* TOGGLE Variants Start================================================================= */
@@ -601,6 +618,7 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   align-items: center;
   transform: scale(0.25);
 }
+
 .ht-ui-check:before {
   content: "";
   position: absolute;

@@ -19,8 +19,9 @@
             <h5>Chats:</h5>
           </div>
         </div>
-        <div class="textfield"></div>
-        <chat-messages :messages="messages"></chat-messages>
+        <div class="scrollableChat">
+          <chat-messages :messages="messages"></chat-messages>
+        </div>
       </div>
 
       <div class="col-sm-4 card1 p-3" style="padding-left:0rem; padding-right:0rem;">

@@ -45,7 +45,7 @@
               @if (Route::has('password.request'))
                 <a class="login text-decoration-none mb-3" href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
               @endif
-              <button type="submit" class="btn btn-primary ml-md-4">{{ __('Log in') }}</button>
+              <button type="submit" class="btn btn-circle ml-md-4">{{ __('Log in') }}</button>
             </div>
             
           </form>

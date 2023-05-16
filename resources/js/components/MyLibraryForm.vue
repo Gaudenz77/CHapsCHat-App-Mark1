@@ -44,7 +44,9 @@
       </div>
 
       <input type="hidden" name="_token" :value="csrf_token">
-      <button type="submit" class="btn btn-primary mt-2 mb-2 p-1">submit</button>
+      <div class="text-center pt-3">
+        <button type="submit" class="btn btn-circle mt-2 mb-2 p-1">submit</button>
+      </div>
     </form>
   </div>
 </template>
