@@ -17,8 +17,18 @@ class Blog extends Model
         'content',
     ];
 
+    protected $with = [
+        'blogs'
+    ];
+
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class);
+    }
+    
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+    
 }

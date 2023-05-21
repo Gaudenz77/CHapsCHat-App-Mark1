@@ -8,7 +8,7 @@ use App\Models\Blog;
 
 class MyBlogController extends Controller
 {
-    public function index()
+/*     public function index()
     {
         $blogs = Blog::where('user_id', auth()->user()->id)->get();
     
@@ -18,7 +18,15 @@ class MyBlogController extends Controller
         }
     
         return view('blogs.index', compact('blogs'));
+    } */
+    public function index()
+    {
+        $user = auth()->user();
+        $blogs = $user->blogs;
+
+        return response()->json($blogs);
     }
+
 
     public function create()
     {
@@ -51,7 +59,7 @@ class MyBlogController extends Controller
             return response()->json(['message' => 'JSON response for store action']);
         }
 
-        return redirect()->route('blogosphere.show', $blog->id)
+        return redirect()->route('blogoSphere.show', $blog->id)
             ->with('success', 'Blog created successfully!');
     }
 
@@ -60,7 +68,7 @@ class MyBlogController extends Controller
         // Find the blog by ID
         $blog = Blog::findOrFail($id);
 
-        return view('blogs.show', compact('blog'));
+        return view('blogoSphere.show', compact('blog'));
     }
 
     public function edit($id)
@@ -96,7 +104,7 @@ class MyBlogController extends Controller
             return response()->json(['message' => 'JSON response for update action']);
         }
 
-        return redirect()->route('blogosphere.show', $blog->id)
+        return redirect()->route('blogoSphere.show', $blog->id)
             ->with('success', 'Blog updated successfully!');
     }
 
@@ -112,7 +120,7 @@ class MyBlogController extends Controller
                 return response()->json(['success' => true]);
             }
 
-            return redirect()->route('blogosphere.index')
+            return redirect()->route('blogoSphere.index')
                 ->with('success', 'Blog deleted successfully!');
         }
 
@@ -121,7 +129,7 @@ class MyBlogController extends Controller
             return response()->json(['success' => false]);
         }
 
-        return redirect()->route('blogosphere.index')
+        return redirect()->route('blogoSphere.index')
             ->with('error', 'Failed to delete blog!');
     }
 }
