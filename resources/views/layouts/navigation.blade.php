@@ -26,19 +26,19 @@
               </li>
   
               <li class="nav-item py-3">
-              <a class="myNavUnderline px-0 {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/playground') }}">Playground</a>
+              <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/playground') }}">Playground</a>
               </li>
   
               <li class="nav-item py-3">
-                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
+                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
               </li>
   
               <li class="nav-item py-3">
-                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="{{ url('/knowledgeSphere') }}">KnowledgeSphere </a>
+                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/knowledgeSphere') }}">KnowledgeSphere </a>
               </li>
   
               <li class="nav-item py-3">
-              <a class="myNavUnderline px-0 {{ (request()->is('about')) ? 'active' : '' }}" aria-current="page" href="{{ url('/about') }}">About</a>
+              <a class="myNavUnderline px-0 {{ (request()->is('about')) ? '' : '' }}" aria-current="page" href="{{ url('/about') }}">About</a>
               </li>
                 <!-- TOGGLE AMAZING START-->
                 <!-- <li class="toggle  py-3">

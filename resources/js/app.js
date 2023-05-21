@@ -29,6 +29,8 @@ import ChatForm from './components/ChatForm.vue';
 import ChatMessages from './components/ChatMessages.vue';
 import MyLibraryForm from './components/MyLibraryForm.vue';
 import MyLibraryContent from './components/MyLibraryContent.vue';
+import MyBlogForm from './components/MyBlogForm.vue';
+import MyBlogContent from './components/MyBlogContent.vue';
 
 const app = createApp({});
 
@@ -36,6 +38,8 @@ app.component('chat-form', ChatForm);
 app.component('chat-messages', ChatMessages);
 app.component('my-library-form', MyLibraryForm);
 app.component('my-library-content', MyLibraryContent);
+app.component('my-blog-form', MyBlogForm);
+app.component('my-blog-content', MyBlogContent);
 
 
 /**
