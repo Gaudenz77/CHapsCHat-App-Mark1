@@ -3,6 +3,12 @@
 @section('title', 'ChapsChat')
 
 @section('content')
+
+
+
+
+
+
 @auth
 <section class="codeSpaceChat">
   <div class="container ">
@@ -51,49 +57,40 @@
         <div class="logiInfo mt-2 p-1">
           @if (Auth::check())
               <h3 class="text-center">Welcome, {{ Auth::user()->name }}!<br>You are logged in.</h3>
+              <div class="text-center"><button id="showButton" class="btn btn-primary">Show Paint Sphere</button>
+                <div class="col" id="paintsphere" style="position:relative; left:0;  margin-left:-150%; margin-right:100px;">
+                  <div class="row d-flex align-items-start">
+                    <a href="#" class="btn-close" aria-label="Close" id="hideButton"></a>
+                  </div>
+                  
+                    <paint-app>
+                  </div>
+                </div>
+              </div>
+              
+
           {{-- @include('components.toggle') --}}
-            
-              
-              
-
-             
-              
-              
-
           @else
               <p><a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.</p>
           @endif
         </div>
       </div>
+      <div class="col-sm-12 card1 circle">
+
+      <!-- Button to trigger the modal -->
+      {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+        Open Modal
+      </button> --}}
+
+
+        
+        
     </div>
   </div>
 </section>
 @endauth
 
 
-
-
-{{--  <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-3 card1 circle">
-            <div class="logiInfo mt-2 p-1">
-              @if (Auth::check())
-                  <h3>Welcome, {{ Auth::user()->name }}! You are logged in.</h3>
-              @else
-                  <p><a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.</p>
-              @endif
-              <div class="chatFormField">
-                <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}"></chat-form>
-              </div>
-            </div>
-          <div class="editorTitle">Chats</div>
-            <div class="chatbody textfield">
-              <chat-messages :messages="messages"></chat-messages>
-            </div>
-        </div>
-    </div>
-  </div>
- </div> --}}
 
  <script>
   // FUNCTIONAL HTMML ONLY START --------------------------------
@@ -160,6 +157,26 @@ require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.37.0/min/vs' 
           updatePreview();
         });
   // FUNCTIONAL HTMML ONLY END --------------------------------
+
+  // MS PAINT START  --------------------------------
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const showButton = document.getElementById('showButton');
+  const hideButton = document.getElementById('hideButton');
+  const paintsphereDiv = document.getElementById('paintsphere');
+
+    showButton.addEventListener('click', () => {
+      paintsphereDiv.style.display = 'inline-block';
+    });
+
+    hideButton.addEventListener('click', () => {
+      paintsphereDiv.style.display = 'none';
+    });
+
+    // Optional: Hide the div by default
+    paintsphereDiv.style.display = 'none';
+  });
+
   
   </script>
 

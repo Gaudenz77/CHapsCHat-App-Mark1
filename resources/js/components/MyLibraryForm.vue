@@ -35,15 +35,15 @@
     <form @submit.prevent="submitForm">
       <div class="input-group mb-3 mt-2">
         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-palette" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Select a topic"></i></span>
-        <input type="text" class="form-control" placeholder="Topic" aria-describedby="basic-addon1" name="topic" id="topic" v-model="topic" required>
+        <input type="text" class="form-control" placeholder="Topic" aria-describedby="basic-addon1" name="topic" id="topic" v-model="form.topic" required>
       </div>
 
       <div class="input-group">
         <span class="input-group-text"><i class="fa-solid fa-file-signature" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your content"></i></span>
-        <textarea class="form-control" placeholder="Content" name="content" id="content" v-model="content" required></textarea>
+        <textarea class="form-control" placeholder="Content" name="content" id="content" v-model="form.content" required></textarea>
       </div>
 
-      <input type="hidden" name="_token" :value="csrf_token">
+      <input type="hidden" name="_token" :value="form.csrfToken">
       <div class="text-center pt-3">
         <button type="submit" class="btn btn-circle mt-2 mb-2 p-1">submit</button>
       </div>
@@ -51,7 +51,7 @@
   </div>
 </template>
 
-  <script>
+<script>
 import axios from 'axios';
 
 export default {
@@ -65,17 +65,14 @@ export default {
     };
   },
   methods: {
-      submitForm() {
-        axios.post('/mylibrary', {
-          topic: this.topic,
-          content: this.content
-        })
+    submitForm() {
+      axios.post('/mylibrary', this.form)
         .then(response => {
           // Handle successful response
           console.log(response.data);
           this.$emit('library-added');
-          this.topic = '';
-          this.content = '';
+          this.form.topic = '';
+          this.form.content = '';
           // Reload the page
           window.location.reload();
         })
@@ -83,9 +80,10 @@ export default {
           // Handle error
           console.log(error.response.data);
         });
-      }
+    }
   }
 }
 </script>
+
 
   
