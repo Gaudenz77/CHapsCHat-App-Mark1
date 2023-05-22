@@ -49,4 +49,35 @@ class MyLibraryController extends Controller
         return response()->json(['success' => false]);
     }
 
+    public function edit($id)
+    {
+        $library = MyLibrary::find($id);
+    
+        if ($library && $library->user_id == auth()->user()->id) {
+            return response()->json($library);
+        }
+    
+        return response()->json(['success' => false]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'topic' => 'required|string|max:255',
+            'content' => 'required|string',
+        ]);
+
+        $library = MyLibrary::find($id);
+
+        if ($library && $library->user_id == auth()->user()->id) {
+            $library->topic = $validatedData['topic'];
+            $library->content = $validatedData['content'];
+            $library->save();
+
+            return response()->json($library);
+        }
+    
+        return response()->json(['success' => false]);
+    }
+
 }

@@ -25,6 +25,7 @@
     <table class="table table-striped">
       <thead>
         <tr>
+          <th scope="col">Id</th>
           <th scope="col">Topic</th>
           <th scope="col">Content</th>
           <th scope="col">Created At</th>
@@ -33,6 +34,7 @@
       </thead>
       <tbody>
         <tr v-for="library in filteredLibraries" :key="library.id">
+          <td>{{ library.id }}</td>
           <td>{{ library.topic }}</td>
           <td>{{ library.content }}</td>
           <td>{{ formatDate(library.created_at) }}</td>
@@ -41,6 +43,10 @@
               <button class="btn text-center" type="button" role="button" @click="deleteLibrary(library.id)">
               <i class="fa-regular fa-trash-can"></i> Delete
             </button>
+            <button class="btn text-center" type="button" role="button" @click="editLibrary(library.id)">
+              <i class="fa-regular fa-edit"></i> Edit
+            </button>
+
             </div>
             
           </td>
@@ -98,7 +104,7 @@ export default {
 
   },
   methods: {
-    fetchLibraries() {
+/*     fetchLibraries() {
       axios.get('/mylibraries')
         .then(response => {
           this.libraries = response.data
@@ -106,7 +112,7 @@ export default {
         .catch(error => {
           console.log(error)
         })
-    },
+    }, */
     deleteLibrary(id) {
       axios.delete(`/mylibrary/${id}`)
         .then(response => {
@@ -115,6 +121,10 @@ export default {
         .catch(error => {
           console.log(error)
         })
+    },
+    editLibrary(library) {
+      console.log('Editing library:', library);
+      this.$emit('edit-library', library.id);
     },
     submitForm() {
       axios.post('/mylibrary', {

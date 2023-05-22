@@ -75,10 +75,16 @@ Route::get('/knowledgeSphere', function () {
 
 
 Route::middleware(['auth', 'verified'])->group(function () {
-Route::get('/mylibrary', [MyLibraryController::class, 'index'])->middleware('auth')->name('mylibrary.index');
+/* Route::get('/mylibrary', [MyLibraryController::class, 'index'])->middleware('auth')->name('mylibrary.index');
 Route::post('/mylibrary', [MyLibraryController::class, 'store'])->middleware('auth')->name('mylibrary.store');
 Route::delete('/mylibrary/{id}', [MyLibraryController::class, 'destroy'])->name('mylibrary.destroy');
-Route::post('/mylibrary', [MyLibraryController::class, 'store'])->name('mylibrary.store');
+Route::post('/mylibrary', [MyLibraryController::class, 'store'])->name('mylibrary.store'); */
+
+Route::get('/mylibrary', [MyLibraryController::class, 'index'])->middleware('auth')->name('mylibrary.index');
+Route::post('/mylibrary', [MyLibraryController::class, 'store'])->middleware('auth')->name('mylibrary.store');
+Route::get('/mylibrary/{id}/edit', [MyLibraryController::class, 'edit'])->middleware('auth')->name('mylibrary.edit');
+Route::put('/mylibrary/{id}', [MyLibraryController::class, 'update'])->middleware('auth')->name('mylibrary.update');
+Route::delete('/mylibrary/{id}', [MyLibraryController::class, 'destroy'])->name('mylibrary.destroy');
 
 Route::get('/blogosphere', [MyBlogController::class, 'index'])->middleware('auth')->name('blogosphere.index');
 Route::get('/blogosphere/create', [MyBlogController::class, 'create'])->name('blogosphere.create');
