@@ -11,20 +11,22 @@
                     @csrf
             
                     <!-- Name -->
-                    <div class="form-group mb-3">
                     <label class="form-label login" for="name">{{ __('Name') }}</label>
-                    <input id="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" />
+                    <div class="input-group mb-3">
+                    <span class="input-group-text login" for="email"><i class="fa-solid fa-signature iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your name">{{ __('') }}</i></span>   
+                    <input id="name" class="form-control login{{ $errors->has('name') ? ' is-invalid' : '' }}" title="Enter your name" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" />
                     @if ($errors->has('name'))
                         <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('name') }}</strong>
                         </span>
                     @endif
                     </div>
-            
+
                     <!-- Email Address -->
-                    <div class="form-group mb-3">
                     <label class="form-label login" for="email">{{ __('Email') }}</label>
-                    <input id="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" />
+                    <div class="input-group mb-3">
+                    <span class="input-group-text login" for="email"><i class="fa-solid fa-at iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your e-mail address">{{ __('') }}</i></span>
+                    <input id="email" class="form-control login{{ $errors->has('email') ? ' is-invalid' : '' }}" title="Enter your e-mail adress" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" />
                     @if ($errors->has('email'))
                         <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('email') }}</strong>
@@ -33,9 +35,10 @@
                     </div>
             
                     <!-- Password -->
-                    <div class="form-group mb-3">
                     <label class="form-label login" for="password">{{ __('Password') }}</label>
-                    <input id="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" name="password" required autocomplete="new-password" />
+                    <div class="input-group mb-3">
+                    <span class="input-group-text login" for="email"><i class="fa-solid fa-key iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter a password">{{ __('') }}</i></span>
+                    <input id="password" class="form-control login{{ $errors->has('password') ? ' is-invalid' : '' }}" title="Enter a password" type="password" name="password" required autocomplete="new-password" />
                     @if ($errors->has('password'))
                         <span class="invalid-feedback" role="alert">
                         <strong>{{ $errors->first('password') }}</strong>
@@ -44,10 +47,12 @@
                     </div>
             
                     <!-- Confirm Password -->
-                    <div class="form-group mb-3">
                     <label class="form-label login" for="password_confirmation">{{ __('Confirm Password') }}</label>
-                    <input id="password_confirmation" class="form-control" type="password" name="password_confirmation" required autocomplete="new-password" />
+                    <div class="input-group mb-3">
+                    <span class="input-group-text login" for="email"> <p class="squared"></p> <i class="fa-solid fa-key iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Confirm your password">{{ __('^2') }}</i></span>
+                    <input id="password_confirmation" class="form-control login" title="Confirm your password" type="password" name="password_confirmation" required autocomplete="new-password" />
                     </div>
+
             
                     <div class="d-md-flex justify-content-md-between align-items-md-center flex-md-column text-center">
                         <a class="login text-decoration-none mb-3" href="{{ route('login') }}">

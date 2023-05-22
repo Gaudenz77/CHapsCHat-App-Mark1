@@ -10,10 +10,13 @@
             <div class="col-sm-3 bg-info">
                 <h3>Create Blog</h3>
                 <my-blog-form></my-blog-form>
+                
             </div>
+            <div class="col bg-warning">
 
-        {{--                     <!-- Loop through the blogs and display them -->
-                    @foreach($blogs as $blog)
+            </div>
+                            <!-- Loop through the blogs and display them -->
+                    {{-- @foreach($blogs as $blog)
                     <div class="col-sm-3 bg-danger circleBlog mx-2">
                             <h2>{{ $blog->title }}</h2>
                             <p>Topic: {{ $blog->topic }}</p>

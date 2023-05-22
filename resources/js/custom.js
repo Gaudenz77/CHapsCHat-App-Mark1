@@ -44,7 +44,7 @@ moveIcon();
       console.log('Icon clicked');
       /* window.location.href = '{{ route("playground") }}'; */
       /* window.location.href='{{ url("/playground") }}'; */
-      window.location.href='http://localhost/playground';
+      window.location.href='http://localhost/register';
   });
 });
 

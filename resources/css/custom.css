@@ -1,5 +1,5 @@
 body {
-    margin-top:14vh;
+    margin-top:15vh;
     margin-bottom:10vh;
     font-family: 'Poppins', sans-serif;
     color:#ebebeb
@@ -14,6 +14,7 @@ body.dark-mode .some-element {
 
 body.dark-mode body {
   /* background-color: mediumspringgreen; */
+  
 }
 
 body.dark-mode  {
@@ -40,9 +41,10 @@ h1, h2, h3, h4, h5, h6, p, a {
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode a {
   color:#ebebeb;
  }
-
+/* LOGIN START----------------------------------------------------------------*/
 .login {
   color:#ebebeb;
+  border-radius: 20px;;
 }
 
 body.dark-mode .login {
@@ -56,6 +58,12 @@ body.dark-mode .login {
 body.dark-mode .cardLogin {
   background-color:#ebebeb;
 }
+
+
+/* LOGIN START----------------------------------------------------------------*/
+
+/* FORM-CONTROL START----------------------------------------------------------------*/
+
 
 .form-control
 .form-control:active,
@@ -75,6 +83,8 @@ body.dark-mode .form-control:focus:active{
   background-color:#091540!important;
   
 }
+
+/* FORM-CONTROL STOP----------------------------------------------------------------*/
 
 .span1 {
   color:#333;
@@ -165,13 +175,7 @@ a {
   margin-left:-10%;
 }
 
-.iconshooter {
-  color:#ffa500;
-}
 
-body.dark-mode .iconshooter {
-  color:#fa1c50;;
-}
 
 
 
@@ -732,6 +736,32 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   width: 100%;
 }
 
+/* FONTAWESOME ICONS START ------------------------------------------------------- */
+
+ .iconAuth {
+  /* color:pink; */
+  color:#1400ff;
+ }
+
+ body.dark-mode .iconAuth {
+  /* color:pink; */
+  
+  color:#ff0000;
+ }
+
+/* FONTAWESOME ICONS STOP ------------------------------------------------------- */
+
+
+
+/* ICONSHOOTER START ------------------------------------------------------- */
+.iconshooter {
+  color:#ffa500;
+}
+
+body.dark-mode .iconshooter {
+  color:#fa1c50;;
+}
+
 #icon {
   position: absolute;
   top: 50%;
@@ -746,6 +776,9 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   z-index: 1;
   color:rgb(244, 155, 0);
 }
+
+/* ICONSHOOTER STOP ------------------------------------------------------- */
+
 
 .custom-tooltip {
   --bs-tooltip-bg: var(--bs-danger);

@@ -18,18 +18,21 @@
             @csrf
   
             <!-- Email Address -->
-            <div class="form-group mb-3">
-              <label class="form-label login" for="email">{{ __('Email') }}</label>
-              <input id="email" class="form-control" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username">
+            <label class="form-label login" for="email">{{ __('Email') }}</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text login" for="email"><i class="fa-solid fa-solid fa-at iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your e-mail address">{{ __('') }}</i></span>
+              <input id="email" class="form-control login" title="Enter your e-mail address" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username">
               @error('email')
                 <div class="text-danger mt-2">{{ $message }}</div>
               @enderror
             </div>
-  
+            
             <!-- Password -->
-            <div class="form-group mb-3">
-              <label class="form-label login" for="password">{{ __('Password') }}</label>
-              <input id="password" class="form-control" type="password" name="password" required autocomplete="current-password">
+            <label class="form-label login" for="password">{{ __('Password') }}</label>
+            <div class="input-group mb-3">
+              
+              <span class="input-group-text login" for="email"><i class="fa-solid fa-key iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your password">{{ __('') }}</i></span>
+              <input id="password" class="form-control login" title="Enter your password" type="password" name="password" required autocomplete="current-password">
               @error('password')
                 <div class="text-danger mt-2">{{ $message }}</div>
               @enderror

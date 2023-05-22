@@ -23,6 +23,12 @@
                     <button type="submit" class="btn btn-circle mt-2 mb-2 p-1">Create Blog</button>
                 </div>
             </form>
+
+            <div v-if="successMessage" class="alert alert-success alert-dismissible fade show">
+            {{ successMessage }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
         </div>
     </template>
 
@@ -38,6 +44,7 @@
                     content: '',
                     csrfToken: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
                 },
+                        successMessage: '', // Variable to store the success message
             };
         },
         methods: {
@@ -50,6 +57,10 @@
                         this.form.title = '';
                         this.form.topic = 'general';
                         this.form.content = '';
+                       // Set the success message
+                       this.successMessage = response.data.message;
+                        // Reload the page
+                    location.reload();
                     })
                     .catch(error => {
                         // Handle error

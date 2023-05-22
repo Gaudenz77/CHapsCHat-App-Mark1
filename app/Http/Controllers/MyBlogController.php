@@ -8,33 +8,36 @@ use App\Models\Blog;
 
 class MyBlogController extends Controller
 {
+
 /*     public function index()
-    {
-        $blogs = Blog::where('user_id', auth()->user()->id)->get();
-    
-        // If the request expects JSON response, return a JSON message
-        if (request()->expectsJson()) {
-            return response()->json($blogs);
-        }
-    
-        return view('blogs.index', compact('blogs'));
-    } */
-    public function index()
     {
         $user = auth()->user();
         $blogs = $user->blogs;
 
         return response()->json($blogs);
+    } */
+    public function index()
+    {
+        $blogs = Blog::where('user_id', auth()->user()->id)->get();
+
+        /* return view('blogoSphere', compact('blogs')); */
+        $blogs = Blog::all();
+        return redirect()->route('back', ['blogId' => $blog->id]);
     }
 
 
-    public function create()
+/*     public function create()
     {
         // If the request expects JSON response, return a JSON message
         if (request()->expectsJson()) {
-            return response()->json(['message' => 'JSON response for create action']);
+            return response()->json(['message' => 'Blog-post succesfully added to database']);
         }
 
+        return view('blogs.create');
+    } */
+
+    public function create()
+    {
         return view('blogs.create');
     }
 
@@ -54,13 +57,16 @@ class MyBlogController extends Controller
         $blog->content = $validatedData['content'];
         $blog->save();
 
-        // If the request expects JSON response, return a JSON message
-        if ($request->expectsJson()) {
-            return response()->json(['message' => 'JSON response for store action']);
-        }
+    // Store the feedbackMapId in the session
+    session(['blogId' => $blog->id]);
 
-        return redirect()->route('blogoSphere.show', $blog->id)
-            ->with('success', 'Blog created successfully!');
+    // If the request expects JSON response, return a JSON message
+    if ($request->expectsJson()) {
+        return response()->json(['message' => 'Blog-post successfully stored in the database']);
+    }
+
+    return redirect()->route('blogosphere.show', $blog->id)
+        ->with('success', 'Blog created successfully!');
     }
 
     public function show($id)

@@ -36,6 +36,10 @@ Route::get('/blogoSphere', function () {
     return view('blogoSphere');
 })->middleware(['auth', 'verified'])->name('blogoSphere');
 
+Route::get('/blogoSphere/{id}', function () {
+    return view('blogoSphere');
+})->middleware(['auth', 'verified'])->name('blogoSphere');
+
 Route::get('/knowledgeSphere', function () {
     return view('knowledgeSphere');
 })->middleware(['auth', 'verified'])->name('knowledgeSphere');
@@ -61,7 +65,7 @@ Route::post('/messages', [ChatsController::class, 'sendMessage'])->name('message
 /* Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/mylibrary', [MyLibraryController::class, 'index'])->name('mylibrary.index');
     Route::post('/mylibrary', [MyLibraryController::class, 'store'])->name('mylibrary.store');
-    Route::delete('/mylibrary/{id}', [MyLibraryController::class, 'destroy'])->name('mylibrary.destroy');
+    Route::delete('/mylibrary/{id}', [MyLibraryCo>ntroller::class, 'destroy'])->name('mylibrary.destroy');
     Route::get('/mylibrary/search', [MyLibraryController::class, 'search'])->name('mylibrary.search');
 });*/
 

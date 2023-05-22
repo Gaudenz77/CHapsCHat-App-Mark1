@@ -15,9 +15,10 @@
             </div>
             
             <div class="offcanvas-body px-3">
+            @auth
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
               <li class="nav-item">
-                
+            
                 <a class="d-inline-flex p-0">@include('components.toggle')</a>
                 @if (Route::has('login'))
                     @auth
@@ -30,7 +31,8 @@
               </li>
   
               <li class="nav-item py-3">
-                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
+                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') . '/' . session('blogId') }}">Blogosphere </a>
+                  {{-- <a class="nav-link {{ (request()->is('/tipps')) ? 'active' : '' }}" aria-current="page" href="{{ url('/tipps') . '/' . session('feedbackMapId') }}">Tipps</a> --}}
               </li>
   
               <li class="nav-item py-3">
@@ -69,6 +71,8 @@
                     @endif 
                 </ul>
             </ul>
+            @endauth
+            
         </div>
     </div>
   </nav>
