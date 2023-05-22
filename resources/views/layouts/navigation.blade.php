@@ -31,8 +31,8 @@
               </li>
   
               <li class="nav-item py-3">
-                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') . '/' . session('blogId') }}">Blogosphere </a>
-                  {{-- <a class="nav-link {{ (request()->is('/tipps')) ? 'active' : '' }}" aria-current="page" href="{{ url('/tipps') . '/' . session('feedbackMapId') }}">Tipps</a> --}}
+                  {{-- <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') . '/' . session('blogId') }}">Blogosphere</a> --}}
+                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
               </li>
   
               <li class="nav-item py-3">

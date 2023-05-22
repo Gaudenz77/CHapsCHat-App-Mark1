@@ -8,24 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     use HasFactory;
+
     protected $table = 'my_blogs';
 
     protected $fillable = [
-   /*      'user_id', */
         'title',
         'topic',
         'content',
     ];
 
-    protected $with = [
-        'blogs'
-    ];
-
-    public function blogs()
-    {
-        return $this->hasMany(Blog::class);
-    }
-    
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -9,32 +9,12 @@ use App\Models\Blog;
 class MyBlogController extends Controller
 {
 
-/*     public function index()
-    {
-        $user = auth()->user();
-        $blogs = $user->blogs;
-
-        return response()->json($blogs);
-    } */
     public function index()
     {
-        $blogs = Blog::where('user_id', auth()->user()->id)->get();
-
-        /* return view('blogoSphere', compact('blogs')); */
         $blogs = Blog::all();
-        return redirect()->route('back', ['blogId' => $blog->id]);
+
+        return response()->json($blogs);
     }
-
-
-/*     public function create()
-    {
-        // If the request expects JSON response, return a JSON message
-        if (request()->expectsJson()) {
-            return response()->json(['message' => 'Blog-post succesfully added to database']);
-        }
-
-        return view('blogs.create');
-    } */
 
     public function create()
     {
@@ -69,12 +49,13 @@ class MyBlogController extends Controller
         ->with('success', 'Blog created successfully!');
     }
 
-    public function show($id)
+    public function show(Request $request, $id)
     {
         // Find the blog by ID
         $blog = Blog::findOrFail($id);
-
-        return view('blogoSphere.show', compact('blog'));
+        dd($request->all());
+        return view('blogosphere.show', compact('blog'));
+        /* return redirect()->route('blogosphere.show', ['id' => $blog->id]); */
     }
 
     public function edit($id)

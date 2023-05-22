@@ -13,12 +13,16 @@
                 
             </div>
             <div class="col bg-warning">
+                
+                <my-blog-content></my-blog-content>
+
 
             </div>
                             <!-- Loop through the blogs and display them -->
                     {{-- @foreach($blogs as $blog)
                     <div class="col-sm-3 bg-danger circleBlog mx-2">
                             <h2>{{ $blog->title }}</h2>
+                            <p>Topic: {{ $blog->id }}</p>
                             <p>Topic: {{ $blog->topic }}</p>
                             <p>{{ $blog->content }}</p>
                             <!-- Add any other fields you want to display -->
