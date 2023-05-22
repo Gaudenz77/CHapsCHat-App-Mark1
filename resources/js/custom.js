@@ -1,3 +1,6 @@
+
+
+AOS.init();
 // VARIANT BOUNCE OFF EDGES ON INTERVAL
 // Get the icon element
 const icon = document.getElementById('icon');
@@ -72,7 +75,6 @@ toggleSwitch.addEventListener('change', function(e) {
     localStorage.setItem('darkMode', 'false');
   }
 });
-
 
 
 // VARIANT CHANGE ON INTERVAL

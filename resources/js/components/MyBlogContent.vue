@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="blog in blogs" :key="blog.id" class="col-sm-3 bg-danger circleBlog mx-2">
+    <div v-for="blog in blogs" :key="blog.id" class="col-sm-3 bg-danger circleBlog mx-2 my-2" data-aos="flip-left">
       <div class="textfieldBlog">
         <h3>{{ blog.title }}</h3>
         <p><strong>Topic:</strong> {{ blog.topic }}</p>
@@ -13,6 +13,8 @@
 
 <script>
 import axios from 'axios';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default {
   data() {
@@ -22,6 +24,7 @@ export default {
   },
   mounted() {
     this.fetchBlogs();
+    AOS.init(); // Initialize AOS
   },
   methods: {
     fetchBlogs() {

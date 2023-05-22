@@ -12,33 +12,12 @@
                 <my-blog-form></my-blog-form>
                 
             </div>
-            <div class="col bg-warning">
-                
-                <my-blog-content></my-blog-content>
-
-
-            </div>
-                            <!-- Loop through the blogs and display them -->
-                    {{-- @foreach($blogs as $blog)
-                    <div class="col-sm-3 bg-danger circleBlog mx-2">
-                            <h2>{{ $blog->title }}</h2>
-                            <p>Topic: {{ $blog->id }}</p>
-                            <p>Topic: {{ $blog->topic }}</p>
-                            <p>{{ $blog->content }}</p>
-                            <!-- Add any other fields you want to display -->
-            
-                            <!-- Add edit and delete buttons if necessary -->
-                            <a href="{{ route('blogosphere.edit', $blog->id) }}">Edit</a>
-                            <form action="{{ route('blogosphere.destroy', $blog->id) }}" method="POST" style="display: inline;">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit">Delete</button>
-                            </form>
-                        </div>
-                    @endforeach --}}
-                
-                
-   
+            <div class="col-sm-9 bg-warning">
+                <div class="container">
+                    <div class="row justify-content-evenly">
+                        <my-blog-content></my-blog-content>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
