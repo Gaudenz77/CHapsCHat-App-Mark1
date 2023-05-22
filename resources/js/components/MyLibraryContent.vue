@@ -37,9 +37,12 @@
           <td>{{ library.content }}</td>
           <td>{{ formatDate(library.created_at) }}</td>
           <td>
-            <div class="text-center" type="button" @click="deleteLibrary(library.id)">
+            <div class="textfieldBlog">
+              <button class="btn text-center" type="button" role="button" @click="deleteLibrary(library.id)">
               <i class="fa-regular fa-trash-can"></i> Delete
+            </button>
             </div>
+            
           </td>
         </tr>
       </tbody>

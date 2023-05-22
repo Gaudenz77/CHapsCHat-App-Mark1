@@ -5,7 +5,7 @@
         <h3>{{ blog.title }}</h3>
         <p><strong>Topic:</strong> {{ blog.topic }}</p>
         <p>{{ blog.content }}</p>
-        <button  class="btn btn-circle mt-2 mb-2 p-1" @click="deleteBlog(blog.id)">Delete</button>
+        <button class="btn mt-2 mb-2 p-1"  type="button" role="button" @click="deleteBlog(blog.id)"><i class="fa-regular fa-trash-can"></i> Delete</button>
       </div>
     </div>
   </div>

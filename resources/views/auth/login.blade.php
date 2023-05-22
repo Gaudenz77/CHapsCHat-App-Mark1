@@ -29,8 +29,7 @@
             
             <!-- Password -->
             <label class="form-label login" for="password">{{ __('Password') }}</label>
-            <div class="input-group mb-3">
-              
+            <div class="input-group mb-3">  
               <span class="input-group-text login" for="email"><i class="fa-solid fa-key iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your password">{{ __('') }}</i></span>
               <input id="password" class="form-control login" title="Enter your password" type="password" name="password" required autocomplete="current-password">
               @error('password')

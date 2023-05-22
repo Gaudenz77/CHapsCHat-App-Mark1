@@ -62,7 +62,7 @@ body.dark-mode .cardLogin {
 
 /* LOGIN START----------------------------------------------------------------*/
 
-/* FORM-CONTROL START----------------------------------------------------------------*/
+/* FORM-CONTROL START FORM GENERAL----------------------------------------------------------------*/
 
 
 .form-control
@@ -83,6 +83,28 @@ body.dark-mode .form-control:focus:active{
   background-color:#091540!important;
   
 }
+
+.formOwnOne {
+  color:#ebebeb;
+  border-radius: 20px;
+}
+
+
+
+body.dark-mode .formOwnOne {
+  color:#333;
+}
+
+.formIcons {
+  /* color:pink; */
+  color:#1400ff;
+ }
+
+ body.dark-mode .formIcons {
+  /* color:pink; */
+  
+  color:#ff0000;
+ }
 
 /* FORM-CONTROL STOP----------------------------------------------------------------*/
 
