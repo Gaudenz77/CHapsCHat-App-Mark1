@@ -1,5 +1,6 @@
 body {
     margin-top:15vh;
+    margin-bottom:10vh;
     font-family: 'Poppins', sans-serif;
     color:#ebebeb
 }
@@ -13,6 +14,7 @@ body.dark-mode .some-element {
 
 body.dark-mode body {
   /* background-color: mediumspringgreen; */
+  
 }
 
 body.dark-mode  {
@@ -39,9 +41,10 @@ h1, h2, h3, h4, h5, h6, p, a {
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode a {
   color:#ebebeb;
  }
-
+/* LOGIN START----------------------------------------------------------------*/
 .login {
   color:#ebebeb;
+  border-radius: 20px;;
 }
 
 body.dark-mode .login {
@@ -55,6 +58,12 @@ body.dark-mode .login {
 body.dark-mode .cardLogin {
   background-color:#ebebeb;
 }
+
+
+/* LOGIN START----------------------------------------------------------------*/
+
+/* FORM-CONTROL START FORM GENERAL----------------------------------------------------------------*/
+
 
 .form-control
 .form-control:active,
@@ -74,6 +83,31 @@ body.dark-mode .form-control:focus:active{
   background-color:#091540!important;
   
 }
+
+.formOwnOne {
+  color:#333;
+  
+  border-radius: 20px;
+}
+
+
+
+body.dark-mode .formOwnOne {
+  color:#ebebeb;
+}
+
+.formIcons {
+  /* color:pink; */
+  color:#1400ff;
+ }
+
+ body.dark-mode .formIcons {
+  /* color:pink; */
+  
+  color:#ff0000;
+ }
+
+/* FORM-CONTROL STOP----------------------------------------------------------------*/
 
 .span1 {
   color:#333;
@@ -133,59 +167,39 @@ a {
   justify-content: center;
 }
 
-/* #colSquare {
-  background-image: url('../assets/img/square_red.svg');
-
-height:100%;
-
-} */
-
-/*
-
-#colSquare {
-  background-image: url('../assets/img/square_red.svg');
-
+.colSquare {
+  background-color: red;
 }
 
-#colCircle {
-  background-image: url('../assets/img/circle_yellow.svg');
-
-}
-
-#colTriangle {
-  background-image: url('../assets/img/triangle_blue.svg');
-
-} 
 .colCircle {
-  background-image: url('./assets/img/circle_yellow.svg');
-  background-size: cover;
-  height: 400px;
+  background-color: yellow;
+  border-radius: 50%;
 }
 
-.colTriangle {
-  background-image: url('./assets/img/triangle_blue.svg');
-  background-size: cover;
-  height: 400px;
-} */
-
-/* .content-column {
-  padding: 50px;
+.square {
   position: relative;
+  width: 300px;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
 }
 
-.content-column h2 {
-  color: #fff;
-  font-size: 36px;
+.triangle {
+  width: 100%;
+  height: 100%;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 300px solid blue;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  margin-left:-10%;
 }
 
-.content-column p {
-  color: #fff;
-  font-size: 18px;
-} */
+
+
 
 
 /* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
@@ -366,12 +380,25 @@ body.dark-mode .chatbody   {
 
 /* -------------------------------------------------------- ROUND DIVS */
 .circle {
-    position: relative;
-    min-width: 150px;
-    min-height: 150px;
-    border-radius: 50%;
-  }
+  position: relative;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 50%;
+}
 
+.circleAuth {
+  position: relative;
+  min-width: 33.3%;
+  min-height: 33.3%;
+  border-radius: 50%;
+  padding: 18% 12% 3% 12%;/* add padding to create space between content and border */
+  box-sizing: border-box; /* include padding in element's total width and height */
+}
+
+/* .mycheck {
+  background-color: #181818;
+} */
+  
 .circleProfileCols {
     position: relative;
     min-width: 33%;
@@ -385,6 +412,13 @@ body.dark-mode .chatbody   {
     padding:10%;
 }
   
+.scrollableChat {
+  height: 150px; /* Set the desired fixed height */
+  overflow: auto; /* Enable scrolling when content exceeds the height */
+}
+
+
+
 .textfield {
     position: absolute;
     top: 50%;
@@ -411,16 +445,48 @@ body.dark-mode .chatbody   {
     font-weight:bold;
     text-align:center;
     padding: 2.5rem;
-    /* color:#ffffff; */
+    color:#ffffff;
     
   }
-  
-.circleKnowledgeForm {
+
+.textfieldKnowledge   {
+  font-size:15px;
+  font-weight:bold;
+  text-align:center;
+  color:#ffffff;
+}
+
+
+
+  .circleKnowledgeForm {
     position: relative;
-    width: 25%;
-    height: 25%;
+    width: auto; /* Set the desired fixed width */
+    height: 50%; /* Set the desired fixed height */
     border-radius: 50%;
+    padding: 4rem 3rem 3rem 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+
+  
+  .form-wrapper {
+    max-width: 100%; /* Ensure the form does not exceed the container size */
+    text-align: center; /* Center the form content horizontally */
+  }
+  
+  
+  /* Media query for responsiveness */
+  @media (max-width: 767px) {
+    .circleKnowledgeForm {
+      width: 100%; /* Change to 100% width for smaller screens */
+      height: auto; /* Allow height to adjust based on content */
+      padding: 2rem; /* Adjust padding as needed for smaller screens */
+    }
+  }
+  
 
 .circleKnowledge {
     position: relative;
@@ -503,21 +569,38 @@ body.dark-mode .card1{
 
 /* ---------------------------------------------------------------- EDITOR MONACO END */
 
-/*.btn-circle {
+.btn-circle {
     width: 5rem;
     height: 5rem;
     font-size: 90%;
     padding: 8px 8px;
     border-radius: 50%;
-    color:#087990;
+    color:#ffff00;
+    font-weight: bold ;
+    background-color: #1400ff;
     text-align: center;
     margin-bottom: 15px; 
     box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
 }
 
 body.dark-mode .btn-circle {
-    color: #f3a81c;
+    
+    background-color: #ff0000;
+    color: #ffff00;
+    font-weight: bold;
 }
+
+.btn-own {
+  position:relative;
+  right:0;
+  padding:1rem 0 1rem 0 !important;
+}
+
+#closeButton {
+  color:red !important;
+  /* background-color: green; */
+}
+
 
 /* TOGGLE Variants Start================================================================= */
 /* body {
@@ -604,6 +687,7 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   align-items: center;
   transform: scale(0.25);
 }
+
 .ht-ui-check:before {
   content: "";
   position: absolute;
@@ -715,4 +799,52 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+/* FONTAWESOME ICONS START ------------------------------------------------------- */
+
+ .iconAuth {
+  /* color:pink; */
+  color:#1400ff;
+ }
+
+ body.dark-mode .iconAuth {
+  /* color:pink; */
+  
+  color:#ff0000;
+ }
+
+/* FONTAWESOME ICONS STOP ------------------------------------------------------- */
+
+
+
+/* ICONSHOOTER START ------------------------------------------------------- */
+.iconshooter {
+  color:#ffa500;
+}
+
+body.dark-mode .iconshooter {
+  color:#fa1c50;;
+}
+
+#icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  /* background-image: url("path/to/image.png"); */
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  color:rgb(244, 155, 0);
+}
+
+/* ICONSHOOTER STOP ------------------------------------------------------- */
+
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-danger);
 }

@@ -95,6 +95,8 @@ sail npm install --save-dev
 * HTML, CSS, Javascript, PHP PDO, Heidisql, Nginx, Mysql
 * [Font](https://fonts.google.com/specimen/Poppins)
 * [Fontawesome](https://fontawesome.com/)
+* [Animate.css](https://animate.style/)
+* [AOS](https://michalsnik.github.io/aos/)<br>[AOS-Git]('https://github.com/michalsnik/aos')
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Bootstrap_5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 

@@ -25,15 +25,14 @@ class ChatsController extends Controller
     }
 
     /**
-     * Fetch all messages
+     * Fetch all messages in reverse order
      *
      * @return Message
      */
     public function fetchMessages()
     {
-        return Message::with('user')->get();
+        return Message::with('user')->orderBy('created_at', 'desc')->get();
     }
-
 
     
     /**
@@ -50,7 +49,7 @@ class ChatsController extends Controller
             'message' => $request->input('message')
         ]);
 
-        
+    
 
         broadcast(new MessageSent($user, $message))->toOthers();
 

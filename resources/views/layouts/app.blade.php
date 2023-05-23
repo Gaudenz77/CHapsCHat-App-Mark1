@@ -21,7 +21,7 @@
 
 
         <!-- Scripts -->
-        @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/custom.js', 'resources/css/areset.css', 'resources/css/custom.css'])
+        @vite(['resources/sass/app.scss', 'resources/css/areset.css', 'resources/css/custom.css'])
         {{-- 'resources/css/app.css', --}}</head>
 
     
@@ -45,30 +45,10 @@
                 {{ $slot }}
             </main>
         
-<!-- toggle mode script start -->
-<script>
-
-    // Read the value of the "darkMode" cookie
-    const cookies = document.cookie.split("; ");
-    const darkModeCookie = cookies.find(cookie => cookie.startsWith("darkMode="));
-    const darkModeOn = darkModeCookie ? (darkModeCookie.split("=")[1] === "on") : false;
+    <!-- toggle mode script start -->
+    @include('components.darkmodeToggle')
     
-    // Set the "dark-mode" class on the body element if necessary
-    if (darkModeOn) {
-      document.body.classList.add("dark-mode");
-    } 
-    
-    function setDarkModePreference(darkModeOn) {
-      const cookieValue = darkModeOn ? "on" : "off";
-      document.cookie = `darkMode=${cookieValue}; path=/; max-age=${60 * 60 * 24 * 365}`;
-    }
-    
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      setDarkModePreference(document.body.classList.contains('dark-mode'));
-    }
-        
-    </script>
+    @vite(['resources/js/app.js', 'resources/js/custom.js'])
     </body>
 </html>
 @endsection
