@@ -5,7 +5,7 @@
 @section('content')
 
 <section class="blogMain">
-    <div class="container mt-3">
+    <div class="container{{-- -fluid --}} mt-3">
         <div class="row justify-content-center">
             <div class="col-sm-3 bg-info" id="formContainer2" style="display: none;">
                 <div class="form-wrapper">

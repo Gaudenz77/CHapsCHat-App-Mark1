@@ -34,7 +34,7 @@ body.dark-mode .playground  {
     /* background-color:black; */
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a   {
   color:#333;
  }
 
@@ -98,13 +98,13 @@ body.dark-mode .formOwnOne {
 
 .formIcons {
   /* color:pink; */
-  color:#1400ff;
+  color:#6254ff;
  }
 
  body.dark-mode .formIcons {
   /* color:pink; */
   
-  color:#ff0000;
+  color:#f25151;
  }
 
 /* FORM-CONTROL STOP----------------------------------------------------------------*/
@@ -435,17 +435,28 @@ body.dark-mode .chatbody   {
 
 .circleBlog {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height:fit-content;
     border-radius: 50%;
   }
 
-.textfieldBlog {
+.textfieldBlogTitle {
     font-size:15px;
     font-weight:bold;
     text-align:center;
-    padding: 2.5rem;
+    padding: 2.5rem ;
     color:#ffffff;
+    text-align: center;
+    
+    
+  }
+
+  .textfieldBlogContent {
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+    color:#ffffff;
+    text-align: left;
     
   }
 
@@ -594,6 +605,14 @@ body.dark-mode .btn-circle {
   position:relative;
   right:0;
   padding:1rem 0 1rem 0 !important;
+  color:black;
+  /* color:white; */
+}
+
+body.dark-mode .btn-own {
+
+  color:white;
+  /* color:white; */
 }
 
 #closeButton {
@@ -601,7 +620,10 @@ body.dark-mode .btn-circle {
   /* background-color: green; */
 }
 
+.btnTxt {
+color:blue;
 
+}
 /* TOGGLE Variants Start================================================================= */
 /* body {
 display: flex;

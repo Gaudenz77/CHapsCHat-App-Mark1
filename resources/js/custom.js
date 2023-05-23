@@ -37,7 +37,7 @@ createButton.addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const createButton = document.getElementById('createButton2');
   const formContainer = document.getElementById('formContainer2');
-  const closeButton = document.getElementById('closeButton');
+  const closeButton = document.getElementById('closeButton2');
 
   createButton.addEventListener('click', () => {
     formContainer.style.display = 'block';

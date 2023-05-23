@@ -12,6 +12,7 @@
         <span class="input-group-text formOwnOne"><i class="fa-solid fa-file-signature formIcons" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your content"></i></span>
         <textarea class="form-control formOwnOne" placeholder="Content" name="content" id="content" v-model="form.content" required></textarea>
       </div>
+      
       <div class="text-center pt-3">
         <!-- <button type="submit" class="btn btn-circle mt-2 mb-2 p-1" v-text="editMode ? 'Update' : 'Submit'"></button> -->
         <button type="submit" class="btn btn-circle mt-2 mb-2 p-1" v-html="editMode ? '<i class=\'fa-regular fa-edit\'></i> Update' : '<i class=\'fa-regular fa-save fa-2xl\'></i><br> Submit'"></button>
@@ -20,7 +21,7 @@
       <input type="hidden" name="_token" :value="form.csrfToken">
     </form>
     <button type="button" id="closeButton" class="btn-close" aria-label="Close"></button>
-    <p>Close Create</p>
+    <p>Close Create Library</p>
   </div>
 </template>
 

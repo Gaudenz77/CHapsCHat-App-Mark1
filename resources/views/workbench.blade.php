@@ -44,12 +44,14 @@
   </div>
 
 
-  <!-- Icons Fontawesome -->
+<!-- Icons Fontawesome -->
 
-  <i class="fa-solid fa-at"></i>
-  <i class="fa-solid fa-file-signature"></i>
-  <i class="fa-solid fa-key"></i>
-  <i class="fa-solid fa-signature"></i>
-  <i class="fa-solid fa-signature"></i>
-  <i class="fa-solid fa-circle-plus"></i>
-  <i class="fa-solid fa-paper-plane"></i>
+<i class="fa-solid fa-at"></i>
+<i class="fa-solid fa-file-signature"></i>
+<i class="fa-solid fa-key"></i>
+<i class="fa-solid fa-signature"></i>
+<i class="fa-solid fa-signature"></i>
+<i class="fa-solid fa-circle-plus"></i>
+<i class="fa-solid fa-paper-plane"></i>
+<i class="fa-solid fa-book-bookmark"></i>
+<i class="fa-regular fa-book-bookmark"></i>

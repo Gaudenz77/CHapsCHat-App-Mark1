@@ -1,13 +1,13 @@
 <template>
   <div>
     <div>
-        <button class="btn btn-own" type="button" role="button" id="createButton2"><i class="fa-solid fa-circle-plus fa-2xl"></i> Create</button>
+        <button class="btn btn-own" type="button" role="button" id="createButton2"><i class="fa-solid fa-circle-plus fa-2xl formOwnOne"></i> Create</button>
       </div>
-    <div v-for="blog in blogs" :key="blog.id" class="col-sm-3 bg-danger circleBlog mx-2 my-2" data-aos="flip-left">
-      <div class="textfieldBlog">
+    <div v-for="blog in blogs" :key="blog.id" class="col bg-danger circleBlog mx-2 mb-2" data-aos="flip-left">
+      <div class="textfieldBlogTitle">
         <h3>{{ blog.title }}</h3>
         <p><strong>Topic:</strong> {{ blog.topic }}</p>
-        <p>{{ blog.content }}</p>
+        <p class="textfieldBlogContent">{{ blog.content }}</p>
         <button class="btn mt-2 mb-2 p-1"  type="button" role="button" @click="deleteBlog(blog.id)"><i class="fa-regular fa-trash-can"></i> Delete</button>
       </div>  
     </div>
