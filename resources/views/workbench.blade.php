@@ -51,3 +51,5 @@
   <i class="fa-solid fa-key"></i>
   <i class="fa-solid fa-signature"></i>
   <i class="fa-solid fa-signature"></i>
+  <i class="fa-solid fa-circle-plus"></i>
+  <i class="fa-solid fa-paper-plane"></i>

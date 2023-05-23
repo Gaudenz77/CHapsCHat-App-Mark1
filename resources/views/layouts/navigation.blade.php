@@ -15,7 +15,7 @@
             </div>
             
             <div class="offcanvas-body px-3">
-            @auth
+            
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
               <li class="nav-item">
             
@@ -71,7 +71,7 @@
                     @endif 
                 </ul>
             </ul>
-            @endauth
+          
             
         </div>
     </div>

@@ -85,14 +85,15 @@ body.dark-mode .form-control:focus:active{
 }
 
 .formOwnOne {
-  color:#ebebeb;
+  color:#333;
+  
   border-radius: 20px;
 }
 
 
 
 body.dark-mode .formOwnOne {
-  color:#333;
+  color:#ebebeb;
 }
 
 .formIcons {
@@ -447,15 +448,45 @@ body.dark-mode .chatbody   {
     color:#ffffff;
     
   }
-  
-.circleKnowledgeForm {
+
+.textfieldKnowledge   {
+  font-size:15px;
+  font-weight:bold;
+  text-align:center;
+  color:#ffffff;
+}
+
+
+
+  .circleKnowledgeForm {
     position: relative;
-    min-width: 25%;
-    min-height: 25%;
+    width: auto; /* Set the desired fixed width */
+    height: 50%; /* Set the desired fixed height */
     border-radius: 50%;
-    padding:4rem 3rem 3rem 3rem; /* add padding to create space between content and border */
-    box-sizing: border-box; /* include padding in element's total width and height */
+    padding: 4rem 3rem 3rem 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+
+  
+  .form-wrapper {
+    max-width: 100%; /* Ensure the form does not exceed the container size */
+    text-align: center; /* Center the form content horizontally */
+  }
+  
+  
+  /* Media query for responsiveness */
+  @media (max-width: 767px) {
+    .circleKnowledgeForm {
+      width: 100%; /* Change to 100% width for smaller screens */
+      height: auto; /* Allow height to adjust based on content */
+      padding: 2rem; /* Adjust padding as needed for smaller screens */
+    }
+  }
+  
 
 .circleKnowledge {
     position: relative;
@@ -558,6 +589,18 @@ body.dark-mode .btn-circle {
     color: #ffff00;
     font-weight: bold;
 }
+
+.btn-own {
+  position:relative;
+  right:0;
+  padding:1rem 0 1rem 0 !important;
+}
+
+#closeButton {
+  color:red !important;
+  /* background-color: green; */
+}
+
 
 /* TOGGLE Variants Start================================================================= */
 /* body {

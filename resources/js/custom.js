@@ -1,6 +1,53 @@
+// CREATE LIBRARY DIV -------------------------------------------------------TEST IF ENTRY PAGE STILL WORKING!!!
 
+document.addEventListener('DOMContentLoaded', () => {
+  const createButton = document.getElementById('createButton');
+const formContainer = document.getElementById('formContainer1');
 
-AOS.init();
+createButton.addEventListener('click', () => {
+  formContainer.style.display = 'block';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const createButton = document.getElementById('createButton');
+  const formContainer = document.getElementById('formContainer1');
+  const closeButton = document.getElementById('closeButton');
+
+  createButton.addEventListener('click', () => {
+    formContainer.style.display = 'block';
+  });
+
+  closeButton.addEventListener('click', () => {
+    formContainer.style.display = 'none';
+  });
+});
+
+// CREATE BLOG DIV -------------------------------------------------------TEST IF ENTRY PAGE STILL WORKING!!!
+
+document.addEventListener('DOMContentLoaded', () => {
+  const createButton = document.getElementById('createButton2');
+const formContainer = document.getElementById('formContainer2');
+
+createButton.addEventListener('click', () => {
+  formContainer.style.display = 'block';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const createButton = document.getElementById('createButton2');
+  const formContainer = document.getElementById('formContainer2');
+  const closeButton = document.getElementById('closeButton');
+
+  createButton.addEventListener('click', () => {
+    formContainer.style.display = 'block';
+  });
+
+  closeButton.addEventListener('click', () => {
+    formContainer.style.display = 'none';
+  });
+});
+
 // VARIANT BOUNCE OFF EDGES ON INTERVAL
 // Get the icon element
 const icon = document.getElementById('icon');
@@ -75,6 +122,7 @@ toggleSwitch.addEventListener('change', function(e) {
     localStorage.setItem('darkMode', 'false');
   }
 });
+
 
 
 // VARIANT CHANGE ON INTERVAL

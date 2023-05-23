@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div>
+        <button class="btn btn-own" type="button" role="button" id="createButton2"><i class="fa-solid fa-circle-plus fa-2xl"></i> Create</button>
+      </div>
     <div v-for="blog in blogs" :key="blog.id" class="col-sm-3 bg-danger circleBlog mx-2 my-2" data-aos="flip-left">
       <div class="textfieldBlog">
         <h3>{{ blog.title }}</h3>

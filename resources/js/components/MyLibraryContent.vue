@@ -1,7 +1,13 @@
 <template>
   <div>
     <h2>My Library</h2>
+
+    
+    
     <div class="filters">
+      <div>
+        <button class="btn btn-own" type="button" role="button" id="createButton"><i class="fa-solid fa-circle-plus fa-2xl"></i> Create</button>
+      </div>
       <label for="filter">Filter by:</label>
       <select v-model="selectedFilter" id="filter">
         <option value="all">All</option>
@@ -39,7 +45,7 @@
           <td>{{ library.content }}</td>
           <td>{{ formatDate(library.created_at) }}</td>
           <td>
-            <div class="textfieldBlog">
+            <div class="textfieldKnowledge">
               <button class="btn text-center" type="button" role="button" @click="deleteLibrary(library.id)">
               <i class="fa-regular fa-trash-can"></i> Delete
             </button>
