@@ -14,7 +14,7 @@
                 </div>
             </div>
             
-            <div class="col-sm-9 bg-warning mt-md-0 mt-0">
+            <div class="col-sm-7 bg-warning mt-md-0 mt-0">
                 <div class="container" style=" margin-top:15%">
                     <div class="row justify-content-evenly">
                         <my-blog-content></my-blog-content>
