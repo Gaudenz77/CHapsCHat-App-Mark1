@@ -69,6 +69,7 @@ class MyBlogController extends Controller
         }
 
         return view('blogs.edit', compact('blog'));
+        
     }
 
     public function update(Request $request, $id)
