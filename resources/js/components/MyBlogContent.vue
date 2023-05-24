@@ -1,8 +1,9 @@
 <template>
   <div>
-    <div>
-        <button class="btn btn-own" type="button" role="button" id="createButton2"><i class="fa-solid fa-circle-plus fa-2xl formOwnOne"></i> Create</button>
-      </div>
+    <div class="text-end">
+      <button class="btn btn-own mt-md-0 mt-5 text-end" type="button" role="button" id="createButton2"><i class="fa-solid fa-circle-plus fa-2xl formOwnOne"></i> Create</button>
+    </div>
+      
     <div v-for="blog in blogs" :key="blog.id" class="col bg-danger circleBlog mx-2 mb-2" data-aos="flip-left">
       <div class="textfieldBlogTitle">
         <h3>{{ blog.title }}</h3>

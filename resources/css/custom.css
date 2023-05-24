@@ -392,6 +392,15 @@ body.dark-mode .chatbody   {
   border-radius: 50%;
 }
 
+.circleBig {
+  position: relative;
+  min-width: 20%;
+  min-height: 100%;;
+  /* border-radius: 50%; */
+  padding:5rem 2rem 1rem 2rem;
+  margin-top:15%;
+}
+
 .circleAuth {
   position: relative;
   min-width: 33.3%;
