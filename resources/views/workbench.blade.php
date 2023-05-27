@@ -55,3 +55,15 @@
 <i class="fa-solid fa-paper-plane"></i>
 <i class="fa-solid fa-book-bookmark"></i>
 <i class="fa-regular fa-book-bookmark"></i>
+
+welcome @php
+    
+    {{-- <div class="col-md-4 bg-red" style="background-image: url('../assets/img/square_red.svg'); background-size:cover; height: 400px;"></div>
+                <div class="col-md-4 bg-yellow" style="background-image: url('../assets/img/circle_yellow.svg'); background-size: contain; height: 30%;"></div>
+                <div class="col-md-4 bg-blue" style="background-image: url('../assets/img/triangle_blue.svg'); background-size: contain; height: 300px;"></div>
+               
+                <div class="col-md-3" style="background-image: url('../assets/img/square_red.svg'); width:400px;"></div>
+                <div class="col-md-3" style="background-image: url('../assets/img/circle_yellow.svg');width:400px;"></div>
+                <div class="col-md-3" style="background-image: url('../assets/img/triangle_blue.svg'); width:400px; display:flex; justify-content:center; margin-left:-100px; padding-right:20%;"></div> --}}
+ 
+@endphp

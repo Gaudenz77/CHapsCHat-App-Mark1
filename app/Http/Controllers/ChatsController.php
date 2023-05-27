@@ -21,6 +21,10 @@ class ChatsController extends Controller
      */
     public function index()
     {
+
+        $messages = Message::orderBy('created_at', 'desc')->get();
+
+        /* return view('playground', compact('feedbackMaps')); */
         return view('playground');
     }
 
