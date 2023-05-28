@@ -1,5 +1,5 @@
 <template>
-    <div class=" mt-5 mb-1">
+    <div class="mt-5 mb-1">
         <form @submit.prevent="submitForm">
 
 

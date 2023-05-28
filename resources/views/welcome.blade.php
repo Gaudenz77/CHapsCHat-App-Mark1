@@ -13,11 +13,11 @@
           </div>
     
 
-        <div class="container mx-auto mb-3 p-5">
-            <div class="row">
-                <h2 class=" text-center mb-5">
-                    {{ __('WELCOME TO CHaps-CHat') }}
-                </h2>
+          <div class="container mt-3 p-5 d-flex ">
+            <div class="row align-items-center justify-content-center">
+              <h2 class="text-center mb-5">
+                {{ __('WELCOME TO CHaps-CHat') }}
+              </h2>
 
             <div class="row justify-content-center">
                 

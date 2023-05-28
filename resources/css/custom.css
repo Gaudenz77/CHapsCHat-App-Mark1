@@ -12,6 +12,14 @@ body.dark-mode .some-element {
 
 }*/
 
+.playground {
+  margin-top:18%;
+}
+
+.blogMain{
+  /* margin-top:18%; */
+}
+
 body.dark-mode body {
   /* background-color: mediumspringgreen; */
   
@@ -398,7 +406,7 @@ body.dark-mode .chatbody   {
   min-height: 100%;;
   /* border-radius: 50%; */
   padding:5rem 2rem 1rem 2rem;
-  margin-top:15%;
+  /* margin-top:15%; */
 }
 
 .circleAuth {

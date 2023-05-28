@@ -34,7 +34,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Scripts -->
 
-    {{-- <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script> --}}
+    <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script>
 
     <script src="https://unpkg.com/monaco-editor@0.27.0/min/vs/loader.js"></script>
     <!-- Include jQuery from a CDN or from your own server -->
@@ -74,7 +74,7 @@
 <body class="{{-- d-flex flex-column h-100 bg-gradient --}}">
 <div id="app">
         <header>
-           {{--  @include('layouts.navigation') --}}
+            @include('layouts.navigation')
         </header>
 
     <!-- Begin page content -->

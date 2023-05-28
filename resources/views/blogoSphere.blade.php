@@ -6,8 +6,8 @@
 
 <section class="blogMain">
     <div class="container">
-        <div class="row justify-content-center align-items-start" style="height: 100vh;">
-            <div class="col-sm-3 circleBig bg-info mt-md-5 mt-5 mb-0" id="formContainer2" style="display: none;">
+        <div class="row justify-content-center align-items-start" {{-- style="height: 100vh;" --}}>
+            <div class="col-sm-3 circleBig bg-info {{-- mt-md-5 mt-5 --}} mb-0" id="formContainer2" style="display: none;">
                 <div class="form-wrapper">
                     <h3 class="">Create Blog</h3>
                     <my-blog-form></my-blog-form>
