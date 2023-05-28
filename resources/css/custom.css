@@ -12,8 +12,23 @@ body.dark-mode .some-element {
 
 }*/
 
-.playground {
-  margin-top:18%;
+.playgroundMain {
+  margin-top:10%;
+}
+
+
+.loginMain {
+  margin-top:8rem;
+}
+
+.knowledgeMain {
+  margin-top:7.7rem;
+  
+
+}
+
+.formContainer1 {
+  padding-top:-2rem;
 }
 
 .blogMain{
@@ -141,7 +156,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 40px;
   color:#ebebeb;
   background-color: #181818;
 } 
@@ -199,7 +214,7 @@ a {
   justify-content: center;
 }
 
-.triangle {
+.colTriangle {
   width: 100%;
   height: 100%;
   border-left: 150px solid transparent;
@@ -492,35 +507,33 @@ body.dark-mode .chatbody   {
 
 
 
+.circleKnowledgeForm {
+  position: relative;
+  width: auto; /* Set the desired fixed width */
+  height: 50%; /* Set the desired fixed height */
+  border-radius: 50%;
+  padding: 3rem 2rem 4rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 767px) {
   .circleKnowledgeForm {
-    position: relative;
-    width: auto; /* Set the desired fixed width */
-    height: 50%; /* Set the desired fixed height */
-    border-radius: 50%;
-    padding: 4rem 3rem 3rem 3rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%; /* Change to 100% width for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 2rem; /* Adjust padding as needed for smaller screens */
   }
+}
 
-
-  
-  .form-wrapper {
-    max-width: 100%; /* Ensure the form does not exceed the container size */
-    text-align: center; /* Center the form content horizontally */
-  }
-  
-  
-  /* Media query for responsiveness */
-  @media (max-width: 767px) {
-    .circleKnowledgeForm {
-      width: 100%; /* Change to 100% width for smaller screens */
-      height: auto; /* Allow height to adjust based on content */
-      padding: 2rem; /* Adjust padding as needed for smaller screens */
-    }
-  }
-  
+.form-wrapper {
+  max-width: 100%; /* Ensure the form does not exceed the container size */
+  text-align: center; /* Center the form content horizontally */
+}
 
 .circleKnowledge {
     position: relative;

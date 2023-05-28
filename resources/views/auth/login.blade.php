@@ -2,6 +2,8 @@
 
 @section('title', 'ChapsChat')
 
+@section('body-class', 'loginMain')
+
 @section('content')
 
 <section class="loginMain">

@@ -41,20 +41,32 @@
       <tbody>
         <tr v-for="library in filteredLibraries" :key="library.id">
           <td>{{ library.id }}</td>
-          <td>{{ library.topic }}</td>
-          <td>{{ library.content }}</td>
+          <td>
+            <template v-if="editMode === library.id">
+              <input type="text" v-model="libraryEditTopic" />
+            </template>
+            <template v-else>
+              {{ library.topic }}
+            </template>
+          </td>
+          <td>
+            <template v-if="editMode === library.id">
+              <input type="text" v-model="libraryEditContent" />
+            </template>
+            <template v-else>
+              {{ library.content }}
+            </template>
+          </td>
           <td>{{ formatDate(library.created_at) }}</td>
           <td>
             <div class="textfieldKnowledge">
               <button class="btn text-center" type="button" role="button" @click="deleteLibrary(library.id)">
-              <i class="fa-regular fa-trash-can"></i> Delete
-            </button>
-            <button class="btn text-center" type="button" role="button" @click="editLibrary(library.id)">
-              <i class="fa-regular fa-edit"></i> Edit
-            </button>
-
+                <i class="fa-regular fa-trash-can"></i> Delete
+              </button>
+              <button class="btn text-center" type="button" role="button" @click="toggleEditMode(library.id)">
+                <i class="fa-regular fa-edit"></i> Edit
+              </button>
             </div>
-            
           </td>
         </tr>
       </tbody>
@@ -73,10 +85,13 @@ export default {
     return {
       selectedFilter: 'all',
       selectedDate: moment().format('YYYY-MM-DD'),
-      selectedTopic : '',
+      selectedTopic: '',
       selectedContent: '',
       searchTerm: '',
       libraries: [],
+      editMode: null,
+      libraryEditTopic: '',
+      libraryEditContent: '',
     }
   },  
   mounted() {
@@ -110,15 +125,6 @@ export default {
 
   },
   methods: {
-/*     fetchLibraries() {
-      axios.get('/mylibraries')
-        .then(response => {
-          this.libraries = response.data
-        })
-        .catch(error => {
-          console.log(error)
-        })
-    }, */
     deleteLibrary(id) {
       axios.delete(`/mylibrary/${id}`)
         .then(response => {
@@ -151,11 +157,42 @@ export default {
     },
     formatDate(date) {
       return moment(date).format('  MM/DD/YYYY');
-    }
+    },
+    toggleEditMode(libraryId) {
+      if (this.editMode === libraryId) {
+        this.updateLibrary(libraryId, this.libraryEditTopic, this.libraryEditContent);
+      } else {
+        this.editMode = libraryId;
+        const library = this.getLibraryById(libraryId);
+        if (library) {
+          this.libraryEditTopic = library.topic;
+          this.libraryEditContent = library.content;
+        }
+      }
+    },
+    updateLibrary(libraryId, newTopic, newContent) {
+    axios
+        .put(`/mylibrary/${libraryId}`, {
+          topic: newTopic,
+          content: newContent,
+        })
+        .then(response => {
+          const library = this.getLibraryById(libraryId);
+          if (library) {
+            library.topic = newTopic;
+            library.content = newContent;
+          }
+          this.editMode = null;
+        })
+        .catch(error => {
+          console.log(error.response.data);
+          console.log(error.response.status);
+        });
+    },
+    getLibraryById(libraryId) {
+        return this.libraries.find(library => library.id === libraryId);
+    },
+
   },
 }
 </script>
-
-
-  
-  

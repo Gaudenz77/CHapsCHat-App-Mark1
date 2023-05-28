@@ -71,7 +71,8 @@
   </div> --}}
 
   
-<body class="{{-- d-flex flex-column h-100 bg-gradient --}}">
+<body class="@yield('body-class')">
+  
 <div id="app">
         <header>
             @include('layouts.navigation')

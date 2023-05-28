@@ -5,7 +5,7 @@
 @section('content')
 
 @auth
-<section class="playground">
+<section class="playgroundMain">
   <div class="container">
     <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
       <div class="col-sm-4 card1 circle mt-0 p-4 text-center">

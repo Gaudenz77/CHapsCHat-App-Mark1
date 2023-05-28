@@ -16,7 +16,7 @@
                     <option value="general"> General</option>
                     <option value="resources">Resources</option>
                     <option value="techtalk">Tech Talk</option>
-                    <option data-content="<i class='fa-solid fa-heart' aria-hidden='true'></i>Option3"></option>
+                    <option data-content="<i class='fa-solid fa-heart' aria-hidden='true'></i>">Option3</option>
                 </select>
             </div>
 
@@ -27,7 +27,7 @@
             </div>
             <input type="hidden" name="_token" :value="form.csrfToken">
             
-            <div class="text-center pt-3">
+            <div id="sendLibrary" class="text-center pt-3">
                 <!-- <button type="submit" class="btn btn-circle mt-2 mb-2 p-1">Create Blog</button> -->
                 <button type="submit" class="btn btn-circle mt-2 mb-2 p-1" v-html="editMode ? '<i class=\'fa-regular fa-edit\'></i> Update' : '<i class=\'fa-regular fa-save fa-2xl\'></i><br> Create'"></button>
             </div>
