@@ -6,7 +6,7 @@
 
 @section('content')
 
-<section class="loginMain">
+<section class="">
   <div class="container">
     <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
       <div class="col-md-4 mt-5">

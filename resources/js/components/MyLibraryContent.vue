@@ -35,6 +35,7 @@
           <th scope="col">Topic</th>
           <th scope="col">Content</th>
           <th scope="col">Created At</th>
+          <th scope="col">Updated At</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
@@ -49,15 +50,16 @@
               {{ library.topic }}
             </template>
           </td>
-          <td>
+          <td id="contentKnowledge" style="max-width: 350px;">
             <template v-if="editMode === library.id">
-              <input type="text" v-model="libraryEditContent" />
+              <textarea class="form-controll" type="text" rows="5" v-model="libraryEditContent"></textarea>
             </template>
             <template v-else>
-              {{ library.content }}
+              <div style="word-break: break-word;">{{ library.content }}</div>
             </template>
           </td>
           <td>{{ formatDate(library.created_at) }}</td>
+          <td>{{ formatDate(library.updated_at) }}</td>
           <td>
             <div class="textfieldKnowledge">
               <button class="btn text-center" type="button" role="button" @click="deleteLibrary(library.id)">
@@ -138,23 +140,34 @@ export default {
       console.log('Editing library:', library);
       this.$emit('edit-library', library.id);
     },
-    submitForm() {
-      axios.post('/mylibrary', {
-        topic: this.topic,
-        content: this.content
-      })
-      .then(response => {
-        // Handle successful response
-        console.log(response.data);
-        this.$emit('library-added');
-        this.topic = '';
-        this.content = '';
-      })
-      .catch(error => {
-        // Handle error
-        console.log(error.response.data);
-      });
-    },
+  submitForm() {
+    if (this.editMode) {
+      // Update existing library entry
+      axios.put(`/mylibrary/${this.library.id}`, this.form)
+        .then(response => {
+          console.log(response.data);
+          this.resetForm();
+          this.$emit('library-updated'); // Emit custom event for library update
+        })
+        .catch(error => {
+          // ...error handling...
+          console.log(error.response.data);
+
+        });
+    } else {
+      // Create new library entry
+      axios.post('/mylibrary', this.form)
+        .then(response => {
+          console.log(response.data);
+          this.resetForm();
+          this.$emit('library-created'); // Emit custom event for library creation
+        })
+        .catch(error => {
+          // ...error handling...
+          console.log(error.response.data);
+        });
+    }
+  },
     formatDate(date) {
       return moment(date).format('  MM/DD/YYYY');
     },

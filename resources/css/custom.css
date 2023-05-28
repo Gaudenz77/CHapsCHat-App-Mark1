@@ -22,10 +22,20 @@ body.dark-mode .some-element {
 }
 
 .knowledgeMain {
-  margin-top:7.7rem;
-  
-
+  margin-top:8rem;
+  margin-bottom:8rem;
 }
+
+.knowledgeTable {
+  /* margin-top: -23rem !important; */
+ /*  margin-top:-22rem;
+  margin-bottom:-22rem;
+ */
+}
+
+/* #contentKnowledge {
+  width:150px;
+} */
 
 .formContainer1 {
   padding-top:-2rem;

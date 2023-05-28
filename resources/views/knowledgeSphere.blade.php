@@ -5,11 +5,12 @@
 @section('body-class', 'knowledgeMain')
 
 @section('content')
-<section class="knowledgeMain">
-<div class="container mt-3">
-    <div class="row justify-content-center align-items-center" style="height: 100vh;">
 
-      <div class="col-sm-7 bg-danger order-2">
+<section class="">
+<div class="container mt-3">
+    <div class="row justify-content-center align-items-center" style="">
+
+      <div class="col-sm-8 bg-danger order-2" style="width:100%;">
         <my-library-content></my-library-content>
       </div>
 
@@ -19,12 +20,6 @@
           <my-library-form></my-library-form>
         </div>
       </div>
-
-
-    </div>
-    
-    <div class="row justify-content-center">
-
     </div>
 </div>
 </section>

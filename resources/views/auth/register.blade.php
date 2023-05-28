@@ -2,9 +2,11 @@
 
 @section('title', 'ChapsChat')
 
+@section('body-class', 'loginMain')
+
 @section('content')
 
-<section class="registerMain">
+<section class="">
     <div class="content">
         <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
             <div class="col-md-4 mt-3">

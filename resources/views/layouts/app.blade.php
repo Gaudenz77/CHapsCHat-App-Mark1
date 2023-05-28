@@ -2,10 +2,13 @@
 
 @section('title', 'ChapsChat')
 
+{{-- @section('body-class', 'loginMain') --}}
+
 @section('content')
 
 
-<body class="font-sans antialiased">
+<body class="{{-- @yield('body-class') --}}">
+
     <header>
         @include('layouts.navigation')
 
