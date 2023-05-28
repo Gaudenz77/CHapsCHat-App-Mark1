@@ -62,8 +62,9 @@ export default {
         .then(response => {
           console.log(response.data);
           this.resetForm();
-          this.$emit('edit-library');
-        })
+            this.$emit('create-library');
+            window.location.reload(); // Reload the page
+          })
         .catch(error => {
           if (error.response && error.response.data) {
             console.log(error.response.data);
