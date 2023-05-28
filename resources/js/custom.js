@@ -169,3 +169,23 @@ if (isDarkMode) {
   }
   }); */
 
+/**
+ * @footer
+ * 
+ * collapse the icon
+ * 
+ */
+/*---------------------------------------------------------------- FOOTER */
+/* $(document).ready(function() {
+  var footer = $('.footer');
+  var windowHeight = $(window).height();
+  var documentHeight = $(document).height();
+  
+  $(window).scroll(function() {
+    if ($(window).scrollTop() + windowHeight == documentHeight) {
+      footer.addClass('visible');
+    } else {
+      footer.removeClass('visible');
+    }
+  });
+}); */

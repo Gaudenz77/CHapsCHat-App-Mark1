@@ -862,14 +862,25 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
 /* TOGGLE Variants Stop================================================================= */
 
 /*  footer */
-.footer {
+/* .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   height: 10%;
   width: 100%;
   margin-top: -10%;
+} */
+
+
+#footer {
+  transition: transform 0.3s;
 }
+
+.footer-hidden {
+  transform: translateY(100%);
+}
+
+
 
 /* FONTAWESOME ICONS START ------------------------------------------------------- */
 

@@ -87,11 +87,23 @@
     </main>
 
 
-    <footer class="footer mt-5 py-3 bg-footer-gradient sticky-footer">
-        <div class="container-fluid text-center">
-            <span class="span1"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}" class="nav-item myNavToggle">Dare To Meet Me?</a></b></span>
-        </div>
-    </footer>
+{{-- <footer class="footer mt-5 py-3 bg-footer-gradient sticky-footer">
+  <div class="container-fluid text-center">
+    <span class="span1"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}" class="nav-item myNavToggle">Dare To Meet Me?</a></b></span>
+  </div>
+</footer> --}}
+
+<footer class="footer mt-5 py-3 bg-footer-gradient" id="footer">
+  <div class="container-fluid text-center">
+    <button id="footerButton" class="btn btn-primary">Who needs a footer</button>
+    <span class="span1"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}" class="nav-item myNavToggle">Dare To Meet Me?</a></b></span>
+  </div>
+</footer>
+
+
+
+
+
 </div>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     
@@ -101,6 +113,26 @@
       $('[data-bs-toggle="tooltip"]').tooltip();
     });
 
+
+
+    var footer = document.getElementById("footer");
+    var footerButton = document.getElementById("footerButton");
+    var isFooterVisible = false;
+
+    footerButton.addEventListener("click", function() {
+      if (isFooterVisible) {
+        footer.classList.add("footer-hidden");
+        isFooterVisible = false;
+      } else {
+        footer.classList.remove("footer-hidden");
+        isFooterVisible = true;
+      }
+    });
+
+
+
+
+    
 
 </script>
 
