@@ -55,6 +55,7 @@ const icon = document.getElementById('icon');
 // Set the initial position and velocity of the icon
 let posX = Math.floor(Math.random() * window.innerWidth);
 let posY = Math.floor(Math.random() * window.innerHeight);
+// Set velocity of target icon
 let velocityX = 0;
 let velocityY = 0;
 icon.style.position = 'fixed';
@@ -176,16 +177,5 @@ if (isDarkMode) {
  * 
  */
 /*---------------------------------------------------------------- FOOTER */
-/* $(document).ready(function() {
-  var footer = $('.footer');
-  var windowHeight = $(window).height();
-  var documentHeight = $(document).height();
-  
-  $(window).scroll(function() {
-    if ($(window).scrollTop() + windowHeight == documentHeight) {
-      footer.addClass('visible');
-    } else {
-      footer.removeClass('visible');
-    }
-  });
-}); */
+
+

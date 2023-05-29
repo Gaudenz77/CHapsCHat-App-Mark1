@@ -10,23 +10,24 @@
 
     <!-- Hier wird der Wert von der Konstanten APP_NAME aus .env eingetragen, falls vorhanden. Andernfalls wird der Default-String "Laravel" verwendet -->
     <title>{{ config('app.name', 'ChapsChat') }}</title>
+
     <!---------------------------------------------------------------- Fontawesome link -->
     <script src="https://kit.fontawesome.com/d4cbcb96c8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!---------------------------------------------------------------- Animate Css link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  
-    <!-- Styles -->
 
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
     <!-- AOS -->
+    <!-- MARKDOWN LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     
     <!-- Animate.css -->
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> --}}
-    <!---------------------------------------------------------------- Google Fonts link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!---------------------------------------------------------------- Google Fonts IN CUSTOM.CSS -->
     
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/custom.js', 'resources/css/areset.css', 'resources/css/custom.css'])
     {{-- 'resources/css/app.css', --}}
@@ -51,24 +52,6 @@
     </style>
     
 </head>
-{{-- <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          </paint-app>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save Changes</button>
-        </div>
-      </div>
-    </div>
-  </div> --}}
 
   
 {{-- <body class="d-flex flex-column h-100 bg-gradient"> --}}
@@ -86,25 +69,10 @@
         </div>
     </main>
 
-
-{{-- <footer class="footer mt-5 py-3 bg-footer-gradient sticky-footer">
-  <div class="container-fluid text-center">
-    <span class="span1"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}" class="nav-item myNavToggle">Dare To Meet Me?</a></b></span>
-  </div>
-</footer> --}}
-
-
-
-{{-- <footer class="footer mt-5 py-3 bg-footer-gradient">
-  <div class="container-fluid text-center">
-    <button id="footerButton" class="btn btn-primary">Who needs a footer</button>
-    <span class="span1"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}" class="nav-item myNavToggle">Dare To Meet Me?</a></b></span>
-  </div>
-</footer> --}}
 <footer class="footer mt-5 py-3 bg-footer-gradient">
   <div class="container-fluid text-center">
-    <button id="footerButton" class="btn btn-primary">Who needs a footer</button>
-    <span id="footerContent" class="span1"><b>Copyright &copy;: {{date('d.m.Y')}} - <a href="{{ url('/about') }}" class="nav-item myNavToggle">Dare To Meet Me?</a></b></span>
+    <button id="footerButton" class="btn btn-circleOwn btn-danger"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
+    <span id="footerContent" class="span1"><b>Copyright &copy;: {{date('d/m/Y')}} - <a href="{{ url('/about') }}" class="nav-item myNavToggle">Dare To Meet Me?</a></b></span>
   </div>
 </footer>
 
@@ -115,35 +83,41 @@
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     
 <script>
-  
+  /* ENABLE TOOLTIP */
     $(function(){
       $('[data-bs-toggle="tooltip"]').tooltip();
     });
 
-
-
+/* FOOTER EASTEREGG */
     document.addEventListener("DOMContentLoaded", function() {
-  var footerContent = document.getElementById("footerContent");
-  var footerButton = document.getElementById("footerButton");
-  var isContentVisible = false;
+    var footerContent = document.getElementById("footerContent");
+    var footerButton = document.getElementById("footerButton");
+    var isContentVisible = false;
 
-  footerButton.addEventListener("click", function() {
-    if (isContentVisible) {
-      footerContent.style.display = "none";
-      isContentVisible = false;
-      footerButton.textContent = "Who needs a footer";
-    } else {
-      footerContent.style.display = "block";
-      isContentVisible = true;
-      footerButton.textContent = "Go away";
-    }
-  });
-});
-
-
+    footerButton.addEventListener("click", function() {
+        if (isContentVisible) {
+          footerContent.style.display = "none";
+          isContentVisible = false;
+          footerButton.innerHTML = '<span class="material-symbols-outlined">barefoot</span><br><p style="font-size:60%;color:#ffc107;"">Who needs a footer</p>';
+        } else {
+          footerContent.style.display = "block";
+          isContentVisible = true;
+          footerButton.innerHTML = '<span class="material-symbols-outlined">barefoot</span><br><p style="font-size:80%;color:#ffc107;"">Go away</p>';
+        }
+      });
+    });
 
 
-    
+    // Get the container element
+const outputContainer = document.getElementById('outputContainer');
+
+// Set the markdown content
+const markdownContent = "This is a **bold** sentence.\n\n```javascript\nconsole.log('Hello, world!');\n```";
+
+// Render the markdown content using Marked.js
+outputContainer.innerHTML = marked(markdownContent);
+
+
 
 </script>
 
@@ -156,8 +130,8 @@
   
   @vite(['resources/js/app.js', 'resources/js/custom.js'])
   <!-- AOS -->  
- {{--  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
+  {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
+  {{-- <script>
     AOS.init();
   </script> --}}
 </body>

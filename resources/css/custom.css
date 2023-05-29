@@ -1,9 +1,4 @@
-body {
-    margin-top:10%;
-    /* margin-bottom:8vh; */
-    font-family: 'Poppins', sans-serif;
-    color:#ebebeb
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Elite&display=swap');
 
 /* In any other CSS files 
 body.dark-mode .some-element {
@@ -11,15 +6,37 @@ body.dark-mode .some-element {
 // Styles for elements that need to be updated for dark mode 
 
 }*/
+/*-------------------------------------------BODY MAIN DEFINITION */ 
 
-.playgroundMain {
+body {
   margin-top:10%;
+  /* margin-bottom:8vh; */
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'IBM Plex Mono', monospace; */
+  font-family: 'Lexend', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Special Elite', cursive; */
 }
 
+/*-------------------------------------------GOOGLE MATERIAL ICONS */ 
+.material-symbols-outlined {
+  font-size: 5rem;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48,
+  
+}
 
-.loginMain {
+/* .playgroundMain {
+  margin-top:21.8vh;
+} */
+
+
+/* .loginMain {
   margin-top:8rem;
-}
+} */
 
 .knowledgeMain {
   margin-top:8rem;
@@ -73,6 +90,13 @@ h1, h2, h3, h4, h5, h6, p, a   {
 
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode a {
   color:#ebebeb;
+    /* margin-bottom:8vh; */
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'IBM Plex Mono', monospace; */
+    font-family: 'Lexend', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Special Elite', cursive; */
+
  }
 
 /* LOGIN_REGISTER-FORM-CONTROL START FORM GENERAL----------------------------------------------------------------*/
@@ -148,6 +172,62 @@ body.dark-mode .form-control:focus:active{
 
 /* FORM-CONTROL STOP----------------------------------------------------------------*/
 
+/* TYPEWRITER CSS ---------------------------------------------------------------*/
+
+/* .blockquoteOwn {
+  font-family: 'Special Elite', cursive;
+  color:#181818; 
+}
+
+body.dark-mode .blockquoteOwn {
+  font-family: 'Special Elite', cursive;
+  color:#ebebeb;  
+} */
+
+.type  {
+  font-family: 'IBM Plex Mono', cursive;
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#181818 5px,#0000 0) 10px 0,
+    linear-gradient(#181818 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+    b .7s infinite steps(1),   
+    t calc(var(--n)*.3s) steps(var(--n)) forwards;
+}
+body.dark-mode .type {
+  font-family: 'IBM Plex Mono', cursive;
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#ebebeb 5px,#0000 0) 10px 0,
+    linear-gradient(#ebebeb 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+    b .7s infinite steps(1),   
+    t calc(var(--n)*.3s) steps(var(--n)) forwards;
+}
+
+
+
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}
+
+.show {
+  display: block !important;
+}
+
+
+/* FOOTER LINK ----------------------------------*/
 .span1 {
   color:#333;
 }
@@ -263,7 +343,7 @@ a.myNavUnderline:before {
   bottom: -2px;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 5px;
   background-color: #ebebeb;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
@@ -331,6 +411,9 @@ a.myNavToggleTitle.active:before {
 
 /* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION END */
 
+/* ---------------------------------------------------------------- MEDIAQUERIES */
+
+
 /* Styles for small devices */
 @media (max-width: 575.98px) {
   .dropdown-menu {
@@ -338,14 +421,49 @@ a.myNavToggleTitle.active:before {
     margin-right: 10px;
     padding-left: 10px;
     width: 60%;
-    background-color: #091540
+    background-color: #091540;
+    height:15%;
   }
+  .navbar {
+    height: 15rem;
+  }
+  .playgroundMain {
+    margin-top:15rem;
+  }
+  .loginMain {
+    margin-top:14rem;
+    margin-bottom:10rem;
+  }
+  .welcomeMain {
+    margin-top:10rem;
+  }
+  .colTriangle {
+    margin-left:0%;
+  }
+  .offcanvas-body {
+    margin-top:8rem;
+  }
+  .logoImg {
+    width:75%;
+    padding-left:1rem;
+    position:relative;
+    left:0;
+    justify-content:center;
+  }
+
+/*   .a.myNavUnderline {
+    height:2px;
+  } */
+
+
 }
 
 @media (max-width: 575.98px) {
   body.dark-mode .dropdown-menu {
       background-color: #ebebeb;
+      height:15%;
     }
+
   }
 
 /* Styles for medium and large devices */
@@ -357,12 +475,36 @@ a.myNavToggleTitle.active:before {
     width: 20%;
     background-color: #091540;
   }
+  .navbar {
+    height: 15%;
+  }
+  .playgroundMain {
+    margin-top:21.8vh;
+  }
+  .loginMain {
+    margin-top:14rem;
+  }
+
+  .logoImg {
+    width:15%;
+
+  }
+
+  .logoFont {
+    font-size:4rem;
+    margin-top:1rem;
+
+  }
+/*   .a.myNavUnderline {
+    height:5px;
+  } */
 }
 
 @media (min-width: 576px) {
 body.dark-mode .dropdown-menu {
     background-color: #ebebeb;
   }
+
 }
 
 .nav-link {
@@ -626,6 +768,8 @@ body.dark-mode .card1{
 
 /* ---------------------------------------------------------------- EDITOR MONACO END */
 
+/*----------------------------------------------------------------VARIOUS BUTTONS */
+
 .btn-circle {
     width: 5rem;
     height: 5rem;
@@ -659,6 +803,35 @@ body.dark-mode .btn-own {
 
   color:white;
   /* color:white; */
+}
+
+.btn-circleOwn {
+  width: 9rem;
+  height: 9rem;
+  font-size: 90%;
+  font-weight:bold;
+  color:#ffc107;
+  background-color:#f25151;
+  padding: 8px 8px;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 15px; 
+  box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
+}
+
+body.dark-mode .btn-circleOwn {
+/*   width: 8rem;
+  height: 8rem;
+  font-size: 90%;
+  font-weight:bold; */
+  color:#ffc107;
+  background-color:#0d6efd;
+
+  /* padding: 8px 8px;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 15px; 
+  box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
 }
 
 #closeButton {
@@ -873,7 +1046,7 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
 
 #footerButton {
   position: fixed;
-  bottom: 20px;
+  bottom: -8px;
   right: 20px;
   z-index: 9999;
 }

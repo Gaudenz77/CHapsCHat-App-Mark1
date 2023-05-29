@@ -29,6 +29,7 @@
     </main>
         
     <!-- toggle mode script start -->
+    
     @include('components.darkmodeToggle')
     
     @vite(['resources/js/app.js', 'resources/js/custom.js'])

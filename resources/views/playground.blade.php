@@ -2,10 +2,12 @@
 
 @section('title', 'ChapsChat')
 
+@section('body-class', 'playgroundMain')
+
 @section('content')
 
 @auth
-<section class="playgroundMain">
+<section class="">
   <div class="container">
     <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
       <div class="col-sm-4 card1 circle mt-0 p-4 text-center">

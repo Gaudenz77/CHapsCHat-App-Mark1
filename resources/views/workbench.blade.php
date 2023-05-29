@@ -55,6 +55,7 @@
 <i class="fa-solid fa-paper-plane"></i>
 <i class="fa-solid fa-book-bookmark"></i>
 <i class="fa-regular fa-book-bookmark"></i>
+<i class="fa-solid fa-socks"></i>
 
 welcome @php
     
