@@ -9,6 +9,7 @@
 @auth
 <section class="">
   <div class="container">
+    
     <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
       <div class="col-sm-4 card1 circle mt-0 p-4 text-center">
         <div class="logiInfo mt-2 p-1">
@@ -26,13 +27,18 @@
           <chat-messages :messages="messages"></chat-messages>
         </div>
       </div>
+    </div>
 
-      <div class="col-sm-4 card1 p-3" style="padding-left:0rem; padding-right:0rem;">
+    
+    <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
+      
+
+      <div class="col-sm-6 card1 p-3" style="padding-left:0rem; padding-right:0rem;">
         <h2 class="editorTitle mx-2 my-2">Editor:</h2>
         <div id="editor"></div>
       </div>
 
-      <div class="col-sm-4 card1 p-3">
+      <div class="col-sm-6 card1 p-3">
         <h2 class="editorTitle mx-2 my-2">Preview:</h2>
         <iframe id="preview" style="width:100%"></iframe>
       </div>
