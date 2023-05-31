@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-md fixed-top container-fluid">
-    <img src="./assets/img/Group 26.svg" alt="logo_image" class="logoImg img-fluid mt-3 mx-5">
-    <h1 class="logoFont mb-3"><a class="brand myNavUnderline mt-0 mx-5" href="{{ url('/') }}">{{ config('app.name', 'CHapsCHat') }}</a></h1>
+    <img src="./assets/img/Group 26.svg" alt="logo_image" class="logoImg img-fluid mt-3 mx-0">
+    <h1 class=" logoFont"><a class="brand myNavUnderline mt-0 mx-2" href="{{ url('/') }}">{{ config('app.name', 'CHapsCHat') }}</a></h1>
     {{-- @include('components.toggle') --}}
-          <button class="navbar-toggler me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <button class="navbar-toggler custom-toggler {{-- me-3 --}} mb-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">

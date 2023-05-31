@@ -2,7 +2,7 @@
 
 @section('title', 'ChapsChat')
 
-@section('body-class', 'loginMain')
+@section('body-class', 'registerMain')
 
 @section('content')
 
@@ -13,8 +13,8 @@
 
 <!-- QUOTE TYPEWRITER REGISTER -->
 
-            <div class="col-sm-6 p-3">
-                <button id="playButtonReg">Play Audio</button>
+            <div class="col-sm-4 mt-3 p-3">
+                <button class="btn btn-own" id="playButtonReg"><span class="material-symbols-outlined">play_circle</span>Play Audio</button>
                 <div class="typewriter-wrapper" id="colElementReg" style="display: none;">
                   <blockquote class="blockquote-fluid mb-0 p-4" {{-- style="width:fit-content;" --}}>
                       <span id="" class="type" style="--n:742">"In general, we look for a new law by the following process. First, we guess it (audience laughter), no, don't laugh, that's really true. Then we compute the consequences of the guess to see what, if this is right, if this law that we guessed is right, to see what it would imply and then we compare the computation results to nature or we say, compare to experiment or experience, compare it directly with observations to see if it works. If it disagrees with experiment, it's wrong. In that simple statement is the key to science. It doesn't make any difference how beautiful your guess is, it doesn't matter how smart you are who made the guess, or what his name is… If it disagrees with experiment, it's wrong. That's all there is to it."</span>
@@ -94,20 +94,35 @@
     <source src="./assets/audio/typewriter-1.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-
-<script>
+  
+  <script>
     document.addEventListener("DOMContentLoaded", function() {
       var audio = document.getElementById("myAudioReg");
       var playButton = document.getElementById("playButtonReg");
       var colElement = document.getElementById("colElementReg");
-    
+      var playCountPercentage = 50; // Play count as a percentage
+      var playCount = audio.duration * (playCountPercentage / 100); // Calculate play count based on audio duration
+      var currentPlayCount = 0; // Counter for tracking play count
+      
       // Play audio and show the colElement when the button is clicked
       playButton.addEventListener("click", function() {
-        audio.play();
-        colElement.classList.add("show");
+        if (currentPlayCount < playCount) {
+          audio.play();
+          currentPlayCount++;
+          colElement.classList.add("show");
+        }
+      });
+      
+      // Event listener to reset the play count when the audio ends
+      audio.addEventListener('ended', function() {
+        if (currentPlayCount >= playCount) {
+          currentPlayCount = 0; // Reset the play count
+        }
       });
     });
-    
-</script>
+  </script>
+  
+  
+  
 
 @endsection

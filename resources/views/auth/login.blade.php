@@ -64,8 +64,9 @@
 
 <!-- QUOTE TYPEWRITER LOGIN -->
 
+
       <div  class="col-sm-6 p-3">
-        <button id="playButton">Play Audio</button>
+        <button class="btn btn-own" id="playButton"><span class="material-symbols-outlined">play_circle</span>Play Audio</button>
         <div class="typewriter-wrapper" id="colElement" style="display: none;">
           <blockquote class="blockquote-fluid mb-0 p-4">
             <span id="contentSpan" class="type" style="--n:590">"Playing, testing, and trying are not mere frivolous endeavors, but essential elements that unlock the true potential of humanity. Through play, we discover the limits of our imagination and creativity, paving the way for innovation. Testing allows us to push boundaries, uncover flaws, and refine our ideas, ensuring progress and growth. Trying, with its inherent risk and uncertainty, is the catalyst for personal development and the gateway to remarkable achievements. Embrace these pursuits, for they hold the power to transform the world and unveil the extraordinary within ourselves."</span>
@@ -73,32 +74,44 @@
           </blockquote>
         </div>
       </div>
-      
-
     </div>
   </div>
 
 
 </section>
 
-<audio id="myAudioLog">
+<audio id="myAudioReg">
   <source src="./assets/audio/typewriter-1.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-var audio = document.getElementById("myAudioLog");
-var playButton = document.getElementById("playButton");
-var colElement = document.getElementById("colElement");
-
-// Play audio and show the colElement when the button is clicked
-playButton.addEventListener("click", function() {
-  audio.play();
-  colElement.classList.add("show");
-});
-});
-
+  document.addEventListener("DOMContentLoaded", function() {
+    var audio = document.getElementById("myAudioReg");
+    var playButton = document.getElementById("playButtonReg");
+    var colElement = document.getElementById("colElementReg");
+    var playCountPercentage = 50; // Play count as a percentage
+    var playCount = audio.duration * (playCountPercentage / 100); // Calculate play count based on audio duration
+    var currentPlayCount = 0; // Counter for tracking play count
+    
+    // Play audio and show the colElement when the button is clicked
+    playButton.addEventListener("click", function() {
+      if (currentPlayCount < playCount) {
+        audio.play();
+        currentPlayCount++;
+        colElement.classList.add("show");
+      }
+    });
+    
+    // Event listener to reset the play count when the audio ends
+    audio.addEventListener('ended', function() {
+      if (currentPlayCount >= playCount) {
+        currentPlayCount = 0; // Reset the play count
+      }
+    });
+  });
 </script>
+
 
   
 @endsection
