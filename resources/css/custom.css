@@ -185,32 +185,28 @@ body.dark-mode .blockquoteOwn {
 } */
 
 .type  {
+
   font-family: 'IBM Plex Mono', cursive;
-  color:#0000;
-  background:
-    linear-gradient(-90deg,#181818 5px,#0000 0) 10px 0,
+  color: #0000;
+  background: linear-gradient(-90deg, #181818 5px, #0000 0) 10px 0,
     linear-gradient(#181818 0 0) 0 0;
-  background-size:calc(var(--n)*1ch) 200%;
-  -webkit-background-clip:padding-box,text;
-  background-clip:padding-box,text;
-  background-repeat:no-repeat;
-  animation: 
-    b .7s infinite steps(1),   
-    t calc(var(--n)*.3s) steps(var(--n)) forwards;
+  background-size: calc(var(--n) * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation: b .7s infinite steps(1), t calc(var(--n) * .2s) steps(var(--n)) forwards;
 }
 body.dark-mode .type {
   font-family: 'IBM Plex Mono', cursive;
   color:#0000;
   background:
-    linear-gradient(-90deg,#ebebeb 5px,#0000 0) 10px 0,
-    linear-gradient(#ebebeb 0 0) 0 0;
-  background-size:calc(var(--n)*1ch) 200%;
-  -webkit-background-clip:padding-box,text;
-  background-clip:padding-box,text;
-  background-repeat:no-repeat;
-  animation: 
-    b .7s infinite steps(1),   
-    t calc(var(--n)*.3s) steps(var(--n)) forwards;
+  linear-gradient(-90deg,#ebebeb 5px,#0000 0) 10px 0,
+  linear-gradient(#ebebeb 0 0) 0 0;
+  background-size: calc(var(--n) * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation: b .7s infinite steps(1), t calc(var(--n) * .2s) steps(var(--n)) forwards;
 }
 
 
