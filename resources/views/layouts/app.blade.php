@@ -16,7 +16,7 @@
     
     @include('components.darkmodeToggle')
     
-    @vite(['resources/js/app.js', 'resources/js/custom.js'])
+    {{-- @vite(['resources/js/app.js', 'resources/js/custom.js']) --}}
     </body>
 </html>
 @endsection

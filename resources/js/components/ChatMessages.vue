@@ -1,29 +1,21 @@
 <template>
-
     <figure class="left clearfix" v-for="message in messages" :key="message.id">
       <div class="clearfix">
         <div class="header">
-          <figcaption class="blockquote-footer">
-            {{ message.user.name }}
-          </figcaption>
-        </div>
-        <blockquote class="blockquote">
+          <blockquote class="blockquote">
           {{ message.message }}
         </blockquote>
+        </div>
+        <figcaption class="blockquote-footer">
+            {{ message.user.name }}
+          </figcaption>
       </div>
-
   </figure>
 </template>
 
 
 <script>
 import Echo from 'laravel-echo';
-
-/* import Pusher from 'pusher-js'; */
-
-/* Pusher.logToConsole = true; */
-
-/* window.Pusher = Pusher; */
 
 export default{
   data() {
