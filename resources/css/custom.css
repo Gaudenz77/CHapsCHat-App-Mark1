@@ -101,6 +101,14 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
 
 .loginLabel {
   color:#ebebeb;
+
+}
+
+.labelAuth {
+  background-color:yellow;
+}
+body.dark-mode .labelAuth {
+  background-color:blue;
 }
 
 body.dark-mode .loginLabel {
@@ -416,7 +424,7 @@ a.myNavToggleTitle.active:before {
     background-color:#091540;
   }
   .playgroundMain {
-    margin-top:10rem;
+    margin-top:12rem;
   }
 
   .circleBlog {
@@ -433,7 +441,7 @@ a.myNavToggleTitle.active:before {
   }
 
   .registerMain {
-    margin-top:8%;
+    margin-top:18vh;
     margin-bottom:-50%;
   }
 
@@ -442,7 +450,7 @@ a.myNavToggleTitle.active:before {
   }
 
   .knowledgeMain {
-    margin-top:10rem;
+    margin-top:12rem;
     margin-bottom:8rem;
   }
 

@@ -9,7 +9,7 @@
 <section class="">
   <div class="container">
     <div class="row justify-content-evenly align-items-center" {{-- style="height: 100vh;" --}}>
-      <div class="col-md-4 mt-1">
+      <div class="col-md-5 mt-1">
         <div class="card circleAuth cardLogin">
           <div class="card-body">
             <!-- Session Status -->
@@ -25,7 +25,7 @@
               <!-- Email Address -->
               <label class="form-label loginLabel" for="email">{{ __('Email') }}</label>
               <div class="input-group mb-3">
-                <span class="input-group-text login" for="email"><i class="fa-solid fa-solid fa-at iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your e-mail address">{{ __('') }}</i></span>
+                <span class="input-group-text login labelAuth" for="email"><i class="fa-solid fa-solid fa-at iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your e-mail address">{{ __('') }}</i></span>
                 <input id="email" class="form-control login" title="Enter your e-mail address" type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete="username">
                 @error('email')
                   <div class="text-danger mt-2">{{ $message }}</div>
@@ -35,7 +35,7 @@
               <!-- Password -->
               <label class="form-label loginLabel" for="password">{{ __('Password') }}</label>
               <div class="input-group mb-3">  
-                <span class="input-group-text login" for="email"><i class="fa-solid fa-key iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your password">{{ __('') }}</i></span>
+                <span class="input-group-text login labelAuth" for="email"><i class="fa-solid fa-key iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your password">{{ __('') }}</i></span>
                 <input id="password" class="form-control login" title="Enter your password" type="password" name="password" required autocomplete="current-password">
                 @error('password')
                   <div class="text-danger mt-2">{{ $message }}</div>
@@ -53,7 +53,9 @@
                 @if (Route::has('password.request'))
                   <a class="loginLabel text-decoration-none mb-3" href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
                 @endif
-                <button type="submit" class="btn btn-circle ml-md-4">{{ __('Log in') }}</button>
+                <button type="submit" class="btn {{-- btn-circle --}} ml-md-4"><span class="material-symbols-outlined">
+                  login
+                  </span>{{-- {{ __('Log in') }} --}}</button>
               </div>
               
             </form>
