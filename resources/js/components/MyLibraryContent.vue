@@ -1,9 +1,4 @@
 <template>
-  <div>
-    <h2>My Library</h2>
-
-    
-    
     <div class="filters">
       <div>
         <button class="btn btn-own" type="button" role="button" id="createButton"><i class="fa-solid fa-circle-plus fa-2xl"></i> Create</button>
@@ -73,7 +68,6 @@
         </tr>
       </tbody>
     </table>
-  </div>
 </template>
 
 

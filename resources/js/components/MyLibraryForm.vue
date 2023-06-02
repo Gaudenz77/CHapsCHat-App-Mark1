@@ -1,7 +1,7 @@
 <template>
   <div>
     <form @submit.prevent="submitForm">
-      <label class="form-label formOwnOne">Email</label>
+      <label class="form-label formOwnOne">Topic</label>
       <div class="input-group mb-3">
         <span class="input-group-text formOwnOne" id="basic-addon1"><i class="fa-solid fa-palette formIcons" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Select a topic"></i></span>
         <input type="text" class="form-control formOwnOne" placeholder="Topic" aria-describedby="basic-addon1" name="topic" id="topic" v-model="form.topic" required>

@@ -38,10 +38,7 @@ body {
   margin-top:8rem;
 } */
 
-.knowledgeMain {
-  margin-top:8rem;
-  margin-bottom:8rem;
-}
+
 
 .knowledgeTable {
   /* margin-top: -23rem !important; */
@@ -415,7 +412,7 @@ a.myNavToggleTitle.active:before {
     height:15%;
   }
   .navbar {
-    height: 10rem;
+    height: 12rem;
     background-color:#091540;
   }
   .playgroundMain {
@@ -443,6 +440,13 @@ a.myNavToggleTitle.active:before {
   .welcomeMain {
     margin-top:10rem;
   }
+
+  .knowledgeMain {
+    margin-top:10rem;
+    margin-bottom:8rem;
+  }
+
+
   .colTriangle {
     margin-left:0%;
   }
@@ -473,12 +477,27 @@ a.myNavToggleTitle.active:before {
    .navbar-toggler {   
     /* font-size:20px; */
     margin-left:1rem;
+    margin-right: 2rem; 
   }
 
   .navbar-toggler-icon {   
     /* font-size:20px; */
-   
+      
   }
+
+/* TOGGLE SM */
+  .ht-ui-check {
+    width: 21.5vw;
+    height: 10vw;
+    cursor: pointer;
+    border-radius: 10vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transform: scale(0.80);
+  }
+
+  
 }
 
 
@@ -497,6 +516,11 @@ a.myNavToggleTitle.active:before {
   }
   .playgroundMain {
     margin-top:21.8vh;
+  }
+
+  .knowledgeMain {
+    margin-top:9rem;
+    margin-bottom:8rem;
   }
 
   .circleBlog {
@@ -535,6 +559,18 @@ margin-left:10% !important;
     font-size:20px;
 }
 
+/* TOGGLE LG */
+
+.ht-ui-check {
+  width: 21.5vw;
+  height: 3.75vw;
+  cursor: pointer;
+  border-radius: 10vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transform: scale(0.25);
+}
 
 }
 
@@ -712,8 +748,8 @@ body.dark-mode .chatbody   {
 }
 
 .form-wrapper {
-  max-width: 100%; /* Ensure the form does not exceed the container size */
-  text-align: center; /* Center the form content horizontally */
+  max-width: 100%; 
+  text-align: center; 
 }
 
 .circleKnowledge {
@@ -872,7 +908,7 @@ body.dark-mode .btn-circleOwn {
 color:blue;
 
 }
-/* TOGGLE Variants Start================================================================= */
+/* TOGGLE Start================================================================= */
 /* body {
 display: flex;
 align-items: center;
@@ -894,34 +930,14 @@ left:-30px;
   overflow: hidden;
   position:relative;
   left:0;
-  width: 80%;
 } 
+
 
 .toggle {
   position:relative;
   width:230px;
   margin-left: -4rem;
 }
-/* ORIGINAL START CHECKBOX */   
-/* input[type=checkbox] {
-  position: absolute;
-  left: -200vw;
-  visibility: hidden;
-}
-input[type=checkbox]:checked + .ht-ui-check:before { */
-  /* background: #f5d8dd; */
-/* }
-input[type=checkbox]:checked + .ht-ui-check .track { */
-  /* background: linear-gradient(135deg, #e66465 0%, #9198e5 80%); */
-/*   background:#0000ff;
-}
-input[type=checkbox]:checked + .ht-ui-check .handle {
-  transform: translateX(10.55vw);
-}
-input[type=checkbox]:checked + .ht-ui-check .handle .faces {
-  transform: translateX(-16.5vw);
-} */
-/* ORIGINAL STOP CHECKBOX */   
 
 .custom-checkbox[type=checkbox] {
   position: relative;
@@ -929,13 +945,7 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   visibility: hidden;
 }
 
-.custom-checkbox[type=checkbox]:checked + .ht-ui-check:before {
-  /* background: #f5d8dd; */
-}
-
-
 .custom-checkbox[type=checkbox]:checked + .ht-ui-check .track {
-  /* background: linear-gradient(135deg, #e66465 0%, #9198e5 80%); */
   background:#ff0000;
 }
 
@@ -947,16 +957,7 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   transform: translateX(-16.5vw);
 }
  
-.ht-ui-check {
-  width: 21.5vw;
-  height: 3.75vw;
-  cursor: pointer;
-  border-radius: 10vw;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  transform: scale(0.25);
-}
+
 
 .ht-ui-check:before {
   content: "";
@@ -966,7 +967,6 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   width: 100%;
   height: 100%;
   z-index: -1;
-  /* background: #eee; */
   transition: 0.3s ease-out all;
 }
 .ht-ui-check .handle,
@@ -981,7 +981,6 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   display: block;
   width: 21.5vw;
   height: 12.5vw;
-  /* background: #5e5f56; */
   background: #1400ff;
 }
 
@@ -994,7 +993,6 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   display: block;
   height: 9.5vw;
   width: 9.5vw;
-  /* background: white; */
   background: #ffff00;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.13);
   transform: translateX(1.5vw);
@@ -1061,7 +1059,7 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
   font-size: 4.5vw;
 }
 
-/* TOGGLE Variants Stop================================================================= */
+/* TOGGLE Stop================================================================= */
 
 /*  footer */
 .footer {
@@ -1082,6 +1080,7 @@ input[type=checkbox]:checked + .ht-ui-check .handle .faces {
 
 #footerContent {
   display: none;
+  left:0;
 }
 
 
