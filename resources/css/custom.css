@@ -1108,7 +1108,16 @@ left:-30px;
 
 /* FONTAWESOME ICONS STOP ------------------------------------------------------- */
 
+/* GoogleIcons ICONS START ------------------------------------------------------- */
 
+.googleIcons {
+  color:#ebebeb;
+}
+
+body.dark-mode .googleIcons {
+  color:#333;
+}
+/* GoogleIcons ICONS STOP ------------------------------------------------------- */
 
 /* ICONSHOOTER START ------------------------------------------------------- */
 .iconshooter {

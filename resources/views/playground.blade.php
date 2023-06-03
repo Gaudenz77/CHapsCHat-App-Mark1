@@ -19,12 +19,19 @@
               <p><a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.</p>
           @endif --}}
           <div class="chatFormField mt-5 p-2">
-            <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}"></chat-form>
+            {{-- <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}"></chat-form> --}}
+            <chat-form :user="{{ Auth::user() }}"></chat-form>
+            {{-- <chat-form></chat-form> --}}
             <h5>Chats:</h5>
           </div>
         </div>
         <div class="scrollableChat">
-          <chat-messages :messages="messages"></chat-messages>
+          {{-- <chat-messages></chat-messages> --}}
+          {{-- <chat-messages :messages="messages" :auth-user-id="{{ Auth::id() }}"></chat-messages> --}}
+          <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
+
+
+          {{-- <chat-messages :messages="{{ $messages }}"></chat-messages> --}}
         </div>
       </div>
     </div>
@@ -65,7 +72,7 @@
                   <div class="row d-flex align-items-start">
                     <a href="#" class="btn-close" aria-label="Close" id="hideButton"></a>
                   </div>
-                  <paint-app></paint-app>
+                  {{-- <paint-app></paint-app> --}}
                 </div>
               </div>
           @else

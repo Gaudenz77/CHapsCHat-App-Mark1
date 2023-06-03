@@ -59,9 +59,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/playground', [ChatsController::class, 'index']);
-    Route::get('/messages', [ChatsController::class, 'fetchMessages']);
-    Route::post('/messages', [ChatsController::class, 'sendMessage'])->name('messages.store');
+        Route::get('/playground', [ChatsController::class, 'index']);
+        Route::get('/messages', [ChatsController::class, 'fetchMessages']);
+        Route::post('/messages', [ChatsController::class, 'sendMessage'])->name('messages.store');
+        /* Route::delete('/messages/{id}', [ChatsController::class, 'deleteMessage'])->name('messages.delete'); */
+        Route::delete('/messages/{id}', [ChatsController::class, 'destroy'])->name('messages.destroy');
+
+
 });
 
 require __DIR__.'/auth.php';
