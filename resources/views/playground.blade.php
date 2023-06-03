@@ -25,7 +25,7 @@
             <h5>Chats:</h5>
           </div>
         </div>
-        <div class="scrollableChat">
+        <div class="smooth-scroll scrollableChat">
           {{-- <chat-messages></chat-messages> --}}
           {{-- <chat-messages :messages="messages" :auth-user-id="{{ Auth::id() }}"></chat-messages> --}}
           <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
