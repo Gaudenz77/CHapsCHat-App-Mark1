@@ -105,8 +105,8 @@ class ChatsController extends Controller
                 return response()->json(['success' => true]);
             }
     
-            return redirect()->route('playground.index')
-                ->with('success', 'Message deleted successfully!');
+            /* return redirect()->route('playground.index')
+                ->with('success', 'Message deleted successfully!'); */
         }
     
         // If the request expects JSON response, return a JSON message

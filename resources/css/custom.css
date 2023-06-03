@@ -13,14 +13,26 @@ body {
   /* margin-bottom:8vh; */
   /* font-family: 'Poppins', sans-serif; */
   /* font-family: 'IBM Plex Mono', monospace; */
-  font-family: 'Lexend', sans-serif;
-  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Lexend', sans-serif; */
+  font-family: 'Roboto', sans-serif;
   /* font-family: 'Special Elite', cursive; */
+}
+
+body.dark-mode body {
+  /* margin-bottom:8vh; */
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'IBM Plex Mono', monospace; */
+  /* font-family: 'Lexend', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Special Elite', cursive; */
+
+
 }
 
 /*-------------------------------------------GOOGLE MATERIAL ICONS */ 
 .material-symbols-outlined {
   font-size: 5rem;
+  color:#333;
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
@@ -29,15 +41,34 @@ body {
   
 }
 
-/* .playgroundMain {
-  margin-top:21.8vh;
-} */
+body.dark-mode .material-symbols-outlined {
+  font-size: 5rem;
+  color:#ebebeb;
+  
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48,
+  
+}
 
+body.dark-mode body {
+  /* background-color: mediumspringgreen; */
+  
+}
 
-/* .loginMain {
-  margin-top:8rem;
-} */
+body.dark-mode  {
+/*     margin-top:15vh;
+    margin-bottom:100px; */
+    color: #ffffff;
+    background-color: #091540;
+}
 
+body.dark-mode  body {
+    color: #ffffff;
+    /* background-color: #a4b5f2; */
+}
 
 
 .knowledgeTable {
@@ -59,24 +90,6 @@ body {
   /* margin-top:18%; */
 }
 
-body.dark-mode body {
-  /* background-color: mediumspringgreen; */
-  
-}
-
-body.dark-mode  {
-/*     margin-top:15vh;
-    margin-bottom:100px; */
-    background-color: #091540;
-    font-family: 'Poppins', sans-serif;
-}
-
-body.dark-mode  body {
-    color: #ffffff;
-    background-color: #a4b5f2;
-}
-
-
 body.dark-mode .playground  {
     /* background-color:black; */
 }
@@ -88,12 +101,6 @@ h1, h2, h3, h4, h5, h6, p, a   {
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode a {
   color:#ebebeb;
     /* margin-bottom:8vh; */
-    /* font-family: 'Poppins', sans-serif; */
-    /* font-family: 'IBM Plex Mono', monospace; */
-    font-family: 'Lexend', sans-serif;
-    /* font-family: 'Roboto', sans-serif; */
-    /* font-family: 'Special Elite', cursive; */
-
  }
 
 /* LOGIN_REGISTER-FORM-CONTROL START FORM GENERAL----------------------------------------------------------------*/
@@ -406,8 +413,7 @@ a.myNavToggleTitle.active:before {
 
 /* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION END */
 
-/* ---------------------------------------------------------------- MEDIAQUERIES */
-
+/* ---------------------------------------------------------------- SMALL MEDIA QUERIES */
 
 /* Styles for small devices */
 @media (max-width: 575.98px) {
@@ -508,6 +514,7 @@ a.myNavToggleTitle.active:before {
   
 }
 
+/* ---------------------------------------------------------------- MDMEDIULM LG LARGE MEDIA QUERIES */
 
 /* Styles for medium and large devices */
 @media (min-width: 576px) {
@@ -522,8 +529,10 @@ a.myNavToggleTitle.active:before {
     height: 15%;
     background-color:#091540;
   }
+
   .playgroundMain {
-    margin-top:21.8vh;
+    margin-top:14vh;
+    /* margin-bottom:15vh; */
   }
 
   .knowledgeMain {
@@ -535,7 +544,7 @@ a.myNavToggleTitle.active:before {
     position: relative;
     width: 100%;
     height:fit-content;
-    border-radius: 50%;
+    /* border-radius: 50%; */
   }
   
   .loginMain {
@@ -621,9 +630,7 @@ body.dark-mode .nav-link {
   color: #ebebeb;
 }
 
-body.dark-mode .editorTitle   {
-    color: white;
-}
+
 
 body.dark-mode .ul   {
     color: white;
@@ -633,8 +640,16 @@ body.dark-mode .li   {
     color: white;
 }
 
+
+.chatbody {
+  color: #333;
+  background-color:
+  /* margin-left:10%;
+  padding:10%; */
+}
+
 body.dark-mode .chatbody   {
-    color: white;
+    color:#ebebeb;
 }
 
 /* -------------------------------------------------------- ROUND DIVS */
@@ -675,13 +690,10 @@ body.dark-mode .chatbody   {
     padding:8%;
   }
 
-.chatbody {
-    margin-left:10%;
-    padding:10%;
-}
+
   
 .scrollableChat {
-  height: 200px; /* Set the desired fixed height */
+  height: 500px; /* Set the desired fixed height */
   overflow: auto; /* Enable scrolling when content exceeds the height */
 }
 
@@ -781,6 +793,7 @@ body.dark-mode .chatbody   {
     position:relative;
     left:0;
     color: black;
+    /* margin-top:; */
 }
 
 body.dark-mode .card1{
@@ -815,7 +828,13 @@ body.dark-mode .card1{
 .editorTitle {
     font-weight: bold;
     font-size: 1.2rem;
-    padding: 0.5rem 0 0.5rem 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+
+}
+
+body.dark-mode .editorTitle   {
+  /* color: white; */
+
 }
 
 .editor .suggest-widget div.tree {

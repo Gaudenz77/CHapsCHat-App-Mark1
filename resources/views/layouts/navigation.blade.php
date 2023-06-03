@@ -16,6 +16,10 @@
             <div class="offcanvas-body px-3">
             
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item py-3">
+                <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
+              </li>
+
               <li class="nav-item">
                 @if (Route::has('login'))
             @auth
@@ -24,10 +28,12 @@
               <li class="nav-item py-3">
               <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/playground') }}">Playground</a>
               </li>
-  
-              <li class="nav-item py-3">
-                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
-              </li>
+              @guest
+{{--               <li class="nav-item py-3">
+                <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
+            </li> --}}
+              @endguest
+              
   
               <li class="nav-item py-3">
                   <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/knowledgeSphere') }}">KnowledgeSphere </a>

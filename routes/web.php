@@ -22,14 +22,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/blogoSphere', function () {
+    return view('blogoSphere');
+})->name('blogoSphere');
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-
-    Route::get('/blogoSphere', function () {
-        return view('blogoSphere');
-    })->name('blogoSphere');
 
     Route::get('/blogoSphere/{id}', function () {
         return view('blogoSphere');
@@ -49,7 +49,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('/mylibrary/{id}', [MyLibraryController::class, 'update'])->name('mylibrary.update');
     Route::delete('/mylibrary/{id}', [MyLibraryController::class, 'destroy'])->name('mylibrary.destroy');
 
-    Route::get('/blogosphere', [MyBlogController::class, 'index'])->name('blogosphere.index');
+    /* Route::get('/blogosphere', [MyBlogController::class, 'index'])->name('blogosphere.index'); */
     Route::get('/blogosphere/create', [MyBlogController::class, 'create'])->name('blogosphere.create');
     Route::post('/blogosphere', [MyBlogController::class, 'store'])->name('blogosphere.store');
     Route::get('/blogosphere/{id}', [MyBlogController::class, 'show'])->name('blogosphere.show');
@@ -57,13 +57,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('/blogosphere/{id}', [MyBlogController::class, 'update'])->name('blogosphere.update');
     Route::delete('/blogosphere/{id}', [MyBlogController::class, 'destroy'])->name('blogosphere.destroy');
 });
-
+Route::get('/blogosphere', [MyBlogController::class, 'index'])->name('blogosphere.index');
 Route::middleware('auth')->group(function () {
         Route::get('/playground', [ChatsController::class, 'index']);
         Route::get('/messages', [ChatsController::class, 'fetchMessages']);
         Route::post('/messages', [ChatsController::class, 'sendMessage'])->name('messages.store');
         /* Route::delete('/messages/{id}', [ChatsController::class, 'deleteMessage'])->name('messages.delete'); */
-        Route::delete('/messages/{id}', [ChatsController::class, 'destroy'])->name('messages.destroy');
+        Route::delete('/messages/{messageId}', [ChatsController::class, 'destroy'])->name('messages.destroy');
 
 
 });

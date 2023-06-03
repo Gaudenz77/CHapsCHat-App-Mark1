@@ -8,61 +8,45 @@
 
 @auth
 <section class="">
-  <div class="container">
-    
-    <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
-      <div class="col-sm-4 card1 circle mt-0 p-4 text-center">
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-md-4 px-4 mt-2 bg-success">
+        <!-- Left column content -->
         <div class="logiInfo mt-2 p-1">
-          {{-- @if (Auth::check())
-              <h3 class="p-3">Welcome, {{ Auth::user()->name }}! You are logged in.</h3>
-          @else
-              <p><a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.</p>
-          @endif --}}
-          <div class="chatFormField mt-5 p-2">
+          <h5>WELCOME to the MESSAGECORNER</h5>
+          <div class="chatFormField mt-5 px-0">
             {{-- <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}"></chat-form> --}}
             <chat-form :user="{{ Auth::user() }}"></chat-form>
-            {{-- <chat-form></chat-form> --}}
-            <h5>Chats:</h5>
           </div>
         </div>
         <div class="smooth-scroll scrollableChat">
-          {{-- <chat-messages></chat-messages> --}}
-          {{-- <chat-messages :messages="messages" :auth-user-id="{{ Auth::id() }}"></chat-messages> --}}
           <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
+        </div>
+       <p class="test text-center m-2 pt-5">Messageservice brought to you by<a href="https://pusher.com/">Pusher&copy;</a></p>
+      </div>
 
+      <div class="col-md-8">
+        <!-- Right column content -->
+        <div class="row">
+          <div class="col-md-12 card1 px-3 mt-2 pt-2 pb-0" style="padding-left:0rem; padding-right:0rem;">
+            <h2 class="editorTitle">Editor:</h2>
+            <div id="editor"></div>
+          </div>
+        </div>
 
-          {{-- <chat-messages :messages="{{ $messages }}"></chat-messages> --}}
+        <div class="row">
+          <div class="col-md-12 card1 mt-0 py-0 px-3">
+            <h2 class="editorTitle">Preview:</h2>
+            <iframe id="preview" style="width:100%; height:40vh;"></iframe>
+          </div>
         </div>
       </div>
     </div>
 
-    
-    <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
-      
-
-      <div class="col-sm-6 card1 p-3" style="padding-left:0rem; padding-right:0rem;">
-        <h2 class="editorTitle mx-2 my-2">Editor:</h2>
-        <div id="editor"></div>
-      </div>
-
-      <div class="col-sm-6 card1 p-3">
-        <h2 class="editorTitle mx-2 my-2">Preview:</h2>
-        <iframe id="preview" style="width:100%"></iframe>
-      </div>
-
-     {{--  <div class="col-sm-3 card1">
-        <div class="logiInfo mt-2 p-1">
-          @if (Auth::check())
-              <h3>Welcome, {{ Auth::user()->name }}! You are logged in.</h3>
-          @else
-              <p><a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.</p>
-          @endif
-        </div> --}}
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-sm-3 card1 circle mt-3 p-4">
+{{--     <div class="row justify-content-center mt-5">
+      <div class="col-sm-3 card1 mt-3 p-4">
         <div class="logiInfo mt-2 p-1">
           @if (Auth::check())
               <h3 class="text-center">Welcome, {{ Auth::user()->name }}!<br>You are logged in.</h3>
@@ -72,22 +56,22 @@
                   <div class="row d-flex align-items-start">
                     <a href="#" class="btn-close" aria-label="Close" id="hideButton"></a>
                   </div>
-                  {{-- <paint-app></paint-app> --}}
+                  <paint-app></paint-app>
                 </div>
               </div>
           @else
               <p><a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.</p>
           @endif
         </div>
-      </div>
-      <div class="col-sm-12 card1 circle">
-        <!-- Button to trigger the modal -->
-        {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-          Open Modal
-        </button> --}}
-      </div>
-    </div>
+      </div>  
+    </div> --}}
+
   </div>
+  
+
+
+
+
 </section>
 @endauth
 

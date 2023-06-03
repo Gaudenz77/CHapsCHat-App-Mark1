@@ -1,25 +1,33 @@
 <template>
   <div>
-    <figure class="left clearfix" v-for="message in messages" :key="message.id">
+    <figure class="left clearfix chatbody" v-for="message in messages" :key="message.id">
       <div class="clearfix">
         <div class="header">
-          <blockquote class="blockquote">
+          <blockquote class="lead blockquote ps-2">
             {{ message.message }}
           </blockquote>
         </div>
-        <figcaption class="blockquote-footer">
+        <figcaption class="blockquote-footer text-end">
           {{ message.user.name }}
         </figcaption>
-        <button v-if="message.user.id === authUserId" class="btn btn-danger btn-sm" @click="deleteMessage(message.id)">
+        <div class="text-end">
+          <button v-if="message.user.id === authUserId" class="btn btn-danger btn-sm text-end" @click="deleteMessage(message.id)">
           Delete
         </button>
-        <!-- <button class="btn btn-danger btn-sm" @click="deleteMessage(message.id)">
-          Delete
-        </button> -->
+        </div>
       </div>
+      <div class="dividerone"></div>
     </figure>
   </div>
 </template>
+
+<style>
+.dividerone {
+  height: 2px;
+  background-color: black;
+  margin: 10px 0;
+}
+</style>
 
 <script>
 import axios from 'axios';
