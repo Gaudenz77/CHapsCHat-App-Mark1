@@ -53,7 +53,7 @@
                 @if (Route::has('password.request'))
                   <a class="loginLabel text-decoration-none mb-3" href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
                 @endif
-                <button type="submit" class="btn {{-- btn-circle --}} ml-md-4"><span class="material-symbols-outlined">
+                <button type="submit" class="btn-lg btn-auth p-2 ml-md-4"><span class="material-symbols-outlined">
                   login
                   </span>{{-- {{ __('Log in') }} --}}</button>
               </div>

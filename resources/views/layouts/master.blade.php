@@ -44,14 +44,6 @@
     <style>
 
 
-        .material-symbols-outlined {
-          font-variation-settings:
-          'FILL' 0,
-          'wght' 700,
-          'GRAD' 200,
-          'opsz' 48
-        }
-
         body {
             /* background-color: black; */
         }

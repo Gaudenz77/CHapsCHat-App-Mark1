@@ -53,6 +53,20 @@ body.dark-mode .material-symbols-outlined {
   
 }
 
+.btn-auth {
+  background-color:#ebebeb;
+  border-radius: 50%;
+  padding:1rem 0 1rem 0 !important;
+}
+
+body.dark-mode .btn-auth {
+  background-color:#333;
+  border-radius: 50%;
+  padding:1rem 1rem 1rem 1rem !important;
+
+}
+
+
 body.dark-mode body {
   /* background-color: mediumspringgreen; */
   
