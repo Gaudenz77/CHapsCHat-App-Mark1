@@ -6,7 +6,7 @@ body.dark-mode .some-element {
 // Styles for elements that need to be updated for dark mode 
 
 }*/
-/*-------------------------------------------BODY MAIN DEFINITION */ 
+/* BODY MAIN DEFINITION------------------------------------------- */ 
 
 body {
   margin-top:10%;
@@ -27,7 +27,7 @@ body.dark-mode body {
   /* font-family: 'Special Elite', cursive; */
 }
 
-/*-------------------------------------------GOOGLE MATERIAL ICONS */ 
+/* GOOGLE MATERIAL ICONS ---------------------------------------------------------*/ 
 .material-symbols-outlined {
   font-size: 5rem;
   color:#333;
@@ -116,16 +116,10 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     /* border-radius: 100%; */
   }
 
-
   .loginMain {
     margin-top:0rem;
     margin-bottom:10%;
   }
-
-/*   .registerMain {
-    margin-top:20vh;
-    margin-bottom:-50%;
-  } */
 
   .welcomeMain {
     margin-top:13rem;
@@ -136,7 +130,6 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     margin-bottom:10rem;
     width:140% !important;
   }
-
 
   .colTriangle {
     width: 100%;
@@ -161,12 +154,12 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
   }
 
   .logoFont {
-    
-    /* font-size: 100%;  */
-    padding-right:0rem;
- 
-   }
-   .logoImg {
+  
+  /* font-size: 100%;  */
+  padding-right:0rem;
+
+  }
+    .logoImg {
     margin-left:2rem;
     ;
     padding-left:1rem;
@@ -218,9 +211,9 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
 #contentKnowledge {
   width:500px;
 }
-/* ---------------------------------------------------------------- SMALL MEDIA QUERIES START */
+/* SMALL MEDIA QUERIES START ---------------------------------------------------------------- */
 
-/* ---------------------------------------------------------------- MD MEDIULM LG LARGE MEDIA QUERIES START */
+/* MD MEDIULM LG LARGE MEDIA QUERIES START----------------------------------------------------------------  */
 
 /* Styles for medium and large devices */
 @media (min-width: 576px) {
@@ -292,7 +285,7 @@ margin-left:10% !important;
 
   .navbar-toggler-icon {   
     font-size:20px;
-}
+  }
 
 /* TOGGLE LG */
 
@@ -305,43 +298,44 @@ margin-left:10% !important;
   display: flex;
   align-items: center;
   transform: scale(0.25);
+  }
+
+.circleKnowledgeForm {
+  position: relative;
+  width: 40% !important; /* Set the desired fixed width */
+  height: 50%; /* Set the desired fixed height */
+  border-radius: 50%;
+  padding: 3rem 2rem 4rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  margin-left:0%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.knowledgTable {
+  width:100%;
+  }
+
+.blogMain {
+  margin-top:15vh;
+  margin-bottom:11vh;
+  }
+
+}
+/* MD MEDIULM LG LARGE MEDIA QUERIES STOP-------------------------------------------------------------------------------  */
+
+.dropdownProfile {
+  background-color:#1400ff;
+  color:#ebebeb !important;
 }
 
-/* Media query for responsiveness */
-
-/*  */
-
-
-  .circleKnowledgeForm {
-
-   
-
-    position: relative;
-    width: 40% !important; /* Set the desired fixed width */
-    height: 50%; /* Set the desired fixed height */
-    border-radius: 50%;
-    padding: 3rem 2rem 4rem 2rem;
-    margin-top: 1rem;
-    margin-bottom: .5rem;
-    margin-left:0%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .knowledgTable {
-    width:100%;
-  }
-
-  .blogMain {
-    margin-top:15vh;
-    margin-bottom:11vh;
-  }
-  
+body.dark-mode .dropdownProfile {
+  background-color:#ff0000 ;
+  color:#333 !important;
 }
-/* ---------------------------------------------------------------- MD MEDIULM LG LARGE MEDIA QUERIES STOP */
-
 /* LOGIN_REGISTER-FORM-CONTROL START FORM GENERAL----------------------------------------------------------------*/
 
 .loginLabel {
@@ -505,9 +499,7 @@ a {
   justify-content: center;
 }
 
-
-
-/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION START */
+/* LINK UNDERLINE ANIMATION START----------------------------------------------------------------  */
 
 a.myNavUnderline {
   display: inline-block;
@@ -556,7 +548,7 @@ a.myNavToggleTitle {
   display: inline-block;
   margin: 0 10px;
   padding: 10px 0;
-  color: #333;
+  color: blue;
   text-decoration: none;
   position: relative;
 }
@@ -595,7 +587,7 @@ a.myNavToggleTitle.active:before {
   transform-origin: bottom left;
 }
 
-/* ---------------------------------------------------------------- LINK UNDERLINE ANIMATION END */
+/* LINK UNDERLINE ANIMATION END----------------------------------------------------------------  */
 
 .nav-link {
     color: #ebebeb;
@@ -651,7 +643,8 @@ body.dark-mode .chatbody   {
     color:#ebebeb;
 }
 
-/* -------------------------------------------------------- ROUND DIVS */
+/* ROUND DIVS --------------------------------------------------------  */
+
 .circle {
   position: relative;
   min-width: 150px;
@@ -677,10 +670,6 @@ body.dark-mode .chatbody   {
   box-sizing: border-box; /* include padding in element's total width and height */
 }
 
-/* .mycheck {
-  background-color: #181818;
-} */
-  
 .circleProfileCols {
   position: relative;
   min-width: 33%;
@@ -689,8 +678,6 @@ body.dark-mode .chatbody   {
   padding:8%;
 }
 
-
-  
 .scrollableChat {
   height: 500px; /* Set the desired fixed height */
   overflow: auto; /* Enable scrolling when content exceeds the height */
@@ -734,10 +721,6 @@ body.dark-mode .chatbody   {
   color:#ffffff;
 }
  
-
-
-
-
 .form-wrapper {
   max-width: 100%; 
   text-align: center; 
@@ -771,22 +754,6 @@ body.dark-mode .card1{
     line-height: 24px; 
   } */
   
-
-
-/*         #editor {
-    height: 500px;
-    
-
-}
-#css-editor {
-    height: 500px;
-    
-
-}
-.containerEditor {
-
-} */
-
 .containerEditor {
     margin-top: 1rem;
 }
@@ -795,10 +762,6 @@ body.dark-mode .card1{
     font-size: 1.2rem;
   font-family: 'IBM Plex Mono', monospace;
 
-}
-
-body.dark-mode .editorTitle   {
-  /* color: white; */
 }
 
 .editor .suggest-widget div.tree {
@@ -825,7 +788,7 @@ body.dark-mode .editorTitle   {
 
 /* ---------------------------------------------------------------- EDITOR MONACO END */
 
-/*----------------------------------------------------------------VARIOUS BUTTONS */
+/* VARIOUS BUTTONS ----------------------------------------------------------------*/
 
 .btn-circle {
     width: 5rem;
@@ -1075,7 +1038,6 @@ left:-30px;
   margin-bottom:10rem !important;
 }
 
-
 /* FONTAWESOME ICONS START ------------------------------------------------------- */
 
  .iconAuth {
@@ -1118,7 +1080,6 @@ body.dark-mode .iconshooter {
   transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
-  /* background-image: url("path/to/image.png"); */
   background-size: cover;
   border-radius: 50%;
   cursor: pointer;
@@ -1127,7 +1088,6 @@ body.dark-mode .iconshooter {
 }
 
 /* ICONSHOOTER STOP ------------------------------------------------------- */
-
 
 .custom-tooltip {
   --bs-tooltip-bg: var(--bs-danger);

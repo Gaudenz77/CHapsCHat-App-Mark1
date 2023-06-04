@@ -44,7 +44,7 @@
                     <a class="myNavUnderline dropdown-toggle m-3 px-0 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ Auth::user()->name }}
                     </a>
-                    <ul class="dropdown-menu" id="myDropdownAccount">
+                    <ul class="dropdown-menu dropdownProfile" id="myDropdownAccount">
                       <li><a class="nav-item myNavUnderline px-0 " href="{{ url('profile') }}">Profile</a></li>
                       <li><a class="nav-item myNavUnderline px-0 " href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log out</a></li>
