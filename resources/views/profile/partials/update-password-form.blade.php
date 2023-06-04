@@ -31,8 +31,8 @@
             <div class="invalid-feedback">@error('password_confirmation') {{ $message }} @enderror</div>
         </div>
     
-        <div class="d-flex gap-4 align-items-center">
-            <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+        <div class="d-flex gap-4 justify-content-center align-items-center">
+            <button type="submit" class="btn btn-circleOwn2"><i class='fa-regular fa-save fa-2xl'></i>  {{ __('Save') }}</button>
     
             @if (session('status') === 'password-updated')
                 <p

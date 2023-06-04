@@ -826,28 +826,57 @@ body.dark-mode .btn-own {
   height: 9rem;
   font-size: 90%;
   font-weight:bold;
-  color:#ffc107;
+  /* color:#ffc107; */
   background-color:#f25151;
   padding: 8px 8px;
   border-radius: 50%;
   text-align: center;
   margin-bottom: 15px; 
-  box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
+  /* box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
 }
+
+.btn-circleOwn2 {
+  width: 9rem;
+  height: 9rem;
+  font-size: 90%;
+  font-weight:bold;
+  /* color:#ffc107; */
+  background-color:#ffc107;
+  padding: 8px 8px;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 15px; 
+  /* box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
+}
+
 
 body.dark-mode .btn-circleOwn {
 /*   width: 8rem;
   height: 8rem;
   font-size: 90%;
   font-weight:bold; */
-  color:#ffc107;
-  background-color:#0d6efd;
+  /* color:#ffc107; */
+  background-color:#f25151;
   /* padding: 8px 8px;
   border-radius: 50%;
   text-align: center;
   margin-bottom: 15px; 
   box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
 }
+
+body.dark-mode .btn-circleOwn2 {
+  /*   width: 8rem;
+    height: 8rem;
+    font-size: 90%;
+    font-weight:bold; */
+    /* color:#ffc107; */
+    background-color:#ffc107;
+    /* padding: 8px 8px;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 15px; 
+    box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
+  }
 
 #closeButton {
   color:red !important;

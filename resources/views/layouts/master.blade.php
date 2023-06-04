@@ -158,6 +158,8 @@ const markdownContent = "This is a **bold** sentence.\n\n```javascript\nconsole.
 // Render the markdown content using Marked.js
 outputContainer.innerHTML = marked(markdownContent);
 
+
+// Scroll top
 function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }

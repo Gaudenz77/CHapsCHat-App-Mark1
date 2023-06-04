@@ -1,3 +1,11 @@
+@extends('layouts.master')
+
+@section('title', 'ChapsChat')
+
+@section('body-class', 'playgroundMain')
+
+@section('content')
+
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -30,7 +38,7 @@
 
 
     <div class="container">
-        <div class="row justify-content-evenly">
+        <div class="row justify-content-evenly text-center">
             <div class="col-sm circleProfileCols bg-warning mx-1">
                 @include('profile.partials.update-profile-information-form')
             </div>
@@ -46,3 +54,21 @@
         </div>
     </div>
 </x-app-layout>
+
+<script>
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    window.addEventListener('scroll', function() {
+    var button = document.querySelector('.back-to-top');
+    if (window.pageYOffset > 200) {
+        button.classList.add('show');
+    } else {
+        button.classList.remove('show');
+    }
+    });
+</script>
+
+    @endsection
