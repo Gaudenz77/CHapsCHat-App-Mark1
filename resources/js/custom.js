@@ -56,8 +56,8 @@ const icon = document.getElementById('icon');
 let posX = Math.floor(Math.random() * window.innerWidth);
 let posY = Math.floor(Math.random() * window.innerHeight);
 // Set velocity of target icon
-let velocityX = 0;
-let velocityY = 0;
+let velocityX = 4;
+let velocityY = 4 ;
 icon.style.position = 'fixed';
 icon.style.left = `${posX}px`;
 icon.style.top = `${posY}px`;
