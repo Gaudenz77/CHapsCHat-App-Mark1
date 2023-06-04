@@ -1,6 +1,6 @@
 <template>
   <div>
-    <figure class="left clearfix chatbody" v-for="message in messages" :key="message.id">
+    <figure class="left clearfix chatbody animate__animated animate__fadeInLeft" v-for="message in messages" :key="message.id">
       <div class="clearfix">
         <div class="header">
           <blockquote class="lead blockquote ps-2">

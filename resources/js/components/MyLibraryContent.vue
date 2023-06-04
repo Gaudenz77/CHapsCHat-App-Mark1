@@ -48,7 +48,7 @@
           </td>
           <td id="contentKnowledge" style="max-width: 500px;">
             <template v-if="editMode === library.id">
-              <textarea class="col form-controll" type="text" rows="5" v-model="libraryEditContent"></textarea>
+              <textarea class="col-12 form-controll" type="text" rows="5" v-model="libraryEditContent"></textarea>
             </template>
             <template v-else>
               <div style="word-break: break-word;">{{ library.content }}</div>

@@ -1024,7 +1024,14 @@ left:-30px;
 #footerButton {
   position: fixed;
   bottom: -8px;
-  right: 20px;
+  right: .5rem;
+  z-index: 9999;
+}
+
+.scrollBtn {
+  position: fixed;
+  bottom: -8px;
+  right: 10rem;
   z-index: 9999;
 }
 
