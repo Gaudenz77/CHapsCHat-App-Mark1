@@ -13,7 +13,7 @@
 
 <!-- QUOTE TYPEWRITER REGISTER -->
 
-            <div class="col-sm-4 mt-3 p-3">
+            <div class="col-sm-4 mt-3 p-3 animate__animated animate__flipInX">
                 <button class="btn btn-own" id="playButtonReg"><span class="material-symbols-outlined">play_circle</span>Play Audio</button>
                 <div class="typewriter-wrapper" id="colElementReg" style="display: none;">
                   <blockquote class="blockquote-fluid mb-0 p-4" {{-- style="width:fit-content;" --}}>
@@ -23,7 +23,7 @@
                 </div>
               </div>
 
-            <div class="col-md-5">
+            <div class="col-md-5 animate__animated animate__flipInY">
                 <div class="card circleAuth cardLogin">
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">

@@ -56,8 +56,8 @@ const icon = document.getElementById('icon');
 let posX = Math.floor(Math.random() * window.innerWidth);
 let posY = Math.floor(Math.random() * window.innerHeight);
 // Set velocity of target icon
-let velocityX = 4;
-let velocityY = 4 ;
+let velocityX = 0;
+let velocityY = 0;
 icon.style.position = 'fixed';
 icon.style.left = `${posX}px`;
 icon.style.top = `${posY}px`;
@@ -99,10 +99,6 @@ moveIcon();
   });
 });
 
-
-
-
-
 // Check local storage for the user's preference
 /*const isDarkMode = localStorage.getItem('darkMode') === 'true';*/
 
@@ -123,9 +119,7 @@ if (isDarkMode) {
     localStorage.setItem('darkMode', 'false');
   }
 });
-
-
-
+  
 // VARIANT CHANGE ON INTERVAL
 
 /*   // Get the icon element

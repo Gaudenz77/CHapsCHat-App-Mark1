@@ -9,7 +9,7 @@
 <section class="">
   <div class="container">
     <div class="row justify-content-evenly align-items-center" {{-- style="height: 100vh;" --}}>
-      <div class="col-md-5 mt-1">
+      <div class="col-md-5 mt-1 animate__animated animate__flipInX">
         <div class="card circleAuth cardLogin">
           <div class="card-body">
             <!-- Session Status -->
@@ -67,7 +67,7 @@
 <!-- QUOTE TYPEWRITER LOGIN -->
 
 
-      <div  class="col-sm-6 p-3">
+      <div  class="col-sm-6 p-3 animate__animated animate__flipInY">
         <button class="btn btn-own" id="playButtonLog"><span class="material-symbols-outlined">play_circle</span>Play Audio</button>
         <div class="typewriter-wrapper" id="colElementLog" style="display: none;">
           <blockquote class="blockquote-fluid mb-0 p-4">
