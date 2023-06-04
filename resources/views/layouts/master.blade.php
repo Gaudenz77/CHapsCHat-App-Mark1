@@ -157,6 +157,20 @@ const markdownContent = "This is a **bold** sentence.\n\n```javascript\nconsole.
 // Render the markdown content using Marked.js
 outputContainer.innerHTML = marked(markdownContent);
 
+
+
+
+/* function reloadTwice() {
+  location.reload(); // First reload
+  setTimeout(function() {
+    location.reload(); // Second reload after a delay (e.g., 1 second)
+  }, 1000);
+  location.reload(); // First reload
+      setTimeout(function() {
+    location.reload(); // Second reload after a delay (e.g., 1 second)
+  }, 1000);
+} */
+
 </script>
 
 <!-- toggle mode script start -->

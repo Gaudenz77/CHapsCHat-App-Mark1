@@ -172,4 +172,12 @@ if (isDarkMode) {
  */
 /*---------------------------------------------------------------- FOOTER */
 
+/* --------------------------------------------------------------------RELOAD PLAYGROUND TWICE*/
+/* function reloadTwice() {
+  location.reload(); // First reload
+  setTimeout(function() {
+    location.reload(); // Second reload after a delay (e.g., 1 second)
+  }, 1000);
 
+} */
+/* --------------------------------------------------------------------RELOAD PLAYGROUND TWICE STOP */

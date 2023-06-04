@@ -30,15 +30,15 @@
       <div class="col-md-8">
         <!-- Right column content -->
         <div class="row">
-          <div class="col-md-12 card1 px-3 mt-2 pt-2 pb-0" style="padding-left:0rem; padding-right:0rem;">
+          <div class="col-md-12 card1 px-3 mt-2 pt-2 pb-2" style="padding-left:0rem; padding-right:0rem;">
             <h2 class="editorTitle">Editor:</h2>
             <div id="editor"></div>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-12 card1 mt-0 py-0 px-3">
-            <h2 class="editorTitle">Preview:</h2>
+          <div class="col-md-12 card2 mt-0 py-0 px-3">
+            <h2 class="editorTitle pt-2">Preview:</h2>
             <iframe id="preview" style="width:100%; height:40vh;"></iframe>
           </div>
         </div>

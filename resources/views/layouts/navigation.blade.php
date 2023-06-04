@@ -23,7 +23,7 @@
               </li>
   
               <li class="nav-item py-3">
-              <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/playground') }}">Playground</a>
+              <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/playground') }}" onclick="reloadTwice()">Playground</a>
               </li>
               @endauth
               <li class="nav-item py-3">
@@ -68,3 +68,4 @@
     </div>
     @include('components.toggle')
   </nav>
+

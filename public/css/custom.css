@@ -724,6 +724,18 @@ body.dark-mode .card1{
     background-color:#59c3c3;
 }
 
+.card2 {
+  background-color:#ebebebeb;
+  position:relative;
+  left:0;
+  color: black;
+  /* margin-top:; */
+}
+
+body.dark-mode .card2 {
+  background-color:#59c3c3;
+}
+
 /* ---------------------------------------------------------------- EDITOR MONACO START */
 
 /* .monaco-list-row .monaco-highlighted-label .monaco-icon-label .monaco-icon-name-container {
@@ -744,6 +756,11 @@ body.dark-mode .card1{
 }
 .containerEditor {
 
+} */
+
+/* .monaco-editor .suggest-widget div.tree {
+  white-space: unset;
+  padding-bottom: 0;
 } */
 
 .containerEditor {
