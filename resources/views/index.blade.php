@@ -53,6 +53,4 @@
             </div>
           </div>
         
-        {{-- @include('auth.login') --}}
-
 @endsection

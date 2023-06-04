@@ -9,23 +9,27 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Hier wird der Wert von der Konstanten APP_NAME aus .env eingetragen, falls vorhanden. Andernfalls wird der Default-String "Laravel" verwendet -->
+    
     <title>{{ config('app.name', 'ChapsChat') }}</title>
 
     <!---------------------------------------------------------------- Fontawesome link -->
+
     <script src="https://kit.fontawesome.com/d4cbcb96c8.js" crossorigin="anonymous"></script>
 
     <!-- Styles -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> --}}
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
     
     <!-- AOS -->
+
     <!-- MARKDOWN LIBRARY -->
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    
     <!-- Animate.css -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!---------------------------------------------------------------- Google Fonts IN CUSTOM.CSS -->
@@ -34,22 +38,20 @@
     {{-- 'resources/css/app.css', --}}
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Scripts -->
 
     <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script>
 
     <script src="https://unpkg.com/monaco-editor@0.27.0/min/vs/loader.js"></script>
+
     <!-- Include jQuery from a CDN or from your own server -->
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <style>
-
-
         body {
             /* background-color: black; */
         }
-        /* body {
-            margin-top:100px;
-        } */
+
         @media (max-width: 565.98px) {
         .loginMain {
           margin-top:22vh;
@@ -62,7 +64,6 @@
         }
       }
 
-
       @media (min-width: 566px) {
         .loginMain {
          margin-top:14rem;
@@ -73,14 +74,11 @@
           margin-bottom:-50%;
         }
       }
-
-      /* Set the border color */
-         
+       
       .custom-toggler.navbar-toggler {
             border-color: rgb(255, 255, 0);
       }
-        /* Setting the stroke to green using rgb values (0, 128, 0) */
-         
+       
       .custom-toggler .navbar-toggler-icon {
             background-image: url(
             "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 0, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -91,8 +89,7 @@
             background-color:#ebebeb;
             color: #ebebeb;
       }
-        /* Setting the stroke to green using rgb values (0, 128, 0) */
-         
+
         body.dark-mode .custom-toggler .navbar-toggler-icon {
             background-image: url(
             "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 0, 0, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -101,8 +98,6 @@
     
 </head>
 
-  
-{{-- <body class="d-flex flex-column h-100 bg-gradient"> --}}
 <body class="@yield('body-class')">
 
 <div id="app">
@@ -117,10 +112,10 @@
         </div>
     </main>
 
-<footer class="footer mt-5 py-3 bg-footer-gradient">
+<footer class="footer mt-5 py-3 bg-footer-gradient footerOwn">
   <div class="container-fluid text-sm-start text-md-center">
     <button id="footerButton" class="btn btn-circleOwn btn-danger"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
-    <span id="footerContent" class="span1"><a href="{{ url('/about') }}" class="nav-item  ms-0 py-0"><b>- Dare To Meet Me?</b></a><br><b>Copyright &copy; @ {{date('d/m/Y')}}</span>
+    <span id="footerContent" class="span1"><a href="{{ url('/about') }}" class="nav-item  ms-0 py-0 footerlinknText" style="color:#ffc107;"><b>- Dare To Meet Me?</b></a><br><b  style="color:  blue;">Copyright &copy; @ {{date('d/m/Y')}}</span>
   </div>
 </footer>
 
@@ -128,29 +123,30 @@
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     
 <script>
-  /* ENABLE TOOLTIP */
-    $(function(){
-      $('[data-bs-toggle="tooltip"]').tooltip();
-    });
+
+/* ENABLE TOOLTIP */
+$(function(){
+  $('[data-bs-toggle="tooltip"]').tooltip();
+});
 
 /* FOOTER EASTEREGG */
-    document.addEventListener("DOMContentLoaded", function() {
-    var footerContent = document.getElementById("footerContent");
-    var footerButton = document.getElementById("footerButton");
-    var isContentVisible = false;
+document.addEventListener("DOMContentLoaded", function() {
+var footerContent = document.getElementById("footerContent");
+var footerButton = document.getElementById("footerButton");
+var isContentVisible = false;
 
-    footerButton.addEventListener("click", function() {
-        if (isContentVisible) {
-          footerContent.style.display = "none";
-          isContentVisible = false;
-          footerButton.innerHTML = '<span class="material-symbols-outlined">barefoot</span><br><p style="font-size:60%;color:#ffc107;"">Who needs a footer</p>';
-        } else {
-          footerContent.style.display = "block";
-          isContentVisible = true;
-          footerButton.innerHTML = '<span class="material-symbols-outlined">barefoot</span><br><p style="font-size:80%;color:#ffc107;"">Go away</p>';
-        }
-      });
-    });
+footerButton.addEventListener("click", function() {
+    if (isContentVisible) {
+      footerContent.style.display = "none";
+      isContentVisible = false;
+      footerButton.innerHTML = '<span class="material-symbols-outlined">barefoot</span><br><p style="font-size:60%;color:#ffc107;"">Who needs a footer</p>';
+    } else {
+      footerContent.style.display = "block";
+      isContentVisible = true;
+      footerButton.innerHTML = '<span class="material-symbols-outlined">barefoot</span><br><p style="font-size:80%;color:#ffc107;"">Go away</p>';
+    }
+  });
+});
 
 // Get the container element
 const outputContainer = document.getElementById('outputContainer');
@@ -161,22 +157,14 @@ const markdownContent = "This is a **bold** sentence.\n\n```javascript\nconsole.
 // Render the markdown content using Marked.js
 outputContainer.innerHTML = marked(markdownContent);
 
-
 </script>
 
 <!-- toggle mode script start -->
     @include('components.darkmodeToggle')
 <!-- toggle mode script end-->
     
-<!-- Bootstrap JS -->
-{{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> --}}
-  
   @vite(['resources/js/app.js', 'resources/js/custom.js'])
-  <!-- AOS -->  
-  {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
-  {{-- <script>
-    AOS.init();
-  </script> --}}
+
 </body>
 
 </html>
