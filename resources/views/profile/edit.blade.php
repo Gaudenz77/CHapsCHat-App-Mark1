@@ -55,7 +55,35 @@
     </div>
 </x-app-layout>
 
+<footer class="footer mt-5 ms-3 py-3 bg-footer-gradient footerOwn" style="display:none">
+    <div class="container-fluid text-sm-start text-md-center">
+      <button class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
+      <button id="footerButtonP" class="btn btn-circleOwn btn-danger"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
+      <span id="footerContentP" class="span1"><a href="{{ url('/about') }}" class="nav-item mt-2 ms-0 py-0" style="color:#ffc107;"><b class="">Dare To Meet Me?</b></a><br><b  style="color:  blue;">Copyright &copy; @ {{date('d/m/Y')}}</span>
+    </div>
+    {{-- <button class="btn btn-own ms-2" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button> --}}
+  </footer>
+
 <script>
+
+    /* FOOTER EASTEREGG */
+document.addEventListener("DOMContentLoaded", function() {
+var footerContent = document.getElementById("footerContentP");
+var footerButton = document.getElementById("footerButtonP");
+var isContentVisible = false;
+
+footerButton.addEventListener("click", function() {
+    if (isContentVisible) {
+      footerContent.style.display = "none";
+      isContentVisible = false;
+      footerButton.innerHTML = '<span class="material-symbols-outlined">barefoot</span><br><p style="font-size:60%;color:#ffc107;"">Who needs a footer</p>';
+    } else {
+      footerContent.style.display = "block";
+      isContentVisible = true;
+      footerButton.innerHTML = '<span class="material-symbols-outlined">barefoot</span><br><p style="font-size:80%;color:#ffc107;"">Go away</p>';
+    }
+  });
+});
 
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
