@@ -7,11 +7,11 @@
             {{ message.message }}
           </blockquote>
         </div>
-        <figcaption class="blockquote-footer text-end">
+        <figcaption class="blockquote-footer px-2 me-2 text-end">
           {{ message.user.name }}
         </figcaption>
         <div class="text-end">
-          <button v-if="message.user.id === authUserId" class="btn btn-danger btn-sm text-end" @click="deleteMessage(message.id)">
+          <button v-if="message.user.id === authUserId" class="btn btn-danger btn-sm me-2 text-end" @click="deleteMessage(message.id)">
           Delete
         </button>
         </div>

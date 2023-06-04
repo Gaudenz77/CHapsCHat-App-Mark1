@@ -78,7 +78,7 @@
                                     {{ __('Already registered?') }}
                                 </a>
                               
-                                <button type="submit" class="btn-lg btn-auth p-2 ml-md-4">
+                                <button type="submit" class=" btn btn-lg btn-auth p-2 ml-md-4">
                                     <span class="material-symbols-outlined">
                                         login
                                         </span>{{-- <br>{{ __('Register') }} --}}

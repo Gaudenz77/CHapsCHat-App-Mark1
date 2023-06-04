@@ -14,7 +14,7 @@
 
       <div class="col-md-4 px-4 mt-2 bg-success">
         <!-- Left column content -->
-        <div class="logiInfo mt-2 p-1">
+        <div class="logiInfo mt-2 p-1 pt-4">
           <h5>WELCOME to the MESSAGECORNER</h5>
           <div class="chatFormField mt-5 px-0">
             {{-- <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}"></chat-form> --}}
@@ -24,13 +24,13 @@
         <div class="smooth-scroll scrollableChat">
           <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
         </div>
-       <p class="test text-center m-2 pt-5">Messageservice brought to you by<a href="https://pusher.com/">Pusher&copy;</a></p>
+       <p class="test text-center mb-0 m-2 pt-5">Messageservice brought to you by<a href="https://pusher.com/">Pusher&copy;</a></p>
       </div>
 
       <div class="col-md-8">
         <!-- Right column content -->
         <div class="row">
-          <div class="col-md-12 card1 px-3 mt-2 pt-2 pb-2" style="padding-left:0rem; padding-right:0rem;">
+          <div class="col-md-12 card1 px-3 py-3 pb-4" style="padding-left:0rem; padding-right:0rem;">
             <h2 class="editorTitle">Editor:</h2>
             <div id="editor"></div>
           </div>
@@ -38,7 +38,7 @@
 
         <div class="row">
           <div class="col-md-12 card2 mt-0 py-0 px-3">
-            <h2 class="editorTitle pt-2">Preview:</h2>
+            <h2 class="editorTitle py-3">Preview:</h2>
             <iframe id="preview" style="width:100%; height:40vh;"></iframe>
           </div>
         </div>

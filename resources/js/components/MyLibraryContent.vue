@@ -23,20 +23,21 @@
         <input type="text" v-model="selectedContent" id="content">
       </div>
     </div>
-    <table class="table table-striped">
+    <div class="table-responsive">
+      <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">Id</th>
+          <!-- <th scope="col">Id</th> -->
           <th scope="col">Topic</th>
           <th scope="col">Content</th>
-          <th scope="col">Created At</th>
-          <th scope="col">Updated At</th>
+          <!-- <th scope="col">Created At</th> -->
+          <!-- <th scope="col">Updated At</th> -->
           <th scope="col">Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="library in filteredLibraries" :key="library.id">
-          <td>{{ library.id }}</td>
+          <!-- <td>{{ library.id }}</td> -->
           <td>
             <template v-if="editMode === library.id">
               <input type="text" v-model="libraryEditTopic" />
@@ -45,18 +46,18 @@
               {{ library.topic }}
             </template>
           </td>
-          <td id="contentKnowledge" style="max-width: 350px;">
+          <td id="contentKnowledge" style="max-width: 500px;">
             <template v-if="editMode === library.id">
-              <textarea class="form-controll" type="text" rows="5" v-model="libraryEditContent"></textarea>
+              <textarea class="col form-controll" type="text" rows="5" v-model="libraryEditContent"></textarea>
             </template>
             <template v-else>
               <div style="word-break: break-word;">{{ library.content }}</div>
             </template>
           </td>
-          <td>{{ formatDate(library.created_at) }}</td>
-          <td>{{ formatDate(library.updated_at) }}</td>
+          <!-- <td>{{ formatDate(library.created_at) }}</td> -->
+          <!-- <td>{{ formatDate(library.updated_at) }}</td> -->
           <td>
-            <div class="textfieldKnowledge">
+            <div class="">
               <button class="btn text-center" type="button" role="button" @click="deleteLibrary(library.id)">
                 <i class="fa-regular fa-trash-can"></i> Delete
               </button>
@@ -68,6 +69,9 @@
         </tr>
       </tbody>
     </table>
+    </div>
+
+    
 </template>
 
 

@@ -53,26 +53,16 @@
         }
 
         @media (max-width: 565.98px) {
-        .loginMain {
+/*         .loginMain {
           margin-top:22vh;
           margin-bottom:10%;
-        }
-
-        .registerMain {
-          margin-top:15vh;
-          margin-bottom:-50%;
-        }
+        } */
       }
 
       @media (min-width: 566px) {
-        .loginMain {
+/*         .loginMain {
          margin-top:14rem;
-        }
-
-        .registerMain {
-          margin-top:8%;
-          margin-bottom:-50%;
-        }
+        } */
       }
        
       .custom-toggler.navbar-toggler {

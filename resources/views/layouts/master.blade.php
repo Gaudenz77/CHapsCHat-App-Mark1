@@ -54,12 +54,12 @@
 
         @media (max-width: 565.98px) {
         .loginMain {
-          margin-top:22vh;
+          margin-top:23vh;
           margin-bottom:10%;
         }
 
         .registerMain {
-          margin-top:15vh;
+          margin-top:17vh;
           margin-bottom:-50%;
         }
       }
@@ -112,13 +112,13 @@
         </div>
     </main>
 
-<footer class="footer mt-5 py-3 bg-footer-gradient footerOwn">
+<footer class="footer mt-5 ms-3 py-3 bg-footer-gradient footerOwn">
   <div class="container-fluid text-sm-start text-md-center">
     <button id="footerButton" class="btn btn-circleOwn btn-danger"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
-    <span id="footerContent" class="span1"><a href="{{ url('/about') }}" class="nav-item  ms-0 py-0 footerlinknText" style="color:#ffc107;"><b>- Dare To Meet Me?</b></a><br><b  style="color:  blue;">Copyright &copy; @ {{date('d/m/Y')}}</span>
+    <span id="footerContent" class="span1"><a href="{{ url('/about') }}" class="nav-item mt-5 ms-0 py-0" style="color:#ffc107;"><b class="">Dare To Meet Me?</b></a><br><b  style="color:  blue;">Copyright &copy; @ {{date('d/m/Y')}}</span>
   </div>
+  <button class="btn btn-own ms-2" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
 </footer>
-
 </div>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     
@@ -157,7 +157,18 @@ const markdownContent = "This is a **bold** sentence.\n\n```javascript\nconsole.
 // Render the markdown content using Marked.js
 outputContainer.innerHTML = marked(markdownContent);
 
-
+function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    window.addEventListener('scroll', function() {
+      var button = document.querySelector('.back-to-top');
+      if (window.pageYOffset > 200) {
+        button.classList.add('show');
+      } else {
+        button.classList.remove('show');
+      }
+    });
 
 
 /* function reloadTwice() {
@@ -172,6 +183,8 @@ outputContainer.innerHTML = marked(markdownContent);
 } */
 
 </script>
+
+
 
 <!-- toggle mode script start -->
     @include('components.darkmodeToggle')

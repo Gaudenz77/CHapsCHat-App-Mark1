@@ -7,50 +7,36 @@
 
 @section('content')
 
-    <body class="antialiased">
-        <header>
-            @include('layouts.navigation')
-        </header>
         <div id="icon">
             <i class="iconshooter fa-solid fa-face-grin-squint-tears fa-5x {{-- fa-beat --}}"></i><p style="font-family:'Roboto', sans-serif: font-size:50%;">Catch Me If U Can!</p>
           </div>
     
 
-          <div class="container mt-3 p-5 d-flex ">
+          <div class="container{{--  mt-3 p-5 d-flex  --}}">
             <div class="row align-items-center justify-content-center">
-              {{-- <h2 class="text-center mb-5">
-                {{ __('WELCOME TO CHaps-CHat') }}
-              </h2> --}}
 
-            <div class="row justify-content-center">               
-                <div class="colSquare col-sm-3 mx-4 mb-4 {{-- animate__animated animate__backInLeft animate__delay-2s --}}"  style="height: 300px;">
-                    {{-- <img class="img-fluid" src="./assets/img/square_red.svg" alt="logo-placeholder"> --}}
-                    {{-- <p class="m-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores rem eveniet eaque vitae necessitatibus id!</p> --}}
-                </div>
+              <div class="row justify-content-center">               
+                  <div class="colSquare col-sm-3 mx-sm-4 me-md-4 me-lg-4 mb-4 {{-- animate__animated animate__backInLeft animate__delay-2s --}}"  style="height: 300px;"></div>
 
-                <div class="colCircle rounded-circle col-sm-3 mb-4 {{-- animate__animated animate__backInDown animate__delay-3s --}}" style="height: 300px;">
-                    {{-- <img class="img-fluid" src="./assets/img/circle_yellow.svg" alt="logo-placeholder"> --}}
-                 {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores rem eveniet eaque vitae necessitatibus id!</p> --}}
-                </div>
+                  <div class="colCircle rounded-circle col-sm-3 mb-4 {{-- animate__animated animate__backInDown animate__delay-3s --}}" style="height: 300px;"></div>
 
-                <div class="col-sm-3 position-relative {{-- animate__animated animate__backInRight animate__delay-4s --}}" style="height: 300px;">
-                    {{-- <img class="img-fluid position-absolute" style="transform: scale(1.07); margin-top:3%; margin-left:-10%" src="./assets/img/triangle_blue.svg" alt="logo-placeholder"> --}}   
-                  <div class="square">
-                    <div class="colTriangle mx-4n"></div>
+                  <div class="col-sm-3 position-relative {{-- animate__animated animate__backInRight animate__delay-4s --}}" style="height: 300px;">
+                    <div class="square">
+                      <div class="colTriangle"></div>
+                    </div>
                   </div>
-                </div>
 
-                <h2 class="text-center mt-5">
-                  {{ __('WELCOME TO CHaps-CHat') }}
-                </h2>
+                  <h2 class="text-center mt-5">
+                    {{ __('WELCOME TO CHaps-CHat') }}
+                  </h2>
 
-            </div>
+              </div>
 
-            <div class="row justify-content-center mt-5">
-                <div class="col">
-                   <p> ipsum dolor sit, amet consectetur adipisicing elit. Cumque, nulla? Corporis perferendis veritatis mollitia nesciunt magnam necessitatibus itaque hic quia provident unde dolores ad fuga, repellat voluptate enim facere. Voluptates.</p>      
-                </div>
-            </div>
+              <div class="row justify-content-center mt-5">
+                  <div class="col-12 text-center">
+                    {{-- TEXT --}}
+                  </div>
+              </div>
           </div>
         
 @endsection

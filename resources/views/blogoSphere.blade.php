@@ -2,9 +2,11 @@
 
 @section('title', 'ChapsChat')
 
+@section('body-class', 'blogMain')
+
 @section('content')
 
-<section class="blogMain">
+<section class="">
     <div class="container-fluid">
         <div class="row justify-content-center align-items-start" {{-- style="height: 100vh;" --}}>
             <div class="col-sm-4 circleBig bg-info {{-- mt-md-5 mt-5 --}} mb-0" id="formContainer2" style="display: none;height: 100vh;">
@@ -22,7 +24,7 @@
                     </div>
                     @endauth
                     
-                    <div class="row justify-content-evenly">
+                    <div class="row {{-- justify-content-evenly --}}">
                         <my-blog-content></my-blog-content>
                     </div>
                 </div>
