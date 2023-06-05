@@ -25,7 +25,7 @@
         </div>
 
         <h1 class="display-3 text-center mt-5 {{-- animate__animated animate__zoomInUp animate__delay-5s --}}">
-          <b>{{ __('Welcome To ChapsChat') }}</b>
+          <b>{{ __('Welcome To CHapsCHat') }}</b>
         </h1>
     </div>
 

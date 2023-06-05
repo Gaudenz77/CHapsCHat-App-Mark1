@@ -143,7 +143,7 @@
 <footer class="footer mt-5 ms-3 py-3 bg-footer-gradient footerOwn">
   <div class="container-fluid text-sm-start text-md-center">
     <button class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
-    <button id="footerButton" class="btn btn-circleOwn {{-- btn-danger --}}"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
+    <button id="footerButton" class="btn btn-circleFoot {{-- btn-danger --}}"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
     <span id="footerContent" class="span1"><a href="{{ url('/about') }}" class="nav-item mt-2 ms-0 py-0" style="color:#ffc107;"><b class="">Dare To Meet Me?</b></a><br><b  style="color:  blue;">Copyright &copy; @ {{date('d/m/Y')}}</span>
   </div>
   {{-- <button class="btn btn-own ms-2" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button> --}}

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md fixed-top container-fluid">
     <img src="./assets/img/Group 26.svg" alt="logo_image" class="logoImg img-fluid mt-3 mx-0">
-    <h1 class="display-2 display-md-6"><a class="brand myNavUnderline mt-0 mx-0 me-2" href="{{ url('/') }}"><b>{{ config('app.name', 'ChapsChat') }}</b></a></h1>
+    <h1 class="display-2 display-md-6"><a class="brand myNavUnderline mt-0 mx-0 me-2" href="{{ url('/') }}"><b>{{ config('app.name', 'CHapsCHat') }}</b></a></h1>
           <button class="navbar-toggler custom-toggler mb-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -9,7 +9,7 @@
               <div class="offcanvas-title" id="offcanvasNavbarLabel">
                 </div>
                 <img src="./assets/img/Group 26.svg" alt="logo_image" class="img-fluid">
-                <h2><a class="brand myNavToggleTitle" href="{{ url('/') }}"> {{ config('app.name', 'ChapsChat') }} </a></h2>
+                <h2><a class="brand myNavToggleTitle" href="{{ url('/') }}"> {{ config('app.name', 'CHapsCHat') }} </a></h2>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             
