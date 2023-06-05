@@ -23,14 +23,7 @@ class MyLibraryController extends Controller
         return response()->json($library);
     }
 
-    /* public function index()
-    {
-        $libraries = MyLibrary::where('user_id', auth()->user()->id)->get();
-
-        return view('knowledgeSphere', compact('libraries'));
-    } */
-
-        public function index()
+    public function index()
     {
         $libraries = MyLibrary::where('user_id', auth()->user()->id)->get();
 
@@ -40,23 +33,23 @@ class MyLibraryController extends Controller
     public function destroy($id)
     {
         $library = MyLibrary::find($id);
-    
+
         if ($library && $library->user_id == auth()->user()->id) {
             $library->delete();
             return response()->json(['success' => true]);
         }
-    
+
         return response()->json(['success' => false]);
     }
 
     public function edit($id)
     {
         $library = MyLibrary::find($id);
-    
+
         if ($library && $library->user_id == auth()->user()->id) {
             return response()->json($library);
         }
-    
+
         return response()->json(['success' => false]);
     }
 
@@ -76,8 +69,7 @@ class MyLibraryController extends Controller
 
             return response()->json($library);
         }
-    
+
         return response()->json(['success' => false]);
     }
-
 }

@@ -1,12 +1,7 @@
 <template>
-  <div>
-    <h2>My Library</h2>
-
-    
-    
     <div class="filters">
       <div>
-        <button class="btn btn-own" type="button" role="button" id="createButton"><i class="fa-solid fa-circle-plus fa-2xl"></i> Create</button>
+        <button class="btn btn-own" type="button" role="button" id="createButton"><i class="fa-solid fa-circle-plus fa-3x"></i> Create</button>
       </div>
       <label for="filter">Filter by:</label>
       <select v-model="selectedFilter" id="filter">
@@ -28,38 +23,55 @@
         <input type="text" v-model="selectedContent" id="content">
       </div>
     </div>
-    <table class="table table-striped">
+    <div class="table-responsive">
+      <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">Id</th>
+          <!-- <th scope="col">Id</th> -->
           <th scope="col">Topic</th>
           <th scope="col">Content</th>
-          <th scope="col">Created At</th>
+          <!-- <th scope="col">Created At</th> -->
+          <th scope="col">Updated At</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="library in filteredLibraries" :key="library.id">
-          <td>{{ library.id }}</td>
-          <td>{{ library.topic }}</td>
-          <td>{{ library.content }}</td>
-          <td>{{ formatDate(library.created_at) }}</td>
+          <!-- <td>{{ library.id }}</td> -->
           <td>
-            <div class="textfieldKnowledge">
+            <template v-if="editMode === library.id">
+              <input type="text" v-model="libraryEditTopic" />
+            </template>
+            <template v-else>
+              {{ library.topic }}
+            </template>
+          </td>
+          <td id="contentKnowledge" style="max-width: 500px;">
+            <template v-if="editMode === library.id">
+              <textarea class="col-12 form-controll" type="text" rows="5" v-model="libraryEditContent"></textarea>
+            </template>
+            <template v-else>
+              <div style="word-break: break-word;">{{ library.content }}</div>
+            </template>
+          </td>
+          <!-- <td>{{ formatDate(library.created_at) }}</td> -->
+          <td>{{ formatDate(library.updated_at) }}</td>
+          <td>
+            <div class="">
               <button class="btn text-center" type="button" role="button" @click="deleteLibrary(library.id)">
-              <i class="fa-regular fa-trash-can"></i> Delete
-            </button>
-            <button class="btn text-center" type="button" role="button" @click="editLibrary(library.id)">
-              <i class="fa-regular fa-edit"></i> Edit
-            </button>
-
+                <i class="fa-regular fa-trash-can"></i> Delete
+              </button>
+              <button class="btn text-center" type="button" role="button" @click="toggleEditMode(library.id)">
+                <i class="fa-regular fa-edit"></i> Edit
+              </button>
             </div>
-            
           </td>
         </tr>
       </tbody>
     </table>
-  </div>
+    </div>
+
+    
 </template>
 
 
@@ -68,15 +80,19 @@
 import axios from 'axios';
 import moment from 'moment';
 
+
 export default {
   data() {
     return {
       selectedFilter: 'all',
       selectedDate: moment().format('YYYY-MM-DD'),
-      selectedTopic : '',
+      selectedTopic: '',
       selectedContent: '',
       searchTerm: '',
       libraries: [],
+      editMode: null,
+      libraryEditTopic: '',
+      libraryEditContent: '',
     }
   },  
   mounted() {
@@ -110,15 +126,6 @@ export default {
 
   },
   methods: {
-/*     fetchLibraries() {
-      axios.get('/mylibraries')
-        .then(response => {
-          this.libraries = response.data
-        })
-        .catch(error => {
-          console.log(error)
-        })
-    }, */
     deleteLibrary(id) {
       axios.delete(`/mylibrary/${id}`)
         .then(response => {
@@ -132,30 +139,72 @@ export default {
       console.log('Editing library:', library);
       this.$emit('edit-library', library.id);
     },
-    submitForm() {
-      axios.post('/mylibrary', {
-        topic: this.topic,
-        content: this.content
-      })
-      .then(response => {
-        // Handle successful response
-        console.log(response.data);
-        this.$emit('library-added');
-        this.topic = '';
-        this.content = '';
-      })
-      .catch(error => {
-        // Handle error
-        console.log(error.response.data);
-      });
-    },
+  submitForm() {
+    if (this.editMode) {
+      // Update existing library entry
+      axios.put(`/mylibrary/${this.library.id}`, this.form)
+        .then(response => {
+          console.log(response.data);
+          this.resetForm();
+          this.$emit('library-updated'); // Emit custom event for library update
+        })
+        .catch(error => {
+          // ...error handling...
+          console.log(error.response.data);
+
+        });
+    } else {
+      // Create new library entry
+      axios.post('/mylibrary', this.form)
+        .then(response => {
+          console.log(response.data);
+          this.resetForm();
+          this.$emit('library-created'); // Emit custom event for library creation
+        })
+        .catch(error => {
+          // ...error handling...
+          console.log(error.response.data);
+        });
+    }
+  },
     formatDate(date) {
       return moment(date).format('  MM/DD/YYYY');
-    }
+    },
+    toggleEditMode(libraryId) {
+      if (this.editMode === libraryId) {
+        this.updateLibrary(libraryId, this.libraryEditTopic, this.libraryEditContent);
+      } else {
+        this.editMode = libraryId;
+        const library = this.getLibraryById(libraryId);
+        if (library) {
+          this.libraryEditTopic = library.topic;
+          this.libraryEditContent = library.content;
+        }
+      }
+    },
+    updateLibrary(libraryId, newTopic, newContent) {
+    axios
+        .put(`/mylibrary/${libraryId}`, {
+          topic: newTopic,
+          content: newContent,
+        })
+        .then(response => {
+          const library = this.getLibraryById(libraryId);
+          if (library) {
+            library.topic = newTopic;
+            library.content = newContent;
+          }
+          this.editMode = null;
+        })
+        .catch(error => {
+          console.log(error.response.data);
+          console.log(error.response.status);
+        });
+    },
+    getLibraryById(libraryId) {
+        return this.libraries.find(library => library.id === libraryId);
+    },
+
   },
 }
 </script>
-
-
-  
-  

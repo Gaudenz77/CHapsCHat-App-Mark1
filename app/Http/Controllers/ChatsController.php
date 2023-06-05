@@ -13,6 +13,7 @@ class ChatsController extends Controller
     {
         $this->middleware('auth');
     }
+        /* return view('playground', compact('feedbackMaps')); */
 
     /**
      * Show chats
@@ -21,20 +22,20 @@ class ChatsController extends Controller
      */
     public function index()
     {
-        return view('playground');
+        $messages = Message::orderBy('created_at', 'asc')->get();
+        return view('playground', compact('messages'));
     }
 
     /**
-     * Fetch all messages in reverse order
+     * Fetch all messages in ascending order
      *
      * @return Message
      */
     public function fetchMessages()
     {
-        return Message::with('user')->orderBy('created_at', 'desc')->get();
+        return Message::with('user')->orderBy('created_at', 'asc')->get();
     }
 
-    
     /**
      * Persist message to database
      *
@@ -49,11 +50,40 @@ class ChatsController extends Controller
             'message' => $request->input('message')
         ]);
 
-    
-
         broadcast(new MessageSent($user, $message))->toOthers();
 
         return ['status' => 'Message Sent!'];
+    }
+
+        /**
+     * Delete a message
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        $message = Message::findOrFail($id);
+    
+        if ($message && $message->user_id == auth()->user()->id) {
+            $message->delete();
+    
+            // If the request expects JSON response, return a JSON message
+            if (request()->expectsJson()) {
+                return response()->json(['success' => true]);
+            }
+    
+            /* return redirect()->route('playground.index')
+                ->with('success', 'Message deleted successfully!'); */
+        }
+    
+        // If the request expects JSON response, return a JSON message
+        if (request()->expectsJson()) {
+            return response()->json(['success' => false]);
+        }
+    
+        return redirect()->route('playground.index')
+            ->with('error', 'Failed to delete message!');
     }
 
 }

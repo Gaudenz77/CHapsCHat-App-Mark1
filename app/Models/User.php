@@ -58,4 +58,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Blog::class);
     }
+
+    public function library()
+    {
+        return $this->hasMany(MyLibrary::class);
+    }
 }

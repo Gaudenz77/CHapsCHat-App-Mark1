@@ -5,7 +5,7 @@
         </h2>
     
         <p class="mt-1 text-sm text-gray-600">
-            {{ __('Ensure your account is using a long, random password to stay secure.') }}
+            {{ __('Use a long, random password, NOT "password" or "mom".') }}
         </p>
     </header>
     
@@ -13,26 +13,32 @@
         @csrf
         @method('put')
     
-        <div class="mb-3">
+        <div class="mb-3 d-flex justify-content-center">
+            <div class="col-9">
             <label for="current_password" class="form-label">{{ __('Current Password') }}</label>
             <input id="current_password" name="current_password" type="password" class="form-control" autocomplete="current-password">
             <div class="invalid-feedback">@error('current_password') {{ $message }} @enderror</div>
+            </div>
         </div>
     
-        <div class="mb-3">
+        <div class="mb-3 d-flex justify-content-center">
+            <div class="col-9">
             <label for="password" class="form-label">{{ __('New Password') }}</label>
             <input id="password" name="password" type="password" class="form-control" autocomplete="new-password">
             <div class="invalid-feedback">@error('password') {{ $message }} @enderror</div>
+            </div>
         </div>
     
-        <div class="mb-3">
+        <div class="mb-3 d-flex justify-content-center">
+            <div class="col-9">
             <label for="password_confirmation" class="form-label">{{ __('Confirm Password') }}</label>
             <input id="password_confirmation" name="password_confirmation" type="password" class="form-control" autocomplete="new-password">
             <div class="invalid-feedback">@error('password_confirmation') {{ $message }} @enderror</div>
+            </div>
         </div>
     
-        <div class="d-flex gap-4 align-items-center">
-            <button type="submit" class="btn btn-primary">{{ __('Save') }}</button>
+        <div class="d-flex gap-4 justify-content-center align-items-center">
+            <button type="submit" class="btn btn-circleOwn2"><i class='fa-regular fa-save fa-2xl'></i>  {{ __('Save') }}</button>
     
             @if (session('status') === 'password-updated')
                 <p
@@ -45,13 +51,5 @@
             @endif
         </div>
     </form>
-    
-    
-    {{-- <div class="container">
-        <div class="row">
-            <div class="col bg-warning">
-                
-            </div>
-        </div>
-    </div> --}}
+
 </section>

@@ -2,30 +2,36 @@
 
 @section('title', 'ChapsChat')
 
-@section('content')
-<section class="knowledgeMain">
-<div class="container mt-3">
-    <div class="row justify-content-center">
-      {{-- <button id="createButton">Create</button> --}}
+@section('body-class', 'knowledgeMain')
 
-      <div class="col-sm-3 bg-warning circleKnowledgeForm" id="formContainer1" style="display: none;">
+@section('content')
+
+<section class="">
+<div class="container mt-3">
+
+    <div class="row justify-content-center align-items-center" style="">
+
+      <div class="col-sm-12 col-md-8 col-lg-8 p-3 rounded bg-danger order-2 mx-5 knowledgTable" {{-- style="width:100%;" --}}>
+        <h2 class="pt-3">{{ Auth::user()->name }}'s Library</h2> 
+
+        <my-library-content></my-library-content>
+
+      </div>
+
+      <div class="col-sm-2 bg-warning circleKnowledgeForm order-1 text-center mb-4" id="formContainer" style="display: none;">
         <div class="form-wrapper">
-          {{-- <button type="button" id="closeButton" class="btn-close" aria-label="Close"></button> --}}
-          <h2 class="mt-3">{{ Auth::user()->name }}'s Library</h2>
+          <h2 class="mt-5 p-2">Library</h2>
+
           <my-library-form></my-library-form>
+
         </div>
       </div>
-      
-      
-        
-        <div class="col-sm-7 bg-danger">
-          <my-library-content></my-library-content>
-        </div>
-    </div>
-    <div class="row justify-content-center">
 
     </div>
+    
 </div>
+
 </section>
+
 
 @endsection
