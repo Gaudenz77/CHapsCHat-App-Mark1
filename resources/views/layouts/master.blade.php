@@ -36,8 +36,7 @@
 
     <!---------------------------------------------------------------- Google Fonts IN CUSTOM.CSS -->
     
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/custom.js', 'resources/css/areset.css', 'resources/css/custom.css'])
-    {{-- 'resources/css/app.css', --}}
+    @vite(['resources/sass/app.scss', 'resources/css/areset.css', 'resources/css/custom.css'])
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -56,13 +55,18 @@
 
         @media (max-width: 565.98px) {
         .loginMain {
-          margin-top:23vh;
-          margin-bottom:10%;
+          margin-top:32vh;
+          margin-bottom:11vh;
         }
 
         .registerMain {
-          margin-top:16vh;
+          margin-top:25vh;
           margin-bottom:16vh;
+        }
+
+        .welcomeMain {
+          margin-top:16rem;
+          margin-bottom:5rem;
         }
 
         .blogMain {
@@ -73,6 +77,11 @@
         .aboutMain {
         margin-top:22vh;
         margin-bottom:16vh;
+        }
+
+        .navbar {
+          height: 16rem;
+          background-color:#091540;
         }
 
       }
@@ -100,6 +109,8 @@
         .aboutCol{
           height:40vh;
         }
+
+
 
       }
        
@@ -133,22 +144,21 @@
             @include('layouts.navigation')
         </header>
 
-    <!-- Begin page content -->
-    <main>
-        <div id="app">
-            @yield('content')
-        </div>
-    </main>
+        <main>
+            <div id="app">
+                @yield('content')
+            </div>
+        </main>
+  </div>
 
 <footer class="footer mt-5 ms-3 py-3 bg-footer-gradient footerOwn">
   <div class="container-fluid text-sm-start text-md-center">
     <button class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
-    <button id="footerButton" class="btn btn-circleFoot {{-- btn-danger --}}"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
+    <button id="footerButton" class="btn btn-circleFoot"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
     <span id="footerContent" class="span1"><a href="{{ url('/about') }}" class="nav-item mt-2 ms-0 py-0" style="color:#ffc107;"><b class="">Dare To Meet Me?</b></a><br><b  style="color:  blue;">Copyright &copy; @ {{date('d/m/Y')}}</span>
   </div>
-  {{-- <button class="btn btn-own ms-2" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button> --}}
 </footer>
-</div>
+
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     
 <script>
@@ -201,21 +211,7 @@ function scrollToTop() {
       }
     });
 
-
-/* function reloadTwice() {
-  location.reload(); // First reload
-  setTimeout(function() {
-    location.reload(); // Second reload after a delay (e.g., 1 second)
-  }, 1000);
-  location.reload(); // First reload
-      setTimeout(function() {
-    location.reload(); // Second reload after a delay (e.g., 1 second)
-  }, 1000);
-} */
-
 </script>
-
-
 
 <!-- toggle mode script start -->
     @include('components.darkmodeToggle')

@@ -12,7 +12,6 @@
     
     <link rel="icon" href="./assets/img/krakatoom_favicon.png" type="image/x-icon">
     
-
     <title>{{ config('app.name', 'ChapsChat') }}</title>
 
     <!---------------------------------------------------------------- Fontawesome link -->
@@ -37,8 +36,7 @@
 
     <!---------------------------------------------------------------- Google Fonts IN CUSTOM.CSS -->
     
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/js/custom.js', 'resources/css/areset.css', 'resources/css/custom.css'])
-    {{-- 'resources/css/app.css', --}}
+    @vite(['resources/sass/app.scss', 'resources/css/areset.css', 'resources/css/custom.css'])
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -60,6 +58,7 @@
           margin-top:22vh;
           margin-bottom:10%;
         } */
+
       }
 
       @media (min-width: 566px) {
@@ -93,10 +92,9 @@
 
 <body class="@yield('body-class')">
 
-    <!-- Page Content -->
-    <main>
-        {{ $slot }}
-    </main>
+        <main>
+            {{ $slot }}
+        </main>
 
    
         
@@ -106,8 +104,8 @@
           <span id="footerContent" class="span1"><a href="{{ url('/about') }}" class="nav-item  ms-0 py-0"><b>- Dare To Meet Me?</b></a><br><b>Copyright &copy; @ {{date('d/m/Y')}}</span>
         </div>
       </footer>
-      
-      </div>
+    </div>
+
       <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
           
       <script>
@@ -151,7 +149,7 @@
           @include('components.darkmodeToggle')
       <!-- toggle mode script end-->
           
-        @vite(['resources/js/app.js', 'resources/js/custom.js'])
+      @vite(['resources/js/app.js', 'resources/js/custom.js'])
       
       </body>
       
