@@ -90,7 +90,7 @@ moveIcon();
   const icon = document.getElementById('icon');
   icon.addEventListener('click', () => {
       console.log('Icon clicked');
-      window.location.href='http://localhost/register';
+      window.location.href='http://127.0.0.1:8000/register';
   });
 });
 
