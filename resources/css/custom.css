@@ -103,7 +103,7 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     height:15%;
   }
   .navbar {
-    height: 12rem;
+    height: 16rem;
     background-color:#091540;
   }
   .playgroundMain {
@@ -134,7 +134,7 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
   }
 
   .profileMain {
-    margin-top:13rem;
+    margin-top:16rem;
     margin-bottom:9rem;
   }
 
@@ -182,7 +182,7 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
   }
 
   .navbar-toggler-icon {   
-    font-size:0px;
+    /* font-size:20px; */
       
   }
 

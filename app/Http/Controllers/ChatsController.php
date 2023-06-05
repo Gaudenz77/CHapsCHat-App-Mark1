@@ -36,8 +36,6 @@ class ChatsController extends Controller
         return Message::with('user')->orderBy('created_at', 'asc')->get();
     }
 
-
-    
     /**
      * Persist message to database
      *
@@ -51,8 +49,6 @@ class ChatsController extends Controller
         $message = $user->messages()->create([
             'message' => $request->input('message')
         ]);
-
-    
 
         broadcast(new MessageSent($user, $message))->toOthers();
 
@@ -89,9 +85,5 @@ class ChatsController extends Controller
         return redirect()->route('playground.index')
             ->with('error', 'Failed to delete message!');
     }
-    
-    
-    
-    
 
 }

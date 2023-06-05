@@ -17,13 +17,16 @@
         @csrf
         @method('patch')
     
-        <div class="mb-3">
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" name="name" type="text" class="form-control" :value="old('name', $user->name)" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name')" />
+        <div class="mb-3 d-flex justify-content-center">
+            <div class="col-9">
+                <x-input-label for="name" :value="__('Name')" />
+                <x-text-input id="name" name="name" type="text" class="form-control" :value="old('name', $user->name)" required autofocus autocomplete="name" />
+                <x-input-error class="mt-2" :messages="$errors->get('name')" />
+            </div>
         </div>
     
-        <div class="mb-3">
+        <div class="mb-3 d-flex justify-content-center">
+            <div class="col-9">
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="form-control" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
@@ -45,7 +48,9 @@
                     @endif
                 </div>
             @endif
+            </div>
         </div>
+
     
         <div class="d-flex align-items-center gap-4 justify-content-center">
             <button type="submit" class="btn btn-circleOwn"><i class='fa-regular fa-save fa-2xl'></i> {{ __('Save') }}</button>
