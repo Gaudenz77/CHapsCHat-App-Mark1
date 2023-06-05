@@ -31,7 +31,7 @@
           <th scope="col">Topic</th>
           <th scope="col">Content</th>
           <!-- <th scope="col">Created At</th> -->
-          <!-- <th scope="col">Updated At</th> -->
+          <th scope="col">Updated At</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
@@ -55,7 +55,7 @@
             </template>
           </td>
           <!-- <td>{{ formatDate(library.created_at) }}</td> -->
-          <!-- <td>{{ formatDate(library.updated_at) }}</td> -->
+          <td>{{ formatDate(library.updated_at) }}</td>
           <td>
             <div class="">
               <button class="btn text-center" type="button" role="button" @click="deleteLibrary(library.id)">

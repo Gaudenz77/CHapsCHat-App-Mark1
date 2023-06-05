@@ -65,34 +65,6 @@ class ChatsController extends Controller
      * @param  int  $id
      * @return Response
      */
-/*     public function deleteMessage($id)
-    {
-        $message = Message::find($id);
-
-        if (!$message) {
-            return response()->json(['error' => 'Message not found'], 404);
-        }
-
-        $this->authorize('delete', $message);
-
-        $message->delete();
-
-        return ['status' => 'Message deleted successfully'];
-    }
- */
-
- /*    public function deleteMessage($id)
-    {
-        $message = Message::find($id);
-
-        if ($message && $message->user_id == auth()->user()->id) {
-            $message->delete();
-            return response()->json(['success' => true]);
-        }
-
-        return response()->json(['success' => false]);
-    } */
-
     public function destroy($id)
     {
         $message = Message::findOrFail($id);

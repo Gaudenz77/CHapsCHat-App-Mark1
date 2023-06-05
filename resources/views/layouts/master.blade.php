@@ -36,7 +36,7 @@
 
     <!---------------------------------------------------------------- Google Fonts IN CUSTOM.CSS -->
     
-    @vite(['resources/sass/app.scss', 'resources/css/areset.css', 'resources/css/custom.css'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/areset.css', 'resources/css/custom.css'])
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
