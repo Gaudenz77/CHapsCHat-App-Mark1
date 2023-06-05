@@ -14,8 +14,7 @@
       </div>
       
       <div class="text-center pt-3">
-        <!-- <button type="submit" class="btn btn-circle mt-2 mb-2 p-1" v-text="editMode ? 'Update' : 'Submit'"></button> -->
-        <button type="submit" class="btn btn-circle mt-2 mb-2 p-1" v-html="editMode ? '<i class=\'fa-regular fa-edit\'></i> Update' : '<i class=\'fa-regular fa-save fa-2xl\'></i><br> Submit'"></button>
+        <button type="submit" class="btn btn-circle mt-2 mb-2 p-1" v-html="editMode ? '<i class=\'fa-regular fa-edit\'></i> Update' : '<i class=\'fa-regular fa-save fa-2xl\'></i><br>'"></button>
       </div>
 
       <input type="hidden" name="_token" :value="form.csrfToken">
