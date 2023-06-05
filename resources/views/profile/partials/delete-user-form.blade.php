@@ -11,10 +11,11 @@
 
     <button
         type="button"
-        class="btn btn-danger"
+        class="btn btn-circleOwn3 pb-5"
         data-bs-toggle="modal"
         data-bs-target="#confirm-user-deletion"
-    >{{ __('Delete Account') }}</button>
+    >
+    <i class="fa-solid fa-skull fa-4x"></i>{{ __('Delete Account') }}</button>
 
     <div
         class="modal fade"

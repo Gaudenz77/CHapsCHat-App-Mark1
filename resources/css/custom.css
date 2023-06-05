@@ -51,7 +51,8 @@ body.dark-mode .material-symbols-outlined {
 
 .btn-auth {
   background-color:#ebebeb;
-  width:8rem;
+  width:7.5rem;
+  height:7.5rem;
   border-radius: 50%;
   border-width:5px;
   border-color:yellow;
@@ -60,11 +61,12 @@ body.dark-mode .material-symbols-outlined {
 
 body.dark-mode .btn-auth {
   background-color:#333;
-  width:8rem;
+  width:7.5rem;
+  height:7.5rem;
   border-radius: 50%;
   border-width:5px;
   border-color:blue;
-  padding:1rem 1rem 1rem 1rem !important;
+  padding:1rem 0 1rem 0 !important;
 }
 
 body.dark-mode  {
@@ -129,6 +131,11 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     margin-top:12rem;
     margin-bottom:10rem;
     width:140% !important;
+  }
+
+  .profileMain {
+    margin-top:13rem;
+    margin-bottom:9rem;
   }
 
   .colTriangle {
@@ -198,13 +205,6 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     border-radius: 50%;
     margin-left:-30%;
   }
-
-  .blogMain {
-    margin-top:15vh;
-    margin-bottom:18vh;
-  }
-
-  
 }
 
 
@@ -229,6 +229,10 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     background-color:#091540;
   }
 
+  .welcomeMain {
+    margin-top:15rem;
+  }
+
   .playgroundMain {
     margin-top:14vh;
     /* margin-bottom:15vh; */
@@ -236,7 +240,12 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
 
   .knowledgeMain {
     margin-top:9rem;
-    margin-bottom:8rem;
+    margin-bottom:13rem;
+  }
+
+  .profileMain {
+    margin-top:9rem;
+    margin-bottom:3rem;
   }
 
   .circleBlog {
@@ -317,11 +326,6 @@ margin-left:10% !important;
 
 .knowledgTable {
   width:100%;
-  }
-
-.blogMain {
-  margin-top:15vh;
-  margin-bottom:11vh;
   }
 
 }
@@ -666,7 +670,7 @@ body.dark-mode .chatbody   {
   min-width: 33.3%;
   min-height: 33.3%;
   border-radius: 50%;
-  padding: 18% 12% 3% 12%;/* add padding to create space between content and border */
+  padding: 18% 12% 6% 12%;/* add padding to create space between content and border */
   box-sizing: border-box; /* include padding in element's total width and height */
 }
 
@@ -675,7 +679,7 @@ body.dark-mode .chatbody   {
   min-width: 33%;
   min-height: 33%;
   border-radius: 50%;
-  padding:8%;
+  padding:5rem 2rem 1rem 2rem;
 }
 
 .scrollableChat {
@@ -822,8 +826,8 @@ body.dark-mode .btn-own {
 }
 
 .btn-circleOwn {
-  width: 9rem;
-  height: 9rem;
+  width: 6rem;
+  height: 6rem;
   font-size: 90%;
   font-weight:bold;
   /* color:#ffc107; */
@@ -836,17 +840,27 @@ body.dark-mode .btn-own {
 }
 
 .btn-circleOwn2 {
-  width: 9rem;
-  height: 9rem;
+  width: 6rem;
+  height: 6rem;
   font-size: 90%;
   font-weight:bold;
-  /* color:#ffc107; */
   background-color:#ffc107;
   padding: 8px 8px;
   border-radius: 50%;
   text-align: center;
   margin-bottom: 15px; 
-  /* box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
+}
+
+.btn-circleOwn3 {
+  width: 7rem;
+  height: 7rem;
+  font-size: 90%;
+  font-weight:bold;
+  background-color:#2de3be;
+  padding: 2rem 2rem 5rem 2rem !important;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 15px; 
 }
 
 
@@ -856,7 +870,7 @@ body.dark-mode .btn-circleOwn {
   font-size: 90%;
   font-weight:bold; */
   /* color:#ffc107; */
-  background-color:#f25151;
+  background-color:#0d6efd;
   /* padding: 8px 8px;
   border-radius: 50%;
   text-align: center;
@@ -877,6 +891,20 @@ body.dark-mode .btn-circleOwn2 {
     margin-bottom: 15px; 
     box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
   }
+
+  body.dark-mode .btn-circleOwn3 {
+    /*   width: 8rem;
+      height: 8rem;
+      font-size: 90%;
+      font-weight:bold; */
+      /* color:#ffc107; */
+      background-color:#f25151;
+      /* padding: 8px 8px;
+      border-radius: 50%;
+      text-align: center;
+      margin-bottom: 15px; 
+      box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
+    }
 
 #closeButton {
   color:red !important;

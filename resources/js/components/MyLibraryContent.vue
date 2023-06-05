@@ -1,7 +1,7 @@
 <template>
     <div class="filters">
       <div>
-        <button class="btn btn-own" type="button" role="button" id="createButton"><i class="fa-solid fa-circle-plus fa-2xl"></i> Create</button>
+        <button class="btn btn-own" type="button" role="button" id="createButton"><i class="fa-solid fa-circle-plus fa-3x"></i> Create</button>
       </div>
       <label for="filter">Filter by:</label>
       <select v-model="selectedFilter" id="filter">

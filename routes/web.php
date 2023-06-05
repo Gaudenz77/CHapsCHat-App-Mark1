@@ -26,6 +26,11 @@ Route::get('/blogoSphere', function () {
     return view('blogoSphere');
 })->name('blogoSphere');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');

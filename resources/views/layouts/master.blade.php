@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <!-- Cross Server Reference token setting  -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Hier wird der Wert von der Konstanten APP_NAME aus .env eingetragen, falls vorhanden. Andernfalls wird der Default-String "Laravel" verwendet -->
     
-    <title>{{ config('app.name', 'ChapsChat') }}</title>
+    <link rel="icon" href="./assets/img/krakatoom_favicon.png" type="image/x-icon">
+
+    <title>{{ config('app.name', 'ChapsChat') }}</title>  
 
     <!---------------------------------------------------------------- Fontawesome link -->
 
@@ -59,9 +61,20 @@
         }
 
         .registerMain {
-          margin-top:17vh;
-          margin-bottom:-50%;
+          margin-top:16vh;
+          margin-bottom:16vh;
         }
+
+        .blogMain {
+        margin-top:22vh;
+        margin-bottom:18vh;
+        }
+
+        .aboutMain {
+        margin-top:22vh;
+        margin-bottom:16vh;
+        }
+
       }
 
       @media (min-width: 566px) {
@@ -73,6 +86,21 @@
           margin-top:8%;
           margin-bottom:-50%;
         }
+
+        .blogMain {
+        margin-top:14vh;
+        margin-bottom:11vh;
+        }
+
+        .aboutMain {
+        margin-top:35vh;
+        margin-bottom:18vh;
+        }
+
+        .aboutCol{
+          height:40vh;
+        }
+
       }
        
       .custom-toggler.navbar-toggler {
@@ -115,7 +143,7 @@
 <footer class="footer mt-5 ms-3 py-3 bg-footer-gradient footerOwn">
   <div class="container-fluid text-sm-start text-md-center">
     <button class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
-    <button id="footerButton" class="btn btn-circleOwn btn-danger"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
+    <button id="footerButton" class="btn btn-circleOwn {{-- btn-danger --}}"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
     <span id="footerContent" class="span1"><a href="{{ url('/about') }}" class="nav-item mt-2 ms-0 py-0" style="color:#ffc107;"><b class="">Dare To Meet Me?</b></a><br><b  style="color:  blue;">Copyright &copy; @ {{date('d/m/Y')}}</span>
   </div>
   {{-- <button class="btn btn-own ms-2" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button> --}}

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md fixed-top container-fluid">
     <img src="./assets/img/Group 26.svg" alt="logo_image" class="logoImg img-fluid mt-3 mx-0">
-    <h1 class=" logoFont"><a class="brand myNavUnderline mt-0 mx-0 me-2" href="{{ url('/') }}">{{ config('app.name', 'CHapsCHat') }}</a></h1>
-          <button class="navbar-toggler custom-toggler {{-- me-3 --}} mb-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <h1 class="display-2 display-md-6"><a class="brand myNavUnderline mt-0 mx-0 me-2" href="{{ url('/') }}"><b>{{ config('app.name', 'CHapsCHat') }}</b></a></h1>
+          <button class="navbar-toggler custom-toggler mb-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -10,7 +10,7 @@
                 </div>
                 <img src="./assets/img/Group 26.svg" alt="logo_image" class="img-fluid">
                 <h2><a class="brand myNavToggleTitle" href="{{ url('/') }}"> {{ config('app.name', 'CHapsCHat') }} </a></h2>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             
             <div class="offcanvas-body px-3">
@@ -25,21 +25,21 @@
               <li class="nav-item py-3">
               <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/playground') }}" onclick="reloadTwice()">Playground</a>
               </li>
-              @endauth
+            @endauth
+
               <li class="nav-item py-3">
                 <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
               </li>
-              @auth
-              
-  
+
+            @auth
               <li class="nav-item py-3">
                   <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/knowledgeSphere') }}">KnowledgeSphere </a>
               </li>
-  
+            @endauth
               <li class="nav-item py-3">
               <a class="myNavUnderline px-0 {{ (request()->is('about')) ? '' : '' }}" aria-current="page" href="{{ url('/about') }}">About</a>
               </li>
-
+            @auth
                 <li class="nav-item dropdown mx-0 pe-4">
                     <a class="myNavUnderline dropdown-toggle m-3 px-0 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ Auth::user()->name }}

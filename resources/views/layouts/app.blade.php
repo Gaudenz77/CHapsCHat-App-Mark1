@@ -10,6 +10,9 @@
 
     <!-- Hier wird der Wert von der Konstanten APP_NAME aus .env eingetragen, falls vorhanden. Andernfalls wird der Default-String "Laravel" verwendet -->
     
+    <link rel="icon" href="./assets/img/krakatoom_favicon.png" type="image/x-icon">
+    
+
     <title>{{ config('app.name', 'ChapsChat') }}</title>
 
     <!---------------------------------------------------------------- Fontawesome link -->
@@ -94,6 +97,8 @@
     <main>
         {{ $slot }}
     </main>
+
+   
         
     <footer class="footer mt-5 py-3 bg-footer-gradient">
         <div class="container-fluid text-sm-start text-md-center">

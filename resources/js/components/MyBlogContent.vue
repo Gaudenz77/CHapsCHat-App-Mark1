@@ -3,6 +3,7 @@
     <div v-for="blog in blogs" :key="blog.id" class="col bg-danger rounded circleBlog ms-0 me-5 mb-2" data-aos="flip-left">
       <div class="textfieldBlogTitle">
         <h3>{{ blog.title }}</h3>
+        <p>{{ blog.user_id }}</p>
         <p><strong>Topic:</strong> {{ blog.topic }}</p>
         <p class="textfieldBlogContent">{{ blog.content }}</p>
         <button class="btn mt-2 mb-2 p-1"  type="button" role="button" @click="deleteBlog(blog.id)"><i class="fa-regular fa-trash-can"></i> Delete</button>
@@ -21,6 +22,11 @@ export default {
     return {
       blogs: [],
     };
+  },
+  computed: {
+    reversedMessages() {
+      return this.messages.slice().reverse();
+    },
   },
   mounted() {
     this.fetchBlogs();
@@ -48,3 +54,5 @@ export default {
   },
 };
 </script>
+
+
