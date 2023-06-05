@@ -10,7 +10,7 @@
     <div class="container-fluid">
 
         <div class="row justify-content-center align-items-start">
-            <div class="col-sm-4 circleBig bg-info mb-0" id="formContainer2" style="display: none;height: 100vh;">
+            <div class="col-sm-4 circleBig bg-info mb-0" id="formContainer" style="display: none;height: 100vh;">
                 <div class="form-wrapper">
                     <h3 class="">Create Blog</h3>
                     <my-blog-form></my-blog-form>
@@ -25,7 +25,7 @@
                     </div>
                     @endauth
                     
-                    <div class="row {{-- justify-content-evenly --}}">
+                    <div class="row">
                         <my-blog-content></my-blog-content>
                     </div>
                 </div>
@@ -36,4 +36,33 @@
     </div>
 </section>
 
+
+
 @endsection
+
+<script>
+    // CREATE BLOG DIV -------------------------------------------------------TEST IF ENTRY PAGE STILL WORKING!!!
+
+document.addEventListener('DOMContentLoaded', () => {
+  const createButton = document.getElementById('createButton2');
+const formContainer = document.getElementById('formContainer');
+
+createButton.addEventListener('click', () => {
+  formContainer.style.display = 'block';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const createButton = document.getElementById('createButton2');
+  const formContainer = document.getElementById('formContainer');
+  const closeButton = document.getElementById('closeButton2');
+
+  createButton.addEventListener('click', () => {
+    formContainer.style.display = 'block';
+  });
+
+  closeButton.addEventListener('click', () => {
+    formContainer.style.display = 'none';
+  });
+});
+</script>

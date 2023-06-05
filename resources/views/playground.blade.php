@@ -139,7 +139,7 @@ require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.37.0/min/vs' 
 
 // MS PAINT START  --------------------------------
 
-  document.addEventListener('DOMContentLoaded', () => {
+/*   document.addEventListener('DOMContentLoaded', () => {
   const showButton = document.getElementById('showButton');
   const hideButton = document.getElementById('hideButton');
   const paintsphereDiv = document.getElementById('paintsphere');
@@ -154,7 +154,7 @@ require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.37.0/min/vs' 
 
   // Optional: Hide the div by default
   paintsphereDiv.style.display = 'none';
-});
+}); */
 
 </script>
 

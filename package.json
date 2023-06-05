@@ -21,7 +21,6 @@
     "dependencies": {
         "aos": "^2.3.4",
         "laravel-echo": "^1.15.0",
-        "marked": "^5.0.3",
         "moment": "^2.29.4",
         "pusher-js": "^8.0.2"
     }

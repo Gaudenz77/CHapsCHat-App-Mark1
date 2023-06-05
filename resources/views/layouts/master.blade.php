@@ -24,12 +24,6 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
     
-    <!-- AOS -->
-
-    <!-- MARKDOWN LIBRARY -->
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
     <!-- Animate.css -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -187,16 +181,6 @@ footerButton.addEventListener("click", function() {
   });
 });
 
-// Get the container element
-const outputContainer = document.getElementById('outputContainer');
-
-// Set the markdown content
-const markdownContent = "This is a **bold** sentence.\n\n```javascript\nconsole.log('Hello, world!');\n```";
-
-// Render the markdown content using Marked.js
-outputContainer.innerHTML = marked(markdownContent);
-
-
 // Scroll top
 function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -211,6 +195,18 @@ function scrollToTop() {
       }
     });
 
+  /* Reload page twice to grant vs code triggering */
+      function reloadTwice() {
+      // First reload
+      setTimeout(() => {
+        location.reload();
+      }, 500); // Set the desired delay (in milliseconds) between the reloads
+
+      // Second reload
+      setTimeout(() => {
+        location.reload();
+      }, 1000); // Set the desired delay (in milliseconds) between the reloads
+    }
 </script>
 
 <!-- toggle mode script start -->

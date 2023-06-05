@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const createButton = document.getElementById('createButton');
-const formContainer = document.getElementById('formContainer1');
+const formContainer = document.getElementById('formContainer');
 
 createButton.addEventListener('click', () => {
   formContainer.style.display = 'block';
@@ -11,7 +11,7 @@ createButton.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const createButton = document.getElementById('createButton');
-  const formContainer = document.getElementById('formContainer1');
+  const formContainer = document.getElementById('formContainer');
   const closeButton = document.getElementById('closeButton');
 
   createButton.addEventListener('click', () => {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const createButton = document.getElementById('createButton2');
-const formContainer = document.getElementById('formContainer2');
+const formContainer = document.getElementById('formContainer');
 
 createButton.addEventListener('click', () => {
   formContainer.style.display = 'block';
@@ -36,7 +36,7 @@ createButton.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const createButton = document.getElementById('createButton2');
-  const formContainer = document.getElementById('formContainer2');
+  const formContainer = document.getElementById('formContainer');
   const closeButton = document.getElementById('closeButton2');
 
   createButton.addEventListener('click', () => {
@@ -86,15 +86,10 @@ function moveIcon() {
 
 // Start the animation
 moveIcon();
-
-
-  
   document.addEventListener('DOMContentLoaded', () => {
   const icon = document.getElementById('icon');
   icon.addEventListener('click', () => {
       console.log('Icon clicked');
-      /* window.location.href = '{{ route("playground") }}'; */
-      /* window.location.href='{{ url("/playground") }}'; */
       window.location.href='http://localhost/register';
   });
 });

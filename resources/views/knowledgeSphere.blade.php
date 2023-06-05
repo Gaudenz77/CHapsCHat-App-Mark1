@@ -18,7 +18,7 @@
 
       </div>
 
-      <div class="col-sm-2 bg-warning circleKnowledgeForm order-1 text-center mb-4" id="formContainer1" style="display: none;">
+      <div class="col-sm-2 bg-warning circleKnowledgeForm order-1 text-center mb-4" id="formContainer" style="display: none;">
         <div class="form-wrapper">
           <h2 class="mt-5 p-2">Library</h2>
 
@@ -32,5 +32,6 @@
 </div>
 
 </section>
+
 
 @endsection

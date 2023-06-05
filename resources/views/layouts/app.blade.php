@@ -24,12 +24,6 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
     
-    <!-- AOS -->
-
-    <!-- MARKDOWN LIBRARY -->
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
     <!-- Animate.css -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -133,15 +127,6 @@
           }
         });
       });
-      
-      // Get the container element
-      const outputContainer = document.getElementById('outputContainer');
-      
-      // Set the markdown content
-      const markdownContent = "This is a **bold** sentence.\n\n```javascript\nconsole.log('Hello, world!');\n```";
-      
-      // Render the markdown content using Marked.js
-      outputContainer.innerHTML = marked(markdownContent);
       
       </script>
       
