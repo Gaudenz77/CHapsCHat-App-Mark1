@@ -11,7 +11,7 @@
 </div>
 
 ---
-# Meet'n'Code - CHapsCHat-App
+# Meet'n'Code - CHapsCHat-App - Test
 
 ### Project context
 You have learned and worked with many powerful web technologies. You will now build a website with social media features, plus a content that is worth sharing with future employers, customers, networking-relatives and other professionals. 
