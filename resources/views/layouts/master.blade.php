@@ -36,7 +36,9 @@
 
     <!-- Scripts -->
 
-    <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+   {{--  <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script> --}}
 
     <script src="https://unpkg.com/monaco-editor@0.27.0/min/vs/loader.js"></script>
 

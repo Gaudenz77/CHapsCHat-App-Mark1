@@ -30,6 +30,7 @@ window.Echo = new Echo({
     forceTLS: true
 });
 
+
 // import Echo from 'laravel-echo';
 
 // import Pusher from 'pusher-js';

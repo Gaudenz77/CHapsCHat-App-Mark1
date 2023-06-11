@@ -35,10 +35,10 @@ import axios from 'axios';
 import Echo from 'laravel-echo';
 
 export default {
-  props: ['authUserId'],
+  props: ['authUserId', 'messages'],
   data() {
     return {
-      messages: []
+      messages: [],
     };
   },
   computed: {
@@ -46,8 +46,6 @@ export default {
       return this.messages.slice().reverse();
     },
     authUserId() {
-      // Assuming you have access to the authenticated user's ID
-      // Return the authenticated user's ID here
       return this.$props.authUserId;
     },
   },
