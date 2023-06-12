@@ -12,8 +12,8 @@
         </figcaption>
         <div class="text-end">
           <button v-if="message.user.id === authUserId" class="btn btn-danger btn-sm me-2 text-end" @click="deleteMessage(message.id)">
-          Delete
-        </button>
+            Delete
+          </button>
         </div>
       </div>
       <div class="dividerone"></div>
@@ -22,7 +22,6 @@
 </template>
 
 <style>
-
 .dividerone {
   height: 2px;
   background-color: black;
@@ -31,17 +30,11 @@
 </style>
 
 <script>
-
 import axios from 'axios';
 import Echo from 'laravel-echo';
 
 export default {
   props: ['authUserId', 'messages'],
-  data() {
-    return {
-      messages: [],
-    };
-  },
   computed: {
     reversedMessages() {
       return this.messages.slice().reverse();
@@ -70,15 +63,14 @@ export default {
           user: e.user
         });
       }).listenForWhisper('subscription_succeeded', (e) => {
-  console.log('Subscription succeeded:', e);
-});
-
+        console.log('Subscription succeeded:', e);
+      });
     } catch (error) {
       console.error('Error initializing Echo:', error);
     }
   },
   mounted() {
-    axios.get("/messages").then((response) => {
+    axios.get('/messages').then((response) => {
       this.messages = response.data.reverse();
     });
   },
