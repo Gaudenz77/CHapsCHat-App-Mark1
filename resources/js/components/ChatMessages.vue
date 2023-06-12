@@ -69,7 +69,10 @@ export default {
           message: e.message.message,
           user: e.user
         });
-      });
+      }).listenForWhisper('subscription_succeeded', (e) => {
+  console.log('Subscription succeeded:', e);
+});
+
     } catch (error) {
       console.error('Error initializing Echo:', error);
     }
