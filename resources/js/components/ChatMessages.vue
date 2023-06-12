@@ -37,11 +37,11 @@ import Echo from 'laravel-echo';
 
 export default {
   props: ['authUserId', 'messages'],
-  data() {
+/*   data() {
     return {
       messages: [],
     };
-  },
+  }, */
   computed: {
     reversedMessages() {
       return this.messages.slice().reverse();
