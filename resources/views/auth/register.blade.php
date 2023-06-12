@@ -23,7 +23,7 @@
                 </div>
               </div>
 
-            <div class="col-md-5 animate__animated animate__flipInY">
+            <div class="col-md-4 animate__animated animate__flipInY">
                 <div class="card circleAuth cardLogin">
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
