@@ -19,9 +19,9 @@
             <chat-form :user="{{ Auth::user() }}"></chat-form>
           </div>
         </div>
-        <div class="smooth-scroll scrollableChat">
-          <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
-        </div>
+          <div class="smooth-scroll scrollableChat">
+              <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
+          </div>
        <p class="test text-center mb-0 m-2 pt-5">Messageservice brought to you by<a href="https://pusher.com/">Pusher&copy;</a></p>
       </div>
 
@@ -69,6 +69,7 @@
 @endauth
 
 <script>
+  
 // FUNCTIONAL HTMML ONLY START --------------------------------
 
 // script Monaco in-site editor/preview --------------------------------

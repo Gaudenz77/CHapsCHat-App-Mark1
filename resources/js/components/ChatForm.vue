@@ -30,16 +30,14 @@ export default {
         const response = await axios.post('/messages/', {
           message: this.newMessage
         });
-        this.$emit("messagesent", {
-  user: this.user,
-  message: this.newMessage,
-});
-
+          this.$emit("messagesent", {
+          user: this.user,
+          message: this.newMessage,
+        });
         console.log(response.data);
       } catch (error) {
         console.error(error);
       }
-
       this.newMessage = "";
     },
   },
