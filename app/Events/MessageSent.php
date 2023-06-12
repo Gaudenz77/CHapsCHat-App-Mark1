@@ -48,6 +48,7 @@ class MessageSent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('playground');
+        /* return new PrivateChannel('playground'); */
+        return ('chapschat_june23 ');
     }
 }
