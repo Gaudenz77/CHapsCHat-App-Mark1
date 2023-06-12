@@ -42,7 +42,7 @@ class MessageSent implements ShouldBroadcast
     }
 
     /**
-     * Get the channels the event should broadcast on.
+     * Get the channels the event should broadcast on and on
      *
      * @return \Illuminate\Broadcasting\Channel|array
      */
