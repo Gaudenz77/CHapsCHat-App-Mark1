@@ -36,31 +36,33 @@
 
     <!-- Scripts -->
 
-    <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+   {{--  <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script> --}}
 
     <script src="https://unpkg.com/monaco-editor@0.27.0/min/vs/loader.js"></script>
 
     <!-- Include jQuery from a CDN or from your own server -->
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <style>
-        body {
+      body {
             /* background-color: black; */
-        }
+      }
 
-        @media (max-width: 565.98px) {
+      @media (max-width: 565.98px) {
         .loginMain {
-          margin-top:32vh;
-          margin-bottom:11vh;
+          margin-top:36vh;
+          margin-bottom:18vh;
         }
 
         .registerMain {
-          margin-top:25vh;
+          margin-top:30vh;
           margin-bottom:16vh;
         }
 
         .welcomeMain {
-          margin-top:16rem;
-          margin-bottom:5rem;
+          margin-top:19rem;
+          margin-bottom:8rem;
         }
 
         .blogMain {
@@ -74,10 +76,46 @@
         }
 
         .navbar {
-          height: 16rem;
+          height: 18rem;
           background-color:#091540;
         }
 
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          height: 24%;
+          width: 100%;
+          margin-top: 0;
+        }
+
+        .colTriangle {
+          left: 52%;
+        }
+
+        .navbar-toggler {   
+        /* font-size:20px; */
+        /*   margin-left:0rem;
+          margin-right: 0rem;  */
+        }
+
+        .logoImg {
+          width:110%;
+          margin-left:2rem;
+          padding-left:1rem;
+          position:relative;
+          left:0;
+          justify-content:center;
+        }
+
+        .wrapper {
+          width: 14vh;
+          padding-right: 2rem;
+        }
+
+        a.myNavToggleTitle {
+          color: #333;
+        }
       }
 
       @media (min-width: 566px) {
@@ -104,6 +142,10 @@
           height:40vh;
         }
 
+        .wrapper {
+          width: 20vh;
+          padding-right: 2rem;
+        }
 
 
       }

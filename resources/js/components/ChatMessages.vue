@@ -22,6 +22,7 @@
 </template>
 
 <style>
+
 .dividerone {
   height: 2px;
   background-color: black;
@@ -35,10 +36,10 @@ import axios from 'axios';
 import Echo from 'laravel-echo';
 
 export default {
-  props: ['authUserId'],
+  props: ['authUserId', 'messages'],
   data() {
     return {
-      messages: []
+      messages: [],
     };
   },
   computed: {
@@ -46,8 +47,6 @@ export default {
       return this.messages.slice().reverse();
     },
     authUserId() {
-      // Assuming you have access to the authenticated user's ID
-      // Return the authenticated user's ID here
       return this.$props.authUserId;
     },
   },
@@ -92,24 +91,28 @@ export default {
       this.messages.unshift(message);
     },
     deleteMessage(messageId) {
-      if (typeof messageId !== 'undefined') {
-        // If the message has an ID, it is saved in the database
-        axios.delete(`/messages/${messageId}`)
-          .then(response => {
-            // Handle successful deletion
-            console.log('Message deleted:', response.data);
-            // Remove the deleted message from the messages array
-            this.messages = this.messages.filter(message => message.id !== messageId);
-          })
-          .catch(error => {
-            // Handle deletion error
-            console.error('Error deleting message:', error);
-          });
-      } else {
-        // If the message doesn't have an ID, it is unsaved and can be directly removed from the messages array
-        this.messages = this.messages.filter(message => message.id !== undefined);
-      }
-    }
+  if (typeof messageId !== 'undefined') {
+    // If the message has an ID, it is saved in the database
+    axios.delete(`/messages/${messageId}`)
+      .then(response => {
+        // Handle successful deletion
+        console.log('Message deleted:', response.data);
+        // Find the index of the message in the messages array
+        const index = this.messages.findIndex(message => message.id === messageId);
+        // Remove the message from the messages array
+        if (index !== -1) {
+          this.messages.splice(index, 1);
+        }
+      })
+      .catch(error => {
+        // Handle deletion error
+        console.error('Error deleting message:', error);
+      });
+  } else {
+    // If the message doesn't have an ID, it is unsaved and can be directly removed from the messages array
+    this.messages = this.messages.filter(message => message.id !== undefined);
+  }
+}
   }
 };
 </script>

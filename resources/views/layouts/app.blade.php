@@ -46,20 +46,6 @@
         body {
             /* background-color: black; */
         }
-
-        @media (max-width: 565.98px) {
-/*         .loginMain {
-          margin-top:22vh;
-          margin-bottom:10%;
-        } */
-
-      }
-
-      @media (min-width: 566px) {
-/*         .loginMain {
-         margin-top:14rem;
-        } */
-      }
        
       .custom-toggler.navbar-toggler {
             border-color: rgb(255, 255, 0);

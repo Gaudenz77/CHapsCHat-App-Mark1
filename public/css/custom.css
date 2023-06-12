@@ -118,11 +118,6 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     /* border-radius: 100%; */
   }
 
-  .loginMain {
-    margin-top:0rem;
-    margin-bottom:10%;
-  }
-
   .welcomeMain {
     margin-top:13rem;
   }
@@ -146,9 +141,8 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     border-bottom: 300px solid blue;
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 52%;
     transform: translateX(-50%);
-    /* margin-left:5%; */
   }
 
   .offcanvas-body {
@@ -255,16 +249,6 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     /* border-radius: 50%; */
   }
   
-  .loginMain {
-    margin-top:22vh;
-    margin-bottom:10%;
-  }
-
-/*   .registerMain {
-    margin-top:15vh;
-    margin-bottom:-50%;
-  }  */
-
   .logoImg {
     width:15%;
     padding-left:1rem;
@@ -552,7 +536,7 @@ a.myNavToggleTitle {
   display: inline-block;
   margin: 0 10px;
   padding: 10px 0;
-  color: blue;
+  color: #333;
   text-decoration: none;
   position: relative;
 }

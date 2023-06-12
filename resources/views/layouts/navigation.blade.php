@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-md fixed-top container-fluid">
     <img src="./assets/img/Group 26.svg" alt="logo_image" class="logoImg img-fluid mt-3 mx-0">
-    <h1 class="display-2 display-md-6 ms-2"><a class="brand myNavUnderline mt-0 mx-0 ms-2 me-2" href="{{ url('/') }}"><b>{{ config('app.name', 'CHapsCHat') }}</b></a></h1>
+    <div class="display-2 display-md-6 ms-2 sm-my-0"><a class="brand myNavUnderline mt-0 mx-0 ms-2 me-2" href="{{ url('/') }}"><b>{{ config('app.name', 'CHapsCHat') }}</b></a></div>
+    <div class="toggleOwn">
+      @include('components.toggle')
+    </div>
           <button class="navbar-toggler custom-toggler mb-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -66,6 +69,6 @@
             </ul>
         </div>
     </div>
-    @include('components.toggle')
+    {{-- @include('components.toggle') --}}
   </nav>
 

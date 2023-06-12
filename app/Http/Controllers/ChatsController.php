@@ -11,9 +11,8 @@ class ChatsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        /* $this->middleware('auth'); */
     }
-        /* return view('playground', compact('feedbackMaps')); */
 
     /**
      * Show chats
@@ -22,7 +21,7 @@ class ChatsController extends Controller
      */
     public function index()
     {
-        $messages = Message::orderBy('created_at', 'asc')->get();
+        $messages = Message::latest()->get();
         return view('playground', compact('messages'));
     }
 

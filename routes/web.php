@@ -63,14 +63,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/blogosphere/{id}', [MyBlogController::class, 'destroy'])->name('blogosphere.destroy');
 });
 Route::get('/blogosphere', [MyBlogController::class, 'index'])->name('blogosphere.index');
+
 Route::middleware('auth')->group(function () {
-        Route::get('/playground', [ChatsController::class, 'index']);
-        Route::get('/messages', [ChatsController::class, 'fetchMessages']);
-        Route::post('/messages', [ChatsController::class, 'sendMessage'])->name('messages.store');
-        /* Route::delete('/messages/{id}', [ChatsController::class, 'deleteMessage'])->name('messages.delete'); */
-        Route::delete('/messages/{messageId}', [ChatsController::class, 'destroy'])->name('messages.destroy');
-
-
+    Route::get('/playground', [ChatsController::class, 'index']);
+    Route::get('/messages', [ChatsController::class, 'fetchMessages']);
+    Route::post('/messages', [ChatsController::class, 'sendMessage'])->name('messages.store');
+    Route::delete('/messages/{messageId}', [ChatsController::class, 'destroy'])->name('messages.destroy');
 });
 
 require __DIR__.'/auth.php';
