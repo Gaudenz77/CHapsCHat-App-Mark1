@@ -22,7 +22,7 @@
           <div class="smooth-scroll scrollableChat">
               <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
           </div>
-       <p class="test text-center mb-0 m-2 pt-5">Messageservice brought to you by<a href="https://pusher.com/">Pusher&copy;</a></p>
+       <p class="test text-center mb-0 m-2 pt-5">Messageservice brought at thisto you by<a href="https://pusher.com/">Pusher&copy;</a></p>
       </div>
 
       <div class="col-md-8">
