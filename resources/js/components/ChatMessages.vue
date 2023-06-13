@@ -75,9 +75,13 @@ export default {
     }
   },
   mounted() {
-    axios.get("/messages").then((response) => {
-      this.messages = response.data.reverse();
-    });
+    axios.get("/messages", {
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('access_token')}`
+    }
+  }).then((response) => {
+    this.messages = response.data.reverse();
+  });
   },
   methods: {
     sendMessage() {
