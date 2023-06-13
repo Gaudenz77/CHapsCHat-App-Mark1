@@ -65,8 +65,7 @@ export default {
         }
       });
       window.Echo.private('playground').listen('MessageSent', (e) => {
-        // Update the messages array with the new message data
-        this.addMessage({
+        this.messages.unshift({
           message: e.message.message,
           user: e.user
         });
