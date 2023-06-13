@@ -64,12 +64,19 @@ export default {
           }
         }
       });
-      window.Echo.private('playground').listen('MessageSent', (e) => {
-        this.messages.unshift({
-          message: e.message.message,
-          user: e.user
-        });
-      });
+      window.Echo.private('playground')
+  .listen('.pusher:subscription_succeeded', (e) => {
+    // Handle subscription success
+    console.log('Subscription succeeded:', e);
+  })
+  .listen('MessageSent', (e) => {
+    // Handle MessageSent event
+    console.log('Message received:', e);
+    this.messages.unshift({
+      message: e.message.message,
+      user: e.user
+    });
+  });
     } catch (error) {
       console.error('Error initializing Echo:', error);
     }
