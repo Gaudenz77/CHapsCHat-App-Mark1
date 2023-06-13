@@ -22,6 +22,9 @@ export default {
   data() {
     return {
       newMessage: "",
+      user: {
+        id: this.authUserId,
+      },
     };
   },
   methods: {
