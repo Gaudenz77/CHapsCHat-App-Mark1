@@ -12,7 +12,7 @@
 
     <div class="row">
 
-      <div class="col-md-4 px-4 mt-2 bg-success">
+      <div class="col-md-4 px-4 mt-2 bg-info">
         <div class="logiInfo mt-2 p-1 pt-4">
           <h5>WELCOME to the MESSAGECORNER</h5>
           <div class="chatFormField mt-5 px-0">
