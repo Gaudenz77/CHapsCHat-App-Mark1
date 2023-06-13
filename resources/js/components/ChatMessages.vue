@@ -39,7 +39,7 @@ export default {
   props: ['authUserId', 'messages'],
   data() {
     return {
-      messages: ['message', 'message2'],
+      messages: [],
     };
   },
   computed: {
@@ -75,7 +75,7 @@ export default {
     }
   },
   mounted() {
-    axios.get("/messages", {
+    axios.get('/messages', {
     headers: {
       Authorization: `Bearer ${localStorage.getItem('access_token')}`
     }
