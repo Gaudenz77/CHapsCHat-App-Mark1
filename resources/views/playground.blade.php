@@ -16,11 +16,11 @@
         <div class="logiInfo mt-2 p-1 pt-4">
           <h5>WELCOME to the MESSAGECORNER</h5>
           <div class="chatFormField mt-5 px-0">
-            <chat-form :user="{{ Auth::user() }}"></chat-form>
+            <chat-form v-on:messagesent="addMessage" :user="{{ Auth::user() }}"></chat-form>
           </div>
         </div>
           <div class="smooth-scroll scrollableChat">
-              <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
+              <chat-messages :messages="messages" :auth-user-id="{{ Auth::id() }}"></chat-messages>
           </div>
        <p class="test text-center mb-0 m-2 pt-5">Messageservice brought at thisto you by<a href="https://pusher.com/">Pusher&copy;</a></p>
       </div>

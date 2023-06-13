@@ -70,7 +70,7 @@ export default {
     console.log('Subscription succeeded:', e);
   })
   .listen('MessageSent', (e) => {
-    // Handle MessageSent event
+    // Handle MessageSent event 
     console.log('Message received:', e);
     this.messages.unshift({
       message: e.message.message,
