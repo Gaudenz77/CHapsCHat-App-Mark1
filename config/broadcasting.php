@@ -40,6 +40,9 @@ return [
                 'useTLS' => true,
                 'encrypted' => true,
             ],
+            'channels' => [
+                'private-playground',
+            ],
         ],
 
         'ably' => [
