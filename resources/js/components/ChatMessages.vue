@@ -39,7 +39,7 @@ export default {
   props: ['authUserId', 'messages'],
   data() {
     return {
-      messages: [],
+      messages: ['message', 'message2'],
     };
   },
   computed: {
