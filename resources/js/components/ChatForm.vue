@@ -30,7 +30,7 @@ export default {
   methods: {
     async sendMessage() {
       try {
-        const response = await axios.post('/messages/', {
+        const response = await axios.post('messages', {
           message: this.newMessage
         });
           this.$emit("messagesent", {

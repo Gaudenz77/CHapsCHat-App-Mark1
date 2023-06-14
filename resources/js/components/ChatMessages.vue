@@ -75,7 +75,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('/messages', {
+    axios.get('messages', {
     headers: {
       Authorization: `Bearer ${localStorage.getItem('access_token')}`
     }
