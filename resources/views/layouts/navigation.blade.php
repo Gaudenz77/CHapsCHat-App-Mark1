@@ -13,7 +13,7 @@
                 </div>
                 <img src="./assets/img/Group 26.svg" alt="logo_image" class="img-fluid">
                 <h2><a class="brand myNavToggleTitle" href="{{ url('/') }}"> {{ config('app.name', 'CHapsCHat') }} </a></h2>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close me-5 mb-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             
             <div class="offcanvas-body px-3">
