@@ -64,8 +64,18 @@ export default {
           }
         }
       });
-      window.Echo.private('playground').listen('MessageSent', (e) => {
-        this.messages.unshift({
+          // Get the socket ID
+    this.socketId = this.echo.socketId();
+    window.Echo.private('playground')
+  .listen('.pusher:subscription_succeeded', (e) => {
+                // Handle the received event
+                console.log('Subscription succeeded:', e);
+        // Update the messages array with the new message data
+      })
+  .listen('MessageSent', (e) => {
+    // Handle MessageSent event
+    console.log('Message received:', e);
+        this.addMessage({
           message: e.message.message,
           user: e.user
         });
