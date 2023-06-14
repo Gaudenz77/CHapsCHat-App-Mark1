@@ -60,9 +60,7 @@ export default {
         authEndpoint: '/broadcasting/auth',
         auth: {
           headers: {
-            
-            Authorization: { "X-CSRF-Token": localStorage.getItem('access_token')} 
-            
+            Authorization: `Bearer ${localStorage.getItem('access_token')}`,
           }
         }
       });
