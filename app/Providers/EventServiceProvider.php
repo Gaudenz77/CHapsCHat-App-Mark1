@@ -23,9 +23,9 @@ class EventServiceProvider extends ServiceProvider
     /**
      * Register any events for your application.
      */
-    public function boot()
+    public function boot(): void
     {
-        parent::boot();
+        //
     }
 
     /**
