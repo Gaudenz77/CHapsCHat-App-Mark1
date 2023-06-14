@@ -106,8 +106,9 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     height: 16rem;
     background-color:#091540;
   }
+
   .playgroundMain {
-    margin-top:11rem;
+    margin-top:16rem;
     margin-bottom:10rem;
   }
 
