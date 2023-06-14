@@ -430,6 +430,7 @@ body.dark-mode .type {
 /* FOOTER LINK ----------------------------------*/
 .span1 {
   color:#333;
+  height:8.5vh
 }
 
 body.dark-mode  .span1 {
