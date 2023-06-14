@@ -1077,12 +1077,7 @@ left:-30px;
   margin-top: 0;
 }
 
-#footerButton {
-  position: fixed;
-  bottom: -8px;
-  right: .5rem;
-  z-index: 9999;
-}
+
 
 .scrollBtn {
   position: fixed;
@@ -1094,7 +1089,6 @@ left:-30px;
 #footerContent {
   display: none;
   left:0;
-  margin-bottom:10vh;
 }
 
 .footerlinkText {
