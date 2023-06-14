@@ -106,7 +106,6 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     height: 16rem;
     background-color:#091540;
   }
-
   .playgroundMain {
     margin-top:16rem;
     margin-bottom:10rem;
@@ -230,7 +229,7 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
 
   .playgroundMain {
     margin-top:14vh;
-    /* margin-bottom:15vh; */
+    margin-bottom:8vh;
   }
 
   .knowledgeMain {
@@ -432,8 +431,10 @@ body.dark-mode .type {
 .span1 {
   color:#333;
 }
+
 body.dark-mode  .span1 {
-  color:#ebebeb;
+  color: #ebebeb;
+  height: 8.5vh;
 }
 
 nav {
@@ -834,7 +835,8 @@ body.dark-mode .btn-own {
   padding: 8px 8px;
   border-radius: 50%;
   text-align: center;
-  margin-bottom: 15px; 
+  margin-bottom:5rem; 
+  z-index:-2;
   /* box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
 }
 
@@ -1077,12 +1079,17 @@ left:-30px;
   margin-top: 0;
 }
 
-
+#footerButton {
+  position: fixed;
+  bottom: 0px;
+  right: .5rem;
+  z-index: 9999;
+}
 
 .scrollBtn {
   position: fixed;
-  bottom: -8px;
-  right: 10rem;
+  bottom: -10px;
+  right: .5rem;
   z-index: 9999;
 }
 

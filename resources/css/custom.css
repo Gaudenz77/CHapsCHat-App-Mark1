@@ -433,7 +433,8 @@ body.dark-mode .type {
 }
 
 body.dark-mode  .span1 {
-  color:#ebebeb;
+  color: #ebebeb;
+  height: 8.5vh;
 }
 
 nav {
@@ -834,7 +835,7 @@ body.dark-mode .btn-own {
   padding: 8px 8px;
   border-radius: 50%;
   text-align: center;
-  margin-bottom:15rem; 
+  margin-bottom:5rem; 
   z-index:-2;
   /* box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
 }
@@ -1080,15 +1081,15 @@ left:-30px;
 
 #footerButton {
   position: fixed;
-  bottom: -8px;
+  bottom: 0px;
   right: .5rem;
   z-index: 9999;
 }
 
 .scrollBtn {
   position: fixed;
-  bottom: -8px;
-  right: 10rem;
+  bottom: -10px;
+  right: .5rem;
   z-index: 9999;
 }
 
