@@ -64,22 +64,19 @@ export default {
           }
         }
       });
-          // Get the socket ID
-    this.socketId = this.echo.socketId();
-    window.Echo.private('playground')
+      window.Echo.private('your-channel-name')
   .listen('.pusher:subscription_succeeded', (e) => {
-                // Handle the received event
-                console.log('Subscription succeeded:', e);
-        // Update the messages array with the new message data
-      })
+    // Handle subscription success
+    console.log('Subscription succeeded:', e);
+  })
   .listen('MessageSent', (e) => {
     // Handle MessageSent event
     console.log('Message received:', e);
-        this.addMessage({
-          message: e.message.message,
-          user: e.user
-        });
-      });
+    this.messages.unshift({
+      message: e.message.message,
+      user: e.user
+    });
+  });
     } catch (error) {
       console.error('Error initializing Echo:', error);
     }
