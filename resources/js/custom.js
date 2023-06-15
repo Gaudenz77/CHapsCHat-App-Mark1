@@ -90,7 +90,7 @@ moveIcon();
   const icon = document.getElementById('icon');
   icon.addEventListener('click', () => {
       console.log('Icon clicked');
-      window.location.href='http://krakatoom.com/register';
+      window.location.href='http://krakatoom.ch/register';
   });
 });
 
