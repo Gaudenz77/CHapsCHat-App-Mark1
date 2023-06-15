@@ -149,8 +149,4 @@
     });
   </script>
   
-  
-  
-  
-  
 @endsection
