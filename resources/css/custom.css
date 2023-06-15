@@ -288,6 +288,7 @@ body.dark-mode .formIcons {
   background-clip: padding-box, text;
   background-repeat: no-repeat;
   animation: b 0.7s infinite steps(1), t calc(var(--n) * 0.2s) steps(var(--n)) forwards;
+  /* animation: t 1s linear infinite, b 10s linear infinite; */
 }
 
 body.dark-mode .type {
@@ -299,6 +300,7 @@ body.dark-mode .type {
   background-clip: padding-box, text;
   background-repeat: no-repeat;
   animation: b 0.7s infinite steps(1), t calc(var(--n) * 0.2s) steps(var(--n)) forwards;
+  /* animation: t 1s linear infinite, b 10s linear infinite; */
 }
 
 @keyframes t {

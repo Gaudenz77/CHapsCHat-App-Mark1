@@ -281,13 +281,14 @@ body.dark-mode .formIcons {
 /* TYPEWRITER CSS ---------------------------------------------------------------*/
 .type {
   font-family: 'IBM Plex Mono', cursive;
-  color: #ffffff;
-  background: linear-gradient(-90deg, #181818 5px, #ffffff 0) 10px 0, linear-gradient(#181818 0 0) 0 0;
+  color: #0000;
+  background: linear-gradient(-90deg, #181818 5px, #0000 0) 10px 0, linear-gradient(#181818 0 0) 0 0;
   background-size: calc(var(--n) * 1ch) 200%;
   -webkit-background-clip: padding-box, text;
   background-clip: padding-box, text;
   background-repeat: no-repeat;
   animation: b 0.7s infinite steps(1), t calc(var(--n) * 0.2s) steps(var(--n)) forwards;
+  /* animation: t 1s linear infinite, b 10s linear infinite; */
 }
 
 body.dark-mode .type {
@@ -299,6 +300,7 @@ body.dark-mode .type {
   background-clip: padding-box, text;
   background-repeat: no-repeat;
   animation: b 0.7s infinite steps(1), t calc(var(--n) * 0.2s) steps(var(--n)) forwards;
+  /* animation: t 1s linear infinite, b 10s linear infinite; */
 }
 
 @keyframes t {
@@ -311,10 +313,6 @@ body.dark-mode .type {
   50% {
     background-position: 0 -100%, 0 0;
   }
-}
-
-.type {
-  animation: t 1s linear infinite, b 10s linear infinite;
 }
 
 .show {
