@@ -110,7 +110,7 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
   }
 
   .navbar {
-    height: 15%;
+    height: 13%;
     background-color: #091540;
   }
 
@@ -619,6 +619,22 @@ body.dark-mode .card1 {
 
 /* ---------------------------------------------------------------- EDITOR MONACO START */
 
+.editorCol {
+  background-color:#e79503;
+}
+
+body.dark-mode .editorCol {
+  background-color:#1969fe;
+}
+
+.previewCol {
+  background-color:#fffbef;
+}
+
+body.dark-mode .previewCol {
+  background-color:#010511;
+}
+
 .containerEditor {
   margin-top: 1rem;
 }
@@ -643,7 +659,7 @@ body.dark-mode .card1 {
 }
 
 #preview {
-  height: 300px;
+  height:75vh;
   width: 100%;
   border: none;
 }

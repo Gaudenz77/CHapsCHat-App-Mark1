@@ -92,27 +92,49 @@
     var audio = document.getElementById("myAudioReg");
     var playButton = document.getElementById("playButtonLog");
     var colElement = document.getElementById("colElementLog");
-    var playCountPercentage = 50; // Play count as a percentage
-    var playCount = audio.duration * (playCountPercentage / 100); // Calculate play count based on audio duration
-    var currentPlayCount = 0; // Counter for tracking play count
-    
+    var playCount = 3.5; // Desired play count (e.g., 3.5 seconds)
+    var isPlaying = false; // Flag to track audio playing state
+
+    function playAudio() {
+      audio.currentTime = 0; // Reset current time
+      audio.play();
+      colElement.classList.add("show");
+      isPlaying = true;
+    }
+
+    function handleAudioEnd() {
+      playCount -= 1; // Decrease play count by 1 second
+      if (playCount > 0) {
+        playAudio();
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        isPlaying = false;
+      }
+    }
+
     // Play audio and show the colElement when the button is clicked
     playButton.addEventListener("click", function() {
-      if (currentPlayCount < playCount) {
-        audio.play();
-        currentPlayCount++;
-        colElement.classList.add("show");
+      if (!isPlaying) {
+        playAudio();
       }
     });
-    
-    // Event listener to reset the play count when the audio ends
+
+    // Event listener to handle audio pause and end
+    audio.addEventListener('pause', function() {
+      if (isPlaying) {
+        handleAudioEnd();
+      }
+    });
+
     audio.addEventListener('ended', function() {
-      if (currentPlayCount >= playCount) {
-        currentPlayCount = 0; // Reset the play count
+      if (isPlaying) {
+        handleAudioEnd();
       }
     });
   });
 </script>
+
 
 
   

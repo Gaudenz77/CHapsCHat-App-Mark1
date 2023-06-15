@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md fixed-top container-fluid">
     <img src="./assets/img/Group 26.svg" alt="logo_image" class="logoImg img-fluid mx-0 mt-sm-n1" style="margin-bottom: -1rem;">
     @include('components.toggle')
-    <div class="display-2 display-md-6 ms-2 sm-my-0" style="height:80%;"><a class="brand myNavUnderline mt-0 mx-0 ms-2 me-2" href="{{ url('/') }}"><b>{{ config('app.name', 'CHapsCHat') }}</b></a></div>
+    <div class="display-4 display-md-6 ms-2 sm-my-0"><a class="brand myNavUnderline mt-0 mx-0 ms-2 me-2" href="{{ url('/') }}"><b>{{ config('app.name', 'CHapsCHat') }}</b></a></div>
    
           <button class="navbar-toggler custom-toggler me-3 mb-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -25,40 +25,42 @@
               </li>
   
               <li class="nav-item py-3">
-              <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/playground') }}" onclick="reloadTwice()">Playground</a>
+              <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/playground') }}" onclick="reloadTwice()"><b>Playground</b></a>
               </li>
             @endauth
 
               <li class="nav-item py-3">
-                <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}">Blogosphere </a>
+                <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}"><b>Blogosphere</b></a>
               </li>
 
             @auth
               <li class="nav-item py-3">
-                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/knowledgeSphere') }}">KnowledgeSphere </a>
+                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/knowledgeSphere') }}"><b>KnowledgeSphere</b></a>
               </li>
             @endauth
               <li class="nav-item py-3">
-              <a class="myNavUnderline px-0 {{ (request()->is('about')) ? '' : '' }}" aria-current="page" href="{{ url('/about') }}">About</a>
+              <a class="myNavUnderline px-0 {{ (request()->is('about')) ? '' : '' }}" aria-current="page" href="{{ url('/about') }}"><b>About</b></a>
               </li>
             @auth
                 <li class="nav-item dropdown mx-0 pe-4">
                     <a class="myNavUnderline dropdown-toggle m-3 px-0 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{ Auth::user()->name }}
+                    <b>{{ Auth::user()->name }}</b>
                     </a>
                     <ul class="dropdown-menu dropdownProfile" id="myDropdownAccount">
-                      <li><a class="nav-item myNavUnderline px-0 " href="{{ url('profile') }}">Profile</a></li>
-                      <li><a class="nav-item myNavUnderline px-0 " href="{{ route('logout') }}"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log out</a></li>
+                      <li class="nav-item py-3"><a class="myNavUnderline px-0 " href="{{ url('profile') }}"><b>Profile</b></a></li>
+                      <li class="nav-item py-3"><a class="myNavUnderline px-0 " href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><b>Log out</b></a></li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
             @else
 
-                      <li><a class="nav-item myNavUnderline py-4 px-0 " href="{{ route('login') }}" class="">Login</a></li>
+                      <li class="nav-item py-3">
+                        <a class="nav-item myNavUnderline px-0" href="{{ route('login') }}" class=""><b>Login</b></a></li>
 
             @if (Route::has('register'))
-                      <li><a class="nav-item myNavUnderline py-4 px-0 " href="{{ route('register') }}" class="">Register</a></li>
+                      <li class="nav-item py-3">
+                        <a class="nav-item myNavUnderline px-0" href="{{ route('register') }}" class=""><b>Register</b></a></li>
 
             @endif
             @endauth

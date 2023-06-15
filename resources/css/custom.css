@@ -110,7 +110,7 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
   }
 
   .navbar {
-    height: 15%;
+    height: 12%;
     background-color: #091540;
   }
 
@@ -119,7 +119,7 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
   }
 
   .playgroundMain {
-    margin-top: 14vh;
+    margin-top: 11vh;
     /* margin-bottom: 15vh; */
   }
 
@@ -311,6 +311,10 @@ body.dark-mode .type {
   50% {
     background-position: 0 -100%, 0 0;
   }
+}
+
+.type {
+  animation: t 1s linear infinite, b 10s linear infinite;
 }
 
 .show {
@@ -619,6 +623,30 @@ body.dark-mode .card1 {
 
 /* ---------------------------------------------------------------- EDITOR MONACO START */
 
+.chatCol{
+  background-color:#fedbbd;
+}
+
+body.dark-mode .chatCol {
+  background-color:#022342;
+}
+
+.editorCol {
+  background-color:#e79503;
+}
+
+body.dark-mode .editorCol {
+  background-color:#1969fe;
+}
+
+.previewCol {
+  background-color:#fffbef;
+}
+
+body.dark-mode .previewCol {
+  background-color:#010511;
+}
+
 .containerEditor {
   margin-top: 1rem;
 }
@@ -637,15 +665,20 @@ body.dark-mode .card1 {
 #editor,
 #css-editor,
 #js-editor {
-  height: 350px;
+  height: 35vh;
   width: 100%;
   border: 1px solid #ccc;
 }
 
 #preview {
-  height: 300px;
+  height:35vh;
   width: 100%;
   border: none;
+}
+
+.monaco-editor {
+  background-color: #d4d4d4;
+  color: #212529;
 }
 
 .body.dark-mode .monaco-editor {

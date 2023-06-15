@@ -12,8 +12,8 @@
 
     <div class="row">
 
-      <div class="col-md-4 px-4 mt-2 bg-info">
-        <div class="logiInfo mt-2 p-1 pt-4">
+      <div class="chatCol col-md-3 px-4 mt-2">
+        <div class="mt-2 p-1 pt-4">
           <h5>WELCOME to the MESSAGECORNER</h5>
           <div class="chatFormField mt-5 px-0">
             <chat-form :user="{{ Auth::user() }}"></chat-form>
@@ -25,20 +25,18 @@
        <p class="test text-center mb-0 m-2 pt-5">Messageservice brought to you by<a href="https://pusher.com/">Pusher&copy;</a></p>
       </div>
 
-      <div class="col-md-8">
-        <div class="row">
-          <div class="col-md-12 card1 px-3 py-3 pb-4" style="padding-left:0rem; padding-right:0rem;">
-            <h2 class="editorTitle">Editor:</h2>
-            <div id="editor"></div>
+      <div class="editorCol col-md-5 px-4 mt-2">
+          <div class="mt-2 p-1 pt-4">
+            <h5 class="mb-3 pb-3">ThiS iS Your EdiTor!</h5>
+            <div id="editor" style="height:75vh;"></div>
           </div>
-        </div>
+      </div>
 
-        <div class="row">
-          <div class="col-md-12 card2 mt-0 py-0 px-3">
-            <h2 class="editorTitle py-3">Preview:</h2>
-            <iframe id="preview" style="width:100%; height:40vh;"></iframe>
+      <div class="previewCol col-md-4 px-4 mt-2">
+          <div class="mt-2 p-1 pt-4">
+            <h5 class="mb-3 pb-3">YouR ouTpuT!</h5>
+              <iframe id="preview" style="height:75vh;"></iframe>
           </div>
-        </div>
       </div>
     </div>
 
