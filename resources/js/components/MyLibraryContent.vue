@@ -27,11 +27,11 @@
       <thead>
         <tr>
           <!-- <th scope="col">Id</th> -->
-          <th scope="col">Topic</th>
+          <th scope="col" style="width:14%;">Topic</th>
           <th scope="col">Content</th>
           <!-- <th scope="col">Created At</th> -->
-          <th scope="col">Updated At</th>
-          <th scope="col">Actions</th>
+          <th scope="col" style="width:14%;">Updated At</th>
+          <th scope="col" style="width:20%;">Actions</th>
         </tr>
       </thead>
       <tbody>
