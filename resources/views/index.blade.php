@@ -14,17 +14,21 @@
   <div class="row align-items-center justify-content-center">
 
     <div class="row justify-content-center">               
-        <div class="colSquare col-sm-3 mx-sm-4 me-md-4 me-lg-4 mb-4 {{-- animate__animated animate__backInLeft animate__delay-2s --}}"  style="height: 300px;"></div>
+        <a class="btn colSquare col-sm-3 mx-sm-4 me-md-4 me-lg-4 mb-4 animate__animated animate__backInLeft animate__delay-2s" class="btn {{-- myNavUnderline px-0 --}} {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/playground') }}" onclick="reloadTwice()" style="height: 300px;"><b>Playground</b></a>
+          
+        <a class="btn colCircle rounded-circle col-sm-3 mb-4 animate__animated animate__backInLeft animate__delay-3s" class="btn {{-- myNavUnderline px-0 --}} {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}" onclick="reloadTwice()" style="height: 300px;"><b>Blogosphere</b></a>
+        
 
-        <div class="colCircle rounded-circle col-sm-3 mb-4 {{-- animate__animated animate__backInDown animate__delay-3s --}}" style="height: 300px;"></div>
-
-        <div class="col-sm-3 position-relative {{-- animate__animated animate__backInRight animate__delay-4s --}}" style="height: 300px;">
+        <a class="btn  col-sm-3 mb-4 animate__animated animate__backInLeft animate__delay-4s" href="{{ url('/knowledgeSphere') }}" onclick="reloadTwice()" style="height: 300px;">
           <div class="square">
-            <div class="colTriangle"></div>
+            <div class="colTriangle">
+              <b>KnowledgeSphere</b>
+            </div>
           </div>
-        </div>
+        </a>
+        
 
-        <h1 class="display-3 text-center mt-5 {{-- animate__animated animate__zoomInUp animate__delay-5s --}}">
+        <h1 class="display-3 text-center mt-5 animate__animated animate__zoomInUp animate__delay-5s">
           <b>{{ __('Welcome To CHapsCHat') }}</b>
         </h1>
     </div>
@@ -32,6 +36,7 @@
     <div class="row justify-content-center mt-5">
         <div class="col-12 text-center">
           {{-- TEXT --}}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore porro adipisci ea eius quod nobis beatae nemo harum repellat hic, cupiditate, nesciunt nisi. Necessitatibus, ex! Ut quis possimus voluptate non.
         </div>
     </div>
 </div>
