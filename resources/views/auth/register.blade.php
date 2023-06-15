@@ -104,7 +104,7 @@
       var audio = document.getElementById("myAudioReg");
       var playButton = document.getElementById("playButtonReg");
       var colElement = document.getElementById("colElementReg");
-      var playCount = 5.5; // Desired play count (e.g., 3.5 seconds)
+      var playCount = 3.5; // Desired play count (e.g., 3.5 seconds)
       var isPlaying = false; // Flag to track audio playing state
   
       function playAudio() {
@@ -146,5 +146,9 @@
       });
     });
   </script>
+  
+  
+  
+  
   
 @endsection

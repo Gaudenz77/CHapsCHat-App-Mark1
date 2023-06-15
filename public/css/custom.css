@@ -317,6 +317,10 @@ body.dark-mode .type {
   animation: t 1s linear infinite, b 10s linear infinite;
 }
 
+body.dark-mode .type {
+  animation: t 1s linear infinite, b 10s linear infinite;
+}
+
 .show {
   display: block !important;
 }
