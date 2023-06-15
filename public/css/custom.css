@@ -120,7 +120,7 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
 
   .playgroundMain {
     margin-top: 11vh;
-    /* margin-bottom: 15vh; */
+    margin-bottom: 0vh;
   }
 
   .knowledgeMain {
@@ -314,10 +314,6 @@ body.dark-mode .type {
 }
 
 .type {
-  animation: t 1s linear infinite, b 10s linear infinite;
-}
-
-body.dark-mode .type {
   animation: t 1s linear infinite, b 10s linear infinite;
 }
 
@@ -633,10 +629,12 @@ body.dark-mode .card1 {
 
 body.dark-mode .chatCol {
   background-color:#022342;
+  z-index:2;
 }
 
 .editorCol {
   background-color:#e79503;
+  z-index:2;
 }
 
 body.dark-mode .editorCol {
@@ -656,6 +654,7 @@ body.dark-mode .previewCol {
 }
 
 .editorTitle {
+  height:70vh;
   font-weight: bold;
   font-size: 1.2rem;
   font-family: 'IBM Plex Mono', monospace;
@@ -666,16 +665,21 @@ body.dark-mode .previewCol {
   padding-bottom: 0;
 }
 
+.monaco-editor .suggest-widget div.tree {
+  white-space: unset;
+  padding-bottom: 0;
+}
+
 #editor,
 #css-editor,
 #js-editor {
-  height: 35vh;
+  height: 70vh;
   width: 100%;
   border: 1px solid #ccc;
 }
 
 #preview {
-  height:35vh;
+  height:70vh;
   width: 100%;
   border: none;
 }
