@@ -10,11 +10,13 @@
     <div class="content">
         <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
 
-
 <!-- QUOTE TYPEWRITER REGISTER -->
 
             <div class="col-sm-4 mt-3 px-3 pt-3 pb-0 animate__animated animate__flipInX">
-                <button class="btn btn-own" id="playButtonReg"><span class="material-symbols-outlined">play_circle</span>Play Audio</button>
+                <a class="col-6 btn btn-circleType" id="playButtonReg" href="#" style="display: inline-block; padding: 5px;">
+                    <img class="col-12 image-fluid" src="./assets/img/typewriter.png" alt="typewriter_cute">
+                </a>
+                {{-- <button class="btn btn-own" id="playButtonReg"><span class="material-symbols-outlined">play_circle</span>Play Audio</button> --}}
                 <div class="typewriter-wrapper" id="colElementReg" style="display: none;">
                   <blockquote class="blockquote-fluid mb-0 p-4" {{-- style="width:fit-content;" --}}>
                       <span id="" class="type" style="--n:742">"In general, we look for a new law by the following process. First, we guess it (audience laughter), no, don't laugh, that's really true. Then we compute the consequences of the guess to see what, if this is right, if this law that we guessed is right, to see what it would imply and then we compare the computation results to nature or we say, compare to experiment or experience, compare it directly with observations to see if it works. If it disagrees with experiment, it's wrong. In that simple statement is the key to science. It doesn't make any difference how beautiful your guess is, it doesn't matter how smart you are who made the guess, or what his name is… If it disagrees with experiment, it's wrong. That's all there is to it."</span>

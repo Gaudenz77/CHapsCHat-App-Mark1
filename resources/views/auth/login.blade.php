@@ -63,12 +63,13 @@
         </div>
       </div>
 
-
 <!-- QUOTE TYPEWRITER LOGIN -->
 
-
       <div  class="col-sm-6 p-3 animate__animated animate__flipInY">
-        <button class="btn btn-own" id="playButtonLog"><span class="material-symbols-outlined">play_circle</span>Play Audio</button>
+        <a class="col-6 btn btn-circleType" id="playButtonLog" href="#" style="display: inline-block; padding: 5px;">
+          <img class="col-12 image-fluid" src="./assets/img/typewriter.png" alt="typewriter_cute">
+        </a>
+        {{-- <button class="btn btn-own" id="playButtonLog"><span class="material-symbols-outlined">play_circle</span>Play Audio</button> --}}
         <div class="typewriter-wrapper" id="colElementLog" style="display: none;">
           <blockquote class="blockquote-fluid mb-0 p-4">
             <span id="contentSpan" class="type" style="--n:590">"Playing, testing, and trying are not mere frivolous endeavors, but essential elements that unlock the true potential of humanity. Through play, we discover the limits of our imagination and creativity, paving the way for innovation. Testing allows us to push boundaries, uncover flaws, and refine our ideas, ensuring progress and growth. Trying, with its inherent risk and uncertainty, is the catalyst for personal development and the gateway to remarkable achievements. Embrace these pursuits, for they hold the power to transform the world and unveil the extraordinary within ourselves."</span>
@@ -76,10 +77,8 @@
           </blockquote>
         </div>
       </div>
-      
     </div>
   </div>
-
 
 </section>
 
