@@ -281,8 +281,8 @@ body.dark-mode .formIcons {
 /* TYPEWRITER CSS ---------------------------------------------------------------*/
 .type {
   font-family: 'IBM Plex Mono', cursive;
-  color: #0000;
-  background: linear-gradient(-90deg, #181818 5px, #0000 0) 10px 0, linear-gradient(#181818 0 0) 0 0;
+  color: #ffffff;
+  background: linear-gradient(-90deg, #181818 5px, #ffffff 0) 10px 0, linear-gradient(#181818 0 0) 0 0;
   background-size: calc(var(--n) * 1ch) 200%;
   -webkit-background-clip: padding-box, text;
   background-clip: padding-box, text;
