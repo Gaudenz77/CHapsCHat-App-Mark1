@@ -23,8 +23,7 @@
         <input type="text" v-model="selectedContent" id="content">
       </div>
     </div>
-    <div class="table-responsive">
-      <table class="table table-striped">
+      <table class="table table-danger table-hover table-striped">
       <thead>
         <tr>
           <!-- <th scope="col">Id</th> -->
@@ -69,9 +68,6 @@
         </tr>
       </tbody>
     </table>
-    </div>
-
-    
 </template>
 
 

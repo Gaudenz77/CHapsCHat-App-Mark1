@@ -1,98 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Elite&display=swap');
 
-/* In any other CSS files 
-body.dark-mode .some-element {
-
-// Styles for elements that need to be updated for dark mode 
-
-}*/
-/* BODY MAIN DEFINITION------------------------------------------- */ 
-
+/* BODY MAIN DEFINITION */
 body {
-  margin-top:10%;
-  /* margin-bottom:8vh; */
-  /* font-family: 'Poppins', sans-serif; */
-  /* font-family: 'IBM Plex Mono', monospace; */
-  /* font-family: 'Lexend', sans-serif; */
+  margin-top: 10%;
   font-family: 'Roboto', sans-serif;
-  /* font-family: 'Special Elite', cursive; */
 }
 
 body.dark-mode body {
-  /* margin-bottom:8vh; */
-  /* font-family: 'Poppins', sans-serif; */
-  /* font-family: 'IBM Plex Mono', monospace; */
-  /* font-family: 'Lexend', sans-serif; */
   font-family: 'Roboto', sans-serif;
-  /* font-family: 'Special Elite', cursive; */
 }
 
-/* GOOGLE MATERIAL ICONS ---------------------------------------------------------*/ 
+/* GOOGLE MATERIAL ICONS */
 .material-symbols-outlined {
   font-size: 5rem;
-  color:#333;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48,
+  color: #333;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
 body.dark-mode .material-symbols-outlined {
   font-size: 5rem;
-  color:#ebebeb;
-  
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48,
+  color: #ebebeb;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
 .btn-auth {
-  background-color:#ebebeb;
-  width:7.5rem;
-  height:7.5rem;
+  background-color: #ebebeb;
+  width: 7.5rem;
+  height: 7.5rem;
   border-radius: 50%;
-  border-width:5px;
-  border-color:yellow;
-  padding:1rem 0 1rem 0 !important;
+  border-width: 5px;
+  border-color: yellow;
+  padding: 1rem 0 1rem 0 !important;
 }
 
 body.dark-mode .btn-auth {
-  background-color:#333;
-  width:7.5rem;
-  height:7.5rem;
+  background-color: #333;
+  width: 7.5rem;
+  height: 7.5rem;
   border-radius: 50%;
-  border-width:5px;
-  border-color:blue;
-  padding:1rem 0 1rem 0 !important;
+  border-width: 5px;
+  border-color: blue;
+  padding: 1rem 0 1rem 0 !important;
 }
 
-body.dark-mode  {
-    color: #ffffff;
-    background-color: #091540;
+body.dark-mode {
+  color: #ffffff;
+  background-color: #091540;
 }
 
-body.dark-mode  body {
-    color: #ffffff;
+body.dark-mode body {
+  color: #ffffff;
 }
 
 .formContainer1 {
-  padding-top:-2rem;
+  padding-top: -2rem;
 }
 
-h1, h2, h3, h4, h5, h6, p, a   {
-  color:#333;
- }
+h1, h2, h3, h4, h5, h6, p, a {
+  color: #333;
+}
 
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode a {
-  color:#ebebeb;
- }
+  color: #ebebeb;
+}
 
- /* ---------------------------------------------------------------- SMALL MEDIA QUERIES START */
-
-/* Styles for small devices */
+/* SMALL MEDIA QUERIES START */
 @media (max-width: 575.98px) {
   .dropdown-menu {
     margin-left: 0;
@@ -100,115 +72,33 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     padding-left: 10px;
     width: 60%;
     background-color: #091540;
-    height:15%;
+    height: 15%;
   }
+
   .navbar {
-    height: 16rem;
-    background-color:#091540;
+    height: 20rem;
+    background-color: #091540;
   }
+
   .playgroundMain {
-    margin-top:16rem;
-    margin-bottom:10rem;
+    margin-top: 11rem;
+    margin-bottom: 10rem;
   }
 
   .circleBlog {
     position: relative;
     width: 100%;
-    height:fit-content;
-    /* border-radius: 100%; */
+    height: fit-content;
   }
 
   .welcomeMain {
-    margin-top:13rem;
-  }
-
-  .knowledgeMain {
-    margin-top:12rem;
-    margin-bottom:10rem;
-    width:140% !important;
-  }
-
-  .profileMain {
-    margin-top:16rem;
-    margin-bottom:9rem;
-  }
-
-  .colTriangle {
-    width: 100%;
-    height: 100%;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-bottom: 300px solid blue;
-    position: absolute;
-    bottom: 0;
-    left: 52%;
-    transform: translateX(-50%);
-  }
-
-  .offcanvas-body {
-    margin-top:-1rem;
-  }
-  
-  body.dark-mode .dropdown-menu {
-    background-color: #ebebeb;
-    height:15%;
-  }
-
-  .logoFont {
-  
-  /* font-size: 100%;  */
-  padding-right:0rem;
-
-  }
-    .logoImg {
-    margin-left:2rem;
-    ;
-    padding-left:1rem;
-    position:relative;
-    left:0;
-    justify-content:center;
-  }
-
-   .navbar-toggler {   
-    /* font-size:20px; */
-    margin-left:1rem;
-    margin-right: 2rem; 
-  }
-
-  .navbar-toggler-icon {   
-    /* font-size:20px; */
-      
-  }
-
-/* TOGGLE SM */
-  .ht-ui-check {
-    width: 21.5vw;
-    height: 10vw;
-    cursor: pointer;
-    border-radius: 10vw;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transform: scale(0.80);
-  }
-
-  .circleKnowledgeForm {
-    position: relative;
-    width: 75%;
-    height: 75%;
-    border-radius: 50%;
-    margin-left:-30%;
+    margin-top: 20rem;
   }
 }
+/* SMALL MEDIA QUERIES END */
 
 
-#contentKnowledge {
-  width:500px;
-}
-/* SMALL MEDIA QUERIES START ---------------------------------------------------------------- */
-
-/* MD MEDIULM LG LARGE MEDIA QUERIES START----------------------------------------------------------------  */
-
+/* MD MEDIULM LG LARGE MEDIA QUERIES START---------------------------------------------------------------- */
 /* Styles for medium and large devices */
 @media (min-width: 576px) {
   .dropdown-menu {
@@ -218,43 +108,44 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     width: 20%;
     background-color: #091540;
   }
+
   .navbar {
     height: 15%;
-    background-color:#091540;
+    background-color: #091540;
   }
 
   .welcomeMain {
-    margin-top:15rem;
+    margin-top: 15rem;
   }
 
   .playgroundMain {
-    margin-top:14vh;
-    margin-bottom:8vh;
+    margin-top: 14vh;
+    /* margin-bottom: 15vh; */
   }
 
   .knowledgeMain {
-    margin-top:9rem;
-    margin-bottom:13rem;
+    margin-top: 9rem;
+    margin-bottom: 13rem;
   }
 
   .profileMain {
-    margin-top:9rem;
-    margin-bottom:10rem;
+    margin-top: 9rem;
+    margin-bottom: 10rem;
   }
 
   .circleBlog {
     position: relative;
     width: 100%;
-    height:fit-content;
+    height: fit-content;
     /* border-radius: 50%; */
   }
-  
+
   .logoImg {
-    width:15%;
-    padding-left:1rem;
-    position:relative;
-    left:0;
-    justify-content:center;
+    width: 15%;
+    padding-left: 1rem;
+    position: relative;
+    left: 0;
+    justify-content: center;
   }
 
   .colTriangle {
@@ -267,160 +158,159 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    margin-left:-5%;
+    margin-left: -5%;
   }
 
   .logoFont {
-   /* font-size: 100%;  */
-margin-left:10% !important;
-
+    /* font-size: 100%;  */
+    margin-left: 10% !important;
   }
 
-  .navbar-toggler-icon {   
-    font-size:20px;
+  .navbar-toggler-icon {
+    font-size: 20px;
   }
 
-/* TOGGLE LG */
+  /* TOGGLE LG */
 
-.ht-ui-check {
-  width: 21.5vw;
-  height: 3.75vw;
-  cursor: pointer;
-  border-radius: 10vw;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  transform: scale(0.25);
+  .ht-ui-check {
+    width: 21.5vw;
+    height: 3.75vw;
+    cursor: pointer;
+    border-radius: 10vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transform: scale(0.25);
   }
 
-.circleKnowledgeForm {
-  position: relative;
-  width: 40% !important; /* Set the desired fixed width */
-  height: 50%; /* Set the desired fixed height */
-  border-radius: 50%;
-  padding: 3rem 2rem 4rem 2rem;
-  margin-top: 1rem;
-  margin-bottom: .5rem;
-  margin-left:0%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .circleKnowledgeForm {
+    position: relative;
+    width: 40% !important; /* Set the desired fixed width */
+    height: 50%; /* Set the desired fixed height */
+    border-radius: 50%;
+    padding: 3rem 2rem 4rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-.knowledgTable {
-  width:100%;
+  .knowledgTable {
+    width: 100%;
   }
-
 }
-/* MD MEDIULM LG LARGE MEDIA QUERIES STOP-------------------------------------------------------------------------------  */
+/* MD MEDIULM LG LARGE MEDIA QUERIES STOP------------------------------------------------------------------------------- */
 
 .dropdownProfile {
-  background-color:#1400ff;
-  color:#ebebeb !important;
+  background-color: #1400ff;
+  color: #ebebeb !important;
 }
 
 body.dark-mode .dropdownProfile {
-  background-color:#ff0000 ;
-  color:#333 !important;
+  background-color: #ff0000;
+  color: #333 !important;
 }
-/* LOGIN_REGISTER-FORM-CONTROL START FORM GENERAL----------------------------------------------------------------*/
+
+/* LOGIN_REGISTER-FORM-CONTROL START FORM GENERAL---------------------------------------------------------- */
 
 .loginLabel {
-  color:#ebebeb;
+  color: #ebebeb;
 }
 
 .labelAuth {
-  background-color:yellow;
+  background-color: yellow;
 }
+
 body.dark-mode .labelAuth {
-  background-color:blue;
+  background-color: blue;
 }
 
 body.dark-mode .loginLabel {
-  color:#333;
+  color: #333;
 }
 
 .login {
-  
   border-radius: 20px;
 }
 
 .cardLogin {
-  background-color:#091540;
+  background-color: #091540;
 }
 
 body.dark-mode .cardLogin {
-  background-color:#ebebeb;
+  background-color: #ebebeb;
 }
 
 .formOwnOne {
-  color:#333;
+  color: #333;
   border-radius: 20px;
 }
 
 body.dark-mode .formOwnOne {
-  color:#ebebeb;
+  color: #ebebeb;
 }
 
-.form-control
-.form-control:active,
+.form-control .form-control:active,
 .form-control:focus,
 .form-control:focus:active {
-  color:#091540!important;
-  background-color:#ebebeb!important;
+  color: #091540 !important;
+  background-color: #ebebeb !important;
 }
 
 body.dark-mode .form-control,
 body.dark-mode .form-control:active,
 body.dark-mode .form-control:focus,
-body.dark-mode .form-control:focus:active{
-  color:#ebebeb!important;
-  background-color:#091540!important;
+body.dark-mode .form-control:focus:active {
+  color: #ebebeb !important;
+  background-color: #091540 !important;
 }
 
 .formIcons {
-  color:#6254ff;
- }
+  color: #6254ff;
+}
 
- body.dark-mode .formIcons {
-  color:#f25151;
- }
+body.dark-mode .formIcons {
+  color: #f25151;
+}
 
-/* FORM-CONTROL STOP----------------------------------------------------------------*/
+/* FORM-CONTROL STOP---------------------------------------------------------------- */
 
 /* TYPEWRITER CSS ---------------------------------------------------------------*/
-
-.type  {
-
+.type {
   font-family: 'IBM Plex Mono', cursive;
   color: #0000;
-  background: linear-gradient(-90deg, #181818 5px, #0000 0) 10px 0,
-    linear-gradient(#181818 0 0) 0 0;
+  background: linear-gradient(-90deg, #181818 5px, #0000 0) 10px 0, linear-gradient(#181818 0 0) 0 0;
   background-size: calc(var(--n) * 1ch) 200%;
   -webkit-background-clip: padding-box, text;
   background-clip: padding-box, text;
   background-repeat: no-repeat;
-  animation: b .7s infinite steps(1), t calc(var(--n) * .2s) steps(var(--n)) forwards;
-}
-body.dark-mode .type {
-  font-family: 'IBM Plex Mono', cursive;
-  color:#0000;
-  background:
-  linear-gradient(-90deg,#ebebeb 5px,#0000 0) 10px 0,
-  linear-gradient(#ebebeb 0 0) 0 0;
-  background-size: calc(var(--n) * 1ch) 200%;
-  -webkit-background-clip: padding-box, text;
-  background-clip: padding-box, text;
-  background-repeat: no-repeat;
-  animation: b .7s infinite steps(1), t calc(var(--n) * .2s) steps(var(--n)) forwards;
+  animation: b 0.7s infinite steps(1), t calc(var(--n) * 0.2s) steps(var(--n)) forwards;
 }
 
-@keyframes t{
-  from {background-size:0 200%}
+body.dark-mode .type {
+  font-family: 'IBM Plex Mono', cursive;
+  color: #0000;
+  background: linear-gradient(-90deg, #ebebeb 5px, #0000 0) 10px 0, linear-gradient(#ebebeb 0 0) 0 0;
+  background-size: calc(var(--n) * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation: b 0.7s infinite steps(1), t calc(var(--n) * 0.2s) steps(var(--n)) forwards;
 }
-@keyframes b{
-  50% {background-position:0 -100%,0 0}
+
+@keyframes t {
+  from {
+    background-size: 0 200%;
+  }
+}
+
+@keyframes b {
+  50% {
+    background-position: 0 -100%, 0 0;
+  }
 }
 
 .show {
@@ -429,11 +319,11 @@ body.dark-mode .type {
 
 /* FOOTER LINK ----------------------------------*/
 .span1 {
-  color:#333;
-  height:8.5vh
+  color: #333;
+  height: 8.5vh;
 }
 
-body.dark-mode  .span1 {
+body.dark-mode .span1 {
   color: #ebebeb;
   height: 8.5vh;
 }
@@ -443,17 +333,33 @@ nav {
   justify-content: center;
   align-items: center;
   height: 40px;
-  color:#ebebeb;
+  color: #ebebeb;
   background-color: #181818;
-} 
+}
 
 body.dark-mode nav {
-  color:#181818;
+  color: #181818;
   background-color: #ebebeb;
-} 
+}
 
 .myNavbar {
   background-color: #ebebeb;
+}
+
+.myNavToggleTitle {
+  color: #333;
+}
+
+body.dark-mode .myNavToggleTitle {
+  color: #ebebeb;
+}
+
+body.dark-mode .nav-link {
+  color: #333;
+}
+
+.nav-link {
+  color: #ebebeb;
 }
 
 a {
@@ -467,8 +373,8 @@ a {
 
 .logoChapsChat {
   position: relative;
-  display:flex;
-  height:100%;
+  display: flex;
+  height: 100%;
   justify-content: center;
 }
 
@@ -580,10 +486,6 @@ a.myNavToggleTitle.active:before {
 
 /* LINK UNDERLINE ANIMATION END----------------------------------------------------------------  */
 
-.nav-link {
-    color: #ebebeb;
-}
-
 .offcanvas-header {
   background-color: #ebebeb;
 }
@@ -594,44 +496,27 @@ body.dark-mode .offcanvas-header {
 
 .offcanvas-body {
   background-color: #091540;
-  height:800%;
+  height: 800%;
 }
 
 body.dark-mode .offcanvas-body {
   background-color: #ebebeb;
 }
 
-.myNavToggleTitle {
-  color: #333;
+body.dark-mode .ul {
+  color: white;
 }
 
-body.dark-mode .myNavToggleTitle {
-  color: #ebebeb;
+body.dark-mode .li {
+  color: white;
 }
-
-body.dark-mode .nav-link {
-  color: #333;
-}
-
-.nav-link {
-  color: #ebebeb;
-}
-
-body.dark-mode .ul   {
-    color: white;
-}
-
-body.dark-mode .li   {
-    color: white;
-}
-
 
 .chatbody {
   color: #333;
 }
 
-body.dark-mode .chatbody   {
-    color:#ebebeb;
+body.dark-mode .chatbody {
+  color: #ebebeb;
 }
 
 /* ROUND DIVS --------------------------------------------------------  */
@@ -646,10 +531,8 @@ body.dark-mode .chatbody   {
 .circleBig {
   position: relative;
   min-width: 20%;
-  min-height: 100%;;
-  /* border-radius: 50%; */
-  padding:5rem 2rem 1rem 2rem;
-  /* margin-top:15%; */
+  min-height: 100%;
+  padding: 5rem 2rem 1rem 2rem;
 }
 
 .circleAuth {
@@ -657,8 +540,8 @@ body.dark-mode .chatbody   {
   min-width: 33.3%;
   min-height: 33.3%;
   border-radius: 50%;
-  padding: 18% 12% 6% 12%;/* add padding to create space between content and border */
-  box-sizing: border-box; /* include padding in element's total width and height */
+  padding: 18% 12% 6% 12%;
+  box-sizing: border-box;
 }
 
 .circleProfileCols {
@@ -666,12 +549,12 @@ body.dark-mode .chatbody   {
   min-width: 33%;
   min-height: 33%;
   border-radius: 50%;
-  padding:5rem 2rem 1rem 2rem;
+  padding: 5rem 2rem 1rem 2rem;
 }
 
 .scrollableChat {
-  height: 500px; /* Set the desired fixed height */
-  overflow: auto; /* Enable scrolling when content exceeds the height */
+  height: 500px;
+  overflow: auto;
 }
 
 .textfield {
@@ -683,98 +566,91 @@ body.dark-mode .chatbody   {
   width: 70%;
   height: 70%;
   padding: 20px;
-
   overflow: auto;
   transform: translateY(50%);
 }
 
 .textfieldBlogTitle {
-  font-size:15px;
-  font-weight:bold;
-  text-align:center;
-  padding: 2.5rem ;
-  color:#ffffff;
+  font-size: 15px;
+  font-weight: bold;
   text-align: center;
+  padding: 2.5rem;
+  color: #ffffff;
 }
 
 .textfieldBlogContent {
-  font-size:15px;
-  font-weight:bold;
-  text-align:center;
-  color:#ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
   text-align: left;
 }
 
-.textfieldKnowledge   {
-  font-size:15px;
-  font-weight:bold;
-  text-align:center;
-  color:#ffffff;
-}
- 
-.form-wrapper {
-  max-width: 100%; 
-  text-align: center; 
+.textfieldKnowledge {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
 }
 
+.form-wrapper {
+  max-width: 100%;
+  text-align: center;
+}
 
 .textfieldKnowledge {
-    font-size:15px;
-    font-weight:bold;
-    text-align:center;
-    padding: 2.5rem;
-    color:#ffffff;
-    
-  }
-  
-.card1 {
-    background-color:mediumspringgreen;
-    position:relative;
-    left:0;
-    color: black;
-    /* margin-top:; */
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding: 2.5rem;
+  color: #ffffff;
 }
 
-body.dark-mode .card1{
-    background-color:#59c3c3;
+.card1 {
+  background-color: mediumspringgreen;
+  position: relative;
+  left: 0;
+  color: black;
+}
+
+body.dark-mode .card1 {
+  background-color: #59c3c3;
 }
 
 /* ---------------------------------------------------------------- EDITOR MONACO START */
 
-/* .monaco-list-row .monaco-highlighted-label .monaco-icon-label .monaco-icon-name-container {
-    line-height: 24px; 
-  } */
-  
 .containerEditor {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
-.editorTitle {
-    font-weight: bold;
-    font-size: 1.2rem;
-  font-family: 'IBM Plex Mono', monospace;
 
+.editorTitle {
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .editor .suggest-widget div.tree {
-    white-space: unset;
-    padding-bottom: 0;
+  white-space: unset;
+  padding-bottom: 0;
 }
 
-#editor, #css-editor, #js-editor {
-    height: 350px;
-    width: 100%;
-    border: 1px solid #ccc;   
+#editor,
+#css-editor,
+#js-editor {
+  height: 350px;
+  width: 100%;
+  border: 1px solid #ccc;
 }
 
 #preview {
-    height: 300px;
-    width: 100%;
-    border: none;
+  height: 300px;
+  width: 100%;
+  border: none;
 }
 
 .body.dark-mode .monaco-editor {
-    background-color: #212529;
-    color: #d4d4d4;
+  background-color: #212529;
+  color: #d4d4d4;
 }
 
 /* ---------------------------------------------------------------- EDITOR MONACO END */
@@ -782,139 +658,103 @@ body.dark-mode .card1{
 /* VARIOUS BUTTONS ----------------------------------------------------------------*/
 
 .btn-circle {
-    width: 5rem;
-    height: 5rem;
-    font-size: 90%;
-    padding: 8px 8px;
-    border-radius: 50%;
-    color:#ffff00;
-    font-weight: bold ;
-    background-color: #1400ff;
-    text-align: center;
-    margin-bottom: 15px; 
-    box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
+  width: 5rem;
+  height: 5rem;
+  font-size: 90%;
+  padding: 8px 8px;
+  border-radius: 50%;
+  color: #ffff00;
+  font-weight: bold;
+  background-color: #1400ff;
+  text-align: center;
+  margin-bottom: 15px;
+  box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
 }
 
 body.dark-mode .btn-circle {
-    background-color: #ff0000;
-    color: #ffff00;
-    font-weight: bold;
+  background-color: #ff0000;
+  color: #ffff00;
+  font-weight: bold;
 }
 
 .btn-own {
-  position:relative;
-  right:0;
-  padding:1rem 0 1rem 0 !important;
-  color:black;
+  position: relative;
+  right: 0;
+  padding: 1rem 0 1rem 0 !important;
+  color: black;
 }
 
 body.dark-mode .btn-own {
-  color:white;
+  color: white;
 }
 
 .btn-circleOwn {
   width: 6rem;
   height: 6rem;
   font-size: 90%;
-  font-weight:bold;
-  /* color:#ffc107; */
-  background-color:#f25151;
+  font-weight: bold;
+  background-color: #f25151;
   padding: 8px 8px;
   border-radius: 50%;
   text-align: center;
-  margin-bottom: 15px; 
-  /* box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
+  margin-bottom: 15px;
 }
 
 .btn-circleFoot {
   width: 8rem;
   height: 8rem;
   font-size: 90%;
-  font-weight:bold;
-  /* color:#ffc107; */
-  background-color:#f25151;
+  font-weight: bold;
+  background-color: #f25151;
   padding: 8px 8px;
   border-radius: 50%;
   text-align: center;
-  margin-bottom:5rem; 
-  z-index:-2;
-  /* box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
+  margin-bottom: 5rem;
+  z-index: -2;
 }
 
 .btn-circleOwn2 {
   width: 6rem;
   height: 6rem;
   font-size: 90%;
-  font-weight:bold;
-  background-color:#ffc107;
+  font-weight: bold;
+  background-color: #ffc107;
   padding: 8px 8px;
   border-radius: 50%;
   text-align: center;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 .btn-circleOwn3 {
   width: 8rem;
   height: 8rem;
   font-size: 90%;
-  font-weight:bold;
-  background-color:#2de3be;
+  font-weight: bold;
+  background-color: #2de3be;
   padding: 20px;
   border-radius: 50%;
   text-align: center;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
-
 body.dark-mode .btn-circleOwn {
-/*   width: 8rem;
-  height: 8rem;
-  font-size: 90%;
-  font-weight:bold; */
-  /* color:#ffc107; */
-  background-color:#0d6efd;
-  /* padding: 8px 8px;
-  border-radius: 50%;
-  text-align: center;
-  margin-bottom: 15px; 
-  box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
+  background-color: #0d6efd;
 }
 
 body.dark-mode .btn-circleOwn2 {
-  /*   width: 8rem;
-    height: 8rem;
-    font-size: 90%;
-    font-weight:bold; */
-    /* color:#ffc107; */
-    background-color:#ffc107;
-    /* padding: 8px 8px;
-    border-radius: 50%;
-    text-align: center;
-    margin-bottom: 15px; 
-    box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
-  }
+  background-color: #ffc107;
+}
 
-  body.dark-mode .btn-circleOwn3 {
-    /*   width: 8rem;
-      height: 8rem;
-      font-size: 90%;
-      font-weight:bold; */
-      /* color:#ffc107; */
-      background-color:#f25151;
-      /* padding: 8px 8px;
-      border-radius: 50%;
-      text-align: center;
-      margin-bottom: 15px; 
-      box-shadow: -3px 3px 3px 3px rgb(141, 141, 141); */
-    }
+body.dark-mode .btn-circleOwn3 {
+  background-color: #f25151;
+}
 
 #closeButton {
-  color:red !important;
+  color: red !important;
 }
 
 .btnTxt {
-color:blue;
-
+  color: blue;
 }
 
 /* TOGGLE Start================================================================= */
@@ -1096,46 +936,44 @@ left:-30px;
 
 #footerContent {
   display: none;
-  left:0;
+  left: 0;
 }
 
 .footerlinkText {
-  margin-bottom:10rem !important;
+  margin-bottom: 10rem !important;
 }
 
 /* FONTAWESOME ICONS START ------------------------------------------------------- */
 
- .iconAuth {
-  /* color:pink; */
-  color:#1400ff;
- }
+.iconAuth {
+  color: #1400ff;
+}
 
- body.dark-mode .iconAuth {
-  /* color:pink; */
-  
-  color:#ff0000;
- }
+body.dark-mode .iconAuth {
+  color: #ff0000;
+}
 
 /* FONTAWESOME ICONS STOP ------------------------------------------------------- */
 
 /* GoogleIcons ICONS START ------------------------------------------------------- */
 
 .googleIcons {
-  color:#ebebeb;
+  color: #ebebeb;
 }
 
 body.dark-mode .googleIcons {
-  color:#333;
+  color: #333;
 }
+
 /* GoogleIcons ICONS STOP ------------------------------------------------------- */
 
 /* ICONSHOOTER START ------------------------------------------------------- */
 .iconshooter {
-  color:#ffa500;
+  color: #ffa500;
 }
 
 body.dark-mode .iconshooter {
-  color:#fa1c50;;
+  color: #fa1c50;
 }
 
 #icon {
@@ -1149,7 +987,7 @@ body.dark-mode .iconshooter {
   border-radius: 50%;
   cursor: pointer;
   z-index: 1;
-  color:rgb(244, 155, 0);
+  color: rgb(244, 155, 0);
 }
 
 /* ICONSHOOTER STOP ------------------------------------------------------- */

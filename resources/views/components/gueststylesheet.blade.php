@@ -3,7 +3,7 @@
           /* background-color: black; */
     }
 
-    @media (max-width: 565.98px) {
+    @media (max-width: 575.98px) {
       .loginMain {
         margin-top:36vh;
         margin-bottom:18vh;
@@ -30,7 +30,7 @@
       }
 
       .navbar {
-        height: 18rem;
+        height: 12rem;
         background-color:#091540;
       }
 
@@ -48,14 +48,15 @@
       }
 
       .navbar-toggler {   
-      /* font-size:20px; */
-      /*   margin-left:0rem;
+      /* font-size:20px; 
+        margin-left:0rem;
         margin-right: 0rem;  */
       }
 
       .logoImg {
-        width:110%;
+        width:60%;
         margin-left:2rem;
+        margin-bottom: -20px;
         padding-left:1rem;
         position:relative;
         left:0;
@@ -63,16 +64,21 @@
       }
 
       .wrapper {
-        width: 14vh;
-        padding-right: 2rem;
+        width: 16vh;
+        padding-right: 8rem;
+        padding-bottom: 3.5rem;
       }
 
       a.myNavToggleTitle {
         color: #333;
       }
+
+      .toggleOwn {
+height:10%;
+      }
     }
 
-    @media (min-width: 566px) {
+    @media (min-width: 576px) {
       .loginMain {
        margin-top:14rem;
       }
