@@ -18,7 +18,6 @@
           
         <a class="btn colCircle rounded-circle col-sm-3 mb-4 animate__animated animate__backInLeft animate__delay-3s" class="btn {{-- myNavUnderline px-0 --}} {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/blogoSphere') }}" onclick="reloadTwice()" style="height: 300px;"><b>Blogosphere</b></a>
         
-
         <a class="btn  col-sm-3 mb-4 animate__animated animate__backInLeft animate__delay-4s" href="{{ url('/knowledgeSphere') }}" onclick="reloadTwice()" style="height: 300px;">
           <div class="square">
             <div class="colTriangle">
@@ -27,7 +26,6 @@
           </div>
         </a>
         
-
         <h1 class="display-3 text-center mt-5 animate__animated animate__zoomInUp animate__delay-5s">
           <b>{{ __('Welcome To CHapsCHat') }}</b>
         </h1>
