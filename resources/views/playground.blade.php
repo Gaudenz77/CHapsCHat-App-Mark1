@@ -39,7 +39,8 @@
 
             </div>
 
-            <div id="editor" style="height:75vh;"></div>
+            {{-- <div id="editor" style="height:75vh;"></div> --}}
+            <div id="editor" style="height: 500px;"></div>
             
           </div>
       </div>
@@ -123,6 +124,16 @@
       ]
     });
 
+    // Update the styles for IntelliSense items
+    const styles = document.createElement('style');
+    styles.textContent = `
+      .monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .monaco-icon-label-entry .monaco-icon-name-container .monaco-icon-label .monaco-icon-name {
+        white-space: normal !important;
+        line-height: normal !important;
+      }
+    `;
+    document.head.appendChild(styles);
+
     // Update preview on editor change
     function updatePreview() {
       var preview = document.getElementById('preview');
@@ -130,6 +141,13 @@
       previewDoc.open();
       previewDoc.write(editor.getValue());
       previewDoc.close();
+    }
+
+    // Save editor value to local storage and update preview
+    function saveEditorValue() {
+      var value = editor.getValue();
+      localStorage.setItem('editorValue', value);
+      updatePreview();
     }
     // Save editor value to local storage and update preview
     function saveEditorValue() {

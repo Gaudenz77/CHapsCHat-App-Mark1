@@ -40,13 +40,17 @@
 
    {{--  <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script> --}}
 
-    <script src="https://unpkg.com/monaco-editor@0.27.0/min/vs/loader.js"></script>
+    {{-- <script src="https://unpkg.com/monaco-editor@0.37.0/min/vs/loader.js"></script> --}}
 
     <!-- Include jQuery from a CDN or from your own server -->
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
 
     @include('components.gueststylesheet')
-
+    <style>body{color:white;}
+      .monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .monaco-icon-label-entry .monaco-icon-name-container .monaco-icon-label .monaco-icon-name {
+        white-space: normal !important;
+        line-height: normal !important;
+      }</style>
     
 </head>
 
