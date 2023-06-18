@@ -79,6 +79,13 @@ height:10%;
     }
 
     @media (min-width: 576px) {
+
+      .welcomeMain {
+        margin-top:5rem;
+        margin-bottom:20rem;
+      }
+
+
       .loginMain {
        margin-top:14rem;
       }

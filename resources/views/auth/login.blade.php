@@ -59,6 +59,10 @@
               </div>
               
             </form>
+
+              <div class="text-center">
+                <p class="loginLabel pt-3">Subscribe & <a class="loginLabel myNavUnderline mb-1" href="{{ route('register') }}" class=""><b>Register</b></a> now! </p>
+              </div>
           </div>
         </div>
       </div>

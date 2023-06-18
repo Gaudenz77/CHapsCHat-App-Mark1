@@ -115,7 +115,8 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
   }
 
   .welcomeMain {
-    margin-top: 15rem;
+    margin-top: 10rem;
+    margin-bottom: 20rem;
   }
 
   .playgroundMain {
