@@ -255,6 +255,14 @@ body.dark-mode .formOwnOne {
   color: #ebebeb;
 }
 
+.chatFormField {
+  color: #333;
+}
+
+body.dark-mode .chatFormField {
+  color: #ebebeb;
+}
+
 .form-control .form-control:active,
 .form-control:focus,
 .form-control:focus:active {
@@ -268,6 +276,25 @@ body.dark-mode .form-control:focus,
 body.dark-mode .form-control:focus:active {
   color: #ebebeb !important;
   background-color: #091540 !important;
+}
+
+.form-control::placeholder {
+  color: #091540 !important;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #ebebeb !important;
+}
+
+.chatForm {
+  color: white !important;;
+  background-color: #1e1e1e !important;
+  
+}
+
+body.dark-mode .chatForm {
+  color:black !important;
+  background-color: #ebebeb !important;
 }
 
 .formIcons {
@@ -323,12 +350,14 @@ body.dark-mode .type {
 
 /* FOOTER LINK ----------------------------------*/
 .span1 {
-  color: #333;
+  color: #ebebeb;
+  background-color: #091540;
   height: 8.5vh;
 }
 
 body.dark-mode .span1 {
-  color: #ebebeb;
+  color: #333;
+  background-color: #ebebeb;
   height: 8.5vh;
 }
 
@@ -366,14 +395,14 @@ body.dark-mode .nav-link {
   color: #ebebeb;
 }
 
-a {
+/* a {
   display: inline-block;
   margin: 0 10px;
   padding: 10px 0;
   color: #333;
   text-decoration: none;
   position: relative;
-}
+} */
 
 .logoChapsChat {
   position: relative;
@@ -501,6 +530,7 @@ body.dark-mode .offcanvas-header {
 .offcanvas-body {
   background-color: #091540;
   height: 800%;
+  width:80%;
 }
 
 body.dark-mode .offcanvas-body {
@@ -515,12 +545,41 @@ body.dark-mode .li {
   color: white;
 }
 
-.chatbody {
+.chatBody {
   color: #333;
+  background-color: #e2ee58;;
 }
 
-body.dark-mode .chatbody {
+body.dark-mode .chatBody {
   color: #ebebeb;
+  background-color: #2d5c86;
+}
+
+.deletIcon {
+  color: #e2ee58;
+}
+
+body.dark-mode .deletIcon {
+  color: #2d5c86;
+}
+
+.scrollableChat {
+  height: 500px;
+  overflow: auto;
+
+}
+
+body.dark-mode .scrollableChat { 
+
+}
+
+.chatCol{
+  background-color:#4e80b7;
+}
+
+body.dark-mode .chatCol {
+  background-color:#022342;
+  z-index:2;
 }
 
 /* ROUND DIVS --------------------------------------------------------  */
@@ -556,10 +615,7 @@ body.dark-mode .chatbody {
   padding: 5rem 2rem 1rem 2rem;
 }
 
-.scrollableChat {
-  height: 500px;
-  overflow: auto;
-}
+
 
 .textfield {
   position: absolute;
@@ -623,18 +679,9 @@ body.dark-mode .card1 {
 
 /* ---------------------------------------------------------------- EDITOR MONACO START */
 
-.chatCol{
-  background-color:#fedbbd;
-}
-
-body.dark-mode .chatCol {
-  background-color:#022342;
-  z-index:2;
-}
-
 .editorCol {
   background-color:#e79503;
-  z-index:2;
+  z-index:0;
 }
 
 body.dark-mode .editorCol {
@@ -698,6 +745,10 @@ body.dark-mode .previewCol {
 
 /* VARIOUS BUTTONS ----------------------------------------------------------------*/
 
+.btn {
+  
+}
+
 .btn-circle {
   width: 5rem;
   height: 5rem;
@@ -746,12 +797,16 @@ body.dark-mode .btn-own {
   height: 8rem;
   font-size: 90%;
   font-weight: bold;
-  background-color: #f25151;
+  background-color: #0000ff;
   padding: 8px 8px;
   border-radius: 50%;
   text-align: center;
   margin-bottom: 5rem;
   z-index: -2;
+}
+
+body.dark-mode .btn-circleFoot {
+  background-color: #ffff00;
 }
 
 .btn-circleOwn2 {
@@ -776,6 +831,7 @@ body.dark-mode .btn-own {
   border-radius: 50%;
   text-align: center;
   margin-bottom: 15px;
+  
 }
 
 .btn-circleType {
@@ -806,6 +862,25 @@ body.dark-mode .btn-circleType {
   background-color: #181818;
 }
 
+.btn-circleChat {
+  width: 3rem;
+  height: 3rem;
+  font-size: 70%;
+  background-color: #f25151;
+  color:#000;
+  border-radius: 50%;
+  text-align: center;
+}
+
+body.dark-mode .btn-circleChat {
+  width: 3rem;
+  height: 3rem;
+  font-size: 70%;
+  background-color: #f25151;
+  color:#000;
+  border-radius: 50%;
+  text-align: center;
+}
 
 
 #closeButton {
@@ -974,9 +1049,14 @@ left:-30px;
   position: fixed;
   left: 0;
   bottom: 0;
-  height: 18%;
+  height: 8%;
   width: 100%;
   margin-top: 0;
+    
+}
+
+body.dark-mode .footer {
+  /* background-color: #ebebeb; */
 }
 
 #footerButton {

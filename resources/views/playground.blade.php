@@ -20,7 +20,7 @@
             <chat-form :user="{{ Auth::user() }}"></chat-form>
           </div>
         </div>
-          <div class="smooth-scroll scrollableChat">
+          <div class="smooth-scroll scrollableChat chatBody rounded">
               <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
           </div>
        <p class="test text-center mb-0 m-2 pt-5">Messageservice brought to you by<a href="https://pusher.com/">Pusher&copy;</a></p>
@@ -36,18 +36,13 @@
                   <button  id="redoButton" type="button" class="btn btn-success">Redo</button>
                 </div>
               </div>
-
             </div>
-
-            {{-- <div id="editor" style="height:75vh;"></div> --}}
-            <div id="editor" style="height: 500px;"></div>
-            
+              <div id="editor" style="height:75vh;"></div>
           </div>
       </div>
 
       <div class="previewCol col-md-4 px-4 mt-2 pb-4">
           <div class="mt-2 p-1 pt-4">
-
             <h5 class="mb-3 pb-3">YouR ouTpuT!</h5>
               <iframe id="preview" style="height:75vh;"></iframe>
           </div>

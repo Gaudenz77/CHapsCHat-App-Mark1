@@ -1,20 +1,29 @@
 <template>
   <div>
-    <figure class="left clearfix chatbody animate__animated animate__fadeInLeft" v-for="message in messages" :key="message.id">
+    <figure class="left clearfix chatBody animate__animated animate__fadeInLeft" v-for="message in messages" :key="message.id">
       <div class="clearfix">
         <div class="header">
-          <blockquote class="lead blockquote ps-2">
-            {{ message.message }}
-          </blockquote>
-        </div>
-        <figcaption class="blockquote-footer px-2 me-2 text-end">
+          <div class="row">
+  <div class="col">
+    <div class="header">
+      <blockquote class="lead blockquote m-3 ps-2">
+        {{ message.message }}
+      </blockquote>
+    </div>
+  </div>
+  <div class="col-auto">
+    <div class="text-end mt-2">
+      <button v-if="message.user.id === authUserId" class="btn btn-circleChat text-sm me-2 text-center" @click="deleteMessage(message.id)">
+        <i class="fa-solid fa-trash-can fa-1x deletIcon"></i><small>Delete</small>
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+        <figcaption class="blockquote-footer  pb-0 pt-3 px-2 my-1 me-1 text-end">
           {{ message.user.name }}
         </figcaption>
-        <div class="text-end">
-          <button v-if="message.user.id === authUserId" class="btn btn-danger btn-sm me-2 text-end" @click="deleteMessage(message.id)">
-          Delete
-        </button>
-        </div>
       </div>
       <div class="dividerone"></div>
     </figure>
@@ -22,10 +31,17 @@
 </template>
 
 <style>
-
 .dividerone {
-  height: 2px;
-  background-color: black;
+  height: 4px;
+  text-decoration: dotted;
+  background-color: #4e80b7;
+  margin: 10px 0;
+}
+
+body.dark-mode .dividerone {
+  height: 4px;
+  text-decoration: dotted;
+  background-color: #022342;
   margin: 10px 0;
 }
 </style>

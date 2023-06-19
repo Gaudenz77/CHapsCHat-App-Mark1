@@ -4,7 +4,7 @@
       id="btn-input"
       type="text"
       name="message"
-      class="form-control"
+      class="form-control formOwnOne"
       placeholder="Type your message here..."
       aria-label="Recipient's username" 
       aria-describedby="button-addon2"
@@ -12,7 +12,7 @@
       @keyup.enter="sendMessage"
     />
     <button class="btn btn-outline-secondary" id="btn-chat" @click="sendMessage">
-      Send
+      <i class="fa-solid fa-paper-plane"></i>
     </button>
   </div>
 </template>
