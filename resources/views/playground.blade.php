@@ -20,7 +20,7 @@
             data-bs-placement="right"
             data-bs-html="true"
             {{-- data-bs-class="popover-body p-2" --}}
-            data-bs-title="<div class='animate__animated animate__zoomInUp'>How To Message {{-- <a href='#' type='button' class='btn-close' onclick='$(this).close('.popover').popover('hide')'>&times;</a> --}}</div>"
+            data-bs-title="<div class='animate__animated animate__zoomInUp'>How To Message</div>"
             data-bs-content='<div class="animate__animated animate__zoomInUp animate__delay-1s"> 
                      <ol>
                        <li>Write your message below in the form-field.</li>
@@ -49,7 +49,7 @@
               data-bs-placement="right"
               data-bs-html="true"
               {{-- data-bs-class="popover-body p-2" --}}
-              data-bs-title="<div class='animate__animated animate__zoomInUp'>Code-Space {{-- <a href='#' type='button' class='btn-close' onclick='$(this).close('.popover').popover('hide')'>&times;</a> --}}</div>"
+              data-bs-title="<div class='animate__animated animate__zoomInUp'>Code-Space </div>"
               data-bs-content='<div class="animate__animated animate__zoomInUp animate__delay-1s"><h5 class="popover-body lead">Here you can code to yours delight!</h5>
                      </div>'></i></h5>
             <div class="row text-end">
@@ -222,10 +222,10 @@
 }); */
 
 
-$(function(){
+/* $(function(){
   $('[data-bs-toggle="tooltip"]').tooltip();
   $('[data-bs-toggle="popover"]').popover({html:true})
-});
+}); */
 
 </script>
 
