@@ -1,6 +1,11 @@
 <template>
   <div>
-    <figure class="left clearfix chatBody animate__animated animate__fadeInLeft" v-for="message in messages" :key="message.id">
+    <figure
+      class="left clearfix chatBody"
+      v-for="(message, index) in messages"
+      :key="`message-${index}`"
+      :class="getMessageAnimationClass(message)"
+    >
       <div class="clearfix">
         <div class="header">
           <div class="row">
@@ -132,7 +137,16 @@ export default {
     // If the message doesn't have an ID, it is unsaved and can be directly removed from the messages array
     this.messages = this.messages.filter(message => message.id !== undefined);
   }
-}
+},
+getMessageAnimationClass(message) {
+    if (message.user.id === this.authUserId) {
+      // Message belongs to the current user, animate from left
+      return 'animate__animated animate__fadeInLeft';
+    } else {
+      // Message belongs to another user, animate from right
+      return 'animate__animated animate__fadeInRight';
+    }
+  },
   }
 };
 </script>
