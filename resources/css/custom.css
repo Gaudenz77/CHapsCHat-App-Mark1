@@ -351,13 +351,13 @@ body.dark-mode .type {
 /* FOOTER LINK ----------------------------------*/
 .span1 {
   color: #ebebeb;
-  background-color: #091540;
+  background-color: #4e80b7;
   height: 8.5vh;
 }
 
 body.dark-mode .span1 {
   color: #333;
-  background-color: #ebebeb;
+  background-color: #022342;
   height: 8.5vh;
 }
 
