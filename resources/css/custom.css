@@ -64,6 +64,10 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body
   color: #ebebeb;
 }
 
+.mine {
+  background-color:blue;
+}
+
 /* SMALL MEDIA QUERIES START */
 @media (max-width: 575.98px) {
   .dropdown-menu {
@@ -1133,4 +1137,25 @@ body.dark-mode .iconshooter {
 
 .custom-tooltip {
   --bs-tooltip-bg: var(--bs-danger);
+}
+
+/*--- CUSTOM POPOVER  ---------------*/
+.popover-header {
+  background-color:#ffff00;
+  color:#333;
+}
+
+body.dark-mode .popover-header {
+  background-color:#2d5c86;
+  /* color:#333; */
+  color:white;
+}
+.popover-body {
+  background-color:#2d5c86;
+  color:white;
+}
+
+body.dark-mode .popover-body {
+  background-color:#ffff00;
+  color:#333;
 }

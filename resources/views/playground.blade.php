@@ -15,7 +15,23 @@
 
       <div class="chatCol col-md-3 px-4 mt-2 pb-4">
         <div class="mt-2 p-1 pt-4">
-          <h5>WELCOME to the MESSAGECORNER</h5>
+          <h5 class="mb-0">WELCOME to the MESSAGECORNER <i class="fa-solid fa-circle-info"
+            data-bs-toggle="popover"
+            data-bs-placement="right"
+            data-bs-html="true"
+            {{-- data-bs-class="popover-body p-2" --}}
+            data-bs-title="<div class='animate__animated animate__zoomInUp'>How To Message {{-- <a href='#' type='button' class='btn-close' onclick='$(this).close('.popover').popover('hide')'>&times;</a> --}}</div>"
+            data-bs-content='<div class="animate__animated animate__zoomInUp animate__delay-1s"> 
+                     <ol>
+                       <li>Write your message below in the form-field.</li>
+                       <li>Press the paperplane-icon to send your message.</li>
+                       <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
+                     </ol>
+                   </div>'></i>
+         </h5>
+          <h1 class="display-6 my-0"><strong>{{ Auth::user()->name }}</strong></h1>
+
+          
           <div class="chatFormField mt-5 px-0">
             <chat-form :user="{{ Auth::user() }}"></chat-form>
           </div>
@@ -28,7 +44,14 @@
 
       <div class="editorCol col-md-5 px-4 mt-2 pb-4">
           <div class="mt-2 p-1 pt-4">
-            <h5 class="mb-0 pb-0">ThiS iS Your EdiTor!</h5>
+            <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! <i class="fa-solid fa-circle-info"
+              data-bs-toggle="popover"
+              data-bs-placement="right"
+              data-bs-html="true"
+              {{-- data-bs-class="popover-body p-2" --}}
+              data-bs-title="<div class='animate__animated animate__zoomInUp'>Code-Space {{-- <a href='#' type='button' class='btn-close' onclick='$(this).close('.popover').popover('hide')'>&times;</a> --}}</div>"
+              data-bs-content='<div class="animate__animated animate__zoomInUp animate__delay-1s"><h5 class="popover-body lead">Here you can code to yours delight!</h5>
+                     </div>'></i></h5>
             <div class="row text-end">
               <div class="col">
                 <div class="btn-group" role="group" aria-label="Basic example">
@@ -197,6 +220,12 @@
   // Optional: Hide the div by default
   paintsphereDiv.style.display = 'none';
 }); */
+
+
+$(function(){
+  $('[data-bs-toggle="tooltip"]').tooltip();
+  $('[data-bs-toggle="popover"]').popover({html:true})
+});
 
 </script>
 

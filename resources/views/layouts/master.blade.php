@@ -47,37 +47,38 @@
 
     @include('components.gueststylesheet')
 
-</head>
+    </head>
 
-<body class="@yield('body-class')">
+    <body class="@yield('body-class')">
 
-<div id="app">
-        <header>
-            @include('layouts.navigation')
-        </header>
+    <div id="app">
+            <header>
+                @include('layouts.navigation')
+            </header>
 
-        <main>
-            <div id="app">
-                @yield('content')
-            </div>
-        </main>
-  </div>
+            <main>
+                <div id="app">
+                    @yield('content')
+                </div>
+            </main>
+      </div>
 
-<footer class="footer mt-0 ms-3 py-3 bg-footer-gradient footerOwn">
-  <div class="container-fluid fixed-bottom text-sm-start text-md-center">
-    <button class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
-    <button id="footerButton" class="btn btn-circleFoot"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
-    <span id="footerContent" class="span1 fixed-bottom pt-3 ps-2"><a href="{{ url('/about') }}" class="nav-item bg-danger mt-2 ms-0 px-2 py-0" style="color:#ffc107;"><b class="">Dare To Meet Me?</b></a><br><b  style="color:  blue;">Copyright &copy; @ {{date('d/m/Y')}}</span>
-  </div>
-</footer>
+      <footer class="footer mt-0 ms-3 py-3 bg-footer-gradient footerOwn">
+        <div class="container-fluid fixed-bottom text-sm-start text-md-center">
+          <button class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()"><i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
+          <button id="footerButton" class="btn btn-circleFoot"><span class="material-symbols-outlined">barefoot</span><p style="font-size:50%; color:#ffc107;">Who needs a footer</p></button>
+          <span id="footerContent" class="span1 fixed-bottom pt-3 ps-2"><a href="{{ url('/about') }}" class="nav-item bg-danger mt-2 ms-0 px-2 py-0" style="color:#ffc107;"><b class="">Dare To Meet Me?</b></a><br><b  style="color:  blue;">Copyright &copy; @ {{date('d/m/Y')}}</span>
+        </div>
+      </footer>
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     
 <script>
 
-/* ENABLE TOOLTIP */
+/* ENABLE TOOLTIP/POPOVER */
 $(function(){
   $('[data-bs-toggle="tooltip"]').tooltip();
+  $('[data-bs-toggle="popover"]').popover({html:true})
 });
 
 /* FOOTER EASTEREGG */
