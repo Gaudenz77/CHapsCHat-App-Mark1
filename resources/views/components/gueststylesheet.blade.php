@@ -3,6 +3,19 @@
           /* background-color: black; */
     }
 
+    #loginMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    margin-top:-10rem;
+    /* min-height: 100vh; */
+    background: url("./assets/img/architecture-4000.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+  }
+
     @media (max-width: 575.98px) {
       .loginMain {
         margin-top:36vh;
@@ -116,6 +129,8 @@ height:10%;
 
 
     }
+
+
      
     .custom-toggler.navbar-toggler {
           border-color: rgb(255, 255, 0);

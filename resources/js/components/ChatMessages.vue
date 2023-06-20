@@ -16,28 +16,29 @@
                                 </blockquote>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <div class="text-end mt-2">
-                                <button
-                                    v-if="message.user.id === authUserId"
-                                    class="btn btn-circleChat text-sm me-2 text-center"
-                                    @click="deleteMessage(message.id)"
-                                >
-                                    <i
-                                        class="fa-solid fa-trash-can fa-1x deletIcon"
-                                    ></i
-                                    ><small>Delete</small>
-                                </button>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <figcaption
-                    class="blockquote-footer pb-0 pt-3 px-2 my-1 me-1 text-end"
-                >
-                    {{ message.user.name }}
-                </figcaption>
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="col-auto">
+                        <figcaption
+                            class="blockquote-footer pb-0 pt-3 ps-4 px-2 my-1 me-1"
+                        >
+                            {{ message.user.name }}
+                        </figcaption>
+                    </div>
+
+                    <div class="col-auto">
+                        <button
+                            v-if="message.user.id === authUserId"
+                            class="btn btn-circleChat text-sm me-2 text-center"
+                            @click="deleteMessage(message.id)"
+                        >
+                            <i class="fa-solid fa-trash-can fa-1x deletIcon"></i
+                            ><small>Delete</small>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="dividerone"></div>
         </figure>
@@ -65,7 +66,7 @@ import axios from "axios";
 import Echo from "laravel-echo";
 
 export default {
-    props: ["authUserId", "messages"],
+    props: ["authUserId"],
     data() {
         return {
             messages: [],
@@ -117,38 +118,40 @@ export default {
             .then((response) => {
                 this.messages = response.data.reverse();
             });
+        this.$parent.$on("messagesent", (message) => {
+            // Add the new message to the messages array
+            this.messages.unshift(message);
+        });
     },
     methods: {
-        sendMessage() {
-            this.$emit("messagesent", {
-                user: this.user,
-                message: this.newMessage,
-            });
-            this.newMessage = "";
-        },
-        addMessage(message) {
-            this.messages.unshift(message);
-        },
         deleteMessage(messageId) {
             if (typeof messageId !== "undefined") {
-                // If the message has an ID, it is saved in the database
                 axios
                     .delete(`/messages/${messageId}`)
                     .then((response) => {
                         // Handle successful deletion
                         console.log("Message deleted:", response.data);
+
                         // Find the index of the message in the messages array
                         const index = this.messages.findIndex(
                             (message) => message.id === messageId
                         );
+
                         // Remove the message from the messages array
                         if (index !== -1) {
                             this.messages.splice(index, 1);
                         }
+
+                        console.log("Message deleted"); // Display a console message
+                        // Show a success message in the UI
+                        // Example: this.$toast.success('Message deleted');
                     })
                     .catch((error) => {
                         // Handle deletion error
                         console.error("Error deleting message:", error);
+                        console.log("Message deletion failed"); // Display a console message
+                        // Show an error message in the UI
+                        // Example: this.$toast.error('Failed to delete message');
                     });
             } else {
                 // If the message doesn't have an ID, it is unsaved and can be directly removed from the messages array
@@ -157,6 +160,7 @@ export default {
                 );
             }
         },
+
         getMessageAnimationClass(message) {
             if (message.user.id === this.authUserId) {
                 // Message belongs to the current user, animate from left
