@@ -35,7 +35,7 @@
 
             @auth
               <li class="nav-item py-3">
-                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/ ') }}"><b>KnowledgeSphere</b></a>
+                  <a class="myNavUnderline px-0 {{ (request()->is('/')) ? '' : '' }}" aria-current="page" href="{{ url('/knowledgeSphere ') }}"><b>KnowledgeSphere</b></a>
               </li>
             @endauth
               <li class="nav-item py-3">
