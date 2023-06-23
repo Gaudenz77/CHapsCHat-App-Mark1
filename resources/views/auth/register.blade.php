@@ -7,7 +7,7 @@
 @section('content')
 
 <section class="">
-    <div class="content">
+    <div class="container">
         <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
 
 <!-- QUOTE TYPEWRITER REGISTER -->
@@ -26,7 +26,8 @@
               </div>
 
             <div class="col-md-4 animate__animated animate__flipInY">
-                <div class="card circleAuth cardLogin">
+                <div class="card circleAuth cardLogin px-3 px-md-5" id="authCard">
+                  
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
@@ -80,7 +81,7 @@
                                     {{ __('Already registered?') }}
                                 </a>
                               
-                                <button type="submit" class=" btn btn-lg btn-auth p-2 ml-md-4">
+                                <button type="submit" class=" btn btn-lg btn-auth my-2 p-2 ml-md-4">
                                     <span class="material-symbols-outlined pe-3">
                                         login
                                         </span>{{-- <br>{{ __('Register') }} --}}
@@ -147,6 +148,23 @@
         }
       });
     });
+
+
+                    // Function to handle class removal
+                    function removeCircleAuthClass() {
+  var authCard = document.getElementById('authCard');
+  if (window.matchMedia("(orientation: landscape) and (min-width: 768px)").matches) {
+    authCard.classList.add('circleAuth');
+  } else {
+    authCard.classList.remove('circleAuth');
+  }
+}
+
+// Call the function on page load and window resize
+window.addEventListener('DOMContentLoaded', removeCircleAuthClass);
+window.addEventListener('resize', removeCircleAuthClass);
+
+                
   </script>
   
 @endsection

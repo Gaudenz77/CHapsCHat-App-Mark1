@@ -6,11 +6,11 @@
 
 @section('content')
 
-<section id="loginMain" class="">
+<section  class="">
   <div class="container">
     <div class="row justify-content-evenly align-items-center" {{-- style="height: 100vh;" --}}>
       <div class="col-md-5 mt-1 animate__animated animate__flipInX">
-        <div class="card circleAuth cardLogin">
+        <div class="card circleAuth cardLogin px-3 px-md-5" id="authCard">
           <div class="card-body">
             <!-- Session Status -->
             @if (session('status'))
@@ -53,7 +53,7 @@
                 @if (Route::has('password.request'))
                   <a class="loginLabel text-decoration-none mb-3" href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
                 @endif
-                <button type="submit" class="btn btn-lg btn-auth p-2 ml-md-4"><span class="material-symbols-outlined pe-3" style="padding-left:-2rem;">
+                <button type="submit" class="btn btn-lg btn-auth my-2 p-2 ml-md-4"><span class="material-symbols-outlined pe-3" style="padding-left:-2rem;">
                   login
                   </span>{{-- {{ __('Log in') }} --}}</button>
               </div>
@@ -137,6 +137,23 @@
       }
     });
   });
+
+
+                    // Function to handle class removal
+                    function removeCircleAuthClass() {
+  var authCard = document.getElementById('authCard');
+  if (window.matchMedia("(orientation: landscape) and (min-width: 768px)").matches) {
+    authCard.classList.add('circleAuth');
+  } else {
+    authCard.classList.remove('circleAuth');
+  }
+}
+
+// Call the function on page load and window resize
+window.addEventListener('DOMContentLoaded', removeCircleAuthClass);
+window.addEventListener('resize', removeCircleAuthClass);
+
+
 </script>
 
 @endsection

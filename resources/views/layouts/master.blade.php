@@ -113,6 +113,7 @@ function scrollToTop() {
         button.classList.remove('show');
       }
     });
+    
 
   /* Reload page twice to grant vs code triggering */
       function reloadTwice() {
