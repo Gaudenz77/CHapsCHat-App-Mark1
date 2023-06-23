@@ -95,3 +95,12 @@ moveIcon();
 });
 
 
+
+function removecircleProfileCols() {
+  var authCard = document.getElementById('authCard');
+  if (window.matchMedia("(orientation: landscape) and (min-width: 768px)").matches) {
+  authCard.classList.add('circleProfileCols');
+  } else {
+  authCard.classList.remove('circleProfileCols');
+  }
+  }

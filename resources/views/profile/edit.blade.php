@@ -24,17 +24,43 @@
     </div>
 </x-app-layout>
 
-@endsection
-
-@push('scripts')
 <script>
-    $(document).ready(function() {
-        var profileCols = $('.circleProfileCols');
+    // Function to handle class removal
+    function removeCircleProfileCols() {
+        var elements = document.getElementsByClassName('circleProfileCols');
+        var isLandscape = window.matchMedia("(orientation: landscape)").matches;
+        var isLargeDevice = window.matchMedia("(min-width: 768px)").matches;
 
-        // Check if the device meets the specified conditions
-        if (window.matchMedia("(orientation: landscape) and (max-width: 576px)").matches) {
-            profileCols.removeClass('circleProfileCols');
+        for (var i = 0; i < elements.length; i++) {
+            var element = elements[i];
+            if (isLandscape && isLargeDevice) {
+                element.classList.add('circleProfileCols');
+            } else {
+                element.classList.remove('circleProfileCols');
+            }
+        }
+    }
+
+    // Call the function initially
+    removeCircleProfileCols();
+
+    // Listen for orientation and window resize events
+    window.addEventListener('resize', function () {
+        removeCircleProfileCols();
+        if (!window.matchMedia("(orientation: landscape)").matches) {
+            // Call again after a delay to handle scaling up after scaling down
+            setTimeout(removeCircleProfileCols, 500);
+        }
+    });
+    window.addEventListener('orientationchange', function () {
+        removeCircleProfileCols();
+        if (!window.matchMedia("(orientation: landscape)").matches) {
+            // Call again after a delay to handle scaling up after scaling down
+            setTimeout(removeCircleProfileCols, 500);
         }
     });
 </script>
-@endpush
+
+@endsection
+
+
