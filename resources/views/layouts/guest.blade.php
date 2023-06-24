@@ -50,36 +50,37 @@
     @include('components.gueststylesheet')
 
 </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
-            </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
-            </div>
+<body class="font-sans text-gray-900 antialiased">
+    <div class="flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+        <div>
+            <a href="/">
+                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            </a>
         </div>
 
+        <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+            {{ $slot }}
+        </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-          
-        <script>
-          
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script>
         /* ENABLE TOOLTIP */
-        $(function(){
-          $('[data-bs-toggle="tooltip"]').tooltip();
+        $(function() {
+            $('[data-bs-toggle="tooltip"]').tooltip();
         });
-        
-        </script>
-        
-        <!-- toggle mode script start -->
-            @include('components.darkmodeToggle')
-        <!-- toggle mode script end-->
-            
-          @vite(['resources/js/app.js', 'resources/js/custom.js'])
-        
-    </body>
+    </script>
+
+    <!-- toggle mode script start -->
+    @include('components.darkmodeToggle')
+    <!-- toggle mode script end-->
+
+    @vite(['resources/js/app.js', 'resources/js/custom.js'])
+
+</body>
+
 </html>

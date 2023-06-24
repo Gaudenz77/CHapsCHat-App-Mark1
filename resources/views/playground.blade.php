@@ -25,7 +25,7 @@
                                       <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
                                     </ol>
                                   </div>'>
-                                  </i>
+                                </i>
                             </h5>
                             <h1 class="display-6 mt-3 my-0 animate__animated animate__rubberBand">
                                 <strong>{{ Auth::user()->name }}</strong>
@@ -189,7 +189,7 @@
                 var newValue = fontColorSwitch.checked ? 'white' : 'black';
                 var currentValue = editor.getValue();
                 var updatedValue = currentValue.replace(/<style>body{color:(.*?);}<\/style>/, function(match,
-                color) {
+                    color) {
                     return '<style>body{color:' + newValue + ';}</style>';
                 });
 

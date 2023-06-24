@@ -66,113 +66,116 @@ import axios from "axios";
 import Echo from "laravel-echo";
 
 export default {
-  props: ["authUserId"],
-  data() {
-    return {
-      messages: [],
-      temporaryId: 1, // Initial value of temporaryId
-    };
-  },
-  computed: {
-    reversedMessages() {
-      return this.messages.slice().reverse();
+    props: ["authUserId"],
+    data() {
+        return {
+            messages: [],
+            temporaryId: 1, // Initial value of temporaryId
+        };
     },
-    authUserId() {
-      return this.$props.authUserId;
-    },
-  },
-  created() {
-    try {
-      window.Echo = new Echo({
-        broadcaster: "pusher",
-        key: import.meta.env.VITE_PUSHER_APP_KEY,
-        cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
-        encrypted: true,
-        authEndpoint: "/broadcasting/auth",
-        auth: {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-          },
+    computed: {
+        reversedMessages() {
+            return this.messages.slice().reverse();
         },
-      });
-      window.Echo.private("playground").listen("MessageSent", (e) => {
-        if (e.message.id === undefined) {
-          // If the received message doesn't have an ID, assign a temporary ID
-          e.message.id = `temp_${this.temporaryId}`;
-          this.temporaryId++;
+        authUserId() {
+            return this.$props.authUserId;
+        },
+    },
+    created() {
+        try {
+            window.Echo = new Echo({
+                broadcaster: "pusher",
+                key: import.meta.env.VITE_PUSHER_APP_KEY,
+                cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
+                encrypted: true,
+                authEndpoint: "/broadcasting/auth",
+                auth: {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem(
+                            "access_token"
+                        )}`,
+                    },
+                },
+            });
+            window.Echo.private("playground").listen("MessageSent", (e) => {
+                if (e.message.id === undefined) {
+                    // If the received message doesn't have an ID, assign a temporary ID
+                    e.message.id = `temp_${this.temporaryId}`;
+                    this.temporaryId++;
+                }
+                this.messages.unshift({
+                    message: e.message.message,
+                    user: e.user,
+                    id: e.message.id,
+                });
+            });
+        } catch (error) {
+            console.error("Error initializing Echo:", error);
         }
-        this.messages.unshift({
-          message: e.message.message,
-          user: e.user,
-          id: e.message.id,
-        });
-      });
-    } catch (error) {
-      console.error("Error initializing Echo:", error);
-    }
-  },
-  mounted() {
-  axios
-    .get("messages", {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-      },
-    })
-    .then((response) => {
-      this.messages = response.data.reverse();
-      })
-      .catch((error) => {
-        console.error("Error fetching messages:", error);
-      });
-  },
-
-  methods: {
-    deleteMessage(messageId) {
-      if (typeof messageId !== "undefined") {
+    },
+    mounted() {
         axios
-          .delete(`/messages/${messageId}`)
-          .then((response) => {
-            // Handle successful deletion
-            console.log("Message deleted:", response.data);
+            .get("messages", {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem(
+                        "access_token"
+                    )}`,
+                },
+            })
+            .then((response) => {
+                this.messages = response.data.reverse();
+            })
+            .catch((error) => {
+                console.error("Error fetching messages:", error);
+            });
+    },
 
-            // Find the index of the message in the messages array
-            const index = this.messages.findIndex(
-              (message) => message.id === messageId
-            );
+    methods: {
+        deleteMessage(messageId) {
+            if (typeof messageId !== "undefined") {
+                axios
+                    .delete(`/messages/${messageId}`)
+                    .then((response) => {
+                        // Handle successful deletion
+                        console.log("Message deleted:", response.data);
 
-            // Remove the message from the messages array
-            if (index !== -1) {
-              this.messages.splice(index, 1);
+                        // Find the index of the message in the messages array
+                        const index = this.messages.findIndex(
+                            (message) => message.id === messageId
+                        );
+
+                        // Remove the message from the messages array
+                        if (index !== -1) {
+                            this.messages.splice(index, 1);
+                        }
+
+                        console.log("Message deleted"); // Display a console message
+                        // Show a success message in the UI
+                        // Example: this.$toast.success('Message deleted');
+                    })
+                    .catch((error) => {
+                        // Handle deletion error
+                        console.error("Error deleting message:", error);
+                        console.log("Message deletion failed"); // Display a console message
+                        // Show an error message in the UI
+                        // Example: this.$toast.error('Failed to delete message');
+                    });
+            } else {
+                // If the message doesn't have an ID, it is unsaved and can be directly removed from the messages array
+                this.messages = this.messages.filter(
+                    (message) => message.id !== undefined
+                );
             }
-
-            console.log("Message deleted"); // Display a console message
-            // Show a success message in the UI
-            // Example: this.$toast.success('Message deleted');
-          })
-          .catch((error) => {
-            // Handle deletion error
-            console.error("Error deleting message:", error);
-            console.log("Message deletion failed"); // Display a console message
-            // Show an error message in the UI
-            // Example: this.$toast.error('Failed to delete message');
-          });
-      } else {
-        // If the message doesn't have an ID, it is unsaved and can be directly removed from the messages array
-        this.messages = this.messages.filter(
-          (message) => message.id !== undefined
-        );
-      }
-    },
+        },
         getMessageAnimationClass(message) {
-        if (message.user.id === this.authUserId) {
-            // Message belongs to the current user, animate from left
-            return "animate__animated animate__fadeInLeft";
-        } else {
-            // Message belongs to another user, animate from right
-            return "animate__animated animate__fadeInRight";
-        }
+            if (message.user.id === this.authUserId) {
+                // Message belongs to the current user, animate from left
+                return "animate__animated animate__fadeInLeft";
+            } else {
+                // Message belongs to another user, animate from right
+                return "animate__animated animate__fadeInRight";
+            }
+        },
     },
-  },
 };
 </script>
-
