@@ -48,7 +48,7 @@
       </div>
     </a> --}}
          
-      <div class="colSquare col-sm-3 mx-sm-4 me-md-4 me-lg-4 mb-4 {{-- animate__animated animate__backInLeft animate__delay-2s --}}"  style="height: 300px;"></div>
+      <div class="colSquare col-sm-3 me-md-4 me-lg-4 mb-4 {{-- animate__animated animate__backInLeft animate__delay-2s --}}"  style="height: 300px;"></div>
 
       <div class="colCircle rounded-circle col-sm-3 mb-4 {{-- animate__animated animate__backInDown animate__delay-3s --}}" style="height: 300px;"></div>
 

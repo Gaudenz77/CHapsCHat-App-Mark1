@@ -25,8 +25,8 @@
                 </div>
               </div>
 
-            <div class="col-md-4 animate__animated animate__flipInY">
-                <div class="card circleAuth cardLogin px-3 px-md-5" id="authCard">
+            <div class="col-md-6 animate__animated animate__flipInY">
+                <div class="card circleAuth cardLogin px-3 pt-2 pb-3 px-md-5" id="authCard">
                   
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
@@ -74,18 +74,20 @@
                                 <span class="input-group-text login labelAuth" for="email"> <p class="squared"></p> <i class="fa-solid fa-key iconAuth" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Confirm your password">{{ __('^2') }}</i></span>
                                 <input id="password_confirmation" class="form-control login" title="Confirm your password" type="password" name="password_confirmation" required autocomplete="new-password" />
                             </div>
-        
+                            <div class="row">
+                              <div class="col text-center">
+                                <button type="submit" class=" btn btn-lg btn-auth my-2 p-2 ml-md-4">
+                                  <span class="material-symbols-outlined pe-3">
+                                      login
+                                      </span>{{-- <br>{{ __('Register') }} --}}
+                              </button>
+                              </div>
+                            </div>
                             <!-- Already Registered? -->
                             <div class="d-md-flex justify-content-md-between align-items-md-center flex-md-column text-center">
                                 <a class="loginLabel text-decoration-none mb-3" href="{{ route('login') }}">
                                     {{ __('Already registered?') }}
                                 </a>
-                              
-                                <button type="submit" class=" btn btn-lg btn-auth my-2 p-2 ml-md-4">
-                                    <span class="material-symbols-outlined pe-3">
-                                        login
-                                        </span>{{-- <br>{{ __('Register') }} --}}
-                                </button>
                             </div>
                               
                         </form>

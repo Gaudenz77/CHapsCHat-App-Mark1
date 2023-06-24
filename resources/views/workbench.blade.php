@@ -57,6 +57,19 @@
 <i class="fa-regular fa-book-bookmark"></i>
 <i class="fa-solid fa-socks"></i>
 
+
+<span class="material-symbols-outlined">
+undo
+</span>
+
+<span class="material-symbols-outlined">
+redo
+</span>
+
+<span class="material-symbols-outlined">
+save
+</span>
+
 welcome @php
     
     {{-- <div class="col-md-4 bg-red" style="background-image: url('../assets/img/square_red.svg'); background-size:cover; height: 400px;"></div>

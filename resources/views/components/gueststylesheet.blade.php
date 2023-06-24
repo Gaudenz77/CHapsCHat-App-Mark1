@@ -3,18 +3,17 @@
         /* background-color: black; */
     }
 
-    #loginMain {
+    /* #loginMain {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100vh;
         margin-top: -10rem;
-        /* min-height: 100vh; */
         background: url("./assets/img/architecture-4000.jpg") no-repeat center center;
         background-size: cover;
         position: relative;
         z-index: 1;
-    }
+    } */
 
     @media (max-width: 575.98px) {
         .loginMain {
@@ -23,13 +22,13 @@
         }
 
         .registerMain {
-            margin-top: 22vh;
-            margin-bottom: 25vh;
+            margin-top: 24vh;
+            margin-bottom: 32vh;
         }
 
         .welcomeMain {
-            margin-top: 19rem;
-            margin-bottom: 8rem;
+            margin-top: 14rem;
+            margin-bottom: 15rem;
         }
 
         .blogMain {
@@ -43,7 +42,7 @@
         }
 
         .navbar {
-            height: 12rem;
+            height: 13rem;
             background-color: #091540;
         }
 
@@ -80,6 +79,13 @@
             width: 16vh;
             padding-right: 8rem;
             padding-bottom: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            left: 0%;
+            bottom: 0%;
         }
 
         a.myNavToggleTitle {
@@ -91,6 +97,10 @@
         }
 
         .span1 {
+          height: 10vh;
+        }
+
+        body.dark-mode .span1 {
           height: 10vh;
         }
     }
@@ -117,7 +127,7 @@
     @media (min-width: 768px) {
 
         .welcomeMain {
-            margin-top: 5rem;
+            margin-top: 7rem;
             margin-bottom: 20rem;
         }
 

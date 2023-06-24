@@ -10,7 +10,7 @@
   <div class="container">
     <div class="row justify-content-evenly align-items-center" {{-- style="height: 100vh;" --}}>
       <div class="col-md-5 mt-1 animate__animated animate__flipInX">
-        <div class="card circleAuth cardLogin px-3 px-md-5" id="authCard">
+        <div class="card circleAuth cardLogin  px-3 pt-2 pb-3  px-md-5" id="authCard">
           <div class="card-body">
             <!-- Session Status -->
             @if (session('status'))
@@ -47,15 +47,18 @@
                 <input id="remember_me" type="checkbox" class="form-check-input" name="remember">
                 <label class="form-check-label loginLabel" for="remember_me">{{ __('Remember me') }}</label>
               </div>
-    
+              <div class="row">
+                <div class="col text-center">
+                  <button type="submit" class="btn btn-lg btn-auth my-2 p-2 ml-md-4"><span class="material-symbols-outlined pe-3" style="padding-left:-2rem;">
+                    login
+                    </span>{{-- {{ __('Log in') }} --}}</button>
+                </div>
+              </div>
               <!-- Forgot your password? -->
               <div class="d-md-flex justify-content-md-between align-items-md-center flex-md-column text-center">
                 @if (Route::has('password.request'))
                   <a class="loginLabel text-decoration-none mb-3" href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
                 @endif
-                <button type="submit" class="btn btn-lg btn-auth my-2 p-2 ml-md-4"><span class="material-symbols-outlined pe-3" style="padding-left:-2rem;">
-                  login
-                  </span>{{-- {{ __('Log in') }} --}}</button>
               </div>
               
             </form>

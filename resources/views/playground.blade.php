@@ -13,7 +13,7 @@
 
     <div class="row">
 
-      <div class="chatCol col-md-3 px-4 mt-2 pb-4">
+      <div class="chatCol col-md-3 px-4 pb-4">
         <div class="mt-2 p-1 pt-4">
           <h5 class="mb-0">WELCOME to the MESSAGECORNER <i class="fa-solid fa-circle-info"
             data-bs-toggle="popover"
@@ -29,10 +29,11 @@
                      </ol>
                    </div>'></i>
          </h5>
-          <h1 class="display-6 my-0"><strong>{{ Auth::user()->name }}</strong></h1>
+          <h1 class="display-6 mt-3 my-0 animate__animated animate__rubberBand">
+            <strong>{{ Auth::user()->name }}</strong></h1>
 
           
-          <div class="chatFormField mt-5 px-0">
+          <div class="chatFormField my-4 px-0">
             <chat-form :user="{{ Auth::user() }}"></chat-form>
           </div>
         </div>
@@ -42,7 +43,7 @@
        <p class="test text-center mb-0 m-2 pt-4">Messageservice brought to you by<a href="https://pusher.com/">Pusher&copy;</a></p>
       </div>
 
-      <div class="editorCol col-md-5 px-4 mt-2 pb-4">
+      <div class="editorCol col-md-5 px-4 pb-4">
           <div class="mt-2 p-1 pt-4">
             <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! <i class="fa-solid fa-circle-info"
               data-bs-toggle="popover"
@@ -54,9 +55,9 @@
                      </div>'></i></h5>
             <div class="row text-end">
               <div class="col">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button  id="undoButton" type="button" class="btn btn-danger">Undo</button>
-                  <button  id="redoButton" type="button" class="btn btn-success">Redo</button>
+                <div class="btn-group mb-2" role="group" aria-label="Basic example">
+                  <button  id="undoButton" type="button" class="btn btn-undo"><i class="fa-solid fa-arrow-rotate-left fa-2x"></i></button>
+                  <button  id="redoButton" type="button" class="btn btn-redo"><i class="fa-solid fa-arrow-rotate-right fa-2x"></i></button>
                 </div>
               </div>
             </div>
@@ -64,7 +65,7 @@
           </div>
       </div>
 
-      <div class="previewCol col-md-4 px-4 mt-2 pb-4">
+      <div class="previewCol col-md-4 px-4 pb-4">
           <div class="mt-2 p-1 pt-4">
             <h5 class="mb-3 pb-3">YouR ouTpuT!</h5>
               <iframe id="preview" style="height:75vh;"></iframe>
@@ -226,6 +227,19 @@
   $('[data-bs-toggle="tooltip"]').tooltip();
   $('[data-bs-toggle="popover"]').popover({html:true})
 }); */
+
+  // Check if the animation has already played during the current session
+  const hasAnimationPlayed = sessionStorage.getItem('animationPlayed');
+
+  if (!hasAnimationPlayed) {
+    // Add the animation class to the element
+    const usernameElement = document.getElementById('username');
+    usernameElement.classList.add('animate__rubberBand');
+
+    // Set the flag indicating that the animation has played
+    sessionStorage.setItem('animationPlayed', true);
+  }
+
 
 </script>
 
