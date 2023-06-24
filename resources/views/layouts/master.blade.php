@@ -49,6 +49,30 @@
 
     @include('components.gueststylesheet')
 
+    <style>
+            /* toggle container */
+.card-checkbox.custom-control-input:not(:checked) ~ .custom-control-label::before {
+  background-color: blue; /* Change the background color of the toggle container  when it is not checked */
+  border-color: yellow; /* Change the border color of the toggle container when it is not checked */
+}
+
+.card-checkbox.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: red; /* Change the color of the toggle container when it is checked */
+    border-color: green; /* Change the border color of the toggle container when it is checked */
+}
+
+/* toggle knob */
+.card-checkbox.checkbox-outside-card.custom-control-input:not(:checked) ~ .custom-control-label::after {
+  background-color: #fff; /* Change the background color of the knob when it is checked */
+  border: 2px solid purple; /* Add a border if you prefer */
+}
+
+.card-checkbox.checkbox-outside-card.custom-control-input:checked ~ .custom-control-label::after {
+  background-color: pink; /* Change the background color of the knob when it is checked */
+  border: 2px solid violet; /* Add a border if you prefer */
+}
+    </style>
+
 </head>
 
 <body class="@yield('body-class')">

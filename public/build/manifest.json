@@ -5,7 +5,7 @@
     "src": "resources/css/areset.css"
   },
   "resources/css/custom.css": {
-    "file": "assets/custom-f655fe20.css",
+    "file": "assets/custom-02bd2a5e.css",
     "isEntry": true,
     "src": "resources/css/custom.css"
   },
@@ -27,7 +27,7 @@
     "src": "resources/js/custom.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-6a29738f.css",
+    "file": "assets/app-edede05e.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
