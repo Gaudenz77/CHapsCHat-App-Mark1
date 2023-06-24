@@ -112,25 +112,22 @@ export default {
     }
   },
   mounted() {
-    axios
-      .get("messages", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-        },
-      })
-      .then((response) => {
-        this.messages = response.data.reverse();
-      });
-    this.$parent.$on("messagesent", (message) => {
-      // Assign a temporary ID to the message if it doesn't have an ID
-      if (message.id === undefined) {
-        message.id = `temp_${this.temporaryId}`;
-        this.temporaryId++;
-      }
-      // Add the new message to the messages array
-      this.messages.unshift(message);
-    });
-  },
+        axios
+            .get("messages", {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem(
+                        "access_token"
+                    )}`,
+                },
+            })
+            .then((response) => {
+                this.messages = response.data.reverse();
+            });
+        this.$parent.$on("messagesent", (message) => {
+            // Add the new message to the messages array
+            this.messages.unshift(message);
+        });
+    },
   methods: {
     deleteMessage(messageId) {
       if (typeof messageId !== "undefined") {
@@ -168,14 +165,14 @@ export default {
         );
       }
     },
-    getMessageAnimationClass(message) {
-      if (message.user.id === this.authUserId) {
-        // Message belongs to the current user, animate from left
-        return "animate__animated animate__fadeInLeft";
-      } else {
-        // Message belongs to another user, animate from right
-        return "animate__animated animate__fadeInRight";
-      }
+        getMessageAnimationClass(message) {
+        if (message.user.id === this.authUserId) {
+            // Message belongs to the current user, animate from left
+            return "animate__animated animate__fadeInLeft";
+        } else {
+            // Message belongs to another user, animate from right
+            return "animate__animated animate__fadeInRight";
+        }
     },
   },
 };
