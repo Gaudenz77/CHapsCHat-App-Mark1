@@ -112,22 +112,20 @@ export default {
     }
   },
   mounted() {
-        axios
-            .get("messages", {
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem(
-                        "access_token"
-                    )}`,
-                },
-            })
-            .then((response) => {
-                this.messages = response.data.reverse();
-            });
-        this.$parent.$on("messagesent", (message) => {
-            // Add the new message to the messages array
-            this.messages.unshift(message);
-        });
-    },
+  axios
+    .get("messages", {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("access_token")}`,
+      },
+    })
+    .then((response) => {
+      this.messages = response.data.reverse();
+      })
+      .catch((error) => {
+        console.error("Error fetching messages:", error);
+      });
+  },
+
   methods: {
     deleteMessage(messageId) {
       if (typeof messageId !== "undefined") {
