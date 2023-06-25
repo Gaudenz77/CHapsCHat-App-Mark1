@@ -11,6 +11,36 @@
                 </button>
             </div>
 
+            <div class="col-12 col-md-4">
+                <label class="form-label" for="filter">Filter by:</label>
+                <select
+                    class="form-select mb-3"
+                    aria-label="Default select example"
+                    v-model="selectedFilter"
+                    id="filter">
+                    <option value="all">All</option>
+                    <option value="topic">Topic</option>
+                    <option value="content">Content</option>
+                    <option value="created_at">Date</option>
+                </select>
+                <div class="mb-3" v-if="selectedFilter === 'created_at'">
+                    <label class="form-label" for="date">Date:</label>
+                    <input
+                        type="date"
+                        v-model="selectedDate"
+                        id="date"
+                        format="mm/dd/yyyy"/>
+                </div>
+                <div class="mb-3" v-if="selectedFilter === 'topic'">
+                    <label class="form-label" for="topic">Topic:</label>
+                    <input class="form-control" type="text" v-model="selectedTopic" id="topic" />
+                </div>
+                <div class="mb-3" v-if="selectedFilter === 'content'">
+                    <label class="form-label" for="content">Content:</label>
+                    <input class="form-control" type="text" v-model="selectedContent" id="content" />
+                </div>
+            </div>
+
             <div class="col-12 col-md-6">
                 <label class="form-label" for="filter">Search on the Web</label>
                 <form id="searchForm" @submit.prevent="search">
@@ -38,37 +68,6 @@
                         </button>
                     </div>
                 </form>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <label class="form-label" for="filter">Filter by:</label>
-                <select
-                    class="form-select mb-3"
-                    aria-label="Default select example"
-                    v-model="selectedFilter"
-                    id="filter">
-                    <option value="all">All</option>
-                    <option value="topic">Topic</option>
-                    <option value="content">Content</option>
-                    <option value="created_at">Date</option>
-                </select>
-                <div class="mb-3" v-if="selectedFilter === 'created_at'">
-                    <label class="form-label" for="date">Date:</label>
-                    <input
-                        type="date"
-                        v-model="selectedDate"
-                        id="date"
-                        format="mm/dd/yyyy"
-                    />
-                </div>
-                <div class="mb-3" v-if="selectedFilter === 'topic'">
-                    <label class="form-label" for="topic">Topic:</label>
-                    <input class="form-control" type="text" v-model="selectedTopic" id="topic" />
-                </div>
-                <div class="mb-3" v-if="selectedFilter === 'content'">
-                    <label class="form-label" for="content">Content:</label>
-                    <input class="form-control" type="text" v-model="selectedContent" id="content" />
-                </div>
             </div>
         </div>
     </div>
