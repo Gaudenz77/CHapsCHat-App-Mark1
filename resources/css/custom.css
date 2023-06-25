@@ -698,6 +698,8 @@ body.dark-mode .deletIcon {
 }
 
 body.dark-mode .scrollableChat {
+    height: 500px;
+    overflow: auto;
 }
 
 .chatCol {

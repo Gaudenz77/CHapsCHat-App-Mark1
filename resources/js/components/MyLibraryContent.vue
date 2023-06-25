@@ -30,14 +30,14 @@
           <th scope="col" style="width:25%;">Topic</th>
           <th scope="col">Content</th>
           <!-- <th scope="col">Created At</th> -->
-          <th scope="col" style="width:10%;">Updated At</th>
+          <th scope="col" style="width:10%;" class="d-none d-sm-table-cell">Updated At</th>
           <th scope="col" style="width:10%;">Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="library in filteredLibraries" :key="library.id">
           <!-- <td>{{ library.id }}</td> -->
-          <td class="lead"><b>
+          <td class="sm:text-sm lg:text-lg"><b>
             <template v-if="editMode === library.id">
               <input type="text" v-model="libraryEditTopic" />
             </template>
@@ -54,7 +54,7 @@
             </template>
           </td>
           <!-- <td>{{ formatDate(library.created_at) }}</td> -->
-          <td>{{ formatDate(library.updated_at) }}</td>
+          <td class="d-none d-sm-table-cell">{{ formatDate(library.updated_at) }}</td>
           <td>
             <div class="">
               <button class="btn btn-circleLibrary text-center" type="button" role="button" @click="deleteLibrary(library.id)">
