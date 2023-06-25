@@ -106,8 +106,8 @@
             </button>
             <span id="footerContent" class="span1 fixed-bottom pt-3 ps-2"><a href="{{ url('/about') }}"
                     class="nav-item bg-danger mt-2 ms-0 px-2 py-0" style="color:#ffc107;"><b class="">Dare To Meet
-                        Me?</b></a><br><b style="color:  blue;">Copyright &copy; @ {{ date('d/m/Y') }}</span>
-        </div>
+                        Me?</b></a><br><b style="color:  blue;">Copyright &copy; @ {{ date('d/m/Y') }} <a class="small" style="color:chartreuse" href="{{ url('/impressum') }}">Legal Notice</a></span>
+                            
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"

@@ -30,6 +30,9 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/impressum', function () {
+    return view('impressum');
+});
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
