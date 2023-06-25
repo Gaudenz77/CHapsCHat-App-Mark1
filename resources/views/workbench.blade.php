@@ -56,7 +56,7 @@
 <i class="fa-solid fa-book-bookmark"></i>
 <i class="fa-regular fa-book-bookmark"></i>
 <i class="fa-solid fa-socks"></i>
-
+<i class="fa-regular fa-circle-xmark"></i>
 
 <span class="material-symbols-outlined">
 undo

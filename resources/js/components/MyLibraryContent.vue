@@ -23,7 +23,7 @@
         <input type="text" v-model="selectedContent" id="content">
       </div>
     </div>
-      <table class="table table-danger table-hover table-striped">
+      <table class="table table-dark table-hover table-striped">
       <thead>
         <tr>
           <!-- <th scope="col">Id</th> -->
@@ -37,14 +37,14 @@
       <tbody>
         <tr v-for="library in filteredLibraries" :key="library.id">
           <!-- <td>{{ library.id }}</td> -->
-          <td>
+          <td class="lead"><b>
             <template v-if="editMode === library.id">
               <input type="text" v-model="libraryEditTopic" />
             </template>
             <template v-else>
               {{ library.topic }}
             </template>
-          </td>
+          </b></td>
           <td id="contentKnowledge" style="max-width: 500px;">
             <template v-if="editMode === library.id">
               <textarea class="col-12 form-controll" type="text" rows="5" v-model="libraryEditContent"></textarea>
@@ -57,12 +57,15 @@
           <td>{{ formatDate(library.updated_at) }}</td>
           <td>
             <div class="">
-              <button class="btn text-center" type="button" role="button" @click="deleteLibrary(library.id)">
+              <button class="btn btn-circleLibrary text-center" type="button" role="button" @click="deleteLibrary(library.id)">
                 <i class="fa-regular fa-trash-can"></i> Delete
               </button>
-              <button class="btn text-center" type="button" role="button" @click="toggleEditMode(library.id)">
-                <i class="fa-regular fa-edit"></i> Edit
+              <button class="btn btn-circleLibrary text-center" type="button" role="button" @click="toggleEditMode(library.id)">
+                <i class="fa-regular" :class="{'fa-edit': editMode !== library.id, 'fa-circle-check': editMode === library.id, 'fa-2x': editMode === library.id}"></i> 
+                <span v-if="editMode !== library.id">Edit</span>
+                <span v-else>Exit</span>
               </button>
+
             </div>
           </td>
         </tr>

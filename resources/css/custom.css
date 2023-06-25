@@ -3,7 +3,8 @@
 /* BODY MAIN DEFINITION */
 body {
     margin-top: 10%;
-    font-family: "Roboto", sans-serif;
+    font-family: "Lexend", sans-serif;
+    overflow-x: hidden;
 }
 
 body.dark-mode body {
@@ -128,6 +129,15 @@ body.dark-mode a {
         width: 90%;
     }
 
+    .knowledgeMain {
+        margin-top: 50%;
+        margin-bottom: 5rem;
+    }
+
+    .knowledgeTable {
+        width: 100%;
+    }
+
     .colCircle {
         background-color: yellow;
         border-radius: 50%;
@@ -213,8 +223,8 @@ body.dark-mode a {
     }
 
     .knowledgeMain {
-        margin-top: 9rem;
-        margin-bottom: 13rem;
+        margin-top: 7rem;
+        margin-bottom: 0rem;
     }
 
     .profileMain {
@@ -295,8 +305,9 @@ body.dark-mode a {
 
     .circleKnowledgeForm {
         position: relative;
-        width: 40% !important; /* Set the desired fixed width */
-        height: 50%; /* Set the desired fixed height */
+        /* width: 50% !important;
+        height: 50%; */
+        background-color:;
         border-radius: 50%;
         padding: 3rem 2rem 4rem 2rem;
         margin-top: 1rem;
@@ -308,11 +319,33 @@ body.dark-mode a {
         align-items: center;
     }
 
-    .knowledgTable {
-        width: 100%;
+    .knowledgeTable {
+        width: 90%;
     }
 }
 /* MD MEDIULM LG LARGE MEDIA QUERIES STOP------------------------------------------------------------------------------- */
+
+/* INDIVIDULA PAGES DETAILS START -------------------------------------------------------------------------------------- */
+
+/* LIBRARY */
+
+.knowledgeTable {
+    background-color: #e2ee58;
+}
+
+body.dark-mode .knowledgeTable {
+    background-color: #2d5c86;
+}
+
+.circleKnowledgeForm {
+    background-color:#022342;
+}
+
+body.dark-mode .circleKnowledgeForm {
+    background-color:#4e80b7;
+}
+
+/* INDIVIDULA PAGES DETAILS START -------------------------------------------------------------------------------------- */
 
 .dropdownProfile {
     background-color: #1400ff;
@@ -883,6 +916,10 @@ body.dark-mode .btn-own {
     margin-bottom: 15px;
 }
 
+body.dark-mode .btn-circleOwn {
+    background-color: #0d6efd;
+}
+
 .btn-circleFoot {
     width: 8rem;
     height: 8rem;
@@ -912,6 +949,10 @@ body.dark-mode .btn-circleFoot {
     margin-bottom: 15px;
 }
 
+body.dark-mode .btn-circleOwn2 {
+    background-color: #ffc107;
+}
+
 .btn-circleOwn3 {
     width: 8rem;
     height: 8rem;
@@ -924,6 +965,10 @@ body.dark-mode .btn-circleFoot {
     margin-bottom: 15px;
 }
 
+body.dark-mode .btn-circleOwn3 {
+    background-color: #f25151;
+}
+
 .btn-circleType {
     width: 6rem;
     height: 6rem;
@@ -934,18 +979,6 @@ body.dark-mode .btn-circleFoot {
     border-radius: 50%;
     text-align: center;
     margin-bottom: 15px;
-}
-
-body.dark-mode .btn-circleOwn {
-    background-color: #0d6efd;
-}
-
-body.dark-mode .btn-circleOwn2 {
-    background-color: #ffc107;
-}
-
-body.dark-mode .btn-circleOwn3 {
-    background-color: #f25151;
 }
 
 body.dark-mode .btn-circleType {
@@ -963,13 +996,34 @@ body.dark-mode .btn-circleType {
 }
 
 body.dark-mode .btn-circleChat {
-    width: 3rem;
-    height: 3rem;
-    font-size: 70%;
     background-color: #f25151;
-    color: #000;
+}
+
+.btn-circleLibrary {
+    width: 4rem;
+    height: 4rem;
+    font-size: 90%;
+    font-weight: bold;
+    background-color: #ebebeb;
+    padding: 8px 8px;
     border-radius: 50%;
     text-align: center;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .btn-circleLibrary {
+    background-color: #333 !important;
+    color: #ebebeb !important;
+}
+
+body.dark-mode .btn-circleLibrary:hover {
+    background-color: #ebebeb !important;
+    color: #333 !important;
+}
+
+body.dark-mode .btn-circleLibrary:focus {
+    background-color: #ebebeb !important;
+    color: #333 !important;
 }
 
 /*  BTN UNDO REDO ------------------------------------------------*/
@@ -1352,3 +1406,49 @@ input:checked + .slider:before {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
+
+/*  ADDITIONAL CSS EFFECTS N STUFF START ---------------------------------------------------------------------*/
+
+/* .circle-text {
+    width: 200px; 
+    height: 100px; 
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #ff0000, #ffff00); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .rainbow-text {
+    font-size: 24px; 
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    animation: rainbow-animation 5s infinite;
+  }
+  
+  @keyframes rainbow-animation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } */
+
+  .rainbow-text {
+    font-size:1.2rem; /* Adjust the font size as desired */
+    fill: #ebebeb;
+  }
+
+  body.dark-mode .rainbow-text {
+    font-size:1.2rem; /* Adjust the font size as desired */
+    fill:#333;
+  }
+  
+  .hintKnowledge {
+    color:#ebebeb
+  }
+  
+  body.dark-mode .hintKnowledge {
+    color:#333
+  }

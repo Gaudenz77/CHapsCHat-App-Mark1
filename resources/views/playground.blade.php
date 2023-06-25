@@ -39,7 +39,7 @@
                         <div class="smooth-scroll scrollableChat chatBody rounded">
                             <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
                         </div>
-                        <p class="test text-center mb-0 m-2 pt-4">Messageservice brought to you by<a
+                        <p class="test text-center mb-0 m-2 pt-4">Messageservice brought to you by <a
                                 href="https://pusher.com/">Pusher&copy;</a></p>
                     </div>
 

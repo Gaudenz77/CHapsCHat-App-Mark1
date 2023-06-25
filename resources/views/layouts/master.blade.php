@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> --}}
 
     <!-- Cross Server Reference token setting  -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Hier wird der Wert von der Konstanten APP_NAME aus .env eingetragen, falls vorhanden. Andernfalls wird der Default-String "Laravel" verwendet -->
+    <!-- the value of the constant APP_NAME from the .env file is being assigned, if it exists. Otherwise, the default string "Laravel" is used. -->
 
     <link rel="icon" href="./assets/img/krakatoom_favicon.png" type="image/x-icon">
 
@@ -50,6 +51,10 @@
     @include('components.gueststylesheet')
 
     <style>
+body {
+  
+}
+
         /* toggle container */
         .card-checkbox.custom-control-input:not(:checked)~.custom-control-label::before {
             background-color: blue;
@@ -79,6 +84,11 @@
             border: 2px solid violet;
             /* Add a border if you prefer */
         }
+
+        * {
+            /* border: 1px solid red !important; */
+            }
+            
     </style>
 
 </head>

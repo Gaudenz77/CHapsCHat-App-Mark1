@@ -1,13 +1,13 @@
   <template>
-    <div>
+    <div class="">
       <form @submit.prevent="submitForm">
-        <label class="form-label formOwnOne">Topic</label>
+        <label class="form-label formOwnOne"></label>
         <div class="input-group mb-3">
           <span class="input-group-text formOwnOne" id="basic-addon1"><i class="fa-solid fa-palette formIcons" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Select a topic"></i></span>
           <input type="text" class="form-control formOwnOne" placeholder="Topic" aria-describedby="basic-addon1" name="topic" id="topic" v-model="form.topic" required>
         </div>
 
-        <label class="form-label formOwnOne">Content</label>
+        <label class="form-label formOwnOne"></label>
         <div class="input-group">
           <span class="input-group-text formOwnOne"><i class="fa-solid fa-file-signature formIcons" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your content"></i></span>
           <textarea class="form-control formOwnOne" placeholder="Content" name="content" id="content" v-model="form.content" required></textarea>
@@ -19,8 +19,7 @@
 
         <input type="hidden" name="_token" :value="form.csrfToken">
       </form>
-      <button type="button" id="closeButton" class="btn-close" aria-label="Close"></button>
-      <p>Close Create Library</p>
+      <button type="button" id="closeButton" class="btn-lg btn-close" aria-label="Close"></button>
     </div>
   </template>
 
@@ -90,6 +89,15 @@
         this.editMode = false;
         this.form.topic = '';
         this.form.content = '';
+      },
+      closeForm() {
+        const template = document.querySelector('.animated_animate');
+        template.classList.add('animate__fadeOut');
+        
+        // After the animation ends, remove the template from the DOM
+        template.addEventListener('animationend', () => {
+          template.remove();
+        });
       },
     },
   };
