@@ -57,6 +57,7 @@
 <i class="fa-regular fa-book-bookmark"></i>
 <i class="fa-solid fa-socks"></i>
 <i class="fa-regular fa-circle-xmark"></i>
+<i class="fa-solid fa-face-laugh-wink"></i>
 
 <span class="material-symbols-outlined">
 undo
@@ -81,3 +82,30 @@ welcome @php
                 <div class="col-md-3" style="background-image: url('../assets/img/triangle_blue.svg'); width:400px; display:flex; justify-content:center; margin-left:-100px; padding-right:20%;"></div> --}}
  
 @endphp
+
+
+<form id="search-form">
+  <div class="input-group py-4 animate__animated animate__lightSpeedInRight animate__slow">
+      <input type="text" class="form-control" id="search-input" >
+        <select class="form-select" aria-label="Default select example" id="search-select">
+        <div class="btn btn-outline-secondary">
+          <option value="google">Google</option>
+          <option value="wikipedia">Wikipedia</option>
+        </select>
+        <button class="btn btn btn-outline-dark" type="button" onclick="submitForm()">Search</button>
+  </div>
+</form>
+
+function submitForm() {
+  const searchInput = document.querySelector("#search-input").value;
+  const searchSelect = document.querySelector("#search-select").value;
+  let searchURL = "";
+  
+  if (searchSelect === "google") {
+    searchURL = `https://www.google.com/search?q=${searchInput}`;
+  } else if (searchSelect === "wikipedia") {
+    searchURL = `https://en.wikipedia.org/wiki/${searchInput}`;
+  }
+  
+  window.open(searchURL, "_blank");
+}

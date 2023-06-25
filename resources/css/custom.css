@@ -104,7 +104,7 @@ body.dark-mode a {
 }
 
 /* SMALL MEDIA QUERIES START */
-@media (max-width: 575.98px) {
+@media (max-width: 480px) {
     .dropdown-menu {
         margin-left: 0;
         margin-right: 10px;
@@ -182,7 +182,7 @@ body.dark-mode a {
 
 /* LANDSCAPE/TABLET MEDIA QUERIES START */
 
-@media (min-width: 650px) and (max-width: 799px) and (orientation: landscape) {
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
     /* CSS rules for mobile landscape mode */
     .registerMain {
         margin-top: 5rem;
@@ -199,7 +199,7 @@ body.dark-mode a {
 
 /* MD MEDIULM LG LARGE MEDIA QUERIES START---------------------------------------------------------------- */
 /* Styles for medium and large devices */
-@media (min-width: 800px) {
+@media (min-width: 800px){
     .dropdown-menu {
         margin-left: -35px;
         margin-right: 60px;
@@ -343,6 +343,14 @@ body.dark-mode .knowledgeTable {
 
 body.dark-mode .circleKnowledgeForm {
     background-color:#4e80b7;
+}
+
+.infoKnowledge {
+    color:#ebebeb;
+}
+
+body.dark-mode .infoKnowledge {
+    color:#333;
 }
 
 /* INDIVIDULA PAGES DETAILS START -------------------------------------------------------------------------------------- */
@@ -1338,25 +1346,53 @@ body.dark-mode .iconshooter {
 }
 
 /*--- CUSTOM POPOVER  ---------------*/
-.popover-header {
+.popPlayHead {
     background-color: #ffff00;
     color: #333;
 }
 
-body.dark-mode .popover-header {
+body.dark-mode .popPlayHead {
     background-color: #2d5c86;
     /* color:#333; */
     color: white;
 }
-.popover-body {
+.popPlayBody {
     background-color: #2d5c86;
     color: white;
 }
 
-body.dark-mode .popover-body {
+body.dark-mode .popPlayBody {
     background-color: #ffff00;
     color: #333;
 }
+
+
+.popKnowInfoHead {
+    background-color: #333;
+    color: #fff !important;
+    margin: -2rem;
+    margin-right: -2rem;
+    margin-left: -2rem;
+    padding: 1rem 1rem 2rem 2rem;
+    border-top-left-radius: 1.5rem !important;
+    border-top-right-radius: 1.5rem !important;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.popKnowInfoBody {
+    background-color: #ffffff;
+    color: #333;
+    padding: 1rem;
+    margin: -1rem -1rem -2rem;
+    margin-bottom: -2rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    margin-bottom: -3rem;
+  }
+
+
+
 
 .switch {
     position: relative;

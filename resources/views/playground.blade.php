@@ -15,10 +15,13 @@
 
                     <div class="chatCol col-md-3 px-4 pb-4">
                         <div class="mt-2 p-1 pt-4">
-                            <h5 class="mb-0">WELCOME to the MESSAGECORNER <i class="fa-solid fa-circle-info"
-                                    data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}}
-                                    data-bs-title="<div class='animate__animated animate__zoomInUp'>How To Message</div>"
-                                    data-bs-content='<div class="animate__animated animate__zoomInUp animate__delay-1s"> 
+                            <h5 class="mb-0">WELCOME to the MESSAGECORNER 
+                                <i class="fa-solid fa-circle-info"
+                                    data-bs-toggle="popover" 
+                                    data-bs-placement="right" 
+                                    data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}}
+                                    data-bs-title="<div class='popPlayHead animate__animated animate__zoomInUp'>How To Message</div>"
+                                    data-bs-content='<div class="popPlayBody animate__animated animate__zoomInUp animate__delay-1s"> 
                                     <ol>
                                       <li>Write your message below in the form-field.</li>
                                       <li>Press the paperplane-icon to send your message.</li>
@@ -45,10 +48,14 @@
 
                     <div class="editorCol col-md-5 px-4 pb-4">
                         <div class="mt-2 p-1 pt-4">
-                            <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! <i class="fa-solid fa-circle-info"
-                                    data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}}
-                                    data-bs-title="<div class='animate__animated animate__zoomInUp'>Code-Space </div>"
-                                    data-bs-content='<div class="animate__animated animate__zoomInUp animate__delay-1s"><h5 class="popover-body lead">Here you can code to yours delight!</h5></div>'></i>
+                            <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! 
+                                <i class="fa-solid fa-circle-info"
+                                    data-bs-toggle="popover" 
+                                    data-bs-placement="right" 
+                                    data-bs-html="true"
+                                    data-bs-title="<div class='popPlayHead animate__animated animate__zoomInUp'>Code-Space </div>"
+                                    data-bs-content='<div class="popPlayHead animate__animated animate__zoomInUp animate__delay-1s">
+                                        <h5 class="popover-body lead">Here you can code to yours delight!</h5></div>'></i>
                             </h5>
                             <div class="row text-end">
                                 <div class="col">
@@ -60,12 +67,12 @@
                                     </div>
 
                                     <div class="form-check form-switch" style="padding-right: 30rem;">
-                                        <i class="fa-solid fa-circle-info" data-bs-toggle="popover" data-bs-placement="right"
-                                            data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}}
-                                            data-bs-title="<div class=''>Change main font color</div>"
-                                            data-bs-content="<div class=''> 
-                                  Basic font colort to suit page dark-mode switch
-                                  </div>"></i>
+                                        <i class="fa-solid fa-circle-info" 
+                                            data-bs-toggle="popover" 
+                                            data-bs-placement="right"
+                                            data-bs-html="true"
+                                            data-bs-title="<div class='popPlayHead'>Change main font color</div>"
+                                            data-bs-content="<div class='popPlayBody'>Basic font colort to suit page dark-mode switch</div>"></i>
                                         <input class="form-check-input" type="checkbox" role="switch" id="fontColorSwitch">
                                         <label class="form-check-label" for="flexSwitchCheckDefault"></label>
                                     </div>
