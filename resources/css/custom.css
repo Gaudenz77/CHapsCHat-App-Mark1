@@ -182,7 +182,7 @@ body.dark-mode a {
 
 /* LANDSCAPE/TABLET MEDIA QUERIES START */
 
-@media (min-width: 740px) and (orientation: landscape) {
+@media (min-width: 650px) and (max-width: 799px) and (orientation: landscape) {
     /* CSS rules for mobile landscape mode */
     .registerMain {
         margin-top: 5rem;
@@ -199,7 +199,7 @@ body.dark-mode a {
 
 /* MD MEDIULM LG LARGE MEDIA QUERIES START---------------------------------------------------------------- */
 /* Styles for medium and large devices */
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     .dropdown-menu {
         margin-left: -35px;
         margin-right: 60px;
