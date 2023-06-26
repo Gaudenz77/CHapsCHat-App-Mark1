@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md fixed-top container-fluid">
     <img src="./assets/img/Group 26.svg" alt="logo_image" class="logoImg img-fluid mx-0 mt-sm-n1 ms-2"
         style="margin-bottom: -1rem;">
-    @include('components.toggle')
+    {{-- @include('components.toggle') --}}
     <div class="display-4 display-md-6 ms-2 sm-my-0"><a class="brand myNavUnderline mt-0 mx-0 ms-2 me-2"
             href="{{ url('/') }}"><b>{{ config('app.name', 'CHapsCHat') }}</b></a></div>
 
@@ -80,8 +80,14 @@
                         @endif
                     </ul>
                 </li>
+                <li class="toggle">
+                    @include('components.toggle')
+                </li>
             </ul>
         </div>
+        {{-- <div class="toggle">
+            @include('components.toggle')
+        </div> --}}
     </div>
     {{-- @include('components.toggle') --}}
 </nav>
