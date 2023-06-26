@@ -5,7 +5,7 @@
     <div class="display-4 display-md-6 ms-2 sm-my-0"><a class="brand myNavUnderline mt-0 mx-0 ms-2 me-2"
             href="{{ url('/') }}"><b>{{ config('app.name', 'CHapsCHat') }}</b></a></div>
 
-    <button class="navbar-toggler custom-toggler me-3 mb-0" type="button" data-bs-toggle="offcanvas"
+    <button class="navbar-toggler navBarTogglOwn custom-toggler me-3 mb-0" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,7 +13,7 @@
         <div class="offcanvas-header mb-0">
             <div class="offcanvas-title" id="offcanvasNavbarLabel">
             </div>
-            <img src="./assets/img/Group 26.svg" alt="logo_image" class="img-fluid">
+            <img src="./assets/img/Group 26.svg" alt="logo_image" class="canvasLogo img-fluid">
             <h2><a class="brand myNavToggleTitle" href="{{ url('/') }}"> {{ config('app.name', 'CHapsCHat') }} </a>
             </h2>
             <button type="button" class="btn-close me-5 mb-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -55,10 +55,10 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <b>{{ Auth::user()->name }}</b>
                         </a>
-                        <ul class="dropdown-menu dropdownProfile" id="myDropdownAccount">
-                            <li class="nav-item py-3"><a class="myNavUnderline px-0 "
+                        <ul class="dropdown-menu dropdownProfile py-0" id="myDropdownAccount">
+                            <li class="nav-item"><a class="myNavUnderline px-0 "
                                     href="{{ url('profile') }}"><b>Profile</b></a></li>
-                            <li class="nav-item py-3"><a class="myNavUnderline px-0 " href="{{ route('logout') }}"
+                            <li class="nav-item"><a class="myNavUnderline px-0 " href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><b>Log
                                         out</b></a></li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -80,7 +80,7 @@
                         @endif
                     </ul>
                 </li>
-                <li class="toggle">
+                <li class="listToggle">
                     @include('components.toggle')
                 </li>
             </ul>

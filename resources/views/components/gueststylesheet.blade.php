@@ -33,7 +33,7 @@
 
         .blogMain {
             margin-top: 26vh;
-            margin-bottom: 18vh;
+            margin-bottom: 22.5vh;
         }
 
         .aboutMain {

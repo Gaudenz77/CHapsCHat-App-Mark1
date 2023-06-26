@@ -4,7 +4,7 @@
 body {
     margin-top: 10%;
     font-family: "Lexend", sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body.dark-mode body {
@@ -119,9 +119,14 @@ body.dark-mode a {
         background-color: #091540;
     }
 
+    .navBarTogglOwn {
+        right: 0%;
+        position: relative;
+    }
+
     .playgroundMain {
         margin-top: 12rem;
-        margin-bottom: 10rem;
+        margin-bottom: 5rem;
     }
 
     .colSquare {
@@ -205,7 +210,7 @@ body.dark-mode a {
     }
 
     .navbar {
-        height: 12%;
+        height: 14%;
         background-color: #091540;
     }
 
@@ -224,7 +229,7 @@ body.dark-mode a {
     }
 
     .profileMain {
-        margin-top: 9rem;
+        margin-top: 7rem;
         margin-bottom: 10rem;
     }
 
@@ -742,6 +747,10 @@ body.dark-mode .offcanvas-body {
     background-color: #ebebeb;
 }
 
+.canvasLogo {
+    display:none;
+}
+
 body.dark-mode .ul {
     color: white;
 }
@@ -1206,6 +1215,17 @@ left:-30px;
     position: relative;
     width: 230px;
     margin-left: -4rem;
+}
+
+.listToggle {
+    width:0%;
+}
+
+.labelToggle {
+    width: 29%;
+    position: relative;
+    left: 16px;
+    bottom: 10px;
 }
 
 .custom-checkbox[type="checkbox"] {

@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg">
-            {{ __('Your Profile Information') }}
+            {{ __('Your Profile') }}
         </h2>
     
         <p class="mt-1">
-            {{ __("Update your account's profile information and email address.") }}
+            {{ __("Update your accounts") }}<br>{{ __("profile information and email address.") }}
         </p>
     </header>
     
@@ -19,7 +19,7 @@
     
         <div class="mb-3 d-flex justify-content-center">
             <div class="col-9">
-                <x-input-label for="name" :value="__('Name')" />
+                <x-input-label class="form-label" for="name" :value="__('Name')" />
                 <x-text-input id="name" name="name" type="text" class="form-control" :value="old('name', $user->name)" required autofocus autocomplete="name" />
                 <x-input-error class="mt-2" :messages="$errors->get('name')" />
             </div>
@@ -27,7 +27,7 @@
     
         <div class="mb-3 d-flex justify-content-center">
             <div class="col-9">
-            <x-input-label for="email" :value="__('Email')" />
+            <x-input-label class="form-label" for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="form-control" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
     

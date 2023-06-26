@@ -1,4 +1,4 @@
-<label class="wrapper">
+<label class="labelToggle">
     <input type="checkbox" id="checker1" class="custom-checkbox" name="check-guy" onchange="toggleDarkMode()" checked="checked"/>
     <div class="ht-ui-check" for="checker1">
         <div class="track">

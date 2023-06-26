@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Update Password') }}
+            {{ __('Update') }}<br>{{ __('Password') }}
         </h2>
     
         <p class="mt-1 text-sm text-gray-600">
-            {{ __('Use a long, random password, NOT "password" or "mom".') }}
+            {{ __('Use a long, random password,') }}<br>{{ __('NOT "password" or "mom".') }}
         </p>
     </header>
     

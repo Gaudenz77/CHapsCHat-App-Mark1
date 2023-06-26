@@ -42,7 +42,7 @@
                         <div class="smooth-scroll scrollableChat chatBody rounded">
                             <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
                         </div>
-                        <p class="test text-center mb-0 m-2 pt-4">Messageservice brought to you by <a
+                        <p class="test text-center m-2 mb-5 pt-4 pb-3">Messageservice brought to you by <a
                                 href="https://pusher.com/">Pusher&copy;</a></p>
                     </div>
 
@@ -65,23 +65,28 @@
                                         <button id="redoButton" type="button" class="btn btn-redo"><i
                                                 class="fa-solid fa-arrow-rotate-right fa-2x"></i></button>
                                     </div>
-
-                                    <div class="form-check form-switch" style="padding-right: 30rem;">
+                                    <div class="text-start d-flex pt-2 mt-2">
                                         <i class="fa-solid fa-circle-info" 
                                             data-bs-toggle="popover" 
                                             data-bs-placement="right"
                                             data-bs-html="true"
                                             data-bs-title="<div class='popPlayHead'>Change main font color</div>"
                                             data-bs-content="<div class='popPlayBody'>Basic font colort to suit page dark-mode switch</div>"></i>
+                                    </div>
+                                    
+                                    <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" role="switch" id="fontColorSwitch">
+                                        
                                         <label class="form-check-label" for="flexSwitchCheckDefault"></label>
                                     </div>
+
+                                    
 
 
 
                                 </div>
                             </div>
-                            <div id="editor" style="height:65vh;"></div>
+                            <div id="editor" style="height:85vh;"></div>
                         </div>
                     </div>
 
