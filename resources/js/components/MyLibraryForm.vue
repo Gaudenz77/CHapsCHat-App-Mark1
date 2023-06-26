@@ -11,12 +11,13 @@
                             <i class="fa-solid fa-palette formIcons"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                title="Select a topic" ></i></span>
+                                data-bs-placement="left"
+                                data-bs-html="true"
+                                title="<b>Chose <br>a meaningful <br>title</b>" ></i></span>
                         <input
                             type="text"
                             class="form-control formOwnOne"
-                            placeholder="Topic"
+                            placeholder="Title"
                             aria-describedby="basic-addon1"
                             name="topic"
                             id="topic"
@@ -30,8 +31,9 @@
                           <i class="fa-solid fa-file-signature formIcons"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                title="Enter your content"></i></span>
+                                data-bs-placement="left"
+                                data-bs-html="true"
+                                title="<b>Enter <br>your content</b>"></i></span>
                         <textarea
                             class="form-control formOwnOne"
                             placeholder="Content"

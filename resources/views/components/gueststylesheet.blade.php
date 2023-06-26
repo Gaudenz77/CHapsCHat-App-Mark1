@@ -15,7 +15,7 @@
         z-index: 1;
     } */
 
-    @media (max-width: 575.98px) {
+    @media (max-width: 480px) {
         .loginMain {
             margin-top: 24vh;
             margin-bottom: 18vh;
@@ -32,7 +32,7 @@
         }
 
         .blogMain {
-            margin-top: 22vh;
+            margin-top: 26vh;
             margin-bottom: 18vh;
         }
 
@@ -107,7 +107,7 @@
 
     /* LANDSCAPE/TABLET MEDIA QUERIES START */
 
-    @media (min-width: 740px) and (orientation: landscape) {
+    @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
 
         /* CSS rules for mobile landscape mode */
         .registerMain {
@@ -124,7 +124,7 @@
 
     /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
-    @media (min-width: 768px) {
+    @media (min-width: 800px){
 
         .welcomeMain {
             margin-top: 7rem;
@@ -141,8 +141,7 @@
         }
 
         .blogMain {
-            margin-top: 14vh;
-            margin-bottom: 11vh;
+            margin-top: 12vh;
         }
 
         .aboutMain {
@@ -163,6 +162,23 @@
             height: 12%;
             background-color: #091540;
         }
+
+        .colBlogContent {
+            width:75%;
+            padding-bottom:4rem;
+        }
+
+        .span1 {
+            color: #ebebeb;
+            background-color: #4e80b7;
+            height: 10.3vh;
+        }
+
+        body.dark-mode .span1 {
+            color: #333;
+            background-color: #022342;
+            height: 10.3vh;
+        }
     }
 
     .custom-toggler.navbar-toggler {
@@ -182,4 +198,5 @@
     body.dark-mode .custom-toggler .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 0, 0, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
+
 </style>

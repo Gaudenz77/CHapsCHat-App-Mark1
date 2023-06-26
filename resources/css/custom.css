@@ -166,11 +166,7 @@ body.dark-mode a {
         justify-content: center;
     }
 
-    .circleBlog {
-        position: relative;
-        width: 100%;
-        height: fit-content;
-    }
+
 
     .welcomeMain {
         margin-top: 10rem;
@@ -230,13 +226,6 @@ body.dark-mode a {
     .profileMain {
         margin-top: 9rem;
         margin-bottom: 10rem;
-    }
-
-    .circleBlog {
-        position: relative;
-        width: 100%;
-        height: fit-content;
-        /* border-radius: 50%; */
     }
 
     .logoImg {
@@ -353,7 +342,91 @@ body.dark-mode .infoKnowledge {
     color:#333;
 }
 
-/* INDIVIDULA PAGES DETAILS START -------------------------------------------------------------------------------------- */
+.selectKnow {
+    height: 46px;
+    position: relative;
+    display: flex;
+}
+
+/* BLOG */
+
+.circleBlog {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: #fe0000;
+    border-radius:20px;
+}
+
+body.dark-mode .circleBlog {
+    background-color: #07c3c3;
+}
+
+.formOwnOne {
+    color: #333;
+    border-radius: 20px;
+}
+
+.pBlogText {
+    position:relative;
+    top:-20px;
+}
+
+.columnBlogTwo {
+    position: relative;
+    min-width: 20%;
+    min-height: 100%;
+    padding: 5rem 2rem 1rem 2rem;
+    background-color:#7bffcf;
+}
+
+body.dark-mode .columnBlogTwo { 
+    background-color:#830131;
+}
+
+.textfield {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    padding: 20px;
+    overflow: auto;
+    transform: translateY(50%);
+}
+
+.textfieldBlogTitle {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    padding: 2.5rem;
+    color: #fff;
+    background-color: #fe0000;
+    border-radius: 19px;
+}
+
+body.dark-mode .textfieldBlogTitle {
+    color: #333;
+    background-color: #07c3c3;
+
+}
+
+.textfieldBlogContent {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    text-align: left;
+}
+
+body.dark-mode .textfieldBlogContent {
+    color: #333;
+}
+
+
+/* INDIVIDUAL PAGES DETAILS END -------------------------------------------------------------------------------------- */
 
 .dropdownProfile {
     background-color: #1400ff;
@@ -393,11 +466,6 @@ body.dark-mode .loginLabel {
 
 body.dark-mode .cardLogin {
     background-color: #ebebeb;
-}
-
-.formOwnOne {
-    color: #333;
-    border-radius: 20px;
 }
 
 body.dark-mode .formOwnOne {
@@ -504,13 +572,13 @@ body.dark-mode .type {
 .span1 {
     color: #ebebeb;
     background-color: #4e80b7;
-    height: 8.5vh;
+    height: 10.3vh;
 }
 
 body.dark-mode .span1 {
     color: #333;
     background-color: #022342;
-    height: 8.5vh;
+    height: 10.3vh;
 }
 
 nav {
@@ -733,6 +801,7 @@ body.dark-mode .chatCol {
     min-width: 20%;
     min-height: 100%;
     padding: 5rem 2rem 1rem 2rem;
+  
 }
 
 .circleAuth {
@@ -752,40 +821,17 @@ body.dark-mode .chatCol {
     padding: 5rem 2rem 1rem 2rem;
 }
 
-.textfield {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 70%;
-    height: 70%;
-    padding: 20px;
-    overflow: auto;
-    transform: translateY(50%);
-}
 
-.textfieldBlogTitle {
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    padding: 2.5rem;
-    color: #ffffff;
-}
-
-.textfieldBlogContent {
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    color: #ffffff;
-    text-align: left;
-}
 
 .textfieldKnowledge {
     font-size: 15px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
+}
+
+.body.dark-mode .textfieldKnowledge {
+    color: #333;
 }
 
 .form-wrapper {
@@ -1097,6 +1143,33 @@ body.dark-mode .btn-circleLibrary:focus {
     outline: none;
 }
 
+.btn-searchOne {
+    background-color: #259956;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border-width: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 8px;
+    padding-left: 4px;
+    color: #5bcd14;
+    border-style: dotted;
+    border-width: 3px;
+    border-color: #e2ee58;
+}
+
+#searchOne {
+    z-index:0;
+}
+
+.magnfGlassIcon {
+    position: relative;
+    bottom: 2px;
+    left: 2px;
+}
+
 #closeButton {
     color: red !important;
 }
@@ -1342,7 +1415,10 @@ body.dark-mode .iconshooter {
 /* ICONSHOOTER STOP ------------------------------------------------------- */
 
 .custom-tooltip {
-    --bs-tooltip-bg: var(--bs-danger);
+    --bs-tooltip-bg:#e2ee58;
+    --bs-tooltip-color:#333;
+    --bs-tooltip-border-radius:50%;
+    --bs-tooltip-padding-y:1rem;
 }
 
 /*--- CUSTOM POPOVER  ---------------*/

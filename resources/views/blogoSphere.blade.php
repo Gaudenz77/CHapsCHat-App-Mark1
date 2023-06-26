@@ -10,18 +10,26 @@
     <div class="container-fluid">
 
         <div class="row justify-content-center align-items-start">
-            <div class="col-sm-4 circleBig bg-info mb-0" id="formContainer" style="display: none;height: 100vh;">
+            <div class="col-sm-4 col-lg-3 columnBlogTwo px-lg-4 px-2 pt-4 mb-0" id="formContainer" style="display: none;height: 100vh;">
                 <div class="form-wrapper">
-                    <h3 class="">Create Blog</h3>
+                    <h3 class="pt-3">Create Blog</h3>
                     <my-blog-form></my-blog-form>
                 </div>
             </div>
             
-            <div class="col-sm-8 mt-md-0 mt-0">
-                <div class="container" style=" margin-top:-15% ! important">
+            <div class="col-sm-8 col-lg-8 colBlogContent mt-md-0 mt-0">
+                <div class="container mb-3" style=" margin-top:-15% ! important">
                     @auth
-                    <div class="text-end mt-2">
-                        <button class="btn btn-own mt-md-0 mt-5 text-end" type="button" role="button" id="createButton2"><i class="fa-solid fa-circle-plus fa-4x formOwnOne"></i> Create</button>
+                    <div class="text-center">
+                        <button class="btn btn-own mt-md-0 mt-5 text-end" type="button" role="button" id="createButton2">
+                          <i class="fa-solid fa-circle-plus fa-4x formOwnOne pt-2"
+                              data-bs-custom-class="custom-tooltip"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="left"
+                              data-bs-html="true"
+                              title="<b>Press to<br>open form</b>">
+                          </i></button>
+                        <p class="pBlogText small mt-0 mb-0" style="padding-top:-2rem;">Create</p>
                     </div>
                     @endauth
                     

@@ -1,7 +1,7 @@
 <template>
     <div class="filters">
         <div class="row">
-            <div class="col-12 col-md-2">
+            <div class="col-12 col-md-2 pt-3">
                 <button
                     class="btn btn-own"
                     type="button"
@@ -11,10 +11,10 @@
                 </button>
             </div>
 
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 mb-1 pt-0">
                 <label class="form-label" for="filter">Filter by:</label>
                 <select
-                    class="form-select mb-3"
+                    class="selectKnow form-select mb-3"
                     aria-label="Default select example"
                     v-model="selectedFilter"
                     id="filter">
@@ -63,8 +63,8 @@
                             </option>
                             <option value="database">Database</option>
                         </select>
-                        <button type="submit" class="btn btn-primary">
-                            Go
+                        <button type="submit" id="searchOne" class="btn btn-searchOne">
+                            <i class="magnfGlassIcon fa-solid fa-magnifying-glass fa-xl"></i>
                         </button>
                     </div>
                 </form>
@@ -94,7 +94,7 @@
                             <input type="text" v-model="libraryEditTopic" />
                         </template>
                         <template v-else>
-                            {{ library.topic }}
+                            <span v-html="renderHTML(library.topic)"></span>
                         </template>
                     </b>
                 </td>
@@ -108,7 +108,7 @@
                     </template>
                     <template v-else>
                         <div style="word-break: break-word">
-                            {{ library.content }}
+                            <span v-html="renderHTML(library.content)"></span>
                         </div>
                     </template>
                 </td>
@@ -333,6 +333,9 @@ export default {
 
             // Open the search URL in a new window or tab
             window.open(searchUrl, "_blank");
+        },
+        renderHTML(content) {
+            return content; // Return content as-is (assuming it contains valid HTML)
         },
     },
 };

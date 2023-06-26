@@ -1,18 +1,29 @@
 <template>
-    <div class="mt-5 mb-1">
+    <div class="py-4 mb-1">
         <form @submit.prevent="submitForm">
 
-
-            <label class="form-label formOwnOne" for="title">Title</label>
-            <div class="input-group mb-3">
-                <span class="input-group-text formOwnOne" id="basic-addon1"><i class="fa-solid fa-palette formIcons" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Select a topic"></i></span>
+            <label class="form-label formOwnOne" for="title"></label>
+            <div class="input-group mb-4">
+                <span class="input-group-text formOwnOne" id="basic-addon1">
+                    <i class="fa-solid fa-palette formIcons" 
+                        data-bs-custom-class="custom-tooltip" 
+                        data-bs-toggle="tooltip" 
+                        data-bs-placement="top"
+                        data-bs-html="true" 
+                        title="Select<br>a <br>title"></i></span>
                 <input type="text" name="title" class="form-control formOwnOne" placeholder="Title" id="title" v-model="form.title" required>
             </div>
 
-            <label for="topic">Topic</label>
-            <div class="input-group">
-                <span class="input-group-text formOwnOne"><i class="fa-solid fa-book-bookmark formIcons" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your content"></i></span>
-                <select class="form-control" id="topic" v-model="form.topic" required>
+            <label class="form-label" for="topic"></label>
+            <div class="input-group mb-4">
+                <span class="input-group-text formOwnOne">
+                    <i class="fa-solid fa-book-bookmark formIcons" 
+                        data-bs-custom-class="custom-tooltip" 
+                        data-bs-toggle="tooltip" 
+                        data-bs-placement="top"
+                        data-bs-html="true" 
+                        title="Select <br> a <br> topic"></i></span>
+                <select class="form-control formOwnOne" id="topic" v-model="form.topic" required>
                     <option value="general"> General</option>
                     <option value="resources">Resources</option>
                     <option value="techtalk">Tech Talk</option>
@@ -20,7 +31,7 @@
                 </select>
             </div>
 
-            <label class="form-label formOwnOne" for="content">Content</label>
+            <label class="form-label formOwnOne" for="content"></label>
             <div class="input-group">
                 <span class="input-group-text formOwnOne"><i class="fa-solid fa-file-signature formIcons" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your content"></i></span>
                 <textarea class="form-control formOwnOne" placeholder="Content" name="content" id="content" rows="5" v-model="form.content" required></textarea>

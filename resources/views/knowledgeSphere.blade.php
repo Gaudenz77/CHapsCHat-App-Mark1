@@ -29,8 +29,10 @@
                                 </text>
                             </svg>
                             <div class="row justify-content-center align-items-center">
-                                <i class="fa-solid fa-circle-info fa-4x infoKnowledge animate__animated animate__heartBeat animate__delay-5s" data-bs-toggle="popover"
-                                    data-bs-placement="right" data-bs-html="true"
+                                <i class="fa-solid fa-circle-info fa-4x infoKnowledge animate__animated animate__heartBeat animate__delay-5s" 
+                                    data-bs-toggle="popover"
+                                    data-bs-placement="right" 
+                                    data-bs-html="true"
                                     data-bs-title="<div class='popKnowInfoHead'>How To Use Your Library
                                       <i class='animate__animated animate__flip fa-solid fa-face-laugh-wink ps-2'></i></div>"
                                     data-bs-content="<div class='popKnowInfoBody'> 

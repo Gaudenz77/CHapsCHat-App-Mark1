@@ -58,6 +58,7 @@
 <i class="fa-solid fa-socks"></i>
 <i class="fa-regular fa-circle-xmark"></i>
 <i class="fa-solid fa-face-laugh-wink"></i>
+<i class="fa-solid fa-magnifying-glass"></i>
 
 <span class="material-symbols-outlined">
 undo

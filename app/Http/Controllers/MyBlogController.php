@@ -96,28 +96,32 @@ class MyBlogController extends Controller
             ->with('success', 'Blog updated successfully!');
     }
 
-    public function destroy($id)
-    {
-        $blog = Blog::findOrFail($id);
+public function destroy($id)
+{
+    // Find the blog by ID
+    $blog = Blog::findOrFail($id);
 
-        if ($blog && $blog->user_id == auth()->user()->id) {
-            $blog->delete();
-
-            // If the request expects JSON response, return a JSON message
-            if (request()->expectsJson()) {
-                return response()->json(['success' => true]);
-            }
-
-            return redirect()->route('blogoSphere.index')
-                ->with('success', 'Blog deleted successfully!');
-        }
-
-        // If the request expects JSON response, return a JSON message
-        if (request()->expectsJson()) {
-            return response()->json(['success' => false]);
-        }
-
-        return redirect()->route('blogoSphere.index')
-            ->with('error', 'Failed to delete blog!');
+    // Check if the user is authenticated
+    if (!auth()->check()) {
+        // If the user is not authenticated, handle the error (e.g., redirect to login page)
+        return redirect()->route('login')->with('error', 'You must be logged in to delete a blog post.');
     }
+
+    // Check if the authenticated user is the creator of the blog
+    if ($blog->user_id !== auth()->user()->id) {
+        // If the user is not the creator of the blog, handle the error (e.g., redirect with error message)
+        return redirect()->back()->with('error', 'You are not authorized to delete this blog post.');
+    }
+
+    // Delete the blog post
+    $blog->delete();
+
+    // If the request expects JSON response, return a JSON message
+    if (request()->expectsJson()) {
+        return response()->json(['success' => true]);
+    }
+
+    return redirect()->route('blogoSphere.index')
+        ->with('success', 'Blog deleted successfully!');
+}
 }
