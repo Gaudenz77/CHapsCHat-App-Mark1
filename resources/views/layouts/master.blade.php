@@ -116,7 +116,7 @@ body {
             </button>
             <span id="footerContent" class="span1 fixed-bottom pt-3 ps-2"><a href="{{ url('/about') }}"
                     class="nav-item mt-2 ms-0 px-2 ps-0 py-0" style="color:#ffc107;"><b class="">Dare To Meet
-                        Me?</b></a><br><b style="color:  blue;">&copy; @ {{ date('d/m/Y') }} <a class="small" style="color:chartreuse" href="{{ url('/impressum') }}">Legal Notice</a></span>
+                        Me?</b></a><br><b style="color:  blue;">&copy; {{ date('d/m/Y') }} <a class="small" style="color:chartreuse" href="{{ url('/impressum') }}"><br>Legal Notice</a></span>
                             
     </footer>
 

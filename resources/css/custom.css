@@ -748,7 +748,9 @@ body.dark-mode .offcanvas-body {
 }
 
 .canvasLogo {
-    display:none;
+    /* display:none; */
+    width:8rem;
+    
 }
 
 body.dark-mode .ul {

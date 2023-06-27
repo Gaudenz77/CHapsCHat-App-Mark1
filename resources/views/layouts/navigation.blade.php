@@ -13,7 +13,7 @@
         <div class="offcanvas-header mb-0">
             <div class="offcanvas-title" id="offcanvasNavbarLabel">
             </div>
-            <img src="./assets/img/Group 26.svg" alt="logo_image" class="canvasLogo img-fluid">
+            <img src="./assets/img/Group 26.svg" alt="logo_image" class="canvasLogo">
             <h2><a class="brand myNavToggleTitle" href="{{ url('/') }}"> {{ config('app.name', 'CHapsCHat') }} </a>
             </h2>
             <button type="button" class="btn-close me-5 mb-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -80,7 +80,7 @@
                         @endif
                     </ul>
                 </li>
-                <li class="listToggle">
+                <li class="listToggle" style="list-style-type: none;">
                     @include('components.toggle')
                 </li>
             </ul>

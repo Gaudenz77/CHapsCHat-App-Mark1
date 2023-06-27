@@ -27,7 +27,7 @@
         }
 
         .welcomeMain {
-            margin-top: 14rem;
+            margin-top: 6rem;
             margin-bottom: 15rem;
         }
 
@@ -42,7 +42,7 @@
         }
 
         .navbar {
-            height: 13rem;
+            height: 6rem;
             background-color: #091540;
         }
 
@@ -66,13 +66,14 @@
         }
 
         .logoImg {
-            width: 60%;
+            /* width: 30%;
             margin-left: 2rem;
             margin-bottom: -20px;
             padding-left: 1rem;
             position: relative;
             left: 0;
-            justify-content: center;
+            justify-content: center; */
+            display:none;
         }
 
         .wrapper {
@@ -97,11 +98,11 @@
         }
 
         .span1 {
-            height: 10vh;
+            height: 12vh;
         }
 
         body.dark-mode .span1 {
-            height: 10vh;
+            height: 12vh;
         }
     }
 
@@ -120,11 +121,17 @@
             background-color: #091540;
         }
 
+        .span1 {
+            color: #ebebeb;
+            background-color: #4e80b7;
+            height: 25vh;
+        }
+
     }
 
     /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
-    @media (min-width: 800px){
+    @media (min-width: 800px) and (orientation: landscape) {
 
         .welcomeMain {
             margin-top: 7rem;
