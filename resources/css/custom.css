@@ -171,19 +171,24 @@ body.dark-mode a {
         justify-content: center;
     }
 
-
-
     .welcomeMain {
         margin-top: 10rem;
         margin-bottom: 20rem;
     }
+
+    .triangleFix {
+        height: 100%;
+        width: 130%;
+        position: relative;
+    }
+    
 }
 
 /* SMALL MEDIA QUERIES END */
 
 /* LANDSCAPE/TABLET MEDIA QUERIES START */
 
-@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+@media (min-width: 481px) and (max-width: 900px) and (orientation: landscape) {
     /* CSS rules for mobile landscape mode */
     .registerMain {
         margin-top: 5rem;
@@ -194,13 +199,18 @@ body.dark-mode a {
         height: 25%;
         background-color: #091540;
     }
+
+    .playgroundMain {
+        margin-top: 24vh;
+        margin-bottom: 0rem;
+    }
 }
 
 /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
 /* MD MEDIULM LG LARGE MEDIA QUERIES START---------------------------------------------------------------- */
 /* Styles for medium and large devices */
-@media (min-width: 800px){
+@media (min-width: 850px)  and (orientation: landscape) {
     .dropdown-menu {
         margin-left: -35px;
         margin-right: 60px;
@@ -217,6 +227,12 @@ body.dark-mode a {
     .welcomeMain {
         margin-top: 15rem;
     }
+
+    .triangleFix {
+        position: relative;
+        top: 8%;
+        }
+ 
 
     .playgroundMain {
         margin-top: 12vh;
@@ -301,7 +317,7 @@ body.dark-mode a {
         position: relative;
         /* width: 50% !important;
         height: 50%; */
-        background-color:;
+        /* background-color:; */
         border-radius: 50%;
         padding: 3rem 2rem 4rem 2rem;
         margin-top: 1rem;
@@ -940,24 +956,40 @@ body.dark-mode .previewCol {
 .btn {
 }
 
+.btn-circle,
+.btn-circle:hover,
+.btn-circle:focus {
+  width: 5rem;
+  height: 5rem;
+  font-size: 90%;
+  padding: 8px 8px;
+  border-radius: 50%;
+  color: #ffff00;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
+}
+
 .btn-circle {
-    width: 5rem;
-    height: 5rem;
-    font-size: 90%;
-    padding: 8px 8px;
-    border-radius: 50%;
-    color: #ffff00;
-    font-weight: bold;
-    background-color: #1400ff;
-    text-align: center;
-    margin-bottom: 15px;
-    box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
+  background-color: #1400ff;
+}
+
+.btn-circle:hover,
+.btn-circle:focus {
+  background-color: #ffff00 !important;
+  color: #1400ff !important;
 }
 
 body.dark-mode .btn-circle {
-    background-color: #ff0000;
-    color: #ffff00;
-    font-weight: bold;
+  background-color: #ff0000;
+  color: #ffff00;
+}
+
+body.dark-mode .btn-circle:hover,
+body.dark-mode .btn-circle:focus {
+  background-color: #ffff00 !important;
+  color: #ff0000 !important;
 }
 
 .btn-own {
@@ -1098,6 +1130,13 @@ body.dark-mode .btn-circleLibrary:focus {
 .undoRedoGroup {
     position: relative;
     top: 27px;
+}
+
+.iconInfoPlay {
+    width: 4%;
+    position: relative;
+    left: 13%;
+    top: 19%;
 }
 
 .btn-undo {

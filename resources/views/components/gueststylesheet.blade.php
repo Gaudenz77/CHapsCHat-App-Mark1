@@ -22,13 +22,13 @@
         }
 
         .registerMain {
-            margin-top: 24vh;
-            margin-bottom: 32vh;
+            margin-top: 10vh;
+            margin-bottom: 18vh;
         }
 
         .welcomeMain {
             margin-top: 6rem;
-            margin-bottom: 15rem;
+            margin-bottom: 8.5rem;
         }
 
         .blogMain {
@@ -98,17 +98,17 @@
         }
 
         .span1 {
-            height: 12vh;
+            height: 11vh;
         }
 
         body.dark-mode .span1 {
-            height: 12vh;
+            height: 11vh;
         }
     }
 
     /* LANDSCAPE/TABLET MEDIA QUERIES START */
 
-    @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    @media (min-width: 481px) and (max-width: 900px) and (orientation: landscape) {
 
         /* CSS rules for mobile landscape mode */
         .registerMain {
@@ -131,7 +131,7 @@
 
     /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
-    @media (min-width: 800px) and (orientation: landscape) {
+    @media (min-width: 850px)  and (orientation: landscape) {
 
         .welcomeMain {
             margin-top: 7rem;

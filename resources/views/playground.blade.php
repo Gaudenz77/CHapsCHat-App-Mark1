@@ -65,7 +65,7 @@
                                         <button id="redoButton" type="button" class="btn btn-redo"><i
                                                 class="fa-solid fa-arrow-rotate-right fa-2x"></i></button>
                                     </div>
-                                    <div class="text-start d-flex pt-2 mt-2">
+                                    <div class="iconInfoPlay text-start d-flex pt-2 mt-2">
                                         <i class="fa-solid fa-circle-info" 
                                             data-bs-toggle="popover" 
                                             data-bs-placement="right"
@@ -74,7 +74,7 @@
                                             data-bs-content="<div class='popPlayBody'>Basic font colort to suit page dark-mode switch</div>"></i>
                                     </div>
                                     
-                                    <div class="form-check form-switch">
+                                    <div class="form-check form-switch col-1">
                                         <input class="form-check-input" type="checkbox" role="switch" id="fontColorSwitch">
                                         
                                         <label class="form-check-label" for="flexSwitchCheckDefault"></label>
