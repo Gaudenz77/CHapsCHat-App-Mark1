@@ -108,15 +108,15 @@ body {
     </div>
 
     <footer class="footer mt-0 ms-3 py-3 bg-footer-gradient footerOwn">
-        <div class="container-fluid fixed-bottom text-sm-start text-md-center">
+        <div class="container-fluid fixed-bottom text-center">
             <button class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()"><i
                     class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
             <button id="footerButton" class="btn btn-circleFoot"><span class="material-symbols-outlined">barefoot</span>
-                <p style="font-size:50%; color:#ffc107;">Who needs a footer</p>
+                <p class="footerBtnTextStart">Footer?</p>
             </button>
             <span id="footerContent" class="span1 fixed-bottom pt-3 ps-2"><a href="{{ url('/about') }}"
                     class="nav-item mt-2 ms-0 px-2 ps-0 py-0" style="color:#ffc107;"><b class="">Dare To Meet
-                        Me?</b></a><br><b style="color:  blue;">Copyright &copy; @ {{ date('d/m/Y') }} <a class="small" style="color:chartreuse" href="{{ url('/impressum') }}">Legal Notice</a></span>
+                        Me?</b></a><br><b style="color:  blue;">&copy; @ {{ date('d/m/Y') }} <a class="small" style="color:chartreuse" href="{{ url('/impressum') }}">Legal Notice</a></span>
                             
     </footer>
 
@@ -143,12 +143,12 @@ body {
                     footerContent.style.display = "none";
                     isContentVisible = false;
                     footerButton.innerHTML =
-                        '<span class="material-symbols-outlined">barefoot</span><br><p style="font-size:60%;color:#ffc107;"">Who needs a footer</p>';
+                        '<span class="material-symbols-outlined">barefoot</span><br><p class="footerBtnTextStart">Footer?</p>';
                 } else {
                     footerContent.style.display = "block";
                     isContentVisible = true;
                     footerButton.innerHTML =
-                        '<span class="material-symbols-outlined">barefoot</span><br><p style="font-size:80%;color:#ffc107;"">Go away</p>';
+                        '<span class="material-symbols-outlined">barefoot</span><br><p class="footerBtnTextStart">Voilà!</p>';
                 }
             });
         });
