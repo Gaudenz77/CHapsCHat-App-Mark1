@@ -125,8 +125,8 @@ body.dark-mode a {
     }
 
     .playgroundMain {
-        margin-top: 12rem;
-        margin-bottom: 5rem;
+        margin-top: 6rem;
+        margin-bottom: 0rem;
     }
 
     .colSquare {
@@ -1454,6 +1454,14 @@ body.dark-mode .iconshooter {
 .popPlayHead {
     background-color: #ffff00;
     color: #333;
+    margin: -2rem;
+    margin-right: -2rem;
+    margin-left: -2rem;
+    padding: 1rem 1rem 2rem 2rem;
+    border-top-left-radius: 1.5rem !important;
+    border-top-right-radius: 1.5rem !important;
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
 body.dark-mode .popPlayHead {
@@ -1464,6 +1472,12 @@ body.dark-mode .popPlayHead {
 .popPlayBody {
     background-color: #2d5c86;
     color: white;
+    padding: 1rem;
+    margin: -1rem -1rem -2rem;
+    margin-bottom: -2rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    margin-bottom: -3rem;
 }
 
 body.dark-mode .popPlayBody {

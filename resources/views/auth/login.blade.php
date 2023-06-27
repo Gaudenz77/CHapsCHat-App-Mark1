@@ -77,8 +77,8 @@
                             </form>
 
                             <div class="text-center">
-                                <p class="loginLabel pt-3">Subscribe & <a class="loginLabel myNavUnderline mb-1"
-                                        href="{{ route('register') }}" class=""><b>Register</b></a> now! </p>
+                                <p class="loginLabel pt-3">Subscribe & <a class="loginLabel mb-1"
+                                        href="{{ route('register') }}" class="me-0"><b>Register</b></a> now!</p>
                             </div>
                         </div>
                     </div>

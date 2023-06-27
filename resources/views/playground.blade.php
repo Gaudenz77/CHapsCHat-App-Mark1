@@ -18,10 +18,10 @@
                             <h5 class="mb-0">WELCOME to the MESSAGECORNER 
                                 <i class="fa-solid fa-circle-info"
                                     data-bs-toggle="popover" 
-                                    data-bs-placement="right" 
+                                    data-bs-placement="bottom" 
                                     data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}}
-                                    data-bs-title="<div class='popPlayHead animate__animated animate__zoomInUp'>How To Message</div>"
-                                    data-bs-content='<div class="popPlayBody animate__animated animate__zoomInUp animate__delay-1s"> 
+                                    data-bs-title="<div class='popPlayHead {{-- animate__animated animate__zoomInUp --}}'>How To Message</div>"
+                                    data-bs-content='<div class="popPlayBody {{-- animate__animated animate__zoomInUp animate__delay-1s --}}"> 
                                     <ol>
                                       <li>Write your message below in the form-field.</li>
                                       <li>Press the paperplane-icon to send your message.</li>
@@ -53,8 +53,8 @@
                                     data-bs-toggle="popover" 
                                     data-bs-placement="right" 
                                     data-bs-html="true"
-                                    data-bs-title="<div class='popPlayHead animate__animated animate__zoomInUp'>Code-Space </div>"
-                                    data-bs-content='<div class="popPlayHead animate__animated animate__zoomInUp animate__delay-1s">
+                                    data-bs-title="<div class='popPlayHead {{-- animate__animated animate__zoomInUp --}}'>Code-Space </div>"
+                                    data-bs-content='<div class="popPlayHead {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
                                         <h5 class="popover-body lead">Here you can code to yours delight!</h5></div>'></i>
                             </h5>
                             <div class="row text-end">
@@ -291,11 +291,6 @@
           paintsphereDiv.style.display = 'none';
         }); */
 
-
-        /* $(function(){
-          $('[data-bs-toggle="tooltip"]').tooltip();
-          $('[data-bs-toggle="popover"]').popover({html:true})
-        }); */
 
         // Check if the animation has already played during the current session
         const hasAnimationPlayed = sessionStorage.getItem('animationPlayed');

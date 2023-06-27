@@ -17,8 +17,8 @@
 
     @media (max-width: 480px) {
         .loginMain {
-            margin-top: 24vh;
-            margin-bottom: 18vh;
+            margin-top: 13vh;
+            margin-bottom: 11vh;
         }
 
         .registerMain {
@@ -50,7 +50,7 @@
             position: fixed;
             left: 0;
             bottom: 0;
-            height: 24%;
+            height: 12%;
             width: 100%;
             margin-top: 0;
         }

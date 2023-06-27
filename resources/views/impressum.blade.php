@@ -23,7 +23,10 @@
                     <div class="legalNotice text-start">
                         <p><b>Responsible entity:</b><br />Gaudenz Raiber<br />Neugasse 81<br />Ch-8005
                             Zurich<br />Switzerland<br /><strong>Email</strong>:
-                            Krakatoom01@proton.me<br /><br /><strong>Disclaimer</strong><br />The author assumes no
+                            <a href="mailto:krakatoom01@proton.me">Gaudenz Raiber</a><br />
+                            <strong>Github</strong>:
+                            <a href="https://github.com/Gaudenz77">Gaudenz@Krakatoom</a><br /><br />
+                            <strong>Disclaimer</strong><br />The author assumes no
                             liability for the correctness, accuracy, timeliness, reliability and completeness of the
                             information.<br />Liability claims against the author for material or immaterial damage
                             resulting from access to, use or non-use of the published information, from misuse of the
