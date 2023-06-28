@@ -11,7 +11,11 @@
                 <p>{{ blog.user_id }}</p>
                 <p><strong>Topic:</strong> {{ blog.topic }}</p>
                 <p class="textfieldBlogContent">{{ blog.content }}</p>
-                <img :src="getImageUrl(blog.image)" class="img-fluid" alt="Blog Image" />
+                <img
+                    :src="getImageUrl(blog.image)"
+                    class="img-fluid"
+                    alt="Blog Image"
+                />
                 <button
                     class="btn mt-2 mb-2 p-1"
                     type="button"
@@ -57,41 +61,23 @@ export default {
                 });
         },
         getImageUrl(image) {
-        if (image) {
-            const baseUrl = '/assets/img/'; // Update the base URL to match your folder structure
-            return baseUrl + image;
-        }
-        // Return a placeholder image URL or an empty string if no image is available
-        return '/assets/img/ChapsChatLogo.png';
+            if (image) {
+                const baseUrl = "/assets/img/"; // Update the base URL to match your folder structure
+                return baseUrl + image;
+            }
+            // Return a placeholder image URL or an empty string if no image is available
+            return "/assets/img/ChapsChatLogo.png";
         },
         deleteBlog(id) {
-        axios
-            .delete(`/blogosphere/${id}`)
-            .then((response) => {
-            // Retrieve the image filename from the deleted blog
-            const deletedBlog = this.blogs.find((blog) => blog.id === id);
-            const image = deletedBlog.image;
-
-            // Remove the image file from the folder
-            if (image) {
-                const imageUrl = this.getImageUrl(image);
-                axios.delete(imageUrl)
-                .then(() => {
-                    console.log('Image deleted successfully');
+            axios
+                .delete(`/blogosphere/${id}`)
+                .then((response) => {
+                    this.blogs = this.blogs.filter((blog) => blog.id !== id);
                 })
                 .catch((error) => {
-                    console.error('Error deleting image', error);
+                    console.error(error);
                 });
-            }
-
-            // Remove the deleted blog from the list
-            this.blogs = this.blogs.filter((blog) => blog.id !== id);
-            })
-            .catch((error) => {
-            console.error(error);
-            });
         },
-
     },
 };
 </script>
