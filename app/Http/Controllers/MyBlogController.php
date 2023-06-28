@@ -13,6 +13,10 @@ class MyBlogController extends Controller
     {
         $blogs = Blog::orderBy('created_at', 'desc')->get();
 
+        $blogs->each(function ($blog) {
+            $blog->image_url = asset('assets/img/' . $blog->image);
+        });
+
         return response()->json($blogs);
     }
 
@@ -28,32 +32,44 @@ class MyBlogController extends Controller
             'title' => 'required',
             'topic' => 'required|in:general,resources,techtalk',
             'content' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Add validation for image upload
         ]);
+
+
 
         $blog = new Blog();
         $blog->user_id = auth()->user()->id;
         $blog->title = $validatedData['title'];
         $blog->topic = $validatedData['topic'];
         $blog->content = $validatedData['content'];
+
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('assets/img'), $imageName);
+            $blog->image = $imageName;
+        };
+
         $blog->save();
 
-    // Store the feedbackMapId in the session
-    session(['blogId' => $blog->id]);
+        // Store the feedbackMapId in the session
+        session(['blogId' => $blog->id]);
 
-    // If the request expects JSON response, return a JSON message
-    if ($request->expectsJson()) {
-        return response()->json(['message' => 'Blog-post successfully stored in the database']);
-    }
+        // If the request expects JSON response, return a JSON message
+        if ($request->expectsJson()) {
+            return response()->json(['message' => 'Blog-post successfully stored in the database']);
+        }
 
-    return redirect()->route('blogosphere.show', $blog->id)
-        ->with('success', 'Blog created successfully!');
+        return redirect()->route('blogosphere.show', $blog->id)
+            ->with('success', 'Blog created successfully!');
     }
 
     public function show(Request $request, $id)
     {
         // Find the blog by ID
         $blog = Blog::findOrFail($id);
-        dd($request->all());
+
         return view('blogosphere.show', compact('blog'));
         /* return redirect()->route('blogosphere.show', ['id' => $blog->id]); */
     }
@@ -69,7 +85,6 @@ class MyBlogController extends Controller
         }
 
         return view('blogs.edit', compact('blog'));
-        
     }
 
     public function update(Request $request, $id)
@@ -96,32 +111,41 @@ class MyBlogController extends Controller
             ->with('success', 'Blog updated successfully!');
     }
 
-public function destroy($id)
-{
-    // Find the blog by ID
-    $blog = Blog::findOrFail($id);
-
-    // Check if the user is authenticated
-    if (!auth()->check()) {
-        // If the user is not authenticated, handle the error (e.g., redirect to login page)
-        return redirect()->route('login')->with('error', 'You must be logged in to delete a blog post.');
+    public function destroy($id)
+    {
+        // Find the blog by ID
+        $blog = Blog::findOrFail($id);
+    
+        // Check if the user is authenticated
+        if (!auth()->check()) {
+            // If the user is not authenticated, handle the error (e.g., redirect to login page)
+            return redirect()->route('login')->with('error', 'You must be logged in to delete a blog post.');
+        }
+    
+        // Check if the authenticated user is the creator of the blog
+        if ($blog->user_id !== auth()->user()->id) {
+            // If the user is not the creator of the blog, handle the error (e.g., redirect with error message)
+            return redirect()->back()->with('error', 'You are not authorized to delete this blog post.');
+        }
+    
+        // Delete the image file if it exists
+        if ($blog->image) {
+            $imagePath = public_path('assets/img/' . $blog->image);
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
+    
+        // Delete the blog post
+        $blog->delete();
+    
+        // If the request expects JSON response, return a JSON message
+        if (request()->expectsJson()) {
+            return response()->json(['success' => true]);
+        }
+    
+        return redirect()->route('blogosphere.index')
+            ->with('success', 'Blog deleted successfully!');
     }
-
-    // Check if the authenticated user is the creator of the blog
-    if ($blog->user_id !== auth()->user()->id) {
-        // If the user is not the creator of the blog, handle the error (e.g., redirect with error message)
-        return redirect()->back()->with('error', 'You are not authorized to delete this blog post.');
-    }
-
-    // Delete the blog post
-    $blog->delete();
-
-    // If the request expects JSON response, return a JSON message
-    if (request()->expectsJson()) {
-        return response()->json(['success' => true]);
-    }
-
-    return redirect()->route('blogoSphere.index')
-        ->with('success', 'Blog deleted successfully!');
-}
+    
 }

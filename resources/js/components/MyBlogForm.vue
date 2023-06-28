@@ -1,6 +1,6 @@
 <template>
     <div class="py-4 mb-1">
-        <form @submit.prevent="submitForm">
+        <form @submit.prevent="submitForm" enctype="multipart/form-data">
 
             <label class="form-label formOwnOne" for="title"></label>
             <div class="input-group mb-4">
@@ -36,6 +36,13 @@
                 <span class="input-group-text formOwnOne"><i class="fa-solid fa-file-signature formIcons" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your content"></i></span>
                 <textarea class="form-control formOwnOne" placeholder="Content" name="content" id="content" rows="5" v-model="form.content" required></textarea>
             </div>
+
+            <div class="input-group mb-4">
+                <input type="file" name="image" class="form-control formOwnOne" accept="image/*" @change="onFileChange">
+            </div>
+
+
+
             <input type="hidden" name="_token" :value="form.csrfToken">
             
             <div id="sendLibrary" class="text-center pt-3">
@@ -56,40 +63,48 @@
 import axios from 'axios';
 
 export default {
-data() {
+  data() {
     return {
-        form: {
-            title: '',
-            topic: 'general',
-            content: '',
-            csrfToken: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-        },
-        successMessage: '', // Variable to store the success message
-        };
+      form: {
+        title: '',
+        topic: 'general',
+        content: '',
+        image: null,
+        csrfToken: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+      },
+      successMessage: '', // Variable to store the success message
+    };
+    
+  },    
+  methods: {
+    onFileChange(event) {
+      this.form.image = event.target.files[0];
     },
-    methods: {
-        submitForm() {
-            axios.post('/blogosphere', this.form)
-                .then(response => {
-                    // Handle success
-                    console.log(response.data);
-                    // Reset the form fields
-                    this.form.title = '';
-                    this.form.topic = 'general';
-                    this.form.content = '';
-                    // Set the success message
-                    this.successMessage = response.data.message;
-                    // Reload the page after a delay
-                    setTimeout(() => {
-                    location.reload();
-                }, 2000); // Adjust the delay time (in milliseconds) as needed
-            })
+    submitForm() {
+      axios.post('/blogosphere', this.form, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      })
+        .then(response => {
+          // Handle success
+          console.log(response.data);
+          // Reset the form fields
+          this.form.title = '';
+          this.form.topic = 'general';
+          this.form.content = '';
+          this.form.image = null;
+          // Set the success message
+          this.successMessage = response.data.message;
+          // Reload the page after a delay
+          setTimeout(() => {
+            location.reload();
+          }, 2000); // Adjust the delay time (in milliseconds) as needed
+        })
         .catch(error => {
-                // Handle error
-                console.log(error);
-            });
-        }
-    }
+          console.log("ERRRR:: ", error.response.data);
+        });
+    },
+  },
 };
-
 </script>
