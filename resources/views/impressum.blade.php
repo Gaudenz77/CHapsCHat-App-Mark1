@@ -15,40 +15,56 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-12 text-center px-4">
                 <div class="text-center">
-                    <h1 class="display-3 text-center animate__animated animate__zoomInUp animate__delay-5s">
+                    <h1 class="display-5 mt-3 mb-2 text-center animate__animated animate__zoomInUp animate__delay-5s">
                         <b>{{ __('Welcome To CHapsCHat') }}</b>
                     </h1>
-
-                    <h4 style="text-align: left;">Legal Notice</h4>
-                    <div class="legalNotice text-start">
-                        <p><b>Responsible entity:</b><br />Gaudenz Raiber<br />Neugasse 81<br />Ch-8005
-                            Zurich<br />Switzerland<br /><strong>Email</strong>:
-                            <a href="mailto:krakatoom01@proton.me">Gaudenz Raiber</a><br />
-                            <strong>Github</strong>:
-                            <a href="https://github.com/Gaudenz77">Gaudenz@Krakatoom</a><br /><br />
-                            <strong>Disclaimer</strong><br />The author assumes no
-                            liability for the correctness, accuracy, timeliness, reliability and completeness of the
-                            information.<br />Liability claims against the author for material or immaterial damage
-                            resulting from access to, use or non-use of the published information, from misuse of the
-                            connection or from technical malfunctions are excluded.<br /><br />All offers are non-binding.
-                            The author expressly reserves the right to change, add to, or delete parts of the pages or the
-                            entire offer without prior notice, or to temporarily or permanently cease
-                            publication.<br /><br /><strong>Disclaimer for content and links</strong><br />References and
-                            links to third party websites are outside our area of responsibility. It rejected any
-                            responsibility for such websites. Access to and use of such websites is at the user's own
-                            risk.<br /><br /><strong>Copyright declaration</strong><br />The copyrights and all other rights
-                            to content, images, photos or other files on this website belong exclusively to Gaudenz Raiber
-                            or the specifically named rights holders. The written consent of the copyright holder must be
-                            obtained in advance for the reproduction of any elements.<br /><br /><strong>Source</strong>: <a
-                                style='color:inherit;text-decoration:none;' href='https://brainbox.swiss/'>BrainBox
-                                Solutions</a></p>
-                    </div>
-
-
+                    <h3 class="text-center mb-1">Legal Notice</h3>
                 </div>
             </div>
         </div>
 
+        <div class="row justify-content-center">
+            <div class="col-sm-4 {{-- bg-info --}} p-3 py-0">
+                <p>
+                    <p class="lead mb-0"><b><strong>Responsible entity:</strong></b></p>
+                    Gaudenz Raiber<br />Neugasse 81<br />Ch-8005
+                    Zurich<br />Switzerland<br /><strong>Email</strong>:
+                    <a href="mailto:krakatoom01@proton.me">Gaudenz Raiber</a><br />
+                    <strong>Github</strong>:
+                    <a href="https://github.com/Gaudenz77">Gaudenz@Krakatoom</a><br /><br />
+                    <p class="lead mb-0"><b><strong>Copyright declaration</strong></b></p>
+                    The copyrights and all other rights
+                    to content, images, photos or other files on this website belong exclusively to Gaudenz Raiber
+                    or the specifically named rights holders. The written consent of the copyright holder must be
+                    obtained in advance for the reproduction of any elements.<br /><br />
+                </p>
+            </div>
+            <div class="col-sm-6 p-3 py-0">
+                <p>
+                    <p class="lead mb-0"><b><strong>Disclaimer</strong></b></p>
+                    The author assumes no
+                    liability for the correctness, accuracy, timeliness, reliability and completeness of the
+                    information.<br />Liability claims against the author for material or immaterial damage
+                    resulting from access to, use or non-use of the published information, from misuse of the
+                    connection or from technical malfunctions are excluded.<br /><br />All offers are non-binding.
+                    The author expressly reserves the right to change, add to, or delete parts of the pages or the
+                    entire offer without prior notice, or to temporarily or permanently cease
+                    publication.<br /><br />
+                    <p class="lead mb-0"><b><strong>Disclaimer for content and links</strong></b></p>
+                        References and
+                    links to third party websites are outside our area of responsibility. It rejected any
+                    responsibility for such websites.<br /> Access to and use of such websites is at the user's own
+                    risk.<br /><br />
+                     
+                </p>
+            </div>
+        </div>
+
+        <p class="text-center mb-2">
+            <strong>Source</strong>: <a
+            style='color:inherit;text-decoration:none;' href='https://brainbox.swiss/'>BrainBox
+            Solutions</a>
+        </p>
 
         <div class="row justify-content-center">
             <div class="col-sm-6 text-center">

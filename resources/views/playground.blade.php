@@ -57,35 +57,37 @@
                                     data-bs-content='<div class="popPlayHead {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
                                         <h5 class="popover-body lead">Here you can code to yours delight!</h5></div>'></i>
                             </h5>
-                            <div class="row text-end">
-                                <div class="col">
-                                    <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
-                                        <button id="undoButton" type="button" class="btn btn-undo"><i
-                                                class="fa-solid fa-arrow-rotate-left fa-2x"></i></button>
-                                        <button id="redoButton" type="button" class="btn btn-redo"><i
-                                                class="fa-solid fa-arrow-rotate-right fa-2x"></i></button>
+
+                            <div class="container">
+                                <div class="row justify-content-between">
+
+                                    <div class="col-4 ps-0 d-flex align-items-end">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch" id="fontColorSwitch">
+                                            
+                                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                                            <i class="fa-solid fa-circle-info infoToggle" 
+                                                data-bs-toggle="popover" 
+                                                data-bs-placement="right"
+                                                data-bs-html="true"
+                                                data-bs-title="<div class='popPlayHead'>Change main font color</div>"
+                                                data-bs-content="<div class='popPlayBody'>Basic font colort to suit page dark-mode switch</div>"
+                                                style="font-size:1rem;">
+                                                
+                                            </i>          
+                                        </div>
                                     </div>
-                                    <div class="iconInfoPlay text-start d-flex pt-2 mt-2">
-                                        <i class="fa-solid fa-circle-info" 
-                                            data-bs-toggle="popover" 
-                                            data-bs-placement="right"
-                                            data-bs-html="true"
-                                            data-bs-title="<div class='popPlayHead'>Change main font color</div>"
-                                            data-bs-content="<div class='popPlayBody'>Basic font colort to suit page dark-mode switch</div>"></i>
+                                    <div class="col-4">
+                                        <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
+                                            <button id="undoButton" type="button" class="btn btn-undo"><i
+                                                    class="fa-solid fa-arrow-rotate-left fa-2x"></i></button>
+                                            <button id="redoButton" type="button" class="btn btn-redo"><i
+                                                    class="fa-solid fa-arrow-rotate-right fa-2x"></i></button>
+                                        </div>
                                     </div>
-                                    
-                                    <div class="form-check form-switch col-1">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="fontColorSwitch">
-                                        
-                                        <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                                    </div>
-
-                                    
-
-
-
                                 </div>
                             </div>
+                            
                             <div id="editor" style="height:85vh;"></div>
                         </div>
                     </div>

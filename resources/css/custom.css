@@ -933,6 +933,21 @@ body.dark-mode .previewCol {
     border: 1px solid #ccc;
 }
 
+.rowEditor {
+    height:4rem;
+}
+
+.fontColrSwitchCl{
+    height: 17px;
+}
+
+.infoToggle {
+    font-size: 17px;
+    padding-top: 6px;
+    padding-left: 2px;
+    margin-left: -5px;
+}
+
 #preview {
     height: 70vh;
     width: 100%;
@@ -949,6 +964,12 @@ body.dark-mode .previewCol {
     color: #d4d4d4;
 }
 
+.toggleEditor {
+    display: flex;
+    bottom: 13px;
+    position: relative;
+    width: 9%;
+}
 /* ---------------------------------------------------------------- EDITOR MONACO END */
 
 /* VARIOUS BUTTONS ----------------------------------------------------------------*/
@@ -1127,10 +1148,10 @@ body.dark-mode .btn-circleLibrary:focus {
 
 /*  BTN UNDO REDO ------------------------------------------------*/
 
-.undoRedoGroup {
+/* .undoRedoGroup {
     position: relative;
     top: 27px;
-}
+} */
 
 .iconInfoPlay {
     width: 4%;
@@ -1397,6 +1418,10 @@ left:-30px;
     height: 8%;
     width: 100%;
     margin-top: 0;
+}
+
+.footerOwn {
+    height: 10.3vh;
 }
 
 body.dark-mode .footer {

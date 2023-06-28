@@ -32,8 +32,8 @@
         }
 
         .blogMain {
-            margin-top: 26vh;
-            margin-bottom: 22.5vh;
+            margin-top: 118px;
+            margin-bottom: 12vh;
         }
 
         .aboutMain {
@@ -98,11 +98,11 @@
         }
 
         .span1 {
-            height: 11vh;
+            height: 12.3vh;
         }
 
         body.dark-mode .span1 {
-            height: 11vh;
+            height: 12.3vh;
         }
     }
 
@@ -148,7 +148,8 @@
         }
 
         .blogMain {
-            margin-top: 12vh;
+            margin-top: 130px;
+            margin-bottom: 3vh;
         }
 
         .aboutMain {
@@ -186,6 +187,10 @@
             background-color: #022342;
             height: 10.3vh;
         }
+    }
+
+    .footerOwn {
+        height: 10.3vh;
     }
 
     .custom-toggler.navbar-toggler {
