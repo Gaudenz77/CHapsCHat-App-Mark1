@@ -58,11 +58,11 @@ export default {
         },
         getImageUrl(image) {
         if (image) {
-            const baseUrl = window.location.origin; // Get the base URL of the Laravel application
-            return `${baseUrl}/assets/img/${image}`;
+            const baseUrl = '/assets/img/'; // Update the base URL to match your folder structure
+            return baseUrl + image;
         }
         // Return a placeholder image URL or an empty string if no image is available
-        return `${window.location.origin}/assets/img/ChapsChatLogo.png`;
+        return '/assets/img/ChapsChatLogo.png';
         },
         deleteBlog(id) {
         axios
