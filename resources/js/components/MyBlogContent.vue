@@ -69,8 +69,14 @@ export default {
             return "/assets/img/ChapsChatLogo.png";
         },
         deleteBlog(id) {
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
             axios
-                .delete(`/blogosphere/${id}`)
+                .delete(`/blogosphere/${id}`, {
+                headers: {
+                    'X-CSRF-TOKEN': csrfToken,
+                },
+                })
                 .then((response) => {
                     this.blogs = this.blogs.filter((blog) => blog.id !== id);
                 })
