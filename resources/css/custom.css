@@ -423,13 +423,14 @@ body.dark-mode .columnBlogTwo {
     font-weight: 700;
     text-align: center;
     padding: 2.5rem;
-    color: #fff;
+    color: #333;
     background-color: #fe0000;
     border-radius: 19px;
 }
 
 body.dark-mode .textfieldBlogTitle {
     color: #333;
+    color: #fff;
     background-color: #07c3c3;
 
 }
@@ -444,6 +445,15 @@ body.dark-mode .textfieldBlogTitle {
 
 body.dark-mode .textfieldBlogContent {
     color: #333;
+}
+
+.modal-backdrop.show {
+
+    opacity: var(--bs-backdrop-opacity);
+}
+
+.modal-backdrop.fade {
+    z-index:-1 !important;
 }
 
 
@@ -1573,9 +1583,6 @@ body.dark-mode .popPlayBody {
     border-bottom-right-radius: 1.5rem;
     margin-bottom: -3rem;
   }
-
-
-
 
 .switch {
     position: relative;

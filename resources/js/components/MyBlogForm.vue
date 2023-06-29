@@ -32,7 +32,7 @@
             </div>
 
             <label class="form-label formOwnOne" for="content"></label>
-            <div class="input-group">
+            <div class="input-group mb-4">
                 <span class="input-group-text formOwnOne"><i class="fa-solid fa-file-signature formIcons" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your content"></i></span>
                 <textarea class="form-control formOwnOne" placeholder="Content" name="content" id="content" rows="5" v-model="form.content" required></textarea>
             </div>
@@ -40,8 +40,6 @@
             <div class="input-group mb-4">
                 <input type="file" name="image" class="form-control formOwnOne" accept="image/*" @change="onFileChange">
             </div>
-
-
 
             <input type="hidden" name="_token" :value="form.csrfToken">
             
