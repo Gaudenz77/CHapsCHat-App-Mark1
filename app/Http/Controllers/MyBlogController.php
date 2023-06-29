@@ -116,12 +116,6 @@ class MyBlogController extends Controller
         // Find the blog by ID
         $blog = Blog::findOrFail($id);
     
-        // Check if the authenticated user is the creator of the blog
-        if ($blog->user_id !== auth()->user()->id) {
-            // If the user is not the creator of the blog, handle the error (e.g., redirect with error message)
-            return redirect()->back()->with('error', 'You are not authorized to delete this blog post.');
-        }
-    
         // Delete the image file if it exists
         if ($blog->image) {
             $imagePath = public_path('/assets/img/' . $blog->image);
