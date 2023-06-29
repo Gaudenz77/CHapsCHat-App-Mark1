@@ -7,7 +7,7 @@
             data-aos="flip-left">
             <div class="textfieldBlogTitle mx-2 px-0">
                 <h3>{{ blog.title }}</h3>
-                <p>{{ blog.user_id }}</p>
+                <p>{{ blog.user.name }}</p>
                 <img
                     :src="getImageUrl(blog.image)"
                     class="img-fluid imageBlog"
