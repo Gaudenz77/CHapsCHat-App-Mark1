@@ -5,15 +5,15 @@
             :key="`blog-${index}`"
             class="col-md-4"
             data-aos="flip-left">
-            <div class="textfieldBlogTitle mx-2 px-0">
+            <div class="textfieldBlogTitle mx-2 px-0 pb-2">
                 <h3>{{ blog.title }}</h3>
                 <p>{{ blog.user_id }}</p>
                 <img
                     :src="getImageUrl(blog.image)"
-                    class="img-fluid imageBlog"
+                    class="img-fluid imageBlog mb-2"
                     alt="Blog Image"/>
                 <div class="row justify-content-center">
-                    <div class="col-6">
+                    <div class="col-5 px-0 mt-4">
                         <button
                             class="btn btn-circleLibrary mt-2 mb-2 p-1"
                             type="button"
@@ -22,7 +22,7 @@
                             <i class="fa-regular fa-trash-can"></i> Delete
                         </button>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 me-3 px-0">
                         <button
                             class="btn btn-circleBlogBig mt-2 mb-2 p-1"
                             type="button"
