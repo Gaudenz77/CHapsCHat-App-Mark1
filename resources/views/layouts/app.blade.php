@@ -35,7 +35,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Scripts -->
-
+    window.user_id: {!! auth()->check()?auth()->user()->id:'null' !!}
     <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script>
 
     <script src="https://unpkg.com/monaco-editor@0.27.0/min/vs/loader.js"></script>
@@ -71,9 +71,6 @@
 </head>
 
 <body class="@yield('body-class')">
-  <script>
-    window.user_id: {!! auth()->check()?auth()->user()->id:'null' !!}
-  </script>
 
         <main>
             {{ $slot }}
