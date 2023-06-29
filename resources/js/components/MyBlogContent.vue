@@ -103,9 +103,6 @@ export default {
       reversedMessages() {
           return this.messages.slice().reverse();
       },
-      authUserId() {
-          return this.$props.authUserId;
-      },
   },
   mounted() {
       this.fetchBlogs();
