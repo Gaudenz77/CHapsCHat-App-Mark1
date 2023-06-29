@@ -1,8 +1,5 @@
 
 <template>
-  <script>
-    const user_id = window.user_id;
-  </script>
   <div class="d-flex flex-wrap">
       <div
           v-for="blog in blogs"
@@ -21,7 +18,7 @@
               <div class="row justify-content-center">
                 <div class="col-3">
                   <button
-                  v-if="blog.user_id === authUserId"
+                  v-if="blog.user.id === authUserId"
                   class="btn btn-circleLibrary mt-2 mb-2 p-1"
                   type="button"
                   role="button"
@@ -98,7 +95,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default {
-  props: ["authUserId"],
   data() {
       return {
           blogs: [],
