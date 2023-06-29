@@ -1,13 +1,13 @@
 <template>
     <div class="d-flex flex-wrap">
         <div
-            v-for="blog in blogs"
-            :key="blog.id"
+            v-for="(blog, index) in blogs"
+            :key="`blog-${index}`"
             class="col-md-4"
             data-aos="flip-left">
             <div class="textfieldBlogTitle mx-2 px-0">
                 <h3>{{ blog.title }}</h3>
-                <p>{{ blog.user_id.name }}</p>
+                <p>{{ blog.user_id }}</p>
                 <img
                     :src="getImageUrl(blog.image)"
                     class="img-fluid imageBlog"
