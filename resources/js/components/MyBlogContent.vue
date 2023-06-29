@@ -52,6 +52,7 @@
                       <div class="modal-header">
                           <h5 class="modal-title">{{ blog.title }}</h5>
                           <button
+                          v-if="blog.user_id === authUserId"
                               type="button"
                               class="btn-close"
                               data-bs-dismiss="modal"
@@ -107,8 +108,9 @@ export default {
       },
   },
   mounted() {
-      this.fetchBlogs();
-      AOS.init(); // Initialize AOS
+    console.log("authUserId:", this.authUserId); // Add this line
+    this.fetchBlogs();
+    AOS.init(); // Initialize AOS
   },
   methods: {
       fetchBlogs() {
