@@ -170,9 +170,19 @@ body {
             }
         });
 
-    </script>
-    <script>
-        AOS.init();
+
+  /* Reload page twice to grant vs code triggering */
+      function reloadTwice() {
+      // First reload
+      setTimeout(() => {
+        location.reload();
+      }, 500); // Set the desired delay (in milliseconds) between the reloads
+
+      // Second reload
+      setTimeout(() => {
+        location.reload();
+      }, 1000); // Set the desired delay (in milliseconds) between the reloads
+    }
     </script>
 
     <!-- toggle mode script start -->
