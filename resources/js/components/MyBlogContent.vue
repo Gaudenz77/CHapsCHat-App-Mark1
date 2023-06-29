@@ -10,10 +10,10 @@
                 <p>{{ blog.user_id }}</p>
                 <img
                     :src="getImageUrl(blog.image)"
-                    class="img-fluid"
+                    class="img-fluid imageBlog"
                     alt="Blog Image"/>
                 <div class="row justify-content-center">
-                    <div class="col-3">
+                    <div class="col-6">
                         <button
                             class="btn btn-circleLibrary mt-2 mb-2 p-1"
                             type="button"
@@ -22,7 +22,7 @@
                             <i class="fa-regular fa-trash-can"></i> Delete
                         </button>
                     </div>
-                    <div class="col-3">
+                    <div class="col-6">
                         <button
                             class="btn btn-circleLibrary mt-2 mb-2 p-1"
                             type="button"
