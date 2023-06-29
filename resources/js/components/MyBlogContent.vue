@@ -17,6 +17,7 @@
               <div class="row justify-content-center">
                 <div class="col-3">
                   <button
+                  v-if="blog.user_id === authUserId"
                   class="btn btn-circleLibrary mt-2 mb-2 p-1"
                   type="button"
                   role="button"
@@ -52,7 +53,6 @@
                       <div class="modal-header">
                           <h5 class="modal-title">{{ blog.title }}</h5>
                           <button
-                          v-if="blog.user_id === authUserId"
                               type="button"
                               class="btn-close"
                               data-bs-dismiss="modal"
@@ -108,9 +108,8 @@ export default {
       },
   },
   mounted() {
-    console.log("authUserId:", this.authUserId); // Add this line
-    this.fetchBlogs();
-    AOS.init(); // Initialize AOS
+      this.fetchBlogs();
+      AOS.init(); // Initialize AOS
   },
   methods: {
       fetchBlogs() {
