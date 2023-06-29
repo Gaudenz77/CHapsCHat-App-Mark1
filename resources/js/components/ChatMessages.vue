@@ -22,8 +22,7 @@
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="col-auto">
                         <figcaption
-                            class="blockquote-footer pb-0 pt-3 ps-4 px-2 my-1 me-1"
-                        >
+                            class="blockquote-footer pb-0 pt-3 ps-4 px-2 my-1 me-1">
                             {{ message.user.name }}
                         </figcaption>
                     </div>
