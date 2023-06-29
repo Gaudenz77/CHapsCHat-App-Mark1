@@ -17,6 +17,7 @@
               <div class="row justify-content-center">
                 <div class="col-3">
                   <button
+                v-if="blog.user_id === authUserId"
                   class="btn btn-circleLibrary mt-2 mb-2 p-1"
                   type="button"
                   role="button"
@@ -101,6 +102,9 @@ export default {
   computed: {
       reversedMessages() {
           return this.messages.slice().reverse();
+      },
+      authUserId() {
+          return this.$props.authUserId;
       },
   },
   mounted() {
