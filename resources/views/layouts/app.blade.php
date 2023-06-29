@@ -71,6 +71,9 @@
 </head>
 
 <body class="@yield('body-class')">
+  <script>
+    window.user_id: {!! auth()->check()?auth()->user()->id:'null' !!}
+  </script>
 
         <main>
             {{ $slot }}
