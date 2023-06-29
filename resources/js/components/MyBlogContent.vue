@@ -24,11 +24,12 @@
                     </div>
                     <div class="col-6">
                         <button
-                            class="btn btn-circleLibrary mt-2 mb-2 p-1"
+                            class="btn btn-circleBlogBig mt-2 mb-2 p-1"
                             type="button"
                             role="button"
                             data-bs-toggle="modal"
-                            :data-bs-target="'#modal-' + blog.id">Open Modal
+                            :data-bs-target="'#modal-' + blog.id">Read More!
+                            <i class="fa-regular fa-newspaper fa-xl"></i>
                         </button>
                     </div>
                 </div>

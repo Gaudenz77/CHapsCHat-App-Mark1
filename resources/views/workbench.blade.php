@@ -59,7 +59,7 @@
 <i class="fa-regular fa-circle-xmark"></i>
 <i class="fa-solid fa-face-laugh-wink"></i>
 <i class="fa-solid fa-magnifying-glass"></i>
-
+<i class="fa-regular fa-newspaper"></i>
 <span class="material-symbols-outlined">
 undo
 </span>

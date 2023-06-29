@@ -1161,6 +1161,33 @@ body.dark-mode .btn-circleLibrary:focus {
     color: #333 !important;
 }
 
+.btn-circleBlogBig {
+    width: 7rem;
+    height: 7rem;
+    font-size: 90%;
+    font-weight: bold;
+    background-color: #0099d5;
+    padding: 8px 8px;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .btn-circleBlogBig {
+    background-color: #ff662a !important;
+    color: #ebebeb !important;
+}
+
+body.dark-mode .btn-circleBlogBig:hover {
+    background-color: #0099d5 !important;
+    color: #333 !important;
+}
+
+body.dark-mode .btn-circleBlogBig:focus {
+    background-color: #0099d5 !important;
+    color: #333 !important;
+}
+
 /*  BTN UNDO REDO ------------------------------------------------*/
 
 /* .undoRedoGroup {
