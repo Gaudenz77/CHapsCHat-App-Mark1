@@ -59,7 +59,7 @@
                             </p>
                             <img
                                 :src="getImageUrl(blog.image)"
-                                class="img-fluid"
+                                class="img-fluid imageBlog"
                                 alt="Blog Image"/>
                         </div>
                         <div class="modal-footer">

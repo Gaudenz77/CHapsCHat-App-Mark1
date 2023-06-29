@@ -443,6 +443,11 @@ body.dark-mode .textfieldBlogTitle {
     text-align: left;
 }
 
+.imageBlog {
+    padding-left: 6px;
+    padding-right: 7px;
+}
+
 body.dark-mode .textfieldBlogContent {
     color: #333;
 }
