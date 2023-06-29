@@ -1,5 +1,5 @@
 <template>
-    <div class="py-4 mb-1">
+    <div class="mx-3">
         <form @submit.prevent="submitForm" enctype="multipart/form-data">
 
             <label class="form-label formOwnOne" for="title"></label>
@@ -43,7 +43,7 @@
 
             <input type="hidden" name="_token" :value="form.csrfToken">
             
-            <div id="sendLibrary" class="text-center pt-3">
+            <div id="sendLibrary" class="text-center pt-0">
                 <button type="submit" id="" class="btn btn-circle mt-2 mb-2 p-1" v-html="editMode ? '<i class=\'fa-regular fa-edit\'></i> Update' : '<i class=\'fa-regular fa-save fa-2xl\'></i><br>'"></button>
             </div>                                                           
         </form>

@@ -18,7 +18,7 @@
             <div class="col-sm-4 col-lg-3 columnBlogTwo px-lg-4 px-2 pt-4 mb-0" id="formContainer" style="display: none;">
                 <div class="form-wrapper">
                   @auth
-                  <h3 class="pt-3">Create Blog</h3>
+                  <h1 class="">Create Blog</h1>
                   <my-blog-form :user="{{ Auth::user() }}"></my-blog-form>
                   @endauth 
                 </div>

@@ -32,7 +32,7 @@
         }
 
         .blogMain {
-            margin-top: 118px;
+            margin-top: 6rem;
             margin-bottom: 12vh;
         }
 
