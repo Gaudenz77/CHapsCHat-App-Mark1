@@ -113,27 +113,30 @@ class MyBlogController extends Controller
 
     public function destroy($id)
     {
-        // Find the blog by ID
         $blog = Blog::findOrFail($id);
     
-        // Delete the image file if it exists
-        if ($blog->image) {
-            $imagePath = public_path('/assets/img/' . $blog->image);
-            if (file_exists($imagePath)) {
-                unlink($imagePath);
+        if ($blog->user_id == auth()->user()->id) {
+            // Delete the image file if it exists
+            if ($blog->image) {
+                $imagePath = public_path('/assets/img/' . $blog->image);
+                if (file_exists($imagePath)) {
+                    unlink($imagePath);
+                }
             }
+    
+            // Delete the blog post
+            $blog->delete();
+    
+            // If the request expects JSON response, return a JSON message
+            if (request()->expectsJson()) {
+                return response()->json(['success' => true]);
+            }
+    
+            return redirect()->route('blogosphere.index')
+                ->with('success', 'Blog deleted successfully!');
         }
     
-        // Delete the blog post
-        $blog->delete();
-    
-        // If the request expects JSON response, return a JSON message
-        if (request()->expectsJson()) {
-            return response()->json(['success' => true]);
-        }
-    
-        return redirect()->route('blogosphere.index')
-            ->with('success', 'Blog deleted successfully!');
+        return response()->json(['success' => false], 401);
     }
     
 }
