@@ -116,12 +116,6 @@ class MyBlogController extends Controller
         // Find the blog by ID
         $blog = Blog::findOrFail($id);
     
-        // Check if the user is authenticated
-        if (!auth()->check()) {
-            // If the user is not authenticated, handle the error (e.g., redirect to login page)
-            return redirect()->route('login')->with('error', 'You must be logged in to delete a blog post.');
-        }
-    
         // Check if the authenticated user is the creator of the blog
         if ($blog->user_id !== auth()->user()->id) {
             // If the user is not the creator of the blog, handle the error (e.g., redirect with error message)
@@ -130,7 +124,7 @@ class MyBlogController extends Controller
     
         // Delete the image file if it exists
         if ($blog->image) {
-            $imagePath = public_path('assets/img/' . $blog->image);
+            $imagePath = public_path('/assets/img/' . $blog->image);
             if (file_exists($imagePath)) {
                 unlink($imagePath);
             }
