@@ -6,7 +6,7 @@
             class="col-md-4"
             data-aos="flip-left">
             <div class="textfieldBlogTitle mx-2 mt-3 px-0 pb-2">
-                <h3>{{ blog.title }}</h3>
+                <h2 class="display-6 mx-2"><strong>{{ blog.title }}</strong></h2>
                 <p>{{ blog.user_id }}</p>
                 <img
                     :src="getImageUrl(blog.image)"
