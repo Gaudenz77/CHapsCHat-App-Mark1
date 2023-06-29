@@ -5,7 +5,7 @@
             :key="`blog-${index}`"
             class="col-md-4"
             data-aos="flip-left">
-            <div class="textfieldBlogTitle mx-2 px-0 pb-2">
+            <div class="textfieldBlogTitle mx-2 mt-3 px-0 pb-2">
                 <h3>{{ blog.title }}</h3>
                 <p>{{ blog.user_id }}</p>
                 <img
