@@ -3,7 +3,7 @@
         <div
             v-for="blog in blogs"
             :key="blog.id"
-            class="col circleBlog ms-0 me-5 mb-2"
+            class="col circleBlog ms-0 me-5 mb-5"
             data-aos="flip-left"
         >
             <div class="textfieldBlogTitle">

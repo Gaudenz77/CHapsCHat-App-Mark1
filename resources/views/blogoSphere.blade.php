@@ -10,8 +10,8 @@
 <section class="">
     <div class="container-fluid">
 
-        <div class="row justify-content-center align-items-start">
-            <div class="col-sm-4 col-lg-3 columnBlogTwo px-lg-4 px-2 pt-4 mb-0" id="formContainer" style="display: none;height: 100vh;">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 col-lg-3 columnBlogTwo px-lg-4 px-2 pt-4 mb-0" id="formContainer" style="display: none;">
                 <div class="form-wrapper">
                   @auth
                   <h3 class="pt-3">Create Blog</h3>
