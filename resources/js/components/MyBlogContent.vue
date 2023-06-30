@@ -1,8 +1,8 @@
 <template>
     <div class="d-flex flex-wrap">
         <div
-            v-for="(blog, index) in blogs"
-            :key="`blog-${index}`"
+            v-for="blog in blogs"
+            :key="blog.id"
             class="col-md-4"
             data-aos="flip-left">
             <div class="textfieldBlogTitle mx-2 mt-3 px-0 pb-2">
