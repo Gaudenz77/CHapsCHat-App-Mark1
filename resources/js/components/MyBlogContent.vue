@@ -98,6 +98,7 @@ export default {
         },
         authUserId() {
             console.log("Auth User ID:", this.$props.authUserId); // Add this line
+            console.log(typeof blog.user_id, typeof authUserId);
             return this.$props.authUserId;
         },
     },
