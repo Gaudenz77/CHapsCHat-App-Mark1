@@ -123,7 +123,7 @@
 
         .span1 {
             color: #ebebeb;
-            background-color: #4e80b7;
+            background-color: #ffffff;
             height: 25vh;
         }
 
@@ -177,7 +177,7 @@
 
         .span1 {
             color: #ebebeb;
-            background-color: #4e80b7;
+            background-color: #ffffff;
             height: 10.3vh;
         }
 

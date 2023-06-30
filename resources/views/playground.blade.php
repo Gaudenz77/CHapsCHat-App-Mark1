@@ -70,7 +70,7 @@
                 </div>
                 </div>
             </div>
-            <div id="editor" style="height:85vh;"></div>
+            <div id="editor" style="height:75vh;"></div>
             </div>
         </div>
         <div class="previewCol col-md-4 px-4 pb-4">
