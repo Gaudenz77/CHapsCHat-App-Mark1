@@ -15,7 +15,7 @@
                 <div class="form-wrapper">
                   @auth
                   <h1 class="">Create Blog</h1>
-                  <my-blog-form :user="{{ Auth::user() }}"></my-blog-form>
+                  <my-blog-form></my-blog-form>
                   @endauth 
                 </div>
             </div>
