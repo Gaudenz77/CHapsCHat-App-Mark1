@@ -89,6 +89,7 @@ export default {
     data() {
         return {
             blogs: [],
+            user_id: document.querySelector("meta[name='user-id']").getAttribute('content'),
         };
     },
     computed: {

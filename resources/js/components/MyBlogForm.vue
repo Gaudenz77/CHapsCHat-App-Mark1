@@ -68,6 +68,7 @@ export default {
         topic: 'general',
         content: '',
         image: null,
+        user_id: document.querySelector("meta[name='user-id']").getAttribute('content'),
         csrfToken: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
       },
       successMessage: '', // Variable to store the success message
