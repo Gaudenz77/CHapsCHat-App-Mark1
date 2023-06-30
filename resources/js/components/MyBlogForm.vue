@@ -70,6 +70,9 @@ export default {
         image: null,
         csrfToken: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
       },
+      user: {
+                id: this.authUserId,
+            },
       successMessage: '', // Variable to store the success message
     };
     
