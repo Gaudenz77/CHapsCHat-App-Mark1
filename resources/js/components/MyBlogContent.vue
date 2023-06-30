@@ -15,6 +15,7 @@
                 <div class="row justify-content-center">
                     <div class="col-5 px-0 mt-4">
                         <button
+                            v-if="blog.user_id === authUserId"
                             class="btn btn-circleLibrary mt-2 mb-2 p-1"
                             type="button"
                             role="button"
