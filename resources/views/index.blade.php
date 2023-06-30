@@ -55,7 +55,7 @@
       </div>
     </a> --}}
 
-            <div class="{{-- colSquare --}} col-sm-3 me-md-4 me-lg-4 mb-4 {{-- animate__animated animate__backInLeft animate__delay-2s--}}" {{-- style="height: 300px;" --}}>
+            <div  type="button" id="button" class="btn {{-- colSquare --}} col-sm-3 me-md-4 me-lg-4 mb-4 {{-- animate__animated animate__backInLeft animate__delay-2s--}}" {{-- style="height: 300px;" --}}>
             <img class="img-fluid p-3" src="./assets/img/square_pure.svg">
             </div>
 
