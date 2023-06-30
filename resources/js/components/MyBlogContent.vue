@@ -88,6 +88,7 @@ export default {
     data() {
         return {
             blogs: [],
+            loggedUser : document.querySelector("meta[name='user']").getAttribute('content')
         };
     },
     computed: {
@@ -100,6 +101,7 @@ export default {
     },
     mounted() {
         this.fetchBlogs();
+        console.log(this.loggedUser);
         AOS.init(); // Initialize AOS
     },
     methods: {
