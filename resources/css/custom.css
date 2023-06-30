@@ -483,9 +483,7 @@ body.dark-mode .modal-content{
 }
 
 .btnXModal {
-    position: relative;
-    top: -70px;
-    right: 6px;
+    font-size: 2rem;
 }
 
 /* INDIVIDUAL PAGES DETAILS END -------------------------------------------------------------------------------------- */
