@@ -58,7 +58,7 @@
                     </i>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4 d-flex justify-content-end pe-0">
                     <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
                     <button id="undoButton" type="button" class="btn btn-undo">
                         <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
