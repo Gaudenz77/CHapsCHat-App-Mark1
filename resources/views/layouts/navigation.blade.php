@@ -21,7 +21,7 @@
 
         <div class="offcanvas-body px-3">
 
-            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <ul class="navbar-nav ms-auto mt-2 mb-2 mb-md-0">
 
                 <li class="nav-item">
                     @if (Route::has('login'))
