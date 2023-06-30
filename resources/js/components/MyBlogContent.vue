@@ -96,10 +96,12 @@ export default {
             return this.messages.slice().reverse();
         },
         authUserId() {
+            console.log("Auth User ID:", this.$props.authUserId); // Add this line
             return this.$props.authUserId;
         },
     },
     mounted() {
+        console.log("Component mounted"); 
         this.fetchBlogs();
         console.log("Auth User ID:", this.authUserId);
         AOS.init(); // Initialize AOS
