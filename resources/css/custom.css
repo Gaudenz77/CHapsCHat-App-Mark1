@@ -842,6 +842,8 @@ body.dark-mode .scrollableChat {
 
 .chatCol {
     background-color: #4e80b7;
+    margin-top: -1rem;
+    padding-top: 2rem;
 }
 
 body.dark-mode .chatCol {
@@ -925,6 +927,8 @@ body.dark-mode .card1 {
 .editorCol {
     background-color: #e79503;
     z-index: 0;
+    margin-top: -1rem;
+    padding-top: 2rem;
 }
 
 body.dark-mode .editorCol {
@@ -933,6 +937,8 @@ body.dark-mode .editorCol {
 
 .previewCol {
     background-color: #fffbef;
+    margin-top: -1rem;
+    padding-top: 2rem;
 }
 
 body.dark-mode .previewCol {
