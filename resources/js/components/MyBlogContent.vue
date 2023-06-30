@@ -1,8 +1,8 @@
 <template>
     <div class="d-flex flex-wrap">
       <div v-for="blog in blogs" :key="blog.id" class="col-md-4" data-aos="flip-left">
-        <div class="textfieldBlogTitle mx-0 mt-3 px-0 pt-3 pb-2">
-          <h2 class="display-6 mx-2">
+        <div class="textfieldBlogTitle mx-2 mt-3 px-0 pt-3 pb-2">
+          <h2 class="display-6 mx-3 text-start">
             <strong>{{ blog.title }}</strong>
           </h2>
           <!-- <p>User ID: {{ blog.user_id }}</p>
@@ -25,7 +25,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title">{{ blog.title }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btnXModal" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <p>
