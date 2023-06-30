@@ -39,7 +39,7 @@
                   </div>
                     
                     <div class="row">
-                      <my-blog-content></my-blog-content>
+                      <my-blog-content :auth-user-id="{{ Auth::id() }}"></my-blog-content>
                     </div>
                 </div>
             </div>
