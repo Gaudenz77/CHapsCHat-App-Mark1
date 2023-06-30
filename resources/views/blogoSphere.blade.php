@@ -15,7 +15,7 @@
                 <div class="form-wrapper">
                   @auth
                   <h1 class="">Create Blog</h1>
-                  <my-blog-form :user="{{ Auth::user() }}"></my-blog-form>
+                  <my-blog-form></my-blog-form>
                   @endauth 
                 </div>
             </div>
@@ -39,10 +39,7 @@
                   </div>
                     
                     <div class="row">
-                      @auth
-                      <my-blog-content :auth-user-id="{{ Auth::id() }}"></my-blog-content>
-                      @endauth
-                      
+                      <my-blog-content :auth-user-id="{{ Auth::check() ? Auth::id() : 'null' }}"></my-blog-content>
                     </div>
                 </div>
             </div>

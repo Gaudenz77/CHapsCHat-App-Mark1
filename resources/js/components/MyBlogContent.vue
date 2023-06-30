@@ -92,7 +92,7 @@ export default {
     data() {
         return {
             blogs: [],
-            authUserId: null,
+            authUserId: null
         };
     },
     computed: {
@@ -108,6 +108,7 @@ export default {
         console.log('Auth User ID:', this.authUserId);
         this.fetchBlogs();
         AOS.init(); // Initialize AOS
+        this.authUserId = this.getAuthUserId();
     },
     methods: {
         fetchBlogs() {
