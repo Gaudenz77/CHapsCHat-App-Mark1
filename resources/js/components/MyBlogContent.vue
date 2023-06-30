@@ -111,6 +111,8 @@ export default {
                 .get("/blogosphere")
                 .then((response) => {
                     this.blogs = response.data;
+                    console.log("Blogs:", this.blogs);
+                    console.log("Auth User ID:", this.authUserId);
                 })
                 .catch((error) => {
                     console.error(error);
