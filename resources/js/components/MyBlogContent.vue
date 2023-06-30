@@ -5,7 +5,6 @@
           <h2 class="display-6 mx-2">
             <strong>{{ blog.title }}</strong>
           </h2>
-          <figcaption class="blockquote-footer">{{ blog.created_at }}</figcaption>
           <!-- <p>User ID: {{ blog.user_id }}</p>
           <p>Auth User ID: {{ authUserId }}</p> -->
           <img :src="getImageUrl(blog.image)" class="img-fluid imageBlog mb-2" alt="Blog Image" />
@@ -30,7 +29,8 @@
               </div>
               <div class="modal-body">
                 <p>
-                  <strong>User ID:</strong> {{ blog.user_id }}
+                    <figcaption class="blockquote-footer">{{ blog.created_at }}</figcaption>
+                  <!-- <strong>User ID:</strong> {{ blog.user_id }} -->
                 </p>
                 <!-- <p>Auth User ID: {{ authUserId }}</p> -->
                 <!-- <p><strong>Topic:</strong> {{ blog.topic }}</p> -->
@@ -92,6 +92,10 @@
           }
           // Return a placeholder image URL or an empty string if no image is available
           return "/assets/img/ChapsChatLogo.png";
+        },
+        formatCreatedAt(created_at) {
+        const date = new Date(created_at);
+        return date.toLocaleString(); // Adjust the format as per your requirements
         },
         deleteBlog(id) {
           console.log('Auth User ID:', this.authUserId);
