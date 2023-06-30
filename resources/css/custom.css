@@ -455,6 +455,9 @@ body.dark-mode .textfieldBlogContent {
 
 .modal-title {
     color:#333 !important;
+    font-weight:bold;
+    font-family: 'Special Elite', cursiv;
+    font-size:larger;
 }
 
 .modal-backdrop.show {
