@@ -5,8 +5,8 @@
           <h2 class="display-6 mx-2">
             <strong>{{ blog.title }}</strong>
           </h2>
-          <p>User ID: {{ blog.user_id }}</p>
-          <p>Auth User ID: {{ authUserId }}</p>
+          <!-- <p>User ID: {{ blog.user_id }}</p>
+          <p>Auth User ID: {{ authUserId }}</p> -->
           <img :src="getImageUrl(blog.image)" class="img-fluid imageBlog mb-2" alt="Blog Image" />
           <div class="row justify-content-center">
             <div class="col-5 px-0 mt-4">
@@ -31,7 +31,7 @@
                 <p>
                   <strong>User ID:</strong> {{ blog.user_id }}
                 </p>
-                <p>Auth User ID: {{ authUserId }}</p>
+                <!-- <p>Auth User ID: {{ authUserId }}</p> -->
                 <!-- <p><strong>Topic:</strong> {{ blog.topic }}</p> -->
                 <p class="textfieldBlogContent">
                   {{ blog.content }}
