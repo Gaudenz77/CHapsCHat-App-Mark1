@@ -8,121 +8,99 @@
 
     @auth
 
-        <section class="">
-            <div class="container-fluid">
-
-                <div class="row">
-
-                    <div class="chatCol col-md-3 px-4 pb-4">
-                        <div class="mt-2 p-1 pt-4">
-                            <h5 class="mb-0">WELCOME to the MESSAGECORNER 
-                                <i class="fa-solid fa-circle-info"
-                                    data-bs-toggle="popover" 
-                                    data-bs-placement="bottom" 
-                                    data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}}
-                                    data-bs-title="<div class='popPlayHead {{-- animate__animated animate__zoomInUp --}}'>How To Message</div>"
-                                    data-bs-content='<div class="popPlayBody {{-- animate__animated animate__zoomInUp animate__delay-1s --}}"> 
-                                    <ol>
-                                      <li>Write your message below in the form-field.</li>
-                                      <li>Press the paperplane-icon to send your message.</li>
-                                      <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
-                                    </ol>
-                                  </div>'>
-                                </i>
-                            </h5>
-                            <h1 class="display-6 mt-3 my-0 animate__animated animate__rubberBand">
-                                <strong>{{ Auth::user()->name }}</strong>
-                            </h1>
-
-
-                            <div class="chatFormField my-4 px-0">
-                                <chat-form :user="{{ Auth::user() }}"></chat-form>
-                            </div>
-                        </div>
-                        <div class="smooth-scroll scrollableChat chatBody rounded">
-                            <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
-                        </div>
-                        <p class="test text-center m-2 mb-5 pt-4 pb-3">Messageservice brought to you by <a
-                                href="https://pusher.com/">Pusher&copy;</a></p>
-                    </div>
-
-                    <div class="editorCol col-md-5 px-4 pb-4">
-                        <div class="mt-2 p-1 pt-4">
-                            <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! 
-                                <i class="fa-solid fa-circle-info"
-                                    data-bs-toggle="popover" 
-                                    data-bs-placement="right" 
-                                    data-bs-html="true"
-                                    data-bs-title="<div class='popPlayHead {{-- animate__animated animate__zoomInUp --}}'>Code-Space </div>"
-                                    data-bs-content='<div class="popPlayHead {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
-                                        <h5 class="popover-body lead">Here you can code to yours delight!</h5></div>'></i>
-                            </h5>
-
-                            <div class="container">
-                                <div class="row justify-content-between">
-
-                                    <div class="col-4 ps-0 d-flex align-items-end">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch" id="fontColorSwitch">
-                                            
-                                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                                            <i class="fa-solid fa-circle-info infoToggle" 
-                                                data-bs-toggle="popover" 
-                                                data-bs-placement="right"
-                                                data-bs-html="true"
-                                                data-bs-title="<div class='popPlayHead'>Change main font color</div>"
-                                                data-bs-content="<div class='popPlayBody'>Basic font colort to suit page dark-mode switch</div>"
-                                                style="font-size:1rem;">
-                                                
-                                            </i>          
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
-                                            <button id="undoButton" type="button" class="btn btn-undo"><i
-                                                    class="fa-solid fa-arrow-rotate-left fa-2x"></i></button>
-                                            <button id="redoButton" type="button" class="btn btn-redo"><i
-                                                    class="fa-solid fa-arrow-rotate-right fa-2x"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div id="editor" style="height:85vh;"></div>
-                        </div>
-                    </div>
-
-                    <div class="previewCol col-md-4 px-4 pb-4">
-                        <div class="mt-2 p-1 pt-4">
-                            <h5 class="mb-3 pb-3">YouR ouTpuT!</h5>
-                            <iframe id="preview" style="height:75vh;"></iframe>
-                        </div>
-                    </div>
-                </div>
-
-                {{--     <div class="row justify-content-center mt-5">
-      <div class="col-sm-3 card1 mt-3 p-4">
-        <div class="logiInfo mt-2 p-1">
-          @if (Auth::check())
-              <h3 class="text-center">Welcome, {{ Auth::user()->name }}!<br>You are logged in.</h3>
-              <div class="text-center">
-                <button id="showButton" class="btn btn-primary">Show Paint Sphere</button>
-                <div class="col" id="paintsphere" style="position:relative; left:0;  margin-left:-150%; margin-right:100px;">
-                  <div class="row d-flex align-items-start">
-                    <a href="#" class="btn-close" aria-label="Close" id="hideButton"></a>
-                  </div>
-                  <paint-app></paint-app>
-                </div>
-              </div>
-          @else
-              <p><a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.</p>
-          @endif
-        </div>
-      </div>  
-    </div> --}}
-
+<section class="">
+    <div class="container-fluid">
+        <div class="row">
+        <div class="chatCol col-md-3 px-4 pb-4">
+            <div class="mt-2 p-1 pt-4">
+            <h5 class="mb-0">WELCOME to the MESSAGECORNER <i class="fa-solid fa-circle-info" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}} data-bs-title="
+                        <div class='popPlayHead {{-- animate__animated animate__zoomInUp --}}'>How To Message</div>" data-bs-content='
+                        <div class="popPlayBody {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
+                            <ol>
+                                <li>Write your message below in the form-field.</li>
+                                <li>Press the paperplane-icon to send your message.</li>
+                                <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
+                            </ol>
+                        </div>'>
+                </i>
+            </h5>
+            <h1 class="display-6 mt-3 my-0 animate__animated animate__rubberBand">
+                <strong>{{ Auth::user()->name }}</strong>
+            </h1>
+            <div class="chatFormField my-4 px-0">
+                <chat-form :user="{{ Auth::user() }}"></chat-form>
             </div>
-        </section>
+            </div>
+            <div class="smooth-scroll scrollableChat chatBody rounded">
+            <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
+            </div>
+            <p class="test text-center m-2 mb-5 pt-4 pb-3">Messageservice brought to you by <a href="https://pusher.com/">Pusher&copy;</a>
+            </p>
+        </div>
+        <div class="editorCol col-md-5 px-4 pb-4">
+            <div class="mt-2 p-1 pt-4">
+            <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! <i class="fa-solid fa-circle-info" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-title="
+                        <div class='popPlayHead {{-- animate__animated animate__zoomInUp --}}'>Code-Space </div>" data-bs-content='
+                        <div class="popPlayHead {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
+                            <h5 class="popover-body lead">Here you can code to yours delight!</h5>
+                        </div>'>
+                </i>
+            </h5>
+            <div class="container">
+                <div class="row justify-content-between">
+                <div class="col-4 ps-0 d-flex align-items-end">
+                    <div class="form-check form-switch">
+                    <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch" id="fontColorSwitch">
+                    <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                    <i class="fa-solid fa-circle-info infoToggle" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-title="
+                                        <div class='popPlayHead'>Change main font color</div>" data-bs-content="
+                                        <div class='popPlayBody'>Basic font colort to suit page dark-mode switch</div>" style="font-size:1rem;">
+                    </i>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
+                    <button id="undoButton" type="button" class="btn btn-undo">
+                        <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
+                    </button>
+                    <button id="redoButton" type="button" class="btn btn-redo">
+                        <i class="fa-solid fa-arrow-rotate-right fa-2x"></i>
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div id="editor" style="height:85vh;"></div>
+            </div>
+        </div>
+        <div class="previewCol col-md-4 px-4 pb-4">
+            <div class="mt-2 p-1 pt-4">
+            <h5 class="mb-3 pb-3">YouR ouTpuT!</h5>
+            <iframe id="preview" style="height:75vh;"></iframe>
+            </div>
+        </div>
+        </div>
+        {{-- <div class="row justify-content-center mt-5">
+            <div class="col-sm-3 card1 mt-3 p-4">
+                <div class="logiInfo mt-2 p-1">
+    @if (Auth::check())
+        
+                    <h3 class="text-center">Welcome, {{ Auth::user()->name }}! <br>You are logged in. </h3>
+        <div class="text-center">
+        <button id="showButton" class="btn btn-primary">Show Paint Sphere</button>
+        <div class="col" id="paintsphere" style="position:relative; left:0;  margin-left:-150%; margin-right:100px;">
+            <div class="row d-flex align-items-start">
+            <a href="#" class="btn-close" aria-label="Close" id="hideButton"></a>
+            </div>
+            <paint-app></paint-app>
+        </div>
+        </div> @else <p>
+        <a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.
+        </p> @endif
+    </div>
+    </div>
+    </div> --}} </div>
+    </section>
 
     @endauth
 
