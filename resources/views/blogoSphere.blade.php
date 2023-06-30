@@ -7,10 +7,6 @@
 
 @section('content')
 
-<script>
-  AOS.init();
-</script>
-
 <section class="">
     <div class="container-fluid">
 
@@ -19,7 +15,7 @@
                 <div class="form-wrapper">
                   @auth
                   <h1 class="">Create Blog</h1>
-                  <my-blog-form :user="{{ Auth::user() }}"></my-blog-form>
+                  <my-blog-form></my-blog-form>
                   @endauth 
                 </div>
             </div>
@@ -43,7 +39,7 @@
                   </div>
                     
                     <div class="row">
-                        <my-blog-content :auth-user-id="{{ Auth::id() }}"></my-blog-content>
+                        <my-blog-content></my-blog-content>
                     </div>
                 </div>
             </div>

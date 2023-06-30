@@ -57,7 +57,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('/mylibrary/{id}', [MyLibraryController::class, 'update'])->name('mylibrary.update');
     Route::delete('/mylibrary/{id}', [MyLibraryController::class, 'destroy'])->name('mylibrary.destroy');
 
-    /* Route::get('/blogosphere', [MyBlogController::class, 'index'])->name('blogosphere.index'); */
     Route::get('/blogosphere/create', [MyBlogController::class, 'create'])->name('blogosphere.create');
     Route::post('/blogosphere', [MyBlogController::class, 'store'])->name('blogosphere.store');
     Route::get('/blogosphere/{id}', [MyBlogController::class, 'show'])->name('blogosphere.show');

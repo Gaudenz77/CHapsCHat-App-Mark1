@@ -51,9 +51,9 @@
     @include('components.gueststylesheet')
 
     <style>
-body {
-  
-}
+        body {
+        
+        }
 
         /* toggle container */
         .card-checkbox.custom-control-input:not(:checked)~.custom-control-label::before {
@@ -121,7 +121,7 @@ body {
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
 
     <script>
         /* ENABLE TOOLTIP/POPOVER */
@@ -174,14 +174,14 @@ body {
   /* Reload page twice to grant vs code triggering */
       function reloadTwice() {
       // First reload
-      setTimeout(() => {
+      /* setTimeout(() => {
         location.reload();
       }, 500); // Set the desired delay (in milliseconds) between the reloads
 
       // Second reload
       setTimeout(() => {
         location.reload();
-      }, 1000); // Set the desired delay (in milliseconds) between the reloads
+      }, 1000);  */// Set the desired delay (in milliseconds) between the reloads
     }
     </script>
 
