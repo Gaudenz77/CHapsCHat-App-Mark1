@@ -26,7 +26,7 @@
               <div class="modal-header">
                 <div class="row">
                   <div class="col"><h5 class="modal-title">{{ blog.title }}</h5></div>
-                  <div class="col text-end"><button type="button" class="btn-close btnXModal" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                  <div class="col-2"><button type="button" class="btn-close btnXModal" data-bs-dismiss="modal" aria-label="Close"></button></div>
                 </div>
               </div>
               <div class="modal-body">
