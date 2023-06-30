@@ -963,9 +963,9 @@ body.dark-mode .previewCol {
 #editor,
 #css-editor,
 #js-editor {
-    height: 70vh;
+    /* height: 70vh;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; */
 }
 
 .rowEditor {
