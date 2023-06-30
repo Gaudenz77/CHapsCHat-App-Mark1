@@ -831,7 +831,7 @@ body.dark-mode .scrollableChat {
 
 body.dark-mode .chatCol {
     background-color: #022342;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 /* ROUND DIVS --------------------------------------------------------  */
