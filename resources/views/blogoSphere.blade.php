@@ -39,7 +39,8 @@
                   </div>
                     
                     <div class="row">
-                      <my-blog-content></my-blog-content>
+                      <my-blog-content :auth-user-id="userId"></my-blog-content>
+
                     </div>
                 </div>
             </div>
