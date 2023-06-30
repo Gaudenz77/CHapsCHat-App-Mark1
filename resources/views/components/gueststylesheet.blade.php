@@ -149,6 +149,7 @@
 
         .blogMain {
             margin-top: 12vh;
+            margin-bottom: 2rem;
         }
 
         .aboutMain {
