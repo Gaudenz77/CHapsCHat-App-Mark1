@@ -5,6 +5,7 @@
           <h2 class="display-6 mx-2">
             <strong>{{ blog.title }}</strong>
           </h2>
+          <figcaption class="blockquote-footer">{{ blog.created_at }}</figcaption>
           <!-- <p>User ID: {{ blog.user_id }}</p>
           <p>Auth User ID: {{ authUserId }}</p> -->
           <img :src="getImageUrl(blog.image)" class="img-fluid imageBlog mb-2" alt="Blog Image" />
