@@ -56,4 +56,9 @@
       formContainer.style.display = 'none';
     });
   });
+
+  formatCreatedAt(created_at) {
+        const date = new Date(created_at);
+        return date.toLocaleString(); // Adjust the format as per your requirements
+        },
 </script>
