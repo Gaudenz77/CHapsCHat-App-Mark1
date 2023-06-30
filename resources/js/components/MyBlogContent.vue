@@ -17,7 +17,7 @@
                     <div class="col-5 px-0 mt-4">
                         <button
                             v-if="blog.user_id == authUserId"
-                            class="btn btn-circleLibrary mt-2 mb-2 p-1"
+                            class="btn btn-circleLibrary ms-4 mt-2 mb-2 p-1"
                             type="button"
                             role="button"
                             @click="deleteBlog(blog.id)">
