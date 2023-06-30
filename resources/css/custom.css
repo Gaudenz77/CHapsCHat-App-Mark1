@@ -461,6 +461,10 @@ body.dark-mode .textfieldBlogContent {
     font-size: 1.5em;
 }
 
+.modal-title {
+    color:#333 !important;
+}
+
 .modal-backdrop.show {
 
     opacity: var(--bs-backdrop-opacity);
