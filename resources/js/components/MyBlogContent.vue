@@ -55,6 +55,8 @@
                         </div>
                         <div class="modal-body">
                             <p><strong>User ID:</strong> {{ blog.user_id }}</p>
+                            <p>Auth User ID: {{ authUserId }}</p>
+
                             <!-- <p><strong>Topic:</strong> {{ blog.topic }}</p> -->
                             <p class="textfieldBlogContent">
                                 {{ blog.content }}
