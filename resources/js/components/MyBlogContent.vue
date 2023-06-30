@@ -124,7 +124,7 @@ export default {
     },
     fetchLoggedUser() {
   axios
-    .get("https://krakatoom.ch/api/current-user") // Replace with your actual endpoint URL
+    .get("blogosphere/current-user") // Replace with your actual endpoint URL
     .then((response) => {
       this.loggedUser = response.data.id;
     })
