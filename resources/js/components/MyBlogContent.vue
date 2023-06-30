@@ -45,7 +45,7 @@
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title myModal">{{ blog.title }}</h5>
+                            <h5 class="modal-title">{{ blog.title }}</h5>
                             <button
                                 type="button"
                                 class="btn-close"
@@ -53,8 +53,8 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p class="myModal"><strong>User ID:</strong> {{ blog.user_id }}</p>
-                            <p class="myModal"><strong>Topic:</strong> {{ blog.topic }}</p>
+                            <p><strong>User ID:</strong> {{ blog.user.name }}</p>
+                            <!-- <p><strong>Topic:</strong> {{ blog.topic }}</p> -->
                             <p class="textfieldBlogContent">
                                 {{ blog.content }}
                             </p>
