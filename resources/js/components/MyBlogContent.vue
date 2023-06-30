@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex flex-wrap">
       <div v-for="blog in blogs" :key="blog.id" class="col-md-4" data-aos="flip-left">
-        <div class="textfieldBlogTitle mx-2 mt-3 px-0 pt-3 pb-2">
+        <div class="textfieldBlogTitle mx-0 mt-3 px-0 pt-3 pb-2">
           <h2 class="display-6 mx-2">
             <strong>{{ blog.title }}</strong>
           </h2>

@@ -103,6 +103,10 @@
             /* Adjust the value to match the height of your navbar */
         }
 
+        .navWrapper {
+            height:6rem;
+        }
+
         .autohide {
             transition-duration: 1.5s;
         }

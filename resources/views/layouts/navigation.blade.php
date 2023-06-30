@@ -28,30 +28,30 @@
                         @auth
                     </li>
 
-                    <li class="nav-item py-3">
+                    <li class="nav-item pt-4">
                         <a class="myNavUnderline px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                             href="{{ url('/playground') }}" onclick="reloadTwice()"><b>Playground</b></a>
                     </li>
                 @endauth
 
-                <li class="nav-item py-3">
+                <li class="nav-item pt-4">
                     <a class="myNavUnderline px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                         href="{{ url('/blogoSphere') }}"><b>Blogosphere</b></a>
                 </li>
 
                 @auth
-                    <li class="nav-item py-3">
+                    <li class="nav-item pt-4">
                         <a class="myNavUnderline px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                             href="{{ url('/knowledgeSphere ') }}"><b>KnowledgeSphere</b></a>
                     </li>
                 @endauth
-                <li class="nav-item py-3">
+                <li class="nav-item pt-4">
                     <a class="myNavUnderline px-0 {{ request()->is('about') ? '' : '' }}" aria-current="page"
                         href="{{ url('/about') }}"><b>About</b></a>
                 </li>
                 @auth
                     <li class="nav-item dropdown mx-0 pe-4">
-                        <a class="myNavUnderline dropdown-toggle m-3 px-0 " href="#" role="button"
+                        <a class="myNavUnderline dropdown-toggle pt-4 mt-2" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <b>{{ Auth::user()->name }}</b>
                         </a>
@@ -65,13 +65,13 @@
                                 @csrf
                             </form>
                         @else
-                            <li class="nav-item py-3">
+                            <li class="nav-item pt-4">
                                 <a class="nav-item myNavUnderline px-0" href="{{ route('login') }}"
                                     class=""><b>Login</b></a>
                             </li>
 
                             @if (Route::has('register'))
-                                <li class="nav-item py-3">
+                                <li class="nav-item pt-4">
                                     <a class="nav-item myNavUnderline px-0" href="{{ route('register') }}"
                                         class=""><b>Register</b></a>
                                 </li>

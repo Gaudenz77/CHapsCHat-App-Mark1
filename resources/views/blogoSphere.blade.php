@@ -13,7 +13,7 @@
           <my-blog-form></my-blog-form> @endauth
         </div>
       </div>
-      <div class="col-sm-8 col-lg-8 colBlogContent mt-md-0 mt-0">
+      <div class="col-sm-8 col-lg-8 colBlogContent mt-md-0 mt-0 px-1">
         <div class="container mb-3" style=" margin-top:-15% ! important">
           <div class="row"> @auth <div class="col-12 text-center mt-3 mb-2">
               <button class="btn btn-own mt-md-0 mt-3 text-end" type="button" role="button" id="createButton2">
