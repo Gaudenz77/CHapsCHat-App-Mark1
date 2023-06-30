@@ -29,7 +29,7 @@
               </div>
               <div class="modal-body">
                 <p>
-                    <figcaption class="blockquote-footer">{{ blog.created_at }}</figcaption>
+                    <figcaption class="blockquote-footer">{{ blog.user.name }}{{ formatCreatedAt(blog.created_at) }}</figcaption>
                   <!-- <strong>User ID:</strong> {{ blog.user_id }} -->
                 </p>
                 <!-- <p>Auth User ID: {{ authUserId }}</p> -->
