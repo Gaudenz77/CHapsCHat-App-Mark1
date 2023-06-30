@@ -33,10 +33,6 @@
                             :data-bs-target="'#modal-' + blog.id">Read More!
                             <i class="fa-regular fa-newspaper fa-xl"></i>
                         </button>
-                        <button @click="awesome = !awesome">Toggle</button>
-
-<h1 v-if="awesome">Vue is awesome!</h1>
-<h1 v-else>Oh no 😢</h1>
                     </div>
                 </div>
             </div>
