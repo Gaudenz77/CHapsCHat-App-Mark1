@@ -87,7 +87,7 @@
         }
 
         * {
-            border: 1px solid red !important;
+            /* border: 1px solid red !important; */
         }
 
         .navbar-scroll-hide {
