@@ -461,7 +461,7 @@ body.dark-mode .textfieldBlogContent {
     font-size: 1.5em;
 }
 
-.modal-title {
+body.dark-mode .modal-title {
     color:#333 !important;
 }
 
