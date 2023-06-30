@@ -53,7 +53,7 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p><strong>User ID:</strong> {{ blog.user_id.name }}</p>
+                            <p><strong>User ID:</strong> {{ blog.user_id }}</p>
                             <!-- <p><strong>Topic:</strong> {{ blog.topic }}</p> -->
                             <p class="textfieldBlogContent">
                                 {{ blog.content }}
