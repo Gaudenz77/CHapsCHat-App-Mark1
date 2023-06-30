@@ -39,9 +39,9 @@
                   </div>
                     
                     <div class="row">
-                      @guest
+                      @auth
                       <my-blog-content :auth-user-id="{{ Auth::id() }}"></my-blog-content>
-                      @endguest
+                      @endauth
                       
                     </div>
                 </div>
