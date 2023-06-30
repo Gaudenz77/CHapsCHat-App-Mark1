@@ -453,6 +453,10 @@ body.dark-mode .textfieldBlogContent {
     color: #333;
 }
 
+.myModal {
+    color:#333;
+}
+
 .modal-backdrop.show {
 
     opacity: var(--bs-backdrop-opacity);
