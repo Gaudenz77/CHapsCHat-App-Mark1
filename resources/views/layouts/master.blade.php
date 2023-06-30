@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    @if (Auth::check()) 
-    <meta name="user" content="{{ Auth::user() }}">
-    @endif 
+    @if (Auth::check())
+        <meta name="user" content="{{ Auth::user() }}">
+    @endif
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> --}}
@@ -54,9 +54,7 @@
     @include('components.gueststylesheet')
 
     <style>
-        body {
-        
-        }
+        body {}
 
         /* toggle container */
         .card-checkbox.custom-control-input:not(:checked)~.custom-control-label::before {
@@ -90,8 +88,20 @@
 
         * {
             /* border: 1px solid red !important; */
-            }
-            
+        }
+
+        .navbar-scroll-hide {
+            transition: top 0.3s;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-scroll-hide.hidden {
+            top: -100px;
+            /* Adjust the value to match the height of your navbar */
+        }
     </style>
 
 </head>
@@ -119,11 +129,13 @@
             </button>
             <span id="footerContent" class="span1 fixed-bottom pt-3 ps-2"><a href="{{ url('/about') }}"
                     class="nav-item mt-2 ms-0 px-2 ps-0 py-0" style="color:#ffc107;"><b class="">Dare To Meet
-                        Me?</b></a><br><b style="color:  blue;">&copy; {{ date('d/m/Y') }} <a class="small" style="color:chartreuse" href="{{ url('/impressum') }}"><br>Legal Notice</a></span>
-                            
+                        Me?</b></a><br><b style="color:  blue;">&copy; {{ date('d/m/Y') }} <a class="small"
+                        style="color:chartreuse" href="{{ url('/impressum') }}"><br>Legal Notice</a></span>
+
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
 
     <script>
@@ -163,29 +175,40 @@
                 behavior: 'smooth'
             });
         }
+        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-12%";
+            }
+            prevScrollpos = currentScrollPos;
+        }
 
-        window.addEventListener('scroll', function() {
+        /* window.addEventListener('scroll', function() {
             var button = document.querySelector('.back-to-top');
             if (window.pageYOffset > 200) {
                 button.classList.add('show');
             } else {
                 button.classList.remove('show');
             }
-        });
+        }); */
 
 
-  /* Reload page twice to grant vs code triggering */
-      function reloadTwice() {
-      // First reload
-      /* setTimeout(() => {
-        location.reload();
-      }, 500); // Set the desired delay (in milliseconds) between the reloads
+        /* Reload page twice to grant vs code triggering */
+        function reloadTwice() {
+            // First reload
+            /* setTimeout(() => {
+              location.reload();
+            }, 500); // Set the desired delay (in milliseconds) between the reloads
 
-      // Second reload
-      setTimeout(() => {
-        location.reload();
-      }, 1000);  */// Set the desired delay (in milliseconds) between the reloads
-    }
+            // Second reload
+            setTimeout(() => {
+              location.reload();
+            }, 1000);  */ // Set the desired delay (in milliseconds) between the reloads
+        }
     </script>
 
     <!-- toggle mode script start -->

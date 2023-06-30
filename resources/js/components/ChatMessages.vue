@@ -31,6 +31,7 @@
     </figure>
   </div>
 </template>
+
 <style>
   .dividerone {
     height: 4px;
@@ -46,6 +47,7 @@
     margin: 10px 0;
   }
 </style>
+
 <script>
   import axios from "axios";
   import Echo from "laravel-echo";
@@ -98,7 +100,7 @@
       }
     },
     mounted() {
-      axios.get("messages", {
+    axios.get("messages", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem(
                         "access_token"

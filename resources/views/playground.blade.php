@@ -273,7 +273,7 @@
 
 
         // Check if the animation has already played during the current session
-        const hasAnimationPlayed = sessionStorage.getItem('animationPlayed');
+/*         const hasAnimationPlayed = sessionStorage.getItem('animationPlayed');
 
         if (!hasAnimationPlayed) {
             // Add the animation class to the element
@@ -282,7 +282,7 @@
 
             // Set the flag indicating that the animation has played
             sessionStorage.setItem('animationPlayed', true);
-        }
+        } */
     </script>
 
 @endsection
