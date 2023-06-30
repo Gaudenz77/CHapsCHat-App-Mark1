@@ -39,7 +39,10 @@
                   </div>
                     
                     <div class="row">
+                      @guest
                       <my-blog-content :auth-user-id="{{ Auth::id() }}"></my-blog-content>
+                      @endguest
+                      
                     </div>
                 </div>
             </div>
