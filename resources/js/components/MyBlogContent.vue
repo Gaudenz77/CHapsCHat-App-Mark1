@@ -101,9 +101,8 @@ export default {
         },
     },
     mounted() {
-        console.log("Component mounted"); 
+        console.log('Auth User ID:', this.authUserId);
         this.fetchBlogs();
-        console.log("Auth User ID:", this.authUserId);
         AOS.init(); // Initialize AOS
     },
     methods: {
@@ -126,6 +125,7 @@ export default {
             return "/assets/img/ChapsChatLogo.png";
         },
         deleteBlog(id) {
+            console.log('Auth User ID:', this.authUserId);
             const csrfToken = document
                 .querySelector('meta[name="csrf-token"]')
                 .getAttribute("content");
