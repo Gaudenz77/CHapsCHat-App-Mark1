@@ -122,6 +122,16 @@ export default {
           console.error(error);
         });
     },
+    fetchLoggedUser() {
+  axios
+    .get("https://krakatoom.ch/api/current-user") // Replace with your actual endpoint URL
+    .then((response) => {
+      this.loggedUser = response.data.id;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+},
     getImageUrl(image) {
       if (image) {
         const baseUrl = "/assets/img/"; // Update the base URL to match your folder structure
