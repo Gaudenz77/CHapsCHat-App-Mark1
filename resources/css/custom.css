@@ -441,6 +441,7 @@ body.dark-mode .textfieldBlogTitle {
     text-align: center;
     color: #333;
     text-align: left;
+    font-family: 'Special Elite', cursiv;
 }
 
 .imageBlog {
@@ -457,7 +458,7 @@ body.dark-mode .textfieldBlogContent {
     color:#333 !important;
     font-weight:bold;
     font-family: 'Special Elite', cursiv;
-    font-size:larger;
+    font-size: 1.5em;
 }
 
 .modal-backdrop.show {
