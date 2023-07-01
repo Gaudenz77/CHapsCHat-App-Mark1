@@ -55,8 +55,12 @@
 
     <style>
         body {
-            position: relative;
-            top: -11px;
+            
+            margin-top: -25px;
+        }
+
+        * {
+            /* border: 1px solid red !important; */
         }
 
         /* toggle container */
@@ -93,9 +97,23 @@
             /* border: 0.1px solid red !important; */padding:0;
         }
 
-        .autohide {
-            transition-duration: 1.5s;
+        .navbar-scroll-hide {
+            transition: top 1.8s;
+            /* position: fixed; */
+            /* top: 0; */
+            /* width: 100%; */
+            z-index: 1000;
         }
+
+        .navWrapper {
+            height:10rem;
+        }
+
+        .navbar-scroll-hide.hidden {
+            /* top: -150px; */
+            /* Adjust the value to match the height of your navbar */
+        }
+
     </style>
 
 </head>
@@ -177,7 +195,7 @@
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("navbar").style.top = "0";
             } else {
-                document.getElementById("navbar").style.top = "-12%";
+                document.getElementById("navbar").style.top = "-100px";
             }
             prevScrollpos = currentScrollPos;
         }

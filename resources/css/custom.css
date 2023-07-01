@@ -125,8 +125,8 @@ body.dark-mode a {
     }
 
     .playgroundMain {
-        margin-top: 6rem;
-        margin-bottom: 0rem;
+        margin-top: 7rem;
+        margin-bottom: -1rem;
         
     }
 
@@ -226,8 +226,8 @@ body.dark-mode a {
     }
 
     .playgroundMain {
-        margin-top: 24vh;
-        margin-bottom: 0rem;
+        margin-top: 7rem;
+        margin-bottom: -1rem;
     }
     
 }
@@ -259,10 +259,9 @@ body.dark-mode a {
         top: 8%;
         }
  
-
     .playgroundMain {
-        margin-top: 7rem;
-        margin-bottom: 0rem;
+        margin-top:8rem;
+        margin-bottom: -1rem;
     }
 
     .knowledgeMain {
@@ -833,11 +832,12 @@ body.dark-mode .offcanvas-header {
 }
 
 .offcanvas-body {
-    background-color: #091540;
     height: 90%;
+    background-color: #091540;
 }
 
 body.dark-mode .offcanvas-body {
+    height: 90%;
     background-color: #ebebeb;
 }
 

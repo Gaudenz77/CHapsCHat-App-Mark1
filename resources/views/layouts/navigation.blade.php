@@ -1,4 +1,4 @@
-<nav class="navbar navbar-scroll navbar-expand-md fixed-top container-fluid autohide" id="navbar">
+<nav class="navbar navbar-expand-md fixed-top container-fluid navbar-scroll-hide" id="navbar">
     <img src="./assets/img/Group 26.svg" alt="logo_image" class="logoImg img-fluid mx-0 mt-sm-n1 ms-2"
         style="margin-bottom: -1rem;">
     {{-- @include('components.toggle') --}}
@@ -21,7 +21,7 @@
 
         <div class="offcanvas-body px-3">
 
-            <ul class="navbar-nav ms-auto mt-2 mb-2 mb-md-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
 
                 <li class="nav-item">
                     @if (Route::has('login'))

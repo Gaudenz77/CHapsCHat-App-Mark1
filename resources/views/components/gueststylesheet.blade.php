@@ -41,11 +41,6 @@
             margin-bottom: 16vh;
         }
 
-        .navbar {
-            height: 7rem;
-            background-color: #091540;
-        }
-
         .footer {
             position: fixed;
             left: 0;
@@ -116,11 +111,6 @@
             margin-bottom: 20rem;
         }
 
-        .navbar {
-            height: 7rem;
-            background-color: #091540;
-        }
-
         .span1 {
             color: #ebebeb;
             background-color: #ffffff;
@@ -159,7 +149,9 @@
         }
 
         .aboutMain {
-            margin-top: 35vh;
+            margin-top: 35vh;* {
+            /* border: 1px solid red !important; */
+        }
             margin-bottom: 18vh;
         }
 
@@ -170,11 +162,6 @@
         .wrapper {
             width: 20vh;
             padding-right: 2rem;
-        }
-
-        .navbar {
-            height: 7rem;
-            background-color: #091540;
         }
 
         .colBlogContent {
