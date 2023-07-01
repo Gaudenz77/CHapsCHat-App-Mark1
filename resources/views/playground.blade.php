@@ -11,7 +11,7 @@
 <section class="">
     <div class="container-fluid">
         <div class="row">
-        <div class="chatCol col-md-3 px-4 pb-4">
+        <div class="chatCol col-md-3 px-4 pb-5">
             <div class="mt-2 p-1 pt-4">
             <h5 class="mb-0">WELCOME to the MESSAGECORNER <i class="fa-solid fa-circle-info" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}} data-bs-title="
                         <div class='popPlayHead {{-- animate__animated animate__zoomInUp --}}'>How To Message</div>" data-bs-content='
@@ -37,7 +37,7 @@
             <p class="test text-center m-2 mb-5 pt-4 pb-3">Messageservice brought to you by <a href="https://pusher.com/">Pusher&copy;</a>
             </p>
         </div>
-        <div class="editorCol col-md-5 px-4 pb-4">
+        <div class="editorCol col-md-5 px-4 pb-5">
             <div class="mt-2 p-1 pt-4">
             <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! <i class="fa-solid fa-circle-info" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-title="
                         <div class='popPlayHead {{-- animate__animated animate__zoomInUp --}}'>Code-Space </div>" data-bs-content='
@@ -73,7 +73,7 @@
             <div id="editor" style="height:75vh;"></div>
             </div>
         </div>
-        <div class="previewCol col-md-4 px-4 pb-4">
+        <div class="previewCol col-md-4 px-4 pb-5">
             <div class="mt-2 p-1 pt-4">
             <h5 class="mb-3 pb-3">YouR ouTpuT!</h5>
             <iframe id="preview" style="height:75vh;"></iframe>

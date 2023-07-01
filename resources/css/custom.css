@@ -245,7 +245,7 @@ body.dark-mode a {
     }
 
     .navbar {
-        height: 14%;
+        height: 10rem;
         background-color: #091540;
     }
 
@@ -260,8 +260,8 @@ body.dark-mode a {
  
 
     .playgroundMain {
-        margin-top: 12vh;
-        margin-bottom: 3vh;
+        margin-top: 7rem;
+        margin-bottom: 0rem;
     }
 
     .knowledgeMain {
@@ -270,8 +270,12 @@ body.dark-mode a {
     }
 
     .profileMain {
-        margin-top: 7rem;
+        margin-top: 8rem;
         margin-bottom: 10rem;
+    }
+
+    .profileMain .navbar {
+        height: 6.5rem;
     }
 
     .circleProfileColupdAcc{
@@ -284,10 +288,10 @@ body.dark-mode a {
 
     .circleProfileCols {
         position: relative;
-        min-width: 33%;
+        min-width: 30%;
         min-height: 33%;
         border-radius: 50%;
-        padding: 5rem 2rem 1rem 2rem;
+        padding: 3rem 2rem 1rem 2rem;
     }
 
     .logoImg {
@@ -670,17 +674,6 @@ body.dark-mode .type {
 }
 
 /* FOOTER LINK ----------------------------------*/
-.span1 {
-    color: #ebebeb;
-    background-color: #4e80b7;
-    height: 10.3vh;
-}
-
-body.dark-mode .span1 {
-    color: #333;
-    background-color: #022342;
-    height: 10.3vh;
-}
 
 nav {
     display: flex;
@@ -1150,7 +1143,7 @@ body.dark-mode .btn-circleFoot {
 }
 
 body.dark-mode .btn-circleOwn2 {
-    background-color: #ffc107;
+    background-color: #f25151;
 }
 
 .btn-circleOwn3 {
@@ -1158,16 +1151,27 @@ body.dark-mode .btn-circleOwn2 {
     height: 8rem;
     font-size: 90%;
     font-weight: bold;
-    background-color: #2de3be;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 50%;
     text-align: center;
     margin-bottom: 15px;
 }
 
+
+
 body.dark-mode .btn-circleOwn3 {
-    background-color: #f25151;
+    background-color: #091540;
 }
+
+.skullIcon {
+    color:#091540;
+}
+
+body.dark-mode .skullIcon {
+    color:#ffffff;
+}
+
 
 .btn-circleType {
     width: 6rem;

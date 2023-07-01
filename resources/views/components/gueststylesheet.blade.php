@@ -98,11 +98,11 @@
         }
 
         .span1 {
-            height: 12.3vh;
+            height: 13.5vh;
         }
 
         body.dark-mode .span1 {
-            height: 12.3vh;
+            height: 13.5vh;
         }
     }
 
@@ -125,6 +125,12 @@
             color: #ebebeb;
             background-color: #ffffff;
             height: 25vh;
+        }
+
+        body.dark-mode .span1 {
+            color: #333;
+            background-color: #091540;
+            height: 10.3vh;
         }
 
     }
@@ -179,13 +185,13 @@
         .span1 {
             color: #ebebeb;
             background-color: #ffffff;
-            height: 10.3vh;
+            height: 10vh;
         }
 
         body.dark-mode .span1 {
             color: #333;
-            background-color: #022342;
-            height: 10.3vh;
+            background-color: #091540;
+            height: 10vh;
         }
     }
 

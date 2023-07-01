@@ -7,17 +7,17 @@
 @section('content')
 
 <x-app-layout>
-    <div class="container">
-        <div class="row justify-content-evenly text-center">
-            <div class="col-sm-6 pt-5 pb-3 circleProfileCols bg-warning mx-1 {{-- updateAccount --}}">
+    <div class="container text-center">
+        <div class="row align-items-center">
+            <div class="col-sm-3 circleProfileCols pt-5 pb-3 bg-info mx-1 ms-0 me-md-5 animate__animated animate__flipInY animate__delay-6s">
                 @include('profile.partials.update-profile-information-form')
             </div>
 
-            <div class="col-sm-5 circleProfileCols bg-danger mt-0 mt-md-3 mx-1">
+            <div class="col-sm-3 circleProfileCols bg-warning mt-0 mt-md-3 mx-0 mx-md-1 animate__animated animate__flipInY animate__delay-2s">
                 @include('profile.partials.update-password-form')
             </div>
 
-            <div class="col-sm-5 circleProfileCols bg-primary mt-0 mt-md-3 mx-1">
+            <div class="col-sm-3 circleProfileCols bg-danger mt-0 mt-md-3 mx-1 ms-0 ms-md-5 animate__animated animate__flipInY animate__delay-4s">
                 @include('profile.partials.delete-user-form')
             </div>
         </div>

@@ -38,7 +38,7 @@
         </div>
     
         <div class="d-flex gap-4 justify-content-center align-items-center">
-            <button type="submit" class="btn btn-circleOwn2"><i class='fa-regular fa-save fa-2xl'></i>  {{ __('Save') }}</button>
+            <button type="submit" class="btn btn-circleOwn"><i class='fa-regular fa-save fa-2xl'></i>  {{ __('Save') }}</button>
     
             @if (session('status') === 'password-updated')
                 <p
