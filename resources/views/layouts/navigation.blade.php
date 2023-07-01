@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md fixed-top container-fluid navbar-scroll-hide" id="navbar">
+<nav class="navbar navbar-scroll-hide navbar-expand-md fixed-top container-fluid" id="navbar">
     <img src="./assets/img/Group 26.svg" alt="logo_image" class="logoImg img-fluid mx-0 mt-sm-n1 ms-2"
         style="margin-bottom: -1rem;">
     {{-- @include('components.toggle') --}}

@@ -46,10 +46,15 @@
     <!-- Include jQuery from a CDN or from your own server -->
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <style>
+
         body {
             /* background-color: black; */
         }
        
+        h1 {
+            margin-top: 0;
+        }
+
       .custom-toggler.navbar-toggler {
             border-color: rgb(255, 255, 0);
       }

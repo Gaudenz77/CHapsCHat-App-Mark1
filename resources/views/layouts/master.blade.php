@@ -54,13 +54,23 @@
     @include('components.gueststylesheet')
 
     <style>
+ 
         body {
+            /* position: relative; */
+            /* margin-top: -25px; */
             
-            margin-top: -25px;
+            overflow: auto;
         }
 
-        * {
-            /* border: 1px solid red !important; */
+        h1 {
+            margin-top: 0;
+        }
+   
+
+        header {
+            position: absolute;
+            top: 0;
+            right: 0;
         }
 
         /* toggle container */
@@ -102,17 +112,20 @@
             /* position: fixed; */
             /* top: 0; */
             /* width: 100%; */
+            /* top: 110px; */
             z-index: 1000;
         }
 
         .navWrapper {
-            height:10rem;
+            /* height:1rem; */
         }
 
         .navbar-scroll-hide.hidden {
-            /* top: -150px; */
+            /* top: 130px; */
             /* Adjust the value to match the height of your navbar */
         }
+
+        
 
     </style>
 
@@ -181,24 +194,6 @@
             });
         });
 
-        // Scroll top
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-100px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
 
 
         /* Reload page twice to grant vs code triggering */

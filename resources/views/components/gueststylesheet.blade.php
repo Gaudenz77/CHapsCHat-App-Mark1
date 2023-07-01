@@ -1,19 +1,8 @@
 <style>
-    body {
-        /* background-color: black; */
+    body {    
+        
+        overflow: auto;
     }
-
-    /* #loginMain {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin-top: -10rem;
-        background: url("./assets/img/architecture-4000.jpg") no-repeat center center;
-        background-size: cover;
-        position: relative;
-        z-index: 1;
-    } */
 
     @media (max-width: 480px) {
         .loginMain {
@@ -205,3 +194,24 @@
     }
 
 </style>
+<script>
+            // Scroll top
+            function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "-10px";
+            } else {
+                document.getElementById("navbar").style.top = "-100px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+</script>

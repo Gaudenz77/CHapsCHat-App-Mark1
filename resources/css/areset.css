@@ -8,10 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
-    line-height: 1.15; 
-    -webkit-text-size-adjust: 100%;
-  }
+
   
   /* Sections
      ========================================================================== */
@@ -19,9 +16,10 @@
   /**
    * Remove the margin in all browsers.
    */
-  
+ 
   body {
-    margin: 0;
+    overflow: auto;
+    
   }
   
   /**
@@ -39,7 +37,7 @@
   
   h1 {
     font-size: 2em;
-    margin: 0.67em 0;
+    margin: 0;
   }
   
   /* Grouping content
