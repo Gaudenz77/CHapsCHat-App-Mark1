@@ -1,4 +1,4 @@
-<section>
+<section class="my-4">
     <header>
         <h2 class="text-lg">
             {{ __('Your Profile') }}
