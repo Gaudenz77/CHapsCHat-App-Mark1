@@ -42,7 +42,7 @@
         }
 
         .navbar {
-            height: 6rem;
+            height: 13%;
             background-color: #091540;
         }
 
@@ -117,7 +117,7 @@
         }
 
         .navbar {
-            height: 25%;
+            height: 13%;
             background-color: #091540;
         }
 

@@ -54,7 +54,10 @@
     @include('components.gueststylesheet')
 
     <style>
-        body {}
+        body {
+            position: relative;
+            top: -10px;
+        }
 
         /* toggle container */
         .card-checkbox.custom-control-input:not(:checked)~.custom-control-label::before {
@@ -87,24 +90,7 @@
         }
 
         * {
-            /* border: 1px solid red !important; */
-        }
-
-        .navbar-scroll-hide {
-            transition: top 0.3s;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .navbar-scroll-hide.hidden {
-            top: -100px;
-            /* Adjust the value to match the height of your navbar */
-        }
-
-        .navWrapper {
-            height:6rem;
+            /* border: 0.1px solid red !important; */padding:0;
         }
 
         .autohide {
@@ -195,6 +181,7 @@
             }
             prevScrollpos = currentScrollPos;
         }
+
 
         /* Reload page twice to grant vs code triggering */
         function reloadTwice() {
