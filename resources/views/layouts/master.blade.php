@@ -164,6 +164,26 @@
     {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
 
     <script>
+        // Scroll top
+        function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        }
+        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-7rem";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+
         /* ENABLE TOOLTIP/POPOVER */
         $(function() {
             $('[data-bs-toggle="tooltip"]').tooltip();

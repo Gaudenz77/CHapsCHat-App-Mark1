@@ -18,7 +18,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     <div class="container text-center">
-                        <h1 class="display-3 text-center animate__animated animate__zoomInUp animate__delay-5s">
+                        <h1 class="display-3 pb-3 text-center animate__animated animate__zoomInUp animate__delay-5s">
                             <b>{{ __('Welcome To CHapsCHat') }}</b>
                         </h1>
                         <p class="lead animate__animated animate__rubberBand animate__delay-1s">

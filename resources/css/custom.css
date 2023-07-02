@@ -2,8 +2,6 @@
 
 
 html, body {
-    background-color: transparent;
-    
     overflow: auto;
     }
     
@@ -31,46 +29,6 @@ body.dark-mode .material-symbols-outlined {
     font-size: 3.5rem;
     color: blue;
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
-}
-
-.btn-auth {
-    background-color: blue;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    border-width: 5px;
-    border-color: yellow;
-    padding: 1rem 0 !important;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.btn-auth:hover {
-    background-color: #0099ff;
-}
-
-.btn-auth:active {
-    background-color: #0066cc;
-}
-
-.btn-auth:focus {
-    outline: none;
-}
-
-body.dark-mode .btn-auth {
-    background-color: yellow;
-    border-color: blue;
-}
-
-body.dark-mode .btn-auth:hover {
-    background-color: #ffff99;
-}
-
-body.dark-mode .btn-auth:active {
-    background-color: #cccc00;
 }
 
 body.dark-mode {
@@ -134,7 +92,7 @@ body.dark-mode a {
     }
 
     .navbar {
-        height: 20rem;
+        height: 7rem;
         background-color: #091540;
     }
 
@@ -585,8 +543,15 @@ body.dark-mode .loginLabel {
 }
 
 .login {
-    border-radius: 20px;
-}
+    border-radius: 21px;
+    border: 2px dotted #0000ff;
+}   
+
+body.dark-mode .login {
+    border-radius: 21px;
+    border: 2px dotted #ff0000;
+}  
+
 
 .cardLogin {
     background-color: #091540;
@@ -1086,6 +1051,50 @@ body.dark-mode .previewCol {
   box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
 }
 
+.btn-auth {
+    background-color: blue;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: yellow;
+    padding: 1rem 0 !important;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-auth:hover {
+    background-color: #0099ff;
+}
+
+.btn-auth:active {
+    background-color: #0066cc;
+}
+
+.btn-auth:focus {
+    outline: none;
+}
+
+body.dark-mode .btn-auth {
+    background-color: #ff0000;
+    border-color: #0000ff;
+}
+
+body.dark-mode .btn-auth:hover {
+    background-color: #ff7777;
+}
+
+body.dark-mode .btn-auth:active {
+    background-color: #cc1f00;
+}
+
+body.dark-mode .btn-auth:focus {
+    outline: none;
+}
+
 .btn-circle {
   background-color: #1400ff;
 }
@@ -1179,8 +1188,6 @@ body.dark-mode .btn-circleOwn2 {
     margin-bottom: 15px;
 }
 
-
-
 body.dark-mode .btn-circleOwn3 {
     background-color: #091540;
 }
@@ -1192,7 +1199,6 @@ body.dark-mode .btn-circleOwn3 {
 body.dark-mode .skullIcon {
     color:#ffffff;
 }
-
 
 .btn-circleType {
     width: 6rem;

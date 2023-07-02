@@ -1,17 +1,16 @@
 <style>
     body {    
-        
         overflow: auto;
     }
 
     @media (max-width: 480px) {
         .loginMain {
-            margin-top: 13vh;
+            margin-top: 15vh;
             margin-bottom: 11vh;
         }
 
         .registerMain {
-            margin-top: 10vh;
+            margin-top: 11vh;
             margin-bottom: 18vh;
         }
 
@@ -171,6 +170,60 @@
         }
     }
 
+    .btn-auth {
+        background-color: blue;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        border-width: 5px;
+        border-color: yellow;
+        padding: 1rem 0 !important;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .btn-auth:hover {
+        background-color: #0099ff;
+    }
+
+    .btn-auth:active {
+        background-color: #0066cc;
+    }
+
+    .btn-auth:focus {
+        outline: none;
+    }
+
+    body.dark-mode .btn-auth {
+        background-color: #ff0000;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        border-width: 5px;
+        border-color: #0000ff;
+        padding: 1rem 0 !important;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    body.dark-mode .btn-auth:hover {
+        background-color: #ff7777;
+    }
+
+    body.dark-mode .btn-auth:active {
+        background-color: #cc1f00;
+    }
+
+    body.dark-mode .btn-auth:focus {
+        outline: none;
+    }
+
     .footerOwn {
         height: 10.3vh;
     }
@@ -195,23 +248,6 @@
 
 </style>
 <script>
-            // Scroll top
-            function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "-10px";
-            } else {
-                document.getElementById("navbar").style.top = "-100px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
+
 
 </script>
