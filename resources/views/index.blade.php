@@ -55,20 +55,20 @@
       </div>
     </a> --}}
 
-            <div type="button" id="button" class="btn {{-- colSquare --}} col-sm-3 me-md-4 me-lg-4 mb-4 {{-- animate__animated animate__backInLeft animate__delay-2s--}}" {{-- style="height: 300px;" --}}>
+            <a type="button"  href="{{ url('/blogoSphere') }}" class="btn {{-- colSquare --}} col-sm-3 me-md-4 me-lg-4 mb-4  animate__animated animate__backInLeft animate__delay-2s" {{-- style="height: 300px;" --}}>
             <img class="img-fluid p-3" src="./assets/img/square_pure.svg">
-            </div>
+            </a>
 
-            <div type="button" id="button" class="btn{{-- colCircle --}} rounded-circle col-sm-3 mb-0 {{-- animate__animated animate__backInDown animate__delay-3s--}}" {{-- style="height: 300px;" --}}>
+            <a type="button" href="{{ url('/playground') }}" id="button" class="btn{{-- colCircle --}} rounded-circle col-sm-3 mb-0 animate__animated animate__backInDown animate__delay-3s" {{-- style="height: 300px;" --}}>
                 <img class="img-fluid p-3" src="./assets/img/circle_pure.svg">
-            </div>
+            </a>
 
-            <div type="button" id="button" class="btn col-sm-3{{-- position-relative --}} {{-- animate__animated animate__backInRight animate__delay-4s--}}" {{-- style="height: 300px; " --}}>
+            <a type="button" href="{{ url('/knowledgeSphere') }}" id="button" class="btn col-sm-3{{-- position-relative --}} animate__animated animate__backInRight animate__delay-4s" {{-- style="height: 300px; " --}}>
                 {{-- <div class="square">
                     <div class="colTriangle"></div>
                 </div> --}}
                 <img class="img-fluid triangleFix" src="./assets/img/triangle_pure_large.svg">
-            </div>
+            </a>
         </div>
         
 
