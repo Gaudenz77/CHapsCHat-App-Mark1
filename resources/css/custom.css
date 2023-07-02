@@ -111,7 +111,7 @@ body.dark-mode a {
     }
 
     .knowledgeMain {
-        margin-top: 4rem;
+        margin-top: 6rem;
         margin-bottom: 6rem;
     }
 
@@ -247,7 +247,7 @@ body.dark-mode a {
     }
 
     .knowledgeMain {
-        margin-top: 6rem;
+        margin-top: 8rem;
         margin-bottom: 0rem;
     }
 
@@ -400,6 +400,15 @@ body.dark-mode .infoKnowledge {
     display: flex;
 }
 
+.ownTable {
+    background-color:#2de3be !important;
+    --bs-table-bg: none;
+}
+
+body.dark-mode .ownTable {
+    background-color:#ffc107 !important;
+    --bs-table-bg: none;
+}
 /* BLOG */
 
 .circleBlog {

@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="col-11 col-md-6">
+            <div class="col-11 col-md-6 mb-4 mb-sm-0">
                 <label class="form-label" for="filter">Search on the Web</label>
                 <form id="searchForm" @submit.prevent="search">
                     <div class="input-group mb-3">
@@ -73,7 +73,7 @@
     </div>
 
     <div class="table-responsive">
-        <table class="table table-dark table-hover table-striped">
+        <table class="table table-hover table-striped rounded ownTable">
         <thead>
             <tr>
                 <th scope="col" style="width: 25%">Topic</th>
@@ -108,7 +108,7 @@
                         ></textarea>
                     </template>
                     <template v-else>
-                        <div style="word-break: break-word">
+                        <div class="text-start" style="word-break: break-word">
                             <span v-html="renderHTML(library.content)"></span>
                         </div>
                     </template>

@@ -13,7 +13,7 @@
           <h2 class="mx-3 mx-md-0  pt-5">{{ Auth::user()->name }}'s Library</h2>
           <my-library-content></my-library-content>
         </div>
-        <div class="col-sm-5 col-md-10 col-lg-6 circleKnowledgeForm order-1 text-center mb-sm-0 mb-md-0 mb-lg-4 mb-0 mt-5 pt-4 pb-3 animate__animated animate__zoomInDown" id="formContainer" style="display: none;">
+        <div class="col-sm-5 col-md-10 col-lg-6 circleKnowledgeForm order-1 text-center mb-sm-0 mb-md-0 mb-lg-4 mb-0 mt-2 pt-4 pb-3 animate__animated animate__zoomInDown" id="formContainer" style="display: none;">
           <div class="form-wrapper">
             <div class="circle-text">
               <svg viewBox="0 -16 200 30" xmlns="http://www.w3.org/2000/svg">
