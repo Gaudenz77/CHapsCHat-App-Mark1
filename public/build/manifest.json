@@ -10,14 +10,14 @@
     "src": "resources/css/custom.css"
   },
   "resources/js/app.css": {
-    "file": "assets/app-7705ec2b.css",
+    "file": "assets/app-169fa0cd.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-7705ec2b.css"
+      "assets/app-169fa0cd.css"
     ],
-    "file": "assets/app-061df60b.js",
+    "file": "assets/app-f5afae6f.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },

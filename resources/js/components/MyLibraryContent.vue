@@ -1,7 +1,7 @@
 <template>
     <div class="filters">
-        <div class="row">
-            <div class="col-12 col-md-2 pt-3">
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-2 pt-0 pt-md-3">
                 <button
                     class="btn btn-own"
                     type="button"
@@ -11,7 +11,7 @@
                 </button>
             </div>
 
-            <div class="col-12 col-md-4 mb-1 pt-0">
+            <div class="col-11 col-md-4 mb-1 pt-0">
                 <label class="form-label" for="filter">Filter by:</label>
                 <select
                     class="selectKnow form-select mb-3"
@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-11 col-md-6">
                 <label class="form-label" for="filter">Search on the Web</label>
                 <form id="searchForm" @submit.prevent="search">
                     <div class="input-group mb-3">
@@ -72,7 +72,8 @@
         </div>
     </div>
 
-    <table class="table table-dark table-hover table-striped">
+    <div class="table-responsive">
+        <table class="table table-dark table-hover table-striped">
         <thead>
             <tr>
                 <th scope="col" style="width: 25%">Topic</th>
@@ -118,14 +119,14 @@
                 <td>
                     <div class="">
                         <button
-                            class="btn btn-circleLibrary text-center"
+                            class="btn btn-circleLibrary text-center mx-3 mx-md-0"
                             type="button"
                             role="button"
                             @click="deleteLibrary(library.id)">
                             <i class="fa-regular fa-trash-can"></i> Delete
                         </button>
                         <button
-                            class="btn btn-circleLibrary text-center"
+                            class="btn btn-circleLibrary text-center mx-3 mx-md-0"
                             type="button"
                             role="button"
                             @click="toggleEditMode(library.id)">
@@ -143,7 +144,40 @@
             </tr>
         </tbody>
     </table>
+    </div>
+    
 </template>
+
+<style scoped>
+/* ... Rest of the original CSS ... */
+
+/* Add the new CSS here */
+@media screen and (max-width: 600px) {
+  table {
+    width: 100%;
+  }
+  thead {
+    display: none;
+  }
+  tr:nth-of-type(2n) {
+    background-color: inherit;
+  }
+  tr td:first-child {
+    background: #f0f0f0;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  tbody td {
+    display: block;
+    text-align: center;
+  }
+  tbody td:before {
+    content: attr(data-th);
+    display: block;
+    text-align: center;
+  }
+}
+</style>
 
 <script>
 import axios from "axios";
@@ -168,6 +202,7 @@ export default {
             .get("/mylibrary")
             .then((response) => {
                 this.libraries = response.data;
+                this.applyTableAttributes();
             })
             .catch((error) => {
                 console.log(error);
@@ -337,6 +372,27 @@ export default {
         renderHTML(content) {
             return content; // Return content as-is (assuming it contains valid HTML)
         },
+        applyTableAttributes() {
+      var headertext = [];
+      var headers = document.querySelectorAll("thead");
+      var tablebody = document.querySelectorAll("tbody");
+
+      for (var i = 0; i < headers.length; i++) {
+        headertext[i] = [];
+        for (var j = 0, headrow; (headrow = headers[i].rows[0].cells[j]); j++) {
+          var current = headrow;
+          headertext[i].push(current.textContent);
+        }
+      }
+
+      for (var h = 0, tbody; (tbody = tablebody[h]); h++) {
+        for (var i = 0, row; (row = tbody.rows[i]); i++) {
+          for (var j = 0, col; (col = row.cells[j]); j++) {
+            col.setAttribute("data-th", headertext[h][j]);
+          }
+        }
+      }
+    },
     },
 };
 </script>

@@ -9,8 +9,8 @@
 <section class="">
     <div class="container mt-3">
       <div class="row justify-content-center align-items-center" style="">
-        <div class="col-sm-12 col-md-8 col-lg-8 p-3 rounded order-2 mx-5 px-5 pb-5 knowledgeTable">
-          <h2 class="pt-5">{{ Auth::user()->name }}'s Library</h2>
+        <div class="col-sm-12 col-md-8 col-lg-8 p-3 rounded order-2 mx-5 px-1 px-md-5 pb-5 knowledgeTable">
+          <h2 class="mx-3 mx-md-0  pt-5">{{ Auth::user()->name }}'s Library</h2>
           <my-library-content></my-library-content>
         </div>
         <div class="col-sm-5 col-md-10 col-lg-6 circleKnowledgeForm order-1 text-center mb-sm-0 mb-md-0 mb-lg-4 mb-0 mt-5 pt-4 pb-3 animate__animated animate__zoomInDown" id="formContainer" style="display: none;">
