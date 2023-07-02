@@ -49,10 +49,9 @@
 
         body {
             /* background-color: black; */
-        }
-       
-        h1 {
-            margin-top: 0;
+            margin-top:10%;
+            padding: 0;
+            overflow: auto;
         }
 
       .custom-toggler.navbar-toggler {

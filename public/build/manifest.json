@@ -1,11 +1,11 @@
 {
   "resources/css/areset.css": {
-    "file": "assets/areset-97a4d985.css",
+    "file": "assets/areset-04bfaa41.css",
     "isEntry": true,
     "src": "resources/css/areset.css"
   },
   "resources/css/custom.css": {
-    "file": "assets/custom-d6bb5c35.css",
+    "file": "assets/custom-9db2fca6.css",
     "isEntry": true,
     "src": "resources/css/custom.css"
   },
@@ -22,12 +22,12 @@
     "src": "resources/js/app.js"
   },
   "resources/js/custom.js": {
-    "file": "assets/custom-51e388fd.js",
+    "file": "assets/custom-a19373e9.js",
     "isEntry": true,
     "src": "resources/js/custom.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-edede05e.css",
+    "file": "assets/app-005c478a.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

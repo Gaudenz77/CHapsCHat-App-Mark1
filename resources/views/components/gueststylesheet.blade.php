@@ -1,7 +1,4 @@
 <style>
-    body {    
-        overflow: auto;
-    }
 
     @media (max-width: 480px) {
         .loginMain {
@@ -81,17 +78,17 @@
         }
 
         .span1 {
-            height: 13.5vh;
+            height: 10.3vh;
         }
 
         body.dark-mode .span1 {
-            height: 13.5vh;
+            height: 10.3vh;
         }
     }
 
     /* LANDSCAPE/TABLET MEDIA QUERIES START */
 
-    @media (min-width: 481px) and (max-width: 900px) and (orientation: landscape) {
+    @media (max-width: 800px) and (orientation: landscape) {
 
         /* CSS rules for mobile landscape mode */
         .registerMain {
@@ -102,7 +99,7 @@
         .span1 {
             color: #ebebeb;
             background-color: #ffffff;
-            height: 25vh;
+            height: 11vh;
         }
 
         body.dark-mode .span1 {
@@ -115,7 +112,7 @@
 
     /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
-    @media (min-width: 850px)  and (orientation: landscape) {
+    @media (min-width: 800px)  and (orientation: landscape) {
 
         .welcomeMain {
             margin-top: 7rem;
@@ -159,14 +156,16 @@
 
         .span1 {
             color: #ebebeb;
-            background-color: #ffffff;
-            height: 10vh;
+            background-color: #091540;
+            height: 10.3vh;
         }
 
         body.dark-mode .span1 {
+
+            color: #ebebeb;
+            background-color: #ffffff;
             color: #333;
-            background-color: #091540;
-            height: 10vh;
+            
         }
     }
 
@@ -225,7 +224,7 @@
     }
 
     .footerOwn {
-        height: 10.3vh;
+        height: 11vh;
     }
 
     .custom-toggler.navbar-toggler {

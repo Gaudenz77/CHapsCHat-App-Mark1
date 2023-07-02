@@ -1,8 +1,6 @@
 // Body
 /* $body-bg: #f8fafc; */
-
-
-
+    
 /* original */
 /* $blue: #0d6efd;
 $gray-600: #6c757d;
@@ -45,9 +43,7 @@ $custom: (
     "antiflash-white":$antiflash-white
 );
 
-
 $btn-close-color:rgb(232, 29, 29);
-
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
@@ -58,11 +54,20 @@ $navbar-light-icon-color:black;
 $form-check-input-checked-color:yellow;
 $form-check-input-checked-bg-color: blue;
 
-
 /* $input-placeholder-color: red; */
 
-
 $form-check-input-checked-bg-color:#333;
+
+/* Change mediau-query-gridpoints manually */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 810px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
 
 
 

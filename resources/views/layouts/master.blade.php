@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    @if (Auth::check())
+{{--     @if (Auth::check())
         <meta name="user" content="{{ Auth::user() }}">
-    @endif
+    @endif --}}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> --}}
@@ -54,23 +54,13 @@
     @include('components.gueststylesheet')
 
     <style>
- 
+
         body {
+            margin-top:10%;
             /* position: relative; */
             /* margin-top: -25px; */
             
             overflow: auto;
-        }
-
-        h1 {
-            margin-top: 0;
-        }
-   
-
-        header {
-            position: absolute;
-            top: 0;
-            right: 0;
         }
 
         /* toggle container */
@@ -153,7 +143,7 @@
                 <p class="footerBtnTextStart">Footer?</p>
             </button>
             <span id="footerContent" class="span1 fixed-bottom ps-2"><a href="{{ url('/about') }}"
-                    class="nav-item mt-2 ms-0 px-2 ps-0 py-0" style="color:#ffc107;"><b class="">Dare To Meet
+                    class="nav-item mt-2 ms-0 px-2 ps-0 py-0" style="color:#ffc107; text-decoration:none"><b class="">Dare To Meet
                         Me?</b></a><br><b style="color:  blue;">&copy; {{ date('d/m/Y') }} <a class="small"
                         style="color:chartreuse" href="{{ url('/impressum') }}"><br>Legal Notice</a></span>
 
@@ -164,6 +154,7 @@
     {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
 
     <script>
+        
         // Scroll top
         function scrollToTop() {
         window.scrollTo({
