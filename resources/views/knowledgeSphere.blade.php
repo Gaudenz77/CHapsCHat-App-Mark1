@@ -39,6 +39,7 @@
                                          <li>Fill in content as you wish (text only atm).</li>
                                          <li>Send your record to your personal library by pressing the disc.</li>
                                          <li>You can edit and delete all your records anytime.</li>
+                                         <li><strong>Both, the new entry and edit inputs take HTML tags!</strong></li>
                                      </ol>
                                  </div>">
                 </i>

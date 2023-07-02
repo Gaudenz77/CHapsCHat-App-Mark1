@@ -17,7 +17,7 @@
                         <input
                             type="text"
                             class="form-control formOwnOne"
-                            placeholder="Title"
+                            placeholder="Title/Topic"
                             aria-describedby="basic-addon1"
                             name="topic"
                             id="topic"

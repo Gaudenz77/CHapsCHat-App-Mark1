@@ -10,7 +10,7 @@
                         data-bs-toggle="tooltip"
                         data-bs-placement="top"
                         data-bs-html="true"
-                        title="Select<br>a <br>title"
+                        title="Select<br>your title"
                     ></i
                 ></span>
                 <input
@@ -29,11 +29,11 @@
                 <span class="input-group-text formOwnOne">
                     <i
                         class="fa-solid fa-book-bookmark formIcons"
-                        data-bs-custom-class="custom-tooltip"
+                        data-bs-custom-class="custom-tooltip pt-3"
                         data-bs-toggle="tooltip"
                         data-bs-placement="top"
                         data-bs-html="true"
-                        title="Select <br> a <br> topic"
+                        title="Select  <br>your topic"
                     ></i
                 ></span>
                 <select
@@ -48,7 +48,7 @@
                     <option
                         data-content="<i class='fa-solid fa-heart' aria-hidden='true'></i>"
                     >
-                        Option3
+                    <i class='fa-solid fa-heart' aria-hidden='true'></i>Varoious/Awkward
                     </option>
                 </select>
             </div>
@@ -61,7 +61,8 @@
                         data-bs-custom-class="custom-tooltip"
                         data-bs-toggle="tooltip"
                         data-bs-placement="top"
-                        title="Enter your content"
+                        data-bs-html="true"
+                        title="Enter <br>your content"
                     ></i
                 ></span>
                 <textarea
@@ -103,7 +104,7 @@
 
         <div
             v-if="successMessage"
-            class="alert alert-success alert-dismissible fade show"
+            class="py-2 alert alert-warning alert-dismissible fade show"
         >
             {{ successMessage }}
             <button

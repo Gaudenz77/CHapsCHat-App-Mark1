@@ -76,7 +76,7 @@
         <table class="table table-hover table-striped rounded ownTable">
         <thead>
             <tr>
-                <th scope="col" style="width: 25%">Topic</th>
+                <th scope="col" style="width: 25%">Title/Topic</th>
                 <th scope="col">Content</th>
                 <th
                     scope="col"
