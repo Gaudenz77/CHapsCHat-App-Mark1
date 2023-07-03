@@ -11,7 +11,7 @@
     <section class="">
         <div class="container-fluid" style="display:inline-block;">
             <div class="row">
-                <div class="chatCol col-md-3 px-3 pt-1 pb-0 pb-md-5">
+                <div class="chatCol col-md-3 px-3 py-3 pb-0 pb-md-5">
                     <div class="mt-2 p-2 pt-4">
                         <h5 class="mb-0">WELCOME to the MESSAGECORNER 
                             <a tabindex="0"  
@@ -55,7 +55,7 @@
                 </p>
             </div>
 
-            <div class="editorCol col-md-5 px-1 px-md-3 pt-1 pb-5" id="editorColumn">
+            <div class="editorCol col-md-5 px-1 px-md-3 py-3 pb-5" id="editorColumn">
                     <div class="mt-2 p-2 pt-4">
                         <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! 
                             <a tabindex="0"   
@@ -82,7 +82,7 @@
                     </div>
                     <div class="container">
                         <div class="row justify-content-between">
-                        <div class="col-4 ps-0 d-flex align-items-end">
+                        <div class="col-4 px-3 d-flex align-items-end">
                             <div class="form-check form-switch">
                                 <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch" id="fontColorSwitch">
                                 <label class="form-check-label" for="flexSwitchCheckDefault"></label>
@@ -99,29 +99,33 @@
                                 <i class="fa-solid fa-circle-info infoToggle"></i></a>
                             </div>
                         </div>
-                    <div class="col-4 d-flex justify-content-end pe-0">
-                        <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
-                            <button id="undoButton" type="button" class="btn btn-undo">
-                                <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
-                            </button>
-                            <button id="redoButton" type="button" class="btn btn-redo">
-                                <i class="fa-solid fa-arrow-rotate-right fa-2x"></i>
-                            </button>
+                       
+                        <div class="col-4 d-flex justify-content-center">
+                            <div class="mt-3 pb-0">
+                                <button class="btn btn-sm btn-info" id="formatButton">Prettify!</button>
+                            </div>
+                        </div>
+                        
+                        <div class="col-4 d-flex pe-3 justify-content-end">
+                            <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
+                                <button id="undoButton" type="button" class="btn btn-undo">
+                                    <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
+                                </button>
+                                <button id="redoButton" type="button" class="btn btn-redo">
+                                    <i class="fa-solid fa-arrow-rotate-right fa-2x"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div id="editor" style="height:66vh;"></div>
+                <div id="editor" style="height:65vh;"></div>
                     </div>
-                <div class="text-end p-3 pt-1 pe-2">
-                    <button class="btn btn-sm btn-info" id="formatButton">Prettify!</button>
-                </div>
             </div>
 
-            <div class="previewCol col-md-4 px-1 px-md-3 pt-1 pb-5" id="previewColumn">
+            <div class="previewCol col-md-4 px-1 px-md-3 py-3 pb-5" id="previewColumn">
                 <div class="mt-2 p-2 pt-4">
                     <h5 class="mb-4 pb-4">YouR ouTpuT!</h5>
-                    <iframe id="preview" style="height:66vh;"></iframe>
+                    <iframe id="preview" style="height:6vh;"></iframe>
                 </div>
             </div>
         </div> 
@@ -183,110 +187,111 @@
                 }
             });
 
-            var editorValue = localStorage.getItem('editorValue');
-            var editor = monaco.editor.create(document.getElementById('editor'), {
-                value: editorValue ||
-                    '<!DOCTYPE html>\n<html>\n<head>\n  <meta charset="UTF-8">\n  <title>My Test Page</title>\n<style>body{color:white;}</style>\n</head>\n<body> \n</body>\n</html>',
-                language: 'html',
-                theme: 'dark-theme',
-                automaticLayout: true,
-                suggestOnTriggerCharacters: true,
-                autoClosingBrackets: true,
-                autoClosingQuotes: true,
-                autoIndent: true,
-                snippets: [{
-                    label: 'HTML5 Template',
-                    body: '<!DOCTYPE html>\n<html>\n<head>\n  <meta charset="UTF-8">\n  <title>${1:Document Title}</title>\n</head>\n<body>\n ${2}\n</body>\n</html>',
-                    description: 'HTML5 Template'
-                }]
-            });
-
-            function formatCode() {
-                var value = editor.getValue();
-                var formattedCode = prettier.format(value, {
-                parser: 'html',
-                plugins: prettierPlugins
-                });
-                editor.setValue(formattedCode);
-            }
-
-            var formatButton = document.getElementById('formatButton');
-            formatButton.addEventListener('click', formatCode);
-
-            var prettierPlugins = [window.prettierPlugins.html];
-
-            function updateFontColor() {
-                var fontColorSwitch = document.getElementById('fontColorSwitch');
-                var newValue = fontColorSwitch.checked ? 'white' : 'black';
-                var currentValue = editor.getValue();
-                var updatedValue = currentValue.replace(/<style>body{color:(.*?);}<\/style>/, function(match,
-                    color) {
-                    return '<style>body{color:' + newValue + ';}</style>';
+                var editorValue = localStorage.getItem('editorValue');
+                var editor = monaco.editor.create(document.getElementById('editor'), {
+                    value: editorValue ||
+                        '<!DOCTYPE html>\n<html>\n<head>\n  <meta charset="UTF-8">\n  <title>My Test Page</title>\n<style>body{color:white;}</style>\n</head>\n<body> \n</body>\n</html>',
+                    language: 'html',
+                    theme: 'dark-theme',
+                    automaticLayout: true,
+                    suggestOnTriggerCharacters: true,
+                    autoClosingBrackets: true,
+                    autoClosingQuotes: true,
+                    autoIndent: true,
+                    snippets: [{
+                        label: 'HTML5 Template',
+                        body: '<!DOCTYPE html>\n<html>\n<head>\n  <meta charset="UTF-8">\n  <title>${1:Document Title}</title>\n</head>\n<body>\n ${2}\n</body>\n</html>',
+                        description: 'HTML5 Template'
+                    }]
                 });
 
-                editor.setValue(updatedValue);
-                saveEditorValue();
-            }
+                function formatCode() {
+  var value = editor.getValue();
+  var formattedCode = prettier.format(value, {
+    parser: 'html',
+    plugins: prettierPlugins
+  });
+  editor.setValue(formattedCode);
+}
 
-            var fontColorSwitch = document.getElementById('fontColorSwitch');
-            fontColorSwitch.addEventListener('change', updateFontColor);
+var formatButton = document.getElementById('formatButton');
+formatButton.addEventListener('click', formatCode);
 
-            // Update the styles for IntelliSense items
-            const styles = document.createElement('style');
-            styles.textContent = `
-      .monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .monaco-icon-label-entry .monaco-icon-name-container .monaco-icon-label .monaco-icon-name {
-        white-space: normal !important;
-        line-height: normal !important;
-      }
-    `;
-            document.head.appendChild(styles);
+var prettierPlugins = [window.prettierPlugins.html];
 
-            // Update preview on editor change
-            function updatePreview() {
-                var preview = document.getElementById('preview');
-                var previewDoc = preview.contentDocument || preview.contentWindow.document;
-                previewDoc.open();
-                previewDoc.write(editor.getValue());
-                previewDoc.close();
-            }
+function updateFontColor() {
+  var fontColorSwitch = document.getElementById('fontColorSwitch');
+  var newValue = fontColorSwitch.checked ? 'white' : 'black';
+  var currentValue = editor.getValue();
+  var updatedValue = currentValue.replace(/<style>([\s\S]*?)<\/style>/, '');
 
-            // Save editor value to local storage and update preview
-            function saveEditorValue() {
-                var value = editor.getValue();
-                localStorage.setItem('editorValue', value);
+  if (fontColorSwitch.checked) {
+    updatedValue += '<style>body{color:' + newValue + ';}</style>';
+  }
+
+  editor.setValue(updatedValue);
+  saveEditorValue();
+}
+
+var fontColorSwitch = document.getElementById('fontColorSwitch');
+fontColorSwitch.addEventListener('change', updateFontColor);
+
+                // Update the styles for IntelliSense items
+                const styles = document.createElement('style');
+                styles.textContent = `
+        .monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .monaco-icon-label-entry .monaco-icon-name-container .monaco-icon-label .monaco-icon-name {
+            white-space: normal !important;
+            line-height: normal !important;
+        }
+        `;
+                document.head.appendChild(styles);
+
+                // Update preview on editor change
+                function updatePreview() {
+                    var preview = document.getElementById('preview');
+                    var previewDoc = preview.contentDocument || preview.contentWindow.document;
+                    previewDoc.open();
+                    previewDoc.write(editor.getValue());
+                    previewDoc.close();
+                }
+
+                // Save editor value to local storage and update preview
+                function saveEditorValue() {
+                    var value = editor.getValue();
+                    localStorage.setItem('editorValue', value);
+                    updatePreview();
+                }
+                // Save editor value to local storage and update preview
+                function saveEditorValue() {
+                    var value = editor.getValue();
+                    localStorage.setItem('editorValue', value);
+                    updatePreview();
+                }
+
+                // Event listener for editor content change
+                editor.onDidChangeModelContent(function(event) {
+                    saveEditorValue();
+                });
+
+                // Undo the last change
+                function undo() {
+                    editor.trigger('keyboard', 'undo', null);
+                }
+
+                // Redo the last undone change
+                function redo() {
+                    editor.trigger('keyboard', 'redo', null);
+                }
+
+                // Attach undo and redo functions to buttons or events
+                var undoButton = document.getElementById('undoButton');
+                undoButton.addEventListener('click', undo);
+
+                var redoButton = document.getElementById('redoButton');
+                redoButton.addEventListener('click', redo);
+
                 updatePreview();
-            }
-            // Save editor value to local storage and update preview
-            function saveEditorValue() {
-                var value = editor.getValue();
-                localStorage.setItem('editorValue', value);
-                updatePreview();
-            }
-
-            // Event listener for editor content change
-            editor.onDidChangeModelContent(function(event) {
-                saveEditorValue();
             });
-
-            // Undo the last change
-            function undo() {
-                editor.trigger('keyboard', 'undo', null);
-            }
-
-            // Redo the last undone change
-            function redo() {
-                editor.trigger('keyboard', 'redo', null);
-            }
-
-            // Attach undo and redo functions to buttons or events
-            var undoButton = document.getElementById('undoButton');
-            undoButton.addEventListener('click', undo);
-
-            var redoButton = document.getElementById('redoButton');
-            redoButton.addEventListener('click', redo);
-
-            updatePreview();
-        });
 
         function toggleEditor() {
             var column = document.getElementById('editorColumn');

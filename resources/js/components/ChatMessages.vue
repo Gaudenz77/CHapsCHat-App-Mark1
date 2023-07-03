@@ -15,14 +15,14 @@
         </div>
         <div class="d-flex align-items-center justify-content-between">
           <div class="col-auto">
-            <figcaption class="blockquote-footer pb-0 pt-3 ps-4 px-2 my-1 me-1">
+            <figcaption class="blockquote-footer pb-0 pt-0 ps-4 px-2 my-1 me-1">
               {{ message.user.name }}
             </figcaption>
           </div>
           <div class="col-auto">
             <button v-if="message.user.id === authUserId" class="btn btn-circleChat text-sm me-2 text-center" @click="deleteMessage(message.id)">
-              <i class="fa-solid fa-trash-can fa-1x deletIcon"></i>
-              <small>Delete</small>
+              <i class="fa-solid fa-trash-can fa-2x deletIcon"></i>
+              <small></small>
             </button>
           </div>
         </div>

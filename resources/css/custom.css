@@ -915,7 +915,7 @@ body.dark-mode .deletIcon {
 }
 
 .scrollableChat {
-    height: 500px;
+    height: 450px;
     overflow: auto;
 }
 
