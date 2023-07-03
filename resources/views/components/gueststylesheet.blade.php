@@ -275,6 +275,14 @@
         --bs-popover-body-color:#ebebeb;
     }
 
+body {
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'IBM Plex Mono', monospace;
+    /* font-family: 'Lexend', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Special Elite', cursive; */
+}
+
 </style>
 <script>
 

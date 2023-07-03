@@ -10,7 +10,7 @@
     <div class="container mt-3">
       <div class="row justify-content-center align-items-center" style="">
         <div class="col-sm-12 col-md-8 col-lg-8 p-3 rounded order-2 mx-5 px-1 px-md-5 pb-5 knowledgeTable">
-          <h2 class="mx-3 mx-md-0  pt-5">{{ Auth::user()->name }}'s Library</h2>
+          <h2 class="mx-3 mx-md-0  pt-5"><strong class="text-warning">{{ Auth::user()->name }}'s</strong><small> Library</small></h2>
           <my-library-content></my-library-content>
         </div>
         <div class="col-sm-5 col-md-10 col-lg-6 circleKnowledgeForm order-1 text-center mb-sm-0 mb-md-0 mb-lg-4 mb-0 mt-2 pt-4 pb-3 animate__animated animate__zoomInDown" id="formContainer" style="display: none;">
@@ -23,26 +23,27 @@
                 </text>
               </svg>
               <div class="row justify-content-center align-items-center">
-                <i class="fa-solid fa-circle-info fa-4x infoKnowledge animate__animated animate__heartBeat animate__delay-5s" 
-                data-bs-toggle="popover" 
-                data-bs-placement="right" 
-                data-bs-html="true" 
-                data-bs-title="
-                                 <div class='popKnowInfoHead'>How To Use Your Library
-                                       
-                                     <i class='animate__animated animate__flip fa-solid fa-face-laugh-wink ps-2'></i>
-                                 </div>" 
+                
+                  <a tabindex="0"  
+                  data-bs-toggle="popover"
+                  data-bs-custom-class="popoverInfoOne"
+                  data-bs-trigger="focus" 
+                  data-bs-html="true" 
+                  data-bs-title="
+                  <div class=''>How To Use Your Library  
+                   <i class='animate__animated animate__flip fa-solid fa-face-laugh-wink ps-2'></i>
+                  </div>" 
                 data-bs-content="
-                                 <div class='popKnowInfoBody'>
-                                     <ol>
-                                         <li>Give your entry a meaningful title (# included).</li>
-                                         <li>Fill in content as you wish (text only atm).</li>
-                                         <li>Send your record to your personal library by pressing the disc.</li>
-                                         <li>You can edit and delete all your records anytime.</li>
-                                         <li><strong>Both, the new entry and edit inputs take HTML tags!</strong></li>
-                                     </ol>
-                                 </div>">
-                </i>
+                <div class=''>
+                    <ol>
+                        <li>Give your entry a meaningful title (# included).</li>
+                        <li>Fill in content as you wish (text only atm).</li>
+                        <li>Send your record to your personal library by pressing the disc.</li>
+                        <li>You can edit and delete all your records anytime.</li>
+                        <li><strong>Both, the new entry and edit inputs take HTML tags!</strong></li>
+                    </ol>
+                </div>">
+                <i class="fa-solid fa-circle-info fa-4x infoKnowledge animate__animated animate__heartBeat animate__delay-5s"></i></a>
               </div>
               <p class="hintKnowledge my-3">Arm yourself, with knowledge!</p>
             </div>

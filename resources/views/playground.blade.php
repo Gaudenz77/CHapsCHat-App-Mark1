@@ -13,7 +13,7 @@
     <div class="container-fluid" style="display:inline-block;">
         <div class="row">
 
-            <div class="chatCol col-md-3 px-3 pt-1 pb-5">
+            <div class="chatCol col-md-3 px-3 pt-1 pb-0 pb-md-5">
                 <div class="mt-2 p-2 pt-4">
                     <h5 class="mb-0">WELCOME to the MESSAGECORNER 
                         <a tabindex="0"  
@@ -21,11 +21,11 @@
                         data-bs-custom-class="popoverInfoOne"
                         data-bs-trigger="focus" 
                         data-bs-placement="right" 
-                        data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}} 
+                        data-bs-html="true"
                         data-bs-title="
-                        <div class='lead {{-- animate__animated animate__zoomInUp --}}'><b>How To Message</b></div>" 
+                        <div class='lead animate__animated animate__zoomInUp'><b>How To Message</b></div>" 
                         data-bs-content='
-                        <div class=" {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
+                        <div class="animate__animated animate__zoomInUp animate__delay-1s">
                             <ol>
                                 <li>Write your message below in the form-field.</li>
                                 <li>Press the paperplane-icon to send your message.</li>
@@ -37,16 +37,8 @@
                 
                 <h1 class="display-6 mt-3 my-0 playgLandsTitle animate__animated animate__rubberBand">
                     
-                    <strong>{{ Auth::user()->name }}</strong>
+                    <strong class="text-warning">{{ Auth::user()->name }}'s </strong><small>Chatspace</small>
                 </h1>
-
-                <div class="d-sm-block d-md-none text-center p-3 pb-0">
-                    <div class="btn-group mobileGoner" role="group" aria-label="Basic example">
-                        <button class="btn btn-sm btn-warning rounded" onclick="toggleEditor()">Hide editor</button>
-                        <button class="btn btn-sm  btn-dark" onclick="togglePreview()">Hide preview</button>
-                    </div>
-                </div>
-                
 
                 <div class="chatFormField my-4 px-0">
                     <chat-form :user="{{ Auth::user() }}"></chat-form>
@@ -56,11 +48,18 @@
                         <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
                     </div>
 
-                <p class="test text-center m-2 mb-5 pt-4 pb-3">Messageservice brought to you by <a href="https://pusher.com/">Pusher&copy;</a>
+                    <div class="d-sm-block d-md-none text-center p-3 pb-0">
+                        <div class="btn-group mobileGoner" role="group" aria-label="Basic example">
+                            <button class="btn btn-sm btn-warning rounded" onclick="toggleEditor()"><i class="fa-solid fa-power-off"></i> Editor</button>
+                            <button class="btn btn-sm  btn-dark" onclick="togglePreview()"><i class="fa-solid fa-power-off"></i> Preview</button>
+                        </div>
+                    </div>    
+
+                <p class="text-end m-2 mb-5 pt-2 pb-3"><small>Messageservice brought to you by </small><a href="https://pusher.com/">Pusher&copy;</a>
                 </p>
             </div>
 
-            <div class="editorCol col-md-5 px-3 pt-1 pb-5" id="editorColumn">
+            <div class="editorCol col-md-5 px-1 px-md-3 pt-1 pb-5" id="editorColumn">
                 <div class="mt-2 p-2 pt-4">
                 <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! 
                     
@@ -71,12 +70,11 @@
                     data-bs-placement="right" 
                     data-bs-html="true" 
                     data-bs-title="
-                    <div class='lead {{-- animate__animated animate__zoomInUp --}}'>
+                    <div class='lead animate__animated animate__zoomInUp'>
                     <strong>Code-Space:<br>Here you can code to yours delight!</strong>
-                    {{-- <a href='#' class='close' data-bs-dismiss='alert'>&times;</a> --}}
-                    {{-- <button type='button' class='btn-close' data-bs-dismiss='popover' aria-label='Close'></button> --}}</div>" 
+                   </div>" 
                     data-bs-content='
-                    <div class="text-dark {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
+                    <div class="text-dark animate__animated animate__zoomInUp animate__delay-1s">
                         
                         <ol>
                             <li>Copy/Paste codes from messenger into editor:<br> Instant testing</li>
@@ -107,52 +105,36 @@
                     </div>
                     <div class="col-4 d-flex justify-content-end pe-0">
                         <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
-                        <button id="undoButton" type="button" class="btn btn-undo">
-                            <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
-                        </button>
-                        <button id="redoButton" type="button" class="btn btn-redo">
-                            <i class="fa-solid fa-arrow-rotate-right fa-2x"></i>
-                        </button>
+                            <button id="undoButton" type="button" class="btn btn-undo">
+                                <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
+                            </button>
+                            <button id="redoButton" type="button" class="btn btn-redo">
+                                <i class="fa-solid fa-arrow-rotate-right fa-2x"></i>
+                            </button>
                         </div>
                     </div>
-                    </div>
                 </div>
-                <div id="editor" style="height:72vh;"></div>
+                </div>
+
+                <div id="editor" style="height:66vh;"></div>
+                </div>
+                <div class="text-end p-3 pt-1 pe-2">
+                    <button class="btn btn-sm btn-info" id="formatButton">Prettify!</button>
                 </div>
             </div>
 
-            <div class="previewCol col-md-4 px-3 pt-1 pb-5" id="previewColumn">
+            <div class="previewCol col-md-4 px-1 px-md-3 pt-1 pb-5" id="previewColumn">
                 <div class="mt-2 p-2 pt-4">
-                <h5 class="mb-3 pb-3">YouR ouTpuT!</h5>
-                <iframe id="preview" style="height:75vh;"></iframe>
+                    <h5 class="mb-4 pb-4">YouR ouTpuT!</h5>
+                    <iframe id="preview" style="height:66vh;"></iframe>
                 </div>
             </div>
-
         </div>
-        {{-- <div class="row justify-content-center mt-5">
-            <div class="col-sm-3 card1 mt-3 p-4">
-                <div class="logiInfo mt-2 p-2">
-    @if (Auth::check())
-        
-                    <h3 class="text-center">Welcome, {{ Auth::user()->name }}! <br>You are logged in. </h3>
-        <div class="text-center">
-        <button id="showButton" class="btn btn-primary">Show Paint Sphere</button>
-        <div class="col" id="paintsphere" style="position:relative; left:0;  margin-left:-150%; margin-right:100px;">
-            <div class="row d-flex align-items-start">
-            <a href="#" class="btn-close" aria-label="Close" id="hideButton"></a>
-            </div>
-            <paint-app></paint-app>
-        </div>
-        </div> @else <p>
-        <a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.
-        </p> @endif
     </div>
-    </div>
-    </div> --}} </div>
     </section>
 
     @endauth
-
+    <script src="https://unpkg.com/prettier/parser-html.js"></script>
     <script src="https://unpkg.com/prettier/standalone.js"></script>
     <script src="https://unpkg.com/monaco-editor@0.37.0/min/vs/loader.js"></script>
     <script>
@@ -226,6 +208,20 @@
                 }]
             });
 
+            function formatCode() {
+                var value = editor.getValue();
+                var formattedCode = prettier.format(value, {
+                parser: 'html',
+                plugins: prettierPlugins
+                });
+                editor.setValue(formattedCode);
+            }
+
+            var formatButton = document.getElementById('formatButton');
+            formatButton.addEventListener('click', formatCode);
+
+            var prettierPlugins = [window.prettierPlugins.html];
+
             function updateFontColor() {
                 var fontColorSwitch = document.getElementById('fontColorSwitch');
                 var newValue = fontColorSwitch.checked ? 'white' : 'black';
@@ -296,43 +292,8 @@
             var redoButton = document.getElementById('redoButton');
             redoButton.addEventListener('click', redo);
 
-
             updatePreview();
         });
-
-        // FUNCTIONAL HTMML ONLY END --------------------------------
-
-        // MS PAINT START  --------------------------------
-
-        /*   document.addEventListener('DOMContentLoaded', () => {
-          const showButton = document.getElementById('showButton');
-          const hideButton = document.getElementById('hideButton');
-          const paintsphereDiv = document.getElementById('paintsphere');
-
-          showButton.addEventListener('click', () => {
-            paintsphereDiv.style.display = 'inline-block';
-          });
-
-          hideButton.addEventListener('click', () => {
-            paintsphereDiv.style.display = 'none';
-          });
-
-          // Optional: Hide the div by default
-          paintsphereDiv.style.display = 'none';
-        }); */
-
-
-        // Check if the animation has already played during the current session
-/*         const hasAnimationPlayed = sessionStorage.getItem('animationPlayed');
-
-        if (!hasAnimationPlayed) {
-            // Add the animation class to the element
-            const usernameElement = document.getElementById('username');
-            usernameElement.classList.add('animate__rubberBand');
-
-            // Set the flag indicating that the animation has played
-            sessionStorage.setItem('animationPlayed', true);
-        } */
 
         function toggleEditor() {
             var column = document.getElementById('editorColumn');
@@ -351,8 +312,52 @@
             }
         }
 
-
-        
     </script>
+
+{{-- ROW FOR PAIN MS TBC ----------------------------------------------------------------START--}}
+
+{{-- // FUNCTIONAL HTMML ONLY END --------------------------------
+
+// MS PAINT START  --------------------------------
+
+/*   document.addEventListener('DOMContentLoaded', () => {
+  const showButton = document.getElementById('showButton');
+  const hideButton = document.getElementById('hideButton');
+  const paintsphereDiv = document.getElementById('paintsphere');
+
+  showButton.addEventListener('click', () => {
+    paintsphereDiv.style.display = 'inline-block';
+  });
+
+  hideButton.addEventListener('click', () => {
+    paintsphereDiv.style.display = 'none';
+  });
+
+  // Optional: Hide the div by default
+  paintsphereDiv.style.display = 'none';
+}); */ --}}
+
+{{-- <div class="row justify-content-center mt-5">
+<div class="col-sm-3 card1 mt-3 p-4">
+    <div class="logiInfo mt-2 p-2">
+@if (Auth::check())
+
+        <h3 class="text-center">Welcome, {{ Auth::user()->name }}! <br>You are logged in. </h3>
+<div class="text-center">
+<button id="showButton" class="btn btn-primary">Show Paint Sphere</button>
+<div class="col" id="paintsphere" style="position:relative; left:0;  margin-left:-150%; margin-right:100px;">
+<div class="row d-flex align-items-start">
+<a href="#" class="btn-close" aria-label="Close" id="hideButton"></a>
+</div>
+<paint-app></paint-app>
+</div>
+</div> @else <p>
+<a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a> to post a new topic.
+</p> @endif
+</div>
+</div>
+</div> --}} 
+
+{{-- ROW FOR PAIN MS TBC ----------------------------------------------------------------START--}}
 
 @endsection

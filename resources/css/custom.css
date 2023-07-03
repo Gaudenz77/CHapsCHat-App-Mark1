@@ -6,7 +6,7 @@ body {
     /* margin-bottom:8vh; */
     /* font-family: 'Poppins', sans-serif; */
     /* font-family: 'IBM Plex Mono', monospace; */
-    font-family: 'Lexend', sans-serif;
+    /* font-family: 'Lexend', sans-serif; */
     /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Special Elite', cursive; */
 }
@@ -1735,64 +1735,7 @@ body.dark-mode .iconshooter {
 }
 
 /*--- CUSTOM POPOVER  ---------------*/
-.popPlayHead {
-    background-color: #ffff00;
-    color: #333;
-    margin: -2rem;
-    margin-right: -2rem;
-    margin-left: -2rem;
-    padding: 1rem 1rem 2rem 2rem;
-    border-top-left-radius: 1.5rem !important;
-    border-top-right-radius: 1.5rem !important;
-    margin-left: -1rem;
-    margin-right: -1rem;
-}
 
-body.dark-mode .popPlayHead {
-    background-color: #2d5c86;
-    /* color:#333; */
-    color: white;
-}
-.popPlayBody {
-    background-color: #2d5c86;
-    color: white;
-    padding: 1rem;
-    margin: -1rem -1rem -2rem;
-    margin-bottom: -2rem;
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-    margin-bottom: -3rem;
-}
-
-body.dark-mode .popPlayBody {
-    background-color: #ffff00;
-    color: #333;
-}
-
-
-.popKnowInfoHead {
-    background-color: #333;
-    color: #fff !important;
-    margin: -2rem;
-    margin-right: -2rem;
-    margin-left: -2rem;
-    padding: 1rem 1rem 2rem 2rem;
-    border-top-left-radius: 1.5rem !important;
-    border-top-right-radius: 1.5rem !important;
-    margin-left: -1rem;
-    margin-right: -1rem;
-}
-
-.popKnowInfoBody {
-    background-color: #ffffff;
-    color: #333;
-    padding: 1rem;
-    margin: -1rem -1rem -2rem;
-    margin-bottom: -2rem;
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-    margin-bottom: -3rem;
-  }
 
 .switch {
     position: relative;
