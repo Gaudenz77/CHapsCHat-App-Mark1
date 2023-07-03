@@ -15,15 +15,20 @@
 
             <div class="chatCol col-md-3 px-3 pt-1 pb-5">
                 <div class="mt-2 p-2 pt-4">
-                <h5 class="mb-0">WELCOME to the MESSAGECORNER <i class="fa-solid fa-circle-info" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}} data-bs-title="
-                            <div class='popPlayHead {{-- animate__animated animate__zoomInUp --}}'>How To Message</div>" data-bs-content='
-                            <div class="popPlayBody {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
-                                <ol>
-                                    <li>Write your message below in the form-field.</li>
-                                    <li>Press the paperplane-icon to send your message.</li>
-                                    <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
-                                </ol>
-                            </div>'>
+                <h5 class="mb-0">WELCOME to the MESSAGECORNER <i class="fa-solid fa-circle-info" 
+                    data-bs-toggle="popover" 
+                    data-bs-placement="right" 
+                    data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}} 
+                    data-bs-title="
+                    <div class='popKnowInfoHead lead {{-- animate__animated animate__zoomInUp --}}'><strong>How To Message</strong></div>" 
+                    data-bs-content='
+                    <div class="popKnowInfoBody {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
+                        <ol>
+                            <li>Write your message below in the form-field.</li>
+                            <li>Press the paperplane-icon to send your message.</li>
+                            <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
+                        </ol>
+                    </div>'>
                     </i>
                 </h5>
                 
@@ -45,23 +50,42 @@
 
             <div class="editorCol col-md-5 px-3 pt-1 pb-5">
                 <div class="mt-2 p-2 pt-4">
-                <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! <i class="fa-solid fa-circle-info" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-title="
-                            <div class='popPlayHead {{-- animate__animated animate__zoomInUp --}}'>Code-Space </div>" data-bs-content='
-                            <div class="popPlayHead {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
-                                <h5 class="popover-body lead">Here you can code to yours delight!</h5>
-                            </div>'>
+                <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! 
+                    <i class="fa-solid fa-circle-info" 
+                    data-bs-toggle="popover" 
+                    data-bs-placement="right" 
+                    data-bs-html="true" 
+                    data-bs-title="
+                    <div class='popKnowInfoHead lead {{-- animate__animated animate__zoomInUp --}}'>
+                    <strong>Code-Space:<br>Here you can code to yours delight!</strong>
+                    {{-- <a href='#' class='close' data-bs-dismiss='alert'>&times;</a> --}}
+                    {{-- <button type='button' class='btn-close' data-bs-dismiss='popover' aria-label='Close'></button> --}}</div>" 
+                    data-bs-content='
+                    <div class="popKnowInfoBody text-dark {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
+                        
+                        <ol>
+                            <li>Copy/Paste codes from messenger into editor:<br> Instant testing</li>
+                            <li>Inline CSS for styling<br> (Seperate files tbc)</li>
+                            <li>In-Code Javascript for<br> function/coding (Seperate files tbc)</li>
+                        </ol>
+                    </div>'>
                     </i>
                 </h5>
                 <div class="container">
                     <div class="row justify-content-between">
                     <div class="col-4 ps-0 d-flex align-items-end">
                         <div class="form-check form-switch">
-                        <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch" id="fontColorSwitch">
-                        <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                        <i class="fa-solid fa-circle-info infoToggle" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-title="
-                                            <div class='popPlayHead'>Change main font color</div>" data-bs-content="
-                                            <div class='popPlayBody'>Basic font colort to suit page dark-mode switch</div>" style="font-size:1rem;">
-                        </i>
+                            <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch" id="fontColorSwitch">
+                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                            <i class="fa-solid fa-circle-info infoToggle" 
+                            data-bs-toggle="popover" 
+                            data-bs-placement="right" 
+                            data-bs-html="true" 
+                            data-bs-title="
+                            <div class='popKnowInfoHead'>Change main font color</div>" 
+                            data-bs-content="
+                            <div class='popKnowInfoBody'>Change font-color to fit with page dark/bright-mode</div>" style="font-size:1rem;">
+                            </i>
                         </div>
                     </div>
                     <div class="col-4 d-flex justify-content-end pe-0">
@@ -112,6 +136,7 @@
 
     @endauth
 
+    <script src="https://unpkg.com/prettier/standalone.js"></script>
     <script src="https://unpkg.com/monaco-editor@0.37.0/min/vs/loader.js"></script>
     <script>
         require.config({
@@ -291,6 +316,22 @@
             // Set the flag indicating that the animation has played
             sessionStorage.setItem('animationPlayed', true);
         } */
+
+/*         $(function() {
+    $('[data-bs-toggle="popover"]').popover({
+        html: true,
+        sanitize: false, // Disable HTML sanitization to allow the close button to work
+
+        // Add event listener to close button
+        template: '<div class="popover">' +
+            '<div class="popover-header">' +
+            '<button type="button" class="btn-close" data-bs-dismiss="popover" aria-label="Close"></button>' +
+            '</div>' +
+            '<div class="popover-body"></div>' +
+            '</div>',
+    });
+}); */
+
     </script>
 
 @endsection

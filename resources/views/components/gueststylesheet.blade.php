@@ -1,6 +1,6 @@
 <style>
 
-    @media (max-width: 480px) {
+@media (max-width: 480px) {
         .loginMain {
             margin-top: 15vh;
             margin-bottom: 11vh;
@@ -12,7 +12,7 @@
         }
 
         .welcomeMain {
-            margin-top: 6rem;
+            margin-top: 9rem;
             margin-bottom: 8.5rem;
         }
 
@@ -88,7 +88,7 @@
 
     /* LANDSCAPE/TABLET MEDIA QUERIES START */
 
-    @media (max-width: 800px) and (orientation: landscape) {
+    @media (max-width: 800px) and (orientation: landscape) 
 
         /* CSS rules for mobile landscape mode */
         .registerMain {
@@ -112,11 +112,13 @@
 
     /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
+    /* DESKTOP/TABLET MEDIA QUERIES START */
+
     @media (min-width: 800px)  and (orientation: landscape) {
 
         .welcomeMain {
-            margin-top: 7rem;
-            margin-bottom: 20rem;
+            margin-top: 9rem;
+            margin-bottom: 15rem;
         }
 
         .loginMain {
@@ -168,6 +170,9 @@
             
         }
     }
+
+    /* DESKTOP/TABLET MEDIA QUERIES END */
+
 
     .btn-auth {
         background-color: blue;

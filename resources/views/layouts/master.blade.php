@@ -178,11 +178,13 @@
         /* ENABLE TOOLTIP/POPOVER */
         $(function() {
             $('[data-bs-toggle="tooltip"]').tooltip();
+        });
+
+        $(function() {
             $('[data-bs-toggle="popover"]').popover({
                 html: true
             })
         });
-        
 
         /* FOOTER EASTEREGG */
         document.addEventListener("DOMContentLoaded", function() {

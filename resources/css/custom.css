@@ -79,6 +79,7 @@ body.dark-mode a {
 }
 
 /* SMALL MEDIA QUERIES START */
+
 @media (max-width: 480px) {
     .dropdown-menu {
         margin-left: 0;
@@ -148,8 +149,8 @@ body.dark-mode a {
     }
 
     .welcomeMain {
-        margin-top: 10rem;
-        margin-bottom: 20rem;
+        margin-top: 9rem;
+        margin-bottom: 8.5rem;
     }
 
     .triangleFix {
@@ -218,6 +219,7 @@ body.dark-mode a {
 
 /* MD MEDIULM LG LARGE MEDIA QUERIES START---------------------------------------------------------------- */
 /* Styles for medium and large devices */
+
 @media (min-width: 800px)  and (orientation: landscape) {
     .dropdown-menu {
         margin-left: -35px;
@@ -233,7 +235,8 @@ body.dark-mode a {
     }
 
     .welcomeMain {
-        margin-top: 15rem;
+        margin-top: 9rem;
+        margin-bottom: 15rem;
     }
 
     .triangleFix {
@@ -342,9 +345,7 @@ body.dark-mode a {
 
     .circleKnowledgeForm {
         position: relative;
-        /* width: 50% !important;
-        height: 50%; */
-        /* background-color:; */
+        width: 50%;
         border-radius: 50%;
         padding: 3rem 2rem 4rem 2rem;
         margin-top: 1rem;
@@ -367,6 +368,47 @@ body.dark-mode a {
 }
 
 /* INDIVIDUAL PAGES DETAILS START -------------------------------------------------------------------------------------- */
+
+/* WELCOME / INDEX */
+
+
+.overlay-container {
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .overlay:hover,
+  .overlay:focus {
+    opacity: 1;
+    outline: none; /* Removes the default focus outline */
+  }
+  
+  .overlay-text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transform: rotate(-45deg);
+  }
+  
+  .overlay-text-triangle {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transform:(-60deg);
+  }
 
 /* LIBRARY */
 
@@ -409,6 +451,7 @@ body.dark-mode .ownTable {
     background-color:#ffc107 !important;
     --bs-table-bg: none;
 }
+
 /* BLOG */
 
 .circleBlog {
@@ -1297,6 +1340,31 @@ body.dark-mode .btn-circleBlogBig:focus {
     background-color: #0099d5 !important;
     color: #333 !important;
 }
+
+.btn-index {
+    background-color: none;
+    padding: 1rem 0 !important;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-index:hover {
+    background-color: hsla(0, 0%, 73%, 0.255);
+}
+
+.btn-index:active {
+    background-color: #0066cc;
+}
+
+.btn-index:focus {
+    background-color: hsla(0, 0%, 73%, 0.255);
+    outline:none;
+}
+
+
 
 /*  BTN UNDO REDO ------------------------------------------------*/
 
