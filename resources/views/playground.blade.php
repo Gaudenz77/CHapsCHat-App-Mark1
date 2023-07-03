@@ -7,45 +7,42 @@
 
 @section('content')
 
-    @auth
-
-<section class="">
-    <div class="container-fluid" style="display:inline-block;">
-        <div class="row">
-
-            <div class="chatCol col-md-3 px-3 pt-1 pb-0 pb-md-5">
-                <div class="mt-2 p-2 pt-4">
-                    <h5 class="mb-0">WELCOME to the MESSAGECORNER 
-                        <a tabindex="0"  
-                        data-bs-toggle="popover"
-                        data-bs-custom-class="popoverInfoOne"
-                        data-bs-trigger="focus" 
-                        data-bs-placement="right" 
-                        data-bs-html="true"
-                        data-bs-title="
-                        <div class='lead animate__animated animate__zoomInUp'><b>How To Message</b></div>" 
-                        data-bs-content='
-                        <div class="animate__animated animate__zoomInUp animate__delay-1s">
-                            <ol>
-                                <li>Write your message below in the form-field.</li>
-                                <li>Press the paperplane-icon to send your message.</li>
-                                <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
-                            </ol>
-                        </div>'><i class="fa-solid fa-circle-info">
-                        </i></a>
-                    </h5>
-                
-                <h1 class="display-6 mt-3 my-0 playgLandsTitle animate__animated animate__rubberBand">
+@auth
+    <section class="">
+        <div class="container-fluid" style="display:inline-block;">
+            <div class="row">
+                <div class="chatCol col-md-3 px-3 pt-1 pb-0 pb-md-5">
+                    <div class="mt-2 p-2 pt-4">
+                        <h5 class="mb-0">WELCOME to the MESSAGECORNER 
+                            <a tabindex="0"  
+                            data-bs-toggle="popover"
+                            data-bs-custom-class="popoverInfoOne"
+                            data-bs-trigger="focus" 
+                            data-bs-placement="right" 
+                            data-bs-html="true"
+                            data-bs-title="
+                            <div class='lead animate__animated animate__zoomInUp'><b>How To Message</b></div>" 
+                            data-bs-content='
+                            <div class="animate__animated animate__zoomInUp animate__delay-1s">
+                                <ol>
+                                    <li>Write your message below in the form-field.</li>
+                                    <li>Press the paperplane-icon to send your message.</li>
+                                    <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
+                                </ol>
+                            </div>'><i class="fa-solid fa-circle-info">
+                            </i></a>
+                        </h5>
                     
-                    <strong class="text-warning">{{ Auth::user()->name }}'s </strong><small>Chatspace</small>
-                </h1>
+                        <h1 class="display-6 mt-3 my-0 playgLandsTitle animate__animated animate__rubberBand">
+                            <strong class="text-warning">{{ Auth::user()->name }}'s </strong><small>Chatspace</small>
+                        </h1>
 
-                <div class="chatFormField my-4 px-0">
-                    <chat-form :user="{{ Auth::user() }}"></chat-form>
-                </div>
-                </div>
-                    <div class="smooth-scroll scrollableChat chatBody rounded">
-                        <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
+                        <div class="chatFormField my-4 px-0">
+                            <chat-form :user="{{ Auth::user() }}"></chat-form>
+                        </div>
+                    </div>
+                        <div class="smooth-scroll scrollableChat chatBody rounded">
+                            <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
                     </div>
 
                     <div class="d-sm-block d-md-none text-center p-3 pb-0">
@@ -54,42 +51,13 @@
                             <button class="btn btn-sm  btn-dark" onclick="togglePreview()"><i class="fa-solid fa-power-off"></i> Preview</button>
                         </div>
                     </div>    
-
                 <p class="text-end m-2 mb-5 pt-2 pb-3"><small>Messageservice brought to you by </small><a href="https://pusher.com/">Pusher&copy;</a>
                 </p>
             </div>
 
             <div class="editorCol col-md-5 px-1 px-md-3 pt-1 pb-5" id="editorColumn">
-                <div class="mt-2 p-2 pt-4">
-                <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! 
-                    
-                    <a tabindex="0"   
-                    data-bs-toggle="popover"
-                    data-bs-custom-class="popoverInfoOne"
-                    data-bs-trigger="focus" 
-                    data-bs-placement="right" 
-                    data-bs-html="true" 
-                    data-bs-title="
-                    <div class='lead animate__animated animate__zoomInUp'>
-                    <strong>Code-Space:<br>Here you can code to yours delight!</strong>
-                   </div>" 
-                    data-bs-content='
-                    <div class="text-dark animate__animated animate__zoomInUp animate__delay-1s">
-                        
-                        <ol>
-                            <li>Copy/Paste codes from messenger into editor:<br> Instant testing</li>
-                            <li>Inline CSS for styling<br> (Seperate files tbc)</li>
-                            <li>In-Code Javascript for<br> function/coding (Seperate files tbc)</li>
-                        </ol>
-                    </div>'>
-                    <i class="fa-solid fa-circle-info"></i></a>
-                </h5>
-                <div class="container">
-                    <div class="row justify-content-between">
-                    <div class="col-4 ps-0 d-flex align-items-end">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch" id="fontColorSwitch">
-                            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                    <div class="mt-2 p-2 pt-4">
+                        <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! 
                             <a tabindex="0"   
                             data-bs-toggle="popover"
                             data-bs-custom-class="popoverInfoOne"
@@ -97,12 +65,40 @@
                             data-bs-placement="right" 
                             data-bs-html="true" 
                             data-bs-title="
-                            <div class=''>Change main font color</div>" 
-                            data-bs-content="
-                            <div class=''>Change font-color to fit with page dark/bright-mode</div>" style="font-size:1rem;">
-                            <i class="fa-solid fa-circle-info infoToggle"></i></a>
-                        </div>
+                                <div class='lead animate__animated animate__zoomInUp'>
+                                <strong>Code-Space:<br>Here you can code to yours delight!</strong>
+                            </div>" 
+                            data-bs-content='
+                            <div class="text-dark animate__animated animate__zoomInUp animate__delay-1s">
+                                
+                                <ol>
+                                    <li>Copy/Paste codes from messenger into editor:<br> Instant testing</li>
+                                    <li>Inline CSS for styling<br> (Seperate files tbc)</li>
+                                    <li>In-Code Javascript for<br> function/coding (Seperate files tbc)</li>
+                                </ol>
+                            </div>'>
+                            <i class="fa-solid fa-circle-info"></i></a>
+                        </h5>
                     </div>
+                    <div class="container">
+                        <div class="row justify-content-between">
+                        <div class="col-4 ps-0 d-flex align-items-end">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch" id="fontColorSwitch">
+                                <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                                <a tabindex="0"   
+                                data-bs-toggle="popover"
+                                data-bs-custom-class="popoverInfoOne"
+                                data-bs-trigger="focus" 
+                                data-bs-placement="right" 
+                                data-bs-html="true" 
+                                data-bs-title="
+                                <div class=''>Change main font color</div>" 
+                                data-bs-content="
+                                <div class=''>Change font-color to fit with page dark/bright-mode</div>" style="font-size:1rem;">
+                                <i class="fa-solid fa-circle-info infoToggle"></i></a>
+                            </div>
+                        </div>
                     <div class="col-4 d-flex justify-content-end pe-0">
                         <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
                             <button id="undoButton" type="button" class="btn btn-undo">
@@ -114,10 +110,9 @@
                         </div>
                     </div>
                 </div>
-                </div>
 
                 <div id="editor" style="height:66vh;"></div>
-                </div>
+                    </div>
                 <div class="text-end p-3 pt-1 pe-2">
                     <button class="btn btn-sm btn-info" id="formatButton">Prettify!</button>
                 </div>
@@ -129,11 +124,9 @@
                     <iframe id="preview" style="height:66vh;"></iframe>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> 
     </section>
-
-    @endauth
+@endauth
     <script src="https://unpkg.com/prettier/parser-html.js"></script>
     <script src="https://unpkg.com/prettier/standalone.js"></script>
     <script src="https://unpkg.com/monaco-editor@0.37.0/min/vs/loader.js"></script>
