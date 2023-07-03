@@ -263,6 +263,8 @@
         --bs-popover-arrow-height: .5rem;
         font-family: 'Special Elite', cursive;
         --bs-popover-body-color:#333;
+        --bs-popover-max-width: 300px;
+        width:250px;
 
     }
 

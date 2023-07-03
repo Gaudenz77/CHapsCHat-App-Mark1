@@ -15,28 +15,38 @@
 
             <div class="chatCol col-md-3 px-3 pt-1 pb-5">
                 <div class="mt-2 p-2 pt-4">
-                <h5 class="mb-0">WELCOME to the MESSAGECORNER <i class="fa-solid fa-circle-info" 
-                    data-bs-toggle="popover"
-                    data-bs-custom-class="popoverInfoOne"
-                    data-bs-triggr="focus" 
-                    data-bs-placement="right" 
-                    data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}} 
-                    data-bs-title="
-                    <div class='lead {{-- animate__animated animate__zoomInUp --}}'><b>How To Message</b></div>" 
-                    data-bs-content='
-                    <div class=" {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
-                        <ol>
-                            <li>Write your message below in the form-field.</li>
-                            <li>Press the paperplane-icon to send your message.</li>
-                            <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
-                        </ol>
-                    </div>'>
-                    </i>
-                </h5>
+                    <h5 class="mb-0">WELCOME to the MESSAGECORNER 
+                        <a tabindex="0"  
+                        data-bs-toggle="popover"
+                        data-bs-custom-class="popoverInfoOne"
+                        data-bs-trigger="focus" 
+                        data-bs-placement="right" 
+                        data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}} 
+                        data-bs-title="
+                        <div class='lead {{-- animate__animated animate__zoomInUp --}}'><b>How To Message</b></div>" 
+                        data-bs-content='
+                        <div class=" {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
+                            <ol>
+                                <li>Write your message below in the form-field.</li>
+                                <li>Press the paperplane-icon to send your message.</li>
+                                <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
+                            </ol>
+                        </div>'><i class="fa-solid fa-circle-info">
+                        </i></a>
+                    </h5>
                 
                 <h1 class="display-6 mt-3 my-0 playgLandsTitle animate__animated animate__rubberBand">
+                    
                     <strong>{{ Auth::user()->name }}</strong>
                 </h1>
+
+                <div class="d-sm-block d-md-none text-center p-3 pb-0">
+                    <div class="btn-group mobileGoner" role="group" aria-label="Basic example">
+                        <button class="btn btn-sm btn-warning rounded" onclick="toggleEditor()">Hide editor</button>
+                        <button class="btn btn-sm  btn-dark" onclick="togglePreview()">Hide preview</button>
+                    </div>
+                </div>
+                
 
                 <div class="chatFormField my-4 px-0">
                     <chat-form :user="{{ Auth::user() }}"></chat-form>
@@ -50,20 +60,23 @@
                 </p>
             </div>
 
-            <div class="editorCol col-md-5 px-3 pt-1 pb-5">
+            <div class="editorCol col-md-5 px-3 pt-1 pb-5" id="editorColumn">
                 <div class="mt-2 p-2 pt-4">
                 <h5 class="mb-0 pb-0">ThiS iS Your EdiTor! 
-                    <i class="fa-solid fa-circle-info" 
-                    data-bs-toggle="popover" 
+                    
+                    <a tabindex="0"   
+                    data-bs-toggle="popover"
+                    data-bs-custom-class="popoverInfoOne"
+                    data-bs-trigger="focus" 
                     data-bs-placement="right" 
                     data-bs-html="true" 
                     data-bs-title="
-                    <div class='popKnowInfoHead lead {{-- animate__animated animate__zoomInUp --}}'>
+                    <div class='lead {{-- animate__animated animate__zoomInUp --}}'>
                     <strong>Code-Space:<br>Here you can code to yours delight!</strong>
                     {{-- <a href='#' class='close' data-bs-dismiss='alert'>&times;</a> --}}
                     {{-- <button type='button' class='btn-close' data-bs-dismiss='popover' aria-label='Close'></button> --}}</div>" 
                     data-bs-content='
-                    <div class="popKnowInfoBody text-dark {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
+                    <div class="text-dark {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
                         
                         <ol>
                             <li>Copy/Paste codes from messenger into editor:<br> Instant testing</li>
@@ -71,7 +84,7 @@
                             <li>In-Code Javascript for<br> function/coding (Seperate files tbc)</li>
                         </ol>
                     </div>'>
-                    </i>
+                    <i class="fa-solid fa-circle-info"></i></a>
                 </h5>
                 <div class="container">
                     <div class="row justify-content-between">
@@ -79,15 +92,17 @@
                         <div class="form-check form-switch">
                             <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch" id="fontColorSwitch">
                             <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                            <i class="fa-solid fa-circle-info infoToggle" 
-                            data-bs-toggle="popover" 
+                            <a tabindex="0"   
+                            data-bs-toggle="popover"
+                            data-bs-custom-class="popoverInfoOne"
+                            data-bs-trigger="focus" 
                             data-bs-placement="right" 
                             data-bs-html="true" 
                             data-bs-title="
-                            <div class='popKnowInfoHead'>Change main font color</div>" 
+                            <div class=''>Change main font color</div>" 
                             data-bs-content="
-                            <div class='popKnowInfoBody'>Change font-color to fit with page dark/bright-mode</div>" style="font-size:1rem;">
-                            </i>
+                            <div class=''>Change font-color to fit with page dark/bright-mode</div>" style="font-size:1rem;">
+                            <i class="fa-solid fa-circle-info infoToggle"></i></a>
                         </div>
                     </div>
                     <div class="col-4 d-flex justify-content-end pe-0">
@@ -106,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="previewCol col-md-4 px-3 pt-1 pb-5">
+            <div class="previewCol col-md-4 px-3 pt-1 pb-5" id="previewColumn">
                 <div class="mt-2 p-2 pt-4">
                 <h5 class="mb-3 pb-3">YouR ouTpuT!</h5>
                 <iframe id="preview" style="height:75vh;"></iframe>
@@ -319,19 +334,25 @@
             sessionStorage.setItem('animationPlayed', true);
         } */
 
-  /*       $("popoverInfoOne").ready(function() {
-    $('[data-bs-toggle="popover"]').popover({
-        html: true,
-        trigger: 'focus',
+        function toggleEditor() {
+            var column = document.getElementById('editorColumn');
+            if (column.style.display === 'none') {
+                column.style.display = 'block';
+            } else {
+                column.style.display = 'none';
+            }
+        }
+        function togglePreview() {
+            var column = document.getElementById('previewColumn');
+            if (column.style.display === 'none') {
+                column.style.display = 'block';
+            } else {
+                column.style.display = 'none';
+            }
+        }
 
-    });
-});
- */
 
- /* const popover = new bootstrap.Popover('.popover-dismiss', {
-  trigger: 'focus'
-}) */
-
+        
     </script>
 
 @endsection
