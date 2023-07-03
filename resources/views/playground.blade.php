@@ -16,13 +16,15 @@
             <div class="chatCol col-md-3 px-3 pt-1 pb-5">
                 <div class="mt-2 p-2 pt-4">
                 <h5 class="mb-0">WELCOME to the MESSAGECORNER <i class="fa-solid fa-circle-info" 
-                    data-bs-toggle="popover" 
+                    data-bs-toggle="popover"
+                    data-bs-custom-class="popoverInfoOne"
+                    data-bs-triggr="focus" 
                     data-bs-placement="right" 
                     data-bs-html="true" {{-- data-bs-class="popover-body p-2" --}} 
                     data-bs-title="
-                    <div class='popKnowInfoHead lead {{-- animate__animated animate__zoomInUp --}}'><strong>How To Message</strong></div>" 
+                    <div class='lead {{-- animate__animated animate__zoomInUp --}}'><b>How To Message</b></div>" 
                     data-bs-content='
-                    <div class="popKnowInfoBody {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
+                    <div class=" {{-- animate__animated animate__zoomInUp animate__delay-1s --}}">
                         <ol>
                             <li>Write your message below in the form-field.</li>
                             <li>Press the paperplane-icon to send your message.</li>
@@ -317,20 +319,18 @@
             sessionStorage.setItem('animationPlayed', true);
         } */
 
-/*         $(function() {
+  /*       $("popoverInfoOne").ready(function() {
     $('[data-bs-toggle="popover"]').popover({
         html: true,
-        sanitize: false, // Disable HTML sanitization to allow the close button to work
+        trigger: 'focus',
 
-        // Add event listener to close button
-        template: '<div class="popover">' +
-            '<div class="popover-header">' +
-            '<button type="button" class="btn-close" data-bs-dismiss="popover" aria-label="Close"></button>' +
-            '</div>' +
-            '<div class="popover-body"></div>' +
-            '</div>',
     });
-}); */
+});
+ */
+
+ /* const popover = new bootstrap.Popover('.popover-dismiss', {
+  trigger: 'focus'
+}) */
 
     </script>
 

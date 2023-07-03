@@ -89,7 +89,7 @@
     /* LANDSCAPE/TABLET MEDIA QUERIES START */
 
     @media (max-width: 800px) and (orientation: landscape) 
-
+        {
         /* CSS rules for mobile landscape mode */
         .registerMain {
             margin-top: 5rem;
@@ -107,9 +107,7 @@
             background-color: #091540;
             height: 10.3vh;
         }
-
     }
-
     /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
     /* DESKTOP/TABLET MEDIA QUERIES START */
@@ -248,6 +246,31 @@
 
     body.dark-mode .custom-toggler .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 0, 0, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+    .popoverInfoOne {
+        --bs-popover-bg:#ebebeb;
+        border-style: dotted ;
+        border-width:3px;
+        font-weight:800;
+        --bs-popover-max-width: 200px;
+        --bs-popover-border-color: yellow;
+        --bs-popover-header-bg: red;
+        --bs-popover-header-color: var(--bs-white);
+        --bs-popover-body-padding-x: 1rem;
+        --bs-popover-body-padding-y: .5rem;
+        --bs-popover-arrow-width: 1rem;
+        --bs-popover-arrow-height: .5rem;
+        font-family: 'Special Elite', cursive;
+        --bs-popover-body-color:#333;
+
+    }
+
+    body.dark-mode .popoverInfoOne {
+        --bs-popover-bg:#022342;
+        --bs-popover-header-bg: red;
+        --bs-popover-header-color: var(--bs-white);
+        --bs-popover-body-color:#ebebeb;
     }
 
 </style>
