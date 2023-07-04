@@ -12,7 +12,7 @@
 
                 <!-- QUOTE TYPEWRITER REGISTER -->
 
-                <div class="col-sm-4 mt-3 px-3 pt-3 pb-0 animate__animated animate__flipInX">
+                <div class="col-sm-4 mt-3 px-3 pt-3 pb-0  order-2 order-sm-1 animate__animated animate__flipInX">
                     <a class="col-6 btn btn-circleType" id="playButtonReg" href="#"
                         style="display: inline-block; padding: 5px;">
                         <img class="col-12 image-fluid" src="./assets/img/typewriter.png" alt="typewriter_cute">
@@ -39,7 +39,7 @@
                 <div class="col-md-6 animate__animated animate__flipInY">
                     <div class="card circleAuth cardLogin px-3 pt-2 pb-3 px-md-5" id="authCard">
 
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
 

@@ -108,7 +108,7 @@
                         ></textarea>
                     </template>
                     <template v-else>
-                        <div class="text-start" style="word-break: break-word">
+                        <div class="text-start mx-2" style="word-break: break-word">
                             <span v-html="renderHTML(library.content)"></span>
                         </div>
                     </template>
@@ -123,7 +123,7 @@
                             type="button"
                             role="button"
                             @click="deleteLibrary(library.id)">
-                            <i class="fa-regular fa-trash-can"></i> Delete
+                            <i class="fa-regular fa-trash-can fa-2x"></i>
                         </button>
                         <button
                             class="btn btn-circleLibrary text-center mx-3 mx-md-0"

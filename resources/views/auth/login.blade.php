@@ -11,7 +11,7 @@
             <div class="row justify-content-evenly align-items-center">
                 <div class="col-md-6 mt-1 animate__animated animate__flipInX">
                     <div class="card circleAuth cardLogin  px-3 pt-2 pb-3  px-md-5" id="authCard">
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <!-- Session Status -->
                             @if (session('status'))
                                 <div class="alert alert-success mb-4" role="alert">
@@ -118,7 +118,7 @@
             var audio = document.getElementById("myAudioReg");
             var playButton = document.getElementById("playButtonLog");
             var colElement = document.getElementById("colElementLog");
-            var playCount = 3.5; // Desired play count (e.g., 3.5 seconds)
+            var playCount = 3; // Desired play count (e.g., 3.5 seconds)
             var isPlaying = false; // Flag to track audio playing state
 
             function playAudio() {

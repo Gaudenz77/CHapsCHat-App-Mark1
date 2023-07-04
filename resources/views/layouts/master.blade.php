@@ -139,7 +139,7 @@
             <button id="footerButton" class="btn btn-circleFoot"><span class="material-symbols-outlined">barefoot</span>
                 <p class="footerBtnTextStart">Footer?</p>
             </button>
-            <span id="footerContent" class="span1 fixed-bottom ps-2"><a href="{{ url('/about') }}"
+            <span id="footerContent" class="span1 fixed-bottom ps-2 mb-2"><a href="{{ url('/about') }}"
                     class="nav-item mt-2 ms-0 px-2 ps-0 py-0" style="color:#ffc107; text-decoration:none"><b class="">Dare To Meet
                         Me?</b></a><br><b style="color:  blue;">&copy; {{ date('d/m/Y') }} <a class="small"
                         style="color:chartreuse" href="{{ url('/impressum') }}"><br>Legal Notice</a></span>

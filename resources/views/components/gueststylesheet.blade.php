@@ -2,19 +2,17 @@
 
 @media (max-width: 480px) {
         .loginMain {
-            margin-top: 15vh;
+            margin-top: 121px;
             margin-bottom: 11vh;
         }
 
         .registerMain {
-            margin-top: 11vh;
-            margin-bottom: 18vh;
+            margin-top: 125px;
+            margin-bottom: 13vh;
+            }
         }
 
-        .welcomeMain {
-            margin-top: 9rem;
-            margin-bottom: 8.5rem;
-        }
+        
 
         .blogMain {
             margin-top: 6rem;
@@ -113,11 +111,6 @@
     /* DESKTOP/TABLET MEDIA QUERIES START */
 
     @media (min-width: 800px)  and (orientation: landscape) {
-
-        .welcomeMain {
-            margin-top: 9rem;
-            margin-bottom: 15rem;
-        }
 
         .loginMain {
             margin-top: 14rem;
@@ -234,9 +227,9 @@
         outline: none;
     }
 
-    .footerOwn {
+    /* .footerOwn {
         height: 11vh;
-    }
+    } */
 
     .custom-toggler.navbar-toggler {
         border-color: rgb(255, 255, 0);
