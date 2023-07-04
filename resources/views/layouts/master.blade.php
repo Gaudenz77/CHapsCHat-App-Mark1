@@ -57,9 +57,6 @@
 
         body {
             margin-top:10%;
-            /* position: relative; */
-            /* margin-top: -25px; */
-            
             overflow: auto;
         }
 

@@ -169,6 +169,14 @@
         }
     }
 
+ /*    .editor-container {
+      display: none;
+    }
+
+    #editor {
+      display: block;
+    } */
+
     /* DESKTOP/TABLET MEDIA QUERIES END */
 
 
