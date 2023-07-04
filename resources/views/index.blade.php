@@ -22,7 +22,7 @@
                             <b>{{ __('Welcome To CHapsCHat') }}</b>
                         </h1>
                         <p class="lead animate__animated animate__bounceInLeft animate__delay-1s">
-                            <strong>1. Come  on ChapsChat to code together:</strong> <a
+                            <strong>1. Come join on ChapsChat to code together:</strong> <a
                                 class="myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                                 href="{{ url('/playground') }} " onclick="reloadTwice()"><b>Join Now!</b></a>
                         </p>
