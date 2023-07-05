@@ -136,7 +136,7 @@
         <div class="container-fluid fixed-bottom text-center">
             <button class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()"><i
                     class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
-            <button id="footerButton" class="btn btn-circleFoot"><span class="material-symbols-outlined">barefoot</span>
+        <button id="footerButton" class="btn btn-circleFoot"><span class="material-symbols-outlined">barefoot</span>
                 <p class="footerBtnTextStart">Footer?</p>
             </button>
             <span id="footerContent" class="span1 fixed-bottom ps-2 mb-2"><a href="{{ url('/about') }}"

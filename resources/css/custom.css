@@ -142,14 +142,14 @@ body.dark-mode a {
         position: relative;
         width: 300px;
         height: 100%;
-        background-color: transparent;
+        background-color: transparent;  
         display: flex;
         justify-content: center;
     }
 
     .welcomeMain {
-        margin-top: 9rem;
-        margin-bottom: 5.5rem;
+        margin-top: 7rem;
+        margin-bottom: 10rem;
     }
 
     .triangleFix {
@@ -405,6 +405,65 @@ body.dark-mode a {
     font-weight: bold;
     transform:(-60deg);
   }
+
+  /* INDEX SMALL */
+
+  .trianglefixSmall {
+    height: 120%;
+    width: 130%;
+    position: relative;
+    left: 6px;
+}
+
+.squareSmall {
+    position: relative;
+    right: 17px;
+}
+
+.overlay-small {
+    position: absolute;
+    top: 15px;
+    left: -1px;
+    width: 100%;
+    height: 83%;
+    background-color: #000000b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.overlay-text-small {
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    transform: rotate(-45deg);
+}
+
+.overlay-text-triangle-small {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transform:(-60deg);
+}
+
+.overlay-small:hover,
+.overlay-small:focus {
+    opacity: 1;
+    outline: none; /* Removes the default focus outline */
+}
+
+.btn-index-small {
+    background-color: none;
+    padding: 1rem 0 !important;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    height:80%;
+}
 
 /* LIBRARY */
 
