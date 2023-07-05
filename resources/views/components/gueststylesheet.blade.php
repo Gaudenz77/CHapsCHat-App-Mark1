@@ -162,6 +162,52 @@
         }
     }
 
+    .trianglefixSmall {
+        height: 88%;
+        width: 130%;
+        position: relative;
+        left: 6px;
+    }
+
+    .squareSmall {
+        position: relative;
+        right: 17px;
+    }
+
+
+    .overlay_container-small {
+        position: relative;
+    }
+
+    .overlay-small {
+        position: absolute;
+        top: 0;
+        left: -6px;
+        width: 109%;
+        height: 69%;
+        background-color: #000000b3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity .3s;
+        top: 13px;
+    }
+
+    .overlay-text-small {
+        color: #fff;
+        font-size: 10px;
+        font-weight: 700;
+        transform: rotate(-45deg);
+    }
+
+    .overlay-text-triangle-small {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transform:(-60deg);
+  }
+
  /*    .editor-container {
       display: none;
     }
