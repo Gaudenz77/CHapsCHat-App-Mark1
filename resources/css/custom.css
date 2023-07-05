@@ -804,11 +804,11 @@ body.dark-mode nav {
 }
 
 .myNavToggleTitle {
-    color: #333;
+    color: #ebebeb;
 }
 
 body.dark-mode .myNavToggleTitle {
-    color: #ebebeb;
+    color: #333;
 }
 
 body.dark-mode .nav-link {
@@ -897,18 +897,18 @@ a.myNavToggleTitle:before {
     content: "";
     display: block;
     position: absolute;
-    bottom: -2px;
+    bottom: 2px;
     left: 0;
     width: 100%;
-    height: 2px;
-    background-color: #ebebeb;
+    height: 5px;
+    background-color: hsla(0, 0%, 16%, 0.774);
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
     transform-origin: bottom right;
 }
 
 body.dark-mode a.myNavToggleTitle:before {
-    background-color: #ebebeb;
+    background-color: hsla(0, 0%, 91%, 0.851);
 }
 
 a.myNavToggleTitle:hover:before {

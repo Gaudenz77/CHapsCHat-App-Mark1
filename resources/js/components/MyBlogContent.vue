@@ -1,7 +1,7 @@
   <template>
-      <div class="d-flex flex-wrap">
-        <div v-for="blog in blogs" :key="blog.id" class="col-md-4" data-aos="flip-left">
-          <div class="textfieldBlogTitle mx-2 mt-3 px-0 pt-3 pb-2">
+      <div class="d-flex flex-wrap justify-content-center">
+        <div v-for="blog in blogs" :key="blog.id" class="col-md-10" data-aos="flip-left">
+          <div class="textfieldBlogTitle mx-5 mt-3 px-0 pt-3 pb-2">
             <h2 class="display-6 mx-3 text-start">
               <strong>{{ blog.title }}</strong>
             </h2>
@@ -28,14 +28,14 @@
                   <div class="container">
                     <div class="row jusstify-content-evenly">
                       <div class="col"><h5 class="modal-title">{{ blog.title }}</h5></div>
-                      <div class="col-2 me-2"><button type="button" class="btn-close btnXModal" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                      <div class="col-1"><button type="button" class="btn-close btnXModal" data-bs-dismiss="modal" aria-label="Close"></button></div>
                 
                     </div>
                   </div>
                 </div>
                 <div class="modal-body">
                   <p>
-                      <figcaption class="blockquote-footer">{{ formatCreatedAt(blog.created_at) }}</figcaption>
+                      <figcaption class="blockquote-footer pt-2 ps-3">{{ formatCreatedAt(blog.created_at) }}</figcaption>
                     <!-- <strong>User ID:</strong> {{ blog.user_id }} -->
                   </p>
                   <!-- <p>Auth User ID: {{ authUserId }}</p> -->

@@ -32,7 +32,7 @@ class MyBlogController extends Controller
             'title' => 'required',
             'topic' => 'required|in:general,resources,techtalk',
             'content' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Add validation for image upload
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Add validation for image upload
         ]);
 
 

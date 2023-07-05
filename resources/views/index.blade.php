@@ -43,23 +43,23 @@
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     <div class="container text-center">
-                        <h1 class="display-5 display-md-3 py-4 pb-md-3 text-center {{-- animate__animated animate__zoomInUp animate__delay-5s --}}">
+                        <h1 class="hookLine display-5 display-md-3 pt-3 pb-1 pb-md-3 text-center {{-- animate__animated animate__zoomInUp animate__delay-5s --}}">
                             <b>{{ __('Welcome To CHapsCHat') }}</b>
                         </h1>
                         <p class="indexListText lead mb-sm-0 {{-- animate__animated animate__bounceInLeft animate__delay-1s --}}">
-                            <strong>1. Come join on ChapsChat to code together:</strong> <a
-                                class="nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
-                                href="{{ url('/playground') }} " onclick="reloadTwice()"><b>Join Now!</b></a>
+                            <strong>1. Let's chat and code together:</strong> <a
+                                class="hookLinePara nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
+                                href="{{ url('/playground') }} " onclick="reloadTwice()"><b>>>> Welcome to the Palyground. Join Now!</b></a>
                         </p>
                         <p class="indexListText lead mb-sm-0 {{-- animate__animated animate__bounceInRight animate__delay-2s --}}">
-                            <strong>2. Report on our Blog:</strong> <a
-                                class="myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
-                                href="{{ url('/blogoSphere') }}"><b>Read more...</b></a>
+                            <strong>2. Visit our Blog:</strong> <a
+                                class="hookLinePara myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
+                                href="{{ url('/blogoSphere') }}"><b>>>> Read more...</b></a>
                         </p>
                         <p class="indexListText lead mb-sm-0 {{-- animate__animated animate__bounceInUp animate__delay-3s --}}">
-                            <strong>3. Go to Your Library:</strong> <a
-                                class="myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
-                                href="{{ url('/knowledgeSphere') }}"><b>Explore Now</b></a>
+                            <strong>3. Go to Your Personal Library:</strong> <a
+                                class="hookLinePara myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
+                                href="{{ url('/knowledgeSphere') }}"><b>>>> Explore Now</b></a>
                         </p>
                     </div>
                 </div>

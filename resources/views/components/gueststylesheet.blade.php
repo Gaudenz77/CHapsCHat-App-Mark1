@@ -67,10 +67,6 @@
             bottom: 0%;
         }
 
-        a.myNavToggleTitle {
-            color: #333;
-        }
-
         .toggleOwn {
             height: 10%;
         }
@@ -111,17 +107,25 @@
             background-color: #091540;
             height: 10.3vh;
         }
+
         .indexListText {
             font-size:100%;
+        }
+
+        .hookLine {
+            font-size:150%;
+            padding-bottom:1rem !important;
+        }
+
+        .hookLinePara {
+            color:red !important;
         }
 
 
     }
 
     @media screen and (orientation: landscape) {
-   /*  .indexListText {
-            font-size:100%;
-        } */
+    
     }
     /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
@@ -130,7 +134,6 @@
     /* DESKTOP/TABLET MEDIA QUERIES START */
 
     @media (min-width: 810px)  and (orientation: landscape) {
-
 
         .loginMain {
             margin-top: 14rem;
