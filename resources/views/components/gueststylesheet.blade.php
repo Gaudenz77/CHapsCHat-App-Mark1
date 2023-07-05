@@ -91,8 +91,9 @@
 
     /* LANDSCAPE/TABLET MEDIA QUERIES START */
 
-    @media (max-width: 800px) and (orientation: landscape) 
+    @media (max-width: 810px) and (orientation: landscape) 
         {
+
         /* CSS rules for mobile landscape mode */
         .registerMain {
             margin-top: 5rem;
@@ -110,13 +111,26 @@
             background-color: #091540;
             height: 10.3vh;
         }
+        .indexListText {
+            font-size:100%;
+        }
 
+
+    }
+
+    @media screen and (orientation: landscape) {
+   /*  .indexListText {
+            font-size:100%;
+        } */
     }
     /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
+
+
     /* DESKTOP/TABLET MEDIA QUERIES START */
 
-    @media (min-width: 800px)  and (orientation: landscape) {
+    @media (min-width: 810px)  and (orientation: landscape) {
+
 
         .loginMain {
             margin-top: 14rem;

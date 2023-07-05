@@ -188,13 +188,18 @@ body.dark-mode a {
 
 /* LANDSCAPE/TABLET MEDIA QUERIES START */
 
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 810px) and (orientation: landscape) {
     /* CSS rules for mobile landscape mode */
 
 
     .navbar {
         height: 25%;
         background-color: #091540;
+    }
+
+    .welcomeMain {
+        margin-top: 7rem;
+        margin-bottom: 10rem;
     }
 
     .playgroundMain {
@@ -211,12 +216,18 @@ body.dark-mode a {
     
 }
 
+
+@media screen and (orientation: landscape) {
+    #logoMiddle {
+            display:none;
+        }
+    }
 /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
 /* MD MEDIULM LG LARGE MEDIA QUERIES START---------------------------------------------------------------- */
 /* Styles for medium and large devices */
 
-@media (min-width: 800px)  and (orientation: landscape) {
+@media (min-width: 810px)  and (orientation: landscape) {
     .dropdown-menu {
         margin-left: -35px;
         margin-right: 60px;
@@ -408,11 +419,11 @@ body.dark-mode a {
 
   /* INDEX SMALL */
 
-  .trianglefixSmall {
+
+.trianglefixSmall {
     height: 120%;
     width: 130%;
     position: relative;
-    left: 6px;
 }
 
 .squareSmall {
