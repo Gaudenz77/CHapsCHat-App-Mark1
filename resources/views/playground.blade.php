@@ -127,9 +127,7 @@
                 </div>
         </section>
     @endauth
-    <script src="https://unpkg.com/prettier/parser-html.js"></script>
-    <script src="https://unpkg.com/prettier/standalone.js"></script>
-    <script src="https://unpkg.com/monaco-editor@0.37.0/min/vs/loader.js"></script>
+
     <script>
         require.config({
             paths: {
@@ -186,7 +184,7 @@
             var editorValue = localStorage.getItem('editorValue');
             var editor = monaco.editor.create(document.getElementById('editor'), {
                 value: editorValue ||
-                '<!DOCTYPE html>\n<html>\n<head>\n  <meta charset="UTF-8">\n  <title>My Test Page</title>\n<style></style>\n</head>\n<body> \n</body>\n</html>',
+                    '<!DOCTYPE html>\n<html>\n<head>\n  <meta charset="UTF-8">\n  <title>My Test Page</title>\n<style></style>\n</head>\n<body> \n</body>\n</html>',
                 /* '<!DOCTYPE html>\n<html>\n<head>\n  <meta charset="UTF-8">\n  <title>My Test Page</title>\n<style>body{background-color:black;\ncolor:white;}</style>\n</head>\n<body> \n</body>\n</html>', */
                 language: 'html',
                 theme: 'dark-theme',
@@ -202,32 +200,31 @@
                 }]
             });
 
-                  // CSS Editor
-      var cssEditorValue = localStorage.getItem('cssEditorValue');
-      var cssEditor = monaco.editor.create(document.getElementById('cssEditor'), {
-        value: cssEditorValue || 'body {\n  color: white;\n}',
-        language: 'css',
-        theme: 'dark-theme',
-        automaticLayout: true,
-        suggestOnTriggerCharacters: true,
-        autoClosingBrackets: true,
-        autoClosingQuotes: true,
-        autoIndent: true
-      });
+            // CSS Editor
+            var cssEditorValue = localStorage.getItem('cssEditorValue');
+            var cssEditor = monaco.editor.create(document.getElementById('cssEditor'), {
+                value: cssEditorValue || 'body {\n  color: white;\n}',
+                language: 'css',
+                theme: 'dark-theme',
+                automaticLayout: true,
+                suggestOnTriggerCharacters: true,
+                autoClosingBrackets: true,
+                autoClosingQuotes: true,
+                autoIndent: true
+            });
 
-      // JavaScript Editor
-      var jsEditorValue = localStorage.getItem('jsEditorValue');
-      var jsEditor = monaco.editor.create(document.getElementById('jsEditor'), {
-        value: jsEditorValue || 'console.log("Hello, world!");',
-        language: 'javascript',
-        theme: 'dark-theme',
-        automaticLayout: true,
-        suggestOnTriggerCharacters: true,
-        autoClosingBrackets: true,
-        autoClosingQuotes: true,
-        autoIndent: true
-      });
-
+            // JavaScript Editor
+            var jsEditorValue = localStorage.getItem('jsEditorValue');
+            var jsEditor = monaco.editor.create(document.getElementById('jsEditor'), {
+                value: jsEditorValue || 'console.log("Hello, world!");',
+                language: 'javascript',
+                theme: 'dark-theme',
+                automaticLayout: true,
+                suggestOnTriggerCharacters: true,
+                autoClosingBrackets: true,
+                autoClosingQuotes: true,
+                autoIndent: true
+            });
 
             function formatCode() {
                 var value = editor.getValue();
@@ -237,7 +234,6 @@
                 });
                 editor.setValue(formattedCode);
             }
-            
 
             var formatButton = document.getElementById('formatButton');
             formatButton.addEventListener('click', formatCode);
@@ -245,32 +241,32 @@
             var prettierPlugins = [window.prettierPlugins.html];
 
             function updateFontColor() {
-            var fontColorSwitch = document.getElementById('fontColorSwitch');
-            var newValue = fontColorSwitch.checked ? 'white' : 'black';
-            var currentValue = editor.getValue();
-            var updatedValue = currentValue.replace(/<style>body{color:(.*?);}<\/style>/, '');
+                var fontColorSwitch = document.getElementById('fontColorSwitch');
+                var newValue = fontColorSwitch.checked ? 'white' : 'black';
+                var currentValue = editor.getValue();
+                var updatedValue = currentValue.replace(/<style>body{color:(.*?);}<\/style>/, '');
 
-            if (fontColorSwitch.checked) {
-                // Add the body style tag if it doesn't exist
-                if (!currentValue.includes('<style>body{')) {
-                updatedValue = currentValue.replace(
-                    /<\/head>/,
-                    '<style>body{color:' + newValue + ';}</style></head>'
-                );
+                if (fontColorSwitch.checked) {
+                    // Add the body style tag if it doesn't exist
+                    if (!currentValue.includes('<style>body{')) {
+                        updatedValue = currentValue.replace(
+                            /<\/head>/,
+                            '<style>body{color:' + newValue + ';}</style></head>'
+                        );
+                    } else {
+                        // Update the body style tag if it already exists
+                        updatedValue = currentValue.replace(
+                            /<style>body{color:(.*?);}<\/style>/,
+                            '<style>body{color:' + newValue + ';}</style>\n'
+                        );
+                    }
                 } else {
-                // Update the body style tag if it already exists
-                updatedValue = currentValue.replace(
-                    /<style>body{color:(.*?);}<\/style>/,   
-                    '<style>body{color:' + newValue + ';}</style>\n'
-                );
+                    // Remove the body style tag
+                    updatedValue = currentValue.replace(/<style>body{color:(.*?);}<\/style>/, '');
                 }
-            } else {
-                // Remove the body style tag
-                updatedValue = currentValue.replace(/<style>body{color:(.*?);}<\/style>/, '');
-            }
 
-            editor.setValue(updatedValue);
-            saveEditorValue();
+                editor.setValue(updatedValue);
+                saveEditorValue();
             }
 
             var fontColorSwitch = document.getElementById('fontColorSwitch');
@@ -279,11 +275,15 @@
             // Update the styles for IntelliSense items
             const styles = document.createElement('style');
             styles.textContent = `
-        .monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .monaco-icon-label-entry .monaco-icon-name-container .monaco-icon-label .monaco-icon-name {
-            white-space: normal !important;
-            line-height: normal !important;
-        }
-        `;
+            .monaco-editor 
+            .suggest-widget 
+            .monaco-list 
+            .monaco-list-row 
+            .monaco-highlighted-label 
+            .monaco-icon-label-entry 
+            .monaco-icon-name-container 
+            .monaco-icon-label 
+            .monaco-icon-name {  white-space: normal !important; line-height: normal !important; } `;
             document.head.appendChild(styles);
 
             // Update preview on editor change
@@ -295,12 +295,6 @@
                 previewDoc.close();
             }
 
-            // Save editor value to local storage and update preview
-            function saveEditorValue() {
-                var value = editor.getValue();
-                localStorage.setItem('editorValue', value);
-                updatePreview();
-            }
             // Save editor value to local storage and update preview
             function saveEditorValue() {
                 var value = editor.getValue();

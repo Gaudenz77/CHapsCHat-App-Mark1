@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-{{--     @if (Auth::check())
+    {{--     @if (Auth::check())
         <meta name="user" content="{{ Auth::user() }}">
     @endif --}}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,6 +44,11 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.0.3/parser-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.0.3/standalone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.39.0/min/vs/loader.min.js"></script>
+    <script src="https://unpkg.com/monaco-editor@0.39.0/min/vs/loader.js"></script>
+
     {{--  <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script> --}}
 
     {{-- <script src="https://unpkg.com/monaco-editor@0.37.0/min/vs/loader.js"></script> --}}
@@ -54,9 +59,8 @@
     @include('components.gueststylesheet')
 
     <style>
-
         body {
-            margin-top:10%;
+            margin-top: 10%;
             overflow: auto;
         }
 
@@ -91,7 +95,8 @@
         }
 
         * {
-            /* border: 0.1px solid red !important; */padding:0;
+            /* border: 0.1px solid red !important; */
+            padding: 0;
         }
 
         .navbar-scroll-hide {
@@ -111,9 +116,6 @@
             /* top: 130px; */
             /* Adjust the value to match the height of your navbar */
         }
-
-        
-
     </style>
 
 </head>
@@ -136,11 +138,12 @@
         <div class="container-fluid fixed-bottom text-center">
             <button class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()"><i
                     class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
-        <button id="footerButton" class="btn btn-circleFoot"><span class="material-symbols-outlined">barefoot</span>
+            <button id="footerButton" class="btn btn-circleFoot"><span class="material-symbols-outlined">barefoot</span>
                 <p class="footerBtnTextStart">Footer?</p>
             </button>
             <span id="footerContent" class="span1 fixed-bottom ps-2 mb-2"><a href="{{ url('/about') }}"
-                    class="nav-item mt-2 ms-0 px-2 ps-0 py-0" style="color:#ffc107; text-decoration:none"><b class="">Dare To Meet
+                    class="nav-item mt-2 ms-0 px-2 ps-0 py-0" style="color:#ffc107; text-decoration:none"><b
+                        class="">Dare To Meet
                         Me?</b></a><br><b style="color:  blue;">&copy; {{ date('d/m/Y') }} <a class="small"
                         style="color:chartreuse" href="{{ url('/impressum') }}"><br>Legal Notice</a></span>
 
@@ -151,13 +154,12 @@
     {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
 
     <script>
-        
         // Scroll top
         function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
         /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
         var prevScrollpos = window.pageYOffset;
@@ -203,8 +205,6 @@
                 }
             });
         });
-
-
 
         /* Reload page twice to grant vs code triggering */
         function reloadTwice() {
