@@ -40,7 +40,7 @@
                     <div class="card cardLogin px-3 pt-2 pb-3 m-0 m-md-5 px-md-2" id="authCard">
 
                         <div class="card-body text-center px-0 px-md-5 pt-5">
-                            <form class="mx-2 px-0 px-md-5 pt-0 pt-md-2" method="POST" action="{{ route('register') }}">
+                            <form class="mx-2 px-0 px-md-5 pt-0 pb-0 pt-md-0" method="POST" action="{{ route('register') }}">
                                 @csrf
 
                                 <!-- Name -->
@@ -128,7 +128,7 @@
                                 <!-- Already Registered? -->
                                 <div
                                     class="d-md-flex justify-content-md-between align-items-md-center flex-md-column text-center">
-                                    <a class="loginLabel text-decoration-none mb-3" href="{{ route('login') }}">
+                                    <a class="loginLabel text-decoration-none mb-1" href="{{ route('login') }}">
                                         {{ __('Already registered?') }}
                                     </a>
                                 </div>
