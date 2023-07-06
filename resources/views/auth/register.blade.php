@@ -111,6 +111,11 @@
                                         autocomplete="new-password" />
                                 </div>
 
+                                <div class="form-group mt-3">
+                                    {!! NoCaptcha::renderJs() !!}
+                                    {!! NoCaptcha::display() !!}
+                                </div>
+
                                 <div class="row">
                                     <div class="col text-center">
                                         <button type="submit" class=" btn btn-lg btn-auth my-2 p-2 ml-md-4">
@@ -204,6 +209,11 @@
         // Call the function on page load and window resize
         window.addEventListener('DOMContentLoaded', removeCircleAuthClass);
         window.addEventListener('resize', removeCircleAuthClass);
+
+
+        /* var onloadCallback = function() {
+            alert("grecaptcha is ready!");
+        }; */
 
 
     </script>

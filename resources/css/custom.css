@@ -427,15 +427,15 @@ body.dark-mode a {
 
 .squareSmall {
     position: relative;
-    right: 17px;
+    right: 6px;
 }
 
 .overlay-small {
     position: absolute;
-    top: 15px;
-    left: -5px;
+    top: 5px;
+    left: 0px;
     width: 105%;
-    height: 98%;
+    height: 110%;
     background-color: #000000b3;
     display: flex;
     align-items: center;
@@ -466,7 +466,6 @@ body.dark-mode a {
 
 .btn-index-small {
     background-color: none;
-    padding: 1rem 0 !important;
     color: #fff;
     text-align: center;
     text-decoration: none;

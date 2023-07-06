@@ -300,6 +300,11 @@ body {
     /* font-family: 'Special Elite', cursive; */
 }
 
+.trianglesmall {
+    height:123%;
+ 
+}
+
 </style>
 <script>
 

@@ -53,6 +53,7 @@
                                     <label class="form-check-label loginLabel"
                                         for="remember_me">{{ __('Remember me') }}</label>
                                 </div>
+                                
                                 <div class="row">
                                     <div class="col text-center">
                                         <button type="submit" class="btn btn-lg btn-auth my-2 p-2 ml-md-4">

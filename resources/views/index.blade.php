@@ -17,23 +17,23 @@
 
             <div id="logoMiddle" class="row justify-content-center d-lg-none"  {{-- style="display:;" --}}>
                 <div class="col-12  d-flex align-items-middle ms-3">
-                    <a type="button"  href="{{ url('/blogoSphere') }}" id="button"  class="btn btn-index-small col-sm-3 me-md-4 me-lg-4 {{-- animate__animated animate__backInLeft animate__delay-2s --}} overlay-container">
-                        <img class="img-fluid squareSmall ms-3" src="./assets/img/square_pure.svg">
+                    <a type="button"  href="{{ url('/blogoSphere') }}" id="button"  class="btn btn-index-small col-sm-3 pe-0 me-md-4 me-lg-4 {{-- animate__animated animate__backInLeft animate__delay-2s --}} overlay-container">
+                        <img class="img-fluid squareSmall" src="./assets/img/square_pure.svg">
                         <div class="overlay-small">
                             <span class="overlay-text-small">ReaD thE latesT BlOgs!</span>
                         </div>
                     </a>
         
-                    <a type="button" href="{{ url('/playground') }}" id="button" class="btn btn-index-small rounded-circle col-sm-3 mb-0 {{-- animate__animated animate__backInDown animate__delay-3s --}} overlay-container">
+                    <a type="button" href="{{ url('/playground') }}" id="button" class="btn btn-index-small rounded-circle col-sm-3 px-0 mb-0 {{-- animate__animated animate__backInDown animate__delay-3s --}} overlay-container">
                         <img class="img-fluid mx-1" src="./assets/img/circle_pure.svg">
-                        <div class="overlay-small ms-2">
+                        <div class="overlay-small">
                             <span class="overlay-text-small">ENter thE PlayGroUnD!</span>
                         </div>
                     </a>
         
-                    <a type="button" href="{{ url('/knowledgeSphere') }}" id="button" class="btn btn-index-small  col-sm-3 {{-- animate__animated animate__backInRight animate__delay-4s --}} overlay-container">
-                        <img class="img-fluid {{-- trianglefixSmall --}}" src="./assets/img/triangle_blue_pure_small.svg">
-                        <div class="overlay-small ms-2 me-3">
+                    <a type="button" href="{{ url('/knowledgeSphere') }}" id="button" class="btn btn-index-small  col-sm-3 ps-0 {{-- animate__animated animate__backInRight animate__delay-4s --}} overlay-container">
+                        <img class="img-fluid trianglesmall" src="./assets/img/triangle_blue_pure_small.svg">
+                        <div class="overlay-small">
                             <span class="overlay-text-small mt-3">ColleCt YouR KnoWledGe!</span>
                         </div>
                     </a>
