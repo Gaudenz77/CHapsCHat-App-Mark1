@@ -136,7 +136,7 @@
     @media (min-width: 810px)  and (orientation: landscape) {
 
         .loginMain {
-            margin-top: 14rem;
+            margin-top: 12rem;
         }
 
         .registerMain {
