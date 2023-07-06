@@ -119,9 +119,12 @@
                             <div class="row">
                                 <div class="col text-end">
                                     <div class="btn-group mt-2">
-                                    <button class="btn btn-sm btn-warning" onclick="toggleEditor('editor')">HTML Editor</button>
-                                    <button class="btn btn-sm  btn-info" onclick="toggleEditor('cssEditor')">CSS Editor</button>
-                                    <button class="btn btn-sm  btn-success" onclick="toggleEditor('jsEditor')">JavaScript Editor</button>
+                                        <button class="btn btn-sm btn-warning" onclick="toggleEditor('editor')">HTML
+                                            Editor</button>
+                                        <button class="btn btn-sm  btn-info" onclick="toggleEditor('cssEditor')">CSS
+                                            Editor</button>
+                                        <button class="btn btn-sm  btn-success" onclick="toggleEditor('jsEditor')">JavaScript
+                                            Editor</button>
                                     </div>
                                 </div>
                             </div>
@@ -129,17 +132,19 @@
                         </div>
                     </div>
 
-                    <div class="previewCol col-md-4 px-1 px-md-3 py-3 pb-5" id="previewColumn">
+                    <div class="previewCol col-md-4 px-1 px-md-4 py-3 pb-5" id="previewColumn">
                         <div class="mt-2 p-2 pt-4">
                             <h5 class="mb-4 pb-4">YouR ouTpuT!</h5>
                             <iframe class="py-4 px-2" id="preview" style="height:60vh;"></iframe>
                         </div>
-                        
+
                         <div class="mt-2 px-2 pt-0">
-                            <div class="bg-secondary p-3" id="consoleOutput" style="height: 60vh; overflow-y: scroll;display:none;"></div>
+                            <div class="bg-secondary p-3" id="consoleOutput"
+                                style="height: 60vh; overflow-y: scroll;display:none;"></div>
 
                             <div class="col pt-2">
-                                <button class="btn btn-sm btn-success" id="runJavaScriptButton" style="display:none;">Run JavaScript</button>
+                                <button class="btn btn-sm btn-success" id="runJavaScriptButton" style="display:none;">Run
+                                    JavaScript</button>
                             </div>
                         </div>
                     </div>
@@ -233,52 +238,63 @@
             });
 
             var jsEditorValue = localStorage.getItem('jsEditorValue');
-var jsEditor = monaco.editor.create(document.getElementById('jsEditor'), {
-    value: jsEditorValue || 'console.log("Hello, world!");',
-    language: 'javascript',
-    theme: 'dark-theme',
-    automaticLayout: true,
-    suggestOnTriggerCharacters: true,
-    autoClosingBrackets: true,
-    autoClosingQuotes: true,
-    autoIndent: true
-});
+            var jsEditor = monaco.editor.create(document.getElementById('jsEditor'), {
+                value: jsEditorValue || 'console.log("Hello, world!");',
+                language: 'javascript',
+                theme: 'dark-theme',
+                automaticLayout: true,
+                suggestOnTriggerCharacters: true,
+                autoClosingBrackets: true,
+                autoClosingQuotes: true,
+                autoIndent: true
+            });
 
-function runJavaScript() {
-    var code = jsEditor.getValue(); // Get the JavaScript code from the JavaScript Editor
+            function runJavaScript() {
+  var code = jsEditor.getValue(); // Get the JavaScript code from the JavaScript Editor
 
-    var consoleOutput = document.getElementById('consoleOutput');
-    consoleOutput.innerHTML = '';
+  var consoleOutput = document.getElementById('consoleOutput');
+  consoleOutput.innerHTML = '';
 
-    try {
-        // Capture console.log output
-        var logs = [];
-        var originalConsoleLog = console.log;
-        console.log = function (message) {
-            logs.push(message);
-        };
+  try {
+    // Capture console.log output
+    var logs = [];
+    var originalConsoleLog = console.log;
+    console.log = function(message) {
+      logs.push(message);
+    };
 
-        // Evaluate the JavaScript code
-        eval(code);
+    // Evaluate the JavaScript code
+    eval(code);
 
-        // Restore console.log
-        console.log = originalConsoleLog;
+    // Restore console.log
+    console.log = originalConsoleLog;
 
-        // Display console.log output in the console output area
-        if (logs.length > 0) {
-            var output = document.createElement('pre');
-            output.textContent = logs.join('\n');
-            consoleOutput.appendChild(output);
-        }
-    } catch (error) {
-        // Display the error in the console output area
-        var errorOutput = document.createElement('pre');
-        errorOutput.style.color = 'red';
-        errorOutput.textContent = error;
-        consoleOutput.appendChild(errorOutput);
+    // Display console.log output in the console output area
+    if (logs.length > 0) {
+      var output = document.createElement('pre');
+      output.textContent = logs.join('\n');
+      consoleOutput.appendChild(output);
     }
+  } catch (error) {
+    // Display the error in the console output area
+    var errorOutput = document.createElement('pre');
+    errorOutput.style.color = 'red';
+    errorOutput.textContent = error;
+    consoleOutput.appendChild(errorOutput);
+  }
 }
 
+function saveJsEditorValue() {
+  var value = jsEditor.getValue();
+  localStorage.setItem('jsEditorValue', value);
+}
+
+// Add event listener to the JavaScript editor content change
+jsEditor.onDidChangeModelContent(function(event) {
+  saveJsEditorValue();
+});
+
+// Run the JavaScript code on button click
 var runJavaScriptButton = document.getElementById('runJavaScriptButton');
 runJavaScriptButton.addEventListener('click', runJavaScript);
 
@@ -401,41 +417,37 @@ runJavaScriptButton.addEventListener('click', runJavaScript);
                 column.style.display = 'none';
             }
         } */
-        
+
         function toggleEditor(editorId) {
-  const editorContainer = document.getElementById(editorId);
-  const currentEditorContainer = document.querySelector('.editor-container:not([style*="display: none"])');
-  const previewColumn = document.getElementById('previewColumn');
-  const previewIframe = document.getElementById('preview');
-  const consoleOutput = document.getElementById('consoleOutput');
-  const runJavaScriptButton = document.getElementById('runJavaScriptButton');
+            const editorContainer = document.getElementById(editorId);
+            const currentEditorContainer = document.querySelector('.editor-container:not([style*="display: none"])');
+            const previewColumn = document.getElementById('previewColumn');
+            const previewIframe = document.getElementById('preview');
+            const consoleOutput = document.getElementById('consoleOutput');
+            const runJavaScriptButton = document.getElementById('runJavaScriptButton');
 
-  // Hide the current editor and console output
-  currentEditorContainer.style.display = 'none';
-  consoleOutput.style.display = 'none';
+            // Hide the current editor and console output
+            currentEditorContainer.style.display = 'none';
+            consoleOutput.style.display = 'none';
 
-  if (editorId === 'jsEditor') {
-    // Show the JavaScript editor and console output
-    editorContainer.style.display = 'block';
-    consoleOutput.style.display = 'block';
-    runJavaScriptButton.style.display = 'block';
+            if (editorId === 'jsEditor') {
+                // Show the JavaScript editor and console output
+                editorContainer.style.display = 'block';
+                consoleOutput.style.display = 'block';
+                runJavaScriptButton.style.display = 'block';
 
-    // Hide the HTML editor and its preview
-    document.getElementById('editor').style.display = 'none';
-    document.getElementById('preview').style.display = 'none';
-  } else {
-    // Show the HTML editor and its preview
-    editorContainer.style.display = 'block';
-    document.getElementById('jsEditor').style.display = 'none';
-    previewColumn.style.display = 'block';
-    previewIframe.style.display = 'block';
-    runJavaScriptButton.style.display = 'none';
-  }
-}
-
-
-
-
+                // Hide the HTML editor and its preview
+                document.getElementById('editor').style.display = 'none';
+                document.getElementById('preview').style.display = 'none';
+            } else {
+                // Show the HTML editor and its preview
+                editorContainer.style.display = 'block';
+                document.getElementById('jsEditor').style.display = 'none';
+                previewColumn.style.display = 'block';
+                previewIframe.style.display = 'block';
+                runJavaScriptButton.style.display = 'none';
+            }
+        }
     </script>
 
     {{-- ROW FOR PAIN MS TBC ----------------------------------------------------------------START --}}
