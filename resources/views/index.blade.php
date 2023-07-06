@@ -32,7 +32,10 @@
                     </a>
         
                     <a type="button" href="{{ url('/knowledgeSphere') }}" id="button" class="btn btn-index-small  col-sm-3 ps-0 {{-- animate__animated animate__backInRight animate__delay-4s --}} overlay-container">
-                        <img class="img-fluid trianglesmall" src="./assets/img/triangle_blue_pure_small.svg">
+                        <div class="col-12">
+                            <img class="img-fluid ps-2" src="./assets/img/triangle_blue_pure_small.svg">
+                        </div>
+                        
                         <div class="overlay-small">
                             <span class="overlay-text-small mt-3">ColleCt YouR KnoWledGe!</span>
                         </div>
