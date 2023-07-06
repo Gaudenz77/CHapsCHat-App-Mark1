@@ -198,7 +198,7 @@ body.dark-mode a {
     }
 
     .welcomeMain {
-        margin-top: 7rem;
+        margin-top: 6rem;
         margin-bottom: 10rem;
     }
 
@@ -220,6 +220,10 @@ body.dark-mode a {
 @media screen and (orientation: landscape) {
     #logoMiddle {
             display:none;
+        }
+
+        .welcomeMain {
+            margin-top:6rem;
         }
     }
 /* LANDSCAPE/TABLET MEDIA QUERIES END */
