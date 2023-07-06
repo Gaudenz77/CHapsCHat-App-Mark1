@@ -172,7 +172,7 @@
         .span1 {
             color: #ebebeb;
             background-color: #091540;
-            height: 10.3vh;
+            height: 10.5vh;
             bottom:-8px;
         }
 

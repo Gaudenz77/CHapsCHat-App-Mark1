@@ -133,19 +133,20 @@
                     </div>
 
                     <div class="previewCol col-md-4 px-1 px-md-4 py-3 pb-5" id="previewColumn">
-                        <div class="mt-2 p-2 pt-4">
-                            <h5 class="mb-4 pb-4">YouR ouTpuT!</h5>
-                            <iframe class="py-4 px-2" id="preview" style="height:60vh;"></iframe>
+                        <div class="mt-2 p-0 pt-4">
+                            <h5 class="mb-0 pb-4">YouR ouTpuT!</h5>
+                            <div class="col">
+                                <button class="btn btn-sm btn-success mx-1" id="runJavaScriptButton" style="display:none;">Run
+                                    JavaScript</button>
+                            </div>
+                            <iframe class="mt-3 px-0 pt-4 pb-0" id="preview" style="height:63vh;"></iframe>
                         </div>
 
-                        <div class="mt-2 px-2 pt-0">
+                        <div class="px-1 pt-2">
                             <div class="bg-secondary p-3" id="consoleOutput"
                                 style="height: 60vh; overflow-y: scroll;display:none;"></div>
 
-                            <div class="col pt-2">
-                                <button class="btn btn-sm btn-success" id="runJavaScriptButton" style="display:none;">Run
-                                    JavaScript</button>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
