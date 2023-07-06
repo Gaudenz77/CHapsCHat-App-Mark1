@@ -140,8 +140,7 @@
         }
 
         .registerMain {
-            margin-top: 8%;
-            margin-bottom: -50%;
+            margin-top: 3.8%;
         }
 
         .blogMain {
@@ -174,6 +173,7 @@
             color: #ebebeb;
             background-color: #091540;
             height: 10.3vh;
+            bottom:-8px;
         }
 
         body.dark-mode .span1 {
@@ -305,6 +305,10 @@ body {
  
 }
 
+.formCaptchOne {
+    display: flex;
+justify-content: center;
+}
 </style>
 <script>
 

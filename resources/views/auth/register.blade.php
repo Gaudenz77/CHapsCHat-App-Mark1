@@ -8,7 +8,7 @@
 
     <section class="">
         <div class="container">
-            <div class="row justify-content-center align-items-center" {{-- style="height: 100vh;" --}}>
+            <div class="row justify-content-between align-items-center" {{-- style="height: 100vh;" --}}>
 
                 <!-- QUOTE TYPEWRITER REGISTER -->
 
@@ -36,11 +36,11 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 animate__animated animate__flipInY">
-                    <div class="card circleAuth cardLogin px-3 pt-2 pb-3 px-md-5" id="authCard">
+                <div class="col-md-7 animate__animated animate__flipInY">
+                    <div class="card cardLogin px-3 pt-2 pb-3 m-0 m-md-5 px-md-2" id="authCard">
 
-                        <div class="card-body text-center">
-                            <form method="POST" action="{{ route('register') }}">
+                        <div class="card-body text-center px-0 px-md-5 pt-5">
+                            <form class="mx-2 px-0 px-md-5 pt-0 pt-md-2" method="POST" action="{{ route('register') }}">
                                 @csrf
 
                                 <!-- Name -->
@@ -111,9 +111,9 @@
                                         autocomplete="new-password" />
                                 </div>
 
-                                <div class="form-group mt-3">
+                                <div class="form-group d-flex justify-content-center mx-2 mt-3 mb-2">
                                     {!! NoCaptcha::renderJs() !!}
-                                    {!! NoCaptcha::display() !!}
+                                    {!! NoCaptcha::display(['data-theme' => 'dark']) !!}
                                 </div>
 
                                 <div class="row">

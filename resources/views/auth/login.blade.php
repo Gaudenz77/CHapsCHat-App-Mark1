@@ -9,8 +9,8 @@
     <section class="">
         <div class="container">
             <div class="row justify-content-evenly align-items-center">
-                <div class="col-md-6 mt-1 animate__animated animate__flipInX">
-                    <div class="card circleAuth cardLogin  px-3 pt-2 pb-3  px-md-5" id="authCard">
+                <div class="col-md-5 px-2 mt-1 animate__animated animate__flipInX">
+                    <div class="card circleAuth cardLogin px-3 pt-0 pb-3 px-md-5" id="authCard">
                         <div class="card-body text-center">
                             <!-- Session Status -->
                             @if (session('status'))
@@ -18,7 +18,7 @@
                                     {{ session('status') }}
                                 </div>
                             @endif
-                            <form method="POST" action="{{ route('login') }}"> @csrf
+                            <form class="mx-0 mx-md-2 px-0 px-md-4 pt-5" method="POST" action="{{ route('login') }}"> @csrf
                                 <!-- Email Address -->
                                 <label class="form-label loginLabel" for="email">{{ __('Email') }}</label>
                                 <div class="input-group mb-3">
@@ -48,10 +48,11 @@
                                     @enderror
                                 </div>
                                 <!-- Remember Me -->
-                                <div class="mb-3 form-check">
-                                    <input id="remember_me" type="checkbox" class="form-check-input" name="remember">
+                                <div class="mb-3 form-check text-start">
+                                    
                                     <label class="form-check-label loginLabel"
                                         for="remember_me">{{ __('Remember me') }}</label>
+                                        <input id="remember_me" type="checkbox" class="form-check-input" name="remember">
                                 </div>
                                 
                                 <div class="row">
