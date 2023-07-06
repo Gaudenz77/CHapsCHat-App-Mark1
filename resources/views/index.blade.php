@@ -25,14 +25,14 @@
                     </a>
         
                     <a type="button" href="{{ url('/playground') }}" id="button" class="btn btn-index-small rounded-circle col-sm-3 mb-0 {{-- animate__animated animate__backInDown animate__delay-3s --}} overlay-container">
-                        <img class="img-fluid mx-2" src="./assets/img/circle_pure.svg">
+                        <img class="img-fluid mx-1" src="./assets/img/circle_pure.svg">
                         <div class="overlay-small ms-2">
                             <span class="overlay-text-small">ENter thE PlayGroUnD!</span>
                         </div>
                     </a>
         
                     <a type="button" href="{{ url('/knowledgeSphere') }}" id="button" class="btn btn-index-small  col-sm-3 {{-- animate__animated animate__backInRight animate__delay-4s --}} overlay-container">
-                        <img class="img-fluid trianglefixSmall" src="./assets/img/triangle_pure_large.svg">
+                        <img class="img-fluid {{-- trianglefixSmall --}}" src="./assets/img/triangle_blue_pure_small.svg">
                         <div class="overlay-small ms-2 me-3">
                             <span class="overlay-text-small mt-3">ColleCt YouR KnoWledGe!</span>
                         </div>

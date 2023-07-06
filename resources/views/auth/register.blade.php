@@ -110,6 +110,10 @@
                                         title="Confirm your password" type="password" name="password_confirmation" required
                                         autocomplete="new-password" />
                                 </div>
+
+                                <div class="recaptcha">
+                                    {!! GoogleRecaptchaV3::render() !!}
+                                </div>
                                 <div class="row">
                                     <div class="col text-center">
                                         <button type="submit" class=" btn btn-lg btn-auth my-2 p-2 ml-md-4">
@@ -126,6 +130,7 @@
                                         {{ __('Already registered?') }}
                                     </a>
                                 </div>
+                               
 
                             </form>
                         </div>
@@ -202,6 +207,8 @@
         // Call the function on page load and window resize
         window.addEventListener('DOMContentLoaded', removeCircleAuthClass);
         window.addEventListener('resize', removeCircleAuthClass);
+
+
     </script>
 
 @endsection

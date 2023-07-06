@@ -41,6 +41,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Scripts -->
+    {{-- <script src="https://www.google.com/recaptcha/enterprise.js?render=your_site_key"></script> --}}
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
