@@ -112,6 +112,10 @@
     {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
 
     <script>
+        $(window).on('load', function() {
+            $('#cookieModal').modal('show');
+        });
+
 
         /* PAGE SCROLLUP BTN HIDE ON SCROLLDOWN */
         // Attach the scroll event listener when the document is loaded
@@ -203,6 +207,9 @@
               location.reload();
             }, 1000);  */ // Set the desired delay (in milliseconds) between the reloads
         }
+
+
+
     </script>
 
     <!-- DARKMODE TOGGLE START -->

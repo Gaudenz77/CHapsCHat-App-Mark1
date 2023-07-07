@@ -382,7 +382,32 @@ body.dark-mode a {
 
 /* WELCOME / INDEX */
 
-
+.cookiemodal .modal-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 40%;
+  }
+  
+  .cookiemodal .modal-content {
+    margin: auto;
+    transform: translateY(0);
+  }
+  
+  .cookiemodal .modal-footer {
+    justify-content: center;
+  }
+  
+  .cookiemodal .modal-body {
+    background-color: #ebebeb !important;
+  }
+  
+  body.dark-mode .cookiemodal .modal-body  {
+      background-color: #040a1f !important;
+  }
+  
 .overlay-container {
     position: relative;
   }
@@ -638,8 +663,8 @@ body.dark-mode .modal-content{
 
 .btnXModal {
     font-size: 2rem;
-    position: relative;
-    right: 2rem;
+    position: absolute;
+    right: 18px;
 }
 
 /* INDIVIDUAL PAGES DETAILS END -------------------------------------------------------------------------------------- */
