@@ -11,7 +11,7 @@
         <section class="">
             <div class="container-fluid" style="display:inline-block;">
                 <div class="row">
-                    <div class="chatCol col-md-3 px-3 py-3 pb-0 pb-md-5">
+                    <div class="chatCol col-md-3 px-3 py-0 pb-md-5">
                         <div class="mt-2 p-2 pt-4">
                             <h5 class="mb-0">WELCOME to the MESSAGECORNER
                                 <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
@@ -44,20 +44,20 @@
 
                         <div class="d-sm-block d-md-none text-center p-3 pb-0">
                             <div class="btn-group mobileGoner" role="group" aria-label="Basic example">
-                                <button class="btn btn-sm btn-warning rounded" onclick="toggleEditor()"><i
+                                <button class="btn btn-sm btn-warning rounded" onclick="toggleEditorMain()"><i
                                         class="fa-solid fa-power-off"></i> Editor</button>
-                                <button class="btn btn-sm  btn-dark" onclick="togglePreview()"><i
+                                <button class="btn btn-sm  btn-dark" onclick="togglePreviewMain()"><i
                                         class="fa-solid fa-power-off"></i> Preview</button>
                             </div>
                         </div>
-                        <p class="text-end m-2 mb-5 pt-2 pb-3"><small>Messageservice brought to you by </small><a
+                        <p class="text-end m-2 mb-3 mb-md-5 pt-2 pb-3"><small>Messageservice brought <br>to you by </small><a
                                 href="https://pusher.com/">Pusher&copy;</a>
                         </p>
                     </div>
 
-                    <div class="editorCol col-md-5 px-1 px-md-3 py-3 pb-5" id="editorColumn">
+                    <div class="editorCol col-md-5 px-2 px-md-3 py-0 pb-5" id="editorColumn">
                         <div class="mt-2 p-2 pt-4">
-                            <h5 class="mb-0 pb-0">ThiS iS Your EdiTor!
+                            <h5 class="mb-0 pb-0 ms-2">ThiS iS Your EdiTor!
                                 <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
                                     data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
                                     data-bs-title="
@@ -132,14 +132,14 @@
                         </div>
                     </div>
 
-                    <div class="previewCol col-md-4 px-1 px-md-4 py-3 pb-5" id="previewColumn">
+                    <div class="previewCol col-md-4 px-1 px-md-4 py-0 pb-5" id="previewColumn">
                         <div class="mt-2 p-0 pt-4">
                             <h5 class="mb-0 pb-4">YouR ouTpuT!</h5>
                             <div class="col">
                                 <button class="btn btn-sm btn-success mx-1" id="runJavaScriptButton" style="display:none;">Run
                                     JavaScript</button>
                             </div>
-                            <iframe class="mt-3 px-0 pt-4 pb-0" id="preview" style="height:63vh;"></iframe>
+                            <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-4 pb-4 pb-md-0" id="preview" style="height:63vh;"></iframe>
                         </div>
 
                         <div class="px-1 pt-2">
@@ -401,7 +401,7 @@ runJavaScriptButton.addEventListener('click', runJavaScript);
             updatePreview();
         });
 
-        function toggleEditor() {
+        function toggleEditorMain() {
             var column = document.getElementById('editorColumn');
             if (column.style.display === 'none') {
                 column.style.display = 'block';
@@ -410,14 +410,14 @@ runJavaScriptButton.addEventListener('click', runJavaScript);
             }
         }
 
-        /* function togglePreview() {
+        function togglePreviewMain() {
             var column = document.getElementById('previewColumn');
             if (column.style.display === 'none') {
                 column.style.display = 'block';
             } else {
                 column.style.display = 'none';
             }
-        } */
+        }
 
         function toggleEditor(editorId) {
             const editorContainer = document.getElementById(editorId);

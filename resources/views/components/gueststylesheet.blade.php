@@ -309,6 +309,12 @@ body {
     display: flex;
 justify-content: center;
 }
+
+
+#scrollToTopBtn {
+  display: none;
+}
+
 </style>
 <script>
 

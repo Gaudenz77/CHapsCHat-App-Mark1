@@ -137,8 +137,8 @@
 
     <footer class="footer mt-0 ms-3 py-3 bg-footer-gradient footerOwn">
         <div class="container-fluid fixed-bottom text-center">
-            <button class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()"><i
-                    class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
+            <button id="scrollToTopBtn" class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()">
+                <i class="fa-solid fa-circle-chevron-up  fa-4x"></i></button>
             <button id="footerButton" class="btn btn-circleFoot"><span class="material-symbols-outlined">barefoot</span>
                 <p class="footerBtnTextStart">Footer?</p>
             </button>
@@ -155,13 +155,39 @@
     {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
 
     <script>
-        // Scroll top
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
+// Attach the scroll event listener when the document is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Add the scroll event listener
+  window.addEventListener('scroll', handleScroll);
+});
+
+// Function to check the scroll position and show/hide the scroll-to-top button
+function handleScroll() {
+  // Calculate the scroll position and the document height
+  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+  // Calculate the threshold (last 20% of the page)
+  const threshold = documentHeight * 0.8;
+
+  // Show/hide the scroll-to-top button based on the scroll position
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  if (scrollPosition > threshold) {
+    scrollToTopBtn.style.display = 'block';
+  } else {
+    scrollToTopBtn.style.display = 'none';
+  }
+}
+
+// Function to scroll to the top of the page
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+
         /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
@@ -173,7 +199,6 @@
             }
             prevScrollpos = currentScrollPos;
         }
-
 
         /* ENABLE TOOLTIP/POPOVER */
         $(function() {
