@@ -150,6 +150,7 @@
           return "animate__animated animate__fadeInRight";
         }
       },
+      
     },
   };
 </script>

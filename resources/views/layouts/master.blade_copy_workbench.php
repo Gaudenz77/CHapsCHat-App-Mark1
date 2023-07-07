@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-
+    {{--     @if (Auth::check())
+        <meta name="user" content="{{ Auth::user() }}">
+    @endif --}}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> --}}
@@ -32,7 +34,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!---------------------------------------------------------------- GOOGLE FONTS (IN CUSTOM.CSS) -->
+    <!---------------------------------------------------------------- Google Fonts IN CUSTOM.CSS -->
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/areset.css', 'resources/css/custom.css'])
 
@@ -50,6 +52,8 @@
 
     {{--  <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script> --}}
 
+    {{-- <script src="https://unpkg.com/monaco-editor@0.37.0/min/vs/loader.js"></script> --}}
+
     <!-- Include jQuery from a CDN or from your own server -->
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
 
@@ -59,6 +63,36 @@
         body {
             margin-top: 10%;
             overflow: auto;
+        }
+
+        /* toggle container */
+        .card-checkbox.custom-control-input:not(:checked)~.custom-control-label::before {
+            background-color: blue;
+            /* Change the background color of the toggle container  when it is not checked */
+            border-color: yellow;
+            /* Change the border color of the toggle container when it is not checked */
+        }
+
+        .card-checkbox.custom-control-input:checked~.custom-control-label::before {
+            background-color: red;
+            /* Change the color of the toggle container when it is checked */
+            border-color: green;
+            /* Change the border color of the toggle container when it is checked */
+        }
+
+        /* toggle knob */
+        .card-checkbox.checkbox-outside-card.custom-control-input:not(:checked)~.custom-control-label::after {
+            background-color: #fff;
+            /* Change the background color of the knob when it is checked */
+            border: 2px solid purple;
+            /* Add a border if you prefer */
+        }
+
+        .card-checkbox.checkbox-outside-card.custom-control-input:checked~.custom-control-label::after {
+            background-color: pink;
+            /* Change the background color of the knob when it is checked */
+            border: 2px solid violet;
+            /* Add a border if you prefer */
         }
 
         * {

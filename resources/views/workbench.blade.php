@@ -60,7 +60,16 @@
 <i class="fa-solid fa-face-laugh-wink"></i>
 <i class="fa-solid fa-magnifying-glass"></i>
 <i class="fa-regular fa-newspaper"></i>
+
+<i class="fa-brands fa-square-js"></i>
+<i class="fa-brands fa-css3-alt"></i>
+<i class="fa-brands fa-html5"></i>
+
+
+
+
 <span class="material-symbols-outlined">
+
 undo
 </span>
 

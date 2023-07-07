@@ -119,12 +119,9 @@
                             <div class="row">
                                 <div class="col text-end">
                                     <div class="btn-group mt-2">
-                                        <button class="btn btn-sm btn-warning" onclick="toggleEditor('editor')">HTML
-                                            Editor</button>
-                                        <button class="btn btn-sm  btn-info" onclick="toggleEditor('cssEditor')">CSS
-                                            Editor</button>
-                                        <button class="btn btn-sm  btn-success" onclick="toggleEditor('jsEditor')">JavaScript
-                                            Editor</button>
+                                        <button class="btn btn-danger btn-circlesmallEditor ps-2 pt-1 pe-0" onclick="toggleEditor('editor')"><i class="fa-brands fa-html5 fa-2x"></i><p class="editorBtnFonthtml">html</p></button>
+                                        <button class="btn btn-info btn-circlesmallEditor pt-1" onclick="toggleEditor('cssEditor')"><i class="fa-brands fa-css3-alt fa-2x"></i><p class="editorBtnFonthtml">css</p></button>
+                                        <button class="btn btn-success btn-circlesmallEditor pt-1 ps-0" onclick="toggleEditor('jsEditor')"><i class="fa-brands fa-square-js fa-2x"></i><p class="editorBtnFonthtml">jscript</p></button>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +136,7 @@
                                 <button class="btn btn-sm btn-success mx-1" id="runJavaScriptButton" style="display:none;">Run
                                     JavaScript</button>
                             </div>
-                            <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-4 pb-4 pb-md-0" id="preview" style="height:63vh;"></iframe>
+                            <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-4 pb-4 pb-md-0 rounded" id="preview" style="height:63vh;"></iframe>
                         </div>
 
                         <div class="px-1 pt-2">
