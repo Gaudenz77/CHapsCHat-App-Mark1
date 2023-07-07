@@ -1,14 +1,14 @@
   <template>
       <div class="d-flex flex-wrap justify-content-center">
-        <div v-for="blog in blogs" :key="blog.id" class="col-md-10" data-aos="flip-left">
-          <div class="textfieldBlogTitle mx-5 mt-3 px-0 pt-3 pb-2">
+        <div v-for="blog in blogs" :key="blog.id" class="col-md-6" data-aos="flip-left">
+          <div class="textfieldBlogTitle mx-1 mx-md-5 mt-3 px-0 pt-3 pb-2">
             <h2 class="display-6 mx-3 text-start">
               <strong>{{ blog.title }}</strong>
             </h2>
             <!-- <p>User ID: {{ blog.user_id }}</p>
             <p>Auth User ID: {{ authUserId }}</p> -->
             <p>{{ authUserName }}</p>
-            <img :src="getImageUrl(blog.image)" class="img-fluid imageBlog mb-2" alt="Blog Image" />
+            <img :src="getImageUrl(blog.image)" class="img-fluid imageBlog mb-2 px-3" alt="Blog Image" />
             <div class="row justify-content-center">
               <div class="col-5 px-0 mt-4">
                 <button v-if="blog.user_id == authUserId" class="btn btn-circleLibrary ms-4 mt-2 mb-2 p-1" type="button" role="button" @click="deleteBlog(blog.id)">

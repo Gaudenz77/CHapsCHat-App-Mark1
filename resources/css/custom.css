@@ -604,6 +604,10 @@ body.dark-mode .textfieldBlogContent {
     color: #333;
 }
 
+.modal-open {
+    overflow:auto !important;
+}
+
 .modal-title {
     color:#ebebeb !important;
     font-weight:bold;
@@ -616,7 +620,7 @@ body.dark-mode .modal-title {
 }
 
 .modal-backdrop.show {
-
+    z-index:2 !important;
     opacity: var(--bs-backdrop-opacity);
 }
 
@@ -634,6 +638,8 @@ body.dark-mode .modal-content{
 
 .btnXModal {
     font-size: 2rem;
+    position: relative;
+    right: 2rem;
 }
 
 /* INDIVIDUAL PAGES DETAILS END -------------------------------------------------------------------------------------- */

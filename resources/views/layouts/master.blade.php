@@ -48,6 +48,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.39.0/min/vs/loader.min.js"></script>
     <script src="https://unpkg.com/monaco-editor@0.39.0/min/vs/loader.js"></script>
 
+      {{-- <script src="https://unpkg.com/monaco-editor@0.37.0/min/vs/loader.js"></script> --}}
+
     {{--  <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script> --}}
 
     <!-- Include jQuery from a CDN or from your own server -->
