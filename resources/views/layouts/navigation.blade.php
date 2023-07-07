@@ -3,7 +3,7 @@
         style="margin-bottom: -1rem;">
     {{-- @include('components.toggle') --}}
     <div class="display-4 display-md-6 ms-2 sm-my-0"><a class="brand myNavUnderline mt-0 mx-0 ms-2 me-2"
-            href="{{ url('/') }}"><b>{{ config('app.name', 'CHapsCHat') }}</b></a></div>
+            href="{{ url('/') }}"><strong>{{ config('app.name', 'CHapsCHat') }}</strong></a></div>
 
     <button class="navbar-toggler navBarTogglOwn custom-toggler me-3 mb-0" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -23,35 +23,35 @@
 
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
 
-                <li class="nav-item">
+                <li class="nav-item pt-3">
                     @if (Route::has('login'))
                         @auth
                     </li>
 
-                    <li class="nav-item pt-4">
+                    <li class="nav-item pt-3">
                         <a class="myNavUnderline px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                             href="{{ url('/playground') }}" onclick="reloadTwice()"><b>Playground</b></a>
                     </li>
                 @endauth
 
-                <li class="nav-item pt-4">
+                <li class="nav-item pt-3">
                     <a class="myNavUnderline px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                         href="{{ url('/blogoSphere') }}"><b>Blogosphere</b></a>
                 </li>
 
                 @auth
-                    <li class="nav-item pt-4">
+                    <li class="nav-item pt-3">
                         <a class="myNavUnderline px-0 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                             href="{{ url('/knowledgeSphere ') }}"><b>KnowledgeSphere</b></a>
                     </li>
                 @endauth
-                <li class="nav-item pt-4">
+                <li class="nav-item pt-3">
                     <a class="myNavUnderline px-0 {{ request()->is('about') ? '' : '' }}" aria-current="page"
                         href="{{ url('/about') }}"><b>About</b></a>
                 </li>
                 @auth
                     <li class="nav-item dropdown mx-0 pe-4">
-                        <a class="myNavUnderline dropdown-toggle pt-4 mt-2" href="#" role="button"
+                        <a class="myNavUnderline dropdown-toggle pt-3 mt-2" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <b>{{ Auth::user()->name }}</b>
                         </a>
@@ -65,13 +65,13 @@
                                 @csrf
                             </form>
                         @else
-                            <li class="nav-item pt-4">
+                            <li class="nav-item pt-3">
                                 <a class="nav-item myNavUnderline px-0" href="{{ route('login') }}"
                                     class=""><b>Login</b></a>
                             </li>
 
                             @if (Route::has('register'))
-                                <li class="nav-item pt-4">
+                                <li class="nav-item pt-3">
                                     <a class="nav-item myNavUnderline px-0" href="{{ route('register') }}"
                                         class=""><b>Register</b></a>
                                 </li>

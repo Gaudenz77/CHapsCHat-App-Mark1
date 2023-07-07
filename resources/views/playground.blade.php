@@ -55,7 +55,7 @@
                         </p>
                     </div>
 
-                    <div class="editorCol col-md-5 px-2 px-md-3 py-0 pb-5" id="editorColumn">
+                    <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-5" id="editorColumn">
                         <div class="mt-2 p-2 pt-4">
                             <h5 class="mb-0 pb-0 ms-2">ThiS iS Your EdiTor!
                                 <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
@@ -76,7 +76,7 @@
                                     <i class="fa-solid fa-circle-info"></i></a>
                             </h5>
                         </div>
-                        <div class="container">
+                        <div class="container px-0">
                             <div class="row justify-content-between">
                                 <div class="col-4 px-3 d-flex align-items-end">
                                     <div class="form-check form-switch">
@@ -132,7 +132,7 @@
                         </div>
                     </div>
 
-                    <div class="previewCol col-md-4 px-1 px-md-4 py-0 pb-5" id="previewColumn">
+                    <div class="previewCol col-md-4 px-2 px-md-3 py-0 pb-5" id="previewColumn">
                         <div class="mt-2 p-0 pt-4">
                             <h5 class="mb-0 pb-4">YouR ouTpuT!</h5>
                             <div class="col">
