@@ -3,9 +3,10 @@
         style="margin-bottom: -1rem;">
     {{-- @include('components.toggle') --}}
     <div class="display-4 display-md-6 ms-2 sm-my-0"><a class="brand myNavUnderline mt-0 mx-0 ms-2 me-2"
-            href="{{ url('/') }}"><strong>{{ config('app.name', 'CHapsCHat') }}</strong></a></div>
+            href="{{ url('/') }}"><strong>{{ config('app.name', 'CHapsCHat') }}</strong></a>
+    </div>
 
-    <button class="navbar-toggler navBarTogglOwn custom-toggler me-3 mb-0" type="button" data-bs-toggle="offcanvas"
+    <button class="navbar-toggler navBarTogglOwn {{-- custom-toggler --}} me-3 mb-0" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>   
     </button>
@@ -19,19 +20,24 @@
             <button type="button" class="btn-close me-5 mb-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
+
+        
         <div class="offcanvas-body px-3">
 
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
 
+                
+
                 <li class="nav-item pt-3">
                     @if (Route::has('login'))
                         @auth
-                    </li>
+                </li>
 
-                    <li class="nav-item pt-3">
-                        <a class="myNavUnderline pt-3 {{ request()->is('/') ? '' : '' }}" aria-current="page"
-                            href="{{ url('/playground') }}" onclick="reloadTwice()"><b>Playground</b></a>
-                    </li>
+                <li class="nav-item pt-3">
+                    <a class="myNavUnderline pt-3 {{ request()->is('/') ? '' : '' }}" aria-current="page"
+                        href="{{ url('/playground') }}" onclick="reloadTwice()"><b>Playground</b></a>
+                </li>
+
                 @endauth
 
                 <li class="nav-item pt-3">
@@ -79,7 +85,7 @@
                         @endif
                     </ul>
                 </li>
-                <li class="listToggle" style="list-style-type: none;">
+                <li class="nav-item mt-3 mt-md-0 pt-2" style="list-style-type: none; width:10rem;">
                     @include('components.toggle')
                 </li>
             </ul>

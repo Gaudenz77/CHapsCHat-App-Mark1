@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 @extends('layouts.master')
 
 @section('title', 'ChapsChat')
@@ -18,7 +19,7 @@
             <div id="logoMiddle" class="row justify-content-center d-lg-none" {{-- style="display:;" --}}>
                 <div class="col-12  d-flex align-items-middle ms-3">
                     <a type="button" href="{{ url('/blogoSphere') }}" id="button"
-                        class="btn btn-index-small col-sm-3 pe-0 me-md-4 me-lg-4 {{-- animate__animated animate__backInLeft animate__delay-2s --}} overlay-container">
+                        class="btn btn-index-small col-sm-3 pe-0 me-md-4 me-lg-4 animate__animated animate__backInLeft animate__delay-2s overlay-container">
                         <img class="img-fluid squareSmall" src="./assets/img/square_pure.svg">
                         <div class="overlay-small">
                             <span class="overlay-text-small">ReaD thE latesT BlOgs!</span>
@@ -26,7 +27,7 @@
                     </a>
 
                     <a type="button" href="{{ url('/playground') }}" id="button"
-                        class="btn btn-index-small rounded-circle col-sm-3 px-0 mb-0 {{-- animate__animated animate__backInDown animate__delay-3s --}} overlay-container">
+                        class="btn btn-index-small rounded-circle col-sm-3 px-0 mb-0 animate__animated animate__backInDown animate__delay-3s overlay-container">
                         <img class="img-fluid mx-1" src="./assets/img/circle_pure.svg">
                         <div class="overlay-small">
                             <span class="overlay-text-small">ENter thE PlayGroUnD!</span>
@@ -34,7 +35,7 @@
                     </a>
 
                     <a type="button" href="{{ url('/knowledgeSphere') }}" id="button"
-                        class="btn btn-index-small  col-sm-3 ps-0 {{-- animate__animated animate__backInRight animate__delay-4s --}} overlay-container">
+                        class="btn btn-index-small  col-sm-3 ps-0 animate__animated animate__backInRight animate__delay-4s overlay-container">
                         <div class="col-12">
                             <img class="img-fluid ps-2" src="./assets/img/triangle_blue_pure_small.svg">
                         </div>
@@ -49,21 +50,21 @@
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     <div class="container text-center">
-                        <h1 class="hookLine display-5 display-md-3 pt-3 pb-1 pb-md-3 text-center {{-- animate__animated animate__zoomInUp animate__delay-5s --}}">
+                        <h1 class="hookLine display-5 display-md-3 pt-3 pb-1 pb-md-3 text-center animate__animated animate__zoomInUp animate__delay-5s">
                             <b>{{ __('Welcome To CHapsCHat') }}</b>
                         </h1>
-                        <p class="indexListText lead mb-sm-0 {{-- animate__animated animate__bounceInLeft animate__delay-1s --}}">
+                        <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInLeft animate__delay-1s">
                             <strong>1. Let's chat and code together:</strong> <a
                                 class="hookLinePara nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
                                 aria-current="page" href="{{ url('/playground') }} " onclick="reloadTwice()"><b>>>> Welcome
                                     to the Palyground. Join Now!</b></a>
                         </p>
-                        <p class="indexListText lead mb-sm-0 {{-- animate__animated animate__bounceInRight animate__delay-2s --}}">
+                        <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInRight animate__delay-2s">
                             <strong>2. Visit our Blog:</strong> <a
                                 class="hookLinePara myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
                                 aria-current="page" href="{{ url('/blogoSphere') }}"><b>>>> Read more...</b></a>
                         </p>
-                        <p class="indexListText lead mb-sm-0 {{-- animate__animated animate__bounceInUp animate__delay-3s --}}">
+                        <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInUp animate__delay-3s">
                             <strong>3. Go to Your Personal Library:</strong> <a
                                 class="hookLinePara myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
                                 aria-current="page" href="{{ url('/knowledgeSphere') }}"><b>>>> Explore Now</b></a>
@@ -77,7 +78,7 @@
         <div class="row justify-content-center">
             <div class="col-12 text-center d-none d-md-block d-lg-block">
                 <a type="button" href="{{ url('/blogoSphere') }}"
-                    class="btn btn-index col-sm-3 me-md-4 me-lg-4 {{-- animate__animated animate__backInLeft animate__delay-2s --}} overlay-container">
+                    class="btn btn-index col-sm-3 me-md-4 me-lg-4 animate__animated animate__backInLeft animate__delay-2s overlay-container">
                     <img class="img-fluid p-3" src="./assets/img/square_pure.svg">
                     <div class="overlay">
                         <span class="overlay-text">ReaD thE latesT BlOgs!</span>
@@ -85,7 +86,7 @@
                 </a>
 
                 <a type="button" href="{{ url('/playground') }}" id="button"
-                    class="btn btn-index rounded-circle col-sm-3 mb-0 {{-- animate__animated animate__backInDown animate__delay-3s --}} overlay-container">
+                    class="btn btn-index rounded-circle col-sm-3 mb-0 animate__animated animate__backInDown animate__delay-3s overlay-container">
                     <img class="img-fluid p-3" src="./assets/img/circle_pure.svg">
                     <div class="overlay">
                         <span class="overlay-text">ENter thE PlyGroUnD!</span>
@@ -93,7 +94,7 @@
                 </a>
 
                 <a type="button" href="{{ url('/knowledgeSphere') }}" id="button"
-                    class="btn btn-index  col-sm-3 {{-- animate__animated animate__backInRight animate__delay-4s --}} overlay-container">
+                    class="btn btn-index  col-sm-3  animate__animated animate__bounceInUp animate__delay-s overlay-container">
                     <img class="img-fluid triangleFix" src="./assets/img/triangle_pure_large.svg">
                     <div class="overlay">
                         <span class="overlay-text mt-5 me-4">ColleCt YouR KnoWledGe!</span>
@@ -106,7 +107,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade cookiemodal" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel"
+    <div class="modal fade cookiemodal" id="cookiemodal" tabindex="-1" aria-labelledby="cookieModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -133,41 +134,42 @@
 @endsection
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var cookieModal = document.getElementById('cookieModal');
-        var acceptCookiesBtn = document.getElementById('acceptCookiesBtn');
+document.addEventListener('DOMContentLoaded', function() {
+  var cookieModal = document.getElementById('cookiemodal');
+  var acceptCookiesBtn = document.getElementById('acceptCookiesBtn');
 
-        // Show the modal
-        function showModal() {
-            cookieModal.classList.add('show');
-            cookieModal.style.display = 'block';
-            document.body.classList.add('modal-open');
-            document.body.appendChild(document.createElement('div')).classList.add('modal-backdrop', 'fade',
-                'show');
-        }
+  // Show the modal
+  function showModal() {
+    cookieModal.classList.add('show');
+    cookieModal.style.display = 'block';
+    document.body.classList.add('modal-open');
+    document.body.appendChild(document.createElement('div')).classList.add('modal-backdrop', 'fade', 'show');
+  }
 
-        // Hide the modal
-        function hideModal() {
-            cookieModal.classList.remove('show');
-            cookieModal.style.display = 'none';
-            document.body.classList.remove('modal-open');
-            var backdrop = document.querySelector('.modal-backdrop');
-            document.body.removeChild(backdrop);
-        }
+  // Hide the modal
+  function hideModal() {
+    cookieModal.classList.remove('show');
+    cookieModal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+    var backdrop = document.querySelector('.modal-backdrop');
+    document.body.removeChild(backdrop);
+  }
 
-        // Check if the user has already accepted the cookies
-        if (!localStorage.getItem('cookieConsent')) {
-            showModal();
-        }
+  // Check if the user has already accepted the cookies
+  var hasConsent = localStorage.getItem('cookieConsent');
+  console.log('hasConsent:', hasConsent); // Log the value
+  if (hasConsent != 'true') {
+    showModal();
+  }
 
-        // Handle accept button click
-        acceptCookiesBtn.addEventListener('click', function() {
-            // Set the cookie consent flag in localStorage
-            localStorage.setItem('cookieConsent', 'true');
+  // Handle accept button click
+  acceptCookiesBtn.addEventListener('click', function() {
+    // Set the cookie consent flag in localStorage
+    localStorage.setItem('cookieConsent', 'true');
 
-            // Hide the modal
-            hideModal();
-        });
-    });
-    
+    // Hide the modal
+    hideModal();
+  });
+});
+
 </script>

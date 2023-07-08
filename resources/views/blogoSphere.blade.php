@@ -10,7 +10,7 @@
 <section class="">
   <div class="container-fluid">
     <div class="row justify-content-center align-items-middle">
-      <div class="col-sm-4 col-lg-3 columnBlogTwo px-lg-4 px-2 pt-4 mb-0" id="formContainer" style="display: none;">
+      <div class="col-sm-4 col-lg-3 columnBlogTwo pb-3 pb-md-5 px-lg-4 px-2 pt-4 mb-0" id="formContainer" style="display: none;">
         <div class="form-wrapper"> 
           @auth 
           <h1 class="">Create Blog</h1>
@@ -24,7 +24,7 @@
           <div class="row"> 
           @auth 
             <div class="col-12 text-center mt-0 mt-md-3 mb-0 mb-md-2">
-              <button class="btn btn-own mt-md-0 mt-0 mt-md-3 text-end" type="button" role="button" id="createButton2">
+              <button class="btn btn-own mt-md-0 mt-4 mt-md-2 text-end" type="button" role="button" id="createButton2">
                 <i class="fa-solid fa-circle-plus fa-4x formOwnOne pt-2" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-html="true" title="
 									<b>Press to<br>open form</b>">
                 </i>

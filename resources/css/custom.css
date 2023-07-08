@@ -356,7 +356,7 @@ body.dark-mode a {
 
     .circleKnowledgeForm {
         position: relative;
-        width: 50%;
+        width: 40%;
         border-radius: 50%;
         padding: 3rem 2rem 4rem 2rem;
         margin-top: 1rem;
@@ -382,37 +382,38 @@ body.dark-mode a {
 
 /* WELCOME / INDEX */
 
-.cookiemodal .modal-dialog {
+.cookieModal .modal-dialog {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    width: 40%;
-  }
-  
-  .cookiemodal .modal-content {
+    left: 0;
+    right: 0;
+    top:50%;
+    bottom: 0;
     margin: auto;
-    transform: translateY(0);
-  }
+    width:90%;
+}
   
-  .cookiemodal .modal-footer {
-    justify-content: center;
-  }
+.cookieModal .modal-content {
+    margin-top: auto;
+    margin-bottom: 0;
+}
   
-  .cookiemodal .modal-body {
+.cookieModal .modal-footer {
+    justify-content: flex-end;
+}
+  
+.cookieModal .modal-body {
     background-color: #ebebeb !important;
-  }
+}
   
-  body.dark-mode .cookiemodal .modal-body  {
-      background-color: #040a1f !important;
-  }
+body.dark-mode .cookieModal .modal-body  {
+    background-color: #040a1f !important;
+}
   
 .overlay-container {
     position: relative;
-  }
+}
   
-  .overlay {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -424,27 +425,27 @@ body.dark-mode a {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s;
-  }
+}
   
-  .overlay:hover,
-  .overlay:focus {
+.overlay:hover,
+.overlay:focus {
     opacity: 1;
     outline: none; /* Removes the default focus outline */
-  }
+}
   
-  .overlay-text {
+.overlay-text {
     color: white;
     font-size: 18px;
     font-weight: bold;
     transform: rotate(-45deg);
-  }
+}
   
-  .overlay-text-triangle {
+.overlay-text-triangle {
     color: white;
     font-size: 18px;
     font-weight: bold;
     transform:(-60deg);
-  }
+}
 
   /* INDEX SMALL */
 
@@ -1601,10 +1602,8 @@ left:-30px;
 }
 
 .labelToggle {
-    width: 29%;
-    position: relative;
-    left: 16px;
-    bottom: 10px;
+    display:flex;
+    width:1%;
 }
 
 .custom-checkbox[type="checkbox"] {

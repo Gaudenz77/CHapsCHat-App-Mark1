@@ -31,24 +31,23 @@
                                 <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
                                     data-bs-trigger="focus" data-bs-html="true"
                                     data-bs-title="
-                  <div class=''>How To Use Your Library  
-                   <i class='animate__animated animate__flip fa-solid fa-face-laugh-wink ps-2'></i>
-                  </div>"
+                                    <div class=''>How To Use Your Library  
+                                    <i class='animate__animated animate__flip fa-solid fa-face-laugh-wink ps-2'></i>
+                                    </div>"
                                     data-bs-content="
-                <div class=''>
-                    <ol>
-                        <li>Give your entry a meaningful title (# included).</li>
-                        <li>Fill in content as you wish (text only atm).</li>
-                        <li>Send your record to your personal library by pressing the disc.</li>
-                        <li>You can edit and delete all your records anytime.</li>
-                        <li><strong>Both, the new entry and edit inputs take HTML tags!</strong></li>
-                    </ol>
-                </div>">
-                                    <i
-                                        class="fa-solid fa-circle-info fa-4x infoKnowledge animate__animated animate__heartBeat animate__delay-5s"></i></a>
+                                    <div class=''>
+                                        <ol>
+                                            <li>Give your entry a meaningful title (# included).</li>
+                                            <li>Fill in content as you wish (text only atm).</li>
+                                            <li>Send your record to your personal library by pressing the disc.</li>
+                                            <li>You can edit and delete all your records anytime.</li>
+                                            <li><strong>Both, the new entry and edit inputs take HTML tags!</strong></li>
+                                        </ol>
+                                    </div>">
+                                    <i class="fa-solid fa-circle-info fa-4x infoKnowledge animate__animated animate__heartBeat animate__delay-5s"></i></a>
+                                                </div>
+                                <p class="hintKnowledge my-3">Arm yourself, with knowledge!</p>
                             </div>
-                            <p class="hintKnowledge my-3">Arm yourself, with knowledge!</p>
-                        </div>
                         <my-library-form :edit-mode="editMode"></my-library-form>
                     </div>
                 </div>

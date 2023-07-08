@@ -55,9 +55,9 @@
                         </p>
                     </div>
 
-                    <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-5" id="editorColumn">
+                    <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn">
                         <div class="mt-2 p-2 pt-4">
-                            <h5 class="mb-0 pb-0 ms-2">ThiS iS Your EdiTor!
+                            <h5 class="mb-0 pb-0 ms-0">ThiS iS Your EdiTor!
                                 <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
                                     data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
                                     data-bs-title="
@@ -95,12 +95,12 @@
                                 </div>
 
                                 <div class="col-4 d-flex justify-content-center">
-                                    <div class="mt-3 pb-0">
-                                        <button class="btn btn-sm btn-info" id="formatButton">Prettify!</button>
+                                    <div class="mt-3 pt-md-1 pb-0">
+                                        <button class="btn btn-sm btn-info p-0 mb-2 mb-md-0" id="formatButton"><i class="fa-solid fa-code"></i> Prettify!</button>
                                     </div>
                                 </div>
 
-                                <div class="col-4 d-flex pe-3 justify-content-end">
+                                <div class="col-4 d-flex mt-3 mt-md-0 pe-3 justify-content-end">
                                     <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
                                         <button id="undoButton" type="button" class="btn btn-undo">
                                             <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
@@ -112,9 +112,9 @@
                                 </div>
                             </div>
 
-                            <div id="editor" class="editor-container" style="height: 60vh;"></div>
-                            <div id="cssEditor" class="editor-container" style="height: 60vh; display: none;"></div>
-                            <div id="jsEditor" class="editor-container" style="height: 60vh; display: none;"></div>
+                            <div id="editor" class="editor-container" style="height: 65vh;"></div>
+                            <div id="cssEditor" class="editor-container" style="height: 65vh; display: none;"></div>
+                            <div id="jsEditor" class="editor-container" style="height: 65vh; display: none;"></div>
 
                             <div class="row">
                                 <div class="col text-end">
@@ -133,10 +133,10 @@
                         <div class="mt-2 p-0 pt-4">
                             <h5 class="mb-0 pb-4">YouR ouTpuT!</h5>
                             <div class="col">
-                                <button class="btn btn-sm btn-success mx-1" id="runJavaScriptButton" style="display:none;">Run
-                                    JavaScript</button>
+                                <button class="btn btn-sm btn-success mx-1" id="runJavaScriptButton" style="display:none;">
+                                    <i class="fa-brands fa-square-js fa-xl"></i> Run JavaScript</button>
                             </div>
-                            <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-4 pb-4 pb-md-0 rounded" id="preview" style="height:63vh;"></iframe>
+                            <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-4 pb-4 pb-md-0 rounded" id="preview" style="height:67vh;"></iframe>
                         </div>
 
                         <div class="px-1 pt-2">

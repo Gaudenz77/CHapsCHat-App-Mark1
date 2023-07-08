@@ -9,10 +9,7 @@
         .registerMain {
             margin-top: 125px;
             margin-bottom: 13vh;
-            }
-        
-
-        
+        }
 
         .blogMain {
             margin-top: 6rem;
@@ -34,7 +31,7 @@
         }
 
         .colTriangle {
-            left: 52%;
+            /* left: 52%; */
         }
 
         .navbar-toggler {
@@ -44,13 +41,6 @@
         }
 
         .logoImg {
-            /* width: 30%;
-            margin-left: 2rem;
-            margin-bottom: -20px;
-            padding-left: 1rem;
-            position: relative;
-            left: 0;
-            justify-content: center; */
             display:none;
         }
 
@@ -72,11 +62,13 @@
         }
 
         .span1 {
-            height: 10.3vh;
+            height: 11.3vh;
+            background-color: #091540;
         }
 
         body.dark-mode .span1 {
-            height: 10.3vh;
+            height: 11.3vh;
+            background-color: #ffffff;
         }
 
         .welcomeSmall {
@@ -105,7 +97,7 @@
         body.dark-mode .span1 {
             color: #333;
             background-color: #091540;
-            height: 10.3vh;
+            height: 11vh;
         }
 
         .indexListText {
@@ -120,7 +112,6 @@
         .hookLinePara {
             color:red !important;
         }
-
 
     }
 
@@ -172,7 +163,7 @@
         .span1 {
             color: #ebebeb;
             background-color: #091540;
-            height: 10.5vh;
+            height: 11.3vh;
             bottom:-8px;
         }
 
@@ -242,10 +233,6 @@
     body.dark-mode .btn-auth:focus {
         outline: none;
     }
-
-    /* .footerOwn {
-        height: 11vh;
-    } */
 
     .custom-toggler.navbar-toggler {
         border-color: rgb(255, 255, 0);
@@ -359,6 +346,43 @@ body.dark-mode .btn-circlesmallEditor:focus {
     position: relative;
     bottom: 8px;
 }
+
+.scrollUpChevron {
+        color:#0000ff;
+}
+
+body.dark-mode .scrollUpChevron {
+        color:#ffff00;
+}
+
+
+.cookiemodal .modal-dialog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:50%;
+    bottom: 0;
+    margin: auto;
+    width:90%;
+}
+  
+.cookiemodal .modal-content {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+  
+.cookiemodal .modal-footer {
+    justify-content: flex-end;
+}
+  
+.cookiemodal .modal-body {
+    background-color: #ebebeb !important;
+}
+  
+body.dark-mode .cookiemodal .modal-body  {
+    background-color: #040a1f !important;
+}
+
 
 </style>
 
