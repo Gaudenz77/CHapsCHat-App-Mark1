@@ -113,7 +113,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="cookieModalLabel">Cookie Consent</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close d-none" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p>This website uses cookies to ensure you get the best experience on our website.</p>
@@ -158,9 +158,13 @@ document.addEventListener('DOMContentLoaded', function() {
   // Check if the user has already accepted the cookies
   var hasConsent = localStorage.getItem('cookieConsent');
   console.log('hasConsent:', hasConsent); // Log the value
-  if (hasConsent != 'true') {
-    showModal();
-  }
+
+  // Delay showing the modal
+  setTimeout(function() {
+    if (!hasConsent || hasConsent !== 'true') {
+      showModal();
+    }
+  }, 10000); // 10 seconds delay
 
   // Handle accept button click
   acceptCookiesBtn.addEventListener('click', function() {

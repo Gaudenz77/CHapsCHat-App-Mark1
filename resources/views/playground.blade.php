@@ -12,6 +12,7 @@
             <div class="container-fluid" style="display:inline-block;">
                 <div class="row">
                     <div class="chatCol col-md-3 px-3 py-0 pb-md-5">
+                        {{-- <div class="chatCol col-md-3 px-3 py-0 pb-md-5" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;"> --}}
                         <div class="mt-2 p-2 pt-4">
                             <h5 class="mb-0">WELCOME to the MESSAGECORNER
                                 <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
@@ -43,6 +44,7 @@
                         </div>
 
                         <div class="d-sm-block d-md-none text-center p-3 pb-0">
+                            
                             <div class="btn-group mobileGoner" role="group" aria-label="Basic example">
                                 <button class="btn btn-sm btn-warning rounded" onclick="toggleEditorMain()"><i
                                         class="fa-solid fa-power-off"></i> Editor</button>
@@ -55,7 +57,8 @@
                         </p>
                     </div>
 
-                    <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn">
+                    {{-- <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox_green.jpeg');background-size: inherit;"> --}}
+                    <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;">
                         <div class="mt-2 p-2 pt-4">
                             <h5 class="mb-0 pb-0 ms-0">ThiS iS Your EdiTor!
                                 <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
