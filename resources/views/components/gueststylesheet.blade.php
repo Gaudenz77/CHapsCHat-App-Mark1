@@ -17,8 +17,8 @@
         }
 
         .aboutMain {
-            margin-top: 22vh;
-            margin-bottom: 16vh;
+            margin-top: 16vh;
+            margin-bottom: 13vh;
         }
 
         .footer {
@@ -140,10 +140,9 @@
         }
 
         .aboutMain {
-            margin-top: 35vh;* {
-            /* border: 1px solid red !important; */
-        }
-            margin-bottom: 18vh;
+            margin-top: 12vh;
+            margin-bottom: 6rem;
+            }
         }
 
         .aboutCol {
