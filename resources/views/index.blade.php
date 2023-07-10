@@ -107,7 +107,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade cookiemodal" id="cookiemodal" tabindex="-1" aria-labelledby="cookieModalLabel"
+    {{-- <div class="modal fade cookiemodal" id="cookiemodal" tabindex="-1" aria-labelledby="cookieModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -129,12 +129,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 @endsection
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
   var cookieModal = document.getElementById('cookiemodal');
   var acceptCookiesBtn = document.getElementById('acceptCookiesBtn');
 
@@ -174,6 +174,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hide the modal
     hideModal();
   });
-});
+}); */
 
 </script>

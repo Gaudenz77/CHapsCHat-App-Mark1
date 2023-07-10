@@ -79,6 +79,9 @@
                                     <i class="fa-solid fa-circle-info"></i></a>
                             </h5>
                         </div>
+                        <div class="craftsMan">
+                            <img src="./assets/img/Subtracttool_plaque_main.svg" alt="">
+                        </div>
                         <div class="container px-0">
                             <div class="row justify-content-between">
                                 <div class="col-4 px-3 d-flex align-items-end">
