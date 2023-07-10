@@ -62,12 +62,12 @@
         }
 
         .span1 {
-            height: 11.3vh;
+            height: 13vh;
             background-color: #091540;
         }
 
         body.dark-mode .span1 {
-            height: 11.3vh;
+            height: 13vh;
             background-color: #ffffff;
         }
 
@@ -386,6 +386,10 @@ body.dark-mode .cookiemodal .modal-body  {
 
 .toolPlaque {
     transform: rotate(10deg);
+}
+
+.mobileGoner {
+    border-radius:50%;
 }
 
 </style>

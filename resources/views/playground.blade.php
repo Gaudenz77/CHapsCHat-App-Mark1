@@ -46,9 +46,9 @@
                         <div class="d-sm-block d-md-none text-center p-3 pb-0">
                             
                             <div class="btn-group mobileGoner" role="group" aria-label="Basic example">
-                                <button class="btn btn-sm btn-warning rounded" onclick="toggleEditorMain()"><i
+                                <button class="btn btn-sm btn-warning"  type="button" onclick="toggleEditorMain()"><i
                                         class="fa-solid fa-power-off"></i> Editor</button>
-                                <button class="btn btn-sm  btn-dark" onclick="togglePreviewMain()"><i
+                                <button class="btn btn-sm  btn-dark" type="button" onclick="togglePreviewMain()"><i
                                         class="fa-solid fa-power-off"></i> Preview</button>
                             </div>
                         </div>
@@ -92,9 +92,9 @@
                                         <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
                                             data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
                                             data-bs-title="
-                                <div class=''>Change main font color</div>"
+                                            <div class=''>Change main font color</div>"
                                             data-bs-content="
-                                <div class=''>Change font-color to fit with page dark/bright-mode</div>"
+                                            <div class=''>Change font-color to fit with page dark/bright-mode</div>"
                                             style="font-size:1rem;">
                                             <i class="fa-solid fa-circle-info infoToggle"></i></a>
                                     </div>
