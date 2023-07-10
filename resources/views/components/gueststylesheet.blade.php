@@ -91,13 +91,13 @@
         .span1 {
             color: #ebebeb;
             background-color: #ffffff;
-            height: 11vh;
+            height: 13vh;
         }
 
         body.dark-mode .span1 {
             color: #333;
             background-color: #091540;
-            height: 11vh;
+            height: 13vh;
         }
 
         .indexListText {
@@ -143,7 +143,6 @@
             margin-top: 12vh;
             margin-bottom: 6rem;
             }
-        }
 
         .aboutCol {
             height: 40vh;
@@ -162,7 +161,7 @@
         .span1 {
             color: #ebebeb;
             background-color: #091540;
-            height: 11.3vh;
+            height: 13vh;
             bottom:-8px;
         }
 
@@ -170,6 +169,7 @@
 
             color: #ebebeb;
             background-color: #ffffff;
+            height: 13vh;
             color: #333;
             
         }
