@@ -6,7 +6,7 @@
             href="{{ url('/') }}"><strong>{{ config('app.name', 'CHapsCHat') }}</strong></a>
     </div>
 
-    <button class="navbar-toggler navBarTogglOwn {{-- custom-toggler --}} me-3 mb-0" type="button" data-bs-toggle="offcanvas"
+    <button class="navbar-toggler navBarTogglOwn custom-toggler me-3 mb-0" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>   
     </button>

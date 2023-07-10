@@ -59,8 +59,8 @@
 
                     {{-- <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox_green.jpeg');background-size: inherit;"> --}}
                     <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;">
-                        <div class="mt-2 p-2 pt-4">
-                            <h5 class="mb-0 pb-0 ms-0">ThiS iS Your EdiTor!
+                        <div class="mt-2 p-2 pt-4 d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0 pb-0 ms-0 bg-secondary p-2">ThiS iS Your EdiTor!
                                 <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
                                     data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
                                     data-bs-title="
@@ -77,15 +77,15 @@
                                 </ol>
                             </div>'>
                                     <i class="fa-solid fa-circle-info"></i></a>
+                                    
                             </h5>
+                            <img src="./assets/img/tool_plaque_yellow_bg_black.png" alt="Info" class="img-fluid toolPlaque pb-2" alt="tool_plaque">
                         </div>
-                        <div class="craftsMan">
-                            <img src="./assets/img/Subtracttool_plaque_main.svg" alt="">
-                        </div>
+
                         <div class="container px-0">
                             <div class="row justify-content-between">
                                 <div class="col-4 px-3 d-flex align-items-end">
-                                    <div class="form-check form-switch">
+                                    <div class="form-check form-switch mb-2">
                                         <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch"
                                             id="fontColorSwitch">
                                         <label class="form-check-label" for="flexSwitchCheckDefault"></label>
@@ -101,13 +101,13 @@
                                 </div>
 
                                 <div class="col-4 d-flex justify-content-center">
-                                    <div class="mt-3 pt-md-1 pb-0">
-                                        <button class="btn btn-sm btn-info p-0 mb-2 mb-md-0" id="formatButton"><i class="fa-solid fa-code"></i> Prettify!</button>
+                                    <div class="mt-3 pt-md-1 pb-2">
+                                        <button class="btn btn-sm btn-info p-1 mb-1 mb-md-0 pb-1" id="formatButton"><i class="fa-solid fa-code"></i> Prettify!</button>
                                     </div>
                                 </div>
 
                                 <div class="col-4 d-flex mt-3 mt-md-0 pe-3 justify-content-end">
-                                    <div class="btn-group undoRedoGroup mb-2" role="group" aria-label="Basic example">
+                                    <div class="btn-group undoRedoGroup mb-2 pt-1" role="group" aria-label="Basic example">
                                         <button id="undoButton" type="button" class="btn btn-undo">
                                             <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
                                         </button>
@@ -118,9 +118,9 @@
                                 </div>
                             </div>
 
-                            <div id="editor" class="editor-container" style="height: 65vh;"></div>
-                            <div id="cssEditor" class="editor-container" style="height: 65vh; display: none;"></div>
-                            <div id="jsEditor" class="editor-container" style="height: 65vh; display: none;"></div>
+                            <div id="editor" class="editor-container" style="height: 62vh;"></div>
+                            <div id="cssEditor" class="editor-container" style="height: 62vh; display: none;"></div>
+                            <div id="jsEditor" class="editor-container" style="height: 62vh; display: none;"></div>
 
                             <div class="row">
                                 <div class="col text-end">
@@ -142,7 +142,7 @@
                                 <button class="btn btn-sm btn-success mx-1" id="runJavaScriptButton" style="display:none;">
                                     <i class="fa-brands fa-square-js fa-xl"></i> Run JavaScript</button>
                             </div>
-                            <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-4 pb-4 pb-md-0 rounded" id="preview" style="height:67vh;"></iframe>
+                            <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-4 pb-4 pb-md-0 rounded" id="preview" style="height:68vh;"></iframe>
                         </div>
 
                         <div class="px-1 pt-2">

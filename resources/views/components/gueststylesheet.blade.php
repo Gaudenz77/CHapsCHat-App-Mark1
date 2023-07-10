@@ -384,6 +384,10 @@ body.dark-mode .cookiemodal .modal-body  {
 }
 
 
+.toolPlaque {
+    transform: rotate(10deg);
+}
+
 </style>
 
 <script>
