@@ -83,7 +83,7 @@
 
             </div>
 
-            <div class="col-md-4 bg-warning mb-0 mb-md-3 p-3 px-5 animate__animated animate__flipInY animate__delay-2s">
+            <div class="col-md-4 bg-warning mb-0 mb-md-3 p-3 px-4 {{-- animate__animated animate__flipInY animate__delay-2s --}}">
                 <ul class="list-unstyled">
                     <li class="text-center">
 
@@ -105,7 +105,7 @@
                 </form>
 
                 <h1 class="display-6 mx-0 mt-5"><b>Mailto:</b></h1>
-                <a class="lead mx-0" href="mailto:krakatoom@proton.me"><b>krakatoom@proton.me:</b></a>
+                <a class="mx-0" href="mailto:masterofceremonies@krakatoom.ch"><p class=""><b>masterofceremonies@krakatoom.ch</b></p></a>
                 <p><b style="color: blue;">Copyright &copy; @ {{ date('d/m/Y') }}</b></p>
 
             </div>
