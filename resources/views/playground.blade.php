@@ -8,152 +8,150 @@
 @section('content')
 
     @auth
-        <section class="">
-            <div class="container-fluid" style="display:inline-block;">
-                <div class="row">
-                    <div class="chatCol col-md-3 px-3 py-0 pb-md-5">
-                        {{-- <div class="chatCol col-md-3 px-3 py-0 pb-md-5" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;"> --}}
-                        <div class="mt-2 p-2 pt-4">
-                            <h5 class="mb-0">WELCOME to the MESSAGECORNER
-                                <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
-                                    data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
-                                    data-bs-title="
-                            <div class='lead animate__animated animate__zoomInUp'><b>How To Message</b></div>"
-                                    data-bs-content='
-                            <div class="animate__animated animate__zoomInUp animate__delay-1s">
-                                <ol>
-                                    <li>Write your message below in the form-field.</li>
-                                    <li>Press the paperplane-icon to send your message.</li>
-                                    <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
-                                </ol>
-                            </div>'><i
-                                        class="fa-solid fa-circle-info">
-                                    </i></a>
-                            </h5>
+    <section class="">
+        <div class="container-fluid" style="display:inline-block;">
+            <div class="row">
+                <div class="chatCol col-md-3 px-3 py-0 pb-md-5">
+                    <div class="mt-2 p-2 pt-4">
+                        <h5 class="mb-0">WELCOME to the MESSAGECORNER
+                            <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
+                                data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
+                                data-bs-title="
+                        <div class='lead animate__animated animate__zoomInUp'><b>How To Message</b></div>"
+                                data-bs-content='
+                        <div class="animate__animated animate__zoomInUp animate__delay-1s">
+                            <ol>
+                                <li>Write your message below in the form-field.</li>
+                                <li>Press the paperplane-icon to send your message.</li>
+                                <li>Your message and all incoming messages appear below, and your own messages can be deleted.</li>
+                            </ol>
+                        </div>'><i
+                                    class="fa-solid fa-circle-info">
+                                </i></a>
+                        </h5>
 
-                            <h1 class="display-6 mt-3 my-0 playgLandsTitle animate__animated animate__rubberBand">
-                                <strong class="text-warning">{{ Auth::user()->name }}'s </strong><small>Chatspace</small>
-                            </h1>
+                        <h1 class="display-6 mt-3 my-0 playgLandsTitle animate__animated animate__rubberBand">
+                            <strong class="text-warning">{{ Auth::user()->name }}'s </strong><small>Chatspace</small>
+                        </h1>
 
-                            <div class="chatFormField my-4 px-0">
-                                <chat-form :user="{{ Auth::user() }}"></chat-form>
-                            </div>
+                        <div class="chatFormField my-4 px-0">
+                            <chat-form :user="{{ Auth::user() }}"></chat-form>
                         </div>
-                        <div class="smooth-scroll scrollableChat chatBody rounded">
-                            <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
-                        </div>
-
-                        <div class="d-sm-block d-md-none text-center p-3 pb-0">
-                            
-                            <div class="btn-group mobileGoner" role="group" aria-label="Basic example">
-                                <button class="btn btn-sm btn-warning"  type="button" onclick="toggleEditorMain()"><i
-                                        class="fa-solid fa-power-off"></i> Editor</button>
-                                <button class="btn btn-sm  btn-dark" type="button" onclick="togglePreviewMain()"><i
-                                        class="fa-solid fa-power-off"></i> Preview</button>
-                            </div>
-                        </div>
-                        <p class="text-end m-2 mb-3 mb-md-5 pt-2 pb-3"><small>Messageservice brought <br>to you by </small><a
-                                href="https://pusher.com/">Pusher&copy;</a>
-                        </p>
+                    </div>
+                    <div class="smooth-scroll scrollableChat chatBody rounded">
+                        <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
                     </div>
 
-                    {{-- <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox_green.jpeg');background-size: inherit;"> --}}
-                    <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;">
-                        <div class="mt-2 p-2 pt-4 d-flex align-items-center justify-content-between">
-                            <h5 class="mb-0 pb-0 ms-0 bg-secondary p-2">ThiS iS Your EdiTor!
-                                <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
-                                    data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
-                                    data-bs-title="
-                                <div class='lead animate__animated animate__zoomInUp'>
-                                <strong>Code-Space:<br>Here you can code to yours delight!</strong>
-                            </div>"
-                                    data-bs-content='
-                            <div class="text-dark animate__animated animate__zoomInUp animate__delay-1s">
+                    <div class="d-sm-block d-md-none text-center p-3 pb-0">
+                        
+                        <div class="btn-group mobileGoner" role="group" aria-label="Basic example">
+                            <button class="btn btn-sm btn-warning"  type="button" onclick="toggleEditorMain()"><i
+                                    class="fa-solid fa-power-off"></i> Editor</button>
+                            <button class="btn btn-sm  btn-dark" type="button" onclick="togglePreviewMain()"><i
+                                    class="fa-solid fa-power-off"></i> Preview</button>
+                        </div>
+                    </div>
+                    <p class="text-end m-2 mb-3 mb-md-5 pt-2 pb-3"><small>Messageservice brought <br>to you by </small><a
+                            href="https://pusher.com/">Pusher&copy;</a>
+                    </p>
+                </div>
+
+                <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;">
+                    <div class="mt-2 p-2 pt-4 d-flex align-items-center justify-content-between">
+                        <h5 class="mb-0 pb-0 ms-0 bg-secondary p-2">ThiS iS Your EdiTor!
+                            <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
+                                data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
+                                data-bs-title="
+                            <div class='lead animate__animated animate__zoomInUp'>
+                            <strong>Code-Space:<br>Here you can code to yours delight!</strong>
+                        </div>"
+                                data-bs-content='
+                        <div class="animate__animated animate__zoomInUp animate__delay-1s">
+                            
+                            <ol>
+                                <li>Copy/Paste codes from messenger into editor:<br> Instant testing</li>
+                                <li>Inline CSS for styling<br> (Seperate files tbc)</li>
+                                <li>In-Code Javascript for<br> function/coding (Seperate files tbc)</li>
+                            </ol>
+                        </div>'>
+                                <i class="fa-solid fa-circle-info"></i></a>
                                 
-                                <ol>
-                                    <li>Copy/Paste codes from messenger into editor:<br> Instant testing</li>
-                                    <li>Inline CSS for styling<br> (Seperate files tbc)</li>
-                                    <li>In-Code Javascript for<br> function/coding (Seperate files tbc)</li>
-                                </ol>
-                            </div>'>
-                                    <i class="fa-solid fa-circle-info"></i></a>
-                                    
-                            </h5>
-                            <img src="./assets/img/tool_plaque_yellow_bg_black.png" alt="Info" class="img-fluid toolPlaque pb-2" alt="tool_plaque">
-                        </div>
-
-                        <div class="container px-0">
-                            <div class="row justify-content-between">
-                                <div class="col-4 px-3 d-flex align-items-end">
-                                    <div class="form-check form-switch mb-2">
-                                        <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch"
-                                            id="fontColorSwitch">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                                        <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
-                                            data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
-                                            data-bs-title="
-                                            <div class=''>Change main font color</div>"
-                                            data-bs-content="
-                                            <div class=''>Change font-color to fit with page dark/bright-mode</div>"
-                                            style="font-size:1rem;">
-                                            <i class="fa-solid fa-circle-info infoToggle"></i></a>
-                                    </div>
-                                </div>
-
-                                <div class="col-4 d-flex justify-content-center">
-                                    <div class="mt-3 pt-md-1 pb-2">
-                                        <button class="btn btn-sm btn-info p-1 mb-1 mb-md-0 pb-1" id="formatButton"><i class="fa-solid fa-code"></i> Prettify!</button>
-                                    </div>
-                                </div>
-
-                                <div class="col-4 d-flex mt-3 mt-md-0 pe-3 justify-content-end">
-                                    <div class="btn-group undoRedoGroup mb-2 pt-1" role="group" aria-label="Basic example">
-                                        <button id="undoButton" type="button" class="btn btn-undo">
-                                            <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
-                                        </button>
-                                        <button id="redoButton" type="button" class="btn btn-redo">
-                                            <i class="fa-solid fa-arrow-rotate-right fa-2x"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="editor" class="editor-container" style="height: 62vh;"></div>
-                            <div id="cssEditor" class="editor-container" style="height: 62vh; display: none;"></div>
-                            <div id="jsEditor" class="editor-container" style="height: 62vh; display: none;"></div>
-
-                            <div class="row">
-                                <div class="col text-end">
-                                    <div class="btn-group mt-2">
-                                        <button class="btn btn-danger btn-circlesmallEditor ps-2 pt-1 pe-0" onclick="toggleEditor('editor')"><i class="fa-brands fa-html5 fa-2x"></i><p class="editorBtnFonthtml">html</p></button>
-                                        <button class="btn btn-info btn-circlesmallEditor pt-1" onclick="toggleEditor('cssEditor')"><i class="fa-brands fa-css3-alt fa-2x"></i><p class="editorBtnFonthtml">css</p></button>
-                                        <button class="btn btn-success btn-circlesmallEditor pt-1 ps-0" onclick="toggleEditor('jsEditor')"><i class="fa-brands fa-square-js fa-2x"></i><p class="editorBtnFonthtml">jscript</p></button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        </h5>
+                        <img src="./assets/img/tool_plaque_yellow_bg_black.png" alt="Info" class="img-fluid toolPlaque pb-2" alt="tool_plaque">
                     </div>
 
-                    <div class="previewCol col-md-4 px-2 px-md-3 py-0 pb-5" id="previewColumn">
-                        <div class="mt-2 p-0 pt-4">
-                            <h5 class="mb-0 pb-4">YouR ouTpuT!</h5>
-                            <div class="col">
-                                <button class="btn btn-sm btn-success mx-1" id="runJavaScriptButton" style="display:none;">
-                                    <i class="fa-brands fa-square-js fa-xl"></i> Run JavaScript</button>
+                    <div class="container px-0">
+                        <div class="row justify-content-between">
+                            <div class="col-4 px-3 d-flex align-items-end">
+                                <div class="form-check form-switch mb-2">
+                                    <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch"
+                                        id="fontColorSwitch">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                                    <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
+                                        data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
+                                        data-bs-title="
+                                        <div class=''>Change main font color</div>"
+                                        data-bs-content="
+                                        <div class=''>Change font-color to fit with page dark/bright-mode</div>"
+                                        style="font-size:1rem;">
+                                        <i class="fa-solid fa-circle-info infoToggle"></i></a>
+                                </div>
                             </div>
-                            <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-4 pb-4 pb-md-0 rounded" id="preview" style="height:68vh;"></iframe>
+
+                            <div class="col-4 d-flex justify-content-center">
+                                <div class="mt-3 pt-md-1 pb-2">
+                                    <button class="btn btn-sm btn-info p-1 mb-1 mb-md-0 pb-1" id="formatButton"><i class="fa-solid fa-code"></i> Prettify!</button>
+                                </div>
+                            </div>
+
+                            <div class="col-4 d-flex mt-3 mt-md-0 pe-3 justify-content-end">
+                                <div class="btn-group undoRedoGroup mb-2 pt-1" role="group" aria-label="Basic example">
+                                    <button id="undoButton" type="button" class="btn btn-undo">
+                                        <i class="fa-solid fa-arrow-rotate-left fa-2x"></i>
+                                    </button>
+                                    <button id="redoButton" type="button" class="btn btn-redo">
+                                        <i class="fa-solid fa-arrow-rotate-right fa-2x"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="px-1 pt-2">
-                            <div class="bg-secondary p-3" id="consoleOutput"
-                                style="height: 60vh; overflow-y: scroll;display:none;"></div>
+                        <div id="editor" class="editor-container" style="height: 62vh;"></div>
+                        <div id="cssEditor" class="editor-container" style="height: 62vh; display: none;"></div>
+                        <div id="jsEditor" class="editor-container" style="height: 62vh; display: none;"></div>
 
-                            
+                        <div class="row">
+                            <div class="col text-end">
+                                <div class="btn-group mt-2">
+                                    <button class="btn btn-danger btn-circlesmallEditor ps-2 pt-1 pe-0" onclick="toggleEditor('editor')"><i class="fa-brands fa-html5 fa-2x"></i><p class="editorBtnFonthtml">html</p></button>
+                                    <button class="btn btn-info btn-circlesmallEditor pt-1" onclick="toggleEditor('cssEditor')"><i class="fa-brands fa-css3-alt fa-2x"></i><p class="editorBtnFonthtml">css</p></button>
+                                    <button class="btn btn-success btn-circlesmallEditor pt-1 ps-0" onclick="toggleEditor('jsEditor')"><i class="fa-brands fa-square-js fa-2x"></i><p class="editorBtnFonthtml">jscript</p></button>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-        </section>
+
+                <div class="previewCol col-md-4 px-2 px-md-3 py-0 pb-5" id="previewColumn">
+                    <div class="mt-2 p-0 pt-4">
+                        <h5 class="mb-0 pb-4">YouR ouTpuT!</h5>
+                        <div class="col">
+                            <button class="btn btn-sm btn-success mx-1" id="runJavaScriptButton" style="display:none;">
+                                <i class="fa-brands fa-square-js fa-xl"></i> Run JavaScript</button>
+                        </div>
+                        <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-4 pb-4 pb-md-0 rounded" id="preview" style="height:68vh;"></iframe>
+                    </div>
+
+                    <div class="px-1 pt-2">
+                        <div class="bg-secondary p-3" id="consoleOutput"
+                            style="height: 60vh; overflow-y: scroll;display:none;"></div>
+
+                        
+                    </div>
+                </div>
+            </div>
+    </section>
     @endauth
 
     <script>

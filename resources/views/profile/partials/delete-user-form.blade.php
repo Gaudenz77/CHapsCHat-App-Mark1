@@ -1,7 +1,7 @@
 <section class="my-4">
     <header>
         <h2 class="fw-medium text-gray-900">
-            {{ __('Delete Account') }}
+            {{ __('Delete') }}<br>{{ __('Account') }}
         </h2>
 
         <p class="mt-3 text-sm text-gray-600">

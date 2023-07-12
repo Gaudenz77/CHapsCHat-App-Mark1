@@ -26,7 +26,7 @@
             <div class="col-12 text-center mt-0 mt-md-3 mb-0 mb-md-2">
               <button class="btn btn-own mt-md-0 mt-4 mt-md-2 text-end" type="button" role="button" id="createButton2">
                 <i class="fa-solid fa-circle-plus fa-4x formOwnOne pt-2" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-html="true" title="
-									<b>Press to<br>open form</b>">
+									<b>Create a<br>new post!</b>">
                 </i>
               </button>
               <p class="pBlogText small mt-0 mb-0" style="padding-top:-2rem;">Create</p>
