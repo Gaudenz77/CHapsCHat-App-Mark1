@@ -19,7 +19,7 @@
           @endauth
         </div>
       </div>
-      <div class="col-sm-8 col-lg-8 colBlogContent mt-md-0 mt-0 px-1">
+      <div class="col-sm-8 col-lg-8 colBlogContent mt-md-0 mt-3 mb-md-0 mb-2 mb-md-0 px-1">
         <div class="container mb-3" style=" margin-top:-15% ! important">
           <div class="row"> 
           @auth 
