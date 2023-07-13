@@ -72,7 +72,7 @@
                                 <li>Copy/Paste codes from messenger into editor:<br> Instant testing</li>
                                 <li>Inline CSS for styling<br> (Seperate files tbc)</li>
                                 <li>In-Code Javascript for<br> function/coding (Seperate files tbc)</li>
-                                <li class="lead">Iportant: The code is temporary stored in the local storage. If you like to keep it over session time, store it in your personal <a href="{{ url('/knowledgeSphere') }}">library</a></li>
+                                <li class="strong">Important: The code is temporary stored in the local storage. If you like to keep it over session time, store it in your personal <a href="{{ url('/knowledgeSphere') }}">library</a></li>
                             </ol>
                         </div>'>
                                 <i class="fa-solid fa-circle-info"></i></a>
