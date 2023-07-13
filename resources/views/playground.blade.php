@@ -58,7 +58,7 @@
 
                 <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;">
                     <div class="mt-2 p-2 pt-4 d-flex align-items-center justify-content-between">
-                        <h5 class="mb-0 pb-2 ms-0 bg-success p-2">ThiS iS Your EdiTor!
+                        <h5 class="mb-0 pb-2 ms-0 bg-warning p-2">ThiS iS Your EdiTor!
                             <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
                                 data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
                                 data-bs-title="
