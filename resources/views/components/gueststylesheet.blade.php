@@ -387,8 +387,16 @@ body.dark-mode .cookiemodal .modal-body  {
     border-radius:50%;
 }
 
-.hookLinePara {
-    color:red !important;
+.hookLineParaPlay {
+    color:#ff0000;
+}
+
+.hookLineParaKnow {
+    color:#ffe600;
+}
+
+.hookLineParaLib {
+    color:#1400ff;
 }
 
 </style>
