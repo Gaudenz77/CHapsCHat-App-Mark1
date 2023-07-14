@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row justify-content-evenly align-items-center">
                 <div class="col-md-5 px-2 mt-1 animate__animated animate__flipInX">
-                    <div class="card circleAuth cardLogin px-3 pt-0 pb-3 px-md-5" id="authCard">
+                    <div class="card circleAuthLog cardLogin px-3 pt-0 pb-3 px-md-5" id="authCard">
                         <div class="card-body text-center">
                             <!-- Session Status -->
                             @if (session('status'))
@@ -21,7 +21,7 @@
                             <form class="mx-0 mx-md-2 px-0 px-md-4 pt-5" method="POST" action="{{ route('login') }}"> @csrf
                                 <!-- Email Address -->
                                 <label class="form-label loginLabel" for="email">{{ __('Email') }}</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-2">
                                     <span class="input-group-text login labelAuth" for="email">
                                         <i class="fa-solid fa-solid fa-at iconAuth" data-bs-custom-class="custom-tooltip"
                                             data-bs-toggle="tooltip" data-bs-placement="top"
@@ -36,7 +36,7 @@
                                 </div>
                                 <!-- Password -->
                                 <label class="form-label loginLabel" for="password">{{ __('Password') }}</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-2">
                                     <span class="input-group-text login labelAuth" for="email">
                                         <i class="fa-solid fa-key iconAuth" data-bs-custom-class="custom-tooltip"
                                             data-bs-toggle="tooltip" data-bs-placement="top"
@@ -49,7 +49,7 @@
                                         @enderror
                                 </div>
                                 <!-- Remember Me -->
-                                <div class="mb-3 form-check text-start">
+                                <div class="mb-2 form-check text-start">
                                     
                                     <label class="form-check-label loginLabel"
                                         for="remember_me">{{ __('Remember me') }}</label>
@@ -67,7 +67,7 @@
                                 <div
                                     class="d-md-flex justify-content-md-between align-items-md-center flex-md-column text-center">
                                     @if (Route::has('password.request'))
-                                        <a class="loginLabel text-decoration-none mb-3"
+                                        <a class="loginLabel text-decoration-none mb-2"
                                             href="{{ route('password.request') }}">{{ __('Forgot your password?') }}</a>
                                     @endif
                                 </div>
@@ -112,65 +112,66 @@
     </section>
 
     <audio id="myAudioReg">
-        <source src="./assets/audio/typewriter-1.mp3" type="audio/mpeg">
+        <source src="./assets/audio/typwriter_no2.wav" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var audio = document.getElementById("myAudioReg");
-            var playButton = document.getElementById("playButtonLog");
-            var colElement = document.getElementById("colElementLog");
-            var playCount = 3; // Desired play count (e.g., 3.5 seconds)
-            var isPlaying = false; // Flag to track audio playing state
+      document.addEventListener("DOMContentLoaded", function() {
+  var audio = document.getElementById("myAudioReg");
+  var playButton = document.getElementById("playButtonLog");
+  var colElement = document.getElementById("colElementLog");
+  var playCount = 11; // Desired play count (e.g., 2.5 seconds)
+  var isPlaying = false; // Flag to track audio playing state
 
-            function playAudio() {
-                audio.currentTime = 0; // Reset current time
-                audio.play();
-                colElement.classList.add("show");
-                isPlaying = true;
-            }
+  function playAudio() {
+    audio.currentTime = 0; // Reset current time
+    audio.play();
+    colElement.classList.add("show");
+    isPlaying = true;
+  }
+ 
+  function handleAudioEnd() {
+    playCount -= 0.8; // Decrease play count by 0.1 second (adjust the increment as needed)
+    if (playCount > 0) {
+      playAudio();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      isPlaying = false;
+    }
+  }
 
-            function handleAudioEnd() {
-                playCount -= 1; // Decrease play count by 1 second
-                if (playCount > 0) {
-                    playAudio();
-                } else {
-                    audio.pause();
-                    audio.currentTime = 0;
-                    isPlaying = false;
-                }
-            }
+  // Play audio and show the colElement when the button is clicked
+  playButton.addEventListener("click", function() {
+    if (!isPlaying) {
+      playAudio();
+    }
+  });
 
-            // Play audio and show the colElement when the button is clicked
-            playButton.addEventListener("click", function() {
-                if (!isPlaying) {
-                    playAudio();
-                }
-            });
+  // Event listener to handle audio pause and end
+  audio.addEventListener('pause', function() {
+    if (isPlaying) {
+      handleAudioEnd();
+    }
+  });
 
-            // Event listener to handle audio pause and end
-            audio.addEventListener('pause', function() {
-                if (isPlaying) {
-                    handleAudioEnd();
-                }
-            });
+  audio.addEventListener('ended', function() {
+    if (isPlaying) {
+      handleAudioEnd();
+    }
+  });
+});
 
-            audio.addEventListener('ended', function() {
-                if (isPlaying) {
-                    handleAudioEnd();
-                }
-            });
-        });
 
 
         // Function to handle class removal
         function removeCircleAuthClass() {
             var authCard = document.getElementById('authCard');
             if (window.matchMedia("(orientation: landscape) and (min-width: 768px)").matches) {
-                authCard.classList.add('circleAuth');
+                authCard.classList.add('circleAuthLog');
             } else {
-                authCard.classList.remove('circleAuth');
+                authCard.classList.remove('circleAuthLog');
             }
         }
 

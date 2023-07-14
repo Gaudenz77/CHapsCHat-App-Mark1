@@ -37,15 +37,15 @@
                 </div>
 
                 <div class="col-md-7 animate__animated animate__flipInY">
-                    <div class="card cardLogin px-3 pt-2 pb-3 m-0 m-md-5 px-md-2" id="authCard">
+                    <div class="card circleAuthReg cardLogin px-3 pt-2 pb-3 m-0 m-md-5 px-md-2" id="authCard">
 
-                        <div class="card-body text-center px-0 px-md-5 pt-5">
-                            <form class="mx-2 px-0 px-md-5 pt-0 pb-0 pt-md-0" method="POST" action="{{ route('register') }}">
+                        <div class="card-body text-center d-flex justify-content-center px-0 px-md-5 pt-5">
+                            <form class="mx-2 mt-md-4 px-0 px-md-5 pt-0 pb-0 pt-md-0" method="POST" action="{{ route('register') }}">
                                 @csrf
 
                                 <!-- Name -->
                                 <label class="form-label loginLabel" for="name">{{ __('Name') }}</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-2">
                                     <span class="input-group-text login labelAuth" for="email"><i
                                             class="fa-solid fa-signature iconAuth" data-bs-custom-class="custom-tooltip"
                                             data-bs-toggle="tooltip" data-bs-placement="top"
@@ -63,7 +63,7 @@
 
                                 <!-- Email Address -->
                                 <label class="form-label loginLabel" for="email">{{ __('Email') }}</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-2">
                                     <span class="input-group-text login labelAuth" for="email"><i
                                             class="fa-solid fa-at iconAuth" data-bs-custom-class="custom-tooltip"
                                             data-bs-toggle="tooltip" data-bs-placement="top"
@@ -81,7 +81,7 @@
 
                                 <!-- Password -->
                                 <label class="form-label loginLabel" for="password">{{ __('Password') }}</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-2">
                                     <span class="input-group-text login labelAuth" for="email"><i
                                             class="fa-solid fa-key iconAuth" data-bs-custom-class="custom-tooltip"
                                             data-bs-toggle="tooltip" data-bs-placement="top"
@@ -100,7 +100,7 @@
                                 <!-- Confirm Password -->
                                 <label class="form-label loginLabel"
                                     for="password_confirmation">{{ __('Confirm Password') }}</label>
-                                <div class="input-group mb-3">
+                                <div class="input-group mb-2">
                                     <span class="input-group-text login labelAuth" for="email">
                                         <p class="squared"></p> <i class="fa-solid fa-key iconAuth"
                                             data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip"
@@ -144,7 +144,7 @@
     </section>
 
     <audio id="myAudioReg">
-        <source src="./assets/audio/typewriter-1.wav" type="audio/mpeg">
+        <source src="./assets/audio/typwriter_no2.wav" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -153,7 +153,7 @@
             var audio = document.getElementById("myAudioReg");
             var playButton = document.getElementById("playButtonReg");
             var colElement = document.getElementById("colElementReg");
-            var playCount = 3.5; // Desired play count (e.g., 3.5 seconds)
+            var playCount = 10; // Desired play count (e.g., 3.5 seconds)
             var isPlaying = false; // Flag to track audio playing state
 
             function playAudio() {
@@ -164,7 +164,7 @@
             }
 
             function handleAudioEnd() {
-                playCount -= 1; // Decrease play count by 1 second
+                playCount -= 0.8; // Decrease play count by 1 second
                 if (playCount > 0) {
                     playAudio();
                 } else {
@@ -200,9 +200,9 @@
         function removeCircleAuthClass() {
             var authCard = document.getElementById('authCard');
             if (window.matchMedia("(orientation: landscape) and (min-width: 768px)").matches) {
-                authCard.classList.add('circleAuth');
+                authCard.classList.add('circleAuthReg');
             } else {
-                authCard.classList.remove('circleAuth');
+                authCard.classList.remove('circleAuthReg');
             }
         }
 
