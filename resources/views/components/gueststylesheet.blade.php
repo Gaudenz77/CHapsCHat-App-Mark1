@@ -388,11 +388,11 @@ body.dark-mode .cookiemodal .modal-body  {
 }
 
 .hookLineParaPlay {
-    color:#ff0000;
+    color:#ffe600;
 }
 
 .hookLineParaKnow {
-    color:#ffe600;
+    color:#ff0000;
 }
 
 .hookLineParaLib {
