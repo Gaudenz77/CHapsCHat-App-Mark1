@@ -55,8 +55,8 @@
                         </h1>
                         <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInLeft animate__delay-1s">
                             <strong>1. Let's chat and code together:</strong> <a
-                                class="nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
-                                aria-current="page" href="{{ url('/playground') }} " onclick="reloadTwice()"><b class="hookLineParaPlay">>>> Welcome
+                                class="hookLinePara nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
+                                aria-current="page" href="{{ url('/playground') }} " onclick="reloadTwice()"><b class="Play">>>> Welcome
                                     to the Palyground. Join Now!</b></a>
                         </p>
                         <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInRight animate__delay-2s">
