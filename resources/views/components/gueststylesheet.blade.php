@@ -109,10 +109,6 @@
             padding-bottom:1rem !important;
         }
 
-        .hookLinePara {
-            color:red !important;
-        }
-
     }
 
     @media screen and (orientation: landscape) {
@@ -389,6 +385,10 @@ body.dark-mode .cookiemodal .modal-body  {
 
 .mobileGoner {
     border-radius:50%;
+}
+
+.hookLinePara {
+    color:red !important;
 }
 
 </style>
