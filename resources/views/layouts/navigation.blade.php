@@ -26,8 +26,6 @@
 
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
 
-                
-
                 <li class="nav-item pt-3">
                     @if (Route::has('login'))
                         @auth

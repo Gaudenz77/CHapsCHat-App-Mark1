@@ -373,7 +373,9 @@ body.dark-mode .cookiemodal .modal-body  {
 
 
 .toolPlaque {
-    transform: rotate(10deg);
+    transform: rotate(-12deg);
+    left: -16px;
+    position: relative;
 }
 
 .mobileGoner {
@@ -393,7 +395,7 @@ body.dark-mode .cookiemodal .modal-body  {
     color:#1400ff;
 }
 
-.glowing-input {
+/* .glowing-input {
   animation: glowing 2s infinite;
 }
 
@@ -407,7 +409,7 @@ body.dark-mode .cookiemodal .modal-body  {
   100% {
     box-shadow: 0 0 5px #FF8C00, 0 0 10px #FF8C00, 0 0 20px #FF8C00;
   }
-}
+} */
 
 
 </style>
