@@ -373,9 +373,9 @@ body.dark-mode a {
 }
 /* MD MEDIULM LG LARGE MEDIA QUERIES STOP------------------------------------------------------------------------------- */
 
-#navbar {
+/* #navbar {
 
-}
+} */
 
 /* INDIVIDUAL PAGES DETAILS START -------------------------------------------------------------------------------------- */
 
@@ -1137,13 +1137,14 @@ body.dark-mode .previewCol {
     padding-bottom: 0;
 }
 
-#editor,
+/* #editor,
 #css-editor,
 #js-editor {
-    /* height: 70vh;
+    height: 70vh;
     width: 100%;
-    border: 1px solid #ccc; */
+    border: 1px solid #ccc;
 }
+ */
 
 .rowEditor {
     height:4rem;
@@ -1187,9 +1188,9 @@ body.dark-mode .previewCol {
 
 /* VARIOUS BUTTONS ----------------------------------------------------------------*/
 
-.btn {
+/* .btn {
 }
-
+ */
 .btn-circle,
 .btn-circle:hover,
 .btn-circle:focus {
@@ -1739,9 +1740,9 @@ left:-30px;
     height: 11vh;
 }
 
-body.dark-mode .footer {
-    /* background-color: #ebebeb; */
-}
+/* body.dark-mode .footer {
+    background-color: #ebebeb;
+} */
 
 #footerButton {
     position: fixed;

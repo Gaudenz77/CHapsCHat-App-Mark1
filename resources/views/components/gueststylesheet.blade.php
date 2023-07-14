@@ -62,12 +62,12 @@
         }
 
         .span1 {
-            height: 13vh;
+            height: 12vh;
             background-color: #091540;
         }
 
         body.dark-mode .span1 {
-            height: 13vh;
+            height: 12vh;
             background-color: #ffffff;
         }
 
@@ -111,6 +111,13 @@
 
     @media screen and (orientation: landscape) {
     
+        .loginMain {
+            margin-top: 5rem;
+        }
+
+        .registerMain {
+            margin-top: 5rem;
+        }
     }
     /* LANDSCAPE/TABLET MEDIA QUERIES END */
 
@@ -155,14 +162,14 @@
         .span1 {
             color: #ebebeb;
             background-color: #091540;
-            height: 13vh;
+            height: 11vh;
             bottom:-8px;
         }
 
         body.dark-mode .span1 {
             color: #ebebeb;
             background-color: #ffffff;
-            height: 13vh;
+            height: 11vh;
             color: #333;  
         }
     }
