@@ -55,19 +55,19 @@
                         </h1>
                         <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInLeft animate__delay-1s">
                             <strong>1. Let's chat and code together:</strong> <a
-                                class="nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
-                                aria-current="page" href="{{ url('/playground') }} " onclick="reloadTwice()"><b class="hookLineParaPlay">>>> Welcome
+                                class="hookLineParaPlay nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
+                                aria-current="page" href="{{ url('/playground') }} " onclick="reloadTwice()"><b class="">>>> Welcome
                                     to the Palyground. Join Now!</b></a>
                         </p>
                         <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInRight animate__delay-2s">
                             <strong>2. Visit our Blog:</strong> <a
-                                class="hookLinePara myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
-                                aria-current="page" href="{{ url('/blogoSphere') }}"><b>>>> Read more...</b></a>
+                                class="myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
+                                aria-current="page" href="{{ url('/blogoSphere') }}"><b class="hookLineParaPlay">>>> Read more...</b></a>
                         </p>
                         <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInUp animate__delay-3s">
                             <strong>3. Go to Your Personal Library:</strong> <a
                                 class="hookLinePara myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
-                                aria-current="page" href="{{ url('/knowledgeSphere') }}"><b>>>> Explore Now</b></a>
+                                aria-current="page" href="{{ url('/knowledgeSphere') }}"><b class="hookLineParaPlay">>>> Explore Now</b></a>
                         </p>
                     </div>
                 </div>
