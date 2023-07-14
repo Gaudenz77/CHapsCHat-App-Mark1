@@ -27,11 +27,12 @@
                                             data-bs-toggle="tooltip" data-bs-placement="top"
                                             title="Enter your e-mail address">{{ __('') }}</i>
                                     </span>
-                                    <input id="email" class="form-control login" title="Enter your e-mail address"
+                                    <input id="email" class="form-control glowing-input login" title="Enter your e-mail address"
                                         type="email" name="email" value="{{ old('email') }}" required autofocus
-                                        autocomplete="username"> @error('email')
+                                        autocomplete="username"> 
+                                        @error('email')
                                         <div class="text-danger mt-2">{{ $message }}</div>
-                                    @enderror
+                                        @enderror
                                 </div>
                                 <!-- Password -->
                                 <label class="form-label loginLabel" for="password">{{ __('Password') }}</label>
@@ -41,11 +42,11 @@
                                             data-bs-toggle="tooltip" data-bs-placement="top"
                                             title="Enter your password">{{ __('') }}</i>
                                     </span>
-                                    <input id="password" class="form-control login" title="Enter your password"
+                                    <input id="password" class="form-control glowing-input login" title="Enter your password"
                                         type="password" name="password" required autocomplete="current-password">
-                                    @error('password')
+                                        @error('password')
                                         <div class="text-danger mt-2">{{ $message }}</div>
-                                    @enderror
+                                        @enderror
                                 </div>
                                 <!-- Remember Me -->
                                 <div class="mb-3 form-check text-start">

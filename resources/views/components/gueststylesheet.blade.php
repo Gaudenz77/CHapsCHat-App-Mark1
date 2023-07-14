@@ -74,7 +74,6 @@
         .welcomeSmall {
             display:none;
         }
-
     }
 
     /* LANDSCAPE/TABLET MEDIA QUERIES START */
@@ -108,7 +107,6 @@
             font-size:150%;
             padding-bottom:1rem !important;
         }
-
     }
 
     @media screen and (orientation: landscape) {
@@ -162,12 +160,10 @@
         }
 
         body.dark-mode .span1 {
-
             color: #ebebeb;
             background-color: #ffffff;
             height: 13vh;
-            color: #333;
-            
+            color: #333;  
         }
     }
 
@@ -284,7 +280,6 @@ body {
 
 .trianglesmall {
     height:123%;
- 
 }
 
 .formCaptchOne {
@@ -292,11 +287,9 @@ body {
 justify-content: center;
 }
 
-
 #scrollToTopBtn {
   display: none;
 }
-
 
 .btn-circlesmallEditor {
     width: 3rem;
@@ -387,6 +380,7 @@ body.dark-mode .cookiemodal .modal-body  {
     border-radius:50%;
 }
 
+/* new bring to css */
 .hookLineParaPlay {
     color:#ffc107;
 }
@@ -398,6 +392,23 @@ body.dark-mode .cookiemodal .modal-body  {
 .hookLineParaLib {
     color:#1400ff;
 }
+
+.glowing-input {
+  animation: glowing 2s infinite;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #FF8C00, 0 0 10px #FF8C00, 0 0 20px #FF8C00;
+  }
+  50% {
+    box-shadow: 0 0 20px #FF8C00, 0 0 40px #FF8C00, 0 0 80px #FF8C00;
+  }
+  100% {
+    box-shadow: 0 0 5px #FF8C00, 0 0 10px #FF8C00, 0 0 20px #FF8C00;
+  }
+}
+
 
 </style>
 
