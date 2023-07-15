@@ -58,6 +58,7 @@
 @endsection
 
 <script>
+    
     // CREATE LIBRARY DIV -------------------------------------------------------TEST IF ENTRY PAGE STILL WORKING!!!
 
     document.addEventListener("DOMContentLoaded", () => {

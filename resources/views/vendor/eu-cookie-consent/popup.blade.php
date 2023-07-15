@@ -1,19 +1,25 @@
 <style>
-    .eu-popup{
-        position:absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        padding: 20px;
-        z-index: 4242;
-        flex-wrap: wrap;
-        background-color:#091540;
-        color:white;  
-        box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
-        margin: 20px;
-        border-radius: 20px;
-    }
+.eu-popup {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    z-index: 4242;
+    flex-wrap: wrap;
+    background-color: #091540;
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.75);
+    margin: 20px;
+    border-radius: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.eu-popup.show {
+    opacity: 1;
+}
+
 
     body.dark-mode .eu-popup {
         background-color:#ebebeb;

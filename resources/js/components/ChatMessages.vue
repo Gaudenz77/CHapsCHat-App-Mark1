@@ -7,7 +7,7 @@
             <div class="col">
               <div class="header">
                 <blockquote class="blockquote m-3 ps-2">
-                  {{ message.message }}
+                  <span v-html="renderMessage(message.message)"></span>
                 </blockquote>
               </div>
             </div>
@@ -150,7 +150,19 @@
           return "animate__animated animate__fadeInRight";
         }
       },
-      
+      renderMessage(message) {
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        const urls = message.match(urlRegex);
+        if (urls) {
+          let renderedMessage = message;
+          urls.forEach((url) => {
+            const link = `<a href="${url}" target="_blank">${url}</a>`;
+            renderedMessage = renderedMessage.replace(url, link);
+          });
+          return renderedMessage;
+        }
+        return message;
+      },   
     },
   };
 </script>

@@ -43,6 +43,9 @@
     <!-- Scripts -->
     {{-- <script src="https://www.google.com/recaptcha/enterprise.js?render=your_site_key"></script> --}}
 
+    <link rel="stylesheet" href="https://unpkg.com/vue-simple-markdown/dist/vue-simple-markdown.css"></link>
+    <script src="https://unpkg.com/vue-simple-markdown"></script>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.0.3/parser-html.min.js"></script>
@@ -121,9 +124,16 @@
     {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
 
     <script>
-        setTimeout(function() {
-            document.getElementById('cookieConsent').style.display = 'block';
-        }, 000); // Delay in milliseconds (e.g., 10000 = 10 seconds)
+        document.addEventListener('DOMContentLoaded', function() {
+  var cookieConsent = document.getElementById('cookieConsent');
+  var popup = cookieConsent.querySelector('.eu-popup');
+
+  setTimeout(function() {
+    popup.classList.add('show');
+    cookieConsent.style.display = 'block';
+  }, 5000); // Delay for 5 seconds (adjust as needed)
+});
+
 
 
         /* PAGE SCROLLUP BTN HIDE ON SCROLLDOWN */
