@@ -29,7 +29,7 @@
     }
 
     .eu-popup-button:hover {
-        background-color: lightgray;
+        background-color: blue;
         cursor: pointer;
     }
 </style>
