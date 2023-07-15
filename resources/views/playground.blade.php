@@ -76,7 +76,7 @@
                                 <li>Important: The code is stored in the local storage. If you like to keep it beyond session time, store it in your personal <a href="{{ url('/knowledgeSphere') }}">library</a></li>
                             </ol>
                         </div>'>
-                                <i class="fa-solid fa-circle-info"></i></a>
+                                <i class="fa-solid fa-circle-info pe-2"></i></a>
                                 
                         </h5>
                     </div>

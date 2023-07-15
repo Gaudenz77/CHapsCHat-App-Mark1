@@ -32,7 +32,7 @@
                                     data-bs-trigger="focus" data-bs-html="true"
                                     data-bs-title="
                                     <div class=''>How To Use Your Library  
-                                    <i class='animate__animated animate__flip fa-solid fa-face-laugh-wink ps-2'></i>
+                                    <i class='animate__animated animate__flip fa-solid fa-face-laugh-wink fa-2x d-flex justify-content-center'></i>
                                     </div>"
                                     data-bs-content="
                                     <div class=''>
