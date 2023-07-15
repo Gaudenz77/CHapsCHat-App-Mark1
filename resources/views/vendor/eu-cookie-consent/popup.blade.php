@@ -70,7 +70,7 @@
     <div style="{{ config('eu-cookie-consent.popup_style') }}" class="col-10 col-md-6 {{ config('eu-cookie-consent.popup_classes') }}">
         {{-- Popup Title gets displayed if its set in the config --}}
         @if(isset($config['title']))
-            <div class=""{{-- style="width: 100%" --}}>
+            <div class="" style="width: 100%">
                 <p>
                     <b>
                         {{-- Popup MultiLanguageSupport defines if the Text is written from the lang file or directly form the Config. --}}
@@ -86,11 +86,13 @@
         {{-- Popup Description --}}
         @if(isset($config['description']))
             <div style="width: 100%">
+                <p>
                 @if($multiLanguageSupport)
                     {{ __('eu-cookie-consent::cookies.'.$config['description']) }}
                 @else
                     {{ $config['description'] }}
                 @endif
+                </p>
             </div>
         @endif
     
