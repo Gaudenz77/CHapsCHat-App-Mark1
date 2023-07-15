@@ -431,39 +431,6 @@ body.dark-mode .cookiemodal .modal-body  {
     display: none;
 }
 
-.eu-popup {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height:50%;
-    width: auto;
-    align-items: center;
-    align-content: center;
-    padding: 20px;
-    z-index: 4242;
-    flex-wrap: wrap;
-    background-color:#091540 !important;
-    color:white !important;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
-    margin: 20px;
-    border-radius: 20px;
-}
-
-.eu-popup b {
-    color:rgb(215, 14, 14) !important;
-}
-
-.eu-popup p {
-    color:rgb(215, 14, 14) !important;
-}
-
-
-body.dark-mode .eu-popup {
-    background-color:#ebebeb !important;
-    color:black !important;
-    
- }
-rgb(250, 142, 142)rgb(233, 82, 82)
 /* .glowing-input {
   animation: glowing 2s infinite;
 }

@@ -103,7 +103,7 @@
                 <p class="footerBtnTextStart">Footer?</p>
             </button>
 
-            <span id="footerContent" class="span1 fixed-bottom mb-0  py-3 ps-2"><a href="{{ url('/about') }}"
+            <span id="footerContent" class="span1 fixed-bottom mb-0 py-2 py-md-3 ps-2"><a href="{{ url('/about') }}"
                 class="nav-item mt-2 ms-0 px-2 ps-0 py-0" style="color:#ffc107; text-decoration:none">
                 <b class="">Dare To Meet Me?</b></a>
                 <br><b style="color:  blue;">&copy; {{ date('d/m/Y') }} <a class="small" style="color:chartreuse" href="{{ url('/impressum') }}">
@@ -123,7 +123,7 @@
     <script>
         setTimeout(function() {
             document.getElementById('cookieConsent').style.display = 'block';
-        }, 0); // Delay in milliseconds (e.g., 10000 = 10 seconds)
+        }, 000); // Delay in milliseconds (e.g., 10000 = 10 seconds)
 
 
         /* PAGE SCROLLUP BTN HIDE ON SCROLLDOWN */
