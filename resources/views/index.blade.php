@@ -22,7 +22,7 @@
                         class="btn btn-index-small col-sm-3 pe-0 me-md-4 me-lg-4 animate__animated animate__backInLeft animate__delay-2s overlay-container">
                         <img class="img-fluid squareSmall" src="./assets/img/square_pure.svg">
                         <div class="overlay-small">
-                            <span class="overlay-text-small">ReaD thE latesT BlOgs!</span>
+                            <span class="overlay-text-small">ReaD thE latesTest BlOgs!</span>
                         </div>
                     </a>
 
