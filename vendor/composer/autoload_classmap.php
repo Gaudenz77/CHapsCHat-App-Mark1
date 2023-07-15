@@ -5854,9 +5854,5 @@ return array(
     'Whoops\\Util\\Misc' => $vendorDir . '/filp/whoops/src/Whoops/Util/Misc.php',
     'Whoops\\Util\\SystemFacade' => $vendorDir . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
-    'the42coders\\EuCookieConsent\\EuCookieConsent' => $vendorDir . '/the42coders/eu-cookie-consent/src/EuCookieConsent.php',
-    'the42coders\\EuCookieConsent\\EuCookieConsentFacade' => $vendorDir . '/the42coders/eu-cookie-consent/src/EuCookieConsentFacade.php',
-    'the42coders\\EuCookieConsent\\EuCookieConsentServiceProvider' => $vendorDir . '/the42coders/eu-cookie-consent/src/EuCookieConsentServiceProvider.php',
-    'the42coders\\EuCookieConsent\\Http\\Controllers\\EuCookieConsentController' => $vendorDir . '/the42coders/eu-cookie-consent/src/Http/Controllers/EuCookieConsentController.php',
     'voku\\helper\\ASCII' => $vendorDir . '/voku/portable-ascii/src/voku/helper/ASCII.php',
 );
