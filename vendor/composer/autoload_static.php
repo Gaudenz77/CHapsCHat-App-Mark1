@@ -44,6 +44,10 @@ class ComposerStaticInit2ed7c2d58cd5f7e3af00c657a1a64cf6
         array (
             'voku\\' => 5,
         ),
+        't' => 
+        array (
+            'the42coders\\EuCookieConsent\\' => 28,
+        ),
         'W' => 
         array (
             'Whoops\\' => 7,
@@ -182,6 +186,10 @@ class ComposerStaticInit2ed7c2d58cd5f7e3af00c657a1a64cf6
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
+        ),
+        'the42coders\\EuCookieConsent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/the42coders/eu-cookie-consent/src',
         ),
         'Whoops\\' => 
         array (
@@ -6376,6 +6384,10 @@ class ComposerStaticInit2ed7c2d58cd5f7e3af00c657a1a64cf6
         'Whoops\\Util\\Misc' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/Misc.php',
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
+        'the42coders\\EuCookieConsent\\EuCookieConsent' => __DIR__ . '/..' . '/the42coders/eu-cookie-consent/src/EuCookieConsent.php',
+        'the42coders\\EuCookieConsent\\EuCookieConsentFacade' => __DIR__ . '/..' . '/the42coders/eu-cookie-consent/src/EuCookieConsentFacade.php',
+        'the42coders\\EuCookieConsent\\EuCookieConsentServiceProvider' => __DIR__ . '/..' . '/the42coders/eu-cookie-consent/src/EuCookieConsentServiceProvider.php',
+        'the42coders\\EuCookieConsent\\Http\\Controllers\\EuCookieConsentController' => __DIR__ . '/..' . '/the42coders/eu-cookie-consent/src/Http/Controllers/EuCookieConsentController.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
     );
 

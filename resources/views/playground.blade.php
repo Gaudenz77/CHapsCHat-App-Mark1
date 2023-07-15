@@ -12,7 +12,7 @@
         <div class="container-fluid" style="display:inline-block;">
             <div class="row">
                 <div class="chatCol col-md-3 px-3 py-0 pb-md-5">
-                    <div class="mt-2 p-2 pt-4">
+                    <div class="mt-1 p-2 pt-3">
                         <h5 class="mb-0">WELCOME to the MESSAGECORNER
                             <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
                                 data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
@@ -30,7 +30,7 @@
                                 </i></a>
                         </h5>
 
-                        <h1 class="display-6 mt-3 my-0 playgLandsTitle animate__animated animate__rubberBand">
+                        <h1 class="mt-3 my-0 playgLandsTitle animate__animated animate__rubberBand">
                             <strong class="text-warning">{{ Auth::user()->name }}'s </strong><small>Chatspace</small>
                         </h1>
 
@@ -57,9 +57,9 @@
                 </div>
 
                 <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;">
-                    <div class="mt-2 p-2 pt-4 d-flex align-items-center justify-content-between">
+                    <div class="mt-2 p-2 pt-2 pb-md-3 d-flex align-items-center justify-content-between">
                         <img src="./assets/img/tool_plaque_yellow_bg_black.png" alt="Info" class="img-fluid toolPlaque pb-2" alt="tool_plaque">
-                        <h5 class="bg-danger mb-0 pb-2 ms-0 py-2 ps-2 px-md-1 mx-1 me-md-3">ThiS iS Your EdiTor!
+                        <h5 class="bg-danger mb-0 pb-2 ms-0 py-2 py-md-2 ps-2 px-md-1 mx-1 me-md-3">ThiS iS Your EdiTor!
                             <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
                                 data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
                                 data-bs-title="
@@ -91,9 +91,9 @@
                                     <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
                                         data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
                                         data-bs-title="
-                                        <div class=''>Change main font color</div>"
+                                        <div class=''>Output-Visibility</div>"
                                         data-bs-content="
-                                        <div class=''>Change font-color to fit with page dark/bright-mode</div>"
+                                        <div class=''>If not seeing code rendered in preview column (output), switch once to adjust to pages dark.bright-mode.</div>"
                                         style="font-size:1rem;">
                                         <i class="fa-solid fa-circle-info infoToggle"></i></a>
                                 </div>
@@ -135,18 +135,18 @@
                 </div>
 
                 <div class="previewCol col-md-4 px-2 px-md-3 py-0 pb-5" id="previewColumn">
-                    <div class="mt-2 p-0 pt-4">
-                        <h5 class="mb-0 pb-4">YouR ouTpuT!</h5>
+                    <div class="mt-3 p-2 pt-2 pb-md-2">
+                        <h5 class="mt-2 mb-0 mb-md-5 py-md-2">YouR ouTpuT!</h5>
                         <div class="col">
                             <button class="btn btn-sm btn-success mx-1" id="runJavaScriptButton" style="display:none;">
                                 <i class="fa-brands fa-square-js fa-xl"></i> Run JavaScript</button>
                         </div>
-                        <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-4 pb-4 pb-md-0 rounded" id="preview" style="height:68vh;"></iframe>
+                        <iframe class="mt-0 mt-md-3 px-0 pt-0 mb-2 mb-md-0 pt-md-2 pb-4 pb-md-0 rounded" id="preview" style="height:68vh;"></iframe>
                     </div>
 
-                    <div class="px-1 pt-2">
+                    <div class="mt-0 px-1 pt-2 pt-md-0">
                         <div class="bg-secondary p-3" id="consoleOutput"
-                            style="height: 60vh; overflow-y: scroll;display:none;"></div>
+                            style="height: 62vh; overflow-y: scroll;display:none;"></div>
 
                         
                     </div>

@@ -78,6 +78,10 @@
 
 <body class="@yield('body-class')">
 
+    <div id="cookieConsent">
+        @include('components.cookieconssentEu')
+    </div>
+
     <div id="app">
         <header>
             @include('layouts.navigation')
@@ -99,7 +103,7 @@
                 <p class="footerBtnTextStart">Footer?</p>
             </button>
 
-            <span id="footerContent" class="span1 fixed-bottom mb-0 pb-2 pt-2 ps-2"><a href="{{ url('/about') }}"
+            <span id="footerContent" class="span1 fixed-bottom mb-0  py-3 ps-2"><a href="{{ url('/about') }}"
                 class="nav-item mt-2 ms-0 px-2 ps-0 py-0" style="color:#ffc107; text-decoration:none">
                 <b class="">Dare To Meet Me?</b></a>
                 <br><b style="color:  blue;">&copy; {{ date('d/m/Y') }} <a class="small" style="color:chartreuse" href="{{ url('/impressum') }}">
@@ -117,50 +121,50 @@
     {{-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> --}}
 
     <script>
-        $(window).on('load', function() {
-            $('#cookieModal').modal('show');
-        });
+        setTimeout(function() {
+            document.getElementById('cookieConsent').style.display = 'block';
+        }, 0); // Delay in milliseconds (e.g., 10000 = 10 seconds)
 
 
         /* PAGE SCROLLUP BTN HIDE ON SCROLLDOWN */
         document.addEventListener('DOMContentLoaded', () => {
-  // Add the scroll event listener
-  window.addEventListener('scroll', handleScroll);
-});
+        // Add the scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        });
 
-// Function to check the scroll position and show/hide the buttons
-function handleScroll() {
-  // Calculate the scroll position and the document height
-  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-  const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        // Function to check the scroll position and show/hide the buttons
+        function handleScroll() {
+        // Calculate the scroll position and the document height
+        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-  // Calculate the threshold (last 20% of the page)
-  const threshold = documentHeight * 0.8;
+        // Calculate the threshold (last 20% of the page)
+        const threshold = documentHeight * 0.8;
 
-  // Show/hide the first button based on the scroll position
-  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-  if (scrollPosition > threshold) {
-    scrollToTopBtn.style.display = 'block';
-  } else {
-    scrollToTopBtn.style.display = 'none';
-  }
+        // Show/hide the first button based on the scroll position
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        if (scrollPosition > threshold) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
 
-  // Show/hide the second button based on the scroll position
-  const footerButton = document.getElementById('footerButton');
-  if (scrollPosition > threshold) {
-    footerButton.style.display = 'block';
-  } else {
-    footerButton.style.display = 'none';
-  }
-}
+        // Show/hide the second button based on the scroll position
+        const footerButton = document.getElementById('footerButton');
+        if (scrollPosition > threshold) {
+            footerButton.style.display = 'block';
+        } else {
+            footerButton.style.display = 'none';
+        }
+        }
 
-// Function to scroll to the top of the page
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        }
 
 
         /* NAVBAR HIDE ONSCROLL*/

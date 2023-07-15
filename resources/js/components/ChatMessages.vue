@@ -6,7 +6,7 @@
           <div class="row">
             <div class="col">
               <div class="header">
-                <blockquote class="lead blockquote m-3 ps-2">
+                <blockquote class="blockquote m-3 ps-2">
                   {{ message.message }}
                 </blockquote>
               </div>

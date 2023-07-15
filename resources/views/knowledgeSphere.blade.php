@@ -28,7 +28,7 @@
                             </svg>
                             <div class="row justify-content-center align-items-center">
 
-                                <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
+                                <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoTwo"
                                     data-bs-trigger="focus" data-bs-html="true"
                                     data-bs-title="
                                     <div class=''>How To Use Your Library  
