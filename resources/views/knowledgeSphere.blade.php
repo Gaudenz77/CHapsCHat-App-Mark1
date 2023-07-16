@@ -27,8 +27,10 @@
                                 </text>
                             </svg>
                             <div class="row justify-content-center align-items-center">
-
-                                <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoTwo"
+                             </div>
+                                <p class="hintKnowledge mt-3 mb-0 ">Arm yourself, with knowledge!</p>
+                            </div>
+                            <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoTwo"
                                     data-bs-trigger="focus" data-bs-html="true"
                                     data-bs-title="
                                     <div class=''>How To Use Your Library  
@@ -44,10 +46,7 @@
                                             <li><strong>Both, the new entry and edit inputs take HTML tags!</strong></li>
                                         </ol>
                                     </div>">
-                                    <i class="fa-solid fa-circle-info fa-4x infoKnowledge animate__animated animate__heartBeat animate__delay-5s"></i></a>
-                                                </div>
-                                <p class="hintKnowledge my-3">Arm yourself, with knowledge!</p>
-                            </div>
+                                    <i class="fa-solid fa-circle-info fa-4x py-2 infoKnowledge animate__animated animate__heartBeat animate__delay-5s"></i></a>
                         <my-library-form :edit-mode="editMode"></my-library-form>
                     </div>
                 </div>

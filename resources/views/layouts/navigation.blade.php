@@ -2,9 +2,9 @@
     <img src="./assets/img/Group 26.svg" alt="logo_image" class="logoImg img-fluid mx-0 mt-sm-n1 ms-2"
         style="margin-bottom: -1rem;">
     {{-- @include('components.toggle') --}}
-    <div class="display-4 display-md-6 ms-2 sm-my-0"><a class="brand myNavUnderline mt-0 mx-0 ms-2 me-2"
-            href="{{ url('/') }}"><strong>{{ config('app.name', 'CHapsCHat') }}</strong></a>
-    </div>
+    <h1 class="display-5 ms-2 my-sm-0" style="font-style: italic;font-weight: 500;"><a class="brand myNavUnderlineTitle mt-0 mx-0 ms-2 me-2"
+            href="{{ url('/') }}"><b>{{ config('app.name', 'CHapsCHat') }}</b></a>
+    </h1>
 
     <button class="navbar-toggler navBarTogglOwn custom-toggler me-3 mb-0" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -26,13 +26,27 @@
 
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
 
-                <li class="nav-item pt-3">
+                <li class="nav-item">
+                    
+                        <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoMain"
+                        data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
+                        data-bs-title="
+                            <h3 class='{{-- text-white --}}'><b>INFOPOINT</b></h3>"
+                        data-bs-content='
+                            <div class="">
+                                <p class="{{-- text-white --}}">Wherever you see this symbol, you will find helpful information.<br>
+                                    <a class="myNavUnderline" href="http://127.0.0.1:8000/about"><b>more help...</b></a>
+                            </div>'><i class="mainInfo fa-solid fa-circle-info fa-2x ms-2 ms-md-0 my-4 pt-1"></i></a>
+   
+                </li>
+
+                <li class="nav-item pt-0 pt-md-3">
                     @if (Route::has('login'))
                         @auth
                 </li>
 
-                <li class="nav-item pt-3">
-                    <a class="myNavUnderline pt-3 {{ request()->is('/') ? '' : '' }}" aria-current="page"
+                <li class="nav-item pt-0 pt-md-3">
+                    <a class="myNavUnderline pt-0 pt-md-3 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                         href="{{ url('/playground') }}" onclick="reloadTwice()"><b>Playground</b></a>
                 </li>
 

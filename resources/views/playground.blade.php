@@ -41,9 +41,22 @@
                     <div class="smooth-scroll scrollableChat chatBody rounded">
                         <chat-messages :auth-user-id="{{ Auth::id() }}"></chat-messages>
                     </div>
+                    <p class="text-end m-2 mb-0 mb-md-5 pt-2 pb-0 pb-md-3"><small>Messageservice brought <br>to you by </small><a
+                            href="https://pusher.com/">Pusher&copy;</a>
+                    </p>
 
-                    <div class="d-sm-block d-md-none text-center p-3 pb-0">
-                        
+                    <div class="d-sm-block d-md-none text-center p-3 pt-0 pb-3">
+                        <div class="row justify-content-center">
+                            <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
+                            data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
+                            data-bs-title="
+                                <div class=''><b>Quick-Access Editor/Preview</b></div>"
+                            data-bs-content='
+                                <div class="">
+                                    <p class="">Toggle to quickly change between editor and preview.
+                                </div>'><i class="fa-solid fa-circle-info"></i></a>
+                        </div>
+
                         <div class="btn-group mobileGoner" role="group" aria-label="Basic example">
                             <button class="btn btn-sm btn-warning"  type="button" onclick="toggleEditorMain()"><i
                                     class="fa-solid fa-power-off"></i> Editor</button>
@@ -51,15 +64,13 @@
                                     class="fa-solid fa-power-off"></i> Preview</button>
                         </div>
                     </div>
-                    <p class="text-end m-2 mb-3 mb-md-5 pt-2 pb-3"><small>Messageservice brought <br>to you by </small><a
-                            href="https://pusher.com/">Pusher&copy;</a>
-                    </p>
+
                 </div>
 
                 <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;">
                     <div class="mt-2 p-2 pt-2 pb-md-3 d-flex align-items-center justify-content-between">
                         <img src="./assets/img/tool_plaque_yellow_bg_black.png" alt="Info" class="img-fluid toolPlaque pb-2" alt="tool_plaque">
-                        <h5 class="bg-danger mb-0 pb-2 ms-0 py-2 py-md-2 ps-2 px-md-1 mx-1 me-md-3">ThiS iS Your EdiTor!
+                        <h5 class="text-center text-md-start bg-danger mb-0 pb-2 ms-0 py-2 py-md-2  px-2 ps-md-2 px-md-1 mx-1 me-md-3">ThiS iS Your EdiTor!
                             <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
                                 data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
                                 data-bs-title="

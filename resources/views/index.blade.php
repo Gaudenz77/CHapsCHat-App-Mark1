@@ -9,7 +9,7 @@
 
     <div id="icon">
         <div class="circle-container">
-            <svg viewBox="-15 0 130 100" class="circle-svg">
+            <svg viewBox="-17 0 130 100" class="circle-svg">
               <path id="circlePath" class="circle-path" d="M50,0 A50,50 0 1,1 50,99.9"></path>
               <text class="circle-text">
                 <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle">
@@ -59,22 +59,22 @@
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     <div class="container text-center">
-                        <h1 class="hookLine display-5 display-md-3 pt-3 pb-1 pb-md-3 text-center animate__animated animate__zoomInUp animate__delay-5s">
+                        <h1 class="hookLine display-5 display-md-3 pt-3 pb-1 pb-md-3 text-center animate__animated animate__zoomInUp animate__delay-5s" style="font-style: italic;">
                             <b>{{ __('Welcome To CHapsCHat') }}</b>
                         </h1>
-                        <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInLeft animate__delay-1s">
+                        <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInLeft animate__delay-1s" style="font-style: italic;">
                           
                                     <strong>Visit our Blog:</strong> <a
                                     class="nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
                                     aria-current="page" href="{{ url('/blogoSphere') }}"><b class="hookLineParaKnow">>>> Read more...</b></a>
                            
                         </p>
-                        <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInRight animate__delay-2s">
+                        <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInRight animate__delay-2s" style="font-style: italic;">
                             <strong>Let's chat and code together:</strong> <a
                             class="nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
                             aria-current="page" href="{{ url('/playground') }} " onclick="reloadTwice()"><b class="hookLineParaPlay">>>> Welcome
                                 to the Palyground. Join Now!</b></a>   </p>
-                        <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInUp animate__delay-3s">
+                        <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInUp animate__delay-3s" style="font-style: italic;">
                             <strong>Go to Your Personal Library:</strong> <a
                                 class="nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
                                 aria-current="page" href="{{ url('/knowledgeSphere') }}"><b class="hookLineParaLib">>>> Explore Now</b></a>
