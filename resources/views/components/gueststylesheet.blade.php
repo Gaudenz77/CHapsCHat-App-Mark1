@@ -183,7 +183,7 @@ body {
 /* DESKTOP/TABLET MEDIA QUERIES END */
 
 
-.btn-auth {
+/* .btn-auth {
     background-color: blue;
     width: 6rem;
     height: 6rem;
@@ -208,6 +208,8 @@ body {
 
 .btn-auth:focus {
     outline: none;
+    border-color: #091540;
+    background-color: #091540
 }
 
 body.dark-mode .btn-auth {
@@ -227,15 +229,19 @@ body.dark-mode .btn-auth {
 
 body.dark-mode .btn-auth:hover {
     background-color: #ff7777;
+    border-color: #ff7777;
 }
 
 body.dark-mode .btn-auth:active {
-    background-color: #cc1f00;
+    background-color: #ebebeb; 
+
 }
 
 body.dark-mode .btn-auth:focus {
     outline: none;
-}
+    border-color: #ebebeb;
+    background-color: #ebebeb; 
+} */
 
 .custom-toggler.navbar-toggler {
     border-color: rgb(255, 255, 0);
@@ -446,6 +452,30 @@ body.dark-mode .cookiemodal .modal-body  {
     box-shadow: 0 0 5px #FF8C00, 0 0 10px #FF8C00, 0 0 20px #FF8C00;
   }
 } */
+.circle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circle-svg {
+  position: absolute;
+  width: 220%;
+  height: 160%;
+}
+
+.circle-path {
+  fill: transparent;
+  stroke: none;
+}
+
+.circle-text {
+  font-size: 14px;
+  font-weight:bold;
+  fill: red;
+  text-transform: uppercase;
+}
 
 
 </style>

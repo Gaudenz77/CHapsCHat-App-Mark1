@@ -7,8 +7,17 @@
 @section('content')
 
     <div id="icon">
-        <i class="iconshooter fa-solid fa-face-grin-squint-tears fa-5x {{-- fa-beat --}}"></i>
-        <p style="font-family:'Roboto', sans-serif: font-size:50%;">Catch Me If U Can!</p>
+        <div class="circle-container">
+            <svg viewBox="-15 0 130 100" class="circle-svg">
+            <path id="circlePath" class="circle-path" d="M50,0 A50,50 0 1,1 50,99.9"></path>
+            <text class="circle-text">
+                <textPath xlink:href="#circlePath" startOffset="50%" text-anchor="middle">
+                Catch Me If U Can!
+                </textPath>
+            </text>
+            </svg>
+            <i class="iconshooter fa-solid fa-laugh-wink fa-5x"></i>
+        </div>
     </div>
 
     <div class="container">

@@ -1200,22 +1200,7 @@ body.dark-mode .previewCol {
 /* .btn {
 }
  */
-.btn-circle,
-.btn-circle:hover,
-.btn-circle:focus {
-  width: 5rem;
-  height: 5rem;
-  font-size: 90%;
-  padding: 8px 8px;
-  border-radius: 50%;
-  color: #ffff00;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 15px;
-  box-shadow: -3px 3px 3px 3px rgb(141, 141, 141);
-}
-
-.btn-auth {
+ .btn-auth {
     background-color: blue;
     width: 6rem;
     height: 6rem;
@@ -1240,23 +1225,39 @@ body.dark-mode .previewCol {
 
 .btn-auth:focus {
     outline: none;
+    border-color: #091540;
+    background-color: #091540
 }
 
 body.dark-mode .btn-auth {
     background-color: #ff0000;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border-width: 5px;
     border-color: #0000ff;
+    padding: 1rem 0 !important;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
 
 body.dark-mode .btn-auth:hover {
     background-color: #ff7777;
+    border-color: #ff7777;
 }
 
 body.dark-mode .btn-auth:active {
-    background-color: #cc1f00;
+    background-color: #ebebeb; 
+
 }
 
 body.dark-mode .btn-auth:focus {
     outline: none;
+    border-color: #ebebeb;
+    background-color: #ebebeb; 
 }
 
 .btn-circle {
@@ -1653,10 +1654,26 @@ left:-30px;
 }
 .ht-ui-check .track {
     display: block;
-    width: 23.5vw;
-    height: 13.5vw;
+    width: 22.5vw;
+    height: 12.5vw;
     background: #1400ff;
     margin: -0.4rem;
+}
+
+@media (max-width: 480px) {
+
+    .custom-checkbox[type="checkbox"]:checked + .ht-ui-check .track {
+        background: #ff0000;
+        margin: -0.4rem;
+    }
+    
+    .ht-ui-check .track {
+        display: block;
+        width: 23.5vw;
+        height: 12.5vw;
+        background: #1400ff;
+        margin-left: -1px;
+    }
 }
 
 .ht-ui-check {
@@ -1810,11 +1827,11 @@ body.dark-mode .googleIcons {
 
 /* ICONSHOOTER START ------------------------------------------------------- */
 .iconshooter {
-    color: #ffa500;
+    color: #091540
 }
 
 body.dark-mode .iconshooter {
-    color: #fa1c50;
+    color: #ebebeb
 }
 
 #icon {

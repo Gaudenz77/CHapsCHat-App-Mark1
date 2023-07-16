@@ -4,7 +4,7 @@
         <div class="track">
             <div class="inner"></div>
         </div>
-        <div class="handle mb-4">
+        <div class="handle">
             <div class="faces">
                 <div class="sad">
                     <div class="eyes">

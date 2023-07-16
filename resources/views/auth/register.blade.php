@@ -118,7 +118,7 @@
 
                                 <div class="row">
                                     <div class="col text-center">
-                                        <button type="submit" class=" btn btn-lg btn-auth my-2 p-2 ml-md-4">
+                                        <button type="submit" class=" btn btn-auth my-2 p-2 ml-md-4">
                                             <span class="material-symbols-outlined pe-3">
                                                 login
                                             </span>{{-- <br>{{ __('Register') }} --}}
