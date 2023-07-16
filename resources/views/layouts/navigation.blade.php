@@ -15,7 +15,7 @@
             <div class="offcanvas-title" id="offcanvasNavbarLabel">
             </div>
             <img src="./assets/img/Group 26.svg" alt="logo_image" class="canvasLogo pt-2">
-            <h2 class="mb-1 mb-md-2"><a class="brand myNavToggleTitle" href="{{ url('/') }}"> {{ config('app.name', 'CHapsCHat') }} </a>
+            <h2 class="mb-1 mb-md-2"><a class="brand myNavToggleTitle" style="font-style: italic;font-weight: 500;" href="{{ url('/') }}"> {{ config('app.name', 'CHapsCHat') }} </a>
             </h2>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
