@@ -14,7 +14,22 @@
                 <ul class="list-unstyled">
 
                     <li>
-                        <h3>Introduction</h3>
+                        <h3>Proplem</h3>
+                        <p>Hello and welcome! My name is [Your Name], and I'm thrilled to have you here on my website.</p>
+                    </li>
+
+                    <li>
+                        <h3>Analysis</h3>
+                        <p>Hello and welcome! My name is [Your Name], and I'm thrilled to have you here on my website.</p>
+                    </li>
+
+                    <li>
+                        <h3>Hypothesis</h3>
+                        <p>Hello and welcome! My name is [Your Name], and I'm thrilled to have you here on my website.</p>
+                    </li>
+
+                    <li>
+                        <h3>Solution/Synthesis</h3>
                         <p>Hello and welcome! My name is [Your Name], and I'm thrilled to have you here on my website.</p>
                     </li>
 
