@@ -7,7 +7,7 @@
                     type="button"
                     role="button"
                     id="createButton">
-                    <i class="fa-solid fa-circle-plus fa-3x"></i> Create
+                    <i class="fa-solid fa-circle-plus fa-3x"></i> Add Blog!
                 </button>
             </div>
 

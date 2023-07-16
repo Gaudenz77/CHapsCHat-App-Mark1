@@ -30,24 +30,28 @@
                              </div>
                                 <p class="hintKnowledge mt-3 mb-0 ">Arm yourself, with knowledge!</p>
                             </div>
-                            <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoTwo"
-                                    data-bs-trigger="focus" data-bs-html="true"
-                                    data-bs-title="
-                                    <div class=''>How To Use Your Library  
-                                    <i class='animate__animated animate__flip fa-solid fa-face-laugh-wink fa-2x d-flex justify-content-center'></i>
-                                    </div>"
-                                    data-bs-content="
-                                    <div class=''>
-                                        <ol>
-                                            <li>Give your entry a meaningful title (# included).</li>
-                                            <li>Fill in content as you wish (text only atm).</li>
-                                            <li>Send your record to your personal library by pressing the disc.</li>
-                                            <li>You can edit and delete all your records anytime.</li>
-                                            <li><strong>Both, the new entry and edit inputs take HTML tags!</strong></li>
-                                        </ol>
-                                    </div>">
-                                    <i class="fa-solid fa-circle-info fa-4x py-2 infoKnowledge animate__animated animate__heartBeat animate__delay-5s"></i></a>
-                        <my-library-form :edit-mode="editMode"></my-library-form>
+                            <a tabindex="0" 
+                                data-bs-toggle="popover" 
+                                data-bs-custom-class="popoverInfoTwo pb-0"
+                                data-bs-trigger="focus"
+                                data-bs-placement="bottom"  
+                                data-bs-html="true"
+                                data-bs-title="
+                                <div class='h6'>How To Use Your Library  
+                                <i class='animate__animated animate__flip fa-solid fa-face-laugh-wink py-0 fa-2x d-flex justify-content-center'></i>
+                                </div>"
+                                data-bs-content="
+                                <div class=''>
+                                    <ol>
+                                        <li>Give your entry a meaningful title (# included).</li>
+                                        <li>Fill in content as you wish (text only atm).</li>
+                                        <li>Send your record to your personal library by pressing the disc.</li>
+                                        <li>You can edit and delete all your records anytime.</li>
+                                        <li><strong>Both, the new entry and edit inputs take HTML tags!</strong></li>
+                                    </ol>
+                                </div><button class='close-button'>&times;</button>">
+                                <i class="fa-solid fa-circle-info fa-4x py-2 infoKnowledge animate__animated animate__heartBeat animate__delay-5s"></i></a>
+                    <my-library-form :edit-mode="editMode"></my-library-form>
                     </div>
                 </div>
             </div>

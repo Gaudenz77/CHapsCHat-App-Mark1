@@ -29,15 +29,6 @@ body {
         margin-bottom: 13vh;
     }
 
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        height: 12%;
-        width: 100%;
-        margin-top: 0;
-    }
-
     .colTriangle {
         /* left: 52%; */
     }
@@ -69,8 +60,17 @@ body {
         height: 10%;
     }
 
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 11vh;
+        width: 100%;
+        margin-top: 0;
+    }
+
     .span1 {
-        height: 12vh;
+        height: 11vh;
         background-color: #091540;
     }
 
@@ -95,6 +95,15 @@ body {
         margin-bottom: 20rem;
     }
 
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 12vh;
+        width: 100%;
+        margin-top: 0;
+    }
+
     .span1 {
         color: #ebebeb;
         background-color: #ffffff;
@@ -115,6 +124,7 @@ body {
         font-size:150%;
         padding-bottom:1rem !important;
     }
+
 }
 
 @media screen and (orientation: landscape) {
@@ -125,6 +135,15 @@ body {
 
     .registerMain {
         margin-top: 5rem;
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 12vh;
+        width: 100%;
+        margin-top: 0;
     }
 }
 /* LANDSCAPE/TABLET MEDIA QUERIES END */
@@ -163,6 +182,15 @@ body {
     .colBlogContent {
         width:75%;
         padding-bottom:4rem;
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height: 12vh;
+        width: 100%;
+        margin-top: 0;
     }
 
     .span1 {
@@ -312,7 +340,6 @@ body.dark-mode .popoverInfoOne {
     --bs-popover-body-color:#ebebeb;
     --bs-popover-max-width: 300px;
     width:250px;
-
 }
 
 body.dark-mode .popoverInfoTwo {
@@ -492,16 +519,17 @@ body.dark-mode .btn-circlesmallEditor:focus {
     bottom: 8px;
 }
 
-.scrollUpChevron {
+/* .scrollUpChevron {
         color:#0000ff;
 }
 
 body.dark-mode .scrollUpChevron {
         color:#ffff00;
-}
+} */
 
+/* COOKIEMODAL START KEEP */
 
-.cookiemodal .modal-dialog {
+/* .cookiemodal .modal-dialog {
     position: fixed;
     left: 0;
     right: 0;
@@ -526,7 +554,7 @@ body.dark-mode .scrollUpChevron {
   
 body.dark-mode .cookiemodal .modal-body  {
     background-color: #040a1f !important;
-}
+} */
 
 
 .toolPlaque {
@@ -540,7 +568,7 @@ body.dark-mode .cookiemodal .modal-body  {
 }
 
 /* new bring to css */
-.hookLineParaPlay {
+/* .hookLineParaPlay {
     color:#ffc107;
 }
 
@@ -554,7 +582,7 @@ body.dark-mode .cookiemodal .modal-body  {
 
 #cookieConsent {
     display: none;
-}
+} */
 
 /* .glowing-input {
   animation: glowing 2s infinite;
@@ -597,13 +625,14 @@ body.dark-mode .cookiemodal .modal-body  {
 }
  */
 
- .mainInfo {
+/*  .mainInfo {
     color:#ebebeb;
  }
 
  body.dark-mode .mainInfo {
     color:#333;
- }
+ } */
+
 </style>
 
 <script>

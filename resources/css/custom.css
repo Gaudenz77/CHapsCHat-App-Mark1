@@ -381,31 +381,20 @@ body.dark-mode a {
 
 /* WELCOME / INDEX */
 
-.cookieModal .modal-dialog {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top:50%;
-    bottom: 0;
-    margin: auto;
-    width:90%;
+.hookLineParaPlay {
+    color:#ffc107;
 }
-  
-.cookieModal .modal-content {
-    margin-top: auto;
-    margin-bottom: 0;
+
+.hookLineParaKnow {
+    color:#ff0000;
 }
-  
-.cookieModal .modal-footer {
-    justify-content: flex-end;
+
+.hookLineParaLib {
+    color:#1400ff;
 }
-  
-.cookieModal .modal-body {
-    background-color: #ebebeb !important;
-}
-  
-body.dark-mode .cookieModal .modal-body  {
-    background-color: #040a1f !important;
+
+#cookieConsent {
+    display: none;
 }
   
 .overlay-container {
@@ -447,6 +436,7 @@ body.dark-mode .cookieModal .modal-body  {
 }
 
   /* INDEX SMALL */
+
 
 
 .trianglefixSmall {
@@ -1207,7 +1197,7 @@ body.dark-mode .previewCol {
 }
 
 .infoToggle {
-    font-size: 17px;
+    font-size: 21px;
     padding-bottom: 0px;
     padding-left: 2px;
     margin-left: -5px;
@@ -1798,24 +1788,21 @@ left:-30px;
 
 /* TOGGLE Stop================================================================= */
 
-/*  footer */
-.footer {
+/*  FOOTER */
+
+/* .footer {
     position: fixed;
     left: 0;
     bottom: 0;
     height: 8%;
     width: 100%;
     margin-top: 0;
-}
+} */
 
 .footerOwn {
     height: 11vh;
     z-index: -1;
 }
-
-/* body.dark-mode .footer {
-    background-color: #ebebeb;
-} */
 
 #footerButton {
     position: fixed;
@@ -1829,6 +1816,14 @@ left:-30px;
     color: #ffc107;
     position: relative;
     bottom: 10px;
+}
+
+.scrollUpChevron {
+    color:#0000ff;
+}
+
+body.dark-mode .scrollUpChevron {
+    color:#ffff00;
 }
 
 .scrollBtn {

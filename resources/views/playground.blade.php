@@ -14,11 +14,15 @@
                 <div class="chatCol col-md-3 px-3 py-0 pb-md-5">
                     <div class="mt-1 p-2 pt-3">
                         <h5 class="mb-0">WELCOME to the MESSAGECORNER
-                            <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
-                                data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
-                                data-bs-title="
+                            <a tabindex="0" 
+                            data-bs-toggle="popover" 
+                            data-bs-custom-class="popoverInfoOne"
+                            data-bs-trigger="focus" 
+                            data-bs-placement="right" 
+                            data-bs-html="true"
+                            data-bs-title="
                         <div class='lead animate__animated animate__zoomInUp'><b>How To Message</b></div>"
-                                data-bs-content='
+                            data-bs-content='
                         <div class="animate__animated animate__zoomInUp animate__delay-1s">
                             <ol>
                                 <li>Write your message below in the form-field.</li>
@@ -47,8 +51,12 @@
 
                     <div class="d-sm-block d-md-none text-center p-3 pt-0 pb-3">
                         <div class="row justify-content-center">
-                            <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
-                            data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
+                            <a tabindex="0" 
+                            data-bs-toggle="popover" 
+                            data-bs-custom-class="popoverInfoOne"
+                            data-bs-trigger="focus" 
+                            data-bs-placement="right" 
+                            data-bs-html="true"
                             data-bs-title="
                                 <div class=''><b>Quick-Access Editor/Preview</b></div>"
                             data-bs-content='
@@ -69,10 +77,14 @@
 
                 <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;">
                     <div class="mt-2 p-2 pt-2 pb-md-3 d-flex align-items-center justify-content-between">
-                        <img src="./assets/img/tool_plaque_yellow_bg_black.png" alt="Info" class="img-fluid toolPlaque pb-2" alt="tool_plaque">
+                        <img src="./assets/img/tool_plaque_yellow_bg_black.png" alt="Info" class="img-fluid toolPlaque pt-2" alt="tool_plaque">
                         <h5 class="text-center text-md-start bg-danger mb-0 pb-2 ms-0 py-2 py-md-2  px-2 ps-md-2 px-md-1 mx-1 me-md-3">ThiS iS Your EdiTor!
-                            <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
-                                data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
+                            <a tabindex="0" 
+                                data-bs-toggle="popover" 
+                                data-bs-custom-class="popoverInfoOne"
+                                data-bs-trigger="focus" 
+                                data-bs-placement="right" 
+                                data-bs-html="true"
                                 data-bs-title="
                             <div class='lead animate__animated animate__zoomInUp'>
                             <strong>Code-Space:<br>Here you can code to yours delight!</strong>
@@ -99,14 +111,18 @@
                                     <input class="form-check-input fontColrSwitchCl" type="checkbox" role="switch"
                                         id="fontColorSwitch">
                                     <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-                                    <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoOne"
-                                        data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
+                                    <a tabindex="0" 
+                                        data-bs-toggle="popover" 
+                                        data-bs-custom-class="popoverInfoOne"
+                                        data-bs-trigger="focus" 
+                                        data-bs-placement="right" 
+                                        data-bs-html="true"
                                         data-bs-title="
                                         <div class=''>Output-Visibility</div>"
                                         data-bs-content="
                                         <div class=''>If not seeing code rendered in preview column (output), switch once to adjust to pages dark.bright-mode.</div>"
                                         style="font-size:1rem;">
-                                        <i class="fa-solid fa-circle-info infoToggle"></i></a>
+                                        <i class="fa-solid fa-circle-info infoToggle mt-1 mb-2"></i></a>
                                 </div>
                             </div>
 
