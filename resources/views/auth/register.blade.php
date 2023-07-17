@@ -12,7 +12,7 @@
 
                 <!-- QUOTE TYPEWRITER REGISTER -->
 
-                <div class="col-sm-4 mt-3 px-3 pt-3 pb-0  order-2 order-sm-1 animate__animated animate__flipInX">
+                <div class="col-sm-4 mt-3 px-3 pt-3 pb-0 order-2 order-sm-1 text-center text-md-start animate__animated animate__flipInX">
                     <a class="col-6 btn btn-circleType" id="playButtonReg" href="#"
                         style="display: inline-block; padding: 5px;">
                         <img class="col-12 image-fluid" src="./assets/img/typewriter.png" alt="typewriter_cute">
@@ -40,7 +40,7 @@
                     <div class="card circleAuthReg cardLogin px-3 pt-2 pb-3 m-0 m-md-5 px-md-2" id="authCard">
 
                         <div class="card-body text-center d-flex justify-content-center px-0 px-md-5 pt-5">
-                            <form class="mx-2 mt-md-4 px-0 px-md-5 pt-0 pb-0 pt-md-0" method="POST" action="{{ route('register') }}">
+                            <form class="col-12  col-md-9 mx-2 mt-md-4 px-0 px-md-5 pt-0 pb-0 pt-md-0" method="POST" action="{{ route('register') }}">
                                 @csrf
 
                                 <!-- Name -->
@@ -110,7 +110,7 @@
                                         title="Confirm your password" type="password" name="password_confirmation" required
                                         autocomplete="new-password" />
                                 </div>
-
+                                
                                 <div class="form-group d-flex justify-content-center mx-2 mt-3 mb-2">
                                     {!! NoCaptcha::renderJs() !!}
                                     {!! NoCaptcha::display(['data-theme' => 'dark']) !!}

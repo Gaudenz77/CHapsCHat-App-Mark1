@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row justify-content-evenly align-items-center">
                 <div class="col-md-5 px-2 mt-1 animate__animated animate__flipInX">
-                    <div class="card circleAuthLog cardLogin px-3 pt-0 pb-3 px-md-5" id="authCard">
+                    <div class="card circleAuthLog cardLogin px-0 pt-0 pb-3 px-md-5" id="authCard">
                         <div class="card-body text-center">
                             <!-- Session Status -->
                             @if (session('status'))
@@ -18,7 +18,7 @@
                                     {{ session('status') }}
                                 </div>
                             @endif
-                            <form class="mx-0 mx-md-2 px-0 px-md-4 pt-5" method="POST" action="{{ route('login') }}"> @csrf
+                            <form class="mx-0 mx-md-2 px-0 px-md-3 pt-5" method="POST" action="{{ route('login') }}"> @csrf
                                 <!-- Email Address -->
                                 <label class="form-label loginLabel" for="email">{{ __('Email') }}</label>
                                 <div class="input-group mb-2">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <!-- QUOTE TYPEWRITER LOGIN -->
-                <div class="col-sm-6 p-3 animate__animated animate__flipInY">
+                <div class="col-sm-6 p-3 text-center text-md-start animate__animated animate__flipInY">
                     <a class="col-6 btn btn-circleType" id="playButtonLog" href="#"
                         style="display: inline-block; padding: 5px;">
                         <img class="col-12 image-fluid" src="./assets/img/typewriter.png" alt="typewriter_cute">

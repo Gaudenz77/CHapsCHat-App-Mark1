@@ -46,24 +46,24 @@
                 </li>
 
                 <li class="nav-item pt-0 pt-md-3">
-                    <a class="myNavUnderline pt-0 pt-md-3 {{ request()->is('/') ? '' : '' }}" aria-current="page"
+                    <a class="myNavUnderline pt-3 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                         href="{{ url('/playground') }}" onclick="reloadTwice()"><b>Playground</b></a>
                 </li>
 
                 @endauth
 
-                <li class="nav-item pt-3">
+                <li class="nav-item pt-0 pt-md-3">
                     <a class="myNavUnderline pt-3 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                         href="{{ url('/blogoSphere') }}"><b>Blogosphere</b></a>
                 </li>
 
                 @auth
-                    <li class="nav-item pt-3">
+                    <li class="nav-item pt-0 pt-md-3">
                         <a class="myNavUnderline pt-3 {{ request()->is('/') ? '' : '' }}" aria-current="page"
                             href="{{ url('/knowledgeSphere ') }}"><b>KnowledgeSphere</b></a>
                     </li>
                 @endauth
-                <li class="nav-item pt-3">
+                <li class="nav-item pt-0 pt-md-3">
                     <a class="myNavUnderline pt-3 {{ request()->is('about') ? '' : '' }}" aria-current="page"
                         href="{{ url('/about') }}"><b>About</b></a>
                 </li>
@@ -74,22 +74,22 @@
                             <b>{{ Auth::user()->name }}</b>
                         </a>
                         <ul class="dropdown-menu dropdownProfile py-0" id="myDropdownAccount">
-                            <li class="nav-item"><a class="myNavUnderline pt-3" href="{{ url('profile') }}"><b>Profile</b></a></li>
-                            <li class="nav-item"><a class="myNavUnderline pt-3" href="{{ route('logout') }}"
+                            <li class="nav-item pt-0 pt-md-3"><a class="myNavUnderline pt-3" href="{{ url('profile') }}"><b>Profile</b></a></li>
+                            <li class="nav-item pt-0 pt-md-3"><a class="myNavUnderline pt-3" href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><b>Log
                                         out</b></a></li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
                         @else
-                            <li class="nav-item pt-3">
-                                <a class="nav-item myNavUnderline pt-3" href="{{ route('login') }}"
+                            <li class="nav-item pt-0 pt-md-3">
+                                <a class="myNavUnderline pt-3" href="{{ route('login') }}"
                                     class=""><b>Login</b></a>
                             </li>
 
                             @if (Route::has('register'))
-                                <li class="nav-item pt-3">
-                                    <a class="nav-item myNavUnderline pt-3" href="{{ route('register') }}"
+                                <li class="nav-item pt-0 pt-md-3">
+                                    <a class="myNavUnderline pt-3" href="{{ route('register') }}"
                                         class=""><b>Register</b></a>
                                 </li>
                             @endif
@@ -97,7 +97,7 @@
                         @endif
                     </ul>
                 </li>
-                <li class="nav-item mt-3 mt-md-0 pt-2" style="list-style-type: none; width:10rem;">
+                <li class="nav-item mt-3 mt-md-0 pt-3 pt-md-2" style="list-style-type: none; width:10rem;">
                     @include('components.toggle')
                 </li>
             </ul>
