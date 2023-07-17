@@ -67,6 +67,11 @@
 
 <i class="fa-brands fa-optin-monster"></i>
 
+<i class="fa-brands fa-github-alt"></i>
+<i class="fa-brands fa-linkedin"></i>
+<i class="fa-brands fa-linkedin-in"></i>
+<i class="fa-brands fa-behance"></i>
+
 
 
 

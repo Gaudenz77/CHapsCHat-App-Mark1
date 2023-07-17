@@ -675,16 +675,27 @@ body.dark-mode .dropdownProfile {
 
 @media (max-width: 480px) {
     .g-recaptcha {
-    transform: scale(0.77);
-    transform-origin: 0 0;
-    position: relative;
-    left: 2rem;
+        transform: scale(0.77);
+        transform-origin: 0 0;
+        position: relative;
+        left: 2rem;
+        border-width: 3px;
+        border-color: #ffff00;
+        border-style: dotted;
+    }
+
+    body.dark-mode .g-recaptcha {
+        border: 3px #00f dotted;
     }
 }
- @media (max-width: 810px) and (orientation: landscape) {
+@media (min-width: 810px)  and (orientation: landscape) {
     .g-recaptcha {
-    position: relative;
-    left: 2rem;
+        border-width: 5px;
+        border-color: #ffff00;
+        border-style: dotted;
+    }
+    body.dark-mode .g-recaptcha {
+        border: 5px #0000ff dotted;
     }
  }
 
