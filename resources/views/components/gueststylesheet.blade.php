@@ -21,7 +21,7 @@ body {
 
     .blogMain {
         margin-top: 6rem;
-        margin-bottom: 12vh;
+        margin-bottom: 7rem;
     }
 
     .aboutMain {
@@ -70,12 +70,12 @@ body {
     }
 
     .span1 {
-        height: 11vh;
+        height: 7rem;
         background-color: #091540;
     }
 
     body.dark-mode .span1 {
-        height: 12vh;
+        height: 7rem;
         background-color: #ffffff;
     }
 
@@ -162,13 +162,13 @@ body {
 
     .blogMain {
         margin-top: 12vh;
-        margin-bottom: 2rem;
+        margin-bottom: 7rem;
     }
 
     .aboutMain {
         margin-top: 12vh;
         margin-bottom: 6rem;
-        }
+    }
 
     .aboutCol {
         height: 40vh;
@@ -196,14 +196,14 @@ body {
     .span1 {
         color: #ebebeb;
         background-color: #091540;
-        height: 12vh;
+        height: 7rem;
         bottom:-8px;
     }
 
     body.dark-mode .span1 {
         color: #ebebeb;
         background-color: #ffffff;
-        height: 12vh;
+        height: 7rem;
         color: #333;  
     }
 }

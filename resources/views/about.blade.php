@@ -8,7 +8,7 @@
 
     <div class="container-fluid">
         <div class="row {{-- align-items-center --}} justify-content-center">
-            <div class="col-md-4 bg-danger mb-0 mb-md-3 p-3 px-4 animate__animated animate__slideInDown animate__delay-1s">
+            <div class="col-md-4 bg-danger mb-0 mb-md-2 p-3 px-4 animate__animated animate__slideInDown animate__delay-1s">
                 <h2 class="mt-0"><b>About This Project/Web-App:</b></h2>
 
                 <ul class="list-unstyled">
@@ -91,7 +91,7 @@
             </div>
 
 
-            <div class="col-md-4 bg-info mb-0 mb-md-3 p-3 animate__animated animate__slideInUp animate__delay-3s">
+            <div class="col-md-4 bg-info mb-0 mb-md-2 p-3 animate__animated animate__slideInUp animate__delay-3s">
                 <h2 class="mt-0"><b>About Me:</b></h2>
                 <ul class="list-unstyled">
 
@@ -177,15 +177,15 @@
 
             </div>
 
-            <div class="col-md-4 bg-warning mb-0 mb-md-3 p-3 px-4 animate__animated animate__slideInDown animate__delay-2s">
+            <div class="col-md-4 bg-warning mb-0 mb-md-2 p-3 px-4 animate__animated animate__slideInDown animate__delay-2s">
                 <ul class="list-unstyled">
 
                     <li>
-                        <i class="fa-brands fa-github-alt"></i><br>
-                        <i class="fa-brands fa-linkedin-in"></i><br>
-                        <i class="fa-brands fa-behance"></i>
+                        <i class="fa-brands fa-github-alt"></i><a href="https://github.com/Gaudenz77">Krakatoom@Github/Gaudenz77</a><br>
+                        <i class="fa-brands fa-linkedin-in"></i><a href="https://www.linkedin.com/in/gaudenz-d-raiber/">LinkedIn</a><br>
+                        <i class="fa-brands fa-behance"></i><a href="https://www.behance.net/krakatoomdesign">KrakatoomDesign@Behance</a><br>
                     </li>
-
+                    
                     <li class="text-center animate__animated animate__zoomInUp animate__delay-5s">
                         <h4><u>That's me...</u></h4>
                         <img src="./assets/img/krakatoom_favicon.png" alt="About Image" class="img-fluid mx-auto px-1">
