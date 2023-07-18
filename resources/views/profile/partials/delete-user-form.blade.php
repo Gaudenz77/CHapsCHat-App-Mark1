@@ -15,7 +15,7 @@
         data-bs-toggle="modal"
         data-bs-target="#confirm-user-deletion"
     >
-    <i class="fa-solid fa-skull fa-4x skullIcon"></i><p class="skullIcon">{{ __('Delete Account') }}</p></button>
+    <i class="fa-solid fa-skull fa-4x skullIcon"></i><p class="">{{ __('Delete Account') }}</p></button>
 
     <div
         class="modal fade"
