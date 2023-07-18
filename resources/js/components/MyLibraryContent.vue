@@ -14,7 +14,7 @@
             <div class="col-11 col-md-4 mb-1 pt-0">
                 <label class="form-label" for="filter">Filter by:</label>
                 <select
-                    class="selectKnow form-select mb-3"
+                    class="selectKnow form-control mb-3"
                     aria-label="Default select example"
                     v-model="selectedFilter"
                     id="filter">
@@ -26,6 +26,7 @@
                 <div class="mb-3" v-if="selectedFilter === 'created_at'">
                     <label class="form-label" for="date">Date:</label>
                     <input
+                        class="form-control"
                         type="date"
                         v-model="selectedDate"
                         id="date"
@@ -53,14 +54,14 @@
                             placeholder="Enter search term"
                             v-model="searchTerm" />
                         <select
-                            class="form-select"
+                            class="form-control form-select"
+                            aria-label="Default select example"
                             id="searchSource"
                             v-model="searchSource">
+                            <option value="Choose Option">Choose Option</option>
                             <option value="google">Google</option>
                             <option value="wikipedia">Wikipedia</option>
-                            <option value="stackoverflow">
-                                Stack Overflow
-                            </option>
+                            <option value="stackoverflow">Stack Overflow</option>
                             <option value="database">Database</option>
                         </select>
                         <button type="submit" id="searchOne" class="btn btn-searchOne">
@@ -92,7 +93,7 @@
                 <td class="sm:text-sm lg:text-lg">
                     <b>
                         <template v-if="editMode === library.id">
-                            <input type="text" v-model="libraryEditTopic" />
+                            <input class="form-control" type="text" v-model="libraryEditTopic" />
                         </template>
                         <template v-else>
                             <span v-html="renderHTML(library.topic)"></span>

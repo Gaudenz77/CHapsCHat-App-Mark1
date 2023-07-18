@@ -1471,6 +1471,16 @@ body.dark-mode .btn-circleChat {
     margin-bottom: 15px;
 }
 
+.btn-circleLibrary:hover {
+    background-color: #333 !important;
+    color: #ebebeb !important;
+}
+
+.btn-circleLibrary:focus {
+    background-color: #333 !important;
+    color: #ebebeb !important;
+}
+
 body.dark-mode .btn-circleLibrary {
     background-color: #333 !important;
     color: #ebebeb !important;

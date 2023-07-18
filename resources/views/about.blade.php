@@ -8,8 +8,7 @@
 
     <div class="container-fluid">
         <div class="row {{-- align-items-center --}} justify-content-center">
-            <div
-                class="aboutLeft col-md-4 {{-- bg-danger --}} mb-0 mb-md-2 p-3 px-4 {{-- animate__animated animate__slideInDown animate__delay-1s --}}">
+            <div class="aboutLeft col-md-4 {{-- bg-danger --}} mb-0 mb-md-2 p-3 px-4 {{-- animate__animated animate__slideInDown animate__delay-1s --}}">
                 <h2 class="mt-0"><b>About This Project/Web-App:</b></h2>
 
                 <ul class="list-unstyled">
@@ -85,15 +84,19 @@
                         notice any abusive use of the platform, kindly primaryrm me so that I can personally address it.
                         <br><b>Thank you for your time, and happy coding!</b>
                         </p>
+                    </li>
 
+                    <li class="text-center {{-- animate__animated animate__zoomInUp animate__delay-5s --}}">
+                        <h4><u>That's me...</u></h4>
+                        <img src="./assets/img/krakatoom_favicon.png" alt="About Image" class="img-fluid mx-auto px-1">
+                    </li>
 
 
                 </ul>
             </div>
 
 
-            <div
-                class="aboutCenter col-md-4 {{-- bg-info --}} mb-0 mb-md-2 p-3 {{-- animate__animated animate__slideInUp animate__delay-3s --}}">
+            <div class="aboutCenter col-md-4 {{-- bg-info --}} mb-0 mb-md-2 p-3 px-4 {{-- animate__animated animate__slideInUp animate__delay-3s --}}">
                 <h2 class="mt-0"><b>About Me:</b></h2>
                 <ul class="list-unstyled">
 
@@ -169,86 +172,148 @@
                         </p>
                     </li>
 
-                    
-
-                </ul>
-
-            </div>
-
-            <div
-                class="aboutRight col-md-4 {{-- bg-secondary  --}} mb-0 mb-md-2 p-3 px-4 {{-- animate__animated animate__slideInDown animate__delay-2s --}}">
-                
-                
-                
-                
-                <ul class="list-unstyled">
 
                     <li>
                         <h4><u>Call to Action</u></h4>
                         <p>Thank you for taking the time to learn more about me. would be delighted to explore potential
                             collaborations and discuss how we can work together. You can reach out to me by using the
-                            contact form on this page or by sending an email to masterofceremonies@krakatoom.ch.
-                            Additionally, you can find more information about my work and projects by exploring my GitHub,
+                            contact form on this page or by sending an email to: <a
+                                href="mailto:masterofceremonies@krakatoom.ch">masterofceremonies@krakatoom.ch</a>.
+                            <br>Additionally, you can find more information about my work and projects by exploring my
+                            GitHub,
                             Behance, or LinkedIn profiles. Simply click on the related icons to access the respective
-                            profiles. I look forward to hearing from you and discussing exciting opportunities ahead.</p>
+                            profiles. I look forward to hearing from you and discussing exciting opportunities ahead.
+                        </p>
                     </li>
 
+                </ul>
+
+            </div>
+
+            <div class="aboutRight col-md-4 {{-- bg-secondary  --}} mb-0 mb-md-2 p-3 px-4 {{-- animate__animated animate__slideInDown animate__delay-2s --}}">
+
+                <ul class="list-unstyled">
+
+                    <li>
+                        <h2><b>How To Use:</b></h2>
+                        <p><b>This website/app is designed for use on both mobile and desktop devices. I appreciate any
+                                feedback, advice, or critique you may have, as well as any notifications regarding any lack
+                                of responsiveness. Your input will help me improve the user experience and ensure the app is
+                                up-to-date. Please use the form below to provide your feedback. Thank you!</b></p>
+
+                        <ul class="list-unstyled">
+                            <li>Explore the homepage and click wherever you'd like to pique your curiosity.</li><br>
+                            <li>Register and complete the Turing Test by ReCaptcha, or log in if you already have an
+                                account.</li><br>
+                            <li>Navigate through the content pages, freely explore the app's features and enjoy using it.
+                            </li><br>
+                            <li>Whenever you see a
+                                <a tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-placement="right"
+                                    data-bs-html="true" data-bs-content="Like This!" style="font-size:1rem;">
+                                    <i class="fa-solid fa-circle-info infoToggle mt-1 mb-2"></i></a>-icon, click on it to
+                                get immediate information.
+                            </li><br>
+                            <li>
+                                <h5><a href="{{ url('/playground') }}">Playground</a></h5>
+                                <ul>
+                                    <li>Messenger: Engage in text conversations, exchange ideas, and ask for help. You have
+                                        the ability to delete your own messages.</li>
+                                    <li>Editor: Write your code using three editors, which can be toggled below the editor
+                                        frame. The preview will adapt accordingly, providing formatting for HTML, CSS, and
+                                        JS. Additional features include a "Format Code" button, a dark/bright mode switch
+                                        (adapting to the master page's current state), and undo/redo buttons.</li>
+                                    <li>Next to the editor, you'll find preview frames. The HTML preview supports common
+                                        techniques such as basic HTML, inline and internal CSS, and in-code JavaScript. Most
+                                        CDN or unpkg links and scripts will function correctly when placed within the code
+                                        itself. There is also an individual JavaScript preview that displays the actual
+                                        console output. In an updated version, I intend to enable real external file coding
+                                        by linking the editors.</li>
+                                    <li>In an updated version I intend to link the editors so that real external file coding
+                                        will be possible.</li>
+                                    <li>For easier coding on mobile, I recommend using a specialized keyboard. Personally, I
+                                        use the <a
+                                            href="https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard&hl=en_US"><b>Hackers-Keyboard</b></a>
+                                        (available on the Android Google Play Store).
+                                        (Android, google play-store)</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>
+                                <h5><a href="{{ url('/blogoSphere') }}">BlogoSphere</a></h5>
+                                <ul>
+                                    <li>Read interesting new blog posts.</li>
+                                    <li>Registered users can create their own posts by clicking the <i class="fa-solid fa-circle-plus"></i>-icon. Add a
+                                        title, select a topic group, and enter content along with an optional image. If no
+                                        image is chosen, a default image will be displayed.</li>
+                                    <li>Blog creators can delete their own posts. In case of violations of common decency or
+                                        other abuse, the admin (me) has the authority to delete all posts. If you come
+                                        across any such content, please inform me using the contact form on this about-page.
+                                    </li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>
+                                <h5><a href="{{ url('/knowledgeSphere') }}">KnowledgeSphere</a></h5>
+                                <ul>
+                                    <li>This is your personal library.</li>
+                                    <li>Add your own knowledge or anything you find useful to your library by clicking the
+                                        <i class="fa-solid fa-circle-plus"></i>-icon to create a new entry. HTML tags are
+                                        explicitly allowed, such as links and list formatting.</li>
+                                    <li>Like any good library, you have direct access to various search engines and
+                                        entities, including a direct link to Google search, Wikipedia, and Stack Overflow.
+                                    </li>
+                                    <li>The filter function allows you to browse your library based on topic, content, or
+                                        date (to be confirmed).</li>
+                                    <li>You can always edit the topic/title and content of each entry by using the
+                                        respective buttons below it in the library table. Additionally, you can delete each
+                                        entry individually.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <br>
+                        Thank you for your interest in my ChapsChat-App. Feel free to reach out with any constructive
+                        critique, new feature ideas, report safety issues, or just to say hi.
+                        <br>Cheers Yallzies, Gaudenz
+                    </li>
+                    <br>
                     <li>
                         <div class="row justify-content-evenly">
                             <div class="col-2">
-                                <a href="https://github.com/Gaudenz77"><i class="fab fa-github-alt fa-3x"></i></a>
+                                <a class="btn btn-circleLibrary" href="https://github.com/Gaudenz77"><i class="fab fa-github-alt fa-3x"></i></a>
                             </div>
                             <div class="col-2">
-                                <a href="https://www.linkedin.com/in/gaudenz-d-raiber/"><i class="fab fa-linkedin-in fa-3x"></i></a>
+                                <a class="btn btn-circleLibrary" href="https://www.linkedin.com/in/gaudenz-d-raiber/"><i
+                                        class="fab fa-linkedin-in fa-3x"></i></a>
                             </div>
                             <div class="col-2">
-                                <a href="https://www.behance.net/krakatoomdesign"><i class="fab fa-behance fa-3x"></i></a>
-                            </div>  
+                                <a class="btn btn-circleLibrary" href="https://www.behance.net/krakatoomdesign"><i class="fab fa-behance fa-3x"></i></a>
+                            </div>
                         </div>
-                    </li>
-
-                    <li class="text-center {{-- animate__animated animate__zoomInUp animate__delay-5s --}}">
-                        <h4><u>That's me...</u></h4>
-                        <img src="./assets/img/krakatoom_favicon.png" alt="About Image" class="img-fluid mx-auto px-1">
-                    </li>
-
-                    <li>
-                        <h4><u>How To Use This Web-Page/Web-App</u></h4>
-                        <p>
-                            <ul>
-                                <li>Discover the homepage, press where you like to, get your curiosity going</li>
-
-                                <li>register and make the Touring Test by ReCaptcha or login</li>
-                                <li>Roam around the content pages, there are these main pages:</li>
-                                <li>Playground: 
-                                    <ul>
-                                        <li>Messenger: Write text, exchange ideas, ask for help: You get the converstaion going. You always can delet your own messages</li>
-                                        <li>Editor: Write your code, it has three editors, that are set by toggle below editor frame. The preview changes according to the code editor preset with respective formating for Html, Css, JS, format code button, undo/Redo buttons and </li>
-
-                                    </ul>
-                                </li>
-
-                            </ul>
-                        </p>
                     </li>
                 </ul>
 
 
 
-                <h2 class="mx-0 mt-0"><b>Contact</b></h2>
-
-                <form action="https://formspree.io/f/mdorolbg" method="POST">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Your email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Your message:</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <!-- your other form fields go here -->
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </form>
+                <h2 class="mx-0 mt-0 mb-3"><b>For Contact use form:</b></h2>
+                <div class="row justify-content-center">
+                    <form class="col-12 col-md-10" action="https://formspree.io/f/mdorolbg" method="POST">
+                        <div class="mb-3">
+                            {{-- <label for="email" class="form-label">Your email:</label> --}}
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your email..."
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            {{-- <label for="message" class="form-label">Your message:</label> --}}
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                        </div>
+                        <!-- your other form fields go here -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-circleLibrary"><i
+                                    class="fa-solid fa-paper-plane {{-- fa-brands fa-optin-monster  --}}fa-2x pt-0"></i></button>
+                        </div>
+                    </form>
+                </div>
+                
 
                 <h2 class="mx-0 mt-5"><b>Mailto:</b></h2>
                 <a class="mx-0" href="mailto:masterofceremonies@krakatoom.ch">
