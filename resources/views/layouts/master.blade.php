@@ -122,14 +122,14 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-  var cookieConsent = document.getElementById('cookieConsent');
-  var popup = cookieConsent.querySelector('.eu-popup');
+        var cookieConsent = document.getElementById('cookieConsent');
+        var popup = cookieConsent.querySelector('.eu-popup');
 
-  setTimeout(function() {
-    popup.classList.add('show');
-    cookieConsent.style.display = 'block';
-  }, 5000); // Delay for 5 seconds (adjust as needed)
-});
+        setTimeout(function() {
+            popup.classList.add('show');
+            cookieConsent.style.display = 'block';
+        }, 5000); // Delay for 5 seconds (adjust as needed)
+        });
 
 
 

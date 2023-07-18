@@ -8,7 +8,8 @@
 
     <div class="container-fluid">
         <div class="row {{-- align-items-center --}} justify-content-center">
-            <div class="col-md-4 bg-danger mb-0 mb-md-2 p-3 px-4 animate__animated animate__slideInDown animate__delay-1s">
+            <div
+                class="aboutLeft col-md-4 {{-- bg-danger --}} mb-0 mb-md-2 p-3 px-4 {{-- animate__animated animate__slideInDown animate__delay-1s --}}">
                 <h2 class="mt-0"><b>About This Project/Web-App:</b></h2>
 
                 <ul class="list-unstyled">
@@ -81,7 +82,7 @@
                         I warmly welcome everyone who discovers this page to join us in exchanging knowledge, learning
                         from one another, and utilizing this app's mobile-first approach for coding on the go. Please
                         refrain from using the chat for nefarious purposes or spreading discriminatory ideas. If you
-                        notice any abusive use of the platform, kindly inform me so that I can personally address it.
+                        notice any abusive use of the platform, kindly primaryrm me so that I can personally address it.
                         <br><b>Thank you for your time, and happy coding!</b>
                         </p>
 
@@ -91,7 +92,8 @@
             </div>
 
 
-            <div class="col-md-4 bg-info mb-0 mb-md-2 p-3 animate__animated animate__slideInUp animate__delay-3s">
+            <div
+                class="aboutCenter col-md-4 {{-- bg-info --}} mb-0 mb-md-2 p-3 {{-- animate__animated animate__slideInUp animate__delay-3s --}}">
                 <h2 class="mt-0"><b>About Me:</b></h2>
                 <ul class="list-unstyled">
 
@@ -152,50 +154,82 @@
                     </li>
 
                     <li>
-                        <h4><u>Achievements and Recognition</u></h4>
-                        <p>Throughout my career, I have been honored to receive [Awards/Honors], and my work has been
-                            featured in [Relevant Publications/Media Outlets]. I have also had the privilege of
-                            collaborating with [Influential Individuals/Organizations] on projects that have made a
-                            significant impact.</p>
-                    </li>
-
-                    <li>
                         <h4><u>Personal Interests or Hobbies</u></h4>
-                        <p>When I'm not working, you'll often find me [Personal Interest/Hobby]. I'm an avid
-                            [Interest/Hobby] enthusiast and enjoy [Related Activities]. It helps me find balance and
-                            inspiration, allowing me to bring fresh perspectives to my work.</p>
+                        <p>When I'm not working, you'll frequently find me at a local café or in a park, engaging in
+                            activities that bring me joy and relaxation. I enjoy immersing myself in a good book, strumming
+                            the guitar, gaming, or exploring social media and the internet to discover interesting knowledge
+                            and stay updated with the latest news. Music plays a significant role in my life, and I find
+                            fulfillment in playing various instruments such as the guitar, violin, piano, and percussion.
+                            Whether it's jamming freely with fellow musicians or participating in planned gigs and events,
+                            making music brings me immense satisfaction.
+                            <br><br>
+                            In addition to actively pursuing my hobbies, I also appreciate the value of doing nothing at all
+                            to truly relax. Taking time for myself allows me to find balance and rejuvenation, ultimately
+                            inspiring me to approach my work with a fresh perspective and renewed energy.
+                        </p>
                     </li>
 
-                    <li>
-                        <h4><u>Call to Action</u></h4>
-                        <p>Thank you for taking the time to learn more about me. I would love to hear from you and discuss
-                            how we can work together. Feel free to [Contact Option] or explore [Related Sections/Links] for
-                            more information.</p>
-                    </li>
+                    
 
                 </ul>
 
             </div>
 
-            <div class="col-md-4 bg-warning mb-0 mb-md-2 p-3 px-4 animate__animated animate__slideInDown animate__delay-2s">
+            <div
+                class="aboutRight col-md-4 {{-- bg-secondary  --}} mb-0 mb-md-2 p-3 px-4 {{-- animate__animated animate__slideInDown animate__delay-2s --}}">
+                
+                
+                
+                
                 <ul class="list-unstyled">
 
                     <li>
-                        <i class="fa-brands fa-github-alt"></i><a href="https://github.com/Gaudenz77">Krakatoom@Github/Gaudenz77</a><br>
-                        <i class="fa-brands fa-linkedin-in"></i><a href="https://www.linkedin.com/in/gaudenz-d-raiber/">LinkedIn</a><br>
-                        <i class="fa-brands fa-behance"></i><a href="https://www.behance.net/krakatoomdesign">KrakatoomDesign@Behance</a><br>
+                        <h4><u>Call to Action</u></h4>
+                        <p>Thank you for taking the time to learn more about me. would be delighted to explore potential
+                            collaborations and discuss how we can work together. You can reach out to me by using the
+                            contact form on this page or by sending an email to masterofceremonies@krakatoom.ch.
+                            Additionally, you can find more information about my work and projects by exploring my GitHub,
+                            Behance, or LinkedIn profiles. Simply click on the related icons to access the respective
+                            profiles. I look forward to hearing from you and discussing exciting opportunities ahead.</p>
                     </li>
-                    
-                    <li class="text-center animate__animated animate__zoomInUp animate__delay-5s">
+
+                    <li>
+                        <div class="row justify-content-evenly">
+                            <div class="col-2">
+                                <a href="https://github.com/Gaudenz77"><i class="fab fa-github-alt fa-3x"></i></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.linkedin.com/in/gaudenz-d-raiber/"><i class="fab fa-linkedin-in fa-3x"></i></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.behance.net/krakatoomdesign"><i class="fab fa-behance fa-3x"></i></a>
+                            </div>  
+                        </div>
+                    </li>
+
+                    <li class="text-center {{-- animate__animated animate__zoomInUp animate__delay-5s --}}">
                         <h4><u>That's me...</u></h4>
                         <img src="./assets/img/krakatoom_favicon.png" alt="About Image" class="img-fluid mx-auto px-1">
                     </li>
-                    
+
                     <li>
                         <h4><u>How To Use This Web-Page/Web-App</u></h4>
-                        <p>When I'm not working, you'll often find me [Personal Interest/Hobby]. I'm an avid
-                            [Interest/Hobby] enthusiast and enjoy [Related Activities]. It helps me find balance and
-                            inspiration, allowing me to bring fresh perspectives to my work.</p>
+                        <p>
+                            <ul>
+                                <li>Discover the homepage, press where you like to, get your curiosity going</li>
+
+                                <li>register and make the Touring Test by ReCaptcha or login</li>
+                                <li>Roam around the content pages, there are these main pages:</li>
+                                <li>Playground: 
+                                    <ul>
+                                        <li>Messenger: Write text, exchange ideas, ask for help: You get the converstaion going. You always can delet your own messages</li>
+                                        <li>Editor: Write your code, it has three editors, that are set by toggle below editor frame. The preview changes according to the code editor preset with respective formating for Html, Css, JS, format code button, undo/Redo buttons and </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </p>
                     </li>
                 </ul>
 

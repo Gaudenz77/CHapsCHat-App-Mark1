@@ -64,18 +64,19 @@ body {
         position: fixed;
         left: 0;
         bottom: 0;
-        height: 11vh;
+        height: 6.5rem;
         width: 100%;
         margin-top: 0;
+        z-index: auto;
     }
 
     .span1 {
-        height: 7rem;
+        height: 6.5rem;
         background-color: #091540;
     }
 
     body.dark-mode .span1 {
-        height: 7rem;
+        height: 6.5rem;
         background-color: #ffffff;
     }
 
@@ -99,9 +100,10 @@ body {
         position: fixed;
         left: 0;
         bottom: 0;
-        height: 12vh;
+        height: 7rem;
         width: 100%;
         margin-top: 0;
+        z-index: auto;
     }
 
     .span1 {
@@ -141,9 +143,10 @@ body {
         position: fixed;
         left: 0;
         bottom: 0;
-        height: 12vh;
+        height: 7rem;
         width: 100%;
         margin-top: 0;
+        z-index: auto;
     }
 }
 /* LANDSCAPE/TABLET MEDIA QUERIES END */
@@ -188,9 +191,10 @@ body {
         position: fixed;
         left: 0;
         bottom: 0;
-        height: 12vh;
+        height: 7rem;
         width: 100%;
         margin-top: 0;
+        z-index:auto;
     }
 
     .span1 {
@@ -633,6 +637,25 @@ body.dark-mode .cookiemodal .modal-body  {
     color:#333;
  } */
 
+
+/*  #footerButton {
+    position: fixed;
+    top: 68px;
+    left: 0rem;
+    z-index: 9999;
+} */
+
+.aboutLeft {
+    background-color:#ff2828;
+}
+
+.aboutCenter {
+    background-color:#ff6000
+}
+
+.aboutRight {
+    background-color:#c8047b;
+}
 </style>
 
 <script>
