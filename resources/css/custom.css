@@ -564,11 +564,11 @@ body.dark-mode .circleBlog {
     min-width: 20%;
     min-height: 100%;
     padding: 5rem 2rem 7rem 2rem;
-    background-color:#7bffcf;
+    background-color:#1faca6;
 }
 
 body.dark-mode .columnBlogTwo { 
-    background-color:#830131;
+    background-color:#d52063
 }
 
 .textfield {
@@ -1323,6 +1323,7 @@ body.dark-mode .btn-auth:focus {
 
 .btn-circle {
     background-color: #1400ff;
+    color: #ffff00;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -1368,6 +1369,19 @@ body.dark-mode .btn-own {
     margin-bottom: 15px;
 }
 
+.btn-circleOwn:hover,
+.btn-circleOwn:focus {
+    background-color: #f25151;
+    color: #ffffff !important;
+}
+
+body.dark-mode .btn-circleOwn:hover,
+body.dark-mode .btn-circleOwn:focus {
+    background-color:  #f25151;
+    color: #ffffff !important;
+}
+
+
 body.dark-mode .btn-circleOwn {
     background-color: #0d6efd;
 }
@@ -1401,8 +1415,19 @@ body.dark-mode .btn-circleFoot {
     margin-bottom: 15px;
 }
 
+.btn-circleOwn2:hover,
+.btn-circleOwn2:focus {
+  background-color: #547ad9 !important;
+  color: #ffffff !important;
+}
+
 body.dark-mode .btn-circleOwn2 {
     background-color: #f25151;
+}
+
+body.dark-mode .btn-circleOwn2:hover,
+body.dark-mode .btn-circleOwn2:focus {
+    background-color: #ffc107;
 }
 
 .btn-circleOwn3 {
@@ -1417,8 +1442,20 @@ body.dark-mode .btn-circleOwn2 {
     margin-bottom: 15px;
 }
 
+.btn-circleOwn3:hover,
+.btn-circleOwn3:focus {
+    background-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
 body.dark-mode .btn-circleOwn3 {
-    background-color: #091540;
+    background-color: #091540 !important;
+}
+
+body.dark-mode .btn-circleOwn3:hover,
+body.dark-mode .btn-circleOwn3:focus {
+  background-color: #091540 !important;
+  color: #ffffff !important;
 }
 
 .skullIcon {
@@ -1844,7 +1881,7 @@ left:-30px;
 
 #footerButton {
     position: fixed;
-    bottom: -68px;
+    bottom: -4rem;
     left: .4rem;
     z-index: 9999;
 }

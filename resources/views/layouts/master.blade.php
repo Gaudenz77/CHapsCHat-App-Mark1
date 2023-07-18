@@ -146,23 +146,23 @@
         const documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
         // Calculate the threshold (last 20% of the page)
-        const threshold = documentHeight * 0.8;
+        const threshold = documentHeight * 0.6;
 
         // Show/hide the first button based on the scroll position
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-        if (scrollPosition > threshold) {
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
+            if (scrollPosition > threshold) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
 
         // Show/hide the second button based on the scroll position
         const footerButton = document.getElementById('footerButton');
-        if (scrollPosition > threshold) {
-            footerButton.style.display = 'block';
-        } else {
-            footerButton.style.display = 'none';
-        }
+            if (scrollPosition > threshold) {
+                footerButton.style.display = 'block';
+            } else {
+                footerButton.style.display = 'none';
+            }
         }
 
         // Function to scroll to the top of the page

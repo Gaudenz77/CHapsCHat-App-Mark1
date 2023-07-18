@@ -319,7 +319,7 @@
                 <a class="mx-0" href="mailto:masterofceremonies@krakatoom.ch">
                     <p class=""><b>masterofceremonies@krakatoom.ch</b></p>
                 </a>
-                <p><b style="color: blue;">Copyright &copy; @ {{ date('d/m/Y') }}</b></p>
+                <p><b style="color: blue;">Copyright &copy;@ {{ date('d/m/Y') }}</b></p>
 
             </div>
         </div>

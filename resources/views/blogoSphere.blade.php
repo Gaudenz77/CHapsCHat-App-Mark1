@@ -13,8 +13,9 @@
       <div class="col-sm-4 col-lg-3 columnBlogTwo pb-3 pb-md-5 px-lg-4 px-2 pt-4 mb-0" id="formContainer" style="display: none;">
         <div class="form-wrapper"> 
           @auth 
-          <h1 class="">Create Blog</h1>
-          <p>{{ Auth::user()->name }}'</p>
+          <h1 class="playgLandsTitle">Create Blog<br>
+            <strong class="text-warning">{{ Auth::user()->name }}'</strong></h1>
+          
           <my-blog-form></my-blog-form> 
           @endauth
         </div>

@@ -9,6 +9,12 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    .navbar {
+        height: 7em;
+        background-color: #091540;
+    }
+
     .loginMain {
         margin-top: 121px;
         margin-bottom: 11vh;
@@ -25,8 +31,8 @@ body {
     }
 
     .aboutMain {
-        margin-top: 16vh;
-        margin-bottom: 13vh;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
     }
 
     .colTriangle {
@@ -71,12 +77,12 @@ body {
     }
 
     .span1 {
-        height: 6.5rem;
+        height: 7rem;
         background-color: #091540;
     }
 
     body.dark-mode .span1 {
-        height: 6.5rem;
+        height: 7rem;
         background-color: #ffffff;
     }
 
@@ -169,8 +175,8 @@ body {
     }
 
     .aboutMain {
-        margin-top: 12vh;
-        margin-bottom: 6rem;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
     }
 
     .aboutCol {

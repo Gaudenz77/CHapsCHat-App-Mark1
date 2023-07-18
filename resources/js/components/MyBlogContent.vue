@@ -12,10 +12,10 @@
           <div class="row justify-content-center">
             <div class="col-5 px-0 mt-4">
               <button v-if="blog.user_id == authUserId" class="btn btn-circleLibrary ms-4 mt-2 mb-2 p-1" type="button" role="button" @click="deleteBlog(blog.id)">
-                <i class="fa-regular fa-trash-can"></i> Delete </button>
+                <i class="fa-regular fa-trash-can fa-2x"></i></button>
             </div>
             <div class="col-6 me-3 px-0">
-              <button class="btn btn-circleBlogBig mt-2 mb-2 p-1" type="button" role="button" data-bs-toggle="modal" :data-bs-target="'#modal-' + blog.id">Read More! <i class="fa-regular fa-newspaper fa-xl"></i>
+              <button class="btn btn-circleBlogBig mt-2 mb-2 p-1" type="button" role="button" data-bs-toggle="modal" :data-bs-target="'#modal-' + blog.id">Read More! <i class="fa-regular fa-newspaper fa-2x"></i>
               </button>
             </div>
           </div>
@@ -26,7 +26,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <div class="container">
-                  <div class="row jusstify-content-evenly">
+                  <div class="row justify-content-evenly">
                     <div class="col"><h5 class="modal-title">{{ blog.title }}</h5></div>
                     <div class="col-1"><button type="button" class="btn-close btnXModal" data-bs-dismiss="modal" aria-label="Close"></button></div>
               
