@@ -25,19 +25,18 @@
 
                     <li>
                         <h4><u>Analysis</u></h4>
-                        <p>Similarly, I tested several apps such as Codepen, TrepEdit, Dcoder, Anwriter Free, and Spck
-                            Editor. While these apps were professionally developed and offered a wide range of
+                        <p>Similarly, I tested several apps such as Codepen, TrebEd, Dcoder, Anwriter Free, and Spck
+                            Editor and more. While these apps were professionally developed and offered a wide range of
                             functionalities, they either required payment or had an overwhelming amount of features. What I
                             was looking for was a simple editor that resembled VS Code, allowing me to quickly test a layout
                             grid, a JavaScript function, or a CSS selector. Additionally, I wanted the ability to easily
-                            copy and paste CDNs (such as Bootstrap, jQuery, and more) to test basic features. Another idea I
-                            had was to create a personal library where I could store code snippets, web links, or even text
+                            copy and paste CDNs and Unpkg's (such as Bootstrap, jQuery, and more) to test basic features. Another idea I
+                            had was to create a personal library where I could store code snippets, web links, or simply text
                             and manuals for quick reference.
 
                             <br><br>On the other hand, I thought it would be fantastic to have a built-in channel for
-                            discussing
-                            coding ideas with friends, enabling quick help without the need to switch to a different
-                            messaging app or create special accounts for it.
+                            discussing coding ideas with friends, enabling quick help without the need to switch to a different
+                            messaging app or create special accounts in other 3rd party apps/messengers for it.
                         </p>
                     </li>
 
@@ -52,8 +51,7 @@
                             editor, and a library.
 
                             <br><br>The idea of the CHapsChat-App was born, with the additional motivation of considering it
-                            as
-                            a masterpiece and the final project for my web development crash course offered by SEB Zurich. I
+                            as a masterpiece and the final project for my web development crash course offered by SEB Zurich. I
                             aimed to showcase all the newly acquired knowledge and skills through this project to the best
                             of my abilities.
                         </p>
@@ -63,31 +61,29 @@
                         <h4><u>Solution/Synthesis</u></h4>
                         <p>
                         <h3>Welcome to ChapsChat-Meeting-Space!</h3> After registering or logging in, you will find the core
-                        page
-                        known as the "Playground." Its main features include the Messagecenter, powered by Pusher, and
-                        the code editor, primarily based on the Monaco code editor, which is the core editor of VS Code.
+                        page known as the <b>"Playground"</b>. Its main features include the Messagecenter, powered by Pusher, and
+                        the code editor, primarily based on the Monaco Code Editor, which is the core editor of VS Code.
                         The code editor provides individual editors for HTML, CSS, and JavaScript. In the next updated
                         release, version 2, we will introduce combined editors as a new feature.
                         <br><br>
-                        Save your new discoveries and findings in your personal library within the KnowledSphere. If you
+                        Save your new discoveries and findings in your personal library within the <b>"KnowledSphere"</b>. If you
                         have stories to share or knowledge to extend beyond the live interaction in the playground
-                        messenger, feel free to post a blog in the Blogosphere. These articles will be publicly
+                        messenger, feel free to post a blog in the <b>"Blogosphere"</b>. These articles will be publicly
                         accessible, even to non-registered users, and can be deleted by the creator. As the main
-                        administrator and responsible entity of CHapsChat@Krakatoom.ch (use the contact-form or direct mail
-                        at <a href="mailto:masterofceremonies@krakatoom.ch">masterofceremonies@krakatoom.ch)</a>, I will also
-                        intervene if any
-                        content violates common decency.
+                        administrator and responsible entity of CHapsChat@Krakatoom.ch , I will also
+                        intervene if any content violates common decency. Use the contact-form or direct mail
+                        at <a href="mailto:masterofceremonies@krakatoom.ch">masterofceremonies@krakatoom.ch</a>
                         <br><br>
                         I warmly welcome everyone who discovers this page to join us in exchanging knowledge, learning
                         from one another, and utilizing this app's mobile-first approach for coding on the go. Please
                         refrain from using the chat for nefarious purposes or spreading discriminatory ideas. If you
-                        notice any abusive use of the platform, kindly primaryrm me so that I can personally address it.
+                        notice any abusive use of the platform, kindly inform me so that I can personally address it.
                         <br><b>Thank you for your time, and happy coding!</b>
                         </p>
                     </li>
 
                     <li class="text-center animate__animated animate__zoomInUp animate__delay-5s">
-                        <h4><u>That's me...</u></h4>
+                        <h4><u>That's me...<i class="fa-solid fa-face-laugh-squint"></i></u></h4>
                         <img src="./assets/img/krakatoom_favicon.png" alt="About Image" class="img-fluid mx-auto px-1">
                     </li>
 
@@ -229,10 +225,10 @@
                                     <li>In an updated version I intend to link the editors so that real external file coding
                                         will be possible.</li>
                                     <li>For easier coding on mobile, I recommend using a specialized keyboard. Personally, I
-                                        use the <a
+                                        use the  <a
                                             href="https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard&hl=en_US"><b>Hackers-Keyboard</b></a>
-                                        (available on the Android Google Play Store).
-                                        (Android, google play-store)</li>
+                                        (available on the  <i class="fa-brands fa-google-play"></i> Google Play Store).
+                                    </li>
                                 </ul>
                             </li>
                             <br>

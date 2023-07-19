@@ -35,7 +35,7 @@
                         </h5>
 
                         <h1 class="mt-3 my-0 playgLandsTitle animate__animated animate__rubberBand">
-                            <strong class="text-warning">{{ Auth::user()->name }}'s</strong><small>Chatspace</small>
+                            <strong class="text-warning">{{ Auth::user()->name }}'s </strong><small>Chatspace</small>
                         </h1>
 
                         <div class="chatFormField my-4 px-0">
