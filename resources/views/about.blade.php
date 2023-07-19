@@ -275,15 +275,15 @@
                     <li>
                         <div class="row justify-content-evenly">
                             <div class="col-4 text-center">
-                                <a class="btn btn-circleLibrary" href="https://github.com/Gaudenz77"><i
+                                <a class="btn btn-circleLibrary" href="https://github.com/Gaudenz77" target="_blank"><i
                                         class="fab fa-github-alt fa-3x"></i></a>
                             </div>
                             <div class="col-4 text-center">
-                                <a class="btn btn-circleLibrary" href="https://www.linkedin.com/in/gaudenz-d-raiber/"><i
+                                <a class="btn btn-circleLibrary" href="https://www.linkedin.com/in/gaudenz-d-raiber/" target="_blank"><i
                                         class="fab fa-linkedin-in fa-3x"></i></a>
                             </div>
                             <div class="col-4 text-center">
-                                <a class="btn btn-circleLibrary" href="https://www.behance.net/krakatoomdesign"><i
+                                <a class="btn btn-circleLibrary" href="https://www.behance.net/krakatoomdesign" target="_blank"><i
                                         class="fab fa-behance fa-3x"></i></a>
                             </div>
                         </div>
