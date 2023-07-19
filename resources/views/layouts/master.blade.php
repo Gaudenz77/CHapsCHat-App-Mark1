@@ -14,6 +14,8 @@
     <!-- the value of the constant APP_NAME from the .env file is being assigned, if it exists. Otherwise, the default string "Laravel" is used. -->
 
     <link rel="icon" href="./assets/img/krakatoom_favicon.png" type="image/x-icon">
+    {{-- <link rel="icon" href="aviconReal1.ico" type="image/x-icon"> --}}
+    {{-- <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.png"> --}}
 
     <title>{{ config('app.name', 'ChapsChat') }}</title>
 
