@@ -42,19 +42,19 @@ This website/app is designed for both mobile and desktop use. Your feedback and 
 
 ### Key Features:
 
-#### Playground:
+### [Playground]('https://krakatoom.ch/playground')
 
   * <b>Messenger</b>: Engage in text conversations, exchange ideas, and delete your messages.
   * <b>Editor</b>: Write code using three editors, toggle below the frame. Preview adapts with HTML, CSS, and JS formatting. Features include "Format Code," dark/bright mode switch, and undo/redo buttons.
   * <b>Previews</b>: HTML preview supports common techniques, inline CSS, and in-code JavaScript. Most CDN links function correctly. Individual JavaScript preview shows console output.
 
-#### BlogoSphere:
+### [BlogoSphere]('https://krakatoom.ch/blogosphere')
 
   * Read interesting blog posts.
   * Registered users can create posts, adding titles, topic groups, and content with optional images.
   * Blog creators can delete their posts. Admin (me) can delete all posts if necessary.
 
-#### KnowledgeSphere:
+### [KnowledgeSphere]('https://krakatoom.ch/knowledgesphere')
 
   * Personal library to store your knowledge.
   * Add your knowledge with HTML tags (links, list formatting).
@@ -229,5 +229,6 @@ sail npm install --save-dev
 </div>
 
 ----
+
 ### 20230511 1st rm / Final edit before delivery 20230719 
 A production by [Krakatoom-Design Inc.](https://github.com/Gaudenz77) 
