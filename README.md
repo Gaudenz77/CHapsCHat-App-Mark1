@@ -200,21 +200,25 @@ sail npm install --save-dev
 * none, free use
 ----
 ## Tools Used:
-* HTML, CSS, Javascript, PHP PDO, Heidisql, Nginx, Mysql
-* [Laravel/Breeze](https://laravel.com/docs/10.x/starter-kits#breeze-and-blade)
-* [Github](https://github.com/svenbledt/Palaver-Laravel) (for file repo/sharing/workflow)
+
+* [Github](https://github.com/CyrSen/MP_MOX)
+* [Laravel - Breeze](https://laravel.com/docs/10.x/)
+* [Laravel - Sail](https://laravel.com/)
 * [Pusher Service](https://pusher.com)
 * [vue3.js](https://https://vuejs.org/)
-* [Fonts, various, Mainly IBM PLEX Mono](https://fonts.google.com)
+* [Bootstrap_5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+* [MDB](https://mdbootstrap.com/)
+* [Google Fonts](https://fonts.google.com/)
 * [Fontawesome](https://fontawesome.com/)
 * [Animate.css](https://animate.style/)
-* [AOS](https://michalsnik.github.io/aos/)<br>[AOS-Git]('https://github.com/michalsnik/aos')
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Bootstrap_5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+* [AOS](https://michalsnik.github.io/aos/)
+* [ChatGPT](https://openai.com/chatgpt)
+* [Visual Studio Code](https://code.visualstudio.com/)introduction/)
 * Internet for research
 * imagination 
 * feeling for details
 * the will to learn, improve share knowledge throughout the whole team-experience
+*  A special thanks goes to [ChatGPT](https://openai.com/chatgpt) for great support as lector, idea giver, teacher and simply an amazing tool that will change the world
 ----
 ## Main Content:
 <div style="text-align:center; font-size:20px">
@@ -225,5 +229,5 @@ sail npm install --save-dev
 </div>
 
 ----
-### 20230511 1st rm: 
+### 20230511 1st rm / Final edit before delivery 20230719 
 A production by [Krakatoom-Design Inc.](https://github.com/Gaudenz77) 
