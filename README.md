@@ -11,25 +11,160 @@
 </div>
 
 ---
-# Meet'n'Code - CHapsCHat-App - Test
+# Meet'n'Code - CHapsCHat-App - Mark 1
 
-### Project context
-You have learned and worked with many powerful web technologies. You will now build a website with social media features, plus a content that is worth sharing with future employers, customers, networking-relatives and other professionals. 
-The main goal is to show some of your learned technologies in its best light and give a little entertainment to whoever visits the site.
+## Project context
+### Problem:
+During my web development crash course, I found that existing code editor apps were either expensive or too feature-heavy, not meeting my needs for simplicity and functionality.
 
-<!-- ## Task / Assignment --> 
-<!-- * Create a website with blog feature and use the <b>Laravel</b>-framework with Breeze, all other avaliable Web-Dev-Techniques (Html, Css, Js, Php, Bs5), [Github](https://github.com/svenbledt/Palaver-Laravel), [FIGMA](https://www.figma.com/file/mf3TBislNFLZhHvvs3TifW/Palaver-Blog?node-id=3%3A4&t=OZFy40E2QIRxL6ik-1)
-* Build the website as a team. The site should look good on phones (mobile first) and on a desktop. -->
-----
-<!-- sail  -->
+### Analysis:
+I tested various professional apps like Codepen, TrepEdit, Dcoder, Anwriter Free, and Spck Editor, but they didn't satisfy me. I wanted a user-friendly editor similar to VS Code for testing layouts, JavaScript functions, and CSS selectors. Additionally, I desired easy access to CDNs and the ability to store code snippets and resources in a personal library. I also wanted a built-in chat feature for discussing coding ideas without switching to another platform.
+
+### Hypothesis:
+To address these issues, I decided to create CHapsChat-App, a web platform integrating a code editor, a messenger, and a library. I aimed to combine the functionality I desired and showcase my knowledge gained from learning frameworks like Laravel, Vue.js, and Bootstrap.
+
+### Solution/Synthesis:
+Welcome to ChapsChat-Meeting-Space! Upon registration, you'll access the "Playground" featuring the Messagecenter powered by Pusher and a user-friendly code editor based on Monaco (the core editor of VS Code). The editor provides separate sections for HTML, CSS, and JavaScript, with future updates including combined editors. Your discoveries can be stored in the KnowledSphere personal library.
+
+Additionally, you can share knowledge through the Blogosphere, where articles are publicly accessible. Please use the platform responsibly, respecting common decency and refraining from discrimination. As the administrator, I'll handle any misuse personally.
+
+Feel free to reach out via the contact form or email at masterofceremonies@krakatoom.ch. Join us in exchanging knowledge and enjoy the mobile-first approach of the app. Happy coding!
+
+## How To Use:
+
+This website/app is designed for both mobile and desktop use. Your feedback and suggestions are greatly appreciated, helping us improve the user experience and responsiveness. Please provide your input via the feedback form. Thank you!
+
+### Getting Started:
+
+  1. Explore the homepage to satisfy your curiosity.
+  2. Register and complete the Turing Test by ReCaptcha, or log in if you have an account.
+  3. Navigate through content pages and enjoy exploring the app's features.
+
+### Key Features:
+
+#### Playground:
+
+  * <b>Messenger</b>: Engage in text conversations, exchange ideas, and delete your messages.
+  * <b>Editor</b>: Write code using three editors, toggle below the frame. Preview adapts with HTML, CSS, and JS formatting. Features include "Format Code," dark/bright mode switch, and undo/redo buttons.
+  * <b>Previews</b>: HTML preview supports common techniques, inline CSS, and in-code JavaScript. Most CDN links function correctly. Individual JavaScript preview shows console output.
+
+#### BlogoSphere:
+
+  * Read interesting blog posts.
+  * Registered users can create posts, adding titles, topic groups, and content with optional images.
+  * Blog creators can delete their posts. Admin (me) can delete all posts if necessary.
+
+#### KnowledgeSphere:
+
+  * Personal library to store your knowledge.
+  * Add your knowledge with HTML tags (links, list formatting).
+  * Direct access to search engines like Google, Wikipedia, and Stack Overflow.
+  * Filter your library by topic, content, or date (to be confirmed).
+  * Edit and delete entries individually.
+
+Feel free to provide constructive critiques, suggest new features, report safety issues, or just say hi! Cheers, Gaudenz.
+
 ------------------------------
+## Setup from Github (LAMP / Docker-Sail)
+### Setup / Installation with LAMP Stack
+
+### Prerequisites
+
+* LAMP Stack (Linux/Apache/Mysql/Php) or XAMPP-setup (Windows)
+* [Composer]('https://getcomposer.org/download/') 
+* PHP 8.1
+
+```
+sudo apt install php libapache2-mod-php php-mysql
+```
+
+* Mysql or Mariadb Database
+
+### Setup LAMP
+
+* Clone the repository:</li>
+
+```
+git clone <repository_url>
+```
+
+* Open repository in editor of your choice
+* Open terminal
+* Start Database
+
+```bash
+sudo systemctl start mariadb
+```
+
+* Create Databse
+
+```bash
+CREATE DATABASE <name database>;
+```
+
+* Create User (these are the Env.variables afterwards)
+
+```bash
+CREATE USER 'DB_USERNAME'@'localhost' IDENTIFIED BY 'DB_PASSWORD';
+```
+
+* Grant user previleges
+
+```bash
+GRANT ALL PRIVILEGES ON <name database>.* TO 'DB_USERNAME'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+
+### Install dependencies
+
+* Install Node/NPM if needed
+
+```
+composer install
+```
+
+* Update Composer
+
+```
+composer update 
+```
+
+
+* If not already installed, get [Node.js]('https://nodejs.org/')<br></li>
+
+* Install Node / NPM if needed<br>
+
+```
+npm install
+```
+
+* If installed, update
+
+```
+npm update 
+```
+
+* Generate Key:
+
+```
+php artisan key: generate
+```
+
+* Run Database
+
+```
+php artisan serve
+```
+
+[<h4>* Get Composer]('https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04')
 
 ### Setup / Installation Docker/Npm
-<ul>
-<li>get github code for cloning</li>
-<li>Open repository in editor of your choice</li>
-<li>Open terminal</li>
-<li>Insert following code:<br>
+
+* get github code for cloning
+* Open repository in editor of your choice
+* Open terminal
+* Insert following code
 
 ```bash
 docker run --rm \
@@ -39,8 +174,8 @@ docker run --rm \
     laravelsail/php82-composer:latest \
     composer install --ignore-platform-reqs
 ```
-</li>
-<li>Start docker(sail) and dev server:<br>
+
+* Start docker(sail) and dev server:
 
 ```bash
 sail up -d
@@ -50,56 +185,32 @@ sail up -d
 sail npm run dev
 ```
 
-</li>
-<li>In case npm not running:<br>
+* In case npm not running:
 
 ```
 sail npm install --save-dev
 ```
 
 *only if you need it dev-only, otherwise, remove "--save-dev"
-</li>
 
-</ul>
-
----
-
-## Usage: CHaps-CHat-App
-* TBC
-<!-- * open [localhost](http://127.0.0.1/)
-* choose login with your or register top right of screen
-* when already registered fill in credentials  => enter
-* if not, register new account, fill in inputs required => enter
-* back on main blog page (localhost) either chose blog to read by mouse-click or tab-key => enter
-* or create own new blogpost => bottom center button "create"
-* on create-post-page: choose image, choose title, write blog-text =>submit => back on localhost see new post
-* read post by select on mousclick or tab-key
-* use like or dislike buttons for reaction and/or 
-* comment on post: press comments-link (yellow-center)
-* write commentary
-* happy blogging yalls! -->
-
-
-## Thank you for your time.
----
 ### Any feedback or assisting constructive critique is welcome.<br> Feel free to reach out or text via [Mail@Me](mailto:gaudenzraiber@yahoo.de).
-----
+
 ----
 ## License:
 * none, free use
 ----
 ## Tools Used:
+* HTML, CSS, Javascript, PHP PDO, Heidisql, Nginx, Mysql
 * [Laravel/Breeze](https://laravel.com/docs/10.x/starter-kits#breeze-and-blade)
 * [Github](https://github.com/svenbledt/Palaver-Laravel) (for file repo/sharing/workflow)
-* [Notion Organizer](//https://www.notion.so/)
-* HTML, CSS, Javascript, PHP PDO, Heidisql, Nginx, Mysql
-* [Font](https://fonts.google.com/specimen/Poppins)
+* [Pusher Service](https://pusher.com)
+* [vue3.js](https://https://vuejs.org/)
+* [Fonts, various, Mainly IBM PLEX Mono](https://fonts.google.com)
 * [Fontawesome](https://fontawesome.com/)
 * [Animate.css](https://animate.style/)
 * [AOS](https://michalsnik.github.io/aos/)<br>[AOS-Git]('https://github.com/michalsnik/aos')
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Bootstrap_5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-
 * Internet for research
 * imagination 
 * feeling for details
@@ -110,7 +221,7 @@ sail npm install --save-dev
 
 [Github](https://github.com/Gaudenz77/CHapsCHat-App-Mark1)<br>
 [Figma](https://www.figma.com/file/EQlfkQ1kCVGsY77tNYVzPH/CHapsChat-App-Draft?type=design&node-id=34%3A3&t=Xmty5PKXN2n6I9qL-1)<br>
-<!-- [UML-DB-Scheme](https://plantuml.github.io/plantuml-core/raw.html?VO-nQiD038PtFuNgFNc2aA7jq2KGqj0b62Fx5FVgisLEIZCKltklzXqS13f9-d_n_TAJVj9081EsvB0fGksn8oYFwF2RF3mxxahuAG3UpkSZRE3omgDwTevy5THyXDrskuVBWGsvnLixs6tsy8gA3Gfbyh9yufj6KcoNzVzI_kmFI_Ugc0iJiL2cWFNOApiJhYyFD3IXdi9pIcRr0kucvAM2TPXGvCxUr9w4j5RkQPGgUc6FHtGrjYs9PEQSfRnRfOUCYKKJnjcUwbneUHXer4XAdFJ30-kArf6flxX9WC5s7jLoEcR-1G00) -->
+
 </div>
 
 ----
