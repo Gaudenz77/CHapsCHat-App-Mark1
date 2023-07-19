@@ -48,13 +48,13 @@ This website/app is designed for both mobile and desktop use. Your feedback and 
   * <b>Editor</b>: Write code using three editors, toggle below the frame. Preview adapts with HTML, CSS, and JS formatting. Features include "Format Code," dark/bright mode switch, and undo/redo buttons.
   * <b>Previews</b>: HTML preview supports common techniques, inline CSS, and in-code JavaScript. Most CDN links function correctly. Individual JavaScript preview shows console output.
 
-### [BlogoSphere]('https://krakatoom.ch/blogosphere')
+### [BlogoSphere]('https://krakatoom.ch/blogoSphere')
 
   * Read interesting blog posts.
   * Registered users can create posts, adding titles, topic groups, and content with optional images.
   * Blog creators can delete their posts. Admin (me) can delete all posts if necessary.
 
-### [KnowledgeSphere]('https://krakatoom.ch/knowledgesphere')
+### [KnowledgeSphere]('https://krakatoom.ch/knowledgeSphere')
 
   * Personal library to store your knowledge.
   * Add your knowledge with HTML tags (links, list formatting).

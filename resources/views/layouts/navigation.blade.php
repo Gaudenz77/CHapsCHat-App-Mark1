@@ -74,8 +74,8 @@
                             <b>{{ Auth::user()->name }}</b>
                         </a>
                         <ul class="dropdown-menu dropdownProfile py-0" id="myDropdownAccount">
-                            <li class="nav-item pt-0 pt-md-3"><a class="myNavUnderline pt-3" href="{{ url('profile') }}"><b>Profile</b></a></li>
-                            <li class="nav-item pt-0 pt-md-3"><a class="myNavUnderline pt-3" href="{{ route('logout') }}"
+                            <li class="nav-item pt-0 pt-md-3"><a class="myNavUnderline pt-3 pb-1" href="{{ url('profile') }}"><b>Profile</b></a></li>
+                            <li class="nav-item pt-0 pt-md-3 pb-3 pb-md-3"><a class="myNavUnderline pt-3 pb-1" href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><b>Log
                                         out</b></a></li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

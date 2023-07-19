@@ -7,8 +7,8 @@
 @section('content')
 
     <div class="container-fluid">
-        <div class="row {{-- align-items-center --}} justify-content-center">
-            <div class="aboutLeft col-md-4 {{-- bg-danger --}} mb-0 mb-md-2 p-3 px-4 {{-- animate__animated animate__slideInDown animate__delay-1s --}}">
+        <div class="row justify-content-center">
+            <div class="aboutLeft col-md-4 mb-0 mb-md-0 p-3 px-4 animate__animated animate__slideInDown animate__delay-1s">
                 <h2 class="mt-0"><b>About This Project/Web-App:</b></h2>
 
                 <ul class="list-unstyled">
@@ -86,7 +86,7 @@
                         </p>
                     </li>
 
-                    <li class="text-center {{-- animate__animated animate__zoomInUp animate__delay-5s --}}">
+                    <li class="text-center animate__animated animate__zoomInUp animate__delay-5s">
                         <h4><u>That's me...</u></h4>
                         <img src="./assets/img/krakatoom_favicon.png" alt="About Image" class="img-fluid mx-auto px-1">
                     </li>
@@ -95,8 +95,7 @@
                 </ul>
             </div>
 
-
-            <div class="aboutCenter col-md-4 {{-- bg-info --}} mb-0 mb-md-2 p-3 px-4 {{-- animate__animated animate__slideInUp animate__delay-3s --}}">
+            <div class="aboutCenter col-md-4 mb-0 mb-md-0 p-3 px-4 animate__animated animate__slideInUp animate__delay-3s">
                 <h2 class="mt-0"><b>About Me:</b></h2>
                 <ul class="list-unstyled">
 
@@ -172,7 +171,6 @@
                         </p>
                     </li>
 
-
                     <li>
                         <h4><u>Call to Action</u></h4>
                         <p>Thank you for taking the time to learn more about me. would be delighted to explore potential
@@ -190,7 +188,7 @@
 
             </div>
 
-            <div class="aboutRight col-md-4 {{-- bg-secondary  --}} mb-0 mb-md-2 p-3 px-4 {{-- animate__animated animate__slideInDown animate__delay-2s --}}">
+            <div class="aboutRight col-md-4 mb-0 mb-md-0 p-3 px-4 animate__animated animate__slideInDown animate__delay-2s">
 
                 <ul class="list-unstyled">
 
@@ -242,7 +240,8 @@
                                 <h5><a href="{{ url('/blogoSphere') }}">BlogoSphere</a></h5>
                                 <ul>
                                     <li>Read interesting new blog posts.</li>
-                                    <li>Registered users can create their own posts by clicking the <i class="fa-solid fa-circle-plus"></i>-icon. Add a
+                                    <li>Registered users can create their own posts by clicking the <i
+                                            class="fa-solid fa-circle-plus"></i>-icon. Add a
                                         title, select a topic group, and enter content along with an optional image. If no
                                         image is chosen, a default image will be displayed.</li>
                                     <li>Blog creators can delete their own posts. In case of violations of common decency or
@@ -258,7 +257,8 @@
                                     <li>This is your personal library.</li>
                                     <li>Add your own knowledge or anything you find useful to your library by clicking the
                                         <i class="fa-solid fa-circle-plus"></i>-icon to create a new entry. HTML tags are
-                                        explicitly allowed, such as links and list formatting.</li>
+                                        explicitly allowed, such as links and list formatting.
+                                    </li>
                                     <li>Like any good library, you have direct access to various search engines and
                                         entities, including a direct link to Google search, Wikipedia, and Stack Overflow.
                                     </li>
@@ -279,28 +279,28 @@
                     <li>
                         <div class="row justify-content-evenly">
                             <div class="col-2">
-                                <a class="btn btn-circleLibrary" href="https://github.com/Gaudenz77"><i class="fab fa-github-alt fa-3x"></i></a>
+                                <a class="btn btn-circleLibrary" href="https://github.com/Gaudenz77"><i
+                                        class="fab fa-github-alt fa-3x"></i></a>
                             </div>
                             <div class="col-2">
                                 <a class="btn btn-circleLibrary" href="https://www.linkedin.com/in/gaudenz-d-raiber/"><i
                                         class="fab fa-linkedin-in fa-3x"></i></a>
                             </div>
                             <div class="col-2">
-                                <a class="btn btn-circleLibrary" href="https://www.behance.net/krakatoomdesign"><i class="fab fa-behance fa-3x"></i></a>
+                                <a class="btn btn-circleLibrary" href="https://www.behance.net/krakatoomdesign"><i
+                                        class="fab fa-behance fa-3x"></i></a>
                             </div>
                         </div>
                     </li>
                 </ul>
-
-
 
                 <h2 class="mx-0 mt-0 mb-3"><b>For Contact use form:</b></h2>
                 <div class="row justify-content-center">
                     <form class="col-12 col-md-10" action="https://formspree.io/f/mdorolbg" method="POST">
                         <div class="mb-3">
                             {{-- <label for="email" class="form-label">Your email:</label> --}}
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your email..."
-                                required>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Your email..." required>
                         </div>
                         <div class="mb-3">
                             {{-- <label for="message" class="form-label">Your message:</label> --}}
@@ -313,7 +313,6 @@
                         </div>
                     </form>
                 </div>
-                
 
                 <h2 class="mx-0 mt-5"><b>Mailto:</b></h2>
                 <a class="mx-0" href="mailto:masterofceremonies@krakatoom.ch">

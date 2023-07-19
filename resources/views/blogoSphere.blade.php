@@ -10,7 +10,7 @@
 <section class="">
   <div class="container-fluid">
     <div class="row justify-content-center align-items-middle">
-      <div class="col-sm-4 col-lg-3 columnBlogTwo pb-3 pb-md-5 px-lg-4 px-2 pt-4 mb-0" id="formContainer" style="display: none;">
+      <div class="col-sm-4 col-lg-3 columnBlogTwo pb-3 pb-md-5 px-lg-4 px-2 pt-3 pt-md-4 mb-0" id="formContainer" style="display: none;">
         <div class="form-wrapper"> 
           @auth 
           <h1 class="playgLandsTitle">Create Blog<br>
@@ -20,7 +20,7 @@
           @endauth
         </div>
       </div>
-      <div class="col-sm-8 col-lg-8 colBlogContent mt-md-0 mt-3 mb-md-0 mb-2 mb-md-0 px-1">
+      <div class="col-sm-8 col-lg-8 colBlogContent mt-md-0 mt-3 mb-md-0 mb-2 mb-md-0 px-1 py-md-0">
         <div class="container mb-3" style=" margin-top:-15% ! important">
           <div class="row"> 
           @auth 

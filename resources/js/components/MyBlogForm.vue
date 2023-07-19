@@ -1,8 +1,8 @@
 <template>
     <div class="mx-3">
         <form @submit.prevent="submitForm" enctype="multipart/form-data">
-            <label class="form-label formOwnOne" for="title"></label>
-            <div class="input-group mb-4">
+            <!-- <label class="form-label formOwnOne" for="title"></label> -->
+            <div class="input-group mb-3">
                 <span class="input-group-text formOwnOne" id="basic-addon1">
                     <i
                         class="fa-solid fa-palette formIcons"
@@ -24,8 +24,8 @@
                 />
             </div>
 
-            <label class="form-label" for="topic"></label>
-            <div class="input-group mb-4">
+            <!-- <label class="form-label" for="topic"></label> -->
+            <div class="input-group mb-3">
                 <span class="input-group-text formOwnOne">
                     <i
                         class="fa-solid fa-book-bookmark formIcons"
@@ -37,7 +37,7 @@
                     ></i
                 ></span>
                 <select
-                    class="form-control formOwnOne"
+                    class="form-control form-select custom-select formOwnOne"
                     id="topic"
                     v-model="form.topic"
                     required
@@ -48,13 +48,14 @@
                     <option
                         data-content="<i class='fa-solid fa-heart' aria-hidden='true'></i>"
                     >
-                    <i class='fa-solid fa-heart' aria-hidden='true'></i>Varoious/Awkward
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i
+                        >Various/Awkward
                     </option>
                 </select>
             </div>
 
-            <label class="form-label formOwnOne" for="content"></label>
-            <div class="input-group mb-4">
+            <!-- <label class="form-label formOwnOne" for="content"></label> -->
+            <div class="input-group mb-3">
                 <span class="input-group-text formOwnOne"
                     ><i
                         class="fa-solid fa-file-signature formIcons"
@@ -76,7 +77,7 @@
                 ></textarea>
             </div>
 
-            <div class="input-group mb-4">
+            <div class="input-group mb-3">
                 <input
                     type="file"
                     name="image"

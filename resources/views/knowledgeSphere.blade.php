@@ -50,7 +50,7 @@
                                         <li><strong>Both, the new entry and edit inputs take HTML tags!</strong></li>
                                     </ol>
                                 </div><button class='close-button'>&times;</button>">
-                                <i class="fa-solid fa-circle-info fa-4x py-2 infoKnowledge animate__animated animate__heartBeat animate__delay-5s"></i></a>
+                                <i class="fa-solid fa-circle-info fa-3x py-2 infoKnowledge animate__animated animate__heartBeat animate__delay-3s"></i></a>
                     <my-library-form :edit-mode="editMode"></my-library-form>
                     </div>
                 </div>
