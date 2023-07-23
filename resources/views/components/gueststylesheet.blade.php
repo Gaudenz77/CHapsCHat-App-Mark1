@@ -430,7 +430,8 @@
     }
 
     .aboutRight {
-        background-color: #c8047b;
+        /* background-color: #c8047b; */
+        background-color: #6593c4;
     }
 </style>
 

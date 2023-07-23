@@ -31,10 +31,10 @@
                         <a tabindex="0" data-bs-toggle="popover" data-bs-custom-class="popoverInfoMain"
                         data-bs-trigger="focus" data-bs-placement="right" data-bs-html="true"
                         data-bs-title="
-                            <h3 class='{{-- text-white --}}'><b>INFOPOINT</b></h3>"
+                            <h3 class='text-white'><b>INFOPOINT</b></h3>"
                         data-bs-content='
                             <div class="">
-                                <p class="{{-- text-white --}}">Wherever you see this symbol, you will find helpful information.<br>
+                                <p class="text-white">Wherever you see this symbol, you will find helpful information.<br>
                                     <a class="myNavUnderline" href="{{ url('/about') }}"><b>more help...</b></a>
                             </div>'><i class="mainInfo fa-solid fa-circle-info fa-2x ms-2 ms-md-0 my-4 pt-1"></i></a>
    
