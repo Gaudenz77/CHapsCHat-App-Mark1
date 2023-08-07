@@ -9,7 +9,7 @@
                     id="createButton"
                 >
                     <i class="fa-solid fa-circle-plus fa-3x"></i><br /><small
-                        >Add Blog!</small
+                        >Add Knowledge!</small
                     >
                 </button>
             </div>
