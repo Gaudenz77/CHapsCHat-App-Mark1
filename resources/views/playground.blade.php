@@ -75,7 +75,7 @@
 
                 </div>
 
-                <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;">
+                <div class="editorCol col-md-5 px-3 px-md-3 py-0 pb-3 pb-md-5" id="editorColumn" style="background-image: url('./assets/img/test_toolbox.jpeg');background-size: inherit;z-index:2;">
                     <div class="mt-2 p-2 pt-2 pb-md-3 d-flex align-items-center justify-content-between">
                         <img src="./assets/img/tool_plaque_yellow_bg_black.png" alt="Info" class="img-fluid toolPlaque pt-2" alt="tool_plaque">
                         <h5 class="text-center text-md-start bg-danger mb-0 pb-2 ms-0 py-2 py-md-2  px-2 ps-md-2 px-md-1 mx-1 me-md-3">ThiS iS Your EdiTor!

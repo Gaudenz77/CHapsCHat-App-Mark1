@@ -1477,6 +1477,8 @@ body.dark-mode .btn-circleChat {
     border-radius: 50%;
     text-align: center;
     margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
 }
 
 .btn-circleLibrary:hover {
@@ -1492,6 +1494,8 @@ body.dark-mode .btn-circleChat {
 body.dark-mode .btn-circleLibrary {
     background-color: #333 !important;
     color: #ebebeb !important;
+    position: relative;
+    z-index: 2;
 }
 
 body.dark-mode .btn-circleLibrary:hover {
@@ -1514,11 +1518,15 @@ body.dark-mode .btn-circleLibrary:focus {
     border-radius: 50%;
     text-align: center;
     margin-bottom: 15px;
+    position: relative;
+    z-index: 2;   
 }
 
 body.dark-mode .btn-circleBlogBig {
     background-color: #ff662a !important;
     color: #ebebeb !important;
+    position: relative;
+    z-index: 2;
 }
 
 body.dark-mode .btn-circleBlogBig:hover {
