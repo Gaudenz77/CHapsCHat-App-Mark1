@@ -12,6 +12,13 @@
     <!-- Cross Server Reference token setting  -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- OPENGRAPH TRIAL -->
+    <meta property="og:title" content='CHapsChat'/>
+    <meta property="og:image" content="https://user-images.githubusercontent.com/42372680/262046021-002e3baf-b425-4882-b52d-aa7b043c5e98.png"/>
+    <meta property="og:url" content="https://krakatoom.ch/"/>
+    <meta property='og:image:width' content='1200' />
+    <meta property='og:image:height' content='627' />
+
     <!-- the value of the constant APP_NAME from the .env file is being assigned, if it exists. Otherwise, the default string "Laravel" is used. -->
 
     <link rel="icon" href="./assets/img/krakatoom_favicon.png" type="image/x-icon">
