@@ -15,7 +15,7 @@
 
                     <li>
                         <h4><u>Initial Situation Test n More n mo...</u></h4>
-                        <p>Hello, my friends. I thought of this app while doing my web development crash course over a
+                        <p>Hello, my dear friends, I thought of this app while doing my web development crash course over a
                             period of six months, while commuting on public transport during the week. Since I usually spend
                             this idle time browsing the web, social media, or engaging in other forms of entertainment, I
                             often had coding-related thoughts lingering in my mind throughout the day. I used to search for
