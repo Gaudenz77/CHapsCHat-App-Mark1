@@ -13,6 +13,14 @@
 ---
 # Meet'n'Code - CHapsCHat-App - Mark 1
 
+## ChapsChat: All-in-One Coding, Chat, Library and Blog Platform
+
+### ChapsChat is a versatile web application combining coding, communication, and content creation:
+
+  *  Playground: Start with a code editor to craft HTML or JavaScript, instantly previewing changes. Chat with other users for quick help or knowledge/link sharing.
+  * KnowledgeSphere: Store personal insights, knowledge, and text content securely in a dedicated database.
+  * BlogoSphere: Express your thoughts, ideas, and interests through personalized blogs, open to registered users.
+
 ## Project context
 ### Problem:
 During my web development crash course, I found that existing code editor apps were either expensive or too feature-heavy, not meeting my needs for simplicity and functionality.
