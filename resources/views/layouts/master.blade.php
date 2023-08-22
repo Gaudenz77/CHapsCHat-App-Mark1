@@ -14,7 +14,7 @@
 
     <!-- OPENGRAPH TRIAL -->
     <meta property="og:title" content='CHapsChat'/>
-    <meta property="og:image" content="https://user-images.githubusercontent.com/42372680/262046021-002e3baf-b425-4882-b52d-aa7b043c5e98.png"/>
+    <meta property="og:image" content="https://user-images.githubusercontent.com/42372680/262362996-6e53bc0f-8247-48dd-9b75-97d8298a5413.png"/>
     <meta property="og:url" content="https://krakatoom.ch/"/>
     <meta property='og:image:width' content='1200' />
     <meta property='og:image:height' content='627' />
