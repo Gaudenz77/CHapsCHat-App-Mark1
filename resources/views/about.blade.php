@@ -14,7 +14,7 @@
                 <ul class="list-unstyled">
 
                     <li>
-                        <h4><u>Initial Situation Test n More n mo...</u></h4>
+                        <h4><u>Initial Situation</u></h4>
                         <p>Hello, my dearest friends, I thought of this app while doing my web development crash course over a
                             period of six months, while commuting on public transport during the week. Since I usually spend
                             this idle time browsing the web, social media, or engaging in other forms of entertainment, I
