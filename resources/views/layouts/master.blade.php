@@ -12,8 +12,11 @@
     <!-- Cross Server Reference token setting  -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- OPENGRAPH TRIAL -->
-    <meta property="og:title" content='CHapsChat'/>
+    <!-- OPENGRAPH meta data -->
+    <meta property="og:title" content="CHapsChat: All-in-One Coding, Chat, Library, and Blog Platform"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site-name" content="CHapsChat Coding, Chatting n Blogging"/>
+    <meta property="og:description" content="All-in-One Coding, Chat, Library, and Blog Platform"/>
     <meta property="og:image" content="https://user-images.githubusercontent.com/42372680/262365580-73c18508-c647-45c5-b63c-8c6967cfe212.png"/>
     <meta property="og:url" content="https://krakatoom.ch/"/>
     <meta property='og:image:width' content='1200' />
