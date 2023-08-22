@@ -17,7 +17,7 @@
     <meta property="og:type" content="website"/>
     <meta property="og:site-name" content="CHapsChat Coding, Chatting n Blogging"/>
     <meta property="og:description" content="All-in-One Coding, Chat, Library, and Blog Platform"/>
-    <meta property="og:image" content="https://user-images.githubusercontent.com/42372680/262365580-73c18508-c647-45c5-b63c-8c6967cfe212.png"/>
+    <meta property="og:image" content="https://user-images.githubusercontent.com/42372680/262375361-3efbb6be-9f34-463c-9a0b-93b8628ea428.png"/>
     <meta property="og:url" content="https://krakatoom.ch/"/>
     <meta property='og:image:width' content='1200' />
     <meta property='og:image:height' content='627' />
