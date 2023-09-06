@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="chatCol col-md-3 px-3 py-0 pb-md-5">
                     <div class="mt-1 p-2 pt-3">
-                        <h5 class="mb-0">WELCOME to the MESSAGECORNER
+                        <h5 class="mb-0">WELCOME to the MESSAGECORNER TEST
                             <a tabindex="0" 
                             data-bs-toggle="popover" 
                             data-bs-custom-class="popoverInfoOne"
