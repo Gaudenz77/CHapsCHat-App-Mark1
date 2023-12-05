@@ -104,7 +104,7 @@ git clone <repository_url>
 sudo systemctl start mariadb
 ```
 
-* Create Databse
+* Create Database
 
 ```bash
 CREATE DATABASE <name database>;
