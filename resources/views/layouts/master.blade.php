@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="mOdZWR6MamPSqqjIn4cerD4DjI5409y8pPXtHgyICjw" />
+    <meta name="description" content="Website where you can meet friends, code together, exchange ideas and talk for fun, and store web development knowledge">
     {{-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> --}}
 
     <!-- Cross Server Reference token setting  -->
@@ -21,14 +22,15 @@
     <meta property="og:url" content="https://krakatoom.ch/"/>
     <meta property='og:image:width' content='1200' />
     <meta property='og:image:height' content='627' />
-
+    
+    <link rel="canonical" href="https://krakatoom.ch/">
     <!-- the value of the constant APP_NAME from the .env file is being assigned, if it exists. Otherwise, the default string "Laravel" is used. -->
 
     <link rel="icon" href="./assets/img/krakatoom_favicon.png" type="image/x-icon">
     {{-- <link rel="icon" href="aviconReal1.ico" type="image/x-icon"> --}}
     {{-- <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.png"> --}}
 
-    <title>{{ config('app.name', 'ChapsChat') }} meeting messaging coding sapace</title>
+    <title>{{ config('app.name', 'ChapsChat') }} meeting messaging coding space</title>
 
     <!---------------------------------------------------------------- Fontawesome link -->
 
