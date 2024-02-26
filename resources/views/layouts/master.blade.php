@@ -28,7 +28,7 @@
     {{-- <link rel="icon" href="aviconReal1.ico" type="image/x-icon"> --}}
     {{-- <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.png"> --}}
 
-    <title>{{ config('app.name', 'ChapsChat') }}</title>
+    <title>{{ config('app.name', 'ChapsChat') }} meeting messaging coding sapace</title>
 
     <!---------------------------------------------------------------- Fontawesome link -->
 
