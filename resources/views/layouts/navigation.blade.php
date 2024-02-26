@@ -35,7 +35,7 @@
                         data-bs-content='
                             <div class="">
                                 <p class="text-white">Wherever you see this symbol, you will find helpful information.<br>
-                                    <a class="myNavUnderline" href="{{ url('/about') }}"><b>more help...</b></a>
+                                    <a class="myNavUnderline" href="https//:krakatoom.ch/about"><b>more help...</b></a>
                             </div>'><i class="mainInfo fa-solid fa-circle-info fa-2x ms-2 ms-md-0 my-4 pt-1"></i></a>
    
                 </li>
