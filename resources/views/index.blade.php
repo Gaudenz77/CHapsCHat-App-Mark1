@@ -29,7 +29,7 @@
                 <div class="col-12  d-flex align-items-middle ms-3">
                     <a type="button" href="{{ url('/blogoSphere') }}" id="button"
                         class="btn btn-index-small col-sm-3 pe-0 me-md-4 me-lg-4 animate__animated animate__backInLeft animate__delay-2s overlay-container">
-                        <img class="img-fluid squareSmall" src="./assets/img/square_pure.svg">
+                        <img class="img-fluid squareSmall" src="./assets/img/square_pure.svg" alt="square pure shape">
                         <div class="overlay-small">
                             <span class="overlay-text-small">ReaD thE latesTest BlOgs!</span>
                         </div>
@@ -37,7 +37,7 @@
 
                     <a type="button" href="{{ url('/playground') }}" id="button"
                         class="btn btn-index-small rounded-circle col-sm-3 px-0 mb-0 animate__animated animate__backInDown animate__delay-3s overlay-container">
-                        <img class="img-fluid mx-1" src="./assets/img/circle_pure.svg">
+                        <img class="img-fluid mx-1" src="./assets/img/circle_pure.svg" alt="circle pure shape">
                         <div class="overlay-small">
                             <span class="overlay-text-small">ENter thE PlayGroUnD!</span>
                         </div>
@@ -46,7 +46,7 @@
                     <a type="button" href="{{ url('/knowledgeSphere') }}" id="button"
                         class="btn btn-index-small  col-sm-3 ps-0 animate__animated animate__backInRight animate__delay-4s overlay-container">
                         <div class="col-12">
-                            <img class="img-fluid ps-2" src="./assets/img/triangle_blue_pure_small.svg">
+                            <img class="img-fluid ps-2" src="./assets/img/triangle_blue_pure_small.svg" alt="blue triangle shape">
                         </div>
 
                         <div class="overlay-small">
@@ -89,7 +89,7 @@
             <div class="col-12 text-center d-none d-md-block d-lg-block">
                 <a type="button" href="{{ url('/blogoSphere') }}"
                     class="btn btn-index col-sm-3 me-md-4 me-lg-4 animate__animated animate__backInLeft animate__delay-2s overlay-container">
-                    <img class="img-fluid p-3" src="./assets/img/square_pure.svg">
+                    <img class="img-fluid p-3" src="./assets/img/square_pure.svg" alt="square pure shape">
                     <div class="overlay">
                         <span class="overlay-text">ReaD thE latesT BlOgs!</span>
                     </div>
@@ -97,7 +97,7 @@
 
                 <a type="button" href="{{ url('/playground') }}" id="button"
                     class="btn btn-index rounded-circle col-sm-3 mb-0 animate__animated animate__backInDown animate__delay-3s overlay-container">
-                    <img class="img-fluid p-3" src="./assets/img/circle_pure.svg">
+                    <img class="img-fluid p-3" src="./assets/img/circle_pure.svg" alt="circle pure shape">
                     <div class="overlay">
                         <span class="overlay-text">ENter thE PlyGroUnD!</span>
                     </div>
@@ -105,7 +105,7 @@
 
                 <a type="button" href="{{ url('/knowledgeSphere') }}" id="button"
                     class="btn btn-index  col-sm-3  animate__animated animate__bounceInUp animate__delay-s overlay-container">
-                    <img class="img-fluid triangleFix" src="./assets/img/triangle_pure_large.svg">
+                    <img class="img-fluid triangleFix" src="./assets/img/triangle_pure_large.svg" alt="triangle pure shape">
                     <div class="overlay">
                         <span class="overlay-text mt-5 me-4">ColleCt YouR KnoWledGe!</span>
                     </div>
