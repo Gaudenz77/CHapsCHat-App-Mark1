@@ -24,7 +24,7 @@
 // FUNCTIONAL HTML ONLY START --------------------------------
 
   // script Monaco in-site editor/preview --------------------------------
-      require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.45.0/min/vs' }});
+      require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.48.0/min/vs' }});
       require(['vs/editor/editor.main'], function() {
         monaco.editor.defineTheme('dark-theme', {
           base: 'vs-dark',

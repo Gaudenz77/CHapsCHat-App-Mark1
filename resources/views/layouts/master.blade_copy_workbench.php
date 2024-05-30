@@ -48,11 +48,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.0.3/parser-html.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.0.3/standalone.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
-    <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
+    <script src="https://unpkg.com/monaco-editor@0.48.0/min/vs/loader.js"></script>
 
     {{--  <script src="https://unpkg.com/@christianliebel/paint/dist/elements/index.js" type="module"></script> --}}
 
-    {{-- <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script> --}}
+    {{-- <script src="https://unpkg.com/monaco-editor@0.48.0/min/vs/loader.js"></script> --}}
 
     <!-- Include jQuery from a CDN or from your own server -->
     {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
