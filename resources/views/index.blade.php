@@ -99,7 +99,7 @@
                     class="btn btn-index rounded-circle col-sm-3 mb-0 animate__animated animate__backInDown animate__delay-3s overlay-container">
                     <img class="img-fluid p-3" src="./assets/img/circle_pure.svg" alt="circle pure shape">
                     <div class="overlay">
-                        <span class="overlay-text">ENter thE PlyGroUnD!</span>
+                        <span class="overlay-text">ENter thE PlayGroUnD!</span>
                     </div>
                 </a>
 
