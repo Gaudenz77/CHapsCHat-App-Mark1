@@ -185,7 +185,7 @@
     <script>
         require.config({
             paths: {
-                'vs': 'https://unpkg.com/monaco-editor@0.48.0/min/vs'
+                'vs': 'https://unpkg.com/monaco-editor@0.48.0/min/vs/loader.js'
             }
         });
         require(['vs/editor/editor.main'], function() {
