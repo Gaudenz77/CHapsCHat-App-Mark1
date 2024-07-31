@@ -113,7 +113,7 @@
         </main>
     </div>
 
-    <footer class="footer mt-0 ms-3 py-3 bg-footer-gradient footerOwn" style="z-index:1">
+    <footer class="footer mt-0 ms-3 py-3 bg-footer-gradient footerOwn" style="z-index:-1">
         <div class="container-fluid fixed-bottom text-center">
             <button id="scrollToTopBtn" class="btn btn-own ms-2 scrollBtn" onclick="scrollToTop()">
                 <i class="fa-solid fa-circle-chevron-up fa-4x scrollUpChevron"></i></button>
