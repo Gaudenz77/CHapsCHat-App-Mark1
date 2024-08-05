@@ -71,7 +71,7 @@
                         </p>
                         <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInRight animate__delay-2s" style="font-style: italic;">
                             <strong>Let's chat and code together:</strong> <a
-                            class="nav-item myNavToggleTitlePlay px-0 {{ request()->is('/') ? '' : '' }}"
+                            class="nav-item myNavToggleTitle px-0 {{ request()->is('/') ? '' : '' }}"
                             aria-current="page" href="{{ url('/playground') }} " onclick="reloadTwice()"><b class="hookLineParaPlay">>>> Welcome
                                 to the Playground. Join Now!</b></a>   </p>
                         <p class="indexListText lead mb-sm-0 animate__animated animate__bounceInUp animate__delay-3s" style="font-style: italic;">
