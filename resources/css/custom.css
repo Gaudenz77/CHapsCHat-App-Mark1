@@ -855,7 +855,7 @@ body.dark-mode nav {
 
 
 .myNavToggleTitlePlay {
-    background-color: yellow;
+    color: yellow;
 }
 body.dark-mode .myNavToggleTitle {
     color: #333;
